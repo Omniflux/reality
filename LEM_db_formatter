@@ -1,0 +1,37 @@
+#!/usr/bin/perl
+#
+# A filter to prepare the LEM (Light Emitting Materials) exclusion list
+# for Reality. The raw LEM exclusion list contains comments and blank
+# lines used for formatting and documentation. Those elements need to be
+# removed before the list can be used by Reality. We also need to export
+# the list using the CRLF line separators when deploying to Windows.
+# 
+# This filter accepts two parameters:
+#   #1 is the name of the file to filter
+#   #2 is optional and can be "w". If that parameter is passed the filter
+#      will output the file using the Windows line termination
+#
+
+my $argc = $#ARGV +1;
+my $lineTermination = "\012";
+
+open(LEM_List,$ARGV[0]) || die "Cannot open input file";
+
+if ($argc == 2 && $ARGV[1]=="w") {
+  $lineTermination = "\15\012";
+}
+
+while(<LEM_List>) {
+  # Lines that start with a "#" are comments
+  if (/^\s*#/) {
+    next;
+  }
+  # Filter empty lines
+  if (/^$/) {
+    next;
+  }
+  # Remove the newline
+  chomp;
+  # Print to STDOUT
+  print "$_${lineTermination}";
+}

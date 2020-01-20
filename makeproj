@@ -1,0 +1,28 @@
+#!/bin/bash
+
+BITNESS=64
+TARGET=Xcode
+ERASE_CACHE=0
+while getopts t:b: opt; do
+  case $opt in
+    t)
+      TARGET=$OPTARG
+      ERASE_CACHE=1
+      ;;
+    b)
+      BITNESS=$OPTARG
+      ;;
+  esac
+done
+echo "Target: ${TARGET}, Bitness: ${BITNESS}"
+
+mkdir -p build/mac > /dev/null
+mkdir src/mocFiles
+mkdir -p bin/mac/Debug
+mkdir -p bin/mac/Release
+
+cd build/mac
+if [[ $ERASE_CACHE = 1 ]]; then
+  rm CMakeCache.txt
+fi
+cmake -G "$TARGET" -DQT_QMAKE_EXECUTABLE=/usr/local/Trolltech/Qt-4.8.7/bin/qmake -DBITNESS=$BITNESS -DCMAKE_BUILD_TYPE=Release ../../src

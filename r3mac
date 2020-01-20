@@ -1,0 +1,25 @@
+#!/bin/sh
+
+BUILD_TYPE="Debug"
+
+if [ "$1" != "" ] ; then
+  BUILD_TYPE=$1
+fi
+
+echo "Removing the old copy of Reality"
+rm -rf /Applications/Poser\ Pro\ 2012/Runtime/Python/addons/Reality/Reality.app 
+rm -rf /Applications/Poser\ Pro\ 2014/Runtime/Python/addons/Reality/Reality.app 
+
+POSER9_DIR="/Applications/Poser Pro 2012/Runtime/Python/addons/Reality"
+POSER10_DIR="/Applications/Poser Pro 2014/Runtime/Python/addons/Reality"
+echo "Copying the new version..."
+cp -vr bin/mac/${BUILD_TYPE}/Reality.app "${POSER9_DIR}/Reality.app"
+# Copy the configuration file
+cp -v assets/configFiles/Poser/RealityConfig.txt "${POSER9_DIR}/Reality.app/Contents/MacOS"
+
+cp -vr bin/mac/${BUILD_TYPE}/Reality.app "${POSER10_DIR}/Reality.app"
+cp -v assets/configFiles/Poser/RealityConfig.txt "${POSER10_DIR}/Reality.app/Contents/MacOS"
+
+echo "Copying Python extension"
+cp -v bin/mac/${BUILD_TYPE}/Reality.so "${POSER9_DIR}/Reality.so"
+cp -v bin/mac/${BUILD_TYPE}/Reality.so "${POSER10_DIR}/Reality.so"
