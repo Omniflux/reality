@@ -1,0 +1,6 @@
+#
+# Configuration file for Reality
+#
+# Remove the comment to make Reality show the allowed options at start up
+# help = 1
+appID=Poser

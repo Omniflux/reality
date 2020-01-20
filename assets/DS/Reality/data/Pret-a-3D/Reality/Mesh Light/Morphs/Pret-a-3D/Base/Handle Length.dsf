@@ -1,0 +1,67 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Mesh%20Light/Morphs/Pret-a-3D/Base/Handle%20Length.dsf",
+		"type" : "modifier",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "1.0",
+		"modified" : "2014-11-15T23:27:55Z"
+	},
+	"modifier_library" : [
+		{
+			"id" : "Handle Length",
+			"name" : "Handle Length",
+			"parent" : "/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight-1",
+			"presentation" : {
+				"type" : "Modifier/Shape",
+				"label" : "",
+				"description" : "",
+				"icon_large" : "",
+				"colors" : [ [ 0.3529412, 0.3529412, 0.3529412 ], [ 1, 1, 1 ] ]
+			},
+			"channel" : {
+				"id" : "value",
+				"type" : "float",
+				"name" : "Value",
+				"label" : "Handle Length",
+				"value" : 0,
+				"min" : 0,
+				"max" : 1,
+				"step_size" : 0.001
+			},
+			"group" : "/Morphs",
+			"morph" : {
+				"vertex_count" : 80,
+				"deltas" : {
+					"count" : 12,
+					"values" : [
+						[ 32, 0, 0, -4994.285 ],
+						[ 33, 1.192093e-07, 0, -4994.285 ],
+						[ 34, 1.192093e-07, 0, -4994.285 ],
+						[ 35, 0, 0, -4994.285 ],
+						[ 36, 0, 0, -4994.285 ],
+						[ 37, 0, 0, -4994.285 ],
+						[ 40, 0, 0, -4994.286 ],
+						[ 41, 0, 0, -4994.286 ],
+						[ 42, 0, 0, -4994.286 ],
+						[ 43, 0, 0, -4994.286 ],
+						[ 44, 0, 0, -4994.286 ],
+						[ 45, 0, 0, -4994.286 ]
+					]
+				}
+			}
+		}
+	],
+	"scene" : {
+		"modifiers" : [
+			{
+				"id" : "Handle Length-1",
+				"url" : "#Handle%20Length"
+			}
+		]
+	}
+}

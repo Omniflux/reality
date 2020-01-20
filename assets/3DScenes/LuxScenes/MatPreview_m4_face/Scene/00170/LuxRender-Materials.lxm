@@ -1,0 +1,28 @@
+# Materials File
+
+Texture "roomTex" "float" "checkerboard"
+	"string aamode" ["closedform"]
+	"integer dimension" [2]
+	"float tex1" [1.000000000000000]
+	"float tex2" [0.000000000000000]
+	"string mapping" ["uv"]
+	"float uscale" [100.000000000000000]
+	"float vscale" [-100.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+Texture "CheckerMixer" "color" "mix"
+	"texture amount" ["roomTex"]
+	"color tex1" [0.80000001 0.80000001 0.80000001]
+	"color tex2" [0.06997492 0.06997492 0.06997492]
+
+MakeNamedMaterial "Room"
+	"texture Kd" ["CheckerMixer"]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+MakeNamedMaterial "Lamp.001"
+	"string type" ["null"]
+
+MakeNamedMaterial "Lamp"
+	"string type" ["null"]

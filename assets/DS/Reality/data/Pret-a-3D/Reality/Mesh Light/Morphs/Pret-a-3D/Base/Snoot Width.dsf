@@ -1,0 +1,64 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Mesh%20Light/Morphs/Pret-a-3D/Base/Snoot%20Width.dsf",
+		"type" : "modifier",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "0.0",
+		"modified" : "2015-01-30T18:11:40Z"
+	},
+	"modifier_library" : [
+		{
+			"id" : "Snoot Width",
+			"name" : "Snoot Width",
+			"parent" : "/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight-1",
+			"presentation" : {
+				"type" : "Modifier/Shape",
+				"label" : "",
+				"description" : "",
+				"icon_large" : "",
+				"colors" : [ [ 0.3529412, 0.3529412, 0.3529412 ], [ 1, 1, 1 ] ]
+			},
+			"channel" : {
+				"id" : "value",
+				"type" : "float",
+				"name" : "Value",
+				"label" : "Snoot Width",
+				"value" : 0,
+				"min" : -1,
+				"max" : 1,
+				"display_as_percent" : true,
+				"step_size" : 0.01
+			},
+			"group" : "/Morphs",
+			"morph" : {
+				"vertex_count" : 80,
+				"deltas" : {
+					"count" : 8,
+					"values" : [
+						[ 68, -34.67414, 34.6741, 2.479553e-05 ],
+						[ 69, 34.67414, 34.6741, 2.479553e-05 ],
+						[ 70, 34.67414, -34.6741, -7.629395e-06 ],
+						[ 71, -34.67414, -34.6741, -7.629395e-06 ],
+						[ 72, -33.5877, 33.58762, 2.479553e-05 ],
+						[ 73, 33.5877, 33.58762, 2.479553e-05 ],
+						[ 74, 33.5877, -33.58763, -7.629395e-06 ],
+						[ 75, -33.5877, -33.58763, -7.629395e-06 ]
+					]
+				}
+			}
+		}
+	],
+	"scene" : {
+		"modifiers" : [
+			{
+				"id" : "Snoot Width-1",
+				"url" : "#Snoot%20Width"
+			}
+		]
+	}
+}

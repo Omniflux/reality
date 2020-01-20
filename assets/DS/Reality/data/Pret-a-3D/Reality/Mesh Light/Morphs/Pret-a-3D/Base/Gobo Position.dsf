@@ -1,0 +1,59 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Mesh%20Light/Morphs/Pret-a-3D/Base/Gobo%20Position.dsf",
+		"type" : "modifier",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "1.0",
+		"modified" : "2014-11-15T23:27:55Z"
+	},
+	"modifier_library" : [
+		{
+			"id" : "Gobo Position",
+			"name" : "Gobo Position",
+			"parent" : "/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight-1",
+			"presentation" : {
+				"type" : "Modifier/Shape",
+				"label" : "",
+				"description" : "",
+				"icon_large" : "",
+				"colors" : [ [ 0.3529412, 0.3529412, 0.3529412 ], [ 1, 1, 1 ] ]
+			},
+			"channel" : {
+				"id" : "value",
+				"type" : "float",
+				"name" : "Value",
+				"label" : "Gobo Position",
+				"value" : 0,
+				"min" : 0,
+				"max" : 1,
+				"step_size" : 0.001
+			},
+			"group" : "/Morphs",
+			"morph" : {
+				"vertex_count" : 80,
+				"deltas" : {
+					"count" : 4,
+					"values" : [
+						[ 76, 0, -3.576279e-07, -4976.753 ],
+						[ 77, 0, 2.622604e-06, -4976.753 ],
+						[ 78, 0, 0, -4976.753 ],
+						[ 79, 0, 0, -4976.753 ]
+					]
+				}
+			}
+		}
+	],
+	"scene" : {
+		"modifiers" : [
+			{
+				"id" : "Gobo Position-1",
+				"url" : "#Gobo%20Position"
+			}
+		]
+	}
+}

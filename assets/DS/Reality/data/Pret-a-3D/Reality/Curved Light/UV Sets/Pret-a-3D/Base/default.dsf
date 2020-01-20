@@ -1,0 +1,47 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Curved%20Light/UV%20Sets/Pret-a-3D/Base/default.dsf",
+		"type" : "uv_set",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "0.0",
+		"modified" : "2014-10-25T18:27:26Z"
+	},
+	"uv_set_library" : [
+		{
+			"id" : "default",
+			"name" : "default",
+			"label" : "Default UVs",
+			"vertex_count" : 10,
+			"uvs" : {
+				"count" : 10,
+				"values" : [
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ],
+					[ 0, 0 ]
+				]
+			},
+			"polygon_vertex_indices" : [
+			]
+		}
+	],
+	"scene" : {
+		"uvs" : [
+			{
+				"id" : "default-1",
+				"url" : "#default"
+			}
+		]
+	}
+}

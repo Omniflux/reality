@@ -1,0 +1,76 @@
+# Main Scene File
+
+Renderer "sampler"
+
+Sampler "lowdiscrepancy"
+	"integer pixelsamples" [2]
+	"string pixelsampler" ["hilbert"]
+
+Accelerator "qbvh"
+
+SurfaceIntegrator "distributedpath"
+	"integer directsamples" [1]
+	"integer indirectsamples" [1]
+	"integer diffusereflectdepth" [1]
+	"integer diffusereflectsamples" [4]
+	"integer diffuserefractdepth" [4]
+	"integer diffuserefractsamples" [1]
+	"integer glossyreflectdepth" [1]
+	"integer glossyreflectsamples" [2]
+	"integer glossyrefractdepth" [4]
+	"integer glossyrefractsamples" [1]
+	"integer specularreflectdepth" [2]
+	"integer specularrefractdepth" [4]
+	"string lightstrategy" ["auto"]
+
+VolumeIntegrator "multi"
+	"float stepsize" [1.000000000000000]
+
+PixelFilter "mitchell"
+	"bool supersample" ["true"]
+	"float B" [0.333333343267441]
+	"float C" [0.333333343267441]
+
+LookAt 4.700418 -2.943272 3.925758 3.962549 -2.478609 3.436230 -0.411166 0.265718 0.871973
+
+Camera "perspective"
+	"float fov" [33.985993366513362]
+	"float screenwindow" [-1.000000000000000 1.000000000000000 -1.000000000000000 1.000000000000000]
+	"bool autofocus" ["false"]
+	"float shutteropen" [0.000000000000000]
+	"float shutterclose" [0.041666666666667]
+
+Film "fleximage"
+	"integer xresolution" [120]
+	"integer yresolution" [120]
+	"float gamma" [2.200000000000000]
+	"float colorspace_white" [0.314275000000000 0.329411000000000]
+	"float colorspace_red" [0.630000000000000 0.340000000000000]
+	"float colorspace_green" [0.310000000000000 0.595000000000000]
+	"float colorspace_blue" [0.155000000000000 0.070000000000000]
+	"string filename" ["MatPreview_v4_torso.Scene.00170"]
+	"bool write_resume_flm" ["false"]
+	"bool restart_resume_flm" ["false"]
+	"bool write_flm_direct" ["false"]
+	"bool write_exr_halftype" ["true"]
+	"bool write_exr_applyimaging" ["true"]
+	"bool write_exr_ZBuf" ["false"]
+	"string write_exr_compressiontype" ["PIZ (lossless)"]
+	"string write_exr_zbuf_normalizationtype" ["None"]
+	"bool write_exr" ["false"]
+	"bool write_png" ["true"]
+	"string write_png_channels" ["RGB"]
+	"bool write_png_16bit" ["false"]
+	"bool write_tga" ["false"]
+	"string ldr_clamp_method" ["cut"]
+	"integer displayinterval" [10]
+	"integer writeinterval" [180]
+	"integer flmwriteinterval" [900]
+	"integer tilecount" [0]
+	"string tonemapkernel" ["autolinear"]
+
+WorldBegin
+
+Include "MatPreview_v4_torso/Scene/00170/LuxRender-Materials.lxm"
+
+Include "MatPreview_v4_torso/Scene/00170/LuxRender-Geometry.lxo"

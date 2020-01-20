@@ -1,0 +1,19 @@
+// DAZ Studio version 4.6.3.50 filetype DAZ Script
+
+function nodeAdded( node ) {
+  if ( node.getName() == "meshlight" ) {
+    print("Found mesh light");
+    pos = new DzVec3(0, 259.24,108);
+    node.setWSPos(pos);
+    node.getXRotControl().setValue(-64);
+    node.getYRotControl().setValue(0);
+    node.getZRotControl().setValue(0);
+  }
+  disconnect(Scene, "nodeAdded(DzNode*)", nodeAdded);
+}
+
+connect( Scene, "nodeAdded(DzNode*)", nodeAdded );
+contMgr= App.getContentMgr();
+
+meshLight = contMgr.findFile("/Lights/Reality/Mesh Light.duf");
+contMgr.openFile(meshLight);

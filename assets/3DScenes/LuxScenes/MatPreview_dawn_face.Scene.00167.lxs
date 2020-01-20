@@ -1,0 +1,113 @@
+# Main Scene File
+
+Renderer "sampler"
+
+Sampler "lowdiscrepancy"
+	"integer pixelsamples" [2]
+	"string pixelsampler" ["hilbert"]
+
+Accelerator "qbvh"
+
+SurfaceIntegrator "directlighting"
+	"integer maxdepth" [12]
+	"string lightstrategy" ["auto"]
+
+VolumeIntegrator "none"
+
+PixelFilter "mitchell"
+	"bool supersample" ["true"]
+	"float B" [0.333333343267441]
+	"float C" [0.333333343267441]
+
+LookAt 5.864432 -3.676295 4.698005 5.126564 -3.211632 4.208477 -0.411166 0.265717 0.871973
+
+Camera "perspective"
+	"float fov" [22.619865323411389]
+	"float screenwindow" [-1.000000000000000 1.000000000000000 -1.000000000000000 1.000000000000000]
+	"bool autofocus" ["false"]
+	"float shutteropen" [0.000000000000000]
+	"float shutterclose" [0.041666666666667]
+
+Film "fleximage"
+	"integer xresolution" [120]
+	"integer yresolution" [120]
+	"float gamma" [2.200000000000000]
+	"float colorspace_white" [0.314275000000000 0.329411000000000]
+	"float colorspace_red" [0.630000000000000 0.340000000000000]
+	"float colorspace_green" [0.310000000000000 0.595000000000000]
+	"float colorspace_blue" [0.155000000000000 0.070000000000000]
+	"string filename" ["MatPreview_dawn_face.Scene.00167"]
+	"bool write_resume_flm" ["false"]
+	"bool restart_resume_flm" ["false"]
+	"bool write_flm_direct" ["false"]
+	"bool write_exr_halftype" ["true"]
+	"bool write_exr_applyimaging" ["true"]
+	"bool write_exr_ZBuf" ["false"]
+	"string write_exr_compressiontype" ["PIZ (lossless)"]
+	"string write_exr_zbuf_normalizationtype" ["None"]
+	"bool write_exr" ["false"]
+	"bool write_png" ["true"]
+	"string write_png_channels" ["RGB"]
+	"bool write_png_16bit" ["false"]
+	"bool write_tga" ["false"]
+	"string ldr_clamp_method" ["cut"]
+	"integer displayinterval" [10]
+	"integer writeinterval" [180]
+	"integer flmwriteinterval" [900]
+	"integer tilecount" [0]
+	"string tonemapkernel" ["autolinear"]
+
+WorldBegin
+
+Include "MatPreview_dawn_face/Scene/00167/LuxRender-Materials.lxm"
+
+Include "MatPreview_dawn_face/Scene/00167/LuxRender-Geometry.lxo"
+
+Include "MatPreview_dawn_face/Scene/00167/LuxRender-Volumes.lxv"
+
+AttributeBegin #  "Lamp.001"
+
+Transform [-0.149778246879578 0.557201623916626 3.767728805541992 0.000000000000000 -3.210581779479980 -2.046998023986816 0.175096288323402 0.000000000000000 2.049005985260010 -3.166704416275024 0.549771308898926 0.000000000000000 4.440105438232422 -3.816919803619385 2.463205814361572 1.000000000000000]
+
+LightGroup "default"
+
+NamedMaterial "Lamp.001"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float power" [100.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"color L" [0.80000001 0.80000001 0.80000001]
+	"integer nsamples" [1]
+	"float gain" [1.000000000000000]
+
+Shape "trianglemesh"
+	"integer indices" [0 1 2 0 2 3]
+	"point P" [-0.500000000000000 0.500000000000000 0.000000000000000 0.500000000000000 0.500000000000000 0.000000000000000 0.500000000000000 -0.500000000000000 0.000000000000000 -0.500000000000000 -0.500000000000000 0.000000000000000]
+	"string name" ["Lamp.001"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "Lamp"
+
+Transform [-1.544031739234924 5.070449829101562 -0.292966663837433 0.000000000000000 -4.942591667175293 -1.429622530937195 1.306254506111145 0.000000000000000 1.168796896934509 0.652720093727112 5.136847019195557 0.000000000000000 1.649345397949219 0.264203757047653 5.865427017211914 1.000000000000000]
+
+LightGroup "default"
+
+NamedMaterial "Lamp"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float power" [100.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"color L" [0.80000001 0.80000001 0.80000001]
+	"integer nsamples" [1]
+	"float gain" [1.000000000000000]
+
+Shape "trianglemesh"
+	"integer indices" [0 1 2 0 2 3]
+	"point P" [-0.500000000000000 0.500000000000000 0.000000000000000 0.500000000000000 0.500000000000000 0.000000000000000 0.500000000000000 -0.500000000000000 0.000000000000000 -0.500000000000000 -0.500000000000000 0.000000000000000]
+	"string name" ["Lamp"]
+
+AttributeEnd # ""
+WorldEnd

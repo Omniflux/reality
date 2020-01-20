@@ -1,0 +1,19 @@
+// DAZ Studio version 4.6.2.106 filetype DAZ Script
+/*
+ * Assign the values to the variables below, you don't need to change anything else.
+ */
+
+// The file name of your IBL light. The path is relative to where the package has been installed
+var IBLMapName  = "/Runtime/Textures/Reality/Alexs_Apartment/Alexs_Apartment.ibl";
+
+var IBLAbsPath= App.getContentMgr().getAbsolutePath(IBLMapName, true);
+
+if (IBLAbsPath != "") {
+  Reality = App.getPluginMgr().findPlugin("Reality DS");
+  Reality.setIBLImage(IBLAbsPath);
+}
+else {
+  MessageBox.information(("Error: could not find %s").arg(IBLMapName), 
+                         "Information",
+                         "OK");
+}

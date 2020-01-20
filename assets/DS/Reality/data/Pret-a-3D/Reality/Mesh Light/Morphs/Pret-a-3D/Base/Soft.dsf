@@ -1,0 +1,62 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Mesh%20Light/Morphs/Pret-a-3D/Base/Soft.dsf",
+		"type" : "modifier",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "0.0",
+		"modified" : "2014-11-15T23:27:54Z"
+	},
+	"modifier_library" : [
+		{
+			"id" : "Soft",
+			"name" : "Soft",
+			"parent" : "/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight",
+			"presentation" : {
+				"type" : "",
+				"label" : "",
+				"description" : "",
+				"icon_large" : "",
+				"colors" : [ [ 0.3529412, 0.3529412, 0.3529412 ], [ 1, 1, 1 ] ]
+			},
+			"channel" : {
+				"id" : "value",
+				"type" : "bool",
+				"name" : "Soft",
+				"label" : "Soft",
+				"value" : false
+			},
+			"group" : "/Shadow Control",
+			"formulas" : [
+				{
+					"output" : "meshlight:/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight?scale/x",
+					"operations" : [
+						{ "op" : "push", "url" : "meshlight:#Soft?value" },
+						{ "op" : "push", "val" : 0.22 },
+						{ "op" : "mult" }
+					]
+				},
+				{
+					"output" : "meshlight:/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf#meshlight?scale/y",
+					"operations" : [
+						{ "op" : "push", "url" : "meshlight:#Soft?value" },
+						{ "op" : "push", "val" : 0.22 },
+						{ "op" : "mult" }
+					]
+				}
+			]
+		}
+	],
+	"scene" : {
+		"modifiers" : [
+			{
+				"id" : "Soft-1",
+				"url" : "#Soft"
+			}
+		]
+	}
+}

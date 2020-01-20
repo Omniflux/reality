@@ -1,0 +1,544 @@
+{
+	"file_version" : "0.6.0.0",
+	"asset_info" : {
+		"id" : "/data/Pret-a-3D/Reality/Mesh%20Light/meshlight.dsf",
+		"type" : "prop",
+		"contributor" : {
+			"author" : "phciccone",
+			"email" : "",
+			"website" : ""
+		},
+		"revision" : "1.0",
+		"modified" : "2014-11-15T23:27:54Z"
+	},
+	"geometry_library" : [
+		{
+			"id" : "meshlight-1",
+			"name" : "meshlight",
+			"type" : "polygon_mesh",
+			"vertices" : {
+				"count" : 80,
+				"values" : [
+					[ 3.59005, 69.0473, 24.1927 ],
+					[ 2.53854, 71.5859, 24.1927 ],
+					[ -9.32254e-07, 72.6374, 24.1927 ],
+					[ -2.53855, 71.5859, 24.1927 ],
+					[ -3.59005, 69.0473, 24.1927 ],
+					[ -2.53855, 66.5088, 24.1927 ],
+					[ -9.32254e-07, 65.45731, 24.1927 ],
+					[ 2.53854, 66.5088, 24.1927 ],
+					[ 3.59005, 69.0473, 22.4272 ],
+					[ 2.53854, 71.5859, 22.4272 ],
+					[ -1.00942e-06, 72.6374, 22.4272 ],
+					[ -2.53855, 71.5859, 22.4272 ],
+					[ -3.59005, 69.0473, 22.4272 ],
+					[ -2.53855, 66.5088, 22.4272 ],
+					[ -1.00942e-06, 65.45731, 22.4272 ],
+					[ 2.53854, 66.5088, 22.4272 ],
+					[ 2.49737, 69.0473, 22.4273 ],
+					[ 1.76591, 70.8132, 22.4273 ],
+					[ 1.76591, 67.28139, 22.4273 ],
+					[ -5.86411e-06, 71.5447, 22.4273 ],
+					[ -1.76592, 70.8132, 22.4273 ],
+					[ -2.49738, 69.0473, 22.4273 ],
+					[ -1.76592, 67.28139, 22.4273 ],
+					[ -5.86411e-06, 66.55, 22.4273 ],
+					[ -3.3596e-06, 67.2878, 24.1927 ],
+					[ -1.24418, 67.8032, 24.1927 ],
+					[ 1.24418, 67.8032, 24.1927 ],
+					[ -1.75954, 69.0473, 24.1927 ],
+					[ 1.75953, 69.0473, 24.1927 ],
+					[ -1.24418, 70.2915, 24.1927 ],
+					[ 1.24418, 70.2915, 24.1927 ],
+					[ -3.3596e-06, 70.8069, 24.1927 ],
+					[ 2.49737, 69.0473, 0.133895 ],
+					[ 1.76591, 70.8132, 0.133895 ],
+					[ 1.76591, 67.28139, 0.133895 ],
+					[ -6.838591e-06, 71.5447, 0.133895 ],
+					[ -6.838591e-06, 66.55, 0.133895 ],
+					[ -1.76592, 70.8132, 0.133895 ],
+					[ -2.49738, 69.0473, 0.133895 ],
+					[ -1.76592, 67.28139, 0.133895 ],
+					[ 0.04698391, 69.0473, -5.55876 ],
+					[ 0.0332208, 69.0806, -5.55876 ],
+					[ 0.0332208, 69.0141, -5.55876 ],
+					[ -7.08742e-06, 69.09429, -5.55876 ],
+					[ -7.08742e-06, 69.0004, -5.55876 ],
+					[ -0.0332326, 69.0806, -5.55876 ],
+					[ -0.0332326, 69.0141, -5.55876 ],
+					[ -0.0469956, 69.0473, -5.55876 ],
+					[ -69.3483, 138.375, -20.6231 ],
+					[ 69.3483, 138.375, -20.6231 ],
+					[ -69.3483, -0.321404, -20.6231 ],
+					[ 69.3483, -0.321404, -20.6231 ],
+					[ -69.3483, 138.375, -20.6229 ],
+					[ 69.3483, 138.375, -20.6229 ],
+					[ 69.3483, -0.321388, -20.6229 ],
+					[ -69.3483, -0.321388, -20.6229 ],
+					[ -27.8241, 41.2029, -7.15587 ],
+					[ -27.8241, 96.85101, -7.15587 ],
+					[ 27.8241, 41.2029, -7.15587 ],
+					[ 27.8241, 96.85101, -7.15587 ],
+					[ -69.3483, 138.375, -20.6231 ],
+					[ 69.3483, 138.375, -20.6231 ],
+					[ 69.3483, -0.321404, -20.6231 ],
+					[ -69.3483, -0.321404, -20.6231 ],
+					[ -67.17539, 136.202, -20.6231 ],
+					[ 67.17539, 136.202, -20.6231 ],
+					[ 67.17539, 1.85155, -20.6231 ],
+					[ -67.17539, 1.85155, -20.6231 ],
+					[ -69.3483, 138.375, -24.1927 ],
+					[ 69.3483, 138.375, -24.1927 ],
+					[ 69.3483, -0.321404, -24.1927 ],
+					[ -69.3483, -0.321404, -24.1927 ],
+					[ -67.17539, 136.202, -24.1927 ],
+					[ 67.17539, 136.202, -24.1927 ],
+					[ 67.17539, 1.85155, -24.1927 ],
+					[ -67.17539, 1.85155, -24.1927 ],
+					[ 67.17539, 1.85154, -22.476 ],
+					[ -67.17539, 1.85156, -22.476 ],
+					[ 67.17539, 136.202, -22.476 ],
+					[ -67.17539, 136.202, -22.476 ]
+				]
+			},
+			"polygon_groups" : {
+				"count" : 5,
+				"values" : [
+					"handle",
+					"mesh",
+					"back",
+					"snoot",
+					"Gobo"
+				]
+			},
+			"polygon_material_groups" : {
+				"count" : 5,
+				"values" : [
+					"ReL_Handle",
+					"RealityLight",
+					"ReL_Back",
+					"ReL_Snoot",
+					"Gobo"
+				]
+			},
+			"polylist" : {
+				"count" : 66,
+				"values" : [
+					[ 0, 0, 0, 8, 9, 1 ],
+					[ 0, 0, 7, 15, 8, 0 ],
+					[ 0, 0, 1, 9, 10, 2 ],
+					[ 0, 0, 2, 10, 11, 3 ],
+					[ 0, 0, 3, 11, 12, 4 ],
+					[ 0, 0, 4, 12, 13, 5 ],
+					[ 0, 0, 5, 13, 14, 6 ],
+					[ 0, 0, 6, 14, 15, 7 ],
+					[ 0, 0, 9, 8, 16, 17 ],
+					[ 0, 0, 8, 15, 18, 16 ],
+					[ 0, 0, 10, 9, 17, 19 ],
+					[ 0, 0, 11, 10, 19, 20 ],
+					[ 0, 0, 12, 11, 20, 21 ],
+					[ 0, 0, 13, 12, 21, 22 ],
+					[ 0, 0, 14, 13, 22, 23 ],
+					[ 0, 0, 15, 14, 23, 18 ],
+					[ 0, 0, 0, 1, 30, 28 ],
+					[ 0, 0, 7, 0, 28, 26 ],
+					[ 0, 0, 1, 2, 31, 30 ],
+					[ 0, 0, 2, 3, 29, 31 ],
+					[ 0, 0, 3, 4, 27, 29 ],
+					[ 0, 0, 4, 5, 25, 27 ],
+					[ 0, 0, 5, 6, 24, 25 ],
+					[ 0, 0, 6, 7, 26, 24 ],
+					[ 0, 0, 24, 26, 28, 25 ],
+					[ 0, 0, 25, 28, 30, 27 ],
+					[ 0, 0, 27, 30, 31, 29 ],
+					[ 0, 0, 17, 16, 32, 33 ],
+					[ 0, 0, 16, 18, 34, 32 ],
+					[ 0, 0, 19, 17, 33, 35 ],
+					[ 0, 0, 18, 23, 36, 34 ],
+					[ 0, 0, 20, 19, 35, 37 ],
+					[ 0, 0, 21, 20, 37, 38 ],
+					[ 0, 0, 22, 21, 38, 39 ],
+					[ 0, 0, 23, 22, 39, 36 ],
+					[ 0, 0, 33, 32, 40, 41 ],
+					[ 0, 0, 32, 34, 42, 40 ],
+					[ 0, 0, 35, 33, 41, 43 ],
+					[ 0, 0, 34, 36, 44, 42 ],
+					[ 0, 0, 37, 35, 43, 45 ],
+					[ 0, 0, 36, 39, 46, 44 ],
+					[ 0, 0, 38, 37, 45, 47 ],
+					[ 0, 0, 39, 38, 47, 46 ],
+					[ 1, 1, 49, 51, 50, 48 ],
+					[ 2, 2, 52, 57, 59, 53 ],
+					[ 2, 2, 54, 58, 56, 55 ],
+					[ 2, 2, 57, 52, 55, 56 ],
+					[ 2, 2, 56, 58, 59, 57 ],
+					[ 2, 2, 53, 59, 58, 54 ],
+					[ 3, 3, 60, 64, 65, 61 ],
+					[ 3, 3, 63, 67, 64, 60 ],
+					[ 3, 3, 61, 65, 66, 62 ],
+					[ 3, 3, 62, 66, 67, 63 ],
+					[ 3, 3, 69, 73, 72, 68 ],
+					[ 3, 3, 68, 72, 75, 71 ],
+					[ 3, 3, 70, 74, 73, 69 ],
+					[ 3, 3, 71, 75, 74, 70 ],
+					[ 3, 3, 69, 68, 60, 61 ],
+					[ 3, 3, 68, 71, 63, 60 ],
+					[ 3, 3, 70, 69, 61, 62 ],
+					[ 3, 3, 71, 70, 62, 63 ],
+					[ 3, 3, 72, 73, 65, 64 ],
+					[ 3, 3, 75, 72, 64, 67 ],
+					[ 3, 3, 73, 74, 66, 65 ],
+					[ 3, 3, 74, 75, 67, 66 ],
+					[ 4, 4, 77, 79, 78, 76 ]
+				]
+			},
+			"default_uv_set" : "/data/Pret-a-3D/Reality/Mesh%20Light/UV%20Sets/Pret-a-3D/Base/default.dsf#default",
+			"extra" : [
+				{
+					"type" : "studio_geometry_channels",
+					"channels" : [
+						{
+							"channel" : {
+								"id" : "SubDIALevel",
+								"type" : "int",
+								"name" : "SubDIALevel",
+								"label" : "SubDivision Level",
+								"visible" : false,
+								"value" : 1,
+								"min" : 0,
+								"max" : 2,
+								"clamped" : true,
+								"step_size" : 1
+							},
+							"group" : "/General/Mesh Resolution"
+						},
+						{
+							"channel" : {
+								"id" : "SubDAlgorithmControl",
+								"type" : "enum",
+								"name" : "SubDAlgorithmControl",
+								"label" : "SubDivision Algorithm",
+								"visible" : false,
+								"value" : 0,
+								"enum_values" : [ "Catmark", "Bilinear", "Loop", "Catmull-Clark (Legacy)" ]
+							},
+							"group" : "/General/Mesh Resolution"
+						},
+						{
+							"channel" : {
+								"id" : "SubDEdgeInterpolateLevel",
+								"type" : "enum",
+								"name" : "SubDEdgeInterpolateLevel",
+								"label" : "Edge Interpolation",
+								"visible" : false,
+								"value" : 2,
+								"enum_values" : [ "Soft Corners And Edges", "Sharp Edges and Corners", "Sharp Edges" ]
+							},
+							"group" : "/General/Mesh Resolution"
+						}
+					]
+				}
+			]
+		}
+	],
+	"node_library" : [
+		{
+			"id" : "meshlight",
+			"name" : "meshlight",
+			"type" : "node",
+			"label" : "MeshLight",
+			"rotation_order" : "YXZ",
+			"inherits_scale" : true,
+			"center_point" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "xOrigin",
+					"label" : "X Origin",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "yOrigin",
+					"label" : "Y Origin",
+					"visible" : false,
+					"value" : -0.321404,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "zOrigin",
+					"label" : "Z Origin",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				}
+			],
+			"end_point" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "xEnd",
+					"label" : "X End",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "yEnd",
+					"label" : "Y End",
+					"visible" : false,
+					"value" : 138.375,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "zEnd",
+					"label" : "Z End",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				}
+			],
+			"orientation" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "xOrientation",
+					"label" : "X Orientation",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "yOrientation",
+					"label" : "Y Orientation",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "zOrientation",
+					"label" : "Z Orientation",
+					"visible" : false,
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.01
+				}
+			],
+			"rotation" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "XRotate",
+					"label" : "X Rotate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.5
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "YRotate",
+					"label" : "Y Rotate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.5
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "ZRotate",
+					"label" : "Z Rotate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 0.5
+				}
+			],
+			"translation" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "XTranslate",
+					"label" : "X Translate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 1
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "YTranslate",
+					"label" : "Y Translate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 1
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "ZTranslate",
+					"label" : "Z Translate",
+					"value" : 0,
+					"min" : -10000,
+					"max" : 10000,
+					"step_size" : 1
+				}
+			],
+			"scale" : [
+				{
+					"id" : "x",
+					"type" : "float",
+					"name" : "XScale",
+					"label" : "X Scale",
+					"value" : 1,
+					"min" : -10000,
+					"max" : 10000,
+					"display_as_percent" : true,
+					"step_size" : 0.005
+				},
+				{
+					"id" : "y",
+					"type" : "float",
+					"name" : "YScale",
+					"label" : "Y Scale",
+					"value" : 1,
+					"min" : -10000,
+					"max" : 10000,
+					"display_as_percent" : true,
+					"step_size" : 0.005
+				},
+				{
+					"id" : "z",
+					"type" : "float",
+					"name" : "ZScale",
+					"label" : "Z Scale",
+					"value" : 1,
+					"min" : -10000,
+					"max" : 10000,
+					"display_as_percent" : true,
+					"step_size" : 0.005
+				}
+			],
+			"general_scale" : {
+				"id" : "general_scale",
+				"type" : "float",
+				"name" : "Scale",
+				"label" : "Scale",
+				"value" : 1,
+				"min" : -10000,
+				"max" : 10000,
+				"display_as_percent" : true,
+				"step_size" : 0.005
+			},
+			"extra" : [
+				{
+					"type" : "studio_node_channels",
+					"channels" : [
+						{
+							"channel" : {
+								"id" : "Point At",
+								"type" : "numeric_node",
+								"name" : "Point At",
+								"label" : "Point At",
+								"value" : 1,
+								"min" : 0,
+								"max" : 1,
+								"clamped" : true,
+								"step_size" : 0.01,
+								"needs_node" : true,
+								"node" : null
+							},
+							"group" : "/General/Misc"
+						},
+						{
+							"channel" : {
+								"id" : "Renderable",
+								"type" : "bool",
+								"name" : "Renderable",
+								"label" : "Visible in Render",
+								"value" : true
+							},
+							"group" : "/Display/Rendering"
+						},
+						{
+							"channel" : {
+								"id" : "Cast Shadows",
+								"type" : "bool",
+								"name" : "Cast Shadows",
+								"label" : "Cast Shadows",
+								"value" : true
+							},
+							"group" : "/Display/Rendering"
+						},
+						{
+							"channel" : {
+								"id" : "Render Priority",
+								"type" : "enum",
+								"name" : "Render Priority",
+								"label" : "Render Priority",
+								"visible" : false,
+								"value" : 3,
+								"enum_values" : [ "Lowest", "Low", "Below Normal", "Normal", "Above Normal", "High", "Highest" ]
+							},
+							"group" : "/Display/Rendering"
+						},
+						{
+							"channel" : {
+								"id" : "Visible",
+								"type" : "bool",
+								"name" : "Visible",
+								"label" : "Visible",
+								"value" : true
+							},
+							"group" : "/Display/Scene View"
+						},
+						{
+							"channel" : {
+								"id" : "Selectable",
+								"type" : "bool",
+								"name" : "Selectable",
+								"label" : "Selectable",
+								"value" : true
+							},
+							"group" : "/Display/Scene View"
+						}
+					]
+				}
+			]
+		}
+	]
+}

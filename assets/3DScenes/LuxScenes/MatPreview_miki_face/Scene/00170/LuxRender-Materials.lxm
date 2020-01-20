@@ -1,0 +1,46 @@
+# Materials File
+
+Texture "roomTex" "float" "checkerboard"
+	"string aamode" ["closedform"]
+	"integer dimension" [2]
+	"float tex1" [1.000000000000000]
+	"float tex2" [0.000000000000000]
+	"string mapping" ["uv"]
+	"float uscale" [100.000000000000000]
+	"float vscale" [-100.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+Texture "CheckerMixer" "color" "mix"
+	"texture amount" ["roomTex"]
+	"color tex1" [0.80000001 0.80000001 0.80000001]
+	"color tex2" [0.06997492 0.06997492 0.06997492]
+
+MakeNamedMaterial "Room"
+	"texture Kd" ["CheckerMixer"]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+Texture "Tex_color" "color" "imagemap"
+	"string filename" ["/Volumes/Content/PoserContent/PoserPro/Poser Pro 2012 Content/Runtime/Textures/Miki3/Miki3_Head.png"]
+	"integer discardmipmaps" [0]
+	"float gain" [1.000000000000000]
+	"float gamma" [2.200000047683716]
+	"float maxanisotropy" [8.000000000000000]
+	"string wrap" ["repeat"]
+	"string mapping" ["uv"]
+	"float uscale" [1.000000000000000]
+	"float vscale" [-1.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+MakeNamedMaterial "faceTexture"
+	"texture Kd" ["Tex_color"]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+MakeNamedMaterial "Lamp.001"
+	"string type" ["null"]
+
+MakeNamedMaterial "Lamp"
+	"string type" ["null"]

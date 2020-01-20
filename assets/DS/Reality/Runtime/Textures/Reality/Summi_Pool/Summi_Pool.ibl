@@ -1,0 +1,43 @@
+[Header]
+ICOfile = "Summi_Pool_thumb.jpg"
+Name = "Summi Pool"
+Author = "Blochi"
+Location = "Halle"
+Comment = "Old abandoned public pool, surreal urban landscape, ruins and decay, outdoor, sunlight"
+GEOlat = 51.4654541016666730
+GEOlong = 11.9597396849999990
+Date = "2009:08:04"
+Time = "11:09:00"
+Height = 1.754386
+
+[Background]
+BGfile = "Summi_Pool_8k.jpg"
+BGmap = 1
+BGu = 0.000000
+BGv = 0.000000
+BGheight = 4096
+
+[Enviroment]
+EVfile = "Summi_Pool_Env.hdr"
+EVmap = 1
+EVu = 0.000000
+EVv = 0.000000
+EVheight = 180
+EVmulti = 1.000000
+EVgamma = 1.400000
+
+[Reflection]
+REFfile = "Summi_Pool_3k.hdr"
+REFmap = 1
+REFu = 0.000000
+REFv = 0.000000
+REFheight = 1600
+REFmulti = 1.000000
+REFgamma = 1.600000
+
+[Sun]
+SUNcolor = 255,255,255
+SUNmulti = 0.934804
+SUNu = 0.830000
+SUNv = 0.200000
+

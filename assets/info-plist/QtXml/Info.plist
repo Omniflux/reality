@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleVersion</key>
+	<string>4.8</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.8</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Created by Pret-a-3D for Reality</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleExecutable</key>
+	<string>QtXml</string>
+	<key>NOTE</key>
+	<string>Bundled with Reality</string>
+</dict>
+</plist>
