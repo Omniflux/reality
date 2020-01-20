@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Find the absolute path of this script
+pushd $(dirname $0)  > /dev/null
+scriptDir=`pwd`
+popd > /dev/null
+
+# INTERMEDIATE=Reality_User_Guide_int.mmd
+SOURCE_DOC=Reality_Users_Guide.mmd
+TEXFILE=Reality_Users_Guide.tex
+RUG_NAME=Reality_Users_Guide.pdf
+# ${scriptDir}/svnrImageFilter.pl Reality_User_Guide.mmd > $INTERMEDIATE
+
+cd $scriptDir
+pushd rug/mmd/Reality_Users_Guide.mmd
+# make sure that we have the latest version of the cover
+cp "${scriptDir}/rug/RugCover.pdf" .
+echo "Generating LaTeX document from ${SOURCE_DOC}"
+
+multimarkdown -t latex $SOURCE_DOC > $TEXFILE
+pdflatex $TEXFILE
+makeindex -s "${scriptDir}/rug/rug_index_initials.ist" Reality_Users_Guide.idx
+# Second run to resolve index and TOC entries
+pdflatex $TEXFILE
+
+cp ${RUG_NAME} "${scriptDir}/rug"
+
+open -a Preview "${scriptDir}/rug/${RUG_NAME}"
+
+popd

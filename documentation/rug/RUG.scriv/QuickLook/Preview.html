@@ -1,0 +1,825 @@
+<html>
+
+<head>
+<title>RUG</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+	body {background-color: #bac0c7}
+    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Georgia, Cochin, Times, Courier, Arial, serif; font-size:12.0px;}
+    .page {border: 1px solid #727272; background: #fff}
+    hr {
+      border-top: 1px dashed #000;
+      border-bottom: 0px solid #fff;
+      color: #fff;
+      background-color: #fff;
+      height: 0px;
+  </style>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="3">
+<tr>
+<td>
+
+<table class="page" width="100%" cellspacing="10" cellpadding="2">
+<tr>
+<td valign="top">
+
+<ul>
+<li>
+<p class="binderItem"><strong>METADATA</strong><br/>latex input:            mmd-memoir-header<br/>
+Title:                  Reality's User Guide<br/>
+Subtitle:               Version 3.0<br/>
+Author:                 Paolo Ciccone<br/>
+Copyright:    2012-2013 Pret-a-3D/Paolo Ciccone<br/>
+Affiliation:            http://preta3d.com<br/>
+Base Header Level:      2<br/>
+latex mode:             memoir<br/>
+latex input:            mmd-memoir-pa3d-begin-doc<br/>
+latex footer:           mmd-memoir-footer<br/>
+</p>
+</li>
+<li>
+<p class="binderItem"><strong>How to use this guide</strong><br/>This guide has several features that are meant to help you find the information needed in the fastest way possible. Since Reality works in the same way, regardless if the version used connects to [PS] or to [DS], there is a single edition of this guide. Whenever a feature is specific to [PS] or [DS], the text will clearly say so. Since several artists use both [PS] and [DS] having all the information about Reality in a single guide is also quite convenient. <br/>
+<br/>
+The figure numbers referred to by th...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Welcome</strong><br/>Thank you for purchasing Reality; we hope that you will have fun using it. <!-- \index{loop|see{infinite}} --><br/>
+ <br/>
+Reality gives you a new way of rendering your [PS] or [DS] scenes by using physics-based rendering, the best way of creating realistic images from 3D geometry.<br/>
+<br/>
+Reality is designed to enhance and simplify the conversion of the [PS] or [DS] materials and lights in several ways.<br/>
+<br/>
+Reality has intelligent conversion of skin <!-- \index{Material!Skin} -->materials to provide a zero-click S...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Installing Reality</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Requirements</strong><br/>To use Reality with [PS] you need one of the following configurations:<br/>
+<br/>
+###[PS]<br/>
+<br/>
+- [PS] 9 with Service Release 3 (SR3) installed<br/>
+- [PS] Pro 2012 with SR3 installed<br/>
+- [PS] 10 with SR3 or higher installed<br/>
+- [PS] Pro 2014 with SR3 or higher installed<br/>
+<br/>
+If you need to add one of the Service Release updates please go to the [SMI] website and download that update. Without the   Service Releases listed above Reality cannot run. <br/>
+<br/>
+###[DS]<br/>
+To use Reality with [DS] you need one of the following configurati...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Installation</strong><br/>Reality runs on both [osx] and [wos] (32 and 64-bit versions). The installation is automated by the Reality installer and most of the times all you will have to do is to simply click on the **Install** button and everything will be done in a few seconds. <br/>
+<br/>
+In this section you can find detailed information on every aspect of the installation process, just in case you might need more information.<br/>
+<br/>
+##Distribution files<br/>
+When you download Reality the program is distributed as a DMG file for [osx] or ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>LuxRender</strong><br/>Reality renders using LuxRender, a physics-based renderer. [LX] is included in Reality and it is installed automatically when installing Reality.<br/>
+<br/>
+If you have previously installed LuxRender, as a stand-alone program, then the installation of Reality [version] will **not** affect that installation. You will be able to use that version of LuxRender with other programs, like Blender or Maya.</p>
+</li>
+<li>
+<p class="binderItem"><strong>OpenCL</strong><br/>OpenCL is a technology that allows a program to use the GPU (Graphic Processing Unit, the video card) to execute instructions in parallel. This technology can speed up rendering. To know if you have an OpenCL-enabled GPU please look in the Acceleration page of Render tab of Reality. If OpenCL is available on your machine Reality will report the devices that it found being OpenCL-compatible. <br/>
+<br/>
+[osx] has OpenCL support built into the Operating System. Unfortunately the support for OpenCL is broken...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Registering Reality</strong><br/>The first time that you run Reality the program will ask you for the registration.<br/>
+This process is simple, quick, and it will take just a minute of your time. Once it's done the program will work without further requirements. <br/>
+<br/>
+You call Reality from inside [PS] or [DS], using the Render menu. Click on the **Render | Reality Render Editor** menu to call the program.<br/>
+<br/>
+# "Calling Reality from [PS]"<br/>
+<br/>
+ "Calling Reality from [DS]"<br/>
+<br/>
+We have done our best to make the registration system as easy as possi...</p>
+</li>
+<li>
+<p class="binderItem"><strong>How to re-download Reality</strong><br/>Provide link</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Using Reality</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>What's new in Reality [version]</strong><br/>**The following are the main changes in Reality [version] compared to 4.2.1:**<br/>
+<br/>
+- Added per-texture Copy and Paste. Copy a texture, paste it in any channel, even into a different material. This feature works also with Multi-edit.<br/>
+- Updated Cloth editor to work like the other editors. Clicking on a Color texture shows the color picker.<br/>
+- It's now possible to remove sub textures, like the one in the Band or Mix texture.<br/>
+- Added ability to render a subset of an animation.<br/>
+- For Reality DAZ Studio E...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Quick-start for [DS] artists</strong><br/>When using a new program we are always eager to see what it can do, without spending time reading long documentation. <br/>
+If you want to start rendering great scene with almost no setup, then download the "Perfect Shot Scene" from our website ( http://preta3d.com/pre-made-scenes/ ) and use it as the start of any new scene. It contains a very flattering and realistic light setup, background and floor, and the camera exposure is set to work right out of the box. Just add your character and click on *...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Quick-start for [PS] artists</strong><br/>When using a new program we are always eager to see what it can do, without spending time reading long documentation. <br/>
+If you want to start rendering great scene with almost no setup, then download the "Perfect Shot Scene" from our website ( http://preta3d.com/pre-made-scenes/ ) and use it as the start of any new scene. It contains a very flattering and realistic light setup, background and floor, and the camera exposure is set to work right out of the box. Just add your character and click on *...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Rendering workflow</strong><br/>The workflow for using Reality is simple. The basic steps are: <br/>
+<br/>
+- Create the scene<br/>
+- Add your lighting<br/>
+- Run Reality and, optionally, edit some settings<br/>
+- Render<br/>
+ <br/>
+###Create the scene<br/>
+<br/>
+First you create your scene in [PS] or [DS] as you would normally. Don't spend too much time setting the materials in the host as you will be doing all the fine-tuning in Reality. Setting the basic textures for characters and props is generally all that you have to do. <br/>
+<br/>
+###Add your lighting <br/>
+<br/>
+Lighting is 80%of y...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Rendering with a transparent background</strong><br/>If you want to replace the background of the image in post-processing you can do that easily in Reality by simply enabling the **Transparent BG** checkbox in the Output section of the Render tab.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Rendering modes</strong><br/>Reality provides several options for rendering your images with optimal balance between quality and speed. Let's see all the options in detail.<br/>
+<br/>
+# "Scene Configuration Options"<br/>
+<br/>
+By default Reality renders using CPU acceleration. This mode gives you an excellent quality of image, while rendering as fast as possible when using the CPU and preserving the unbiased nature of the image. Compared to the previous version of Reality, this accelerated mode is between seven and ten times faster.<br/>
+<br/>
+We can ma...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Refine Brush tool</strong><br/>When using the non-accelerated rendering mode there can be scenes that have areas that take longer than others to be free of [render noise][Fireflies]. This situation usually happens in parts of the scene where there is low light or where the light's path can be obstructed. For those situations LuxRender has a handy tool: the **Refine Brush**. <!-- \index{Render noise} --> <!-- \index{Refine brush} --><br/>
+<br/>
+# "The LuxRender refine brush"<br/>
+<br/>
+If you want to instruct LuxRender to focus on areas of the im...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Reality Add-ons</strong><br/>Reality comes with a set of lights and props to help you get the most out of your scenes. See figure <!--\ref{rug_realitylights.png}--> or figure <!--\ref{dazstudio_reality_lights.png}-->.<br/>
+<br/>
+<!-- \index{Reality add-ons} --> <br/>
+###Mesh Lights<br/>
+<!-- \index{[ML]} --><br/>
+[MLs] are the most flattering and flexible lights that you can use with LuxRender. For this reason Reality includes a great [ML] prop that is designed to give you excellent control on the quality and position of the light.<br/>
+<br/>
+In the Reality ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The render never stops</strong><br/>If you are not familiar with LuxRender, the above heading might seem a bit odd. LuxRender works by collecting light samples  in a endless cycle. <!-- \index{Samples} --> The renderer doesn't make the decision for us about when to stop; we stop the process when we are satisfied with the image. Many different factors can determine the time required for a satisfactory render. When we close LuxRender, the rendered image is saved on disk, in the image file that we have specified in the Render tab of ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>When is the right time to stop LuxRender? </strong><br/><br/>
+Given that LuxRender doesn't stop automatically at an arbitrary point, you might wonder when it is the right time to stop the render. The short answer is "when it's good enough for you." Until you gain more practice with LuxRender it's impossible to give an answer to what is the acceptable level of quality, expressed in time. Each pass in the rendering process doesn't just refine the "grain" of the image but it adds quality to the light that is simulated. For example, glass reflections will loo...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The exported scene files</strong><br/>Reality performs its task by reading all the information about the host scene and then generating a scene file using the LuxRender language. After the scene file is created, Reality then calls LuxRender and points the program to the scene file generated. Rendering starts as soon as the scene file is read, the rendering image will appear on screen, and this image will be automatically saved to disk.<br/>
+<br/>
+The location and name of the scene file, ending in extension .lxs, is based on the image file nam...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Best practices for exporting your scene</strong><br/>###Hide what you don't see<br/>
+<br/>
+LuxRender performs very demanding operations because it uses real-world mathematical models for calculating the effects of light and the behavior of materials. While often it's a good idea to render off-camera objects, many times you will save a considerable amount of time and memory by not exporting part of your scene that is not visible. <br/>
+<br/>
+For example, many scenes that use the DAZ human figures, like Victoria or Michael, pose the models with their mouths closed. In ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Saving your Reality settings </strong><br/>Reality saves all your material configurations and other settings inside your [PS] or [DS] scene automatically. Once you save the scene file your Reality configuration is saved. When you reload that scene in [PS] or [DS] all the Reality settings will be loaded automatically.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Tonemapping</strong><br/>After you play with LuxRender a little bit you will notice some controls in the main render window. The topmost is called *Tonemapping.* <!--\index{Tonemapper}--> Tonemapping is very important in making things work the way you want, and in achieving the look that you desire. <br/>
+<br/>
+# "The tonemapper selector in LuxRender"<br/>
+<br/>
+Unlike [hrenderer] and many other renderers, LuxRender calculates the light values using full light spectral values. This means that when it calculates the light amount for a given...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Stopping and resuming renders</strong><br/>Stopping and resuming renders<br/>
+<br/>
+You can stop a Reality-created render at any time, and close Lux. </p>
+</li>
+<li>
+<p class="binderItem"><strong>Reclaiming disk space</strong><br/>After you run LuxRender for a while  you will see that several `.flm` files are created. Those files are used by LuxRender to resume the render. If you don't need to resume the render from where it stopped you can delete those files and reclaim some disk space. `Flm` files can be actually quite large, ranging from 20Mb to 80 or more than 100 Mb each. <br/>
+<br/>
+To find the `flm` file use your OS file search utility and then delete them. </p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>The Reality User Interface</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>The material editor</strong><br/>The heart of Reality is its material editor. With it you can modify the type and definition of all materials recognized by Reality. This can be used to optimize the desired result or to create new materials from scratch.<br/>
+<br/>
+The Reality material editor has been designed to be flexible, powerful and easy to use. It provides the same power that you can have from a node-based editor, but without the complexity of using nodes.<br/>
+<br/>
+##Material types<br/>
+<br/>
+Every material in Reality has a specific type. The types ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Material sections</strong><br/>The Reality material editor groups properties of a material in a logical way to help you work faster and with ease. These groups are handled by four tabs:<br/>
+<br/>
+- The Material tab handles all the main properties of a material.<br/>
+- The Opacity tab handles the data that defines the opacity of the materials, also known as Alpha Channel. <!-- \index{Alpha channel} --><br/>
+- The Volumes tab is enabled for materials that can handle volumes. They are: Skin,<!-- \index{Material!Skin} --> translucent Glossy ,<!-- \...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Converting materials</strong><br/>Reality does its best to guess what material type to use for each host material of the host, but the truth of the matter is that sometimes there is simply not enough information in the host shader to make a precise guess. That's why machines cannot make art; the human touch is still, fortunately, necessary.<br/>
+<br/>
+There are many situations where it is necessary to convert a material from one type to another. For example, a model might include windows and their material should be Glass. Since neither [...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Light Editor</strong><br/>If we click on the Lights tab at the top of the Reality UI we enter the Light Editor. <br/>
+<br/>
+# "The Reality Light Editor"<br/>
+<br/>
+Lights in LuxRender have properties that cannot be found in  [PS] or [DS] and so this is the place where you can define all the properties of lights used in your scene. Most Reality lights are directly linked to their  host equivalent. You cannot create or delete a light in Reality, you do that, as usual, in the host so that they can be place and adjusted as they need to be.<br/>
+<br/>
+In ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Camera Editor</strong><br/>The Camera Editor is where you select which camera you want to use for the rendering and how that camera should behave. <!-- \index{Camera} --><br/>
+<br/>
+# "The Reality Camera Editor"<br/>
+<br/>
+The Camera Editor takes the list of cameras defined in the host and presents them in a list. By default the active camera in the host is selected in the Camera Editor. As you switch camera view in the host the Reality Camera Editor changes its selection. <br/>
+<br/>
+You can change this behavior by explicitly clicking on one camera n...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Volumes Editor</strong><br/>Reality includes a flexible, powerful volume system that controls how light behaves when it moves through objects or the space in-between objects. <!-- \index{Volumes} --><br/>
+<br/>
+See [Volumes][] for a explanation of how volumes work.<br/>
+<br/>
+The Volumes tab in Reality allows you to create new volumes and to set up all the properties for LuxRender volumes. You can then attach volumes to materials, assigning them for the inner or outer portion of a material.<br/>
+<br/>
+# "The Reality Volumes Editor"</p>
+</li>
+<li>
+<p class="binderItem"><strong>Advanced settings</strong><br/>The Advanced tab controls certain aspects of how Reality behaves and how it sets defaults for new scenes.<br/>
+<br/>
+# "The Advanced options"<br/>
+<br/>
+Let's see the values used in this tab one by one.<br/>
+<br/>
+- Max material Previews cached. <!-- \index{Material preview} -->When you work in the Material Editor, Reality shows you a preview of the material you are working on. To speed things up, Reality keeps a certain number of materials in memory. This value determines how many material previews are kept at any given tim...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The dockable panel in [PS]</strong><br/>Reality provides a convenient panel that can be docked in the Poser UI. This panel provides a bit of information about the objects handled by Reality and two convenient buttons:<br/>
+<br/>
+# "The Reality Dockable Panel"<br/>
+<br/>
+The first button calls the Reality UI; it works like the option in the Render menu. The other button, labelled **Render Frame**, does the same thing as the **Render Frame** button in the Reality UI.<br/>
+<br/>
+These two buttons can easily speed up your workflow.<br/>
+<br/>
+To open the Reality Panel in [PS], ...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Lighting practices</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Careful with those light sets</strong><br/>While Reality can easily convert any [PS] or [DS] light set it is important to understand why you should avoid using light sets made for such programs.<br/>
+<br/>
+The lighting model of the [hrenderer] renderers and the one used by LuxRender are very, very different and use completely different approaches. In [PS] a typical light set from the library can use an IBL light in conjunction with a few [ILs]. [ILs] are almost never used in LuxRender. One single [IL] can cause severe over-lighting; two are a reci...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Key concepts</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Unbiased vs. biased renderers</strong><br/>LuxRender is a physically-based, unbiased renderer. If you are not familiar with these terms, it's worth spending a few seconds learning how they affect your work. Most rendering engines, including [hrenderer], are biased.<br/>
+<br/>
+What that means, in simple terms, is that we can drive the renderer to create effects that are not possible in real life. For example, in [hrenderer] we can arbitrarily decide if a light projects shadows and if the shadow is soft or hard. In real life, if we turn on a light, ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Creating soft shadows with Reality</strong><br/>The sharpness or softness of the shadows is not based on the brightness of the light but on its **size**. For example, the Sun is a very small light source in reference to people and even buildings. Of course we know that the Sun is several times the size of the Earth, but because of the distance it appears as a point in the sky. During a bright sunny day shadows are sharp. If you were to create a [PS] or [DS] scene and decided to set the sun with soft shadows, while visibly showing an outdoor, ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Lights are visible</strong><br/>In many 3D applications, [PS] and [DS] included, it is possible to place a light in view of the camera and then set it to be invisible during rendering. This is not possible in LuxRender, and this is a very good thing. <br/>
+<br/>
+Hiding lights during rendering is a time-honored technique used by conventional renderers because it was often necessary to use  several lights to simulate ambient light. Those lights needed to be placed in strategic points in the scene and they were often visible by the camera....</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Reality's materials</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Reality materials are simpler</strong><br/>When you look at the properties of the Reality materials they seem a lot simpler than both the [PS] versions and the [DS] versions. In [PS] you might find a long list of nodes linked together. In [DS] you might find a long list of shader properties spanning several screen lengths.<br/>
+<br/>
+Reality materials are defined by their characteristics, like being Velvet, Metal or Glass. Those characteristics in many cases include multiple parameters in a traditional renderer that may not be necessary for an unb...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Textures</strong><br/><!-- \index{Textures} --><br/>
+A texture is a pattern that is projected on a surface. At the very simplest the "pattern" can be a solid color. <br/>
+<br/>
+Traditionally, in the [PS] and [DS] world the term texture has been equated to an image. That is actually not correct. This book uses the term "texture" to indicate a generic pattern projected on a surface. We will use the expression "image map" to indicate a texture based on an image. <br/>
+<br/>
+Textures are divided into a few different subcategories. There are, for...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Material Editor</strong><br/>The main component of the Reality UI is the material editor. Reality automatically converts all the elements in your scene, like materials, lights and cameras to corresponding elements in LuxRender. For example, a shiny object is converted to the LuxRender *Glossy* material, others are converted to *Matte* and so on. Reality automatically recognizes the materials for most popular figures.  For example, the face material is converted to Skin <!-- \index{Material!Skin} -->and the cornea is convert...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Material channels</strong><br/>Materials are made of several "channels," inputs that define some properties of the material. The combination of all the channels produces the final result. The channels have specific names and this section is meant to give a quick overview of the role of each channel.<br/>
+<br/>
+- **Diffuse.** This channel gives the basic color of a surface. It can be a solid color or an image map or a combination of several elements. The end result is to provide the color, or colors, of the surface. While it's called "D...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Sub-Surface Scattering (SSS)</strong><br/>Sub-Surface Scattering, or SSS, is the ability of a renderer to simulate the scattering of light happening in the layers of human tissue under the surface of the skin. SSS is used for several types of materials, but skin is its most popular application. <!-- \index{SSS} --><br/>
+<br/>
+Reality has a feature called "zero-click SSS" which assigns a *Skin* material, with SSS enabled, automatically to certain materials that are found in the the host's figure. For example, the material **1_SkinFace** of Victori...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Finding the right material</strong><br/>Sometime it might not be totally clear which material is which, based on the simple name. To make it easy to find a material, Reality selects the material in its list when the corresponding one is selected in the host. <br/>
+<br/>
+###Selecting materials with [PS]<br/>
+If we enter the Material room in [PS] and use the eyedropper to select a material then that material will be automatically selected in Reality as well.<br/>
+<br/>
+##Selecting materials with [DS]<br/>
+If we select the Surface Selection Tool in [DS] and then clic...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Changing multiple materials </strong><br/>Reality allows you to quickly change multiple materials with a single action. If you need to change the type of multiple materials at once do as follows:<br/>
+<br/>
+- Select all the materials that you want to change, even across multiple objects<br/>
+- With the selection active right-click on any selected material<br/>
+- Select the new type of material that you want to assign<br/>
+<br/>
+All selected materials will be changed to this new type. If you edited one material and you want to  apply those changes to a set of similar...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Multi-edit</strong><br/>Reality has support for multi-edit, the ability to edit one or more parameters for multiple selected materials. Simply select multiple materials either via  Shift-Click or Cmd/Ctrl-Click (Cmd for Macintosh, Ctrl for Windows), and then change whatever parameter you want. For example, you can change the glossiness level of all selected materials.<br/>
+<br/>
+Multi-edit works also for changing textures, material types and texture values. All this can be done across multiple objects. </p>
+</li>
+<li>
+<p class="binderItem"><strong>Material Sync</strong><br/>There are times when we want to make a group of materials to act like a material that we have changed but we don't want to replace all the textures. For example, we might want to synchronize all the materials to use the same glossiness values and bump map of a reference material but we don't want to replace the specular map. <br/>
+<br/>
+In that case using the copy and paste doesn't work. Using multi-edit can do a lot but we can't change the gain of the Diffuse map for a bunch of materials with multi-edit....</p>
+</li>
+<li>
+<p class="binderItem"><strong>Save your Scene </strong><br/>Reality saves its own data inside the host's scene, so when you save it, all the Reality materials and configuration data are saved as well. </p>
+</li>
+<li>
+<p class="binderItem"><strong>Reality material reference</strong><br/>##Reality material reference<br/>
+<br/>
+Reality provides access to most of LuxRender's materials. Reality materials are designed to provide all the advantages of using LuxRender's physics-based materials but without the complexity generally found when using renderers of this kind. LuxRender materials, and therefore Reality's, are defined by a series of properties and textures. What LuxRender calls "textures" other systems call "nodes." <br/>
+<br/>
+For example, the [PS] material editor uses a wide array of nodes to ...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Glossy</strong><br/><!-- \index{Material!Glossy} --><br/>
+One of the most widely used materials, it can be used for things like plastic, glossy paper, semi-glossy stone, leaves, and even human skin.  <!-- \index{Material!Skin} --><br/>
+<br/>
+# "The Glossy material"<br/>
+<br/>
+Glossy has the following channels:<br/>
+<br/>
+- Diffuse. This channel defines the base color or texture of the material.<br/>
+- Specular. This channel is usually set to a color or an image map and it defines the amount of light reflected by the material and its color. The brightness...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Matte</strong><br/><!-- \index{Material!Matte} --><br/>
+As the name implies, the Matte material has the purpose of helping define surfaces that have no specularity. Only the Diffuse tab is unique to the Matte material. In it we can find a diffuse color and texture. In addition we can adjust the roughness of this material.<br/>
+<br/>
+Similar to the Glossy material there is also a translucency channel. It works in exactly the same way.<br/>
+<br/>
+The "Over-exposure limiter" flag helps in avoiding having the texture for the translucent mater...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Glass</strong><br/><!-- \index{Material!Glass} --><br/>
+Glass is a simulation of real glass and it can create near-photographic results. Glass is mainly defined by the Tint and Reflection parameters and the Index Of Refraction (IOR). Reality includes dozens of IOR presets measured from real materials. For example, if you want to render an emerald you can find the exact IOR for it, 1.56, under the Gemstones preset group. The IOR does not change the color of the material, which needs to be modified manually. Glass has th...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Mirror</strong><br/><!-- \index{Material!Mirror} --><br/>
+This material simply defines a mirror surface. The parameters include a color for the reflectivity. The brighter the color, the brighter the mirror. For example, if you define the reflectivity to be 50, 50, 50 (a dark shade of gray), the mirror will act as if the glass was tinted dark. Generally shades of gray work best for this parameter. The other parameters define the optional thin film (zero thickness will disable it), and the IOR for the film. These work exa...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Metal</strong><br/><!-- \index{Material!Metal} --><br/>
+This material defines metallic objects that can have anisotropic reflections (see the Polish parameter, below, for a definition). There are several presets: <br/>
+<br/>
+- Aluminum<br/>
+- Chrome<br/>
+- Cobalt<br/>
+- Copper<br/>
+- Gold<br/>
+- Lead<br/>
+- Mercury<br/>
+- Nickel<br/>
+- Platinum<br/>
+- Silver<br/>
+- Titanium<br/>
+- Zinc<br/>
+<br/>
+These presets can be configured to have variable levels of shininess and they can be used to create other types of metal. For example, very shiny silver can be used in place of stainless steel. We ca...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Velvet</strong><br/><!-- \index{Material!Velvet} --><br/>
+This is a great material  for clothes and other textile objects like drapes. In addition to the usual diffuse color and texture, similar to Matte, velvet includes a "Thickness" parameter. Higher values accentuate the velvet effect.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Water</strong><br/><!-- \index{Material!Water} --><br/>
+This material is one of the most exciting features of Reality. Water allows you to create very realistic-looking water like you see in high-end 3D programs.  The parameters for water definition are:<br/>
+<br/>
+- **Tint.** The color for the water. Use it to create orange juice, wine, beer or any other liquid. Please render responsibly.<br/>
+- **Ripple amount.** If this number is higher than 0 then Reality will create ripples in the final render of the material. Higher values for ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Null</strong><br/><!-- \index{Material!Null} --><br/>
+Null is perfect for when you need to create special effects using the Volumes. A Null material keeps all the geometry information, polygons and so on, but the geometry is not rendered. This makes it ideal for creating a "fog box," where the internal volume creates the fog effect and the geometry itself is not visible. Since it's necessary to have a mesh to hold the volume then Null material is our choice when using Volumes. See [Volumes][] for more information.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Alpha Channel</strong><br/>The Alpha Channel controls the transparency of a material.  <!-- \index{Alpha channel} --><br/>
+<br/>
+The values available are:<br/>
+<br/>
+- Opacity/Map strength. Without a texture the value indicates the level of opacity of the material. A value of 1.0 means that the material is perfectly opaque. A value of 0.0 means that it's completely transparent. If you have an Alpha Map the value works in the same way but in conjunction with the texture. The value is taken directly from the host during the conversion of the m...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Modifiers</strong><br/>In the Modifiers panel we find the parameters that allow us to change how the geometry behaves.<br/>
+<br/>
+# "The Modifiers tab"</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Bump Map/Normal Map</strong><br/><!-- \index{Bump map} -->  <!-- \index{Normal map} --><br/>
+You can load a bump map or a normal map in this part of the UI. Reality will take the bump map from the host, if one is used in the material's shader.  If you use a normal map you will have to notify Reality about this by enabling the Normal Map in the texture editor.<br/>
+<br/>
+Reality recognizes several standard suffixes for the file name. If the file ends with "NRM", "normal" or "nmap" then the flag will be set automatically. For example, a file na...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Displacement Map</strong><br/><!-- \index{Displacement map} --><br/>
+The parameters for the displacement map are similar to the ones used for bump mapping, and can be used in conjunction with those. Displacement mapping creates a real alteration of the rendered geometry.  **This parameter depends on the subdivision level**, which has to be increased to 1 or more. Higher values of  subdivision produce finer detail in the resulting geometry but require a much larger amount of memory. This could be an issue with computers running wi...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Light emission</strong><br/><!-- \index{Light emission} --> <!-- \index{Ambient} --><br/>
+Any Reality material, except for Null, can be made to emit light. This option is similar to the Ambient settings of [PS] and [DS]. In fact, Reality will enable this option if it detects that a material in the host has valid Ambient parameters. To determine if a material in the host is actually using the Ambient channel Reality looks at the **Ambient Value** and the **Ambient_Color** parameters. If **Ambient Value** is greater than 0 and Am...</p>
+</li>
+</ul>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Volumes</strong><br/>LuxRender includes a flexible, powerful volume system that controls how light behaves when it moves through objects or the space in-between objects. <!-- \index{Volumes} --><br/>
+<br/>
+Let's  consider, for example, when light traverses a body of water. The water absorbs the light at a rate that is proportional to the depth of the water. At higher depths light becomes dimmer and dimmer because it's absorbed by the volume of water. The LuxRender volumes simulate that kind of behavior.<br/>
+<br/>
+Typically, when creat...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Editing Reality textures [RTE]</strong><br/>Reality converts the materials from the host to its own format automatically. While this conversion is done at the best approximation that is possible by a program, there are several situations in which we need to change those materials to fit specific needs.<br/>
+<br/>
+One area of particular interest is the editing of textures. Textures, as explained in the previous section, are patterns that are applied to a surface. Reality converts many [PS] procedural textures to the LuxRender equivalent but there ar...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Removing a texture</strong><br/>There are times when we want to remove a texture from a channel. Maybe the texture was converted from the host in an unexpected way or we might simply have a different idea of what's needed in that place. <br/>
+<br/>
+To remove a texture from a channel simply click on the gear wheel and select **Detach**. This option allows us to unlink a channel from an existing texture. The option is not always available for every channel. If you see it greyed-out it means that the channel doesn't support the unlinking o...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Using a texture multiple times</strong><br/>There might be times when we want to use the same texture in multiple places. Ideally we would not want  to create a duplicate and waste memory. That's where the **Use existing** option of the gear menu comes in handy. <br/>
+<br/>
+For example, after we define a bump map texture we might want to use the same texture for the displacement. Since both channels use the same type of input that is a very legitimate action. <br/>
+After we define the texture in the bump map we can click on the gear wheel of the displac...</p>
+</li>
+</ul>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Material Presets</strong><br/>With Reality we can create material presets to apply to materials in the scene. These presets can change the type of the material, set all the values in a material and set the textures for any channel.</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Automatic Preset</strong><br/>Automatic Presets load automatically when an object is added to the scene. This includes figures and props. There is nothing special to do to get these presets to work, Reality will automatically load them if there is a match. While other programs require you to remember and find where the presets might be, with Reality there is no need to do so. The presets are simply applied by Reality.<br/>
+<br/>
+If there are no presets for a specific object, you can create a new preset and save it. From that moment on...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Universal Presets</strong><br/><!-- \index{Universal Presets} --><br/>
+In addition to the Automatic Presets Reality allows you to save a give material configuration as a stand-alone preset that can be manually applied to any material. This is called a Universal Preset, because such preset can be applied to any material, regardless of what object was used to create it.<br/>
+<br/>
+For example, you can use a sphere primitive to create a metallic Universal Preset and then apply it to a sword prop.<br/>
+<br/>
+To save your Universal Preset simply customize...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Preset Manager</strong><br/>Reality gives you the ability to disable a preset or to import and export a group of presets.<br/>
+<br/>
+From time to time it might be necessary to try a skin or texture package in [PS]/[DS] without loading an automatic preset. Instead of deleting the preset you can simply disable it and re-enabled later on.<br/>
+<br/>
+The Preset Manager provide full control over the installed presets. You can access the preset manager from the Reality menu. Select **Presets | Preset Manager** and a window will appear, allowing you...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Useful techniques</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>How to obtain great eye reflections</strong><br/>Like with many other things, if we want to obtain the best results with Reality we need to look at real life. A frequent request is to get nice reflections in the eyes of a character. Reflections come from objects reflected in the cornea of the figure. The cornea is the lens in from of the the iris. If you observe a person near you who shows reflections in the eyes, you will see that the reflection appears on the surface of the cornea.<br/>
+<br/>
+To replicate the effect with Reality this is how you need t...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Render options</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Render options</strong><br/>The Render tab has all the options to control the final result of the render. The page shown in this tab is organized by group. We select a group by clicking on a name in the left column list. <br/>
+The groups available are:<br/>
+<br/>
+- Output. This group handles everything related to the generation of the image and the files that are provided to LuxRender. The rendering happens by exporting the geometry, materials, and lights from the host to LuxRender. The export is done by writing a few files in the LuxRen...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Output</strong><br/><br/>
+# "The Output group"<br/>
+ <br/>
+A LuxRender scene is generally composed of a few files. The way Reality exports your host scene to LuxRender is via two main files:<br/>
+<br/>
+- **reality_scene.lxs**  This base file contains the general scene definition, including the resolution, format, and name used for the rendered image. <br/>
+- **reality_scene.lxi** This file contains the definition of the objects in the scene.<br/>
+<br/>
+The Render tab allows us to change the name of the base file, which will also determine the name for th...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Scene configuration</strong><br/>LuxRender can use a myriad of different rendering options based on the type of settings. The parameters are really complex and can make a grown man cry. To make things simpler Reality groups all those settings in a series of "Scene types." <br/>
+<br/>
+Most of the time you will need to use just the Monodirectional type. There is also a Bidirectional option but that is generally only used with the non-accelerated rendering, which was the default before Reality 4.1.<br/>
+<br/>
+**Scene Parameters Editor**<br/>
+<br/>
+Reality give...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Renderer</strong><br/># "Renderer options"<br/>
+<br/>
+In this section we configure where LuxRender is installed. Reality comes with LuxRender pre-installed and there is really nothing to do about it. In this pane you can see the full path where LuxRender is installed, in case you need to start it manually.<br/>
+ <br/>
+**Max threads.** The threads setting determines how many parallel processes are used by LuxRender to render. It must be no higher of the total number of cores present in your machine. Reality sets it automatically to the h...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Texture collection</strong><br/>**Collect Textures**<br/>
+Collecting textures allows you to store all the textures for the scene in a directory, from where they can easily be copied. This can be necessary, for example, when you need to move the scene to a different computer. Reality creates a subdirectory named by appending *-resources* to the name of the image file. For example, if the image file is called "reality-scene.png" then a directory named "reality-scene-resources" will be created at the same folder where the image file i...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Rendering animations</strong><br/>Reality has support for animation rendering. Animations are rendered as sequences of frames, each frame saved to an individual file. To create a video animation file you then need to assemble the frames using an NLE (Non Linear Editor) like Adobe Premiere, Apple Final Cut, or compositing programs like Adobe After Effects. Blender's video editor can also be used, which provides you with a zero-cost solution for video editing.<br/>
+<br/>
+###Frame Numbering###<br/>
+If you want to automatically create a file name ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Export only</strong><br/>Sometimes we might want to create the LuxRender scene files without launching the renderer. In those cases we can enable the *Export only* checkbox and Reality will do exactly that. The scene files will be created as usual but LuxRender will not be started. We can then start LuxRender manually and use the *File | Open*  menu option to open the `.lxs` file and start the rendering process.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Render as statue</strong><br/>In some cases it is necessary to rendere a scene in neutral colors, as if all the objects were made of marble or plaster. For those times the we can use the *Render as statue* option of Reality. When this option is enabled all materials are rendered as white Matte. The materials themselves are not changed, the substitution only happens during the export phase. Here is an example of a scene rendered normally and with *Render as statue* enabled:<br/>
+<br/>
+# "The Render as statue option at work"<br/>
+<br/>
+As we can ...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Light control</strong><br/>Realism is achieved by careful use of lights. What Reality and LuxRender allow you to do is to avoid using the usual "cheats" of traditional 3D lighting and start applying lighting solutions that work in real life. If you have experience in photography then the way LuxRender handles lights will be immediately familiar. For example, if you need to fill a part of your scene with some soft diffuse light you can set a plane on the opposite side of the subject, facing the light source, and you have a...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Light types</strong><br/>Reality supports the following types of lights:<br/>
+<br/>
+- [ML] <!-- \index{[ML]} --><br/>
+- Spotlight <!-- \index{Spotlight} --><br/>
+- Projector <!-- \index{Projector} --><br/>
+- Point light <!-- \index{Pointlight} --><br/>
+- Sun light <!-- \index{Sun} --><br/>
+- [IL] <!-- \index{[IL]} --><br/>
+- IBL <!-- \index{IBL} \index{Image Based Lighting} --><br/>
+<br/>
+##[MLs]<br/>
+<!-- \index{[ML]} --><br/>
+These are also known as Area Lights and they are geometric meshes that emit lights. These are generally the best choice for creating good lighting and fo...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Converting materials to lights [mats to lights]</strong><br/>We can turn any material into a light by right-clicking on its name in the material list and selecting "Convert to light." When this option is used the material will be removed from the list and instead a light with the same name will be added in the Light tab. <br/>
+<br/>
+# "The 'Convert to light' option"<br/>
+<br/>
+Alternatively we can make a material to emit light by enabling the **Light emission** flag in the Modifiers tab. Both options are valid. The **Light emission** approach provides an additional level of ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>The Light Editor</strong><br/>##The Light Editor<br/>
+<br/>
+Reality has a sophisticated light editor that allows us to control all the aspects of each light.  The "Light properties" panel below the list of lights allows us to edit the characteristics of each light.  The light editor automatically shows only the controls that are relevant for each type of light. <br/>
+<br/>
+# "The Light Editor"<br/>
+<br/>
+Here is the meaning of each field:<br/>
+<br/>
+- Gain. This is a multiplier of the power of a light. It's very useful when we want to say things like "this light i...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Turning lights on and off</strong><br/>Before hitting the **Render** button it's a good idea to double check our lights. The *Enabled* checkbox in the Light Editor can be used to turn a light on or off before rendering. All the parameters for the light are left untouched.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Adjusting the lights while rendering</strong><br/>LuxRender has a powerful feature that allows you to adjust the brightness and color of light **while** the render is running. To use this feature you need to create light groups. When one or more groups have been defined then you can use the "Light Groups" tab in LuxRender to adjust the brightness, color temperature or tint. <br/>
+<br/>
+Reality assigns some lights to pre-defined light groups:<br/>
+<br/>
+- The Sun is set in its own group called "Sun" and the sky has its own "Sky" group.<br/>
+- Spotlights are grouped in "...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Color Temperature</strong><br/>Color temperature controls the spectrum shift of each light. Natural light has a color that is determined by the source. For example, incandescent light bulbs have a more yellow color than neon tubes or sunlight. The sun shifts color temperature during the day, being more yellow/orange during sunrise and sundown and being more blueish during the day. These shifts of tints are defined as "color temperatures" and are measured in [Kelvin degrees](http://en.wikipedia.org/wiki/Color_temperature). The...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Image Based Lighting (IBL)</strong><br/><!-- \index{IBL} --><br/>
+Reality provides a great IBL system that supports full HDR (High-Dynamic Range) images both in HDR (.hdr) and OpenEXR (.exr) format. With IBL you can create incredibly realistic renders in which your 3D objects are bathed by light that is coming from all directions, just like in the real world.<br/>
+<br/>
+IBL in LuxRender uses one single image to generate both the light and the background. This means that, with the right type of image, you can create spectacular backgrounds for your s...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Light visibility</strong><br/>Photographers use lighting for creating their artistic vision. There are many, very creative uses of light and professional photographers often buy all sort of light fixtures to express themselves. What they cannot do is to hide a light if it's in the frame. That's the reality of the physical world. <br/>
+<br/>
+LuxRender is a physics-based renderer and that means that it recreates, as faithfully as possible, what happens in the real world. That means that lights are visible. The trick of having invisible ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Turning off the shadows</strong><br/>Every light in the real world generates shadows. In fact shadows are a very desirable effect of using lights in photography. Some 3D renderers allow the artist to "turn off the shadows." That is something that we don't have, thankfully, with LuxRender. Lights create shadows, that is the reality of physics. Since you are reading this guide I assume that you are interested in creating realistic scenes. In the real world lights create shadows so, in order to maintain believability, LuxRender doesn'...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Camera control </strong><br/>The Camera tab is used to control the use of the camera, including the use of DOF (Depth Of Field), the exposure controls, and the Film Response. <!-- \index{Exposure} --><br/>
+<br/>
+## Selecting the rendering camera ##<br/>
+<br/>
+Reality will use whatever camera is active for rendering. If you prefer to use a particular camera for rendering, regardless of what is selected in the host, simply click on the name of the camera in the Reality Camera Editor and Reality will remember your choice.<br/>
+<br/>
+## Shallow Depth Of Fie...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Exposure controls </strong><br/>The Camera Editor allows you to set the exposure controls for each camera. These controls are the same that are found on a standard photo camera: ISO speed, shutter speed and aperture (f-stop). <!-- \index{Exposure} --><br/>
+<br/>
+If you render animations it is important that the exposure is kept consistent throughout the animation. To do so use the following workflow:<br/>
+<br/>
+- Render one test frame of your animation and set the exposure in LuxRender. <br/>
+- Copy the values to Reality<br/>
+- Render the whole animation. ...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>Reality's log file</strong><br/>If something unusual happens while using Reality, and you think that you found a bug you might need to find out what's happening "behind the scenes." <br/>
+<br/>
+Reality logs some events into a text file called `Reality_plugin_Log.txt` which is stored in your Documents folder. This file is automatically deleted and re-created once it reaches a size of twelve megabytes.<br/>
+If you open that file in a text editor you can find possible error messages that can explain if something unexpected happened. If you cont...</p>
+</li>
+<li>
+<p class="binderItem"><strong>How to contact us</strong><br/>If you need customer or technical support for Reality you can reach us via email using `reality@preta3d.com`<br/>
+<br/>
+Our [website](http://preta3d.com) is constantly updated with news and information about Reality and LuxRender.<br/>
+<br/>
+There is a very active online community of Reality users that can also help you with common tricks and techniques that have been developed over the years. The official Reality forums are found at:<br/>
+<br/>
+[http://forum.runtimedna.com/forumdisplay.php?303-REALITY-3-Official-Forums](htt...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Known issues</strong><br/><br/>
+- The James low-resolution model has an error in the mesh. The hip area has inverted normals, they point inside instead of outside. For this reason LuxRender will not render the hip area. This is an error in the mesh, not in Reality or LuxRender. As a simple alternative use the high-resolution mesh, which doesn't have this problem. Alternatively give the poor man something to wear.</p>
+</li>
+<li>
+<p class="binderItem"><strong>Acknowledgements</strong><br/><br/>
+###The LuxRender development team<br/>
+I personally want to acknowledge and thank all the developers and dedicated individuals who made LuxRender a reality, no pun intended. LuxRender is a real gem of a program. Through the genius and dedication of the developers we now have a state-of-the-art renderer that is available to everybody, on all major Operating Systems, and that has been designed to last a long time. <br/>
+ In particular we would like to thank David Bucciarelli, Jean-Philippe Grimaldi, Jens V...</p>
+</li>
+<li>
+<p class="binderItem"><strong>More Reality resources</strong><br/>##Support<br/>
+<br/>
+If you need support for any Reality-related issues please enter a request via our [support form](http://preta3d.com/support)<br/>
+<br/>
+##Information<br/>
+You can find more tips and techniques at our forums: http://www.preta3d.com<br/>
+<br/>
+##Stay updated with Reality!<br/>
+Be sure to get the latest about Reality by visiting our website at http://www.preta3d.com<br/>
+There you'll find news, tips on how to get the most out of your scenes, video tutorials and updates to this documentation. <br/>
+<br/>
+##Video tutorials<br/>
+You can al...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Detailed list of new features in Reality [version]</strong><br/><br/>
+##Full list of new features [full list of new features]##<br/>
+- Up to 20 time faster CPU rendering with CPU acceleration and “Extra boost” option. While this is mainly benefitting Intel CPUs it might affect also AMD processors<br/>
+- Included LuxRender with Reality, no need to install separately anymore<br/>
+- Changed deliverables to use DMG on OS X and Self-Extracting zips for Windows<br/>
+- Added support for GPU rendering via OpenCL<br/>
+- Added automatic detection of OpenCL and of all compatible devices<br/>
+- Added sel...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Network rendering</strong><br/><br/>
+With LuxRender we have an unlimited license to use as many CPUs and as many render nodes we want. Network rendering is accomplished by running the command-line version of LuxRender on each render node and then connecting the main render process to the nodes. Render nodes can be a mixture of Mac OS, Windows and Linux machines. <br/>
+<br/>
+To add render nodes we can follow this procedure:<br/>
+<br/>
+- Install exactly the same version of LuxRender on every machine that will participate in the render process. The exac...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Distribute scene files with Reality settings</strong><br/>Starting with Reality 4.2 it is possible to save a Poser or DAZ Studio scene for distribution to other artists. <br/>
+<br/>
+The issue with distributing a scene file is that Reality data is saved in them and some of that data is specific to a user's installation. For example, the paths where to save the image file generated and the LuxRender scene file are specific to a given installation.<br/>
+<br/>
+Starting with Reality 4.2 you can edit those scene files and remove the path for the image file and scene file. When ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Privacy notice</strong><br/>The issue of privacy is very important for everybody at Prêt-à-3D. <br/>
+Reality does not require a network connection to work and it does not send any kind of personal information out.<br/>
+<br/>
+Reality does connect, if possible, to our server to check if there are updates available. The connection does not send any personal information. The only information sent, in encrypted form, is what identifies your copy of Reality so that the server can reply if there is a version of the program that is more recent.<br/>
+...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Fireflies and render noise [Fireflies]</strong><br/>As we have seen before, LuxRender renders the whole scene in a single pass and then it refines the result as it computes more samples per pixel. The "grain" that we see on screen, while the image is still unfinished, is called **render noise**.<br/>
+<br/>
+Render noise is gradually removed as the scene renders. The time needed to achieve this is depending on many factors, including:<br/>
+<br/>
+- Number of CPU cores and their speed<br/>
+- Size of the image<br/>
+- Number of light or light sources in the scene<br/>
+- Amount of glossi...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Reality plug-in software license</strong><br/>END-USER SOFTWARE LICENSE AGREEMENT<br/>
+<br/>
+The Pret-a-3D Software delivered is intended for individual personal use only. Redistribution is not allowed.<br/>
+1. GRANT OF LICENSE:<br/>
+    Copy and Use - Application Software. Pret-a3D grants to Recipient a limited, non-exclusive License to install, use, access, display, run, or otherwise interact with ("RUN") this copy of Reality plug-in (hereinafter the "SOFTWARE PRODUCT"), or any prior version, on a single computer, workstation, terminal, handheld PC, or other...</p>
+</li>
+<li>
+<p class="binderItem"><strong>sIBL License</strong><br/><!-- \index{sIBL} --><br/>
+    +------------------------------------------------------+<br/>
+       _____                      _     _____ ____  _      <br/>
+      / ____|                    | |   |_   _|  _ \| |     <br/>
+     | (___  _ __ ___   __ _ _ __| |_    | | | |_) | |     <br/>
+      \___ \| '_ ` _ \ / _` | '__| __|   | | |  _ <| |     <br/>
+      ____) | | | | | | (_| | |  | |_   _| |_| |_) | |____ <br/>
+     |_____/|_| |_| |_|\__,_|_|   \__| |_____|____/|______|<br/>
+                             <br/>
+             _____ _______ ...</p>
+</li>
+</ul>
+
+</td>
+<td width="8">
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,2634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScrivenerProject Version="1.0" Creator="SCRMAC-2.6-25480" Modified="2018-01-30 09:47:19 -0500">
+    <Binder>
+        <BinderItem ID="0" Type="DraftFolder" Created="2012-02-28 16:14:13 -0500" Modified="2012-02-28 16:14:13 -0500">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs></SelectedSubdocumentIDs>
+                <OutlinerExpandedState>
+                    <ItemID>96</ItemID>
+                    <ItemID>83</ItemID>
+                    <ItemID>33</ItemID>
+                    <ItemID>40</ItemID>
+                </OutlinerExpandedState>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="98" Type="Text" Created="2012-03-01 11:17:40 -0500" Modified="2016-03-19 12:24:11 -0400">
+                    <Title>METADATA</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <CompileAsIs>Yes</CompileAsIs>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>401,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="245" Type="Text" Created="2013-11-06 01:15:52 -0500" Modified="2016-06-02 14:43:18 -0400">
+                    <Title>How to use this guide</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1545,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="14" Type="Text" Created="2012-02-28 16:28:04 -0500" Modified="2015-12-04 12:30:57 -0500">
+                    <Title>Welcome</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1343,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="96" Type="Folder" Created="2012-02-29 21:07:37 -0500" Modified="2012-03-01 23:37:45 -0500">
+                    <Title>Installing Reality</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>158</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="162" Type="Text" Created="2013-03-11 22:47:22 -0400" Modified="2015-07-15 11:12:18 -0400">
+                            <Title>Requirements</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>535,1</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="102" Type="Text" Created="2012-03-01 13:02:52 -0500" Modified="2015-10-15 11:49:56 -0400">
+                            <Title>Installation</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>804,1</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="161" Type="Text" Created="2013-03-11 22:45:19 -0400" Modified="2016-01-04 23:49:55 -0500">
+                            <Title>LuxRender</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>369,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="283" Type="Text" Created="2015-07-15 11:14:55 -0400" Modified="2015-09-14 15:41:33 -0400">
+                            <Title>OpenCL</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>986,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="170" Type="Text" Created="2013-03-28 10:33:01 -0400" Modified="2014-11-23 14:06:47 -0500">
+                            <Title>Registering Reality</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2774,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="158" Type="Text" Created="2012-03-13 23:20:41 -0400" Modified="2014-11-18 23:15:24 -0500">
+                            <Title>How to re-download Reality</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>242,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="104" Type="Folder" Created="2012-03-01 13:07:58 -0500" Modified="2013-11-30 17:22:44 -0500">
+                    <Title>Using Reality</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>108</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="262" Type="Text" Created="2013-11-01 03:22:24 -0400" Modified="2016-06-02 14:46:22 -0400">
+                            <Title>What's new in Reality [version]</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>3710,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="270" Type="Text" Created="2014-11-19 00:46:58 -0500" Modified="2016-06-02 14:52:35 -0400">
+                            <Title>Quick-start for [DS] artists</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>119,391</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="160" Type="Text" Created="2013-03-11 22:36:47 -0400" Modified="2016-06-02 14:53:00 -0400">
+                            <Title>Quick-start for [PS] artists</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>511,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="18" Type="Text" Created="2012-02-28 16:30:48 -0500" Modified="2016-06-02 14:54:38 -0400">
+                            <Title>Rendering workflow</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>2</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>961,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="287" Type="Text" Created="2015-11-04 12:52:27 -0500" Modified="2016-06-02 14:55:08 -0400">
+                            <Title>Rendering with a transparent background</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>161,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="286" Type="Text" Created="2015-09-12 17:09:07 -0400" Modified="2015-10-15 11:24:48 -0400">
+                            <Title>Rendering modes</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>536,2</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="169" Type="Text" Created="2013-03-27 17:40:46 -0400" Modified="2016-06-02 14:55:40 -0400">
+                            <Title>The Refine Brush tool</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>610,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="103" Type="Text" Created="2012-03-01 13:03:44 -0500" Modified="2016-06-02 14:58:01 -0400">
+                            <Title>The Reality Add-ons</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>3188,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="100" Type="Text" Created="2012-03-01 12:11:32 -0500" Modified="2013-11-30 17:35:30 -0500">
+                            <Title>The render never stops</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>2</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>598,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="108" Type="Text" Created="2012-03-01 19:53:20 -0500" Modified="2015-09-14 18:25:31 -0400">
+                            <Title>When is the right time to stop LuxRender? </Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>2</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>603,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="101" Type="Text" Created="2012-03-01 12:11:46 -0500" Modified="2016-01-04 18:24:35 -0500">
+                            <Title>The exported scene files</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>2</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>671,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="90" Type="Text" Created="2012-02-29 12:00:14 -0500" Modified="2013-12-01 22:49:05 -0500">
+                            <Title>Best practices for exporting your scene</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="91" Type="Text" Created="2012-02-29 12:01:28 -0500" Modified="2014-11-08 01:20:32 -0500">
+                            <Title>Saving your Reality settings </Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>275,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="152" Type="Text" Created="2012-03-04 01:25:22 -0500" Modified="2014-11-22 22:18:42 -0500">
+                            <Title>Tonemapping</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>5028,86</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="92" Type="Text" Created="2012-02-29 12:01:39 -0500" Modified="2013-12-01 23:14:21 -0500">
+                            <Title>Stopping and resuming renders</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>744,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="252" Type="Text" Created="2013-11-26 01:05:05 -0500" Modified="2013-11-30 17:22:46 -0500">
+                            <Title>Reclaiming disk space</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>378,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="164" Type="Folder" Created="2013-03-24 08:08:36 -0400" Modified="2013-03-24 08:08:52 -0400">
+                    <Title>The Reality User Interface</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="188" Type="Text" Created="2013-04-02 00:45:22 -0400" Modified="2016-06-02 15:03:12 -0400">
+                            <Title>The material editor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>4100,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="197" Type="Text" Created="2013-04-02 17:17:29 -0400" Modified="2016-06-02 15:04:57 -0400">
+                            <Title>Material sections</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>995,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="165" Type="Text" Created="2013-03-24 08:09:18 -0400" Modified="2014-11-19 23:38:36 -0500">
+                            <Title>Converting materials</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>819,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="198" Type="Text" Created="2013-04-02 17:23:52 -0400" Modified="2014-11-19 23:50:33 -0500">
+                            <Title>The Light Editor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>89,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="199" Type="Text" Created="2013-04-02 18:22:22 -0400" Modified="2016-06-02 15:26:04 -0400">
+                            <Title>The Camera Editor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1023,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="201" Type="Text" Created="2013-04-02 19:19:30 -0400" Modified="2014-11-19 23:56:44 -0500">
+                            <Title>The Volumes Editor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>480,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="202" Type="Text" Created="2013-04-02 19:19:43 -0400" Modified="2016-06-02 15:26:43 -0400">
+                            <Title>Advanced settings</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>535,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="211" Type="Text" Created="2013-04-04 17:00:51 -0400" Modified="2015-09-14 20:01:33 -0400">
+                            <Title>The dockable panel in [PS]</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>180,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="180" Type="Folder" Created="2013-04-01 13:00:10 -0400" Modified="2014-11-19 00:50:55 -0500">
+                    <Title>Lighting practices</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>181</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="181" Type="Text" Created="2013-04-01 13:00:40 -0400" Modified="2015-02-04 11:53:11 -0500">
+                            <Title>Careful with those light sets</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>200,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="117" Type="Folder" Created="2012-03-02 00:02:20 -0500" Modified="2012-03-02 00:02:26 -0500">
+                    <Title>Key concepts</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="21" Type="Text" Created="2012-02-29 02:46:35 -0500" Modified="2014-11-20 00:09:56 -0500">
+                            <Title>Unbiased vs. biased renderers</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>859,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="118" Type="Text" Created="2012-03-02 00:03:32 -0500" Modified="2015-02-04 11:55:48 -0500">
+                            <Title>Creating soft shadows with Reality</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1116,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="168" Type="Text" Created="2013-03-25 11:54:43 -0400" Modified="2014-11-20 00:19:25 -0500">
+                            <Title>Lights are visible</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>220,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="83" Type="Folder" Created="2012-02-29 11:34:47 -0500" Modified="2012-02-29 11:34:56 -0500">
+                    <Title>Reality's materials</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="25" Type="Text" Created="2012-02-29 03:05:04 -0500" Modified="2014-11-20 02:49:49 -0500">
+                            <Title>Reality materials are simpler</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2787,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="244" Type="Text" Created="2013-11-05 03:53:20 -0500" Modified="2016-03-19 00:44:06 -0400">
+                            <Title>Textures</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>529,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="22" Type="Text" Created="2012-02-29 03:02:10 -0500" Modified="2015-02-04 11:57:14 -0500">
+                            <Title>The Material Editor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>734,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="247" Type="Text" Created="2013-11-12 11:26:12 -0500" Modified="2013-12-02 02:18:06 -0500">
+                            <Title>Material channels</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1886,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="242" Type="Text" Created="2013-11-03 20:40:09 -0500" Modified="2015-09-14 18:28:34 -0400">
+                            <Title>Sub-Surface Scattering (SSS)</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>4832,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="174" Type="Text" Created="2013-03-28 16:12:39 -0400" Modified="2014-11-20 00:35:04 -0500">
+                            <Title>Finding the right material</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1069,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="119" Type="Text" Created="2012-03-02 00:25:35 -0500" Modified="2015-12-04 12:32:08 -0500">
+                            <Title>Changing multiple materials </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1385,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="120" Type="Text" Created="2012-03-02 00:27:11 -0500" Modified="2015-09-13 12:49:04 -0400">
+                            <Title>Multi-edit</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>474,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="271" Type="Text" Created="2014-11-20 00:35:27 -0500" Modified="2016-06-02 15:27:31 -0400">
+                            <Title>Material Sync</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>372,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="121" Type="Text" Created="2012-03-02 00:27:32 -0500" Modified="2014-11-20 02:30:48 -0500">
+                            <Title>Save your Scene </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>141,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="123" Type="Text" Created="2012-03-02 01:06:03 -0500" Modified="2015-02-04 12:01:08 -0500">
+                            <Title>Reality material reference</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2263,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="26" Type="Text" Created="2012-02-29 03:05:24 -0500" Modified="2015-02-04 12:01:51 -0500">
+                                    <Title>Glossy</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1115,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="27" Type="Text" Created="2012-02-29 03:05:45 -0500" Modified="2013-12-02 17:47:00 -0500">
+                                    <Title>Matte</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="28" Type="Text" Created="2012-02-29 03:05:56 -0500" Modified="2015-12-01 16:47:22 -0500">
+                                    <Title>Glass</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1124,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="30" Type="Text" Created="2012-02-29 09:53:15 -0500" Modified="2013-12-02 17:59:10 -0500">
+                                    <Title>Mirror</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>21,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="29" Type="Text" Created="2012-02-29 09:53:00 -0500" Modified="2013-12-06 15:35:07 -0500">
+                                    <Title>Metal</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1219,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="35" Type="Text" Created="2012-02-29 10:01:38 -0500" Modified="2013-11-04 02:56:49 -0500">
+                                    <Title>Velvet</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>21,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="36" Type="Text" Created="2012-02-29 10:01:42 -0500" Modified="2014-11-21 01:46:27 -0500">
+                                    <Title>Water</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1355,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="31" Type="Text" Created="2012-02-29 09:53:21 -0500" Modified="2015-02-04 12:05:03 -0500">
+                                    <Title>Null</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>128,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="209" Type="Text" Created="2013-04-04 00:55:32 -0400" Modified="2014-11-21 01:46:49 -0500">
+                                    <Title>Alpha Channel</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>675,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="210" Type="Folder" Created="2013-04-04 00:55:43 -0400" Modified="2014-11-20 03:17:07 -0500">
+                                    <Title>Modifiers</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>101,0</TextSelection>
+                                    </TextSettings>
+                                    <Children>
+                                        <BinderItem ID="257" Type="Text" Created="2013-12-03 13:55:37 -0500" Modified="2015-10-30 10:20:32 -0400">
+                                            <Title>Bump Map/Normal Map</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <NotesTextSelection>0,0</NotesTextSelection>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>701,0</TextSelection>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="258" Type="Text" Created="2013-12-03 13:56:05 -0500" Modified="2013-12-03 13:56:20 -0500">
+                                            <Title>Displacement Map</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <NotesTextSelection>0,0</NotesTextSelection>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>712,0</TextSelection>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="256" Type="Text" Created="2013-12-03 13:51:29 -0500" Modified="2014-11-21 03:35:39 -0500">
+                                            <Title>Light emission</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <NotesTextSelection>0,0</NotesTextSelection>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>1031,0</TextSelection>
+                                            </TextSettings>
+                                        </BinderItem>
+                                    </Children>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="200" Type="Text" Created="2013-04-02 19:09:58 -0400" Modified="2014-11-20 14:44:24 -0500">
+                            <Title>Volumes</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2405,0</TextSelection>
+                            </TextSettings>
+                            <References>
+                                <Reference BinderID="197" Destination="[Internal Link]">Material sections</Reference>
+                                <Reference BinderID="242" Destination="[Internal Link]">SSS</Reference>
+                            </References>
+                        </BinderItem>
+                        <BinderItem ID="250" Type="Folder" Created="2013-11-13 23:22:42 -0500" Modified="2016-03-19 12:33:38 -0400">
+                            <Title>Editing Reality textures [RTE]</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>10391,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="253" Type="Text" Created="2013-11-27 01:48:38 -0500" Modified="2015-02-04 12:21:37 -0500">
+                                    <Title>Removing a texture</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1032,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="254" Type="Text" Created="2013-11-27 01:49:02 -0500" Modified="2014-11-20 14:48:13 -0500">
+                                    <Title>Using a texture multiple times</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>202,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="273" Type="Folder" Created="2014-11-21 10:32:25 -0500" Modified="2014-11-21 10:41:25 -0500">
+                    <Title>Material Presets</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>201,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="274" Type="Text" Created="2014-11-21 10:32:49 -0500" Modified="2015-02-04 11:27:07 -0500">
+                            <Title>Automatic Preset</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>7710,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="275" Type="Text" Created="2014-11-21 10:33:09 -0500" Modified="2014-11-21 16:42:40 -0500">
+                            <Title>Universal Presets</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>34,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="276" Type="Text" Created="2014-11-21 16:22:56 -0500" Modified="2014-11-21 17:35:43 -0500">
+                            <Title>The Preset Manager</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2010,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="263" Type="Folder" Created="2014-08-09 01:09:45 -0400" Modified="2014-08-09 01:09:51 -0400">
+                    <Title>Useful techniques</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="264" Type="Text" Created="2014-08-09 01:10:13 -0400" Modified="2015-12-01 16:47:39 -0500">
+                            <Title>How to obtain great eye reflections</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>686,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="148" Type="Folder" Created="2012-03-03 01:54:57 -0500" Modified="2013-04-01 19:33:52 -0400">
+                    <Title>Render options</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="81" Type="Text" Created="2012-02-29 11:31:24 -0500" Modified="2015-09-14 19:10:53 -0400">
+                            <Title>Render options</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1027,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="220" Type="Text" Created="2013-10-31 11:33:17 -0400" Modified="2016-01-04 18:25:30 -0500">
+                            <Title>Output</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1007,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="150" Type="Text" Created="2012-03-03 01:57:10 -0500" Modified="2015-09-14 19:41:43 -0400">
+                            <Title>Scene configuration</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>823,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="224" Type="Text" Created="2013-10-31 12:39:34 -0400" Modified="2015-09-14 19:47:16 -0400">
+                            <Title>Renderer</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>537,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="221" Type="Text" Created="2013-10-31 11:35:22 -0400" Modified="2016-01-04 18:26:22 -0500">
+                            <Title>Texture collection</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>493,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="86" Type="Text" Created="2012-02-29 11:58:27 -0500" Modified="2016-05-19 10:55:12 -0400">
+                            <Title>Rendering animations</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1967,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="260" Type="Text" Created="2013-12-08 03:06:29 -0500" Modified="2013-12-08 03:09:51 -0500">
+                            <Title>Export only</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>391,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="261" Type="Text" Created="2013-12-08 03:09:58 -0500" Modified="2013-12-08 22:36:40 -0500">
+                            <Title>Render as statue</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>489,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="40" Type="Folder" Created="2012-02-29 10:04:01 -0500" Modified="2015-02-04 11:19:54 -0500">
+                    <Title>Light control</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>939,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="74" Type="Text" Created="2012-02-29 10:16:55 -0500" Modified="2016-06-02 15:31:36 -0400">
+                            <Title>Light types</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>6318,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="75" Type="Text" Created="2012-02-29 10:17:06 -0500" Modified="2014-11-20 22:01:09 -0500">
+                            <Title>Converting materials to lights [mats to lights]</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1847,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="76" Type="Text" Created="2012-02-29 10:17:15 -0500" Modified="2014-11-21 03:40:38 -0500">
+                            <Title>The Light Editor</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>6591,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="80" Type="Text" Created="2012-02-29 11:30:52 -0500" Modified="2014-11-20 22:02:36 -0500">
+                                    <Title>Turning lights on and off</Title>
+                                    <MetaData>
+                                        <LabelID>1</LabelID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>29,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="236" Type="Text" Created="2013-11-01 12:28:56 -0400" Modified="2013-12-03 14:47:33 -0500">
+                                    <Title>Adjusting the lights while rendering</Title>
+                                    <MetaData>
+                                        <LabelID>1</LabelID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>674,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="78" Type="Text" Created="2012-02-29 10:17:35 -0500" Modified="2013-12-03 14:50:14 -0500">
+                            <Title>Color Temperature</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1070,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="79" Type="Text" Created="2012-02-29 10:17:41 -0500" Modified="2016-06-02 15:36:37 -0400">
+                            <Title>Image Based Lighting (IBL)</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2186,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="228" Type="Text" Created="2013-10-31 23:44:12 -0400" Modified="2013-12-03 15:04:06 -0500">
+                            <Title>Light visibility</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1002,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="229" Type="Text" Created="2013-10-31 23:44:18 -0400" Modified="2013-12-03 15:05:39 -0500">
+                            <Title>Turning off the shadows</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2092,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="143" Type="Folder" Created="2012-03-02 01:26:54 -0500" Modified="2014-11-21 03:41:43 -0500">
+                    <Title>Camera control </Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <References>
+                        <Reference BinderID="18" Destination="[Internal Link]">Rendering workflow</Reference>
+                    </References>
+                    <Children>
+                        <BinderItem ID="144" Type="Text" Created="2012-03-02 01:27:17 -0500" Modified="2013-12-03 16:34:01 -0500">
+                            <Title>Exposure controls </Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1427,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="178" Type="Text" Created="2013-04-01 11:13:06 -0400" Modified="2014-11-19 20:32:21 -0500">
+                    <Title>Reality's log file</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,603</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="163" Type="Text" Created="2013-03-18 18:02:55 -0400" Modified="2013-12-03 16:40:31 -0500">
+                    <Title>How to contact us</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>231,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="12" Type="Text" Created="2012-02-28 16:25:07 -0500" Modified="2015-11-11 13:43:11 -0500">
+                    <Title>Known issues</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>385,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="11" Type="Text" Created="2012-02-28 16:21:48 -0500" Modified="2016-05-18 09:58:44 -0400">
+                    <Title>Acknowledgements</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1213,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="10" Type="Text" Created="2012-02-28 16:21:35 -0500" Modified="2015-09-14 19:50:44 -0400">
+                    <Title>More Reality resources</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>642,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="285" Type="Text" Created="2015-09-12 15:59:28 -0400" Modified="2015-09-12 17:04:18 -0400">
+                    <Title>Detailed list of new features in Reality [version]</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>4797,0</TextSelection>
+                    </TextSettings>
+                    <References>
+                        <Reference BinderID="262" Destination="[Internal Link]">What's new in Reality [version]</Reference>
+                    </References>
+                </BinderItem>
+                <BinderItem ID="8" Type="Text" Created="2012-02-28 16:20:19 -0500" Modified="2013-12-03 16:51:49 -0500">
+                    <Title>Network rendering</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1594,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="288" Type="Text" Created="2015-11-20 14:37:22 -0500" Modified="2015-11-20 14:43:43 -0500">
+                    <Title>Distribute scene files with Reality settings</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1094,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="259" Type="Text" Created="2013-12-05 22:11:57 -0500" Modified="2013-12-05 22:16:06 -0500">
+                    <Title>Privacy notice</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>501,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="208" Type="Text" Created="2013-04-04 00:30:52 -0400" Modified="2013-12-03 16:52:28 -0500">
+                    <Title>Fireflies and render noise [Fireflies]</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>959,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="6" Type="Text" Created="2012-02-28 16:19:15 -0500" Modified="2012-03-03 02:29:16 -0500">
+                    <Title>Reality plug-in software license</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>4730,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="251" Type="Text" Created="2013-11-16 23:22:53 -0500" Modified="2013-11-16 23:30:06 -0500">
+                    <Title>sIBL License</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>21,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" Type="ResearchFolder" Created="2012-02-28 16:14:13 -0500" Modified="2012-02-28 16:14:13 -0500">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>41</SelectedSubdocumentIDs>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="66" Type="Image" Created="2011-12-08 11:55:20 -0500" Modified="2011-12-08 22:17:23 -0500">
+                    <Title>WestPark_metal</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="67" Type="Image" Created="2011-12-12 13:08:12 -0500" Modified="2011-12-13 15:25:24 -0500">
+                    <Title>WestParkSLG</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="15" Type="Image" Created="2011-12-08 16:49:56 -0500" Modified="2011-12-08 16:49:57 -0500">
+                    <Title>Reality2_Logo</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="41" Type="Folder" Created="2012-02-29 10:05:31 -0500" Modified="2012-02-29 10:05:36 -0500">
+                    <Title>Screen grabs</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>64</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="42" Type="Image" Created="2011-12-17 00:10:02 -0500" Modified="2011-12-17 00:10:02 -0500">
+                            <Title>ACSELConversionUtility</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="43" Type="Image" Created="2011-12-13 19:00:00 -0500" Modified="2011-12-13 19:00:00 -0500">
+                            <Title>AdvancedOptions</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="44" Type="Image" Created="2011-12-13 02:16:43 -0500" Modified="2011-12-13 02:16:43 -0500">
+                            <Title>Camera</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="45" Type="Image" Created="2011-12-14 10:53:03 -0500" Modified="2011-12-14 10:53:03 -0500">
+                            <Title>DeleteACSELShader</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="46" Type="Image" Created="2011-12-09 15:00:36 -0500" Modified="2011-12-09 15:00:36 -0500">
+                            <Title>GearMenu</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="47" Type="Image" Created="2011-12-13 01:18:07 -0500" Modified="2011-12-13 01:18:07 -0500">
+                            <Title>LightEditor1</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="48" Type="Image" Created="2011-12-13 01:22:35 -0500" Modified="2011-12-13 01:22:35 -0500">
+                            <Title>LightEditor2</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="49" Type="Image" Created="2011-12-13 01:26:38 -0500" Modified="2011-12-13 01:26:38 -0500">
+                            <Title>LightEditor3</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="50" Type="Image" Created="2011-12-13 02:11:13 -0500" Modified="2011-12-13 02:11:13 -0500">
+                            <Title>LigthEditor4</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="51" Type="Image" Created="2011-12-09 11:57:52 -0500" Modified="2011-12-09 11:57:52 -0500">
+                            <Title>LuxRenderLocation</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="52" Type="Image" Created="2011-12-09 13:47:28 -0500" Modified="2011-12-09 13:47:28 -0500">
+                            <Title>MaterialSnapshot</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="53" Type="Image" Created="2011-12-09 12:11:58 -0500" Modified="2011-12-09 12:11:58 -0500">
+                            <Title>Modifiers_tab</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="54" Type="Image" Created="2011-12-13 00:08:17 -0500" Modified="2011-12-13 00:08:17 -0500">
+                            <Title>NormalMaps</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="55" Type="Image" Created="2011-12-13 02:33:55 -0500" Modified="2011-12-13 02:33:55 -0500">
+                            <Title>OutputTab</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="56" Type="Image" Created="2011-12-12 23:27:06 -0500" Modified="2011-12-12 23:27:06 -0500">
+                            <Title>Reality_Lights</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="57" Type="Image" Created="2011-12-09 12:07:27 -0500" Modified="2011-12-09 12:07:27 -0500">
+                            <Title>Reality2.0UI_01</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="58" Type="Image" Created="2011-12-13 17:21:08 -0500" Modified="2011-12-13 17:21:08 -0500">
+                            <Title>RenderingParameters_01</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="59" Type="Image" Created="2011-12-13 17:22:09 -0500" Modified="2011-12-13 17:22:09 -0500">
+                            <Title>RenderingParameters_02</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="60" Type="Image" Created="2011-12-13 17:26:29 -0500" Modified="2011-12-13 17:26:29 -0500">
+                            <Title>RenderingParameters_03</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="61" Type="Image" Created="2011-12-13 03:13:51 -0500" Modified="2011-12-13 03:13:51 -0500">
+                            <Title>SLG_Monitor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="63" Type="Image" Created="2011-12-13 01:01:22 -0500" Modified="2011-12-13 01:01:22 -0500">
+                            <Title>Sun_Controls</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="64" Type="Image" Created="2011-12-09 12:32:58 -0500" Modified="2011-12-09 12:32:58 -0500">
+                            <Title>SwitchMaterial</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="65" Type="Image" Created="2011-12-09 15:10:51 -0500" Modified="2011-12-09 15:10:51 -0500">
+                            <Title>TextureProperties</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="99" Type="Image" Created="2011-12-09 12:07:27 -0500" Modified="2011-12-09 12:07:27 -0500">
+                            <Title>Reality2_0UI_01</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="107" Type="Image" Created="2011-02-19 13:14:30 -0500" Modified="2011-02-19 13:14:30 -0500">
+                            <Title>DistopyaToMatte</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="68" Type="Image" Created="2011-02-14 00:47:29 -0500" Modified="2011-02-21 13:30:57 -0500">
+                    <Title>Glass_no_tfc</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="69" Type="Image" Created="2011-02-21 13:34:13 -0500" Modified="2011-02-21 14:05:07 -0500">
+                    <Title>Glass_tfc</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="70" Type="Image" Created="2010-08-09 12:32:55 -0400" Modified="2010-08-09 15:53:50 -0400">
+                    <Title>cube_light</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="71" Type="Image" Created="2010-08-09 22:53:33 -0400" Modified="2010-08-10 00:12:59 -0400">
+                    <Title>ghost_racer_nr</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="72" Type="Image" Created="2010-08-10 00:16:52 -0400" Modified="2010-08-10 02:00:58 -0400">
+                    <Title>ghost_racer_r</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="73" Type="Image" Created="2010-08-10 01:43:08 -0400" Modified="2010-08-10 01:43:08 -0400">
+                    <Title>Ghost_racer_reflector_added</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="110" Type="Image" Created="2010-08-07 11:47:56 -0400" Modified="2010-08-07 11:47:56 -0400">
+                    <Title>RealityMenu</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                    <References>
+                        <Reference BinderID="102" Destination="[Internal Link]">Installation</Reference>
+                    </References>
+                </BinderItem>
+                <BinderItem ID="112" Type="Image" Created="2010-08-10 11:22:34 -0400" Modified="2010-08-10 11:47:05 -0400">
+                    <Title>soa_sun_light_demo_midday</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="113" Type="Image" Created="2010-08-10 10:10:59 -0400" Modified="2010-08-10 13:26:39 -0400">
+                    <Title>soa_sun_light_demo</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="114" Type="Image" Created="2010-08-10 11:27:01 -0400" Modified="2010-08-10 11:27:01 -0400">
+                    <Title>Sun_oriented_midday</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="115" Type="Image" Created="2010-08-10 11:29:36 -0400" Modified="2010-08-10 11:29:36 -0400">
+                    <Title>Sun_oriented_sunrise</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="124" Type="Image" Created="2010-08-04 13:10:34 -0400" Modified="2010-08-09 11:25:38 -0400">
+                    <Title>soa_translucent_lamp</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="125" Type="Folder" Created="2012-03-02 01:09:37 -0500" Modified="2012-03-02 01:09:37 -0500">
+                    <Title>1.2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>126</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="126" Type="Image" Created="2011-02-19 19:58:02 -0500" Modified="2011-02-19 19:58:03 -0500">
+                            <Title>ACSELproductName</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="128" Type="Image" Created="2011-02-20 00:59:46 -0500" Modified="2011-02-20 00:59:46 -0500">
+                            <Title>CameraOptions</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="129" Type="Image" Created="2011-02-19 17:37:12 -0500" Modified="2011-02-19 17:37:12 -0500">
+                            <Title>Distopya_block</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="130" Type="Image" Created="2011-02-19 13:14:30 -0500" Modified="2011-02-19 13:14:30 -0500">
+                            <Title>DistopyaToMatte</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="131" Type="Image" Created="2011-04-16 23:35:31 -0400" Modified="2011-05-09 10:20:57 -0400">
+                            <Title>FogScene</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="132" Type="Image" Created="2011-05-09 23:06:05 -0400" Modified="2013-04-02 18:15:55 -0400">
+                            <Title>FogSceneFrom[host]</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="133" Type="Image" Created="2011-02-14 00:47:29 -0500" Modified="2011-02-21 13:30:57 -0500">
+                            <Title>Glass_no_tfc</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="134" Type="Image" Created="2011-02-21 13:34:13 -0500" Modified="2011-02-21 14:05:07 -0500">
+                            <Title>Glass_tfc</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="135" Type="Image" Created="2011-02-19 23:07:10 -0500" Modified="2011-02-19 23:07:11 -0500">
+                            <Title>MatEditor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="136" Type="Image" Created="2011-02-19 23:10:16 -0500" Modified="2011-02-19 23:10:16 -0500">
+                            <Title>MaterialSelection</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="137" Type="Image" Created="2011-02-21 11:56:04 -0500" Modified="2011-02-21 11:56:04 -0500">
+                            <Title>MatteTranslucent</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="138" Type="Image" Created="2011-02-20 01:03:14 -0500" Modified="2011-02-20 01:04:04 -0500">
+                            <Title>OutputTab</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="139" Type="Image" Created="2011-02-19 13:18:08 -0500" Modified="2011-02-19 13:18:08 -0500">
+                            <Title>SaveForACSEL</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="140" Type="Image" Created="2011-02-20 00:56:07 -0500" Modified="2011-02-20 00:56:07 -0500">
+                            <Title>ShapePreview</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="127" Type="Image" Created="2011-02-15 01:36:47 -0500" Modified="2011-02-15 01:36:47 -0500">
+                            <Title>ACSELShare</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="153" Type="Image" Created="2010-08-10 13:26:33 -0400" Modified="2010-08-10 13:26:34 -0400">
+                    <Title>linear_tm_f2_8_iso50_ss_1</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="155" Type="Image" Created="2010-08-10 13:25:14 -0400" Modified="2010-08-10 13:25:15 -0400">
+                    <Title>linear_tm_f2_8_iso50</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="156" Type="Image" Created="2010-08-10 13:23:26 -0400" Modified="2010-08-10 13:23:26 -0400">
+                    <Title>linear_tm_f8_iso50</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="157" Type="Image" Created="2010-08-10 13:21:21 -0400" Modified="2010-08-10 13:21:22 -0400">
+                    <Title>linear_tm_f8_iso80</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="159" Type="Image" Created="2013-03-10 00:36:37 -0500" Modified="2013-03-10 00:36:40 -0500">
+                    <Title>Gaga_white</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="171" Type="Image" Created="2013-03-28 11:07:56 -0400" Modified="2013-03-28 11:10:25 -0400">
+                    <Title>RegistrationDialog</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="173" Type="Image" Created="2013-03-28 11:39:56 -0400" Modified="2013-03-28 11:43:59 -0400">
+                    <Title>RegistrationDialog2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="182" Type="Image" Created="2013-04-01 18:37:46 -0400" Modified="2013-04-01 18:37:46 -0400">
+                    <Title>RUG_CallingReality</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="183" Type="Image" Created="2013-04-01 18:53:10 -0400" Modified="2013-04-01 18:53:11 -0400">
+                    <Title>RUG_LuxPath</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="184" Type="Image" Created="2013-04-01 22:11:28 -0400" Modified="2013-04-01 22:11:29 -0400">
+                    <Title>RUG_SunAbove</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="185" Type="Image" Created="2013-04-01 22:55:31 -0400" Modified="2013-04-01 22:55:31 -0400">
+                    <Title>RUG_SunHorizontal</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="186" Type="Image" Created="2013-04-01 23:35:45 -0400" Modified="2013-04-02 00:02:24 -0400">
+                    <Title>RUG_SunHorizontalScene</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="187" Type="Image" Created="2013-03-07 17:12:14 -0500" Modified="2013-04-01 23:20:21 -0400">
+                    <Title>RUG_SunVerticalScene</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="189" Type="Image" Created="2013-04-02 01:20:10 -0400" Modified="2013-04-02 01:20:10 -0400">
+                    <Title>RUG_MaterialEditor</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="191" Type="Image" Created="2013-04-02 01:25:05 -0400" Modified="2013-04-02 01:25:05 -0400">
+                    <Title>RUG_MaterialEditor2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="192" Type="Image" Created="2013-04-02 01:25:56 -0400" Modified="2013-04-02 01:25:56 -0400">
+                    <Title>RUG_MaterialEditor3</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="193" Type="Image" Created="2013-04-02 01:26:16 -0400" Modified="2013-04-02 01:26:16 -0400">
+                    <Title>RUG_MaterialEditor4</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="194" Type="Image" Created="2013-04-02 01:27:19 -0400" Modified="2013-04-02 01:27:19 -0400">
+                    <Title>RUG_MaterialEditor5</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="195" Type="Image" Created="2013-04-02 01:33:36 -0400" Modified="2013-04-02 01:33:36 -0400">
+                    <Title>RUG_MaterialEditor6</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="196" Type="Image" Created="2013-04-02 01:39:08 -0400" Modified="2013-04-02 11:01:45 -0400">
+                    <Title>RUG_rocktexture</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="203" Type="Image" Created="2013-04-03 02:01:10 -0400" Modified="2013-04-03 02:01:11 -0400">
+                    <Title>RugCover</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="204" Type="Image" Created="2013-04-03 12:23:08 -0400" Modified="2013-04-03 12:23:09 -0400">
+                    <Title>RUG_RealityLights</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="205" Type="Image" Created="2013-04-03 12:27:10 -0400" Modified="2013-04-03 12:27:10 -0400">
+                    <Title>RUG_MeshLightAdj</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="206" Type="Image" Created="2013-04-03 23:37:32 -0400" Modified="2013-04-03 23:37:32 -0400">
+                    <Title>RUG_MaterialEditor7</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="207" Type="Image" Created="2013-04-03 23:41:26 -0400" Modified="2013-04-03 23:41:26 -0400">
+                    <Title>RUG_Modifiers</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="212" Type="Image" Created="2013-04-04 17:06:42 -0400" Modified="2013-04-04 17:06:42 -0400">
+                    <Title>RUG_NormalMap</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="213" Type="Image" Created="2013-04-05 17:02:46 -0400" Modified="2013-04-05 17:02:46 -0400">
+                    <Title>RUG_RealityPanel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="215" Type="Image" Created="2013-04-07 16:06:12 -0400" Modified="2013-04-07 18:11:10 -0400">
+                    <Title>RUG_Car2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="214" Type="Image" Created="2013-04-07 14:09:19 -0400" Modified="2013-04-07 20:23:07 -0400">
+                    <Title>RUG_Car</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="216" Type="Image" Created="2013-04-07 16:41:46 -0400" Modified="2013-04-07 16:41:46 -0400">
+                    <Title>RUG_car_with_planes</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="219" Type="Image" Created="2013-10-31 11:27:14 -0400" Modified="2013-10-31 11:27:14 -0400">
+                    <Title>Output_group</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="223" Type="Image" Created="2013-10-31 11:38:20 -0400" Modified="2013-10-31 11:38:20 -0400">
+                    <Title>Scene_configuration_editor</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="225" Type="Image" Created="2013-10-31 12:52:58 -0400" Modified="2013-10-31 12:52:58 -0400">
+                    <Title>Renderer_group</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="226" Type="Image" Created="2013-10-31 12:58:17 -0400" Modified="2013-10-31 12:58:17 -0400">
+                    <Title>Acceleration_options</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="227" Type="Image" Created="2013-10-31 23:39:40 -0400" Modified="2013-10-31 23:39:40 -0400">
+                    <Title>Light_Editor</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="230" Type="Image" Created="2013-11-01 00:22:13 -0400" Modified="2013-11-01 00:24:06 -0400">
+                    <Title>Convert_to_light</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="233" Type="Image" Created="2013-11-01 03:05:12 -0400" Modified="2013-11-01 03:10:11 -0400">
+                    <Title>Reality_lights</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="234" Type="Image" Created="2013-11-01 03:04:49 -0400" Modified="2013-11-01 03:04:49 -0400">
+                    <Title>Meshlight_Params</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>No</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="238" Type="Image" Created="2013-11-01 16:48:05 -0400" Modified="2013-11-01 16:48:05 -0400">
+                    <Title>Linear_Tonemapper</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="239" Type="Image" Created="2013-11-02 13:57:18 -0400" Modified="2013-11-02 13:57:19 -0400">
+                    <Title>Light_Efficiency</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="240" Type="Image" Created="2013-11-03 01:21:18 -0500" Modified="2013-11-03 01:21:18 -0500">
+                    <Title>MeshLight_with_imagemap</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="241" Type="Image" Created="2013-10-23 16:56:53 -0400" Modified="2013-11-03 10:26:08 -0500">
+                    <Title>Light_alpha_demo</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>png</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                </BinderItem>
+                <BinderItem ID="266" Type="Folder" Created="2014-11-08 11:26:32 -0500" Modified="2014-11-08 11:26:34 -0500">
+                    <Title>UI</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="267" Type="Image" Created="2014-11-10 11:04:43 -0500" Modified="2014-11-10 11:04:43 -0500">
+                            <Title>PoserInstaller</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="265" Type="Image" Created="2014-11-08 11:24:35 -0500" Modified="2014-11-08 11:24:35 -0500">
+                            <Title>materialEditor</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScaleFactor>1.0</ImageScaleFactor>
+                                <ImageRotation>None</ImageRotation>
+                                <ImageScalesProportionally>No</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="268" Type="Image" Created="2014-11-10 12:53:05 -0500" Modified="2014-11-10 12:53:05 -0500">
+                            <Title>PoserInstaller-w64</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                        <BinderItem ID="269" Type="Image" Created="2014-11-10 13:06:49 -0500" Modified="2014-11-10 13:06:49 -0500">
+                            <Title>PythonShell</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="282" Type="Text" Created="2007-09-23 18:04:42 -0400" Modified="2007-09-23 18:04:42 -0400">
+                    <Title>2U_balance</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" Type="TrashFolder" Created="2012-02-28 16:14:13 -0500" Modified="2012-02-28 16:14:13 -0500">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="272" Type="Text" Created="2014-11-21 10:32:01 -0500" Modified="2014-11-21 10:32:01 -0500">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="277" Type="Text" Created="2014-11-21 19:01:23 -0500" Modified="2014-11-21 19:01:34 -0500">
+                    <Title>"Alice Powell" &lt;aliwonder@cox.net&gt;</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>511,1</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="279" Type="Text" Created="2014-11-22 10:59:05 -0500" Modified="2014-11-22 10:59:05 -0500">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="280" Type="Text" Created="2014-11-22 10:59:09 -0500" Modified="2014-11-22 10:59:09 -0500">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="278" Type="Text" Created="2014-11-22 10:58:50 -0500" Modified="2014-11-22 10:59:45 -0500">
+                    <Title>Rendering workflow-1</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <StatusID>2</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="281" Type="Text" Created="2014-11-22 12:47:57 -0500" Modified="2014-11-22 12:48:03 -0500">
+                    <Title>Generic presets</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="235" Type="Text" Created="2013-11-01 03:22:24 -0400" Modified="2014-11-23 14:36:07 -0500">
+                    <Title>What's new in Reality [version] for [PS]</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>694,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="111" Type="Text" Created="2012-03-01 23:46:36 -0500" Modified="2014-11-22 00:41:29 -0500">
+                    <Title>Configuring Reality to use LuxRender</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>682,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="284" Type="Text" Created="2015-09-12 15:57:32 -0400" Modified="2015-09-12 15:59:33 -0400">
+                    <Title>Detailed list of new features in Reality [version]</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <IconFileName>Notes (Yellow Notepad).tiff</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="94" Type="Text" Created="2012-02-29 20:36:19 -0500" Modified="2013-12-03 16:40:50 -0500">
+                    <Title>Updating LuxRender</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="243" Type="Text" Created="2013-11-04 21:22:24 -0500" Modified="2015-09-14 18:07:33 -0400">
+                    <Title>GPU-based Rendering</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2194,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="218" Type="Text" Created="2013-05-17 10:15:39 -0400" Modified="2014-11-19 20:11:14 -0500">
+                    <Title>What to do if [PS] objects are missing</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>694,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="222" Type="Text" Created="2013-10-31 11:35:37 -0400" Modified="2013-12-03 12:57:29 -0500">
+                    <Title>Acceleration</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1045,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="E4771C88-28B2-4700-A76B-BA89C4A7A453" Color="0.784753 0.815752 0.848702">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="EA78318F-BBE2-4483-96E0-E59C2CA9489B" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" CompileSetting="Include" CaseSensitive="Yes">From the light folder of Reality </SearchSettings>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>The Reality Menu</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.9 0.92 0.95">Concept</Label>
+            <Label ID="1" Color="0.985 0.875 0.85">Chapter</Label>
+            <Label ID="2" Color="0.392996 0.729079 0.670986">Section</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectProperties>
+        <ProjectTitle>Reality User's Guide</ProjectTitle>
+        <AbbreviatedTitle>RUG</AbbreviatedTitle>
+        <FullName>Paolo Ciccone</FullName>
+        <LastName>Ciccone</LastName>
+        <FirstName>Paolo</FirstName>
+    </ProjectProperties>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-02-28 16:14:11 -0500" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2018-01-30 09:47:08 -0500"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>

@@ -1,0 +1,449 @@
+#!/bin/sh
+#
+# Reality plug-in
+# Copyright (c) Pret-a-3D/Paolo Ciccone 2010. All rights reserved.    
+#
+# This file builds the Windows version of Reality
+#
+
+TIMESTAMP_URL='http://timestamp.verisign.com/scripts/timstamp.dll'
+
+# Microsoft tool for code-signing
+BASH_SIGNTOOL="/c/Program Files (x86)/Microsoft SDKs/Windows/v7.0a/Bin/signtool"
+SIGNTOOL="c:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.0a\\Bin\\signtool"
+
+# A simple function to print a message with appropriate
+# level 1 or level 2 headers.
+function sectionHeader {
+  if [[ $1 -eq 1 ]]; then
+    echo "======================================="
+  else 
+    echo "---------------------------------------"
+  fi
+  echo $2
+  if [[ $1 -eq 1 ]]; then
+    echo "======================================="
+  else 
+    echo "---------------------------------------"
+  fi
+  echo ""
+}
+
+function compile {
+  echo "------------------------------------"
+  echo "Compiling $1 $2-bit"
+  echo "------------------------------------"
+  echo ""
+  pushd "${BUILD_SCRIPT_DIR}/../build/w$2" > /dev/null
+  # cmake --build . --target $1 --config Release > $COMPILER_LOG
+  cmake --build . --target $1 --config Release
+
+  if [ $? != 0 ]; then
+    sectionHeader 1 "BUILD FAILED."
+
+    popd > /dev/null
+    echo "Press Enter to continue"
+    read
+    exit
+  fi
+
+  popd > /dev/null
+}
+
+function codeSign {
+  echo "--------------------------------"
+  echo "Code-signing $1"
+  echo "--------------------------------"
+  echo "Current dir is "`pwd`
+
+  echo "\"${SIGNTOOL}\" sign /v /f ..\\assets\\certificates\\PaoloCicconeCertificate.p12 /p reality /t ${TIMESTAMP_URL} $1" > script.bat
+  /c/Windows/System32/cmd /s/c script.bat
+
+ }
+
+function buildReality {
+  sectionHeader 2 "Building the project..."
+  pushd .. > /dev/null
+  cmd /s/c makeproj 32
+  cmd /s/c makeproj 64
+  popd > /dev/null
+
+  # Create the source with the build nuymber
+  python "${BUILD_SCRIPT_DIR}/../makeBuildNumber.py" --notime  "${BUILD_SCRIPT_DIR}/../src/core/ReAppVersion.cpp"
+
+  compile Reality 32
+  compile RealityX 32
+  compile Reality_DS32 32
+
+  sectionHeader 2 "Computing the CRC value for the executable..."  
+
+  pushd "${BUILD_SCRIPT_DIR}" > /dev/null
+  # Code-sign the executable
+  codeSign '..\bin\w32\Release\Reality.exe'
+
+  echo "../tools/compute_crc.exe" "../bin/w32/Release/Reality.exe" \
+       "../bin/w32/Release/${REALITY_LIBRARY_FILE_NAME}"
+
+  "../tools/compute_crc.exe" "../bin/w32/Release/Reality.exe" "../bin/w32/Release/${REALITY_LIBRARY_FILE_NAME}"
+
+  popd > /dev/null
+
+  compile Reality 64
+  compile RealityX 64
+  compile Reality_DS64 64
+
+  sectionHeader 2 "Computing the CRC value for the executable..."  
+
+  pushd "${BUILD_SCRIPT_DIR}" > /dev/null
+  codeSign '..\bin\w64\Release\Reality.exe'
+
+  echo "../tools/compute_crc.exe" "../bin/w64/Release/Reality.exe" "../bin/w64/Release/${REALITY_LIBRARY_FILE_NAME}"
+
+  "../tools/compute_crc.exe" "../bin/w64/Release/Reality.exe" "../bin/w64/Release/${REALITY_LIBRARY_FILE_NAME}"
+  popd > /dev/null
+
+}
+
+# Adds the ACSEL bundle from the Reality assets directory to the
+# installer stage directory, ready to be added to the zipfile
+function addAcselBundle {
+  local ACSEL_DIR=ACSEL
+  echo "---------------------------------------"
+  echo "Adding the ACSEL bundle..."
+  echo "---------------------------------------"
+  pushd "$BUILD_SCRIPT_DIR/w${BITNESS}" > /dev/null
+
+  if [[ -d "./${ACSEL_DIR}" ]]; then
+    rm -rfv "./${ACSEL_DIR}"
+  fi
+  mkdir "./${ACSEL_DIR}"
+  cp "${BUILD_SCRIPT_DIR}"/../assets/ACSEL/* "./${ACSEL_DIR}"
+
+  popd > /dev/null
+}
+
+# Puts together all the files that compose the Poser version
+# The bitness is passed as a mandatory first parameter
+function assemble {
+  if [[ "$1" == "" ]]; then
+    echo "Function assemble() requires a parameter for the bitness"
+    exit
+  fi
+
+  if [[ "$2" == "" ]]; then
+    echo "Function assemble() requires a second parameter"
+    exit
+  fi
+
+  case $2 in
+    ps)
+      TARGET=PS
+      CONFIG_DIR=poser
+      ;;
+    ds)
+      TARGET=DS
+      CONFIG_DIR=studio
+      ;;
+    *)
+      TARGET=PS
+      CONFIG_DIR=poser
+      ;;
+  esac
+
+  local BITNESS=$1
+
+  APP_TARGET_DIR="Reality_${TARGET}"
+  if [[ "${TARGET}" == "PS" ]]; then
+    PLUGIN_TARGET_DIR="Reality_${TARGET}_plugin"
+  else
+    PLUGIN_TARGET_DIR="Reality_${TARGET}${BITNESS}_plugin"
+  fi
+
+  QT_RT_DIR="${BUILD_SCRIPT_DIR}/../libs/windows/${BITNESS}/qt"
+  IF_DLLS="qgif4.dll qjpeg4.dll qtiff4.dll qtga4.dll"
+  QT_DLLS="QtCore4.dll QtGui4.dll QtNetwork4.dll QtWebKit4.dll QtXml4.dll QtXmlPatterns4.dll"
+
+  if [ ! -d "$BUILD_SCRIPT_DIR/w${BITNESS}" ]; then
+    mkdir -p "$BUILD_SCRIPT_DIR/w${BITNESS}"
+  fi
+  pushd "$BUILD_SCRIPT_DIR/w${BITNESS}"
+  rm -rf "./${APP_TARGET_DIR}"
+  rm -rf "./${PLUGIN_TARGET_DIR}"
+  mkdir "${APP_TARGET_DIR}"
+  mkdir "${PLUGIN_TARGET_DIR}"
+
+  cp "${BUILD_SCRIPT_DIR}/../bin/w${BITNESS}/Release/Reality.exe" "${APP_TARGET_DIR}"
+  cp "${BUILD_SCRIPT_DIR}/../bin/w${BITNESS}/Release/${REALITY_LIBRARY_FILE_NAME}" "${APP_TARGET_DIR}"
+  if [[ "${TARGET}" = "PS" ]]; then
+    cp "${BUILD_SCRIPT_DIR}/../bin/w${BITNESS}/Release/Reality.pyd" "${APP_TARGET_DIR}"
+  fi
+  cp "${BUILD_SCRIPT_DIR}/../assets/configFiles/$CONFIG_DIR/windows/RealityConfig.txt" "${APP_TARGET_DIR}"
+
+  # Copy the imageformats plugins
+  mkdir "${APP_TARGET_DIR}/imageformats"
+  for fn in $IF_DLLS; do
+    cp "${QT_RT_DIR}"/imageformats/${fn} "${APP_TARGET_DIR}"/imageformats
+  done
+  
+  # Copy the Qt runtime DLLs
+  for fn in $QT_DLLS; do
+    cp "${QT_RT_DIR}"/${fn} "${APP_TARGET_DIR}"
+  done
+
+  # Copy the documentation
+  cp "${BUILD_SCRIPT_DIR}/../documentation/rug/Reality_Users_Guide.pdf" "${APP_TARGET_DIR}"
+
+  # The plugin portion
+  if [[ "${TARGET}" == "PS" ]]; then
+    # Copy the Python files
+    # cp "${BUILD_SCRIPT_DIR}"/assets/Python/*.pyc "${PLUGIN_TARGET_DIR}"
+    cp "${BUILD_SCRIPT_DIR}"/../src/Poser/addons/Reality/*.pyc "${PLUGIN_TARGET_DIR}"
+  elif [[ $TARGET == "DS" ]]; then
+    cp "${BUILD_SCRIPT_DIR}"/../bin/w${BITNESS}/Release/Reality_DS${BITNESS}.dll "${PLUGIN_TARGET_DIR}"
+  fi
+
+  popd
+
+  addAcselBundle
+}
+
+# Put together all the pieces to create the installer or the distribution 
+# zipfiles
+function assembleReality {
+  sectionHeader 1 "Assembling the Poser version..."
+
+  sectionHeader 2 "32-bit version"
+  assemble 32 ps
+
+  sectionHeader 2 "64-bit version"
+  assemble 64 ps
+
+  sectionHeader 1 "Assembling the DS version..."
+
+  sectionHeader 2 "32-bit version"
+  assemble 32 ds
+
+  sectionHeader 2 "64-bit version"
+  assemble 64 ds
+
+}
+
+# Updates the version number in the Installer configuration file
+# with the number for the latest build.
+function setRealityVersionNumber {
+  "${BUILD_SCRIPT_DIR}"/writeVersionNumberToInstaller.pl "${1}" "${2}"
+}
+
+function createZipFiles {
+  if [[ $# -lt 1 ]]; then
+    echo "createZipFiles() requires an argument"
+    exit
+  fi
+  local BITNESS=$1
+  pushd "$BUILD_SCRIPT_DIR/w${BITNESS}" > /dev/null
+
+  local DS_ARCHIVE="Reality_DS${BITNESS}.zip"
+  local PS_ARCHIVE="Reality_Poser.zip"
+  local ACSEL_DIR=ACSEL
+
+  local DS_ADDONS_DIR="DS_PropsAndLights"
+  local PS_ADDONS_DIR="PS_PropsAndLights"
+  local DS_DIRS="Reality_DS Reality_DS${BITNESS}_plugin ${DS_ADDONS_DIR}"
+  local PS_DIRS="Reality_PS Reality_PS_plugin ${PS_ADDONS_DIR}"
+  if [[ -f "${PS_ARCHIVE}" ]]; then
+    rm "${PS_ARCHIVE}"
+  fi
+  if [[ -f "${DS_ARCHIVE}" ]]; then
+    rm "${DS_ARCHIVE}"
+  fi
+
+  # LuxRender
+  sectionHeader 1 "Including LuxRender..."
+  local LUX_SRC_DIR=/w/product-deployment/LuxRender/stable/Windows
+  if [[ $BITNESS -eq "32" ]]; then
+    LUX_SRC_DIR="${LUX_SRC_DIR}/x86"
+  else 
+    LUX_SRC_DIR="${LUX_SRC_DIR}/x64"
+  fi
+
+  local LUX_OCL_DEPLOYMENT_DIR="luxrender-ocl"
+  local LUX_NOOCL_DEPLOYMENT_DIR="luxrender-no-ocl"
+  if [[ ! -d "${LUX_OCL_DEPLOYMENT_DIR}" ]]; then
+    mkdir -p "${LUX_OCL_DEPLOYMENT_DIR}"
+  fi
+  if [[ ! -d "${LUX_NOOCL_DEPLOYMENT_DIR}" ]]; then
+    mkdir -p "${LUX_NOOCL_DEPLOYMENT_DIR}"
+  fi
+  cp -r "${LUX_SRC_DIR}"-ocl/* "${LUX_OCL_DEPLOYMENT_DIR}"
+  cp -r "${LUX_SRC_DIR}"-no-ocl/* "${LUX_NOOCL_DEPLOYMENT_DIR}"
+
+  sectionHeader 1 "Preparing the Poser Add-ons"
+
+  if [[ -d "./${PS_ADDONS_DIR}" ]]; then
+    rm -rf "./${PS_ADDONS_DIR}"
+  fi
+  mkdir "./${PS_ADDONS_DIR}"
+  cp -R "${BUILD_SCRIPT_DIR}"/../assets/Poser/Reality/* "${PS_ADDONS_DIR}"
+
+  sectionHeader 1 "Preparing the Studio Add-ons"
+
+  if [[ -d "./${DS_ADDONS_DIR}" ]]; then
+    rm -rf "./${DS_ADDONS_DIR}"
+  fi
+  mkdir "./${DS_ADDONS_DIR}"
+  cp -R "${BUILD_SCRIPT_DIR}"/../assets/DS/Reality/* "${DS_ADDONS_DIR}"
+
+  echo "/c/Program Files/7-Zip/7z" a -r "${PS_ARCHIVE}" ${PS_DIRS} \
+                                   "${ACSEL_DIR}/*" "${LUX_OCL_DEPLOYMENT_DIR}" \
+                                   "${LUX_NOOCL_DEPLOYMENT_DIR}"
+
+  "/c/Program Files/7-Zip/7z" a -r "${PS_ARCHIVE}" ${PS_DIRS} \
+                                   "${ACSEL_DIR}/*" "${LUX_OCL_DEPLOYMENT_DIR}" \
+                                   "${LUX_NOOCL_DEPLOYMENT_DIR}"
+  echo "/c/Program Files/7-Zip/7z" a -r "${DS_ARCHIVE}" ${DS_DIRS} \
+                                   "${ACSEL_DIR}/*" "${LUX_OCL_DEPLOYMENT_DIR}" \
+                                   "${LUX_NOOCL_DEPLOYMENT_DIR}"
+  "/c/Program Files/7-Zip/7z" a -r "${DS_ARCHIVE}" ${DS_DIRS} \
+                                   "${ACSEL_DIR}/*" "${LUX_OCL_DEPLOYMENT_DIR}" \
+                                   "${LUX_NOOCL_DEPLOYMENT_DIR}"
+
+  popd > /dev/null
+}
+
+function createInstallers {
+  local TARGET="none"
+  local APP_CODE="none"
+  local BITNESS=64
+
+  if [[ $# -lt 2 ]]; then
+    echo "Function createInstallers requires two parameters" 
+    echo "For example: createInstallers poser 32"
+    exit
+  fi
+
+  case $1 in
+    poser)
+      TARGET=poser
+      APP_CODE=Poser
+      ;;
+    ds)
+      TARGET=ds
+      APP_CODE=DS
+      ;;
+    *)
+      echo "createInstallers() : the first paremeter must be either 'poser' or 'ds'"
+      echo "You have specified: $1"
+      exit
+      ;;
+  esac
+
+  case $2 in
+    32|64)
+      BITNESS=$2
+      ;;
+    *)
+      echo "createInstallers(): the second parameter must be either 32 or 64"
+      exit
+      ;;
+  esac
+
+  echo "=================================================================="
+  echo "Creating the installer for ${APP_CODE} -- ${BITNESS}-bit version"
+  echo "=================================================================="
+
+  local INSTALLER_DIR="/w/product-deployment/Reality_installer"
+
+  pushd "${BUILD_SCRIPT_DIR}" > /dev/null
+  local DEPLOY_DIR="./deploy/${TARGET}/Reality_${APP_CODE}_w${BITNESS}"
+  local ASSETS_DIR="${DEPLOY_DIR}/assets"
+
+  if [[ ! -d "${ASSETS_DIR}" ]]; then
+    mkdir -p "${ASSETS_DIR}"
+  fi
+
+  local QT_RT_DIR="${BUILD_SCRIPT_DIR}/../libs/windows/32/qt"
+  local ZLIB_DIR="${BUILD_SCRIPT_DIR}/../libs/windows/32/zlib"
+  local CRTLIB_DIR="/w/devel/Reality_dependencies/windows/mscrt/32"
+
+  local CFG_FILE_NAME=RealityInstaller.cfg
+  local DEST_CFG_FILE_NAME="${DEPLOY_DIR}/${CFG_FILE_NAME}"
+  local SRC_CFG_FILE_NAME="${INSTALLER_DIR}/config/${TARGET}${BITNESS}/${CFG_FILE_NAME}"
+  # The file that contains the build number
+  local BUILD_NO_FILE_NAME="${BUILD_SCRIPT_DIR}/../src/core/ReAppVersion.cpp"
+
+  cp -v "${INSTALLER_DIR}/w32/RealityInstaller.exe" "${DEPLOY_DIR}"
+  # Sign the executable
+  FL='/'
+  BL='\'
+  codeSign "deploy\\${TARGET}\\Reality_${APP_CODE}_w${BITNESS}\\RealityInstaller.exe"
+
+  cp -v "${SRC_CFG_FILE_NAME}" "${DEST_CFG_FILE_NAME}"
+  setRealityVersionNumber "${BUILD_NO_FILE_NAME}" "${DEST_CFG_FILE_NAME}"
+
+  # Copy the Installation.pdf file
+  cp -v "${BUILD_SCRIPT_DIR}/../documentation/Installation.pdf" "${DEPLOY_DIR}"
+
+  cp -v "${QT_RT_DIR}/QtCore4.dll" "${DEPLOY_DIR}"
+  cp -v "${QT_RT_DIR}/QtGui4.dll" "${DEPLOY_DIR}"
+  cp -v "${ZLIB_DIR}/zlib1.dll" "${DEPLOY_DIR}"
+  cp -v ${CRTLIB_DIR}/{msvcp100.dll,msvcr100.dll} "${DEPLOY_DIR}"
+
+  local INST_ASSETS="bg.png install_01.png install_02.png install_03.png install_04.png RealityLicense.txt"
+  for fn in $INST_ASSETS; do
+    cp -v "${INSTALLER_DIR}/config/${fn}" "${ASSETS_DIR}"
+  done
+  if [[ "${TARGET}" == "poser" ]]; then
+    mv -v "w${BITNESS}/Reality_${APP_CODE}.zip" "${ASSETS_DIR}"
+  else
+    mv -v "w${BITNESS}/Reality_${APP_CODE}${BITNESS}.zip" "${ASSETS_DIR}"
+  fi
+
+  popd > /dev/null
+
+  # Create the zipfile for delivery
+  pushd "${BUILD_SCRIPT_DIR}/deploy/${TARGET}" > /dev/null
+# (
+# cat <<EOCFG
+# ;!@Install@!UTF-8!
+# Title="Reality Installation"
+# ExecuteFile="RealityInstallere.exe"
+# ;!@InstallEnd@!  
+# EOCFG
+# ) > 7zcfg.txt
+
+  "/c/Program Files/7-Zip/7z" a -r -sfx7z.sfx Reality_${APP_CODE}_w${BITNESS}.exe Reality_${APP_CODE}_w${BITNESS}\\*.*
+
+  popd > /dev/null
+}
+
+# Find the absolute path of this script
+pushd $(dirname $0)  > /dev/null
+BUILD_SCRIPT_DIR=`pwd`
+popd > /dev/null
+REALITY_LIBRARY_NAME="Reality_lib"
+REALITY_LIBRARY_FILE_NAME="${REALITY_LIBRARY_NAME}.dll"
+COMPILER_LOG=RealityCompilationLog.txt
+
+echo "======================================="
+echo "Building Reality"
+echo "======================================="
+echo ""
+echo "The script dir is ${BUILD_SCRIPT_DIR}"
+
+if [[ ! -d "${BUILD_SCRIPT_DIR}/../build/w32" ]]; then
+  mkdir -p "${BUILD_SCRIPT_DIR}/../build/w32"
+fi
+
+if [[ ! -d "${BUILD_SCRIPT_DIR}/../build/w64" ]]; then
+  mkdir -p "${BUILD_SCRIPT_DIR}/../build/w64"
+fi
+
+buildReality
+assembleReality
+createZipFiles 32
+createZipFiles 64
+
+createInstallers ds 32
+createInstallers ds 64
+createInstallers poser 32
+createInstallers poser 64

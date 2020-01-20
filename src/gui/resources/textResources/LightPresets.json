@@ -1,0 +1,181 @@
+[
+  {
+    "menuText": "Naturals", 
+    "options": [
+      {
+        "image": "", 
+        "name": "Candle", 
+        "value": "Candle", 
+        "desc": "Standard paraffin candle"
+      },
+      {
+        "image": "", 
+        "name": "Day light", 
+        "value": "Daylight", 
+        "desc": "The light of the sun"
+      }
+    ]
+  }, 
+  {
+    "menuText": "Incandescent", 
+    "options": [
+      {
+        "image": "", 
+        "name": "Generic Light bulb", 
+        "value": "Incandescent1", 
+        "desc": "Standard, low-power generic incandescent light bulb"
+      }, 
+      {
+        "image": "", 
+        "name": "PHILIPS Argenta Light bulb", 
+        "value": "Incandescent2", 
+        "desc": "A bright, high quality incandescent light bulb"
+      }
+    ]
+  }, 
+  {
+    "menuText": "High-Pressure Mercury", 
+    "options": [
+      {
+        "image": "", 
+        "name": "OSRAM Clear HPM Lamp", 
+        "value": "HPM2", 
+        "desc": "Clear High-Pressure Mercury lamp originally at 80W"
+      }, 
+      {
+        "image": "", 
+        "name": "PHILIPS Lamp with improved color", 
+        "value": "HPMFL1", 
+        "desc": "PHILIPS HPM Lamp with improved color. Originally at 125W"
+      }
+    ]
+  }, 
+  {
+    "menuText": "Flame", 
+    "options": [
+      {
+        "image": "", 
+        "name": "Butane gas flame", 
+        "value": "Butane", 
+        "desc": "Butane is used in soldering metals. Some cigarette lighters also use butane."
+      }, 
+      {
+        "image": "", 
+        "name": "Alcohol gas flame", 
+        "value": "Alcohol", 
+        "desc": "Excellent choice for \"food on fire\" (cheese included)"
+      }
+    ]
+  }, 
+  {
+    "menuText": "Fluorescent", 
+    "options": [
+      {
+        "image": "", 
+        "name": "Philips 30W cool white tube", 
+        "value": "FLD2", 
+        "desc": "Standard daylight-tuned fluorescent tube. Use several of these to illuminate an indoor space"
+      }, 
+      {
+        "image": "", 
+        "name": "Sylvania 4W warm tube", 
+        "value": "FL37K", 
+        "desc": "Sylvania Regular Warm White (4200K) Fluorescent"
+      }, 
+      {
+        "image": "osram-cfl.jpg", 
+        "name": "OSRAM Compact Fluorescent 21W", 
+        "value": "CFL27K", 
+        "desc": "Standard Compact fluorescent \"bulb\""
+      }, 
+      {
+        "image": "narva-cfl.jpg", 
+        "name": "NARVA Daylight CFL 20W", 
+        "value": "CFL6K", 
+        "desc": "Daylight Compact Fluorescent"
+      }, 
+      {
+        "image": "sylvania-tube.jpg", 
+        "name": "Sylvania GroLux", 
+        "value": "GroLux", 
+        "desc": "Sylvania Fluorescent Aquarium/Plant Lamp"
+      }, 
+      {
+        "image": "", 
+        "name": "Laptop LCD Screen", 
+        "value": "LCDS", 
+        "desc": "Fluorescent lamp used for LCD backlighting"
+      }, 
+      {
+        "image": "philips-activia.jpg", 
+        "name": "Philips Activia \"Natural\"", 
+        "value": "FLAV8K", 
+        "desc": "Flourescent tube that has 25% more blue light than daylight"
+      }, 
+      {
+        "image": "philips-activia.jpg", 
+        "name": "Philips Activia \"Active\"", 
+        "value": "FLAV17K", 
+        "desc": "Flourescent tube that has 75% more blue light than daylight"
+      }
+    ]
+  }, 
+  {
+    "menuText": "LED", 
+    "options": [
+      {
+        "image": "", 
+        "name": "High Brightness Blue LED", 
+        "value": "LEDB", 
+        "desc": "Regular High Brightness Blue LED"
+      }, 
+      {
+        "image": "", 
+        "name": "Red Laser diode", 
+        "value": "RedLaser", 
+        "desc": "Monochromatic emission from a Red Laser diode"
+      }, 
+      {
+        "image": "", 
+        "name": "Green Laser diode", 
+        "value": "GreenLaser", 
+        "desc": "Monochromatic emission from a Green Laser diode"
+      }
+    ]
+  }, 
+  {
+    "menuText": "Specialty", 
+    "options": [
+      {
+        "image": "", 
+        "name": "CRT Screen", 
+        "value": "TV", 
+        "desc": "Use this to simulate an old style TV or computer monitor based on CRT technology"
+      }, 
+      {
+        "image": "", 
+        "name": "Black Light fluorescent", 
+        "value": "FLBL", 
+        "desc": "Sylvania Blacklite 350 F8W/BL350 Black Light fluorescent"
+      }, 
+      {
+        "image": "", 
+        "name": "High Pressure Mercury Black Light", 
+        "value": "HPMBL", 
+        "desc": "PHILIPS HPW 125W High Pressure Mercury Black Light"
+      }, 
+      {
+        "image": "", 
+        "name": "Stroboscopic flash", 
+        "value": "Xe", 
+        "desc": "Stroboscopic Xenon flash. Disco time!"
+      }, 
+      {
+        "image": "", 
+        "name": "Carbon Arc", 
+        "value": "CarbonArc", 
+        "desc": "Carbon Arc lights were the old style, very bright, lights used during the early days of Hollywood."
+      }
+    ]
+  }
+]

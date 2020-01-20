@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5739\pardirnatural
+
+\f0\fs24 \cf0 When using a new program we are always eager to see what it can do, without spending time reading long documentation. \
+If you want to start rendering great scene with almost no setup, then download the "Perfect Shot Scene" from our website ( {\field{\*\fldinst{HYPERLINK "http://preta3d.com/pre-made-scenes/"}}{\fldrslt http://preta3d.com/pre-made-scenes/}} ) and use it as the start of any new scene. It contains a very flattering and realistic light setup, background and floor, and the camera exposure is set to work right out of the box. Just add your character and click on **Render**.\
+\
+\
+Follow the following steps to get a sample of how to use Reality and obtain your first great render with LuxRender.\
+\
+Here is a video that shows how to get started with Reality:\
+\
+[
+\f1 \{$SCRImageLink[w:300;h:169]=/Users/paolo/devel/Reality/documentation/images/GettingStarted_DS.png\}
+\f0 ]({\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=Xz-BuON0UEo"}}{\fldrslt https://www.youtube.com/watch?v=Xz-BuON0UEo}})\
+\
+You can follow this workflow to create your first scene with Reality:\
+\
+- Create a simple scene in [DS] with one character posed.\
+- Add the Reality Top Mesh Light to the scene.\
+- Make sure that you don't use any [ILs]\
+- In the Lights tab of Reality disable all lights except for the Mesh Light.\
+- From the [DS] menu select **Render | Reality Render Editor** The Reality program will be launched. Reality is a stand-alone program which communicates with [DS]. You can leave Reality running and switch back to [DS] to continue editing your scene. At any time you can switch back to Reality using the OS task switcher or by clicking on the Render menu option again. If Reality is already running the menu action will bring the program to the foreground.\
+\
+- **Make sure that you don't use OpenCL acceleration**, start with the default of CPU-Accelerated.\
+- **Important:** do not enter any value in the **Max Samples** field. That is only for animation purpose. Leave it at zero.\
+- Click on the Render tab and click on the **Render Frame** button.\
+- Watch as your scene is rendered by LuxRender. **LuxRender does not stop automatically;** it continuously refines the image until you decide to stop it. When you decide that the quality of the image is satisfactory you simply close LuxRender. The image will be saved in the location specified in the Output options, in the Render tab. By default the image is rendered to a file called `reality_scene.png` which is saved in your Documents folder.\
+	\
+Now that you have done your first render you can explore all the other great features offered by Reality.\
+\
+}

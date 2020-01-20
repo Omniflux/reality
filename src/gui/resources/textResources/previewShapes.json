@@ -1,0 +1,48 @@
+{
+   "blMilWom_v4b_68498": {
+      "1_SkinFace": "head",
+      "1_Lip": "lips",
+      "2_SkinTorso": "torso_v4",
+      "5_Iris": "eye",
+      "5_Sclera": "eyeball",
+      "5_Pupil": "eye"
+   },
+   "blMilMan_m4b_68498": {
+      "1_SkinFace": "head_m4",
+      "1_Lip": "lips",
+      "5_Iris": "eye",
+      "5_Sclera": "eyeball",
+      "5_Pupil": "eye"
+   },
+   "Genesis_19296": {
+      "1_SkinFace": "head",
+      "1_Lip": "lips",
+      "2_SkinTorso": "torso_v4",
+      "5_Iris": "eye",
+      "5_Sclera": "eyeball",
+      "5_Pupil": "eye"
+   },
+   "GenesisFemale_21556": {
+      "Face": "head_gen2",
+      "Lips": "lips",
+      "Irises": "eye",
+      "Sclera": "eyeball",
+      "Pupils": "eye",
+      "Torso": "torso_v4"
+   },
+   "GenesisMale_21556": {
+      "Face": "head_gen2",
+      "Lips": "lips",
+      "Irises": "eye",
+      "Sclera": "eyeball",
+      "Pupils": "eye",
+      "Torso": "torso_v4"
+   },
+   "Dawn_39096": {
+      "3_Face": "head_dawn",
+      "3_Lips": "lips",
+      "1_Iris": "eye_dawn",
+      "1_Eyes": "eyeball_dawn",
+      "1_Pupil": "eye_dawn"
+   }
+}

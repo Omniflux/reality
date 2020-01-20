@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5739\pardirnatural
+
+\f0\fs24 \cf0 When using a new program we are always eager to see what it can do, without spending time reading long documentation. \
+If you want to start rendering great scene with almost no setup, then download the "Perfect Shot Scene" from our website ( {\field{\*\fldinst{HYPERLINK "http://preta3d.com/pre-made-scenes/"}}{\fldrslt http://preta3d.com/pre-made-scenes/}} ) and use it as the start of any new scene. It contains a very flattering and realistic light setup, background and floor, and the camera exposure is set to work right out of the box. Just add your character and click on **Render**.\
+\
+Here is a video that shows how to get started with Reality. It uses Reality 3 but the workflow is the same:\
+\
+[
+\f1 \{$SCRImageLink[w:298;h:166]=/Users/paolo/devel/Reality/documentation/images/RUG_GettingStartedVideo.png\}
+\f0 ]({\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=nKexUCXY53M"}}{\fldrslt http://www.youtube.com/watch?v=nKexUCXY53M}})\
+\
+You can follow this workflow to create your first scene with Reality:\
+\
+- From the Poser Library click on the Scene tab, go to the Reality folder and load the file titled **Reality Start Scene** if you use Poser 11. If you use Poser 9 or Poser 10 then load the file **Reality Start Scene - P9-P10**. Make use that you use the option to replace the existing scene and not the one that imports or merges the scenes together.\
+- The Reality start scene includes two mesh lights and it has the camera exposure configured for the Main and Face cameras. \
+- Add a character or prop of your choice to the scene.\
+- From the [PS] menu select **Render | Reality Render Editor** The Reality program will be launched. Reality is a stand-alone program which communicates with [PS]. You can leave Reality running and switch back to [PS] to continue editing your scene. At any time you can switch back to Reality using the OS task switcher or by clicking on the Render menu option again. If Reality is already running the menu action will bring the program to the foreground.\
+- **Make sure that you don't use OpenCL acceleration**, start with the default of CPU-Accelerated.\
+- **Important:** do not enter any value in the **Max Samples** field. That is only for animation purpose. Leave it at zero.\
+- Click on the Render tab and click on the **Render Frame** button.\
+- Watch as your scene is rendered by LuxRender. **LuxRender does not stop automatically;** it continuously refines the image until you decide to stop it. When you decide that the quality of the image is satisfactory you simply close LuxRender. The image will be saved in the location specified in the Output options, in the Render tab. By default the image is rendered to a file called `reality_scene.png` which is saved in your Documents folder.\
+\
+\{$SCRImageLink[w:200;h:90]=/Users/paolo/devel/Reality/documentation/images/UI/Reality start scene.png\} "Reality Start Scene for Poser"\
+\
+### How to optimize your Poser 11 scenes\
+Poser 11 includes a new type of light, the Area Light. While on the surface the Area Light might be similar to the Reality Meshlight, it is not as flexible and powerful. To obtain the best results from your scene we suggest to delete all the lights in the Poser scene. Then add one Infinite Light and disable it in the Lights tab of Reality. The purpose of this light is to let us see what's in the scene, we don't want to use it in the render.\
+\
+Once the initial setup is done, start adding one or more Reality Meshlights. Size them to affect the softness or harshness of the light, and optionally use the snoot to control the light spill.\
+\
+The Reality mesh light will give you better results, faster renders, and more control than the Poser Area light.\
+\
+### About the [PS] Perspective dial\
+<!-- \\index\{Camera!perspective\} -->\
+[PS] cameras have a slider that can artificially change the perspective of the frame. Perspective, in the physical world, is determined by the focal length of the lens and the position of the camera in the scene. That's how it works with real cameras. \
+\
+Reality and LuxRender are designed to respect the physical measurements and will match your Poser camera to the pixel **as long as the Perspective slider is not changed.** The Perspective slider should be avoided at all costs. If you need to change the perspective of your scene you need to use the focal length value and move the camera around. \
+\
+The same considerations are valid for the **Scale** slider in [PS] when it affects cameras. It's necessary to avoid changing its default value or the rendered image will nor match what is framed in [PS].\
+\
+Now that you have done your first render you can explore all the other great features offered by Reality.\
+\
+}

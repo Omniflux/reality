@@ -1,0 +1,126 @@
+#
+# A CMake project
+#
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+# Set the project name 
+PROJECT("RealityTester")
+#
+# Version number
+#
+SET(VERSION_MAJOR "1")
+SET(VERSION_MINOR "0")
+SET(VERSION_PATCH "0")
+
+# 32 or 64 bits?
+IF(NOT BITNESS)
+  SET(BITNESS 64)
+ENDIF()
+
+#
+# OS abbreviation for the project
+#
+IF(APPLE) 
+  SET(OS_CODE "mac")
+ELSEIF(WIN32)
+  SET(OS_CODE "w${BITNESS}")
+ENDIF()
+
+#########################################################################
+# Find Qt
+#########################################################################
+FIND_PACKAGE( Qt4 4.8.4 REQUIRED QtCore QtGui QtXml QtNetwork QtSQL QtWebKit )
+MESSAGE("Qt use file: ${QT_USE_FILE}")
+INCLUDE(${QT_USE_FILE})
+
+
+#########################################################################
+# Location of the additional libraries used by the project
+# ZeroMQ, the DS SDK, Boost, QJSON, SQLite
+#########################################################################
+SET( PROJECT_LIBS "${CMAKE_SOURCE_DIR}/../../libs")
+SET( BOOST_ROOT "${PROJECT_LIBS}/boost")
+message("Boost is in: ${BOOST_ROOT}")
+find_package( boost )
+
+#
+# Include directories
+#
+set(RealitySrc "${CMAKE_SOURCE_DIR}/..")
+set(RealityDataInc "${RealitySrc}/data")
+set(RealityCoreInc "${RealitySrc}/core")
+
+INCLUDE_DIRECTORIES(
+  "${PROJECT_LIBS}/boost"
+  ${RealityDataInc}
+  ${RealityCoreInc}
+)
+
+#
+# The source files
+#
+SET( 
+  SOURCE_FILES 
+  "${CMAKE_SOURCE_DIR}/RealityTester.cpp"
+  "${RealityDataInc}/ReMaterial.cpp"
+  "${RealityDataInc}/ReGlossy.cpp"
+  "${RealityDataInc}/textures/ReConstant.cpp"
+)
+
+SOURCE_GROUP(SOURCES FILES ${SOURCE_FILES})
+
+SET( MOC_SOURCE_FILES "")
+QT4_WRAP_CPP(MOC_FILES ${MOC_SOURCE_FILES})
+
+#########################################################################
+# The source for the executable
+#########################################################################
+SET( EXECUTABLE_NAME "RealityTester" )
+
+
+# Set the output for the Debug/Release binaries to be above the 
+# source directory, both for the executable and for the library
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../bin/${OS_CODE}")
+SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../bin/${OS_CODE}")
+
+IF(APPLE)
+  # Create a universal, 32 and 64 bits, executable
+  SET(CMAKE_OSX_ARCHITECTURES "x86_64;i386")
+
+  # Set the base SDK at 10.7 
+  SET(CMAKE_OSX_DEPLOYMENT_TARGET 10.7) # keep this @ 10.7 to archieve bw-compatibility by weak-linking !  
+  ADD_EXECUTABLE(
+    ${EXECUTABLE_NAME} MACOSX_BUNDLE
+    ${SOURCE_FILES}
+    ${UI_FILES}
+    ${MOC_FILES}
+  )
+
+  # Set the properties for the Info.plist file of the app
+  SET_TARGET_PROPERTIES(
+    ${EXECUTABLE_NAME} PROPERTIES 
+    MACOSX_BUNDLE_BUNDLE_NAME "RealityTester"
+    MACOSX_BUNDLE_ICON_FILE "RealityTester.icns"
+    MACOSX_BUNDLE_SHORT_VERSION_STRING 
+      "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}"
+    MACOSX_BUNDLE_COPYRIGHT "Pret-a-3D 2016 - All rights reserved"
+  )
+
+ELSEIF(WIN32)
+  ADD_EXECUTABLE(
+    ${EXECUTABLE_NAME}
+    ${SOURCE_FILES}
+    ${UI_FILES}
+    ${MOC_FILES}
+  )
+
+ENDIF()
+
+#
+# Linking Qt libraries
+#
+TARGET_LINK_LIBRARIES(
+  ${EXECUTABLE_NAME} 
+  ${QT_LIBRARIES} 
+)

@@ -1,0 +1,2 @@
+_getSDKVersion
+_getPluginDefinition

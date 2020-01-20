@@ -1,0 +1,114 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5739\pardirnatural
+
+\f0\fs24 \cf0 **The following are the main changes in Reality [version] compared to 4.2.1:**\
+\
+- Added per-texture Copy and Paste. Copy a texture, paste it in any channel, even into a different material. This feature works also with Multi-edit.\
+- Updated Cloth editor to work like the other editors. Clicking on a Color texture shows the color picker.\
+- It's now possible to remove sub textures, like the one in the Band or Mix texture.\
+- Added ability to render a subset of an animation.\
+- For Reality DAZ Studio Edition, added ability to stop animation exporting.\
+- Updated Lux to version 1.6.\
+- Added option to cancel the animation export when using DAZ Studio.\
+- Added icons to the "Render Frame" and "Render Animation" buttons.\
+- Reality and the Reality installer are all code-signed both for Mac OS and Windows.\
+- Changed the text color for checkboxes and comboboxes to be white, much easier to read.\
+- Fixed bug that could cause errors in conversion of materials from Poser. The infamous "could not find float texture" error message in Lux. This improves the conversion of materials for many Poser figures.\
+- Extended the range for the film thickness in the Mirror material.\
+- Changed padlock icon with clearer (I hope), link/unlink icon for glossiness values\
+- Changed icons to have a more modern look and to align better\
+- Added icons to the top tabs for easy navigation\
+- Added shortcuts in the Help menu to:\
+	- Find Automatic Presets\
+	- Find Reality Freebies\
+	- Access the Reality forums\
+	- Access customer support\
+- Added object aliasing for ACSEL, so that the same preset can be made to work for the same figure whether it's used in DS or Poser.\
+- Changed Installer to delete previous versions of the files installed and have extensive error reporting in case something doesn't work as expected.\
+- Changed installer to show different "billboards" while the installation progresses.\
+- Changed font for the Reality User's Guide, easier to read, looks more modern.\
+\
+- Fixed bug that caused the export of animation to have some frames out of alignment, in Studio\
+- Fixed bug that caused bump map to not work with Velvet\
+- Fixed support for thin film for glass (works only in non-accelerated modes)\
+- Fixed double "Car paint" category\
+- Fixed preset selector for light: it allowed to click on the OK button when nothing was selected\
+- Fixed numerous bugs\
+- Fixed typo in "Wool Gabardine"\
+- The number of threads is now not saved in the scene, so that the scene can be moved to another machine and have the \
+  number of threads recalculated for the current hardware.\
+\
+\
+**The following are the main changes in Reality 4.2.1 compared to 4.2.0:**\
+\
+- Removed the need to enter a scene file name. Now you just specify the image file name and render.\
+- Changed "Transmission" in the Glass material to use the more descriptive term "Tint."\
+- Renamed Color Math texture to be the more friendly "Texture Combine."\
+- The Metal material is automatically set to be shinier than before, providing a better, more natural result.\
+- When converting a material to Metal, if the original material used an image map Reality enables the "Custom Metal" options automatically.\
+- Added Start scene for DAZ Studio. This scene gives you a great starting point, with a wide-shot and a portrait camera. Lights are also set for an excellent result out-of-the-box.\
+- Added Copy and Paste commands to the right-click menu, similarly to Reality 2.x\
+- New look and feel for the Texture Preview widget. Cleaner and less cluttered.\
+- Added presets for Pauline, from Poser 11.\
+- Added option to create a Generic Preset that simply changes the material type, without altering any other property.\
+- Added support for using TIFF files for IBL.\
+\
+_Bug fixes_\
+\
+- Fixed all camera synchronization issues in the DAZ Studio edition.\
+- Fixed bug that caused cameras saved with Reality 4.0/Studio to not be restored correctly.\
+- When loading a scene made with Reality 4.0, in Reality 4.1, the export would fail with "there is no light source in the scene." This has been fixed.\
+- The selected scene sampler is now saved in the scene.\
+- Texture collection preference is now saved.\
+- If the topcoat option is used then the selection will be restored when the reloading the scene.\
+- Fixed bug that caused the text in the Windows  color picker to be unreadable.\
+- Improved reliability of selection in the light editor.\
+- Adjusted Poser material conversion to skip Image Map nodes that don't have an actual image.\
+- Added code to skip the posing controls of Poser 11.\
+- Fixed bug that prevented using bump mapping with Water.\
+- Fixed bug that caused Lux to render material as matte (roughness 1.0) when setting the glossiness to 10,000.\
+- Fixed bug that prevented Automatic Presets be loaded in certain cases.\
+- Changed startup parameters for Lux to reduce recognizable patterns when using the Sobol sampler.\
+\
+**The following are the main changes in Reality 4.2 compared to version 4.1.1:**\
+\
+- Added support for Poser's dynamic hair. Thanks to Eugene Cherepanov for contributing example code. Please note that dynamic hair can be very demanding on the RAM of your machine, resulting in Gigabytes of RAM used.\
+- Added Support for Poser 11.\
+- Added start scenes for Poser 11 , 10, and 9.\
+- Removed requirement to set the exact resolution in Poser in order to render in Reality.\
+- Optimized certain material conversions.\
+- The Water Plane now comes in the scene with the correct material and the rippling effect is working as expected.\
+- Fixed conversion from any material to the Water type. All the rippling parameters now work as expected.\
+- "Revert to original" now can be applied to multiple materials.\
+- Improved conversion of the specular/alternate specular channels.\
+- Fixed bug that prevented objects duplicated in Poser from appearing in Reality.\
+- Fixed bug that prevented a Poser deleted came from being removed from Reality.\
+- Fixed bug in loading Posers scenes made with previous versions of Reality.\
+- Fixed bug that caused exception in Reality when switching to the Setup room in Poser.\
+\
+\
+**The following are the biggest new features in Reality 4.1 compared to the previous one. The detailed list of what has been changed since the previous version can be found in the Appendix.**\
+\
+- Up to 20x faster CPU rendering\
+- GPU+CPU rendering via OpenCL (Windows only)\
+- Added multi-edit of textures, even across multiple objects. Select multiple materials, edit the Specular color, done. Works across multiple object and with materials of different type, as long as it makes sense.\
+- Completely integrated LuxRender, no need to install LuxRender separately, everything that you need to render fantastic images is ready "in the box"\
+- Direct editing of Color and Image Map texture. Click on a color texture and the color picker comes up. Click on a Image Map texture and the file selector comes up. Alt/Opt-Click to open the texture in the texture editor\
+- Changing material type now works across multiple objects. Select material from as many objects you want, right-click and convert them to any type\
+- Full support for file merging in the DAZ Studio Edition\
+- Changed deliverables to use DMG on OS X and Self-Extracting zips for Windows\
+- Fixed parenting/unparenting issues with Poser\
+- New Single-light IBL lights, a set of 200 lights developed by Lee Furssedonn ideal for portraits\
+- Support for iRay shaders with specific smart conversion of the Genesis 3/Victoria 7 materials\
+- New Universal Presets, including several Car Paint materials\
+- Customizable Top Coat channel for the Skin material\
+- Ability to simultaneously use Normal maps and Bump maps in a material\
+- One-click disabling/enabling of SSS\
+\
+You can see these features in action in the following video:\
+\
+[\{$SCRImageLink[w:348;h:218]=/Users/paolo/devel/Reality/documentation/images/WhatsNewR4-1.png\}]({\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=nKexUCXY53M"}}{\fldrslt https://www.youtube.com/watch?v=aSY-YW1RVj0}})\
+}

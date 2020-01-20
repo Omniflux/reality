@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 Every light in the real world generates shadows. In fact shadows are a very desirable effect of using lights in photography. Some 3D renderers allow the artist to "turn off the shadows." That is something that we don't have, thankfully, with LuxRender. Lights create shadows, that is the reality of physics. Since you are reading this guide I assume that you are interested in creating realistic scenes. In the real world lights create shadows so, in order to maintain believability, LuxRender doesn't create shadow-less lights.\
+\
+Shadows become softer as the light source becomes larger. If we observe the shadows during an overcast day we can see that they are almost invisible. That is because the curtain of clouds acts as a giant diffuser, an enormous light source. When the sky is covered in clouds those clouds become the light source, not the sun. That's why the shadows become so soft and faint to be barely visible. \
+\
+If you want to remove unwanted shadows from your scene then move the light source, the camera and change the size of the light until the shadows become very faint. The Reality [ML] has a *Shadowless* control to help you obtain the right effect.\
+\
+The removal of shadows in 3D renderers is a feature that has been introduced to help work around one of the limitations of certain renderers. That limitation was the inability to create certain light effects, namely  indirect lighting (I.L.). To simulate I.L. many 3D artist used several Infinite Lights (aka Distant Lights) positioned strategically. They then turned off the projection of shadows from those lights. Unfortunately the "turn shadows off" has become an abused trick, as it often happens. \
+\
+Indirect light is always present with LuxRender. There is nothing we need to do about it, it's the result of physics-based lighting. We don't need any lighting hack to create it.\
+\
+If the scene is set in such a way that the only way to obtain the right effect would be to turn off the shadows then that is a sign that the scene's lighting is set up in the wrong way. Rework the setup until you get the right result.}

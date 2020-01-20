@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\tx560\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 <!-- \\index\{Light emission\} --> <!-- \\index\{Ambient\} -->\
+Any Reality material, except for Null, can be made to emit light. This option is similar to the Ambient settings of [PS] and [DS]. In fact, Reality will enable this option if it detects that a material in the host has valid Ambient parameters. To determine if a material in the host is actually using the Ambient channel Reality looks at the **Ambient Value** and the **Ambient_Color** parameters. If **Ambient Value** is greater than 0 and Ambient_Color is different from black then the light emission in the Reality material is enabled. \
+\
+The Reality Light emission modifier uses the full power of the Reality Texture Editor which gives us flexibility in defining light emission areas within a material. For example, the texture in the Light emission modifier can be used to define LED lights appearing on a surface without the need to actually create a light for each LED.\
+\
+The **Light gain** value is set to be equal to what is found in the *Ambient_Value* entry in the host. \
+The power of the light can be adjusted using the *Light Gain* value. As always, make sure that you use the **Linear Tonemapper** in LuxRender so that you can adjust light groups individually and get the correct result. \
+\
+Any light-emitting material will be exported in its own light group, which is named with the prefix *LEM:*--for "Light-Emitting Material"--followed by the name of the material. In this way it's very easy to adjust the brightness of the material while rendering.\
+\
+Figure <!--\\ref\{rug_lightemission_demo.png\}--> demonstrates the light emission materials in action. The lights on the ceiling, in the arch entrance, and on the instruments displays are all created by just two light emitting materials. The scene has just one Meshlight to add a bit of fill in the darkest areas, most of the illumination is provided by the two light-emitting materials.\
+\
+\pard\tx560\pardeftab720\pardirnatural
+
+\f1 \cf0 \{$SCRImageLink[w:400;h:225]=/Users/paolo/devel/Reality/documentation/images/RUG_LightEmission_demo.png\}
+\f0  "Light-Emitting materials in action"\
+\
+<!--\\pagebreak[4]-->}

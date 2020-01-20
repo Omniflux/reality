@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5773\pardirnatural
+
+\f0\fs28 \cf0 Sub-Surface Scattering, or SSS, is the ability of a renderer to simulate the scattering of light happening in the layers of human tissue under the surface of the skin. SSS is used for several types of materials, but skin is its most popular application. <!-- \\index\{SSS\} -->\
+\
+Reality has a feature called "zero-click SSS" which assigns a *Skin* material, with SSS enabled, automatically to certain materials that are found in the the host's figure. For example, the material **1_SkinFace** of Victoria 4 is automatically turned to skin with SSS, regardless of what material properties were set in the host. Figure <!--\\ref\{reality-sss.png\}--> shows the Skin material for the face of Victoria 6. The SSS checkbox is enabled and we can see the settings for the scattering and other parameters involved in the rendering of the SSS feature. <!-- \\index\{V6\} -->\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f1\fs24 \cf0 \{$SCRImageLink[w:300;h:325]=/Users/paolo/devel/Reality/documentation/images/UI/Reality-SSS.png\}
+\f0\fs28  "SSS settings"\
+\pard\pardeftab720\ri-5773\pardirnatural
+\cf0 \
+###Customizing the SSS\
+While setting the SSS for a material is, most of the times, automatic, the specific values for the SSS parameters might need to be changed in order to fit a specific skin or situation. The following sections describe all the parameters that can be edited.\
+\
+####Connected Volumes\
+SSS is implemented in Reality by using the Homogeneous Volumes of LuxRender. <!-- \\index\{Volumes\} -->\
+A volume, in LuxRender, is a body that has a substance similar to fog. Basically a volume is made of particles that scatter the light. The density and color of the volume determine how strong the scattering effect is. When we create a material that has SSS, Reality creates automatically the inner volume for the material. A volume has a name and a series of parameters. The name for the volume is created automatically by using the internal name of the figure, followed by a ":" followed by the string *SSSVol*. So, for example, if we add the first figure to the scene, the volume for the SSS will be called *Figure 1:SSSVol*. *Figure 1* is an internal name assigned automatically by [PS]. For [DS] it's generally something like *GenesisFemale_21556-30608:SSVol*, where GenesisFemale_21556-30608 is the internal name assigns to the figure. Internal names change with each figure.\
+\
+While the volume is created and named automatically, we have access to its characteristics and we can change a number of parameters. The **Surface color** and **Interior color** parameters of the SSS panel are actually entries in the **Absorption Color** and **Scattering Color** parameters of the associated volume. We can see all the parameters for the SSS volume by clicking on the **Volumes** tab at the top of the Reality window, between the **Camera** and **Advanced** tab. See [Volumes](#Volumes) for more details on how to adjust the volume parameters.\
+\
+The role of the Surface Color is to provide the tint of the surface of the scattering volume. The Interior Color is an additional hue that is given to the scattering particles. The colors that are selected by Reality have been tested to provide very credible SSS for all kinds of skins. Since the effect of scattering, in real life, is given by the blood inside the human skin, the values used by default by Reality work for skins of many different pigmentations. Having said so, it might be necessary to adjust those colors a little bit when using certain skin packages. The scale parameters are direct inputs in the corresponding values in the volume. See the Volumes documentation.\
+\
+The **Surface Thickness** <!-- \\index\{Surface thickness\} --> is the thickness of the skin.\
+\
+###The Hair mask\
+<!-- \\index\{Hair mask\} -->\
+The SSS effect tends to make the surface of the material translucent. Most figures for [PS] and [DS] are designed with one single material for the whole face. This means that facial hair, eyebrows, beards and mustaches are affected by the SSS settings and can become unrealistically translucent. For this reason Reality automatically creates a mask to exclude the facial hair from being affected by SSS. This mask is called the Hair Mask and it's usually configured only for the face material.\
+\
+The hair mask is automatically obtained from the texture used in the Diffuse channel. That texture is used in input and then internally transformed to be a high-contrast black-and-white image. While Reality does its best to guess the right transformation it can be that with certain skins, especially darker complexions, the result is not completely satisfactory. The goal of the mask is to be as white as possible except for the areas where hair is present. With female characters this means the eyebrows. Reality provides a preview of the resulting mask. If more parts of the skin are dark try gradually increasing the Gain value for the face mask until most of the face detail is lost except for the eyebrows.\
+\
+###Disabling SSS\
+To disable the SSS effect simply uncheck the SSS checkbox. This will save substantial time in rendering the character. Disabling the SSS is advised if the character affected is not predominant in the camera view. Characters that are in the background or not close to the camera will not show much benefit from using SSS so there is no point in spending rendering cycles there.\
+}

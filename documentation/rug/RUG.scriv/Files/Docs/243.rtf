@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\ri-5736\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 Reality can use the GPU to accelerate rendering. While this is a great feature, it's important to understand that there are limitations to what it can do.\
+\
+\{$SCRImageLink[w:350;h:243]=/Users/paolo/devel/Reality/documentation/images/UI/SceneConfiguration.png\} "Scene Configuration options"\
+\
+There are two types of GPU acceleration that can be used: OpenCL and OpenCL with Extra Boost. 
+\fs24 <!-- \\index\{OpenCL\} --> \
+
+\fs28 \
+Simple OpenCL acceleration allows you to use every OpenCL device in your machine, whether that is a GPU or a CPU. You can enable or disable any OpenCL device when using this option.\
+\
+For example, you might want to to use of the GPU and leave the CPU available so that you can have a very responsive user interface while rendering.\
+\
+The OpenCL rendering, without the Extra Boost option is very flexible and will produce always unbiased results.\
+\
+When enabling the Extra Boost option the CPU is automatically deselected because he cannot participate in this kind of rendering. So please make sure that you don't enable it manually. Doing so will crash LuxRender.\
+\
+The Extra Boost option can provide faster results at the price over slight lowering of quality of the overall image. This option can potentially introduce bias in the result.\
+\
+GPU-based rendering also suffers from limited RAM. GPUs generally have small amounts of on-board RAM, typically in the range of 2GB. On the other hand computers nowadays can have in excess of 20 or 30 GB and the CPU is able to address all that memory. For complex scenes having that amount of memory is a crucial factor.\
+\
+To help contain a scene inside the GPU's RAM, Reality automatically enables  texture collection and scaling when selecting to render with OpenCL.\
+\
+##Starting up\
+If you want to try OpenCL rendering we suggest that you start without the Extra Boost option. Gain some experience in using this mode and then experiment with the Extra Boos option.\
+\
+##Shader compilation\
+Whenever you use OpenCL rendering the materials, a.k.a. shaders, need to be compiled before the rendering can begin. During this time LuxRender will show a black rectangle in the area where the image is expected to show.\
+\
+While LuxRender is compiling the shaders it will report that there are zero devices present. The information is shown in the status bar:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\
+Once the compilation is done the number of devices will be displayed. For example, if you enabled one GPU then LuxRender will report 1 device. If you enabled both the GPU and CPU then LuxRender will report two devices. \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\ri-5736\sl288\slmult1\pardirnatural
+\cf0 Depending on  the type of hardware and the device driver installed, the compilation time could vary from a few seconds to several minutes. This compilation phase is necessary only the first time a given material is rendered. If you do successive renders, without changing any of the materials, then the rendering will start almost immediately.\
+\
+It has been noticed that OpenCL with Extra Boost might take longer to compile on some nVidia hardware. We are aware of this and hope to provide a solution soon.\
+\
+That is currently working in progress to make this compilation phase as a short as possible and future updates of Reality are expected to shorten this time considerably.\
+\
+It is worth noting that in the case of an animation the compilation time will be needed only for the first frame, while all the other frames would be a rendered right away.\
+\
+ ##OpenCL\
+
+\fs24 <!-- \\index\{OpenCL\} --> <!-- \\index\{OpenGL\} -->
+\fs28 \
+Please note that OpenCL is not related in any way to OpenGL. Please also note that OpenCL is not CUDA. OpenCL is an open standard that provides developers with an interface to use the computing power available in the GPU. OpenCL is platform-independent and so it works, and it's supported by, graphic cards from different brands, including nVidia, AMD and Intel. CUDA is a proprietary API, similar in scope to OpenCL, but only supported by nVidia.\
+\
+With OpenCL you can have multiple devices, GPUs, your machine and those devices can come from different vendors, and Reality and LuxRender will be able to use them at the same time.\
+\
+####Important notes for OS X users\
+While Reality provides full support for OpenCL on both OS X and Windows, unfortunately the OpenCL drivers for OS X 10.10 and 10.11, up to September 2015, are broken. This means that it's not possible to render using OpenCL on OS X.\
+\
+If and when Apple will fix its OpenCL drivers, then Reality will automatically be able to render your images with OpenCL.\
+}

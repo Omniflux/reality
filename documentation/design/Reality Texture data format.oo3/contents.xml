@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE outline PUBLIC "-//omnigroup.com//DTD OUTLINE 3.0//EN" "http://www.omnigroup.com/namespace/OmniOutliner/xmloutline-v3.dtd">
+<outline xmlns="http://www.omnigroup.com/namespace/OmniOutliner/v3">
+  <style-attribute-registry>
+    <style-attribute version="1" key="font-fill" group="font" name="fill color" class="color">
+      <color w="0"/>
+    </style-attribute>
+    <style-attribute version="0" key="font-size" group="font" name="size" class="number">12</style-attribute>
+    <style-attribute version="0" key="font-weight" group="font" name="weight" class="number">5</style-attribute>
+    <style-attribute version="1" key="underline-style" group="underline" name="style" class="enum">
+      <enum-name-table default-value="0">
+        <enum-name-table-element value="0" name="none"/>
+        <enum-name-table-element value="1" name="single"/>
+        <enum-name-table-element value="2" name="thick"/>
+        <enum-name-table-element value="9" name="double"/>
+      </enum-name-table>
+    </style-attribute>
+  </style-attribute-registry>
+  <attachments>
+    <attachment id="att0" href="gradient_editor.png"/>
+  </attachments>
+  <settings>
+    <alternate-color>
+      <color r="0.805717" g="0.811713" b="1" a="0.57"/>
+    </alternate-color>
+    <horizontal-grid-color>
+      <color catalog="System" name="gridColor"/>
+    </horizontal-grid-color>
+  </settings>
+  <editor content-size="{933, 908}" status-visible="no">
+    <drawer display="find"/>
+    <selected-columns ids="luMZ1CwEhza"/>
+  </editor>
+  <columns>
+    <column id="kyLNo_bNGuT" type="text" width="18" minimum-width="18" maximum-width="18" text-export-width="1" is-note-column="yes">
+      <style>
+        <value key="font-fill">
+          <color r="0.0789684" g="0.0789684" b="0.0789684"/>
+        </value>
+        <value key="font-size">13</value>
+      </style>
+      <title>
+        <text>
+          <p/>
+        </text>
+      </title>
+    </column>
+    <column id="luMZ1CwEhza" type="text" width="710" minimum-width="13" maximum-width="1000000" text-export-width="72" is-outline-column="yes">
+      <title>
+        <text>
+          <p>
+            <run>
+              <lit>text</lit>
+            </run>
+          </p>
+        </text>
+      </title>
+    </column>
+    <column id="fYzcqdmIaTf" type="text" width="100" minimum-width="13" maximum-width="1000000" text-export-width="40">
+      <title>
+        <text>
+          <p>
+            <run>
+              <lit>Def.Value</lit>
+            </run>
+          </p>
+        </text>
+      </title>
+    </column>
+    <column id="h6vQr8sV5Ze" type="enumeration" width="100" minimum-width="20" maximum-width="1000000" text-export-width="40">
+      <title>
+        <text>
+          <p>
+            <run>
+              <lit>Type</lit>
+            </run>
+          </p>
+        </text>
+      </title>
+      <enumeration>
+        <member id="ocPflu0XXvT">
+          <text>
+            <p>
+              <run>
+                <lit>Float</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="jACSm7vkmS6">
+          <text>
+            <p>
+              <run>
+                <lit>Array of floats</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="oI669jQ8bs4">
+          <text>
+            <p>
+              <run>
+                <lit>String</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="bbRUQfbY3d_">
+          <text>
+            <p>
+              <run>
+                <lit>Array of strings</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="i3bypS854XP">
+          <text>
+            <p>
+              <run>
+                <lit>Texture</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="dWAo0eLSEhQ">
+          <text>
+            <p>
+              <run>
+                <lit>Array of Textures</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="ba1NAXWcpUR">
+          <text>
+            <p>
+              <run>
+                <lit>Color Texture</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="ogo6lRtp2If">
+          <text>
+            <p>
+              <run>
+                <lit>Float texture</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+        <member id="iI-M3aqygyx">
+          <text>
+            <p>
+              <run>
+                <lit>Bool</lit>
+              </run>
+            </p>
+          </text>
+        </member>
+      </enumeration>
+    </column>
+  </columns>
+  <root>
+    <style>
+      <value key="font-weight">9</value>
+      <value key="underline-style">single</value>
+    </style>
+    <item id="k41Z8f-6U5z">
+      <style>
+        <value key="font-size">16</value>
+        <value key="font-weight">9</value>
+      </style>
+      <values>
+        <text>
+          <p>
+            <run>
+              <lit>LuxRender Textures to be included in Reality 3 </lit>
+            </run>
+          </p>
+        </text>
+        <null/>
+        <null/>
+      </values>
+    </item>
+    <item id="pgvA0mAravZ" expanded="yes">
+      <values>
+        <text>
+          <p>
+            <run>
+              <lit>Base texture</lit>
+            </run>
+          </p>
+        </text>
+        <null/>
+        <null/>
+      </values>
+      <children>
+        <item id="lPAR7x9hHik">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>Texture name</lit>
+                </run>
+              </p>
+            </text>
+            <null/>
+            <enum idref="oI669jQ8bs4">String</enum>
+          </values>
+        </item>
+        <item id="kVqN9qWUOYv" expanded="yes">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>Texture class</lit>
+                </run>
+              </p>
+            </text>
+            <null/>
+            <enum idref="oI669jQ8bs4">String</enum>
+          </values>
+          <children>
+            <item id="cx6IPumTvie">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>color</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+            </item>
+            <item id="hf1VoTCF-1t">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>float</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+            </item>
+            <item id="jH67_FUc3NY">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>fresnel</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+            </item>
+            <item id="lkB4Kca9jSe">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>spectrum</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+              <note expanded="yes">
+                <text>
+                  <p>
+                    <run>
+                      <lit>This class of texture is used for light-emitting materials</lit>
+                    </run>
+                  </p>
+                </text>
+              </note>
+            </item>
+          </children>
+        </item>
+        <item id="mBvSli3S_Gi" expanded="yes">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>Texture type</lit>
+                </run>
+              </p>
+            </text>
+            <null/>
+            <null/>
+          </values>
+          <children>
+            <item id="dlp156ybT3Q" expanded="yes">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>2D textures</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+              <children>
+                <item id="bRxqRv11cWU" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Common properties</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="o2cuD2ITufp">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Data format</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Color</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <enum idref="oI669jQ8bs4">String</enum>
+                      </values>
+                      <note>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>This should be called the texture &quot;class&quot;</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                      <children>
+                        <item id="mq3je3X8kP5">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Color</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Default format</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                        </item>
+                        <item id="kvKZaI-iypM">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Float</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Should we call this the &quot;strength&quot;? Or &quot;power&quot;?</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                        </item>
+                        <item id="nGQcLU7h7VO">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Fresnel</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>What parameters? Is there a way to make it more user friendly?</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="dddFithf-jA">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Tiling</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <enum idref="ocPflu0XXvT">Float</enum>
+                      </values>
+                      <note>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Float format so that it can be fractional</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                      <children>
+                        <item id="ioFVzn_rFRJ">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>U</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>1.0</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="bdeNMursPJQ">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>V</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>1.0</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="ouAH9vUQ19z">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Offset</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <enum idref="ocPflu0XXvT">Float</enum>
+                      </values>
+                      <note>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Same of the tiling.</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                      <children>
+                        <item id="f5g5QJ3tNrM">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>U</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>1.0</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="f5oxcqaFKxM">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>V</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>1.0</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="ewkhnX02zhE">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Mapping type</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>UV</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <enum idref="oI669jQ8bs4">String</enum>
+                      </values>
+                      <note>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Coming parameter for all textures. It can be one of:</lit>
+                            </run>
+                          </p>
+                          <p>
+                            <run/>
+                          </p>
+                          <p>
+                            <run>
+                              <lit>- UV (default)</lit>
+                            </run>
+                          </p>
+                          <p>
+                            <run>
+                              <lit>- Planar</lit>
+                            </run>
+                          </p>
+                          <p>
+                            <run>
+                              <lit>- Cylindrical</lit>
+                            </run>
+                          </p>
+                          <p>
+                            <run>
+                              <lit>- Spherical</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                      <children>
+                        <item id="p-r7sSjV2af">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>UV</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="f_bSGUsSVMx">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Cylindrical</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="kxPVsebDJHP">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Spherical</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="hK85wJluULj">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Planar</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                  </children>
+                </item>
+              </children>
+            </item>
+            <item id="comgJoQ6Sxw" expanded="yes">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Subclasses</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+                <null/>
+              </values>
+              <children>
+                <item id="eLaxnx6Fizv">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Band</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                    <enum idref="ogo6lRtp2If">Float texture</enum>
+                  </values>
+                  <note>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Visually this one is represented by a gradient with multiple sliders. The point where each slider is is represented by the &quot;offset&quot; parameter. Will need custom widget to be represented on screen.</lit>
+                        </run>
+                      </p>
+                      <p>
+                        <run>
+                          <lit>See </lit>
+                        </run>
+                        <run>
+                          <lit><cell href="http://www.luxrender.net/forum/viewtopic.php?f=10&amp;t=5044" name="www.luxrender.net—viewtopic.php" expanded="yes" type="link"/></lit>
+                        </run>
+                      </p>
+                      <p>
+                        <run>
+                          <style>
+                            <value key="font-fill">
+                              <color w="0"/>
+                            </value>
+                          </style>
+                          <lit><cell refid="att0" name="gradient_editor" expanded="yes" type="image" width="434" height="75"/></lit>
+                        </run>
+                      </p>
+                    </text>
+                  </note>
+                  <children>
+                    <item id="jcrri2vH_WK">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>amount</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="gx-0PorSICi">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>offsets: </lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <enum idref="ocPflu0XXvT">Float</enum>
+                      </values>
+                      <note expanded="yes">
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Must be in ascending order (0.0 - 1.0)</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                    </item>
+                    <item id="nOou0ZHnvWV">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>textures: arrays of colors or textures</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <enum idref="dWAo0eLSEhQ">Array of Textures</enum>
+                      </values>
+                      <note expanded="yes">
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Can be also and array of color</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                    </item>
+                  </children>
+                </item>
+                <item id="iofF1PEn-Ru" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Image map</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="moJCKFX8O0C">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Filename</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <enum idref="oI669jQ8bs4">String</enum>
+                      </values>
+                    </item>
+                    <item id="cyEIra-Md3g">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Gamma</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>2.2</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <enum idref="ocPflu0XXvT">Float</enum>
+                      </values>
+                    </item>
+                    <item id="bJvqkNQNswv">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Gain</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>1.0</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <enum idref="ocPflu0XXvT">Float</enum>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="pI7ePnkMDVe" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Procedural</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="jYVEHsw3iVK" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>2D</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="cC_STNt9qM3" expanded="yes">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Multimix/Mix</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <children>
+                            <item id="is2AEl9zYjO">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Unify. A mix is just a multimix with two elements</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                        <item id="g6X0ZBd3Pqe">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Dots</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="pxEM37mWcFC" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>3D</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="kdlxljP-cKQ">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Bricks</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <children>
+                            <item id="idZ_bGEO_pz" expanded="yes">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickbond</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                              <children>
+                                <item id="bvrdDCdi_il">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>stacked</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="ozrqslxh15y">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>flemish (default)</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="nZ8uIgPZAG-">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>english</lit>
+                                        </run>
+                                      </p>
+                                      <p/>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="iJIscMVJdzt">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>herringbone</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="beW4s4d9MrV">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>basket</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="bzarkdmEE57">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>chain link</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                              </children>
+                            </item>
+                            <item id="g4EeFB23Nn5">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickwidth: 0.3</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="nWXthSbLqMG">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickheight: 0.1</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="e_G7KaHwSin">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickdepth: 0.15</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="d5bFqRgbUZM">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>mortarsize: 0.01</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="hb0r7voxjPj">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickbevel: 0</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="odPS6pLvYZ2">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickrun: 0.75</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="inRDmwlVHqw">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>bricktex</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="lkVMv3vymtx">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>brickmodtex</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                              <note>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Brick modulation texture</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                              </note>
+                            </item>
+                            <item id="enu9mRrAFge">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>mortartex: </lit>
+                                    </run>
+                                  </p>
+                                  <p>
+                                    <run>
+                                      <lit>0.296,0.296,0.296</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                        <item id="ggmnBfxGcAv">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Clouds</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Internal name: blender_clouds</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                          <children>
+                            <item id="cYrb0IuPewS">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>type: string, one of &quot;default&quot;/&quot;color&quot;. Set it to &quot;default&quot;</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="hahpAAnhGo7">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>noisetype: string. One of &quot;soft_noise&quot;/&quot;hard_noise&quot;</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="br0teASHgz3" expanded="yes">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>noisebasis: string</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                              <children>
+                                <item id="kO9kswoLTAk">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>blender_original</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="gjI0Ggcyyyd">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>original_perlin</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="iaO4WGaANfP">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>improved_perlin</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="olw9ZV3BVxn">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_f1</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="k98DWyfT_e_">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_f2</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="eZAALqIVzV1">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_f3</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="l73_A4esDA5">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_f4</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="nvCz7NKwkQw">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_f2f1</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="oQ0wUGNK3o-">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>voronoi_crackle</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="cn3QLwhRWtW">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>cell_noise</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="cd4nOU6dgUE">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Call it &quot;noise generator&quot;</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                              </children>
+                            </item>
+                            <item id="jirgrjdWdf3">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>noisesize: float</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="nII2ZkrddH8">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>noisedepth: integer</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="mN7svpsDOrP">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>bright: float (default: 1.0)</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="ewzV94L4BAy">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>contrast: float (default 1.0)</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                        <item id="oKUJ92bPOKp">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Marble</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note expanded="yes">
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Internally called &quot;blender_marble&quot; We don&apos;t use Lux&apos;s own marble texture, it&apos;s limited.</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                          <children>
+                            <item id="dh3N-JxdGzw" expanded="yes">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>type</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                              <note>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Rename this parameter &quot;pattern&quot;</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                              </note>
+                              <children>
+                                <item id="h4QkJLs1i_8">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>soft</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="g8JOUy9OdPd">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>sharp</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="eDE87Omt4q8">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>sharper</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                    <null/>
+                                  </values>
+                                </item>
+                              </children>
+                            </item>
+                            <item id="c-URnLYUXpY">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>noisebasis</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                        <item id="ckrII8dcRP8">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Checkers</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <note expanded="yes">
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Only if time permits</lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                        </item>
+                        <item id="m3738KR90Dp" expanded="yes">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>FBm</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                          <children>
+                            <item id="fh8rg8UU46D">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>This texture is...</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                        <item id="lFXnHy_niM7">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Windy</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="o2PTId7URQG">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Wrinkled</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                  </children>
+                </item>
+              </children>
+            </item>
+          </children>
+        </item>
+      </children>
+    </item>
+  </root>
+</outline>

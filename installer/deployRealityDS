@@ -1,0 +1,94 @@
+#!/bin/sh
+
+#
+# Script to patch the reality_3 library to load Qt from the frameworks installed with Studio
+#
+
+TARGET_APP=$1
+R3LIB=Reality_3.dylib
+QT_DIR=/usr/local/Trolltech/Qt-4.8.4
+
+mkdir "${TARGET_APP}/Contents/Frameworks"
+mkdir "${TARGET_APP}/Contents/plugins"
+
+echo "Copying the Qt framworks into the application"
+# WARNING: this program not only copies and adapts the frameworks to work 
+# with the application. It also changes the paths of the embedded Qt libraries
+# inside the Reality_3.dylib. They are modified with a "@executable_path" path
+/usr/local/Trolltech/Qt-4.8.4/bin/macdeployqt ${TARGET_APP}
+
+pushd Reality.app/Contents/MacOS > /dev/null
+
+echo "Removing useless plugins"
+rm -rf ../plugins/accessible
+rm -rf ../plugins/bearer
+rm -rf ../plugins/codecs
+rm -rf ../plugins/designer
+rm -rf ../plugins/graphicssystems
+
+echo "Patching the application"
+# Add the rpath paths needed. We need to point to the same directory of the executable to
+# load Reality_3.dylib and then we need to point to the included version of the Qt frameworks
+install_name_tool -add_rpath "@loader_path/../Frameworks" Reality
+
+# Change the install path for the Qt libraries included in the Reality executable
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtCore.framework/Versions/4/QtCore"       "@rpath/QtCore.framework/Versions/4/QtCore" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtGui.framework/Versions/4/QtGui"         "@rpath/QtGui.framework/Versions/4/QtGui" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtWebKit.framework/Versions/4/QtWebKit"   "@rpath/QtWebKit.framework/Versions/4/QtWebKit" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/QtNetwork.framework/Versions/4/QtNetwork" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtXmlPatterns.framework/Versions/4/QtXmlPatterns" "@rpath/QtXmlPatterns.framework/Versions/4/QtXmlPatterns" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtXml.framework/Versions/4/QtXml" "@rpath/QtXml.framework/Versions/4/QtXml" Reality
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtSql.framework/Versions/4/QtSql" "@rpath/QtSql.framework/Versions/4/QtSql" Reality
+
+echo "Patching the library"
+otool -L ${R3LIB}
+# Add the Relative path mechanism to the library
+install_name_tool -add_rpath "@loader_path/../Frameworks" ${R3LIB}
+
+# Change the install path for the Qt library included by the Reality library
+install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore"       "@rpath/QtCore.framework/Versions/4/QtCore" ${R3LIB}
+install_name_tool -change "@executable_path/../Frameworks/QtGui.framework/Versions/4/QtGui"         "@rpath/QtGui.framework/Versions/4/QtGui" ${R3LIB}
+install_name_tool -change "@executable_path/../Frameworks/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/QtNetwork.framework/Versions/4/QtNetwork" ${R3LIB}
+otool -L ${R3LIB}
+
+echo "Patching the Qt Frameworks"
+cd ../Frameworks
+# We need to patch also the Qt libraries
+
+# QtCore
+install_name_tool -id "@rpath/QtCore.framework/Versions/4/QtCore" QtCore.framework/Versions/4/QtCore
+
+# QtGui
+install_name_tool -id "@rpath/QtGui.framework/Versions/4/QtGui" QtGui.framework/Versions/4/QtGui
+# install_name_tool -add_rpath "@loader_path/." QtGui.framework/Versions/4/QtGui
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtGui.framework/Versions/4/QtGui 
+
+# QtWebKit
+install_name_tool -id  "@rpath/QtWebKit.framework/Versions/4/QtWebKit" QtWebKit.framework/Versions/4/QtWebKit
+# install_name_tool -add_rpath "@loader_path/." QtWebKit.framework/Versions/4/QtWebKit
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtWebKit.framework/Versions/4/QtWebKit 
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtGui.framework/Versions/4/QtGui" "@rpath/QtGui.framework/Versions/4/QtGui" QtWebKit.framework/Versions/4/QtWebKit 
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/QtNetwork.framework/Versions/4/QtNetwork" QtWebKit.framework/Versions/4/QtWebKit 
+
+# QtXmlPatterns
+install_name_tool -id "@rpath/QtXmlPatterns.framework/Versions/4/QtXmlPatterns" QtXmlPatterns.framework/Versions/4/QtXmlPatterns
+# install_name_tool -add_rpath "@rpath/." QtXmlPatterns.framework/Versions/4/QtXmlPatterns
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/Frameworks/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/QtNetwork.framework/Versions/4/QtNetwork" QtXmlPatterns.framework/Versions/4/QtXmlPatterns 
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtXmlPatterns.framework/Versions/4/QtXmlPatterns 
+
+# QtNetwork
+install_name_tool -id "@rpath/QtNetwork.framework/Versions/4/QtNetwork" QtNetwork.framework/Versions/4/QtNetwork
+# install_name_tool -add_rpath "@rpath/." QtNetwork.framework/Versions/4/QtNetwork
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtNetwork.framework/Versions/4/QtNetwork 
+
+#QtSQL
+install_name_tool -id "@rpath/QtSql.framework/Versions/4/QtSql" QtSql.framework/Versions/4/QtSql
+# install_name_tool -add_rpath "@rpath/." QtSql.framework/Versions/4/QtSql
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtSql.framework/Versions/4/QtSql 
+
+# QtXml
+install_name_tool -id "@rpath/QtXml.framework/Versions/4/QtXml" QtXml.framework/Versions/4/QtXml
+# install_name_tool -add_rpath "@rpath/." QtXml.framework/Versions/4/QtXml
+install_name_tool -change "/usr/local/Trolltech/Qt-4.8.4/lib/Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/QtCore.framework/Versions/4/QtCore" QtXml.framework/Versions/4/QtXml 
+
+popd > /dev/null

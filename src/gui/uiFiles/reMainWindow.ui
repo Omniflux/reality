@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Reality Engine</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave_Scene"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionPasteWithTextures"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAutomatic_Presets"/>
+    <addaction name="actionRUG"/>
+    <addaction name="actionVideos"/>
+    <addaction name="actionWatermark"/>
+    <addaction name="actionReality_forums"/>
+    <addaction name="actionReality_Freebies"/>
+    <addaction name="separator"/>
+    <addaction name="actionUnregister"/>
+    <addaction name="actionLicense"/>
+    <addaction name="actionContact_Support"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuMaterials">
+    <property name="title">
+     <string>Materials</string>
+    </property>
+    <widget class="QMenu" name="menuConvert_to">
+     <property name="title">
+      <string>Convert to ...</string>
+     </property>
+    </widget>
+    <addaction name="menuConvert_to"/>
+   </widget>
+   <widget class="QMenu" name="menuACSEL">
+    <property name="title">
+     <string>Presets</string>
+    </property>
+    <addaction name="actionACSEL_applyCompatibleShaderSet"/>
+    <addaction name="actionACSEL_manager"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuMaterials"/>
+   <addaction name="menuACSEL"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionSave_Scene">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Save Scene</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionMatte">
+   <property name="text">
+    <string>Matte</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Matte</string>
+   </property>
+  </action>
+  <action name="actionGlossy">
+   <property name="text">
+    <string>Glossy</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Glossy</string>
+   </property>
+  </action>
+  <action name="actionMetal">
+   <property name="text">
+    <string>Metal</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Metal</string>
+   </property>
+  </action>
+  <action name="actionGlass">
+   <property name="text">
+    <string>Glass</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Glass</string>
+   </property>
+  </action>
+  <action name="actionVelvet">
+   <property name="text">
+    <string>Velvet</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Velvet</string>
+   </property>
+  </action>
+  <action name="actionWater">
+   <property name="text">
+    <string>Water</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Water</string>
+   </property>
+  </action>
+  <action name="actionNull">
+   <property name="text">
+    <string>Null</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Null</string>
+   </property>
+  </action>
+  <action name="actionLight">
+   <property name="text">
+    <string>Light</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Light</string>
+   </property>
+  </action>
+  <action name="actionSkin">
+   <property name="text">
+    <string>Skin</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Skin</string>
+   </property>
+  </action>
+  <action name="actionMirror">
+   <property name="text">
+    <string>Mirror</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Mirror</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About Reality</string>
+   </property>
+   <property name="iconText">
+    <string>About Reality</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actionRUG">
+   <property name="text">
+    <string>Reality User's Guide</string>
+   </property>
+  </action>
+  <action name="actionUnregister">
+   <property name="text">
+    <string>Unregister Reality</string>
+   </property>
+  </action>
+  <action name="actionPasteWithTextures">
+   <property name="text">
+    <string>Paste with textures</string>
+   </property>
+  </action>
+  <action name="actionCloth">
+   <property name="text">
+    <string>Cloth</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert the current material to Cloth</string>
+   </property>
+  </action>
+  <action name="actionACSEL_manager">
+   <property name="text">
+    <string>Preset Manager</string>
+   </property>
+   <property name="iconText">
+    <string>Preset Manager</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete, Import, export your presets here</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionACSEL_applyCompatibleShaderSet">
+   <property name="text">
+    <string>Apply compatible shaders</string>
+   </property>
+  </action>
+  <action name="actionVideos">
+   <property name="text">
+    <string>Video tutorials</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>Retrieve your license</string>
+   </property>
+  </action>
+  <action name="actionWatermark">
+   <property name="text">
+    <string>Reality watermark</string>
+   </property>
+  </action>
+  <action name="actionReality_forums">
+   <property name="text">
+    <string>Reality forums</string>
+   </property>
+  </action>
+  <action name="actionAutomatic_Presets">
+   <property name="text">
+    <string>Find Automatic Presets</string>
+   </property>
+  </action>
+  <action name="actionContact_Support">
+   <property name="text">
+    <string>Contact Support</string>
+   </property>
+  </action>
+  <action name="actionReality_Freebies">
+   <property name="text">
+    <string>Reality Freebies</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 ##Reality material reference\
+\
+Reality provides access to most of LuxRender's materials. Reality materials are designed to provide all the advantages of using LuxRender's physics-based materials but without the complexity generally found when using renderers of this kind. LuxRender materials, and therefore Reality's, are defined by a series of properties and textures. What LuxRender calls "textures" other systems call "nodes." \
+\
+For example, the [PS] material editor uses a wide array of nodes to define its materials. The term node is a bit vague and it refers more to the way information is stored in the computer's memory than to what it represents. LuxRender's use of the word texture is more accurate. A texture is not just an image stretched over a surface. A texture is anything that generates a visual pattern or image. \
+\
+A brick node, common in many 3D apps, generates a brick pattern. We are correct in calling that function a "brick texture" and that is exactly how it's called in LuxRender.\
+\
+Reality allows you edit and create most of LuxRender's textures. Some of those textures will be the result of the conversion process from the original materials. Others can be defined by us from scratch by using the powerful Reality Texture Editor.\
+\
+Each texture is shown in the material editor in a small rectangular area called the "Texture Preview," see figure <!--\\ref\{rug_tet-01.png\}-->. Clicking in the texture preview itself will open the texture in the Texture Editor, where you can change the properties of the texture or even convert it to a whole new type. A complete explanation of how the Reality Texture Editor works is in [Editing Reality textures][RTE]. <!-- \\index\{Texture Editor\} -->\
+\
+Next to the texture preview there is a gear menu where you can select a few of other features. When clicking on the gear button a menu will be shown providing the following options:\
+\
+- Use existing. This option allows you to select an existing texture for the channel that you are editing. This is called "linking to a texture." For example, you can define a texture for the bump map channel and then link to it from the displacement channel. Any modification done to that texture will be reflected in all channels using it.\
+\
+- Edit. This is the same as clicking on the texture preview: it loads the texture in the editor.\
+\
+Now that we know the right terminology to understand the Reality materials, let's see what kind of materials are available and what kind of properties they have. }

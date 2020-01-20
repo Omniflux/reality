@@ -1,0 +1,236 @@
+/**
+ * Reality Tools for DAZ Studio
+ *
+ * Copyright (c) 2011 Pret-a-3D. All rights reserved.
+ *
+ */
+ 
+var presetHelper = new DzPresetHelper();
+
+
+function showMessage(msg) {
+  MessageBox.information(msg,"Information","OK");
+}
+
+/**
+ * Function: importObj
+ *
+ * Uses the Studio built-in importer in silent mode to import a 
+ * WaveFront OBJ into the scene
+ *
+ */
+function importObj(fileName) {
+  var importManager    = App.getImportMgr(); 
+  var objImporter      = importManager.findImporterByClassName( 'DzObjImporter' ); 
+  var importerSettings = new DzFileIOSettings(); 
+  objImporter.getDefaultOptions( importerSettings ); 
+
+  importerSettings.setStringValue( 'Preset', 'DAZ Studio (1 unit = 1cm)' ); 
+  importerSettings.setFloatValue( 'Scale', '1' ); 
+  importerSettings.setBoolValue( 'SwapYZ', false ); 
+  importerSettings.setBoolValue( 'IncludeG', true ); 
+  importerSettings.setBoolValue( 'IncludeVT', true ); 
+  importerSettings.setBoolValue( 'IncludeUsemtl', true ); 
+  importerSettings.setBoolValue( 'IncludeMtllib', false ); 
+  importerSettings.setIntValue( 'RunSilent', 1 ); 
+
+  var importerExtensions = ''; 
+  var numExtensions = objImporter.getNumExtensions(); 
+  for( var i = 0; i < numExtensions; i++ ){ 
+     if ( i > 0 ) { 
+       importerExtensions += ' '; 
+     } 
+     importerExtensions += String( '*.%1' ).arg( objImporter.getExtension( i ) ); 
+  } 
+  objImporter.readFile( fileName, importerSettings );
+}
+
+/**
+ * Function: getScriptPath
+ *
+ * Returns the subdirectory where the script is installed
+ *
+ */
+function getScriptPath() {
+  var scrName = getScriptFileName();
+  var fInfo = new DzFileInfo(scrName);
+  return(fInfo.path());
+}
+
+/**
+ * Function: createGelledLight
+ *
+ * Creates a gel light by creating a spotlight and then adding a child node that is a plane with a given texture
+ *
+ */
+function createGelledLight(baseName, gelTexture, customGel) {
+  if (!customGel) {
+    customGel = null;
+  }
+  var gelRootName = "RealityGel";
+  var gelType     = "obj";  // Default value
+
+  if (customGel) {
+    gelType = new DzFileInfo(customGel.gelPath).extension();
+  }
+
+  switch(gelType) {
+    case "obj":
+    case "daz":
+    case "cr2":
+    case "pz2":
+      break;
+    default:
+      showMessage("The file %1 is not in a supported format for Realgel. Supported formats are: obj, daz, pz2 and cr2. Execution stopped.");
+      return(false);
+  }
+  
+  var sceneHelper = new DzSceneHelper;
+  var gelLight = new DzSpotLight;
+  sceneHelper.setUniqueName( gelLight, baseName);
+  Scene.addNode(gelLight);
+  if (customGel && customGel.coneAngle) {
+    presetHelper.setTargetElement(gelLight);
+    presetHelper.setNumericPropertyWithAttributes( "Spread Angle", true, 0, 180, [ customGel.coneAngle ] );
+  }
+  var gelFound = false;
+  var gelSuffix = 1;
+  var gelName = gelRootName
+  var tmpGel = Scene.findNodeByLabel(gelName);
+  gelFound = (tmpGel != undefined);
+  while(gelFound) {
+    gelName = "%1 %2".arg(gelRootName).arg(gelSuffix);
+    tmpGel = Scene.findNodeByLabel(gelName);
+    gelFound = (tmpGel != undefined);
+    if (gelFound) {
+      gelSuffix++;
+    }
+  }
+
+  // The default transforms for the gel 
+  var objTransforms = {
+    xTran: 0,
+    yTran: 0,
+    zTran: -250,
+    scale: 1.5
+  }
+  var gelImportedName = "RealGelObj";
+  // Get a hold on the Content Manager
+  var contMgr = App.getContentMgr();
+  var baseDir = contMgr.findBaseDirectory(getScriptFileName(),true);
+  
+  var objFileName = "/Runtime/Resources/RealGels/RealGelObj.obj";
+  if (customGel && (gelType == "obj")) {
+    objFileName = customGel["gelPath"];
+    if (customGel.xTran) {
+      objTransforms.xTran = customGel.xTran;
+    };
+    if (customGel.yTran) {
+      objTransforms.yTran = customGel.yTran;
+    };
+    if (customGel.zTran) {
+      objTransforms.zTran = customGel.zTran;
+    };
+    if (customGel.scale) {
+      objTransforms.scale = customGel.scale;
+    };
+    gelImportedName = customGel.name;
+    customGel = null;  // We do this so that the following "if" test works as expected. We have no more use for this guy
+  }
+  
+  var objPath = "%1/%2".arg(baseDir.fullPath).arg(objFileName);
+
+  // Add and parent the default plane if customGel is undefined
+  if (customGel==null) {
+    
+    var fileTester = new DzFileInfo(objPath);
+    if (!fileTester.exists()) {
+      showMessage(
+        "It seems that the file \"%1\" is not found on your computer. That file is necessary for creating the gel light. Execution stopped.".arg(objPath)
+      );
+      return(false);
+    }
+  
+    importObj(objPath);
+    var gel = Scene.findNodeByLabel(gelImportedName);
+    if (!gel) {
+      showMessage(
+        "It seems that the file \"%1\" could not be imported in your Scene. Execution stopped.".arg(objPath)
+      );
+      return(false);
+    }
+    gel.setName(gelName);
+    gel.setLabel(gelName)
+    gelLight.addNodeChild(gel);
+  
+    presetHelper.setTargetElement(gel);
+
+    presetHelper.setTransformProperty( "XTranslate",  [ objTransforms.xTran ] );
+    presetHelper.setTransformProperty( "YTranslate",  [ objTransforms.yTran ] );
+    presetHelper.setTransformProperty( "ZTranslate",  [ objTransforms.zTran ] );
+    presetHelper.setTransformProperty( "Scale",  [ objTransforms.scale ] );
+    
+
+    presetHelper.collectMaterials( gel, false, false, false );
+    var materials = presetHelper.getCollectedMaterials();
+    var materialShapes = presetHelper.getCollectedMaterialShapes();
+    for ( var i = 0; i < materials.length; i++ ) {
+      presetHelper.setTargetElement(materials[i]);
+      presetHelper.setColorProperty( "Diffuse Color",  [ 255, 255, 255 ], gelTexture);
+    }
+
+  }
+  else {
+   /**
+     * We have a custom gel
+     * Expected parameters in the customGel object are:
+     * 
+     *   name: what the figure will be called in Studio
+     *   gelPath: the path in the Runtime for this figure, starting with /Runtime
+     *            One of obj, daz, cr2, OR PZ2
+     *   xTran, yTran, zTran, scale: transforms
+     *   material: the name of the material that will receive the texture for the gel
+     *
+     */
+    var figurePath = contMgr.getAbsolutePath(customGel.gelPath,true);
+    var result = contMgr.openFile(figurePath);
+    if (!result) {
+      showMessage(
+        "It seems that the file \"%1\" is not found on your computer. That file is necessary for creating the gel light. Execution stopped.".arg(figurePath)
+      );
+      return(false);
+    }
+    
+    var gel = Scene.findNodeByLabel(customGel.name);
+    gelLight.addNodeChild(gel);
+
+    presetHelper.setTargetElement(gel);
+
+    presetHelper.setTransformProperty( "XTranslate",  [ customGel.xTran ] );
+    presetHelper.setTransformProperty( "YTranslate",  [ customGel.yTran ] );
+    presetHelper.setTransformProperty( "ZTranslate",  [ customGel.zTran ] );
+    presetHelper.setTransformProperty( "Scale",  [ customGel.scale ] );
+
+    presetHelper.collectMaterials( gel, false, false, true );
+    var materials = presetHelper.getCollectedMaterials();
+
+    for ( var i = 0; i < materials.length; i++ ) {
+      if (materials[i].getLabel() == customGel.matName) {
+        presetHelper.setTargetElement(materials[i]);
+        presetHelper.setColorProperty( "Diffuse Color",  [ 255, 255, 255 ], gelTexture);
+      }
+    }
+    // Now rename the duplicate gel with a number. We check if there are previous instances of this.      
+    var gelNo = 1;
+    var gelFound = true;
+    while(gelFound) {
+      gelName = "%1 %2".arg(customGel.name).arg(gelNo);
+      gelFound = Scene.findNodeByLabel(gelName);
+      if (gelFound) {
+        gelNo++;
+      }
+    }
+    gel.setLabel(gelName);
+  }
+  return(true);
+}

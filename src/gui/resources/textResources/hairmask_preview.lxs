@@ -1,0 +1,92 @@
+# Copyright (c) 2013 Pret-a-3D/Paolo Ciccone. All right reserved.
+
+Renderer "sampler"
+Sampler "sobol"
+Accelerator "qbvh"
+
+SurfaceIntegrator "directlighting" "integer maxdepth" [48]"string lightstrategy" ["auto"]
+
+VolumeIntegrator "none"
+
+PixelFilter "mitchell"
+ "bool supersample" ["true"]
+ "float B" [0.33]
+ "float C" [0.33]
+
+LookAt 0.0 0.0 2.0 0.0 0.0 1.202762 0.0 1.000000 0.0
+
+Camera "perspective"
+  "float fov" [49.134342077604479]
+  "float screenwindow" [-1.0 1.0 -1.0 1.0]
+  "bool autofocus" ["true"]
+  "float shutteropen" [0.0]
+  "float shutterclose" [0.041666666666667]
+
+Film "fleximage"
+  "integer xresolution" [120]
+  "integer yresolution" [120]
+  "float gamma" [2.2]
+  "integer haltspp" [16]
+  "float colorspace_white" [0.314275 0.329411]
+  "float colorspace_red" [0.63 0.34]
+  "float colorspace_green" [0.31 0.595]
+  "float colorspace_blue" [0.155 0.07]
+  "string filename" [""]
+  "bool write_resume_flm" ["false"]
+  "bool restart_resume_flm" ["false"]
+  "bool write_flm_direct" ["false"]
+  "bool write_exr_halftype" ["true"]
+  "bool write_exr_applyimaging" ["true"]
+  "bool write_exr_ZBuf" ["false"]
+  "bool write_exr" ["false"]
+  "bool write_png" ["false"]
+  "bool write_tga" ["false"]
+  "string ldr_clamp_method" ["cut"]
+  "integer tilecount" [0]
+  "string tonemapkernel" ["linear"]
+  "float linear_sensitivity" [80.0]
+  "float linear_exposure" [0.5]
+  "float linear_fstop" [5.6]
+  "integer displayinterval" [300] 
+
+WorldBegin
+
+# The Material.
+%1
+
+AttributeBegin #  "Lamp"
+
+Transform [1.583437681198120 0.0 0.0 0.0 0.0 1.583437681198120 0.0 0.0 0.0 0.0 1.583437681198120 0.0 0.0 0.0 2.672065019607544 1.0]
+
+LightGroup "default"
+
+AreaLightSource "area"
+  "float importance" [1.0]
+  "float power" [100.0]
+  "float efficacy" [17.0]
+  "color L" [0.80000001 0.80000001 0.80000001]
+  "integer nsamples" [1]
+  "float gain" [1.0]
+
+Shape "trianglemesh"
+  "integer indices" [0 1 2 0 2 3]
+  "point P" [-0.5 0.5 0.0 0.5 0.5 0.0 0.5 -0.5 0.0 -0.5 -0.5 0.0]
+  "string name" ["Lamp"]
+
+AttributeEnd
+
+AttributeBegin #  "Plane"
+
+Transform [1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0]
+
+NamedMaterial "%2"
+
+Shape "mesh"
+  "integer triindices" [0 1 2 0 2 3]
+  "point P" [-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0]
+  "normal N" [0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0]
+  "float uv" [0.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0]
+  "bool generatetangents" ["false"]
+AttributeEnd # ""
+
+WorldEnd

@@ -1,0 +1,94 @@
+#
+# Procedural noise preview
+# Copyright (c) 2012 Pret-a-3D/Paolo Ciccone. All rights reserved.
+#
+
+LookAt 0.0 0.0 2.154695 0.0 0.0 1.154695 0.0 1.0 0.0
+
+Renderer "sampler"
+Accelerator "qbvh"
+
+Sampler "sobol"
+#Sampler "lowdiscrepancy" "string pixelsampler" ["hilbert"] "integer #pixelsamples" [2]
+
+SurfaceIntegrator "directlighting"
+  "integer maxdepth" [12]
+  "string lightstrategy" ["auto"]
+
+VolumeIntegrator "none"
+
+PixelFilter "mitchell" "bool supersample" ["true"] "float B" [0.333]	"float C" [0.333] "float xwidth" [1.5] "float ywidth" [1.5]
+
+
+Camera "perspective" "float fov" [49.134342] "float screenwindow" [-1.0 1.0 -1.0 1.0]	"bool autofocus" ["false"]"float shutteropen" [0.0]	"float shutterclose" [1.0]
+
+Film "fleximage"
+	"integer xresolution" [144]
+	"integer yresolution" [144]
+	"float gamma" [2.2]
+	"bool write_png" ["false"]
+	"string write_png_channels" ["RGB"]
+	"bool write_png_16bit" ["false"]
+	"bool write_tga" ["false"]
+	"string ldr_clamp_method" ["cut"]
+	"integer displayinterval" [300]
+	"integer writeinterval" [300]
+	"integer flmwriteinterval" [0]
+	"integer haltspp" [32]
+	"integer tilecount" [0]
+	"string tonemapkernel" ["linear"]
+	"float linear_sensitivity" [100.0]
+	"float linear_exposure" [1.0]
+	"float linear_fstop" [4.0]
+	"float linear_gamma" [2.2]
+
+WorldBegin
+
+# Material
+%1
+
+Texture "Texture_scaled_1" "float" "scale"	"float tex1" [0.50]	"texture tex2" ["Texture"]
+
+Texture "Mix" "color" "mix"
+	"texture amount" ["Texture_scaled_1"]	"color tex1" [0.0 0.0 0.0] "color tex2" [1.0 1.0 1.0]
+
+Texture "Mix_scaled_2" "color" "scale" "color tex1" [1.0 1.0 1.0]	"texture tex2" ["Mix"]
+
+MakeNamedMaterial "Material" "string type" ["matte"] "texture Kd" ["Mix_scaled_2"]	"float sigma" [0.0]	
+MakeNamedMaterial "Lamp" "string type" ["null"]
+
+# Geometry
+AttributeBegin #  "Plane"
+
+Transform [1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0]
+
+NamedMaterial "Material"
+
+Shape "mesh"
+	"integer triindices" [0 1 2 0 2 3]
+	"point P" [-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0]
+	"normal N" [0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0]
+	"float uv" [0.356120 0.475484 0.436184 0.475484 0.436184 0.555548 0.356120 0.555548]
+	"bool generatetangents" ["false"]	"string name" ["Plane"]
+
+AttributeEnd
+
+#  "Lamp"
+AttributeBegin 
+
+Transform [1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 2.429136753082275 1.0]
+LightGroup "default"
+NamedMaterial "Lamp"
+
+AreaLightSource "area"
+	"float importance" [1.0] "float power" [100.0]
+	"float efficacy" [17.0]	"color L" [0.8 0.8 0.8]
+	"integer nsamples" [1]	"float gain" [1.0]
+
+Shape "trianglemesh"
+	"integer indices" [0 1 2 0 2 3]
+	"point P" [-0.5 0.5 0.0 0.5 0.5 0.0 0.5 -0.5 0.0 -0.5 -0.5 0.0]
+	"string name" ["Lamp"]
+
+AttributeEnd 
+WorldEnd

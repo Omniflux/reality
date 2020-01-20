@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>teColorMath</class>
+ <widget class="QWidget" name="teColorMath">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0" colspan="3">
+    <widget class="QFrame" name="frTexture1">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="ReTextureAvatar" name="texture1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="caption">
+         <string>Texture A</string>
+        </property>
+        <property name="ID">
+         <string>tex1</string>
+        </property>
+        <property name="breadcrumb">
+         <string>Texture A</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="ReColorPicker" name="color1"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Function:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="function">
+     <item>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Subtract</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Multiply</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>None</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>78</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QFrame" name="frTexture2">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="margin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="ReTextureAvatar" name="texture2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="caption">
+         <string>Texture B</string>
+        </property>
+        <property name="ID">
+         <string>tex2</string>
+        </property>
+        <property name="breadcrumb">
+         <string>Texture B</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="ReColorPicker" name="color2"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ReColorPicker</class>
+   <extends>QWidget</extends>
+   <header>ReColorPicker.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ReTextureAvatar</class>
+   <extends>QWidget</extends>
+   <header>ReTextureAvatar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

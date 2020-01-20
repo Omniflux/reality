@@ -1,0 +1,181 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5767\pardirnatural
+
+\f0\fs28 \cf0 Reality converts the materials from the host to its own format automatically. While this conversion is done at the best approximation that is possible by a program, there are several situations in which we need to change those materials to fit specific needs.\
+\
+One area of particular interest is the editing of textures. Textures, as explained in the previous section, are patterns that are applied to a surface. Reality converts many [PS] procedural textures to the LuxRender equivalent but there are times when that conversion might need to be adjusted. Or there can be a situation in which we might want to create a new texture from scratch using the Reality Texture Editor.\
+\
+Whether we want to change an existing texture or we need to create a brand new one, the Reality Texture Editor is the tool of choice for that task. The Reality Texture Editor (RTE) has been designed to be simple to use while being able to define advanced textures.\
+\
+The RTE does not use nodes like in some 3D programs. Nodes are very powerful but they are also very hard to understand and use. Instead, the RTE presents each texture inside a panel that is always in the same place on the screen and that provides clear and detailed information about the texture being edited.\
+\
+To learn how the Texture Editor works we will go through a few simple and practical exercise that will show us several ways of creating and modifying textures. It's gonna be fun.\
+\
+Let's start.\
+\
+- Create a new scene\
+- Add the Reality Simple Plane from the Reality Props folder\
+- Call Reality\
+- In the Materials tab select the **RealityPlane** material. The material is defined as having a simple Color texture in the Diffuse channel. See figure <!--\\ref\{rug_tet-01.png\}-->.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:299;h:316]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-01.png\}
+\f0\fs28  "The Simple Plane initial material"\
+\
+In the Diffuse channel area we can see a texture named **RealityPlane.diffuse**, which is of type Color. The Texture is represented by a rectangular area called the Texture Preview. <!-- \\index\{Texture Preview\} --> The type of the texture is shown in the top right of the Texture Preview. To the right of the type there is a disc that shows if the texture data is of type RGB or Numeric. The RGB data is shown as a multicolor disk. With textures of type Numeric the disc shows as a greyscale gradient.\
+\
+- Click on the grey color swatch that says 204:204:204. That is the RGB value of the texture used. \
+- When we click on a Texture Preview the texture is loaded in the Editor, which is in the right side of the Reality window. See figure <!--\\ref\{rug_tet-02.png\}-->.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:250;h:268]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-02.png\}
+\f0\fs28  "Editing a Color texture"\
+\
+Alternatively we can edit a texture by clicking on the Gear Wheel and by selecting **Edit** front he menu.\
+In this case the RTE is prepared to edit the texture of type color that we have clicked on. From the top of the panel we can find:\
+\
+- The name of the channel that holds the texture. In this case it is the Diffuse channel.\
+- The name of the texture: RealityPlane.diffuse.\
+- The type of the texture. In this case it is of type Color, which paints a surface with a solid, uniform color.\
+- The color swatch. Clicking on this field brings up the color picker of the Operating System (OS), which allows us to change the color used by the texture.\
+- The presets selector. Reality provides a series of color presets grouped by category name. By default the Skin category is selected, which shows a series of skin pigmentations. By clicking on any of those squares we can change the colors used for this texture. Other categories include Hair, Wood and Plastic.\
+\
+For this exercise we are not going to change the color, we are going to completely change the texture used for the Diffuse channel. One fundamental principle of Reality is that a texture type can be changed on the fly. If we click on the **Texture type** dropdown list we can see all the kinds of textures available. If we select any of the other types then the Diffuse channel texture, which is of type Color right now, will be changed to another type. Let's select the **Image Map** type. See figure <!--\\ref\{rug_tet-03.png\}-->\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f1\fs24 \cf0 \{$SCRImageLink[w:250;h:268]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-03.png\}
+\f0\fs28  "The Image Map editor"\
+\
+\pard\pardeftab720\ri-5767\pardirnatural
+\cf0 Reality now shows us the editor for the Image Map texture. Please note that the name of the channel, Diffuse, and the name of the texture, RealityPlane.diffuse, have remained the same. An Image Map texture allows us to select an image on disk and use that image to paint the selected surface. An image can be in color or greyscale. The **Texture class** dropdown list controls this value. Let's leave it at **color** to indicate that we want to use the image RGB values.\
+\
+The **Normal map** checkbox can be used to indicate that the image map is a Normal Map. This is only useful when creating textures for the Bump map channel. \
+\
+Continuing our examination of the editor, there is a section of the panel that is empty. That section is labelled **Image Map** and there is where we specify what image we want to use for our texture. \
+\
+- Click on the gear wheel to the right to open a menu.\
+- From the menu click on **Select a new file**. See figure <!--\\ref\{rug_tet-03b.png\}-->\
+- Navigate to where you have an image file in PNG, JPEG or TIFF format. Select that file.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:250;h:299]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-03b.png\}
+\f0\fs28  "Selecting an image map file"\
+\
+I selected the image in figure See figure <!--\\ref\{rug_imagemap-tex.jpg\}-->.\
+\
+\
+
+\f1\fs24 \{$SCRImageLink[w:300;h:300]=/Users/paolo/devel/Reality/documentation/images/RUG_ImageMap-Tex.jpg\}
+\f0\fs28  "Image map for the Texture Combine texture"\
+\
+The preview of that file will appear under the name. Figure <!--\\ref\{rug_tet-04.png\}--> shows the choice that I have made on my computer. This exercise will work best if you use a square image. Generally image maps for texturing use a square format. Below the preview of the image we can see that Reality reports the size of the image. In my case it's 1711 by 1711.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:398;h:277]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-04.png\}
+\f0\fs28  "Image map texture"\
+\
+We can also see that the material preview has been updated automatically to reflect the change. In the figure I have changed the Material Preview to use a plane instead of the default sphere.\
+\
+At this point let's say that we want to give a nice shade of blue to the texture that we have selected. Of course we could edit the image map in Photoshop and mix some color in it but that would require us to create a new image file, change the texture etc. Not much fun and totally unnecessary. Instead let's perform the following steps:\
+\
+- Click on the **Texture Type** drop down menu and select **Texture Combine**. See figure  <!--\\ref\{rug_tet-05.png\}-->.\
+- The Texture Combine texture provides two texture slots, **Texture A** and **Texture B**. Those two textures can be mixed together via addition, subtraction or multiplication. By default **Texture B** is disabled. This is done by setting the **Function** to **None**\
+- The new texture retained the image map that we have selected before. This is an important feature of Reality. Whenever we change texture type the previous data is retained, if possible\
+\
+
+\f1\fs24 \{$SCRImageLink[w:299;h:250]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-05.png\}
+\f0\fs28  "The Texture Combine texture"\
+\
+You can change the function for the texture to be **Multiply** if you want to enable the second texture. Just set it back to **None** before continuing with the tutorial.\
+\
+First, let's notice that both **Texture A** and **Texture B** are more than simple textures. Each slot allows for a texture and a color to be mixed together. By default the color is pure white. The color for each texture is mixed via multiplication. Without getting into the mathematical details, any RGB pixel that is multiplied with pure white remains untouched. Basically, pure white is the color equivalent of the number 1 in math. Any number multiplied by one the same number. The same happens with images and pure white.\
+\
+- For now we can ignore **Texture B**.\
+- Let's make sure that the **Function** dropdown list and select **None**.\
+- Let's click on the color swatch of **Texture A** and select a shade of blue. The result should be immediately visible in the Material Preview. See figure <!--\\ref\{rug_tet-06.png\}-->\
+\
+\
+
+\f1\fs24 \{$SCRImageLink[w:499;h:204]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-06.png\}
+\f0\fs28  "Mixing colors with textures"\
+\
+Try rendering the image at this point. Select a low resolution, for example 800 x 800, to get a quick preview of the result.\
+\
+Now, just for the fun of it, let's convert the Texture Combine texture back to the Image Map type. To do this we click on the **Texture type** dropdown list and select **Image Map**. We can see that Reality not only converted the texture but it was smart enough to retain the image map and preserve our work. This is feature of the Reality Texture Editor. Whenever it's possible to preserve the previous data it will do so.\
+\
+- Let's convert the texture back to *Texture Combine*. This time we set the function to **Multiply** and we add a new texture for the mix. \
+- In the **Texture B** slot click on the gear wheel and select **New Image Map**. Reality will ask you to select an image file.\
+- Select any image that you prefer. I suggest to find one that has only black and white values. In my case I used the the picture in figure <!--\\ref\{rug_tet-mask.png\}-->\
+\
+\
+
+\f1\fs24 \{$SCRImageLink[w:200;h:200]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-Mask.png\}
+\f0\fs28  "Second image used for the Texture Combine texture"\
+\
+Since we selected the multiplication function in the Texture Combine node the result is that every black pixel in figure <!--\\ref\{rug_tet-mask.png\}--> will be black in the resulting texture. Every white pixel in <!--\\ref\{rug_tet-mask.png\}--> will be the original pixel in the texture placed in **Texture A**. \
+\
+This is because, as we mentioned before, pure white is like the "1" of colors and so every color multiplied by pure white remains unaffected. On the other hand, pure black is the zero of colors. Every color multiplied by pure black is black.\
+\
+The result of this texture can be see in the Material preview. If we add a mesh light on top, frame the shot and render it we obtain the result shown in figure <!--\\ref\{rug_tet-07.png\}-->.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:300;h:300]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-07.png\}
+\f0\fs28  "Result of the Texture Combine texture"\
+\
+As with numeric multiplication the order of the textures does not matter.\
+\
+##Advanced texture editing\
+\
+Now that we understand how the RTE works, it's time to look at some more advanced ways of creating textures. In the previous example we used a pre-made image map to overlay a mask, also known as a "matte," to a portrait. But what if we want to use one of the procedural textures to create some sort of effect? Would it be possible, for example, to overlay a noise map on the image? The answer is yes and the following tutorial shows how it can be done:\
+\
+- Let's go back to the RealityPlane material and click on the Diffuse texture.\
+- In the RTE we should have a Texture Combine texture with an Image Map in the **Texture A** slot\
+- Let's click on the *Texture B* slot to change the texture type.\
+- From the the Texture Type dropdown list we select Mix\
+\
+The reason to use Mix is to have access to the procedural textures inside a color texture. All the procedurals, Clouds, Fractal Noise, Wood and others, generate numeric textures. \
+\
+A numeric texture is a texture that has values that go from 0.0 to 1.0 instead of RGB values. So, how can we use the numeric values to generate colors? That's where the Mix texture comes in handy. The Mix texture provides two slots which can themselves be any of the LuxRender textures. If we use the Color texture for each slot we can then have a Mix texture that mixes between two colors. Let's say that the first color is black and the second color is white. \
+\
+Now we have a Mix texture that can mix between black and white. What we need at this point is to determine is how the mixing is done. The Mix texture accepts a third texture that is a numeric texture that can specify, for each pixel in the mix, which slot should be used. A value of zero (0.0) selects the texture in the first slot of the mix. A value of one (1.0) selects the texture in the second slot. An intermediate value mixes the two textures proportionally. For example, a value of 0.1 will have 10% of the second texture and 90% of the first one.\
+\
+Let's see it in action:\
+\
+- In the Texture A of the Mix texture make sure that we have a Color texture and that it's set to pure black.\
+- In the Texture B of the Mix texture make sure that we have a Color texture and that it's set to pure white.\
+- See figure <!--\\ref\{rug_tet-10.png\}--> for verification.\
+- Click on the Gear Wheel of the Mixer texture and select **New | Clouds**. Clouds is a numeric texture that generates a noise pattern with values that go from 0.0 to 1.0.\
+- Edit the Clouds texture by clicking on its texture preview.\
+- Set the Cloud texture to use the following parameters:\
+\pard\tx668\tx668\pardeftab720\ri-5767\pardirnatural
+\cf0 	- Noise pattern: Crackle\
+	- Hard\
+	- Noise size: 0.3\
+	- Noise depth: 0\
+	- Brightness: 1.2\
+	- Contrast: 1.4\
+	- Scale: 10%\
+- Check figure <!--\\ref\{rug_tet-08.png\}--> to verify the parameters.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f1\fs24 \cf0 \{$SCRImageLink[w:250;h:296]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-10.png\}
+\f0\fs28  "Configuration of the Mixer texture"\
+\
+
+\f1\fs24 \{$SCRImageLink[w:249;h:374]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-08.png\}
+\f0\fs28  "Cloud texture parameters"\
+\
+\pard\pardeftab720\ri-5767\pardirnatural
+\cf0 The procedural Clouds texture gives us a nice cracked surface. Now this texture becomes the selector of black and white from the Mix texture. The Mix texture, in turn, is the second texture of the texture used for the Diffuse channel. The result can be seen in figure <!--\\ref\{rug_tet-09.png\}-->.\
+\
+
+\f1\fs24 \{$SCRImageLink[w:300;h:300]=/Users/paolo/devel/Reality/documentation/images/RUG_TET-09.png\}
+\f0\fs28  "Mixing an image map with a procedure texture"\
+\
+This shows how powerful the Reality Texture Editor is. With the RTE we get the same expressive flexibility of a node system but with a simpler approach. The ability to switch to a different texture type, while retaining key data, makes it also a very productive system.}

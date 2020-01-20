@@ -1,0 +1,115 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+   <file>images/colorPickerIcon.png</file>
+   <file>images/down_arrow.png</file>
+   <file>images/down_arrow_disabled.png</file>
+   <file>images/downArrowButton.png</file>
+   <file>images/frame.png</file>
+   <file>images/gearIcon.png</file>
+   <file>images/iblMapAngular.png</file>
+   <file>images/iblMapLatlong.png</file>
+   <file>images/iblMapVcross.png</file>
+   <file>images/leftArrow.png</file>
+   <file>images/magnifier.png</file>
+   <file>images/matPreviewBlank.png</file>
+   <file>images/matPreviewSnapshot.png</file>
+   <file>images/R-flat-logo-menu.png</file>
+   <file>images/R-flat-logo.png</file>
+   <file>images/RealityLogo.png</file>
+   <file>images/RealityLogo_small.png</file>
+   <file>images/rightArrow.png</file>
+   <file>images/spindown_hover.png</file>
+   <file>images/spindown_off.png</file>
+   <file>images/spindown_pressed.png</file>
+   <file>images/spinup.png</file>
+   <file>images/spinup_hover.png</file>
+   <file>images/spinup_off.png</file>
+   <file>images/spinup_pressed.png</file>
+   <file>images/texture-clr.png</file>
+   <file>images/texture-gs.png</file>
+   <file>images/up_arrow.png</file>
+   <file>images/up_arrow_disabled.png</file>
+   <file>images/UniShaderRendering.png</file>
+   <file>images/eye-open.png</file>
+   <file>images/eye-closed.png</file>
+
+   <file>images/noise_blender_original.png</file>
+   <file>images/noise_cell.png</file>
+   <file>images/noise_improved_perlin.png</file>
+   <file>images/noise_original_perlin.png</file>
+   <file>images/noise_voronoi_crackle.png</file>
+   <file>images/noise_voronoi_f1.png</file>
+   <file>images/noise_voronoi_f2-f1.png</file>
+   <file>images/noise_voronoi_f2.png</file>
+   <file>images/noise_voronoi_f3.png</file>
+   <file>images/noise_voronoi_f4.png</file>
+
+   <file>images/cameraIcon.png</file>
+   <file>images/materialIcon.png</file>
+   <file>images/lightIcon.png</file>
+   <file>images/advancedIcon.png</file>
+   <file>images/imageIcon.png</file>
+   <file>images/volumeIcon.png</file>
+   <file>images/staticImageIcon.png</file>
+   <file>images/animationIcon.png</file>
+   <file>images/swapIcon.png</file>
+   <file>images/btnPlane.png</file>
+   <file>images/btnCube.png</file>
+   <file>images/btnSphere.png</file>
+   <file>images/btnShape.png</file>
+
+   <file>textResources/about.html</file>
+   <file>textResources/watermark.html</file>
+   <file>textResources/ProceduralNoisePreviewer.lxs</file>
+   <file>textResources/eye_preview.lxs</file>
+   <file>textResources/eye_dawn_preview.lxs</file>
+   <file>textResources/eyeball_preview.lxs</file>
+   <file>textResources/eyeball_dawn_preview.lxs</file>
+   <file>textResources/head_preview.lxs</file>
+   <file>textResources/head_dawn_preview.lxs</file>
+   <file>textResources/head_gen2_preview.lxs</file>
+   <file>textResources/head_m4_preview.lxs</file>
+   <file>textResources/torso_v4_preview.lxs</file>
+   <file>textResources/lips_preview.lxs</file>
+   <file>textResources/plane_preview.lxs</file>
+   <file>textResources/sphere_preview.lxs</file>
+   <file>textResources/cube_preview.lxs</file>
+   <file>textResources/hairmask_preview.lxs</file>
+   <file>textResources/colorPresets.json</file>
+   <file>textResources/iorPresets.json</file>
+   <file>textResources/LightPresets.json</file>
+   <file>textResources/frf.json</file>
+   <file>textResources/Reality.css</file>
+   <file>textResources/previewShapes.json</file>
+   <file>images/spinBoxUp.png</file>
+   <file>images/spinBoxDown.png</file>
+
+   <file>images/checkmark.png</file>
+   <file>images/eyeIcon.png</file>
+   <file>images/padlock_closed.png</file>
+   <file>images/padlock_open.png</file>
+
+   <file>images/ripple_1.png</file>
+   <file>images/ripple_2.png</file>
+   <file>images/ripple_3.png</file>
+   <file>images/ripple_4.png</file>
+   <file>images/ripple_5.png</file>
+   <file>images/ripple_6.png</file>
+
+   <file>images/WarpWeft.png</file>
+   <file>images/MadeWithReality.png</file>
+
+   <file>metals/Ag.nk</file>
+   <file>metals/Al.nk</file>
+   <file>metals/Au.nk</file>
+   <file>metals/Co_2.nk</file>
+   <file>metals/Cr.nk</file>
+   <file>metals/Cu.nk</file>
+   <file>metals/Hgcdte0.nk</file>
+   <file>metals/Ni.nk</file>
+   <file>metals/Pbs.nk</file>
+   <file>metals/Pt.nk</file>
+   <file>metals/Ti.nk</file>
+   <file>metals/Zncdte0.nk</file>
+</qresource>
+</RCC>

@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\ri-5739\pardirnatural
+
+\f0\fs24 \cf0 Automatic Presets load automatically when an object is added to the scene. This includes figures and props. There is nothing special to do to get these presets to work, Reality will automatically load them if there is a match. While other programs require you to remember and find where the presets might be, with Reality there is no need to do so. The presets are simply applied by Reality.\
+\
+If there are no presets for a specific object, you can create a new preset and save it. From that moment on Reality will use that preset automatically whenever you add that object to the scene.\
+\
+Automatic presets work between the [PS] and [DS] editions of Reality. This means, for example, that if you create a preset for a certain skin of Victoria 4, and you used the [PS] edition of Reality, if you switch to [DS] and load the same skin, the preset will load automatically in the [DS] edition of Reality.\
+\
+This is the first time, in the history of [PS] and [DS], that the exact same materials are applied for both programs, leading to the exact same result.\
+\
+##Automatic Presets in action\
+\
+Let's see how an automatic preset works. \
+\
+- Let's add Victoria 4 to the scene.\
+- Call Reality.\
+- Click on the Materials tab and click on the **Expand All** button.\
+- In the Preset column you should see the words *V4 basic skin* for materials like 1)SkinFace, 2_SkinTorso. Some other materials have an asterisk in the Preset column.\
+- Both the "\\*" and the *V4 basic skin* values indicate an automatic preset.\
+\
+\pard\pardeftab720\ri-5739\pardirnatural
+
+\f1 \cf0 \{$SCRImageLink[w:300;h:306]=/Users/paolo/devel/Reality/documentation/images/UI/Reality-V4-presets.png\}
+\f0  "V4 automatic presets in action"\
+\
+Let's focus on the **V4 basic skin**. This is called a *specific preset* because it applies to a specific configuration of textures for an object. The shader is applied because the skin definition for the model, V4, has been found in the presets database. As you can see, we didn't have to do anything to load the preset. \
+\
+Let's click on the **1_SkinFace** material. Without the preset this material would be of type *Glossy*. The preset changed that to use the material type *Skin*.  The preset also changed the specular color, the values for Glossiness, Fresnel amount, and the gain for the hair mask.\
+\
+Other V4 presets shipped with Reality include:\
+\
+- Rio, Lyon and Dublin, by Danae\
+- Charlie-Neve, by Callad and Moonbunnie\
+- Lucrezia, by Syyd Raven\
+- Lana Elite, by DAZ\
+- Jannika, by Fabiana\
+- Columbia, by Vikthoria\
+\
+If you apply one of those skins to V4, the corresponding preset will be loaded automatically. To see the list of all the preset available use the **Presets | Preset Manager** menu. Reality ships with 349 presets and more will be added in the future. \
+\
+###How presets are matched\
+In order work automatically a preset is bound to an object. In other words, if a preset if made for a certain skin for Victoria 4, it will only work with Victoria 4. If you apply the same skin to a Genesis figure, the preset will not be applied unless there is a version of the same preset made for the Genesis figure.\
+\
+So the first level of automatism involves the specific object. \
+\
+Once Reality has found the object it then looks which preset, among all the ones available, match the material configuration from the host. The match is done by looking at the textures included in two channels: Diffuse and Alpha. \
+\
+Please note that the match is done on the texture, not just the image map for a channel. So, if the texture used for the Diffuse channel is a complex one, including mixing textures, color math and other elements, then Reality will try to match that combination. A solid color is also a texture so specific presets can be created for objects that has materials in the host that load different colors in the diffuse channel.\
+\
+###Generic presets\
+The "\\*" that we see in the **Preset** column for some materials indicate a *generic* preset. A generic preset is applied to the material whenever a specific preset is not found. This is  way of creating a series of default values to use. For example, if we apply a skin to Victoria 4 and there is no specific preset, then the generic presets will be applied. \
+\
+In the case of V4 the generic preset changes all the skin materials to use the type Skin and is applies certain values that are considered a generic, hence the name, starting point for rendering a good skin. \
+\
+**IMPORTANT**\
+\
+In general, you will not need to create a generic preset, unless you are a creator of content for [PS] or [DS] and the product that you are creating is going to have multiple texture sets. So, for the vast majority of cases, you will be creating specific presets, ones that have the **This is  a generic preset** checkbox **unchecked**.\
+\
+####Generic presets and textures\
+A generic preset cannot override a texture except for applying a color to a channel. For example, the cornea of the eye should generally be converted to architectural glass and use pure white for the transmission channel. Every now and then, a skin loads an image map in the diffuse channel of the cornea, in the host's material. That causes the same texture to be used for the transmission channel in Reality, with the result that the cornea renders very dark. By setting the transmission channel with a pure white color we can resolve that issue for all skins.\
+\
+To create generic preset simply enable the **This is a generic preset** checkbox.\
+When you set a preset as generic for the first time you will get a message window explaining the function of a generic preset and the request to confirm that you want to continue in that way.\
+\
+When you need to add a material to an **existing** generic preset you enable the **This is a generic preset** and Reality will automatically retrieve the name and description of the generic preset for the selected object. From there you just click on the **OK** button.\
+\
+###Creating your own presets\
+\
+Let's see how easy is to create our own presets. For this tutorial I'll use the *Claw Mirror* free prop that can be found at {\field{\*\fldinst{HYPERLINK "http://www.vanishingpoint.biz/freeitemdetail.asp?FreeItemID=493"}}{\fldrslt http://www.vanishingpoint.biz/freeitemdetail.asp?FreeItemID=493}}\
+\
+Install the prop in [PS] or [DS] and load it in your scene. Looking at the Reality materials we see that they are all of type Glossy, as expected. We want the frame to be gold and the mirror surface to be, obviously, mirror. By creating an Automatic Preset we need to change those materials only once.\
+\
+- In Reality, select the Frame material\
+- Right-click on it and select **To Metal** from the menu\
+- In the **Metal preset** list select **Gold**\
+- Type 9200 in the **Horizontal polish**\
+- You should have the configuration shown in figure <!--\\ref\{acsel-tut-01.png\}-->\
+\
+\
+
+\f1 \{$SCRImageLink[w:299;h:214]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-01.png\}
+\f0  "Frame converted to gold"\
+\
+- Now let's right-click on the material called Mirror\
+- Select **To Mirror** from the menu\
+- The mirror tint is set to black because the material for the prop was set I'n that way. This will not work, we need a reflective mirror, not a black one.\
+- Click on the Mirror tin texture. That will open the Texture Editor.\
+- In the Texture Editor click on the color and set it to pure white.\
+- Figure <!--\\ref\{acsel-tut-02.png\}--> shows how the material should appear.\
+\
+
+\f1 \{$SCRImageLink[w:349;h:149]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-02.png\}
+\f0 \
+\
+- Add a figure and pose it facing the mirror\
+- Add a Top Mesh Light\
+- In Reality click on **Render Frame** in the Render tab\
+- Verify that the mirror works as expected\
+\
+At this point we want to make these changes permanent so that, if we re-use the mirror in another scene, we don't have to repeat the above steps.\
+\
+- Select the Frame material.\
+- Press Cmd (on a Mac) or Ctrl (on Windows) and then click on the Mirror material. In this way you should have both the Frame and Mirror materials selected.\
+- Right-click on one of the select materials; it doesn't matter which one. \
+- From the menu select **Save as an Automatic preset**. See figure <!--\\ref\{acsel-tut-03.png\}-->\
+- The window in figure <!--\\ref\{acsel-tut-04.png\}--> will appear.\
+- Let's write the name of the preset as *Claw mirror*.\
+- In the description we can write anything that we want.\
+- Enter whatever name you want to use to credit yourself as the author of this preset. Reality will remember the name and will show it again the next time that you use this feature.\
+- Click on the OK button and the preset is saved.\
+- Remove the mirror from the scene.\
+- Re-add the mirror to the scene and verify that the preset has been loaded automatically. Verify that the materials have been modified as expected.\
+\
+
+\f1 \{$SCRImageLink[w:299;h:171]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-03.png\}
+\f0  "Menu option used to save a preset"\
+\
+
+\f1 \{$SCRImageLink[w:300;h:148]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-04.png\}
+\f0  "The window used to save a preset"\
+\
+When an automatic preset is applied to an object, we can continue changing the materials for that object and add more shaders to that preset. \
+\
+For example, if we click on the **Back** material for the mirror we can see that it's set as Glossy and that the diffuse color is pure black. Nothing in nature is that black and we want to make that material believable in case we have a scene whee the mirror lies face down on the floor.\
+\
+- Let's click on the diffuse texture, go to the texture editor and set the color to 236, 201, 143\
+- Click on the Modifers tab. We see that there is no bump map.\
+- In the **Bump map** texture slot fin the gear menu, click on it and select **New | Fractal noise**. See figure <!--\\ref\{acsel-tut-05.png\}-->\
+- Once we do that the fractal noise texture will be loaded in the texture editor.\
+- Change the values to be:\
+    - Detail level: 8\
+    - Roughness 0.7\
+    - Scale 10%\
+- See figure <!--\\ref\{ACSEL-tut-06.png\}--> for verification\
+- Now we have defined the material for the back of the mirror\
+- Right-click on the Back material, select **Save as an automatic preset**\
+- The window for the preset information shows again but this time the information is already in there. We just need to click on OK to add the Back material to the preset.\
+- Delete the mirror from the scene and add it again.\
+- Verify that the new bump map texture has been added to the Back material automatically.\
+\
+
+\f1 \{$SCRImageLink[w:300;h:196]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-05.png\}
+\f0  "Creating a procedural bump map"\
+\
+
+\f1 \{$SCRImageLink[w:200;h:216]=/Users/paolo/devel/Reality/documentation/images/ACSEL-tut-06.png\}
+\f0  "Bump map for the Claw Mirror"\
+\
+The Automatic Preset help in removing the need to adjust materials for object that are used often in new scenes. Save the preset after you customize the materials for the first time and let Reality apply those settings automatically. You can update or remove your presets at any time.\
+\
+If you find that a saved material needs to be changed simply re-save the preset. Reality will update the definition in its database. \
+\
+\
+\pard\pardeftab720\pardirnatural
+\cf0 <!-- \\index\{Janet|see\{Brad\}\} -->\
+<!-- \\index\{Brad|see\{Dr.Scott\}\} -->\
+<!-- \\index\{Dr.Frankenfurter|see\{Rocky\}\} -->\
+<!-- \\index\{Dr.Scott|see\{Janet\}\} -->\
+<!-- \\index\{Rocky|see\{Dr.Frankenfurter\}\} -->\
+\
+}

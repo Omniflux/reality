@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 \{$SCRImageLink[w:400;h:53]=/Users/paolo/devel/Reality/documentation/images/UI/Renderer-group.png\} "Renderer options"\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\fi360\sl288\slmult1\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+\cf0 In this section we configure where LuxRender is installed. Reality comes with LuxRender pre-installed and there is really nothing to do about it. In this pane you can see the full path where LuxRender is installed, in case you need to start it manually.\
+ \
+**Max threads.** 
+\f1\fs26 \cf2 The threads setting determines how many parallel processes are used by LuxRender to render. It must be no higher of the total number of cores present in your machine. Reality sets it automatically to the highest number available. You can lower that number to give more CPU power to other tasks.\
+\
+**Log detail level.** This option sets how detailed will be the list of messages visible in the Log tab of LuxRender. By default Reality sets LuxRender to only show warnings and errors. We can set this option to show more detailed information. Here is the values that can be used:\
+\
+- Warning only. This is the default value and only shows warning and errors. Information messages about the normal activity of LuxRender are not shown.\
+- Information. This option shows detailed information about the activity of LuxRender, like the loading of textures and the writing of image files to disk. This used to be the default in previous versions of Reality.\
+- Debug information. This option provides the highest level of detail and it's useful when trying to find the source of some bug or other unusual behavior of LuxRender.\
+- Errors only. This option is the least detailed and will show a message only if it's about a critical error. Warning messages will not be shown.\
+}

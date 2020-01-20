@@ -1,0 +1,138 @@
+# Copyright (c) Pret-a-3D/Paolo Ciccone. All right reserved.
+
+LookAt 2.980594 -1.860235 2.784766 2.242725 -1.395572 2.295238 -0.411166 0.265718 0.871973
+
+Camera "perspective"
+  "float fov" [49.134342077604479]
+  "float screenwindow" [-1.0 1.0 -1.0 1.0]
+  "bool autofocus" ["false"]
+  "float shutteropen" [0.0]
+  "float shutterclose" [0.0416]
+
+Film "fleximage" 
+ "integer xresolution" [120]
+ "integer yresolution" [120]
+ "integer displayinterval" [300] 
+# "string tonemapkernel" ["autolinear"] 
+ "string tonemapkernel" ["linear"] "float linear_sensitivity" [100] "float linear_exposure" [0.250] "float linear_fstop" [2.8]
+ "integer haltspp" [20]
+ "integer writeinterval" [200]
+ "bool write_png" ["false"]
+ "string write_png_channels" ["RGB"]
+ "bool write_png_16bit" ["false"]
+ 
+Renderer "sampler"
+
+Sampler "sobol"
+
+Accelerator "qbvh"
+
+SurfaceIntegrator "directlighting"
+  "integer maxdepth" [12]
+  "string lightstrategy" ["auto"]
+
+PixelFilter "mitchell"
+  "bool supersample" ["true"]
+  "float B" [0.33]
+  "float C" [0.33]
+  WorldBegin
+# Light color temperature
+Texture "whitelight" "color" "blackbody" "float temperature" [6500.0]
+
+# Room texture
+Texture "roomTex" "float" "checkerboard"
+  "integer dimension" [2]
+  "float tex1" [1.00]
+  "float tex2" [0.00]
+  "string mapping" ["uv"]
+  "float uscale" [100.0]
+  "float vscale" [-100.0]
+  "float udelta" [0.0]
+  "float vdelta" [1.0]
+# Convert the float checkerboard texture to a color texture
+Texture "CheckerMixer" "color" "mix"
+  "texture amount" ["roomTex"]
+  "color tex1" [0.80000 0.80000 0.80000]
+  "color tex2" [0.06997 0.06997 0.06997]
+
+# Room material
+MakeNamedMaterial "Room" "texture Kd" ["CheckerMixer"] "float sigma" [0.0] "string type" ["matte"]
+MakeNamedMaterial "RealityNull_9999" "string type" ["null"]
+
+# The Material
+%1
+
+AttributeBegin #  "Plane"
+
+Transform [0.664653 -0.339275 -0.665678 0.0 0.454647 0.890671 0.0 0.0 0.592901 -0.302648 0.746238 0.0 1.074989 -0.688699 1.605025 1.0]
+
+NamedMaterial "%2"
+
+Shape "mesh"
+  "integer triindices" [0 1 2 0 2 3]
+  "point P" [-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0]
+  "normal N" [0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0]
+  "float uv" [0.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0]
+  "bool generatetangents" ["false"]
+  "string name" ["Plane"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "Room"
+
+Transform [13.846015 0.0 0.0 0.0 0.0 12.652688 0.0 0.0 0.0 0.0 3.966060 0.0 -8.305013 6.836497 3.967554 1.0]
+
+NamedMaterial "Room"
+
+Shape "mesh"
+  "integer triindices" [0 1 2 0 2 3 4 5 6 4 6 7 8 9 10 8 10 11 12 13 14 12 14 15 16 17 18 16 18 19 20 21 22 20 22 23]
+  "point P" [-1.0 1.0 -1.0 -1.0 -1.0 -1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 -1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 1.0 1.0 -1.0 1.0 1.0 -1.0 -1.0 1.0 1.0 -1.0 -1.0 -1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0 -1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 1.0 1.0 -1.0 1.0 1.0 -1.0 -1.0 1.0]
+  "normal N" [-1.0 0.0 -0.0 -1.0 0.0 -0.0 -1.0 0.0 -0.0 -1.0 0.0 -0.0 0.0 1.0 -0.0 0.0 1.0 -0.0 0.0 1.0 -0.0 0.0 1.0 -0.0 1.0 0.0 -0.0 1.0 0.0 -0.0 1.0 0.0 -0.0 1.0 0.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 0.0 -1.0 -0.0 0.0 1.0 -0.0 0.0 1.0 -0.0 0.0 1.0 -0.0 0.0 1.0]
+  "float uv" [0.897436082363129 0.196825414896011 0.125778958201408 0.196825414896011 0.125778958201408 -0.574831783771515 0.897436082363129 -0.574831783771515 1.669093489646912 0.196825414896011 1.669093489646912 0.968482553958893 0.897436082363129 0.968482553958893 0.897436082363129 0.196825414896011 0.897436082363129 1.740139842033386 0.125778958201408 1.740139842033386 0.125778958201408 0.968482553958893 0.897436082363129 0.968482553958893 0.125778958201408 0.196825414896011 0.125778958201408 0.968482553958893 -0.645878255367279 0.968482553958893 -0.645878255367279 0.196825414896011 0.125778958201408 0.196825414896011 0.897436082363129 0.196825414896011 0.897436082363129 0.968482553958893 0.125778958201408 0.968482553958893 0.125778958201408 -1.346488833427429 0.897436082363129 -1.346488833427429 0.897436082363129 -0.574831783771515 0.125778958201408 -0.574831783771515]
+  "bool generatetangents" ["false"]
+  "string name" ["Room"]
+AttributeEnd # ""
+
+AttributeBegin #  "Lamp.001"
+
+Transform [-0.744786798954010 1.764209628105164 1.814113616943359 0.0 -2.496975183486938 -0.205554246902466 -0.825236856937408 0.0 -0.410561501979828 -1.950246930122375 1.728041410446167 0.0 0.788316249847412 -4.792846202850342 4.449213027954102 1.0]
+
+LightGroup "default"
+
+AreaLightSource "area"
+  "float importance" [1.0]
+  "float power" [100.0]
+  "float efficacy" [17.0]
+  "color L" [0.80000001 0.80000001 0.80000001]
+  "integer nsamples" [1]
+  "float gain" [1.0]
+
+Shape "trianglemesh"
+  "integer indices" [0 1 2 0 2 3]
+  "point P" [-0.5 0.5 0.0 0.5 0.5 0.0 0.5 -0.5 0.0 -0.5 -0.5 0.0]
+  "string name" ["Lamp.001"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "Lamp"
+
+Transform [-0.853993594646454 3.231344223022461 0.305193901062012 0.0 -3.124902009963989 -0.903863966464996 0.825865745544434 0.0 0.877336204051971 -0.074017494916916 3.238647222518921 0.0 2.023726701736450 -0.965228199958801 5.936462879180908 1.0]
+
+LightGroup "default"
+
+AreaLightSource "area"
+  "float importance" [1.0]
+  "float power" [100.0]
+  "float efficacy" [17.000000000000000]
+  "color L" [0.80000001 0.80000001 0.80000001]
+  "integer nsamples" [1]
+  "float gain" [1.0]
+
+Shape "trianglemesh"
+  "integer indices" [0 1 2 0 2 3]
+  "point P" [-0.5 0.5 0.0 0.5 0.5 0.0 0.5 -0.5 0.0 -0.5 -0.5 0.0]
+  "string name" ["Lamp"]
+
+AttributeEnd # ""
+
+WorldEnd

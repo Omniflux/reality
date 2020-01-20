@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 <!-- \\index\{Material!Glossy\} -->\
+One of the most widely used materials, it can be used for things like plastic, glossy paper, semi-glossy stone, leaves, and even human skin.  <!-- \\index\{Material!Skin\} -->\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
+\f1 \cf0 \{$SCRImageLink[w:300;h:327]=/Users/paolo/devel/Reality/documentation/images/UI/Reality-glossy.png\}
+\f0  "The Glossy material"\
+\
+\pard\pardeftab720\pardirnatural
+\cf0 Glossy has the following channels:\
+\
+- Diffuse. This channel defines the base color or texture of the material.\
+- Specular. This channel is usually set to a color or an image map and it defines the amount of light reflected by the material and its color. The brightness of the color determines how much light is reflected. High values of brightness cause the material to reflect more light.  See figure <!--\\ref\{rug_glossiness.png\}--> for an example of how the specular color affects the reflectivity of the material. In the figure the specular color used can be seen in the vertical column of RGB values, for example 50, 50, 50. The row of numbers at the base of the spheres is the level of glossiness used. For best results the brightness should not be set past the midpoint (RGB 127, 127, 127) or it will result in unrealistic results and possible generation of [Fireflies][] or a high amount of render noise that will take longer to resolve. Here are some numbers to guide you in defining the specular color:\
+\
+	- 0,0,0 reflects no light, which is an unrealistic situation. Even the blackest of materials reflects a little bit of light. \
+	- 64, 64, 64 is the equivalent of 25% brightness (255:4 => 63.75) and that would reflect 25% of the light hitting the glossy coat\
+	- 127, 127, 127 reflects 50% of the light hitting the glossy coat.\
+- Glossiness. This channel controls the amount of glossiness, or how shiny a material is. This is the effect of polishing a surface until it's very smooth. Glossiness is expressed as a number, from 0 (dull) to 10,000 (mirror finish). A texture can also be used to control the level of glossiness at any point on the surface. See figure <!--\\ref\{rug_glossiness.png\}--> for an example of how the specular color and the glossiness value work together. The glossiness can be set to have the same value in the horizontal and vertical direction or not. Figure <!--\\ref\{rug_glossiness-examples.png\}--> shows how the variation of horizontal and vertical glossiness affect the specular highlight in comparison to the example where both values are the same. In all three examples the specular color was set to RGB 90, 90, 90 and the lighting was provided by an overhead [ML].\
+- Top coat. This channel controls the definition of the coat of the material. A Glossy material is basically a Matte material with a shiny coat on top, as if the material has been covered with a coat of varnish. The Coat parameter allows you to control that coat and will result in a "glaze" on top of the material. The color parameter controls the translucent color of the coat. The thickness parameter, by default at 0.3, determines how visible the coat is. Higher values will make the coat more prominent. Please note that the coat is always available when using Glossy, even when the Coat flag in Reality is unselected. The Coat parameters allow us to customize the coat, otherwise LuxRender will use default values.\
+- Translucency. This channel allows us to make the material translucent. The texture in the channel determines how translucent a material is. Brighter colors cause more translucency.\
+\pard\tx560\pardeftab720\pardirnatural
+\cf0 - Surface Fuzz. This property is used to access the "Asperity" option of LuxRender. It adds a surface scattering of the glossiness. This effect works best with high values of glossiness and can be used to create velvet-like materials. \
+\
+\pard\tx560\pardeftab720\pardirnatural
+
+\f1 \cf0 \{$SCRImageLink[w:400;h:400]=/Users/paolo/devel/Reality/documentation/images/RUG_Glossiness.png\}
+\f0  "Glossiness and specular color together"\
+\
+
+\f1 \{$SCRImageLink[w:399;h:133]=/Users/paolo/devel/Reality/documentation/images/RUG_Glossiness-examples.png\}
+\f0  "Variable glossiness values"\
+\
+}

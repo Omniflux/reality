@@ -1,0 +1,6 @@
+##How to change the version number for Reality:
+
+- In ReAppVersion.cpp change the version number
+- In CmakeLists.txt change SET(REALITY_VERSION_MAJOR "4") SET(REALITY_VERSION_MINOR "3") SET(REALITY_VERSION_PATCH "0")
+- In build change the string for the DMG file in the createInstaller function
+- In the assets dir update the Infor.plist file

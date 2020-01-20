@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Find the absolute path of this script
+pushd $(dirname $0)  > /dev/null
+BUILD_SCRIPT_DIR=`pwd`
+popd > /dev/null
+
+BUNDLE_FILE_NAME=ACSEL_base_bundle.rsb
+echo "Exporting the ACSEL database"
+
+"${BUILD_SCRIPT_DIR}/../bin/mac/Debug/Reality.app/Contents/MacOS/Reality" --exportAcselDB "${BUILD_SCRIPT_DIR}/../assets/ACSEL/${BUNDLE_FILE_NAME}"

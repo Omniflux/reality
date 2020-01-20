@@ -1,0 +1,3 @@
+Stopping and resuming renders
+
+You can stop a Reality-created render at any time, and close Lux. 

@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE outline PUBLIC "-//omnigroup.com//DTD OUTLINE 3.0//EN" "http://www.omnigroup.com/namespace/OmniOutliner/xmloutline-v3.dtd">
+<outline xmlns="http://www.omnigroup.com/namespace/OmniOutliner/v3">
+  <style-attribute-registry>
+    <style-attribute version="0" key="font-family" group="font" name="family" class="string">Helvetica</style-attribute>
+    <style-attribute version="1" key="font-fill" group="font" name="fill color" class="color">
+      <color w="0"/>
+    </style-attribute>
+    <style-attribute version="0" key="font-size" group="font" name="size" class="number">12</style-attribute>
+    <style-attribute version="0" key="font-weight" group="font" name="weight" class="number">5</style-attribute>
+    <style-attribute version="0" key="heading-type(com.omnigroup.OmniOutliner)" group="heading" name="type" class="string">None</style-attribute>
+    <style-attribute version="1" key="underline-style" group="underline" name="style" class="enum">
+      <enum-name-table default-value="0">
+        <enum-name-table-element value="0" name="none"/>
+        <enum-name-table-element value="1" name="single"/>
+        <enum-name-table-element value="2" name="thick"/>
+        <enum-name-table-element value="9" name="double"/>
+      </enum-name-table>
+    </style-attribute>
+  </style-attribute-registry>
+  <settings>
+    <alternate-color>
+      <color r="0.761693" g="0.849149" b="1" a="0.9"/>
+    </alternate-color>
+    <horizontal-grid-color>
+      <color catalog="System" name="gridColor"/>
+    </horizontal-grid-color>
+    <vertical-grid-color>
+      <color catalog="System" name="gridColor"/>
+    </vertical-grid-color>
+    <print-info>
+      <print-info-key name="NSOrientation" type="int">1</print-info-key>
+      <print-info-key name="NSPaperSize" type="size">{792, 612}</print-info-key>
+      <print-info-key name="OOColumnHeaderPrintBehavior" type="int">0</print-info-key>
+    </print-info>
+  </settings>
+  <editor content-size="{767, 1352}" status-visible="no">
+    <drawer display="find"/>
+    <selected-rows ids="pFs2wH7GDeb"/>
+    <selected-columns ids="glYdyeYwwqL"/>
+    <selected-characters range="{52, 0}"/>
+  </editor>
+  <columns>
+    <column id="lp5Mb6auZrL" type="text" width="18" minimum-width="18" maximum-width="18" text-export-width="1" is-note-column="yes">
+      <title>
+        <text>
+          <p/>
+        </text>
+      </title>
+    </column>
+    <column id="glYdyeYwwqL" type="text" width="642" minimum-width="13" maximum-width="1000000" text-export-width="72" is-outline-column="yes">
+      <title>
+        <text>
+          <p>
+            <run>
+              <lit>text</lit>
+            </run>
+          </p>
+        </text>
+      </title>
+    </column>
+    <column id="bU5uIhMFdYN" type="duration" summary="sum" width="75" minimum-width="13" maximum-width="1000000" text-export-width="40">
+      <title>
+        <text>
+          <p>
+            <run>
+              <lit>Dev.time</lit>
+            </run>
+          </p>
+        </text>
+      </title>
+      <formatter type="duration" hours-per-day="8" hours-per-week="40" hours-per-month="160"/>
+    </column>
+  </columns>
+  <root>
+    <style>
+      <value key="font-weight">9</value>
+      <value key="underline-style">single</value>
+    </style>
+    <style>
+      <value key="font-fill">
+        <color r="0.376391" g="0.503605" b="0.735418"/>
+      </value>
+      <value key="font-size">16</value>
+      <value key="font-weight">10</value>
+    </style>
+    <style>
+      <value key="font-size">13</value>
+      <value key="font-weight">9</value>
+    </style>
+    <item id="p9QC8ayUopp" expanded="yes">
+      <values>
+        <text>
+          <p>
+            <run>
+              <lit>Reality 3</lit>
+            </run>
+          </p>
+        </text>
+        <null/>
+      </values>
+      <children>
+        <item id="nJ9YlddVF8s" expanded="yes">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>Development</lit>
+                </run>
+              </p>
+            </text>
+            <null/>
+          </values>
+          <children>
+            <item id="e8NqqezMUIe">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>User Interface</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="lMRpvZCLNQD">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Host-independent. No business logic included in the UI module except for the essential features used to run it.</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="oFGU47S-TX4">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Model/View based</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="gQHOiWdVPt9" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Model</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="e4vccq8UXEC">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Connects with the material database</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="n1xPF-XwjMa" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Connects witrh the scene data</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="k0eQXiBoJR3">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Host independent</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="dJKS1r4Jfxd">
+                      <style>
+                        <value key="font-fill">
+                          <color r="0.0711524" g="0.371671" b="0.129789"/>
+                        </value>
+                        <value key="font-weight">9</value>
+                      </style>
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Development time</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <duration>24</duration>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="pEKthT-JZ-A">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Style Sheet for Poser</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>16</duration>
+                  </values>
+                </item>
+                <item id="akbjDo5LJtG">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Style Sheet for Studio</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>16</duration>
+                  </values>
+                </item>
+                <item id="aYWdh4-YBBO">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Global selector for Lux/SLG at the top of the UI</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="pDkNDaPPkPz">
+                  <style>
+                    <value key="font-fill">
+                      <color r="0.0711524" g="0.371671" b="0.129789"/>
+                    </value>
+                    <value key="font-weight">9</value>
+                  </style>
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Development time</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>80</duration>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="mByeaTKMKZt">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>UI logic</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="d6wXLCW8DPw">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Switchable between Lux and SLG</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="gEGE_THDbiY">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Render switching causes unsuitable controls to be disabled</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="kxRXzx0Qa6B">
+                  <style>
+                    <value key="font-fill">
+                      <color r="0.0711524" g="0.371671" b="0.129789"/>
+                    </value>
+                    <value key="font-weight">9</value>
+                  </style>
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Development time</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>24</duration>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="dmQ1c7QDM5F">
+              <style/>
+              <style>
+                <value key="heading-type(com.omnigroup.OmniOutliner)">Numeric</value>
+              </style>
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Scene catalog</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="n_Tr0e2x-3h" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>General properties</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="lY79tUG7XOR">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Lux/SLG output name</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="kK6mKpcl12F">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Image name</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="j5z7PcevbQP">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>GPU acceleration</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="o0-Q1C-mujn">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Render as statue</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="dyqf_2BNBm8">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Render animation</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="ps3Esh785_p">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Surface integrator</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="p0D5V1kECsI">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Screen Resolution</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="chVm3QwuSzA">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Alpha channel</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="hFDK1CWhKym">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Image file format</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="cjTK6EhjMwY">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Renderer information</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="g7829yg4ZIv">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Lux path</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="manoWc_Ed_L">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Lux versions</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="ng9vCowRkoX">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>SLG path</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="n4ajxznHUm6">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>SLG version</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="apaBhz1ZKhe">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Number of threads used</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="n7s8DPI3e5Z">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Automatic stop</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <note expanded="yes">
+                        <text>
+                          <p>
+                            <run>
+                              <lit>One of: Max samples/Max seconds</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                    </item>
+                    <item id="jWXmj-yIYaj">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Preserve light hue</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="mhSZbuax8wS">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Geometry format</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="jTmUrP_cWEZ" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Collect Textures</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="jgoplEzv-KX">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Max texture size</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="bm9MvGXfJfc">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Overwrite warning</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="hGY2FTBP_kR">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>FFs removal</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <note expanded="yes">
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Outlier rejection</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                    </item>
+                    <item id="jrLMHv2-ag0">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Gamma</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="m6s5HKOsslD">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Start frame</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="l5_uLWdiHDb">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>End frame</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="b9MS08s5K6H">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Export only</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="bIcjQDNk7Yh">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Selected Camera</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="pF4ytkmkca5">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Material Database</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="gNUTbg9jX9A">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>ACSEL-enabled</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <note>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>ACSEL is the Reality system for storing and automatically applying shader sets. It also has a cloud service called ACSEL Share to share and install shaders.</lit>
+                            </run>
+                          </p>
+                        </text>
+                      </note>
+                    </item>
+                    <item id="fOs0lmxvzFs">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Save/Load shaders</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="bDdM7lbPxx6" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>API for edit/query operations</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="onbEWS7rO0N">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Python-callable</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                          <note>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Need to have &quot;extern C&quot; functions </lit>
+                                </run>
+                              </p>
+                            </text>
+                          </note>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="d9Ljkd2XL2c">
+                      <style>
+                        <value key="font-fill">
+                          <color r="0.0711524" g="0.371671" b="0.129789"/>
+                        </value>
+                        <value key="font-weight">9</value>
+                      </style>
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Development time</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <duration>80</duration>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="ci4ShiEDCBq">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Light catalog</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="jUqbuHVz3l5" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Lights</lit>
+                            </run>
+                          </p>
+                          <p>
+                            <run>
+                              <lit>List of objects of type Light and subclasses</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="mgOknU5XxGz" expanded="yes">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Light types</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                          <children>
+                            <item id="iIuv87SSzrc" expanded="yes">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Base light </lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                              </values>
+                              <children>
+                                <item id="caw1ncK2Zrc">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Name</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="m8e0DXZbYpE">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Color scheme</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                  <children>
+                                    <item id="pqD5wqTwoa7">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>RGB</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="aP86U6us6Rc">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Color temperature</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="f68FkrYoX0U">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Preset</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                  </children>
+                                </item>
+                                <item id="bT61fLxQQ2W" expanded="yes">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Subclasses</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                  <children>
+                                    <item id="lbEFUQzZxRM">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>IBL</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="ldKzEgCO-jb">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Sun/Sky</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="gC9mtA-OWag">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Point</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="lP81bCk7B25">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Spot</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                    <item id="bsXg3Ai46Fe">
+                                      <values>
+                                        <text>
+                                          <p>
+                                            <run>
+                                              <lit>Mesh</lit>
+                                            </run>
+                                          </p>
+                                        </text>
+                                        <null/>
+                                      </values>
+                                    </item>
+                                  </children>
+                                </item>
+                              </children>
+                            </item>
+                            <item id="dNk6bE-3N3h">
+                              <style>
+                                <value key="font-fill">
+                                  <color r="0.652987" g="0.626568" b="0.195878"/>
+                                </value>
+                              </style>
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Ignored types</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                              </values>
+                              <children>
+                                <item id="okQj1jrxEvV">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Distant</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="llBeFfwT69I">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Uber (Studio)</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                </item>
+                                <item id="mUj01m5UE4l">
+                                  <values>
+                                    <text>
+                                      <p>
+                                        <run>
+                                          <lit>Shader (Studio)</lit>
+                                        </run>
+                                      </p>
+                                    </text>
+                                    <null/>
+                                  </values>
+                                </item>
+                              </children>
+                            </item>
+                          </children>
+                        </item>
+                      </children>
+                    </item>
+                  </children>
+                </item>
+                <item id="g7Z0nLLMwi5" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Camera catalog</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="nRsPjiS--Pq">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>DOF</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="oTzmut0NXFs">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>enabled</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="biZxt_cdYnx">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>fstop</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="dj3BKQ4znet">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>focal disatance</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="cp4HcvnUK5V">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Exposure</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="enjvgmxYZ7N">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>ISO</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="blQyaZm607T">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Shutter</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                        <item id="c7eFb7eeORQ">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>fstop</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="hW5KuH8H5_L">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Film response</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="brLSb-WTR6q">
+                  <style>
+                    <value key="font-fill">
+                      <color r="0.0711524" g="0.371671" b="0.129789"/>
+                    </value>
+                    <value key="font-weight">9</value>
+                  </style>
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Development time</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="niPfv0ZaECY">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Poser converters</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="g9HzZn39JyC">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Poser material converter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>40</duration>
+                  </values>
+                  <note expanded="yes">
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Probably written in Python</lit>
+                        </run>
+                      </p>
+                    </text>
+                  </note>
+                </item>
+                <item id="p1DbvdPCGZD">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Poser Light converter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="adPjzi2UZkT">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Poser camera converter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="jYCgMfkjnyJ">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Studio converters</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <note expanded="yes">
+                <text>
+                  <p>
+                    <run>
+                      <lit>C++</lit>
+                    </run>
+                  </p>
+                </text>
+              </note>
+              <children>
+                <item id="psM2m-Bm0U-">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Studio light converter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>16</duration>
+                  </values>
+                </item>
+                <item id="kwDDhvjKcVq">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Studio camera converter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>8</duration>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="hb4nT_ZBn51">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Geometry Interface</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="j94P2vuDd3_">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>This is the interface from the internal host data. It defines a protol for Reality Reality used to query the geometry in a hots-independent way</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="hkx3c2LQ2JX">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Poser geometry interface</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="fWyCDgkdT3D">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Studio geometry interface</lit>
+                        </run>
+                      </p>
+                      <p>
+                        <run>
+                          <lit>C++</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="fPizoWeuNKx">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Geometry exporter</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <note expanded="yes">
+                <text>
+                  <p>
+                    <run>
+                      <style>
+                        <value key="font-family">Lucida Grande</value>
+                        <value key="font-size">13</value>
+                      </style>
+                      <lit>This is the exporter defined in a host-indipendent way. The exporter receives a 3D object stored in a container and it exporters that object to the external renderer. in this way we avoid writing the same exporter for Poser and Studio. Instead we create two host-specific geometry scanners that collect the data into a container and then pass that container to the exporter.</lit>
+                    </run>
+                  </p>
+                </text>
+              </note>
+              <children>
+                <item id="onTEKrnnDpB" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Target</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="k4yHi17uwmW" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>LuxRender</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="oh0fE0JR-5i">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>Format</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                          <children>
+                            <item id="purQ1_dAhCz">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Binary PLY</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="m8xW3eD0eA1">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Text PLY</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                              </values>
+                            </item>
+                            <item id="eru_SecDPuQ">
+                              <values>
+                                <text>
+                                  <p>
+                                    <run>
+                                      <lit>Native</lit>
+                                    </run>
+                                  </p>
+                                </text>
+                                <null/>
+                              </values>
+                            </item>
+                          </children>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="dNBuPMQ2-Fy">
+                      <style/>
+                      <style>
+                        <value key="font-fill">
+                          <color r="0.0711524" g="0.371671" b="0.129789"/>
+                        </value>
+                        <value key="font-weight">9</value>
+                      </style>
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>SLG format</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="fEuAa-ajkXJ">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Development time</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <duration>80</duration>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+              </children>
+            </item>
+            <item id="mn55xr9XKnt" expanded="yes">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Material Exporter</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <note expanded="yes">
+                <text>
+                  <p>
+                    <run>
+                      <lit>Similarly to the Geometry exporter this subsystem needs to be host-independet so that it can be re-used between hosts. The task is made possible by the connection with the Scene Catalog.</lit>
+                    </run>
+                  </p>
+                </text>
+              </note>
+              <children>
+                <item id="oRJv-jhXb6w">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Texture caching</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <duration>40</duration>
+                  </values>
+                </item>
+                <item id="pFs2wH7GDeb">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Context switching between LuxRender and SLG exporter</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+              </children>
+            </item>
+            <item id="mXSRgaeiOxz">
+              <values>
+                <text>
+                  <p>
+                    <run>
+                      <lit>Build system</lit>
+                    </run>
+                  </p>
+                </text>
+                <null/>
+              </values>
+              <children>
+                <item id="nsoI4jqcHw5">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>General</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                </item>
+                <item id="hqRKDqc7uq_" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Mac OS</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="dri6IdS2VAb" expanded="yes">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Common</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                      <children>
+                        <item id="jTTvF7QaaJt">
+                          <values>
+                            <text>
+                              <p>
+                                <run>
+                                  <lit>User PackageMaker/Iceber</lit>
+                                </run>
+                              </p>
+                            </text>
+                            <null/>
+                          </values>
+                        </item>
+                      </children>
+                    </item>
+                    <item id="pldnFINNFMY">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Poser</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="jWKH98HH4kO">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Studio</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+                <item id="c1LxYLziA1T" expanded="yes">
+                  <values>
+                    <text>
+                      <p>
+                        <run>
+                          <lit>Windows</lit>
+                        </run>
+                      </p>
+                    </text>
+                    <null/>
+                  </values>
+                  <children>
+                    <item id="hqlCg2Aawk3">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Poser</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="n1MxqhGF-kF">
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Studio</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <null/>
+                      </values>
+                    </item>
+                    <item id="cUzG5bt3YED">
+                      <style>
+                        <value key="font-fill">
+                          <color r="0.0711524" g="0.371671" b="0.129789"/>
+                        </value>
+                        <value key="font-weight">9</value>
+                      </style>
+                      <values>
+                        <text>
+                          <p>
+                            <run>
+                              <lit>Development time</lit>
+                            </run>
+                          </p>
+                        </text>
+                        <duration>80</duration>
+                      </values>
+                    </item>
+                  </children>
+                </item>
+              </children>
+            </item>
+          </children>
+        </item>
+        <item id="hpugXPYOzXw">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>QA</lit>
+                </run>
+              </p>
+            </text>
+            <duration>160</duration>
+          </values>
+        </item>
+        <item id="kej3DNnqUOa">
+          <values>
+            <text>
+              <p>
+                <run>
+                  <lit>Promotion</lit>
+                </run>
+              </p>
+            </text>
+            <duration>80</duration>
+          </values>
+        </item>
+      </children>
+    </item>
+  </root>
+</outline>

@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\tx560\pardeftab720\sb260\pardirnatural
+
+\f0\fs24 \cf0 <!-- \\index\{Displacement map\} -->\
+The parameters for the displacement map are similar to the ones used for bump mapping, and can be used in conjunction with those. Displacement mapping creates a real alteration of the rendered geometry.  **This parameter depends on the subdivision level**, which has to be increased to 1 or more. Higher values of  subdivision produce finer detail in the resulting geometry but require a much larger amount of memory. This could be an issue with computers running with a limited amount of memory, like the ones using a 32 bit Operating System.\
+Keep in mind that each level of subdivision, when not using the "microfaceted" option,  **quadruples** the amount of polygons in the mesh (for quadrilateral polygons). The microfaceted option activates a higher-detail type of displacement.\
+**Please note:** In LuxRender/Reality a displacement map has a Negative and Positive value. The negative value indicates how recessed the geometry should become when the lowest value in the map, pure black, is found. The positive value indicates how raised the surface should be when the highest value in the map, pure white, is found. Therefore, if you don't want to displace the geometry a mid-grey value, 127, 127, 127, needs to be used. If your displacement map has been made for Poser be aware that Poser assumes that black is no displacement. In that case you should set the Negative value to 0.\
+\
+\pard\tx560\pardeftab720\pardirnatural
+\cf0 ####Subdivision <!-- \\index\{Subdivision\} -->
+\b  \
+
+\b0 Reality/LuxRender can subdivide the material to make it appear smoother.  Each level of subdivision makes the geometry smoother and smoother but it also increases the amount of polygons that will be computed by LuxRender. Subdivision, when not using the micro facet option, is limited to a maximum of eight levels.\
+\
+**Keep sharp edges.** This option determines if the subdivision will "round" the edges of the subdivided material or not. This only makes sense when using open figures like floor planes. For human and organic figures this checkbox should be unchecked.\
+\
+**Use Micro facets.** <!-- \\index\{Microfacets\} --> This option allows you to displace a geometric surface with very high resolution, even when the original geometry is coarse. Enabling this option raises the maximum number of subdivisions from 8 to 500. With this kind of displacement the facets are flat shaded. This means that the displacement is in fact faceted and not smooth. \
+\
+Depending on the resolution of the original geometry this might not be an issue. Microfacet displacement is ideal for simulating brick, stone surfaces, metal engraving and so on. As a general guideline, if you need to displace organic shapes, like muscles and veins, do not use the microfacet displacement. If you need to displace walls, floors, weapons etc. then try the microfacet variant. If your base geometry is fairly detailed you can use low values of subdivision. If the geometry is very coarse, like when a floor is defined as a single polygon, then very high values of subdivision, 100, 300 or higher might be used. Be aware that higher values will require more memory and will take longer to render. Be conservative in increasing the subdivision level.}

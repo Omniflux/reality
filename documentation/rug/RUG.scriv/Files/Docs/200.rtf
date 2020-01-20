@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 LuxRender includes a flexible, powerful volume system that controls how light behaves when it moves through objects or the space in-between objects. <!-- \\index\{Volumes\} -->\
+\
+Let's  consider, for example, when light traverses a body of water. The water absorbs the light at a rate that is proportional to the depth of the water. At higher depths light becomes dimmer and dimmer because it's absorbed by the volume of water. The LuxRender volumes simulate that kind of behavior.\
+\
+Typically, when creating a scene that uses volumes  you create a set of volumes, which are then assigned to the interior and exterior of objects in the scene. The interior volume defines how light moves within the object, and the exterior volume defines how light moves through the space between the object it just left and the next one it encounters.\
+\
+The interior volume setting is primarily used to give absorption and internal scattering to the object it is assigned to. In most cases we need to create a separate volume for any material for which we want to apply internal absorption and scattering of light. The exterior volume setting is generally used to provide atmospheric effects, and is kept the same for all objects in the scene.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx9360\sl288\slmult1\pardirnatural
+\cf0 \
+You can create any number of volumes with Reality's Volume Editor. \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx9360\pardirnatural
+
+\f1\fs24 \cf0 \{$SCRImageLink[w:299;h:164]=/Users/paolo/devel/Reality/documentation/images/UI/Reality-volume-editor.png\}
+\f0\fs28  "The Volumes Editor"\
+\
+\pard\sl288\slmult1\pardirnatural
+\cf0 Click on the **Add new volume** button to create a new volume. There are two kind of volumes available: clear and scattered. <!-- \\index\{Volumes!clear\} -->Clear is a simple volume that features refraction and absorption but no scattering. It is primarily meant to be used with clear materials, in particular the glass materials. A clear volume is created automatically by Reality when you use Volumetric glass or Water.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx9360\sl288\slmult1\pardirnatural
+\cf0 <!-- \\index\{Volumes!scattered\} -->\
+The scattered volume represents a volume with an even distribution of microscopic particles. You can set a volume to be scattered via the **Scattered** checkbox. When used as an interior volume, it can be used for sub-surface scattering (SSS), cloudy liquids, or rendering an object as a cloud. Reality automatically generates a volume for SSS. <!-- \\index\{SSS\} -->\
+\
+The following video shows how to use Volumes with Reality [PS] Edition. It was originally made with Reality 3 but it still applies to the current version:\
+\
+[
+\f1\fs24 \{$SCRImageLink[w:300;h:166]=/Users/paolo/devel/Reality/documentation/images/RUG_Volumes-Video.png\}
+\f0\fs28 ](http://youtu.be/CcT6XS5C4bY) \
+\
+The following video shows how to use Volumes with Reality [DS] Edition:\
+\
+[
+\f1\fs24 \{$SCRImageLink[w:300;h:169]=/Users/paolo/devel/Reality/documentation/images/RUG_DSBeamOfLight.png\}
+\f0\fs28 ](http://youtu.be/SQkOlyIYNSA)\
+\
+The parameters for a volume can be edited to your liking. The following section explains what those parameters do.\
+\
+###IOR\
+<!-- \\index\{IOR\} -->\
+This value affects the amount of refraction of light caused by the volume. As it is with glass, higher values cause higher refraction.\
+\
+###Absorption Color\
+<!-- \\index\{Volumes!absorption\} -->\
+The **Absorption Color** parameter controls how light is absorbed by a volume. Light traversing a volume is absorbed at a rate that is proportional to the distance traveled inside the volume. As the light goes further inside the volume it gets absorbed more and more. As a result the volume becomes darker and more saturated in color as it becomes larger.  The distance at which this phenomenon happens is controlled by the color of the volume and the **Clarity at depth** parameter, which is measured in meters.\
+\
+More details about the absorption, from the LuxRender wiki: *"If a ray travels exactly the given distance, it will match the color you set. If it travels a shorter distance, it will be lighter and less saturated than the given color. If it travels farther than the specified distance, it will be darker and more saturated."*\
+\
+###Absorption scale\
+As the name implies, this parameter is a scale factor for the Color parameter. Lowering this value will lead to less and less absorption performed by the volume. This number basically acts as an amplifier for the absorption color. It makes it easier to fine tune the final result instead of adjusting the color itself.\
+\
+###Scattered\
+<!-- \\index\{Volumes!scattering\} -->\
+The checkbox marked as **Scattered** is used to flag a volume as using scattering. When this option is enabled the **Scattering Color** and associated parameters become enabled. Scattering means that light, passing through the volume, gets reflected in different directions, as if it was bouncing against particles in the volume. \
+\
+###Scattering color\
+The scattering color determines the density and color of the particles inside the volume. While the value is using RGB the range for this parameter is higher than the limit for RGB colors. Higher values denote volumes that are denser. To help in expressing the right density Reality provides a parameter for the scattering color and for the scattering scale. Using the scale helps in amplifying the scattering beyond the strict RGB limit. Please note that, while the scattering can use any hue, it is generally best to set this value to a shade of grey, except when using the volume for SSS.\
+\
+###Direction parameters\
+The last three values are the Red, Green and Blue direction. These parameters indicate the direction of the scattering of the light. Set at zero (0) will cause the light to be scattered equally in all directions. Set to a positive value will cause the light to be scattered forward, relative to the direction of the light. Set to a negative value causes the light to scatter in the opposing direction of the light source, similarly to what happens when one uses the car high-beams wheel driving inside fog.}

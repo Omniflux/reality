@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 The Camera Editor is where you select which camera you want to use for the rendering and how that camera should behave. <!-- \\index\{Camera\} -->\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\sl288\slmult1\pardirnatural
+
+\f1\fs24 \cf0 \{$SCRImageLink[w:300;h:209]=/Users/paolo/devel/Reality/documentation/images/UI/RealityCameraEditor.png\}
+\f0\fs28  "The Reality Camera Editor"\
+\
+The Camera Editor takes the list of cameras defined in the host and presents them in a list. By default the active camera in the host is selected in the Camera Editor. As you switch camera view in the host the Reality Camera Editor changes its selection. \
+\
+You can change this behavior by explicitly clicking on one camera name. In that way Reality will recognize that you want to render through the selected camera regardless of which camera is active in [PS] or [DS].\
+\
+An asterisk after the focal length column marks the camera that is currently active in the host.\
+\
+The exposure <!-- \\index\{Exposure\} -->control panel can be used to set the desired exposure for each camera. If the exposure is not set explicitly then Reality will select the Autolinear <!-- \\index\{Tonemapper!Autolinear\} --> tonemapper in LuxRender, which automatically exposes the picture. Otherwise Reality will set the Linear tonemapper with the parameters that you set. This allows you to control the exposure with precision.\
+\
+###For animators\
+Setting a consistent exposure for all frames of an animation is fundamental, otherwise you can end up with annoying flickering caused by the automatic adjustment of the exposure done on each frame. If you set the exposure in the Camera Editor then all frames generated via Reality will have the same exposure.}

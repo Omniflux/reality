@@ -1,0 +1,533 @@
+#!/bin/sh
+#
+# Reality plug-in
+# Copyright (c) Pret-a-3D/Paolo Ciccone 2010. All rights reserved.    
+#
+# This file builds the Mac OS version of Reality
+#
+
+QT_VER="4.8.7"
+COMPILER_LOG=RealityCompilationLog.txt
+
+# A simple function to print a message with appropriate
+# level 1 or level 2 headers.
+function sectionHeader {
+  if [[ $1 -eq 1 ]]; then
+    echo "======================================="
+  else 
+    echo "---------------------------------------"
+  fi
+  echo $2
+  if [[ $1 -eq 1 ]]; then
+    echo "======================================="
+  else 
+    echo "---------------------------------------"
+  fi
+  echo ""
+}
+
+function compile {
+  sectionHeader 2 "Compiling $1"
+  if [[ $OS = "OSX" ]]; then
+    pushd "${BUILD_SCRIPT_DIR}/../build/mac" > /dev/null
+  else
+    pushd "${BUILD_SCRIPT_DIR}/../build/w$2" > /dev/null
+  fi
+    cmake --build . --target $1 --config Release >> $COMPILER_LOG
+
+  if [ $? != 0 ]; then
+    sectionHeader 1 "BUILD FAILED."
+    popd > /dev/null
+    exit
+  fi
+
+  popd > /dev/null
+}
+
+
+function compileReality {
+  if [ -d "${DEST_DIR}/Reality/${APP_FULL_NAME}" ]; then
+    echo "Removing the old version of the app..."
+    rm -rf "${DEST_DIR}/Reality/${APP_FULL_NAME}"
+  fi
+
+  echo "---------------------------------------"
+  echo "Building the project..."
+  echo "---------------------------------------"
+  # Increment the build number
+  python "${BUILD_SCRIPT_DIR}/../makeBuildNumber.py" --notime  "${BUILD_SCRIPT_DIR}/../src/core/ReAppVersion.cpp"
+
+  pushd .. > /dev/null
+  ./makeproj
+  popd > /dev/null
+
+  compile ${REALITY_LIB_NAME}
+  compile RealityX
+  compile Reality
+
+  "${BUILD_SCRIPT_DIR}/../tools/compute_crc" "${APP_FULL_PATH}" ${LIBRARY_FULL_PATH}
+
+  # compile Reality_DS32
+  compile Reality_DS64
+}
+
+# Adds the ACSEL bundle from the Reality assets directory to the
+# installer stage directory, ready to be added to the zipfile
+function addAcselBundle {
+  local ACSEL_DIR=ACSEL
+  local BUNDLE_FILE_NAME=ACSEL_base_bundle.rsb
+  local OBJ_ALIAS_FILE_NAME=ObjectAliases.txt
+
+  sectionHeader 2 "Adding the ACSEL bundle..."
+
+  pushd "${DEST_DIR}" > /dev/null
+
+  if [[ -d "./${ACSEL_DIR}" ]]; then
+    echo "Removing the destination ACSEL dir"
+    rm -rf "./${ACSEL_DIR}"
+  fi
+  mkdir "./${ACSEL_DIR}"
+  # Export the ACSEL database to the bundle...
+  # "${BUILD_SCRIPT_DIR}/../bin/mac/Release/${APP_FULL_NAME}/Contents/MacOS/Reality" --exportAcselDB "${BUILD_SCRIPT_DIR}/../assets/ACSEL/${BUNDLE_FILE_NAME}"
+  cp "${BUILD_SCRIPT_DIR}/../assets/ACSEL/${BUNDLE_FILE_NAME}" "${ACSEL_DIR}/${BUNDLE_FILE_NAME}"
+  cp "${BUILD_SCRIPT_DIR}/../assets/ACSEL/${OBJ_ALIAS_FILE_NAME}" "${ACSEL_DIR}/${OBJ_ALIAS_FILE_NAME}"
+
+  popd > /dev/null
+}
+
+
+function assemble {
+  sectionHeader 2 "Copying the App.."
+
+  if [[ $# -lt 2 ]]; then
+    echo "Function assemble() requires two parameters"
+    exit    
+  fi
+
+  case $1 in
+    ps)
+      TARGET=PS
+      CONFIG_DIR=poser
+      ;;
+    ds)
+      TARGET=DS
+      CONFIG_DIR=studio
+      ;;
+    *)
+      echo "The first parameter of function assemble() must be either ps or ds"
+      exit
+      ;;
+  esac
+
+  case $2 in
+    32 | 64)
+      BITNESS=$2
+      ;;
+    none)
+      BITNESS=""
+      ;;
+    *)
+      echo "The second parameter of function assemble() must be one of: 32, 64, none"
+      exit
+      ;;
+  esac
+
+  local APP_TARGET_DIR="Reality_${TARGET}"
+  local PLUGIN_TARGET_DIR="Reality_${TARGET}${BITNESS}_plugin"
+
+  pushd "${DEST_DIR}" > /dev/null
+
+  if [[ -d "${APP_TARGET_DIR}" ]]; then
+    rm -rf "./${APP_TARGET_DIR}"
+  fi
+  mkdir "${APP_TARGET_DIR}"
+
+  cp -r "${BUILD_SCRIPT_DIR}/../bin/mac/Release/${APP_FULL_NAME}" "${APP_TARGET_DIR}"
+  if [[ $? != 0 ]]; then
+    exit
+  fi
+  local RE_CONFIG_FILE=RealityConfig.txt
+  cp "${BUILD_SCRIPT_DIR}/../assets/configFiles/${CONFIG_DIR}/${RE_CONFIG_FILE}" "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS"
+
+  sectionHeader 2 "Binding the Qt libs..."
+
+  /usr/local/Trolltech/Qt-${QT_VER}/bin/macdeployqt "${APP_TARGET_DIR}/${APP_FULL_NAME}"
+
+  sectionHeader 2 " Fixing the references in the dylibs"
+
+  pushd "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS" > /dev/null
+  echo "App in " `pwd`
+
+  install_name_tool -id "@rpath/${REALITY_LIBRARY_FILE_NAME}" ${REALITY_LIBRARY_FILE_NAME}
+  install_name_tool -add_rpath "@loader_path/.." ${REALITY_LIBRARY_FILE_NAME}
+
+  # For the libraries
+  install_name_tool -change "@executable_path/../Frameworks/QtWebKit.framework/Versions/4/QtWebKit" "@rpath/Frameworks/QtWebKit.framework/Versions/4/QtWebKit" ${REALITY_LIBRARY_FILE_NAME}
+
+  install_name_tool -change "@executable_path/../Frameworks/QtXmlPatterns.framework/Versions/4/QtXmlPatterns" "@rpath/Frameworks/QtXmlPatterns.framework/Versions/4/QtXmlPatterns" ${REALITY_LIBRARY_FILE_NAME}
+  install_name_tool -change "@executable_path/../Frameworks/QtGui.framework/Versions/4/QtGui" "@rpath/Frameworks/QtGui.framework/Versions/4/QtGui" ${REALITY_LIBRARY_FILE_NAME}
+  install_name_tool -change "@executable_path/../Frameworks/QtXml.framework/Versions/4/QtXml" "@rpath/Frameworks/QtXml.framework/Versions/4/QtXml" ${REALITY_LIBRARY_FILE_NAME}
+  # install_name_tool -change "@executable_path/../Frameworks/QtSql.framework/Versions/4/QtSql" "@rpath/Frameworks/QtSql.framework/Versions/4/QtSql" ${REALITY_LIBRARY_FILE_NAME}
+  install_name_tool -change "@executable_path/../Frameworks/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/Frameworks/QtNetwork.framework/Versions/4/QtNetwork" ${REALITY_LIBRARY_FILE_NAME}
+  install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" ${REALITY_LIBRARY_FILE_NAME}
+
+  cd ../Frameworks
+
+  # Codesigning ID
+  local CODE_ID="Developer ID Application: Paolo Ciccone (VFKEH6DS79)"
+
+  # We need to patch also the Qt libraries
+  # QtCore
+  # Install the Info.plist file needed for code signature of the framework
+  cp "${BUILD_SCRIPT_DIR}/../assets/info-plist/QtCore/Info.plist" QtCore.framework/Resources
+
+  install_name_tool -id "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" QtCore.framework/Versions/4/QtCore
+  install_name_tool -add_rpath "@loader_path/.." QtCore.framework/Versions/4/QtCore
+  install_name_tool -add_rpath "@loader_path/." QtCore.framework/Versions/4/QtCore
+  codesign -s "${CODE_ID}" -v QtCore.framework
+
+  # QtGui
+  cp "${BUILD_SCRIPT_DIR}/../assets/info-plist/QtGui/Info.plist" QtGui.framework/Resources
+
+  install_name_tool -id "@rpath/Frameworks/QtGui.framework/Versions/4/QtGui" QtGui.framework/Versions/4/QtGui
+  install_name_tool -add_rpath "@loader_path/.." QtGui.framework/Versions/4/QtGui
+  install_name_tool -add_rpath "@loader_path/." QtGui.framework/Versions/4/QtGui
+  install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" QtGui.framework/Versions/4/QtGui 
+  codesign -s "${CODE_ID}" -v QtGui.framework
+
+  # QtNetwork
+  cp "${BUILD_SCRIPT_DIR}/../assets/info-plist/QtNetwork/Info.plist" QtNetwork.framework/Resources
+
+  install_name_tool -id "@rpath/Frameworks/QtNetwork.framework/Versions/4/QtNetwork" QtNetwork.framework/Versions/4/QtNetwork
+  install_name_tool -add_rpath "@loader_path/.." QtNetwork.framework/Versions/4/QtNetwork
+  install_name_tool -add_rpath "@loader_path/." QtNetwork.framework/Versions/4/QtNetwork
+  install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" QtNetwork.framework/Versions/4/QtNetwork 
+  codesign -s "${CODE_ID}" -v QtNetwork.framework
+
+  # QtWebKit
+  cp "${BUILD_SCRIPT_DIR}/../assets/info-plist/QtWebKit/Info.plist" QtWebKit.framework/Resources
+
+  install_name_tool -id  "@rpath/Frameworks/QtWebKit.framework/Versions/4/QtWebKit" QtWebKit.framework/Versions/4/QtWebKit
+  install_name_tool -add_rpath "@loader_path/.." QtWebKit.framework/Versions/4/QtWebKit
+  install_name_tool -add_rpath "@loader_path/." QtWebKit.framework/Versions/4/QtWebKit
+  install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" QtWebKit.framework/Versions/4/QtWebKit 
+  install_name_tool -change "@executable_path/../Frameworks/QtGui.framework/Versions/4/QtGui" "@rpath/Frameworks/QtGui.framework/Versions/4/QtGui" QtWebKit.framework/Versions/4/QtWebKit 
+  install_name_tool -change "@executable_path/../Frameworks/QtNetwork.framework/Versions/4/QtNetwork" "@rpath/Frameworks/QtNetwork.framework/Versions/4/QtNetwork" QtWebKit.framework/Versions/4/QtWebKit 
+  codesign -s "${CODE_ID}" -v QtWebKit.framework
+
+  # QtXml
+  cp "${BUILD_SCRIPT_DIR}/../assets/info-plist/QtXml/Info.plist" QtXml.framework/Resources
+
+  install_name_tool -id "@rpath/Frameworks/QtXml.framework/Versions/4/QtXml" QtXml.framework/Versions/4/QtXml
+  install_name_tool -add_rpath "@loader_path/.." QtXml.framework/Versions/4/QtXml
+  install_name_tool -add_rpath "@loader_path/." QtXml.framework/Versions/4/QtXml
+  install_name_tool -change "@executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore" "@rpath/Frameworks/QtCore.framework/Versions/4/QtCore" QtXml.framework/Versions/4/QtXml 
+  codesign -s "${CODE_ID}" -v QtXml.framework
+
+  popd > /dev/null
+
+  echo "Removing unused Qt plugins"
+  rm -rf "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/PlugIns/accessible"
+  rm -rf "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/PlugIns/bearer"
+  rm -rf "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/PlugIns/codecs"  
+
+  # Codesign the remaining plugins
+  codesign -s "${CODE_ID}" -v "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/PlugIns/imageformats/"*
+
+  # Codesign the app
+  echo codesign -s "${CODE_ID}" -v "${APP_TARGET_DIR}/${APP_FULL_NAME}"
+  codesign -v -s "${CODE_ID}" "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS/${REALITY_LIBRARY_FILE_NAME}"
+  codesign -v -s "${CODE_ID}" "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS/${RE_CONFIG_FILE}"
+  codesign -v -s "${CODE_ID}" "${APP_TARGET_DIR}/${APP_FULL_NAME}"
+
+  # Verify the signature
+  codesign -dvvv "${APP_TARGET_DIR}/${APP_FULL_NAME}"
+
+  sectionHeader 2 "Computing the CRC value for the executable..."  
+
+  "${BUILD_SCRIPT_DIR}/../tools/compute_crc" "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS/Reality" "${APP_TARGET_DIR}/${APP_FULL_NAME}/Contents/MacOS/${REALITY_LIBRARY_FILE_NAME}"
+  if [[ $? != 0 ]]; then
+    exit
+  fi
+
+  sectionHeader 2 "Copying the documentation..."
+
+  cp "${BUILD_SCRIPT_DIR}/../documentation/rug/Reality_Users_Guide.pdf" "${APP_TARGET_DIR}"
+
+  sectionHeader 2 "Building the plugin portion..."
+
+  if [ -d "${PLUGIN_TARGET_DIR}" ]; then
+    rm -rf "${PLUGIN_TARGET_DIR}"
+  fi
+  local PYTHON_EXT_LIB=Reality.so  
+  mkdir "${PLUGIN_TARGET_DIR}"
+  
+  if [ "${TARGET}" == "PS" ]; then
+    cp "${BUILD_SCRIPT_DIR}/../src/Poser/addons/Reality/"*.pyc "${PLUGIN_TARGET_DIR}"
+    # cp "${BUILD_SCRIPT_DIR}/assets/Python"/*.pyc $PLUGIN_TARGET_DIR
+    cp "${BUILD_SCRIPT_DIR}/../bin/mac/Release/${APP_FULL_NAME}/Contents/MacOS/${REALITY_LIBRARY_FILE_NAME}" "${PLUGIN_TARGET_DIR}"
+    cp -v "${BUILD_SCRIPT_DIR}/../bin/mac/Release/${PYTHON_EXT_LIB}" "${APP_TARGET_DIR}"
+    if [ $? -ne 0 ]; then
+        echo "Python library does not exist!"
+        exit
+    fi
+
+    # The Python extension Reality.so
+    echo "Fixing the dylib references in the Python extension"
+    pushd "${APP_TARGET_DIR}" > /dev/null
+    install_name_tool -change "@loader_path/Reality_lib.dylib" "@loader_path/Reality.app/Contents/MacOS/Reality_lib.dylib" ${PYTHON_EXT_LIB}
+    install_name_tool -change "/usr/local/Trolltech/Qt-${QT_VER}/lib/QtCore.framework/Versions/4/QtCore" "@loader_path/Reality.app/Contents/Frameworks/QtCore.framework/Versions/4/QtCore" ${PYTHON_EXT_LIB}
+    install_name_tool -change "/usr/local/Trolltech/Qt-${QT_VER}/lib/QtNetwork.framework/Versions/4/QtNetwork" "@loader_path/Reality.app/Contents/Frameworks/QtNetwork.framework/Versions/4/QtNetwork" ${PYTHON_EXT_LIB}
+    install_name_tool -change "/usr/local/Trolltech/Qt-${QT_VER}/lib/QtGui.framework/Versions/4/QtGui" "@loader_path/Reality.app/Contents/Frameworks/QtGui.framework/Versions/4/QtGui" ${PYTHON_EXT_LIB}
+    popd > /dev/null
+
+  else
+    cp "${BUILD_SCRIPT_DIR}/../bin/mac/Release/Reality_DS$2.dylib" "${PLUGIN_TARGET_DIR}"
+  fi
+
+  popd > /dev/null
+}
+
+function assembleReality {
+  addAcselBundle
+
+  assemble ps none
+  # assemble ds 32
+  assemble ds 64
+  rm "${BUILD_SCRIPT_DIR}/mac/"*.zip
+}
+
+function createZipFiles {
+  sectionHeader 1 "Preparing the zip archives"
+
+  local ACSEL_DIR=ACSEL
+  local REALITY_PS_DIR=Reality_PS
+  local REALITY_PS_PU_DIR=Reality_PS_plugin
+  local REALITY_DS_DIR=Reality_DS
+  local REALITY_DS_PU64_DIR=Reality_DS64_plugin
+  # local REALITY_DS_PU32_DIR=Reality_DS32_plugin
+
+  pushd "${DEST_DIR}" > /dev/null
+  if [[ -f $POSER_ARCHIVE_NAME ]]; then
+    rm $POSER_ARCHIVE_NAME
+  fi
+
+  sectionHeader 2 "Preparing the Poser Add-ons"
+
+  local PS_ADDONS_DIR=PS_PropsAndLights
+  if [[ -d "./${PS_ADDONS_DIR}" ]]; then
+    rm -rf "./${PS_ADDONS_DIR}"
+  fi
+  mkdir "./${PS_ADDONS_DIR}"
+  cp -R "${BUILD_SCRIPT_DIR}/../assets/Poser/Reality/" "${PS_ADDONS_DIR}"
+
+  # LuxRender
+  sectionHeader 1 "Including LuxRender..."
+  local LUX_SRC_DIR=/Volumes/Drobo/product-deployment/LuxRender/stable/OSX
+  local LUX_OCL_DEPLOYMENT_DIR="luxrender-ocl"
+  local LUX_NOOCL_DEPLOYMENT_DIR="luxrender-no-ocl"
+  if [[ ! -d "${LUX_OCL_DEPLOYMENT_DIR}" ]]; then
+    mkdir -p "${LUX_OCL_DEPLOYMENT_DIR}"
+  fi
+  if [[ ! -d "${LUX_NOOCL_DEPLOYMENT_DIR}" ]]; then
+    mkdir -p "${LUX_NOOCL_DEPLOYMENT_DIR}"
+  fi
+  cp -r "${LUX_SRC_DIR}/LuxRender.app" "${LUX_OCL_DEPLOYMENT_DIR}"
+
+  sectionHeader 2 "Creating the Poser archive..."
+
+  PS_ARCHIVE_NAME="Reality_Poser.zip"
+  if [[ -f $PS_ARCHIVE_NAME ]]; then
+    rm $PS_ARCHIVE_NAME
+  fi
+  zip -9r $PS_ARCHIVE_NAME ${REALITY_PS_DIR}/* ${REALITY_PS_PU_DIR}/* \
+          ${PS_ADDONS_DIR}/* ${ACSEL_DIR}/* ${LUX_OCL_DEPLOYMENT_DIR}/*
+
+  popd > /dev/null
+
+  sectionHeader 2 "Preparing the Studio Add-ons"
+
+  pushd "${DEST_DIR}" > /dev/null
+  local DS_ADDONS_DIR=DS_PropsAndLights
+  if [[ -d "./${DS_ADDONS_DIR}" ]]; then
+    rm -rf "./${DS_ADDONS_DIR}"
+  fi
+  mkdir "./${DS_ADDONS_DIR}"
+  cp -R "${BUILD_SCRIPT_DIR}/../assets/DS/Reality/" ${DS_ADDONS_DIR}
+
+  sectionHeader 2 "Creating the DAZ Studio archives..."
+
+  local DS64_ARCHIVE_NAME="Reality_DS64.zip"
+  # local DS32_ARCHIVE_NAME="Reality_DS32.zip"
+  # if [[ -f $DS32_ARCHIVE_NAME ]]; then
+  #   rm $DS32_ARCHIVE_NAME
+  # fi
+  if [[ -f $DS64_ARCHIVE_NAME ]]; then
+    rm $DS64_ARCHIVE_NAME
+  fi
+  # zip -9r $DS32_ARCHIVE_NAME ${REALITY_DS_DIR}/* ${REALITY_DS_PU32_DIR}/* \
+  #         ${DS_ADDONS_DIR}/* ${ACSEL_DIR}/* > /dev/null
+
+  zip -9r $DS64_ARCHIVE_NAME ${REALITY_DS_DIR}/* \
+          ${REALITY_DS_PU64_DIR}/* ${DS_ADDONS_DIR}/* ${ACSEL_DIR}/* \
+          ${LUX_OCL_DEPLOYMENT_DIR}/* 
+
+  popd > /dev/null
+}
+
+# Updates the version number in the Installer configuration file
+# with the number for the latest build.
+function setRealityVersionNumber {
+  "${BUILD_SCRIPT_DIR}/"writeVersionNumberToInstaller.pl "${1}" "${2}"
+}
+
+function createInstaller {
+  local TARGET="none"
+  local APP_CODE="none"
+  local BITNESS=64
+
+  if [[ $# -lt 2 ]]; then
+    echo "Function createInstaller requires two parameters" 
+    echo "For example: createInstaller ds 32"
+    exit
+  fi
+
+  case $1 in
+    poser)
+      TARGET=poser
+      APP_CODE=Poser
+      EDITION="Poser Edition"
+      ;;
+    ds)
+      TARGET=ds
+      APP_CODE=DS
+      EDITION="DAZ Studio Edition"
+      ;;
+    *)
+      echo "createInstaller() : the first paremeter must be either 'poser' or 'ds'"
+      echo "You have specified: $1"
+      exit
+      ;;
+  esac
+
+  case $2 in
+    32|64)
+      BITNESS=$2
+      ;;
+    none)
+      BITNESS=""
+      ;;
+    *)
+      echo "createInstaller(): the second parameter must be either 32,64 or none"
+      exit
+      ;;
+  esac
+
+  sectionHeader 1 "Creating the installer for ${APP_CODE} -- ${BITNESS}-bit version"
+
+  local INSTALLER_DIR="/Volumes/Drobo/product-deployment/Reality_installer"
+  # # Build the installer program first
+  # pushd "${INSTALLER_DIR}/build-mac" > /dev/null
+  # cmake --build . --config Release > /dev/null
+  # popd > /dev/null
+
+  pushd "${BUILD_SCRIPT_DIR}" > /dev/null
+
+  local DEPLOY_DIR=""
+  if [[ "$TARGET" == "ds" ]]; then
+    DEPLOY_DIR="./deploy/${TARGET}/Reality_${APP_CODE}_mac${BITNESS}"
+  else
+    DEPLOY_DIR="./deploy/${TARGET}/Reality_${APP_CODE}_mac"
+  fi
+
+  local ASSETS_DIR="${DEPLOY_DIR}/assets"
+
+  if [[ ! -d "${ASSETS_DIR}" ]]; then
+    mkdir -p "${ASSETS_DIR}"
+  fi
+
+  cp -r "${INSTALLER_DIR}/mac/RealityInstaller.app" $DEPLOY_DIR
+
+  local CFG_FILE_NAME=RealityInstaller.cfg
+  local DEST_CFG_FILE_NAME="${DEPLOY_DIR}/${CFG_FILE_NAME}"
+  local SRC_CFG_FILE_NAME="${INSTALLER_DIR}/config/${TARGET}${BITNESS}/${CFG_FILE_NAME}"
+  # The file that contains the build number
+  local BUILD_NO_FILE_NAME="${BUILD_SCRIPT_DIR}/../src/core/ReAppVersion.cpp"
+
+  cp -v $SRC_CFG_FILE_NAME $DEST_CFG_FILE_NAME
+  setRealityVersionNumber "${BUILD_NO_FILE_NAME}" "${DEST_CFG_FILE_NAME}"
+
+  # Copy the Installation.pdf file
+  cp -v "${BUILD_SCRIPT_DIR}/../documentation/Installation.pdf" "${DEPLOY_DIR}"
+
+  local INST_ASSETS="bg.png install_01.png install_02.png install_03.png install_04.png RealityLicense.txt"
+  for fn in $INST_ASSETS; do
+    cp "${INSTALLER_DIR}/config/${fn}" "${ASSETS_DIR}"
+  done
+  cp "mac/Reality_${APP_CODE}${BITNESS}.zip" "${ASSETS_DIR}"
+
+  popd > /dev/null
+
+  # Create the DMG for delivery
+  pushd "${BUILD_SCRIPT_DIR}/deploy/${TARGET}" > /dev/null
+  # zip -9r Reality_${APP_CODE}_mac${BITNESS}.zip Reality_${APP_CODE}_mac${BITNESS}/* > /dev/null
+  hdiutil create -size 250m -ov Reality_${APP_CODE}_mac${BITNESS}.dmg \
+          -srcfolder Reality_${APP_CODE}_mac${BITNESS} \
+          -volname "Reality 4.3 - ${EDITION}"
+  popd > /dev/null  
+}
+
+sectionHeader 1 " Building Reality Poser and Studio Editions"
+
+# Find the absolute path of this script
+pushd $(dirname $0)  > /dev/null
+BUILD_SCRIPT_DIR=`pwd`
+cd ..
+APP_BIN_DIR=`pwd`/bin/mac/Release
+echo "Bin dir: ${APP_BIN_DIR}" 
+popd > /dev/null
+
+DOBUILD="y"
+
+while getopts "n" opt; do
+  case $opt in
+    n)
+      DOBUILD="n"
+      ;;
+  esac
+done
+
+PLATFORM=`uname`
+if [ "${PLATFORM}" == "Darwin" ]; then
+  OS="OSX"
+else
+  OS="Windows"
+fi
+
+echo "Platform: ${OS}"
+
+DEST_DIR="${BUILD_SCRIPT_DIR}/mac"
+REALITY_LIB_NAME="Reality_lib"
+REALITY_LIBRARY_FILE_NAME="${REALITY_LIB_NAME}.dylib"
+APP_FULL_NAME="Reality.app"
+APP_FULL_PATH="${APP_BIN_DIR}/${APP_FULL_NAME}/Contents/MacOS/Reality"
+LIBRARY_FULL_PATH="${APP_BIN_DIR}/${APP_FULL_NAME}/Contents/MacOS/${REALITY_LIBRARY_FILE_NAME}"
+
+if [[ ! -d ${DEST_DIR} ]]; then
+  mkdir -p "${DEST_DIR}"
+fi
+
+if [ "${DOBUILD}" == "y" ] ; then
+  rm $COMPILER_LOG
+  compileReality
+fi
+
+assembleReality
+
+createZipFiles
+createInstaller poser none
+# createInstaller ds 32
+createInstaller ds 64
+
+sectionHeader 1 "Done!"
+
