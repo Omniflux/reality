@@ -1,0 +1,36 @@
+Howdy!
+
+Thank you for looking at Reality. This project is quite complex to build. I haven't done it in 3 years so I'm going by memory here. Bear with me.
+
+First of all, Reality is designed to be built on both Mac OS and Windows but I developed the project on Mac OS and so a few things are Mac-centric. 
+This doesn't mean that you need a Mac to build it. It's just that it might be a bit easier to start with a Mac. 
+
+Ironically, I recently switched to Windows. Life is weird... :)
+
+TOOLS NEEDED
+============
+
+- CMake 2.8
+- Qt 4.8 (see the repo reality-libs)
+- Visual Studio 10 (Windows)
+- XCode (Mac OS)
+- Most libraries, Boost, ZeroMQ, SQLite, are included in the libs directory
+
+Qt is used throughout the project for both the UI and other services like containers. It's at version 4.8 because I never managed
+to include Qt 5. As far as I know, DS uses 4.8 as well. This will probably change soon. 
+
+I have made special versions of Qt to bypass a couple of bugs and to streamline the process. On Mac OS Reality is a fat binary, providing both 32-bit and 64-bit
+binaries in a single executable. This should be probably changed to just include 64-bit support, since 32-bit apps have been phased out by Apple.
+
+The binaries of Qt for both Mac OS and Windows are available in a separate repository: reality-libs. Clone it to your machine and then unzip the libraries and
+copy them to a suitable location. You will need to change the makeproj and makeproj.bat scripts to point to the location of those libraries.
+
+Compilation is done from the command-line. That is, Terminal in Mac OS or cmd in Windows.
+
+With cmake 2.8 installed you run the script makeproj like this:
+
+--
+Paolo Ciccone
+October 8th, 2019
+
+To be completed...
