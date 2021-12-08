@@ -16,6 +16,14 @@ TOOLS NEEDED
 - XCode (Mac OS)
 - Most libraries, Boost, ZeroMQ, SQLite, are included in the libs directory
 
++++++
+a) Open Source QT binaries Online Installer: 1) Sign Up for QT.IO account 2) Install PATH changed from DEFAULT C:\QT to C:\bin\QT 
+                                             3) Install following build tool chain: Default (currently QT Creator 4.11.1 + QT Creator 4.11.1 CBD Debugger Support + Debugging Tools for Windows
+                                                + MinGW 7.3.0 64-bit + CMake 3.16.0 64-bit
+                                             4) Accept Licenses' Terms 5) Menu Group: default
+b) 
+c) 
+
 Qt is used throughout the project for both the UI and other services like containers. It's at version 4.8 because I never managed
 to include Qt 5. As far as I know, DS uses 4.8 as well. This will probably change soon. 
 

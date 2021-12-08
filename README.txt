@@ -11,7 +11,7 @@ many fronts but there is realy nothing that we can do. The python layer is a bro
 and Reality. 
 
 Reality itself is broken down into two components: the UI and the working library. The UI communicates
-with the plugin, either the DS or Ppser one, using message passign protocol via the ZeroMQ library. 
+with the plugin, either the DS or Poser one, using message passign protocol via the ZeroMQ library. 
 
 ZMQ uses TCP/IP for message passing. See the documentation for that library for more details.
 
