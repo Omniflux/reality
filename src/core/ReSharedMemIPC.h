@@ -13,8 +13,10 @@
 #include "ReIPCCommands.h"
 
 #define BOOST_DATE_TIME_NO_LIB 1
+#ifndef Q_MOC_RUN
 #include <boost/interprocess/shared_memory_object.hpp>
 #include <boost/interprocess/mapped_region.hpp>
+#endif
 
 //! The name of the shared memory segment used to share the render options.
 #define SHM_SCENE_RENDER_OPTIONS_NAME  "ReSceneRenderOptions"
