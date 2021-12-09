@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "my-paths",
+      "hidden": true,
+      "displayName": "My Paths",
+      "description": "My custom dependency paths",
+      "environment": {
+        "BOOST_ROOT": "E:/Reality/boost_1_54_0",
+        "DAZStudioSDK_ROOT_DIR": "D:/3D/DAZ 3D/DAZStudio4.5+ SDK"
+      }
+    },
+    {
+      "name": "my-paths-x64",
+      "hidden": true,
+      "displayName": "My Paths x64",
+      "description": "My custom x64 dependency paths",
+      "environment": {
+        "QTDIR": "E:/Reality/Qt/4.8.7-x64/qt-4.8.7-x64-msvc2010"
+      }
+    },
+    {
+      "name": "my-paths-x86",
+      "hidden": true,
+      "displayName": "My Paths x86",
+      "description": "My custom x86 dependency paths",
+      "environment": {
+        "QTDIR": "E:/Reality/Qt/4.8.7-x86"
+      }
+    },
+    {
+      "name": "my-windows-x64-debug",
+      "displayName": "Windows x64 Debug",
+      "inherits": [ "my-paths-x64", "my-paths", "windows-x64-debug" ],
+      "description": "Target Windows x64 Debug with the Visual Studio development environment with my customizations."
+    },
+    {
+      "name": "my-windows-x64-release",
+      "displayName": "Windows x64 Release",
+      "inherits": [ "my-paths-x64", "my-paths", "windows-x64-release" ],
+      "description": "Target Windows x64 Release with the Visual Studio development environment with my customizations."
+    },
+    {
+      "name": "my-windows-x86-debug",
+      "displayName": "Windows x86 Debug",
+      "inherits": [ "my-paths-x86", "my-paths", "windows-x86-debug" ],
+      "description": "Target Windows x86 Debug with the Visual Studio development environment with my customizations."
+    },
+    {
+      "name": "my-windows-x86-release",
+      "displayName": "Windows x86 Release",
+      "inherits": [ "my-paths-x86", "my-paths", "windows-x86-release" ],
+      "description": "Target Windows x86 Release with the Visual Studio development environment with my customizations."
+    }
+  ]
+}
