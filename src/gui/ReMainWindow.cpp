@@ -9,8 +9,6 @@
 #include "RealityBase.h"
 #include "ReMaterials.h"
 #include "ReTools.h"
-#include "crc.h"
-#include "RealityCRC.h"
 
 #include "ui_reAbout.h"
 #include "ui_reWatermark.h"
@@ -27,9 +25,6 @@
 // hacking more difficult.
 
 // extern bool RealityIsRegistered;
-
-RE_LIB_ACCESS extern int RealityCRC;
-extern int computedCRC;
 
 using namespace Reality;
 
@@ -173,26 +168,6 @@ ReMainWindow::ReMainWindow(const HostAppID& appID,
   statusBar()->addWidget(sbMessages,1);
   
   readWindowConfig();
-
-  int computedCRC;
-  QFile self(getApplicationPath().data());  
-  if (self.open(QIODevice::ReadOnly)) {
-    QByteArray selfData = self.readAll();
-    self.close();
-    computedCRC = crcFast(selfData.data(), selfData.count());
-    #ifndef NDEBUG
-    RE_LOG_INFO() << "CRC: " << computedCRC
-                  << " Stored CRC: " << getIconResource();
-    #endif
-  }
-
-  // Verify integrity of the executable
-  if (computedCRC != getIconResource()) {
-    #ifdef NDEBUG
-    // Andromeda
-    exit(601);
-    #endif
-  }
 }
 
 ReMainWindow* ReMainWindow::getRealityMainWindow() {

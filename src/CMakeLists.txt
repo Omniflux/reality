@@ -289,7 +289,6 @@ set (SRC_GROUP_GUI
 	gui/Reality.cpp
 
 	core/ReAppVersion.cpp
-	core/crc.c
 	data/ReSceneDataModel.cpp
 
 	gui/RealityPanel/RealityDataRelay.cpp
@@ -463,7 +462,7 @@ source_group ("Textures and Mats" FILES ${SRC_GROUP_TEXTURES_MATS})
 set (SRC_GROUP_LIBRARY
 	data/ReDefs.cpp
 	core/ReAppVersion.cpp
-	core/RealityCRC.cpp
+
 	# Logging
 	core/ReLogger.cpp
 	# IPC and core features
@@ -472,7 +471,6 @@ set (SRC_GROUP_LIBRARY
 	# The order of initialization is important.
 	core/ReLuxRunner.cpp
 	core/zeromqTools.cpp
-	core/crc.c
 	data/RealityRunner.cpp
 	# Data handling
 	data/ReTools.cpp
@@ -525,6 +523,7 @@ set (SRC_GROUP_LIBRARY
 source_group ("Reality Library" FILES ${SRC_GROUP_LIBRARY})
 
 set (SRC_GROUP_POSER_ADDON
+	core/crc.c
 	Poser/RePythonTools.cpp
 	Poser/Reality_ext.cpp
 	Poser/RePoserInterface.cpp
@@ -540,6 +539,7 @@ set (HEADER_GROUP_DAZ_STUDIO_PLUGIN
 )
 
 set (SRC_GROUP_DAZ_STUDIO_PLUGIN
+	core/crc.c
 	Studio/Reality_DS.cpp
 	Studio/RealityAction.cpp
 	Studio/ReDSMaterialConverter.cpp
@@ -705,32 +705,4 @@ target_sources (Reality_Executable PRIVATE
 	${SRC_GROUP_OTHER_EDITORS}
 	${SRC_GROUP_TEXTURE_EDITORS}
 	${SRC_GROUP_MATERIAL_EDITORS}
-)
-
-# Reality uses a CRC value to verify that the program has not being
-# tampered with. The value is a CRC of the whole executable. Since
-# storing a value in the executable would change the computed crc,
-# the control value, calulated at build time, is stored in the
-# Reality dynamic library. The cycle therefore goes like this:
-#
-# - Compile the library and the executable
-# - Compute the crc value for the executable and store it
-#   in a C source whihc is included in the build of the library
-# - Re-compile the library
-#
-# The tool used to compute the CRC for Reality is called compute_crc
-# and it's built by the following commands
-
-add_executable (Compute_CRC EXCLUDE_FROM_ALL)
-target_include_directories (Compute_CRC PRIVATE core)
-target_link_libraries (Compute_CRC PRIVATE Qt4::QtCore)
-
-target_sources (Compute_CRC PRIVATE
-	tools/compute_crc.cpp
-	core/crc.c
-)
-
-add_custom_command (TARGET Reality_Executable POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E env "PATH=$<TARGET_FILE_DIR:Qt4::QtCore>" $<TARGET_FILE:Compute_CRC> $<TARGET_FILE:Reality_LIB> $<TARGET_FILE:Reality_Executable>
-	VERBATIM
 )
