@@ -62,3 +62,18 @@ This does not work at the moment, need help from an OS X developer to fix `CMake
 ## Building installation packages
 This does not work at the moment, needs to be reimplemented for [CPack](https://cmake.org/cmake/help/latest/module/CPack.html)
 
+
+## TODO
+- Fix OS X builds
+- Remove authentication
+- Implement building bundles/installers with CMake
+- Fix OpenCL loading on Windows
+  - QLibrary (LoadModule) should not be called in DllMain. It does not work with OpenCL ICD >= 3.1, and only worked in earlier versions by chance.
+  - OR remove OpenCL functionality if no longer useful
+- Port Poser 11 addon to Poser 12
+  - Poser switched from Python 2 to Python 3
+- Separate DAZ Studio Plugin from Reality so both DS 4 and DS 5+ plugins can exist
+  - DS 4 Plugin must be Qt 4 while DS 5 Plugin will required Qt 5+
+- Update build dependencies
+  - Requires separating DS 4 Plugin because plugin must be built with a very old compiler (MSVC 10)
+- Update Reality to Qt 5+
