@@ -216,7 +216,7 @@ public:
     if (!mat) {
       return "";
     }
-    if (!mat->getType() == MatLight) {
+    if (!(mat->getType() == MatLight)) {
       return "";
     }
 
