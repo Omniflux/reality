@@ -585,7 +585,7 @@ QString reMapDebug( const QVariantMap& map, int level ) {
     QString key = i.key();
     int keyLength = key.length();
     QString keyIndent;
-    for (int i = 0; i < keyLength; i++) {
+    for (int j = 0; j < keyLength; j++) {
       keyIndent += " ";
     }
     QVariant value = i.value();
