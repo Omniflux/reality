@@ -20,10 +20,8 @@ void LuxLibraryLoader::initLuxLibrary( const QString& libraryPath ) {
 
 #if defined(Q_WS_MAC)  
   luxLibrary.setFileName(QString("%1/LuxRender.app/Contents/MacOS/liblux").arg(libraryPath));
-  luxLibrary.load();
-#elif defigned(Q_WS_WIN)
-  luxLibrary(QString("%1/lux.dll").arg(libraryPath));
-  luxlibrary.load();  
+#elif defined(Q_WS_WIN)
+  luxLibrary.setFileName(QString("%1/lux.dll").arg(libraryPath));
 #endif
   luxLibrary.load();
   isLuxLibraryLoaded = luxLibrary.isLoaded();
