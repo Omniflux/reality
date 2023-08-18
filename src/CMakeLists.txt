@@ -39,7 +39,7 @@ add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-std
 # Find dependencies
 set (Boost_USE_STATIC_LIBS ON)
 
-find_package (Boost 1.54.0 REQUIRED COMPONENTS chrono date_time program_options python regex system thread)
+find_package (Boost 1.54.0 REQUIRED COMPONENTS atomic program_options python)
 find_package (Qt4 4.8.7 REQUIRED COMPONENTS QtGui QtNetwork QtWebKit)
 find_package (OpenCL REQUIRED)
 find_package (Python2 2.6...<2.7 REQUIRED COMPONENTS Development.Module) # Rebuild Boost to depend on 2.7
@@ -575,7 +575,7 @@ add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL SQLITECPP_ENABLE_ASSERT_HANDLER $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_include_directories (Reality_Widgets PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
-target_link_libraries (Reality_Widgets PRIVATE Boost::date_time Boost::regex Boost::system Boost::thread OpenCL::OpenCL Qt4::QtGui)
+target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui)
 target_link_libraries (Reality_Widgets PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
@@ -600,7 +600,7 @@ add_library (Reality_LIB SHARED)
 target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> PUBLIC SQLITECPP_ENABLE_ASSERT_HANDLER)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_include_directories (Reality_LIB PUBLIC ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
-target_link_libraries (Reality_LIB PUBLIC Boost::date_time Boost::regex Boost::system Boost::thread OpenCL::OpenCL Qt4::QtGui)
+target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui)
 target_link_libraries (Reality_LIB PUBLIC libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 
 target_sources (Reality_LIB PRIVATE
@@ -617,7 +617,7 @@ add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED SQLITECPP_ENABLE_ASSERT_HANDLER $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
 target_include_directories (Reality_DS PRIVATE core data)
 target_include_directories (Reality_DS PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
-target_link_libraries (Reality_DS PRIVATE Boost::date_time Boost::chrono Boost::regex Boost::thread OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK)
+target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK)
 target_link_libraries (Reality_DS PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
 
@@ -646,7 +646,7 @@ Python2_add_library (Reality_PY MODULE)
 target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
-target_link_libraries (Reality_PY PRIVATE Boost::date_time Boost::python Boost::regex Boost::system Boost::thread OpenCL::OpenCL)
+target_link_libraries (Reality_PY PRIVATE Boost::python OpenCL::OpenCL)
 target_link_libraries (Reality_PY PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 #set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
