@@ -1,2 +1,5 @@
 .DS_Store
 .vs
+build
+src/CMakeUserPresets.json
+src/gui/resources/textResources/Reality.css
