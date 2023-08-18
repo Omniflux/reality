@@ -512,18 +512,6 @@ QPushButton::menu-indicator {
    image: none;
 }
 
-QPushButton#btnProductUsage {
-  #ifdef OSX  
-  font-size: 10pt;
-  #endif
-
-  #ifdef WINDOWS
-  font-size: 8pt;
-  #endif
-  min-height: 0.8em;
-  max-height: 0.8em;
-}
-
 QPushButton[class="BreadcrumbBtn"] {
   min-width: 0.8em;
   max-width: 0.8em;

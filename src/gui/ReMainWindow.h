@@ -40,19 +40,9 @@ private:
   void readWindowConfig();
   QNetworkAccessManager* networkManager;
 
-  //! The size of the data thatwe will receive from the licensing server
-  int licenseDataSize;
-
-  // The server response data when we ask for updates/license verification
-  QByteArray licenseResponse;
-
   //! We keep track which app called us
   HostAppID appID;
 
-  /**
-   * This function checks the validity of the serial number. In the 
-   * future it will also provide update notifications for the user.
-   */
   void checkForUpdates( const QString& hostVersion );
 
   //! This method configures all the actions associated with the main window.
@@ -105,9 +95,6 @@ private slots:
   void showWatermark();
 
   void saveWatermark( const QUrl& link );
-
-  //! Delete the serial number
-  void unregisterReality();
 
   void processUpdateInfo(QNetworkReply* reply);
   void processConnectionErrors(QNetworkReply::NetworkError error);

@@ -1516,29 +1516,6 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="0">
-                     <widget class="QCheckBox" name="chbJoinProductUsageSurvey">
-                      <property name="toolTip">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;To help making Reality able to adapt to your artistic style, the program&lt;br&gt;gathers some information about the textures that you place in the scenes.&lt;br&gt;If this options is enabled the file names of the textures used are sent to&lt;br&gt;the cloud. &lt;br&gt;The information sent is completely anonymous and it helps us make Reality better. Click on the button &lt;br&gt;for more details.&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                      <property name="text">
-                       <string>Texture usage survey </string>
-                      </property>
-                      <property name="checked">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QPushButton" name="btnProductUsage">
-                      <property name="text">
-                       <string>What's this?</string>
-                      </property>
-                      <property name="flat">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
                    </layout>
                   </widget>
                  </item>

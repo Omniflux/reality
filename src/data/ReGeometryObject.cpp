@@ -40,7 +40,6 @@
 #include "ReLogger.h"
 #include "ReTools.h"
 #include "ReAcsel.h"
-#include "ReProductUsage.h"
 
 #include "exporters/json/ReJSONMaterialExporterFactory.h"
 
@@ -69,8 +68,6 @@ QString ReGeometryObject::computeAcselID( const QString& matID,
     }
     // Add the alpha map
     getImageMaps(matInfo.alphaMap, textures);
-    // Send the textures to the Texture Survey Service
-    ReProductUsage::getInstance()->storeFileNames(textures);
   }
 
   return ReAcsel::getInstance()->getAcselID(

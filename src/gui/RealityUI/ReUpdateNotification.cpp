@@ -7,6 +7,7 @@
 #include <QtGui/QDesktopServices>
 
 ReUpdateNotification::ReUpdateNotification( QWidget* parent ) : QDialog(parent) {
+  url = QString::fromUtf8(HOMEPAGE_URL);
   ui.setupUi(this);
   connect(ui.btnClose,SIGNAL(clicked()),this,SLOT(reject()));
   connect(ui.btnDownload,SIGNAL(clicked()),this,SLOT(download()));
@@ -17,5 +18,5 @@ ReUpdateNotification::~ReUpdateNotification() {
 };
 
 void ReUpdateNotification::download() {
-  QDesktopServices::openUrl(QString("http://preta3d.com/download-reality/"));
+  QDesktopServices::openUrl(url);
 }

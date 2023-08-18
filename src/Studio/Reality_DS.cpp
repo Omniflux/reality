@@ -22,7 +22,6 @@
 #include "ReDSTools.h"
 #include "ReAcsel.h"
 #include "ReRenderContext.h"
-#include "ReDRM.h"
 // #include "ReDSDebugTools.h"
 #include "crc.h"
 
@@ -94,7 +93,6 @@ static QString RealityDescription = QString(
  "This plugin is a component of Reality for DAZ Studio by Pret-A-3D.<br> "
  "Reality for DAZ Studio is copyright (c) 2010 by Pret-A-3D.<br>"
  "Reality plugin is a trademark by Pret-a-3D. All rights reserved.\n"
- "<p>Please visit <a href=\"http://preta3d.com\">preta3d.com</a> for the latest news about Reality</p>"
  "<p>Pret-A-3D would like to thank the developers of LuxRender, their vision, "
  "genius and generosity made having this kind of rendering for Studio "
  "possible.</p><p>Please visit "
@@ -118,7 +116,6 @@ Reality_DS::Reality_DS():
            REALITY_BUILD_NUMBER
            ) 
 { 
-  dataSize = 0;
   sceneLevel = 0;
   isSceneLoading = false;
   sceneIsMerging = false;
@@ -149,9 +146,6 @@ DZ_PLUGIN_REGISTER_SCENEDATA_EXTRA_OBJECT_IO( "ReSceneDataBlock",
                                               ReSceneBlock );
 
 /****************************************************/
-
-void Reality_DS::checkForUpdates() {
-};
 
 void Reality_DS::installHooks() {
   connect(dzScene, SIGNAL(cameraRemoved(DzCamera*)), this, SLOT(cameraRemoved(DzCamera*)));

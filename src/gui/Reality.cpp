@@ -12,7 +12,6 @@
 
 #include "ReAppVersion.h"
 #include "ReMainWindow.h"
-#include "ReDRM.h"
 #include "ReAcsel.h"
 #include "ReSharedMemIPC.h"
 #include "ui_reCommandLineOptions.h"
@@ -21,8 +20,6 @@
 #include <sstream>
 
 namespace bpo = boost::program_options;
-
-// bool RealityIsRegistered = false;
 
 /**
  * Proxy Style used to disable the rounded top and bottom margins of 
@@ -299,22 +296,6 @@ int main(int argc, char **argv) {
   }
   RealityBase::getRealityBase()->setHostAppID(appID);
   
-  // DRM STARTS HERE
-  ReLuxManager registrationManager(&splash);
-
-  bool tamperCheck = registrationManager.verify();
-
-  // Let's check if hackers have bypassed the check for protection...
-  if (!tamperCheck) {
-    RealityIsRegistered = false;
-    return 0;
-  };
-
-  // Decoy
-  if (!RealityIsRegistered) {
-    return 0;
-  }
-
   RealityMainWindow = new ReMainWindow(appID, ipAddress, hostVersion);
   splash.hide();
   RealityMainWindow->show();
@@ -324,12 +305,6 @@ int main(int argc, char **argv) {
     RealityMainWindow->raise();
     RealityMainWindow->activateWindow();
 #endif  
-
-  // Decoy. One more time. Seet ReMainWindow's ctor for real check and exit
-  // point
-  if (!RealityIsRegistered) {
-    return 0;
-  }
 
   return app.exec();
 }

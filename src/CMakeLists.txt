@@ -21,7 +21,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 # Setup Project
-project (Reality VERSION 4.3.0 DESCRIPTION "Reality for DAZ Studio and Poser" LANGUAGES CXX)
+project (Reality VERSION 4.3.0 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES CXX)
 
 # Get target architecture
 if (CMAKE_SIZEOF_VOID_P EQUAL 4)
@@ -135,7 +135,6 @@ set (SRC_GROUP_QT_UI
 	gui/uiFiles/reAbout.ui
 	gui/uiFiles/reWatermark.ui
 	gui/uiFiles/reExportProgress.ui
-	gui/uiFiles/reProdRegDialog.ui
 	gui/uiFiles/ReSlider.ui
 	gui/uiFiles/ReUpdateNotification.ui
 	gui/uiFiles/reAcselSave.ui
@@ -273,7 +272,6 @@ set (HEADER_GROUP_GUI
 	gui/RealityUI/ReExportProgressDialog.h
 	gui/RealityUI/ReUpdateNotification.h
 	gui/RealityPanel/realitypanel.h
-	gui/RegistrationDialog.h
 	gui/ReMainWindow.h
 	gui/RealityUI/ReAcselSave.h
 	gui/RealityUI/ReAcselMgr.h
@@ -307,10 +305,6 @@ set (SRC_GROUP_GUI
 	gui/RealityUI/ReUniversalShaderWidget.cpp
 	gui/RealityUI/ReUniversalShaderSelector.cpp
 	gui/RealityUI/ReConfirmationDialog.cpp
-
-	# DRM
-	core/ReDRM.cpp
-	gui/RegistrationDialog.cpp
 
 	gui/RealityPanel/realitypanel.cpp
 	gui/ReMainWindow.cpp
@@ -516,11 +510,6 @@ set (SRC_GROUP_LIBRARY
 	data/ReAcsel.cpp
 	# OpenCL
 	core/ReOpenCL.cpp
-	# DRM
-	core/ReUserData.cpp
-	core/blowfish.cpp
-	data/ReHttpClient.cpp
-	data/ReProductUsage.cpp
 )
 source_group ("Reality Library" FILES ${SRC_GROUP_LIBRARY})
 
@@ -587,7 +576,7 @@ target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED QJSON_MAK
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_include_directories (Reality_Widgets PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
 target_link_libraries (Reality_Widgets PRIVATE Boost::date_time Boost::regex Boost::system Boost::thread OpenCL::OpenCL Qt4::QtGui)
-target_link_libraries (Reality_Widgets PRIVATE libzmq-static qjson)
+target_link_libraries (Reality_Widgets PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
 target_sources (Reality_Widgets PRIVATE
@@ -612,7 +601,7 @@ target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL
 target_include_directories (Reality_LIB PUBLIC core data)
 target_include_directories (Reality_LIB PUBLIC ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
 target_link_libraries (Reality_LIB PUBLIC Boost::date_time Boost::regex Boost::system Boost::thread OpenCL::OpenCL Qt4::QtGui)
-target_link_libraries (Reality_LIB PUBLIC libzmq-static qjson)
+target_link_libraries (Reality_LIB PUBLIC libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 
 target_sources (Reality_LIB PRIVATE
 	${SRC_GROUP_SQLITE}
@@ -629,7 +618,7 @@ target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED SQLITECPP_ENAB
 target_include_directories (Reality_DS PRIVATE core data)
 target_include_directories (Reality_DS PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
 target_link_libraries (Reality_DS PRIVATE Boost::date_time Boost::chrono Boost::regex Boost::thread OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK)
-target_link_libraries (Reality_DS PRIVATE libzmq-static qjson)
+target_link_libraries (Reality_DS PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -658,7 +647,7 @@ target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MA
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
 target_link_libraries (Reality_PY PRIVATE Boost::date_time Boost::python Boost::regex Boost::system Boost::thread OpenCL::OpenCL)
-target_link_libraries (Reality_PY PRIVATE libzmq-static qjson)
+target_link_libraries (Reality_PY PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 #set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -681,6 +670,7 @@ target_sources (Reality_PY PRIVATE
 
 # Configure Reality executable
 add_executable (Reality_Executable WIN32) #MACOSX_BUNDLE
+target_compile_definitions (Reality_Executable PRIVATE HOMEPAGE_URL="${CMAKE_PROJECT_HOMEPAGE_URL}")
 target_include_directories (Reality_Executable PRIVATE gui gui/actions gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_link_libraries (Reality_Executable PRIVATE Boost::program_options Qt4::QtWebKit)
 target_link_libraries (Reality_Executable PRIVATE Reality_LIB)

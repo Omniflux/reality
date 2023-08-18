@@ -135,13 +135,6 @@ class RE_LIB_ACCESS Reality_DS: public DzPlugin {
 
     bool sceneIsMerging;
 
-    QString orderNo,
-            serialNo;
-    //! An unsigned int that stores the size of the data sent by the server
-    int dataSize;
-    //! The server response data when we ask for updates/license verification
-    QByteArray response;
-
     /**
      * A flag to signal if the addition of nodes should be suspended
      * This is used when we load data from the scene. Studio notifies
@@ -158,17 +151,6 @@ class RE_LIB_ACCESS Reality_DS: public DzPlugin {
      */
     static bool nodeAdditionActive;
 
-    /**
-     * Anti-tamper system to detect possible hacking of the binary code.
-     */
-    enum tamperFlags {
-      TAMPER_START            = 0xA0,
-      NEW_REGISTRATION        = 0xF0,
-      NEW_REGISTRATION_PASSED = 0xC0,
-      OLD_REGISTRATION,
-      OLD_REGISTRATION_PASSED,
-      TAMPER_CLEAR            = 0xA1
-    };
     //! Table used to list the materials that need to be refreshed.
     //! The table is index by <object id>::<material name> and it 
     //! contains the material index provided by Studio
@@ -261,9 +243,8 @@ class RE_LIB_ACCESS Reality_DS: public DzPlugin {
 
     static Reality_DS* getInstance();
 
-    //! Constructor. It initializes the base class and sets
-    //! the data structures for the DRM. It also initializes
-    //! the skeleton-to-file-name table
+    //! Constructor. It initializes the base class and
+    //! initializes the skeleton-to-file-name table
     Reality_DS();
   
     ~Reality_DS();
@@ -283,10 +264,8 @@ class RE_LIB_ACCESS Reality_DS: public DzPlugin {
 
   protected:
 
-    void checkForUpdates();
     virtual void startup();
     virtual void shutdown();
-    bool isRegistered() const;
 
     //! Adds a Reality object to the database
     void addRealityObject( const QString& objID, 

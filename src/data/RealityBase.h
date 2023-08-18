@@ -15,7 +15,6 @@
 
 #include "ReDefs.h"
 #include "ReLuxRunner.h"
-#include "ReProductUsage.h"
 // #include "LuxApi.h"
   
 namespace Reality {
@@ -31,8 +30,6 @@ typedef QSharedPointer<QSettings> ReConfigurationPtr;
  This class implements a simple "bootstrap" sequence for the Shared Library/DLL. In here we add thinsg that need to be
  done when the shared library is loaded, which usually happens when the plug-in is loaded in the hosting
  application. 
-
- The code for the plug-in registration goes here.
 
  The logging facility is started here.
  */
@@ -82,10 +79,6 @@ private:
 
   void findRenderers();
 
-  //! Thread that sends product usage to Pret-a-3D whenever the user 
-  //! loads a Poser or DAZ Studio material preset into the scene
-  ReProductUsage* productUsage;
-  
 public:
 
   RealityBase();

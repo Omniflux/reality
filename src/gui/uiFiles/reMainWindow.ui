@@ -47,16 +47,10 @@
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionAutomatic_Presets"/>
     <addaction name="actionRUG"/>
     <addaction name="actionVideos"/>
     <addaction name="actionWatermark"/>
-    <addaction name="actionReality_forums"/>
-    <addaction name="actionReality_Freebies"/>
     <addaction name="separator"/>
-    <addaction name="actionUnregister"/>
-    <addaction name="actionLicense"/>
-    <addaction name="actionContact_Support"/>
     <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menuMaterials">
@@ -207,11 +201,6 @@
     <string>Reality User's Guide</string>
    </property>
   </action>
-  <action name="actionUnregister">
-   <property name="text">
-    <string>Unregister Reality</string>
-   </property>
-  </action>
   <action name="actionPasteWithTextures">
    <property name="text">
     <string>Paste with textures</string>
@@ -249,34 +238,9 @@
     <string>Video tutorials</string>
    </property>
   </action>
-  <action name="actionLicense">
-   <property name="text">
-    <string>Retrieve your license</string>
-   </property>
-  </action>
   <action name="actionWatermark">
    <property name="text">
     <string>Reality watermark</string>
-   </property>
-  </action>
-  <action name="actionReality_forums">
-   <property name="text">
-    <string>Reality forums</string>
-   </property>
-  </action>
-  <action name="actionAutomatic_Presets">
-   <property name="text">
-    <string>Find Automatic Presets</string>
-   </property>
-  </action>
-  <action name="actionContact_Support">
-   <property name="text">
-    <string>Contact Support</string>
-   </property>
-  </action>
-  <action name="actionReality_Freebies">
-   <property name="text">
-    <string>Reality Freebies</string>
    </property>
   </action>
  </widget>

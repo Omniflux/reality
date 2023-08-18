@@ -12,7 +12,6 @@
 
 #include "ui_reAbout.h"
 #include "ui_reWatermark.h"
-#include "ReDRM.h"
 #include "qjson/src/parser.h"
 #include "ReUpdateNotification.h"
 #include "ReAcselMgr.h"
@@ -20,16 +19,26 @@
 
 #include <stdlib.h>
 
-// DRM variables that are defined in other modules. The checks are done
-// here to avoid having a single point of failure and to make the 
-// hacking more difficult.
-
-// extern bool RealityIsRegistered;
-
 using namespace Reality;
 
 // Globally available handle on the main window
 ReMainWindow* RealityMainWindow;
+
+/**
+ * Convert a version number in the format v.sub.patch.build to a 32-bit unsigned integer
+ */
+quint32 packVersionNumber(const QString vnum) {
+    QStringList numbers = vnum.split(".");
+    if (numbers.count() != 4) {
+        return(0);
+    }
+    qint32 v;
+    v = numbers[0].toInt() << 24;
+    v += numbers[1].toInt() << 16;
+    v += numbers[2].toInt() << 8;
+    v += numbers[3].toInt();
+    return(v);
+};
 
 void loadStyleSheet( QString& styleStr ) {
   QFile styleFile(":/textResources/Reality.css");
@@ -75,25 +84,13 @@ void ReMainWindow::configureActions() {
   // Help/About menu
   connect(actionRUG,              SIGNAL(triggered()), SLOT(openRUG()));
   connect(actionVideos,           SIGNAL(triggered()), SLOT(helpMenuLinks()));
-  connect(actionLicense,          SIGNAL(triggered()), SLOT(helpMenuLinks()));
-  connect(actionAutomatic_Presets, SIGNAL(triggered()), SLOT(helpMenuLinks()));
-  connect(actionReality_forums,   SIGNAL(triggered()), SLOT(helpMenuLinks()));
-  connect(actionContact_Support,  SIGNAL(triggered()), SLOT(helpMenuLinks()));
-  connect(actionReality_Freebies, SIGNAL(triggered()), SLOT(helpMenuLinks()));
   connect(actionAbout,            SIGNAL(triggered()), SLOT(openAboutBox()));
   connect(actionWatermark,        SIGNAL(triggered()), SLOT(showWatermark()));
-  connect(actionUnregister,       SIGNAL(triggered()), SLOT(unregisterReality()));
 
   actionMgr->storeAction("rug",              actionRUG);
   actionMgr->storeAction("videos",           actionVideos);
-  actionMgr->storeAction("license",          actionLicense);
   actionMgr->storeAction("about",            actionAbout);
   actionMgr->storeAction("watermarks",       actionWatermark);
-  actionMgr->storeAction("unregister",       actionUnregister);
-  actionMgr->storeAction("automaticPresets", actionAutomatic_Presets);
-  actionMgr->storeAction("forums",           actionReality_forums);
-  actionMgr->storeAction("support",          actionContact_Support);
-  actionMgr->storeAction("freebies",         actionReality_Freebies);
 
   // ACSEL Menu
   connect(actionACSEL_manager, SIGNAL(triggered()), 
@@ -129,7 +126,7 @@ ReMainWindow::ReMainWindow(const HostAppID& appID,
   appID(appID)
 {
   RealityMainWindow = this;  
-  licenseDataSize = 0;
+
   checkForUpdates(hostVersion);
 
   setupUi(this);
@@ -212,23 +209,8 @@ void ReMainWindow::openRUG() {
 void ReMainWindow::helpMenuLinks() {
   auto source = QObject::sender()->objectName();
 
-  if (source == "actionAutomatic_Presets") {
-    QDesktopServices::openUrl(QUrl("http://preta3d.com/reality-automatic-presets/"));
-  }
-  else if ( source == "actionVideos") {
+ if ( source == "actionVideos") {
     QDesktopServices::openUrl(QUrl("http://www.youtube.com/user/PretA3D"));
-  }
-  else if ( source == "actionReality_forums") {
-    QDesktopServices::openUrl(QUrl("http://preta3d.com/forums"));
-  }
-  else if ( source == "actionReality_Freebies") {
-    QDesktopServices::openUrl(QUrl("http://preta3d.com/reality-automatic-presets/"));
-  }
-  else if ( source == "actionLicense") {
-    QDesktopServices::openUrl(QUrl("http://preta3d.com/retrieve-reality-license/"));
-  }
-  else if ( source == "actionContact_Support") {
-    QDesktopServices::openUrl(QUrl("http://preta3d.com/support/"));
   }
 }
 
@@ -320,25 +302,6 @@ void ReMainWindow::bringToFront() {
   raise();
 }
 
-void ReMainWindow::unregisterReality() {
-  QMessageBox::StandardButton result = QMessageBox::question(
-    this, 
-    tr("Confirmation"), 
-    tr("Do you really want to remove the registration for Reality?"),
-    QMessageBox::Yes | QMessageBox::No,
-    QMessageBox::No
-  );
-  if (result == QMessageBox::Yes) {
-    removeRegistration();
-    QMessageBox::information(
-      this, 
-      tr("Information"), 
-      tr("This copy of Reality has been un-registered. Reality will now close.")
-    );
-    close();
-  }
-}
-
 void ReMainWindow::writeWindowConfig() {
   ReConfigurationPtr settings = RealityBase::getConfiguration();
   settings->beginGroup("MainWindow");
@@ -388,57 +351,23 @@ void saveUpdateCheckDate() {
 
 
 void ReMainWindow::checkForUpdates( const QString& hostVersion ) {
-  networkManager = new QNetworkAccessManager(this);
-  // This is actually the class that handles the license data
-  ReStringMap userData = ReUserData::getUserData();
+  QUrl homepageURL(QString::fromUtf8(HOMEPAGE_URL));
+  if (!homepageURL.host().compare("github.com", Qt::CaseInsensitive) &&
+      QRegExp("/[\\w\\.-]+/[\\w\\.-]+/?").exactMatch(homepageURL.path()))
+  {
+    QUrl updateURL(QString("https://api.github.com/repos/%1/releases/latest").arg(homepageURL.path().remove(QRegExp("(^/|/$)"))));
 
-  QNetworkRequest request;
-  QString version = QString(
-                      "%1.%2.%3.%4"
-                    )
-                    .arg(REALITY_MAIN_VERSION)
-                    .arg(REALITY_SUB_VERSION)
-                    .arg(REALITY_PATCH_VERSION)
-                    .arg(REALITY_BUILD_NUMBER);
+    networkManager = new QNetworkAccessManager(this);
+    QNetworkRequest request(updateURL);
 
-  QUrl url(decryptString(UPDATER_URL));
-  QString keyOrderNo, 
-          keySerialNo;
+    request.setRawHeader("Accept", "application/vnd.github+json");
+    request.setRawHeader("X-GitHub-Api-Version", "2022-11-28");
 
-  keyOrderNo = decryptString(RE_USER_DATA_ORDER_NO);
-  keySerialNo = decryptString(RE_USER_DATA_SERIAL_NO);
+    QNetworkReply* reply = networkManager->get(request);
 
-  // The product code is "RE", for "Reality"
-  url.addQueryItem(decryptString(FLD_PROD_CODE), "RE");
-  url.addQueryItem(decryptString(FLD_BUILD_NO), version);
-  url.addQueryItem(decryptString(FLD_OS), 
-    (RealityBase::getRealityBase()->getOSType() == MAC_OS ? "M" : "W"));
-  url.addQueryItem(keyOrderNo, userData[keyOrderNo]);
-  url.addQueryItem(keySerialNo, userData[keySerialNo]);
-  // The host version is empty for now because we cannot grab that
-  // at this point. This was used to distinguish between DS3 and DS4
-  url.addQueryItem(decryptString(FLD_HOST_VERSION), hostVersion);
-  QString appCode;
-  switch(appID) {
-    case Poser:
-      appCode = "PS";
-      break;
-    case DAZStudio:
-      appCode = "DS";
-      break;
-    default:
-      appCode = "--";      
+    connect(networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(processUpdateInfo(QNetworkReply*)));
+    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(processConnectionErrors(QNetworkReply::NetworkError)));
   }
-  url.addQueryItem(decryptString(FLD_HOST_APP), appCode);
-
-  request.setUrl(url);
-  request.setHeader(QNetworkRequest::ContentTypeHeader, 
-                    decryptString(HTTP_POST_HEADER));
-
-  QNetworkReply *reply = networkManager->post(request, url.encodedQuery());
-  connect(networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(processUpdateInfo(QNetworkReply*)));
-  connect(reply, SIGNAL(error(QNetworkReply::NetworkError)),
-          this, SLOT(processConnectionErrors(QNetworkReply::NetworkError)));
 }
 
 void ReMainWindow::processConnectionErrors(QNetworkReply::NetworkError error) {
@@ -447,105 +376,43 @@ void ReMainWindow::processConnectionErrors(QNetworkReply::NetworkError error) {
 
 
 void ReMainWindow::processUpdateInfo(QNetworkReply* reply) {
-  // If therer was an error it's likely that the machine is not 
-  // connected. We don't want to remove the license because the
-  // computer is off-line.
-  if (reply->error() != QNetworkReply::NoError) {
-    return;
-  }
-  QJson::Parser parser;
-  bool ok;
+  if (reply->error() == QNetworkReply::NoError) {
+    QJson::Parser parser;
+    bool ok;
 
-  QByteArray rawData = reply->readAll();
+    QByteArray data = reply->readAll();
 
-  // We might receive the data in several chunks. So, we first retrieve 
-  // the length of the stream that we will receive 
-  QTextStream dStream(rawData);
+    QVariantMap response = parser.parse(data, &ok).toMap();
+    if (!ok) {
+      return;
+    }
 
-  // If this is the first chunk then we don't know yet the size of the data to be read
-  // The size is in clear at the beginning of the data and it's separated from the data
-  // itself by a space.
-  if (licenseDataSize == 0) {
-    dStream >> licenseDataSize;
-    char ch;
-    // remove the space after the number
-    dStream >> ch;
-  }
-  // Now read the data received and append it to the buffer. If the read is complete then 
-  // we will read the response as a series of JSON fields.
-  QByteArray tmp;
-  dStream >> tmp;
-  licenseResponse.append(tmp);
+    QRegExp versionCheck = QRegExp("^v?(\\d+)\\.(\\d+)\\.(\\d+)");
+    int pos = versionCheck.indexIn(response["name"].toString());
+    if (pos > -1) {
+      QString curVersion = QString("%1.%2.%3.%4")
+        .arg(REALITY_MAIN_VERSION)
+        .arg(REALITY_SUB_VERSION)
+        .arg(REALITY_PATCH_VERSION)
+        .arg(REALITY_BUILD_NUMBER);
 
-  // If we didn't receive all the data then exit and wait for the next chunk
-  if (licenseResponse.length() < licenseDataSize) {
-    return;
-  }
+      QString newVersion = QString("%1.%2.%3.0")
+          .arg(versionCheck.cap(1).toUInt())
+          .arg(versionCheck.cap(2).toUInt())
+          .arg(versionCheck.cap(3).toUInt());
 
-  QByteArray clearData = QByteArray::fromBase64(licenseResponse);
+      qint32 curVersionNumber = packVersionNumber(curVersion);
+      qint32 newVersionNumber = packVersionNumber(newVersion);
 
-  QVariantMap response = parser.parse(clearData, &ok).toMap();
-  if (!ok) {
-    return;
-  }
-
-  // The status field from the server data contains a SHA1 hash obtained 
-  // from the customer's data
-  // We recreate the hash here and check if the two are the same. If they 
-  // don't match then the license is invalid.
-
-  // Create the sha1 hash based on the following string:
-  //   orderNo,lastName,firstname,serialNo,orderNo
-  ReStringMap userData = ReUserData::getUserData();
-
-  // Obfuscation, see note below
-  QString orderNo = userData[decryptString(RE_USER_DATA_ORDER_NO)];
-  QString hashBase = QString("%1%2%3")
-                     .arg(orderNo)
-                     // .arg(userData[decryptString(RE_USER_DATA_LAST_NAME)])
-                     // .arg(userData[decryptString(RE_USER_DATA_FIRST_NAME)])
-                     .arg(userData[decryptString(RE_USER_DATA_SERIAL_NO)])
-                     // Note we use the order # from the user data to obfuscate the fact that we are using the same 
-                     // value twice. In this way we don't show the same variable in the disassembled code
-                     .arg(userData[decryptString(RE_USER_DATA_ORDER_NO)]);
-
-  QString hash = sha1(hashBase);
-
-  if (response[decryptString(FLD_STATUS)] != hash) {
-    removeRegistration();
-    QMessageBox::information(
-      this, 
-      tr("Information"), 
-      tr("The license for this installation of Reality is invalid.\n"
-         "Please contact Pret-a-3D to obtain a valid license.\n"
-         "The contact our support team please go to http://preta3d.com and select the Support menu.")
-      );
-    // Andromeda code
-    exit(601);
-    return;
-  }
-  QString description = response["description"].toString();
-
-  if ( !description.isNull() ) {
-    // All good up to here, let's check if this build is up-to-date
-    QString currVersion = QString(
-                        "%1.%2.%3.%4"
-                      )
-                      .arg(REALITY_MAIN_VERSION)
-                      .arg(REALITY_SUB_VERSION)
-                      .arg(REALITY_PATCH_VERSION)
-                      .arg(REALITY_BUILD_NUMBER);
-    QString newVersion = response["buildNo"].toString();
-    qint32 newVersionNumber = packVersionNumber(newVersion);
-    qint32 thisVersionNumber = packVersionNumber(currVersion);
-
-    if (newVersionNumber > thisVersionNumber) {
-      if ( updateTimeLapsed()) {
-        ReUpdateNotification updateDialog;
-        updateDialog.setBuildInfo(currVersion, newVersion);
-        updateDialog.setDescription(description);
-        updateDialog.exec();
-        saveUpdateCheckDate();
+      if (newVersionNumber > curVersionNumber) {
+        if (updateTimeLapsed()) {
+          ReUpdateNotification updateDialog;
+          updateDialog.setBuildInfo(curVersion, newVersion);
+          updateDialog.setDescription(response["body"].toString());
+          updateDialog.setUrl(response["html_url"].toString());
+          updateDialog.exec();
+          saveUpdateCheckDate();
+        }
       }
     }
   }

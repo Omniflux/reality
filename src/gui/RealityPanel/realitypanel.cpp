@@ -2220,7 +2220,6 @@ void RealityPanel::initAdvancedTab() {
   newSceneFolder->setText(config->value(RE_CFG_DEFAULT_SCENE_LOCATION).toString());
   keepUIResponsive->setChecked(config->value(RE_CFG_KEEP_UI_RESPONSIVE).toBool());
   keepUIResponsive->setChecked(config->value(RE_CFG_KEEP_UI_RESPONSIVE).toBool());
-  chbJoinProductUsageSurvey->setChecked(config->value(RE_CFG_JOIN_PRODUCT_USAGE_SURVEY).toBool());
 
   connect(matCacheSize, SIGNAL(valueChanged(int)), this, SLOT(updateConfiguration(int)));
   connect(luxDisplayRefresh, SIGNAL(valueChanged(int)), this, SLOT(updateConfiguration(int)));
@@ -2234,8 +2233,6 @@ void RealityPanel::initAdvancedTab() {
   connect(newSceneFolder, SIGNAL(textChanged(const QString&)), this, SLOT(updateDefaultLocation(const QString&)));
   connect(btnNewSceneFolder, SIGNAL(clicked()), this, SLOT(browseDefaultFolder()));
   connect(keepUIResponsive, SIGNAL(toggled(bool)), this, SLOT(updateConfiguration(bool)));
-  connect(chbJoinProductUsageSurvey, SIGNAL(toggled(bool)), this, SLOT(updateConfiguration(bool)));
-  connect(btnProductUsage, SIGNAL(clicked()), this, SLOT(openProductUsageHelpPage()));
 }
 
 void RealityPanel::browseDefaultFolder() {
@@ -2278,12 +2275,6 @@ void RealityPanel::updateConfiguration( int newVal ) {
   config->sync();
 }
 
-void RealityPanel::openProductUsageHelpPage() {
-  QDesktopServices::openUrl(QUrl("http://preta3d.com/texture-survey/"));
-}
-
-#include "ReHttpClient.h"
-
 void RealityPanel::updateConfiguration( bool newVal ) {
   QString source = QObject::sender()->objectName();
   ReConfigurationPtr config = RealityBase::getConfiguration();
@@ -2302,20 +2293,6 @@ void RealityPanel::updateConfiguration( bool newVal ) {
   }
   else if (source == "keepUIResponsive") {
     config->setValue(RE_CFG_KEEP_UI_RESPONSIVE, newVal);
-  }
-  else if (source == "chbJoinProductUsageSurvey") {
-    config->setValue(RE_CFG_JOIN_PRODUCT_USAGE_SURVEY, newVal);
-    // Send the information that this customer decided to opt out
-    QVariantMap usrInfo;
-    auto userData = ReUserData::getUserData();
-    usrInfo["firstName"] = userData[decryptString(RE_USER_DATA_FIRST_NAME)];
-    usrInfo["lastName"] = userData[decryptString(RE_USER_DATA_LAST_NAME)];
-    usrInfo["serialNo"] = userData[decryptString(RE_USER_DATA_SERIAL_NO)];
-    usrInfo["optedOut"] = (newVal ? 0 : 1);
-
-    QJson::Serializer json;
-    QString postDataStr = json.serialize(usrInfo);
-    ReHttpClient::sendHttpRequest("stats.preta3d.com", "/optout.php", postDataStr);
   }
 
   config->sync();

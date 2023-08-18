@@ -160,9 +160,6 @@ void RealityBase::main() {
   // generic
   SET_DEFAULT_CONFIG(RE_CFG_GENERIC_FLAG_REMINDER, true)
 
-  // Product Usage Survey is enabled by default
-  SET_DEFAULT_CONFIG(RE_CFG_JOIN_PRODUCT_USAGE_SURVEY, true)
-
   // luxLib = LuxLibraryLoaderPtr(new LuxLibraryLoader(luxPath));
 
   // Create the global variable used to access the scene data
@@ -184,16 +181,11 @@ void RealityBase::startHostSideServices( const HostAppID appID ) {
                 << getPrintableHostAppID();
   realityIPC = new CommandPollingThread(appID);
   realityIPC->start();
-
-  // Start the thread that reports what products are used
-  productUsage = ReProductUsage::getInstance();
 }
 
 void RealityBase::stopHostSideServices() {
   if (realityIPC) {
     RE_LOG_INFO() << "Host-side services shutting down...";
-    productUsage->stop();
-    delete productUsage;
 
     realityIPC->shutDown();
     if (!realityIPC->wait(500)) {

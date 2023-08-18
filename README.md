@@ -65,7 +65,6 @@ This does not work at the moment, needs to be reimplemented for [CPack](https://
 
 ## TODO
 - Fix OS X builds
-- Remove authentication
 - Implement building bundles/installers with CMake
 - Fix OpenCL loading on Windows
   - QLibrary (LoadModule) should not be called in DllMain. It does not work with OpenCL ICD >= 3.1, and only worked in earlier versions by chance.

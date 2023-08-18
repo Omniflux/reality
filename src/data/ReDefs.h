@@ -108,7 +108,6 @@
 #define RE_CFG_DEFAULT_IMAGE_NAME        "reality_scene.png"
 #define RE_CFG_SCENE_FILE_SUFFIX         "lxs"
 #define RE_CFG_IMAGE_FILE_DEFAULT_SUFFIX "png"
-#define RE_CFG_JOIN_PRODUCT_USAGE_SURVEY "JoinProductUsageSurvey"
 
 #define RE_HOST_RENDERER_CODE_IRAY       "ir"
 #define RE_HOST_RENDERER_CODE_3DELIGHT   "3dl"

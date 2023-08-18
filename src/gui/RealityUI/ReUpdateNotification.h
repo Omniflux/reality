@@ -22,6 +22,9 @@ class ReUpdateNotification : public QDialog {
 protected:
   Ui::ReUpdateNotification ui;
 
+private:
+    QString url;
+
 public:
   ReUpdateNotification( QWidget* parent = 0 );
   ~ReUpdateNotification();
@@ -35,6 +38,9 @@ public slots:
                     const QString newBuildNo  ) {
     ui.buildNumbers->setText(ui.buildNumbers->text().arg(newBuildNo).arg(currentBuildNo));
   };
+  void setUrl(const QString url) {
+      this->url = url;
+  }
 
   void download();
 };

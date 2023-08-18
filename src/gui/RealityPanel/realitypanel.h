@@ -440,8 +440,6 @@ private slots:
    */
   void updateConfiguration( bool newVal );
 
-  void openProductUsageHelpPage();
-
   //! Provides information to the user about the status of the export process
   void exportStarted(int);
   void exportingObject(const QString);
