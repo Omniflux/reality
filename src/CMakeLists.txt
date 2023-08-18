@@ -315,6 +315,8 @@ set (SRC_GROUP_GUI
 	gui/RealityPanel/realitypanel.cpp
 	gui/ReMainWindow.cpp
 	gui/RealityUI/ReCssEditor.cpp
+
+	$<$<PLATFORM_ID:Windows>:gui/Reality.rc>
 )
 source_group ("GUI" FILES ${HEADER_GROUP_GUI} ${SRC_GROUP_GUI})
 
