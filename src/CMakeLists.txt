@@ -565,9 +565,9 @@ set (SRC_GROUP_RESOURCES
 	gui/resources/RealityUI.qrc
 )
 
-source_group ("Templates" REGULAR_EXPRESSION ".*\\.in")
 source_group ("Resource Files" REGULAR_EXPRESSION ".*\\.(q?rc|res)")
 source_group ("QT Designer UI" REGULAR_EXPRESSION ".*\\.ui")
+source_group ("Templates" REGULAR_EXPRESSION ".*\\.in")
 
 # Prepare resources embeded in Reality_Executable
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
