@@ -23,6 +23,11 @@ endif()
 # Setup Project
 project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES CXX)
 
+# Ensure tweak version has a value for use in generated files
+if (NOT Reality_VERSION_TWEAK)
+	set (Reality_VERSION_TWEAK 0)
+endif()
+
 # Get target architecture
 if (CMAKE_SIZEOF_VOID_P EQUAL 4)
 	set (TARGET_ARCH 32)
@@ -315,7 +320,7 @@ set (SRC_GROUP_GUI
 	gui/ReMainWindow.cpp
 	gui/RealityUI/ReCssEditor.cpp
 
-	$<$<PLATFORM_ID:Windows>:gui/Reality.rc>
+	$<$<PLATFORM_ID:Windows>:gui/Reality.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality.rc">
 )
 source_group ("GUI" FILES ${HEADER_GROUP_GUI} ${SRC_GROUP_GUI})
 
@@ -523,6 +528,8 @@ set (SRC_GROUP_POSER_ADDON
 	Poser/Reality_ext.cpp
 	Poser/RePoserInterface.cpp
 	Poser/RePythonSceneExporter.cpp
+
+	$<$<PLATFORM_ID:Windows>:Poser/Reality_PY.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_PY.rc">
 )
 source_group ("Poser Addon" FILES ${SRC_GROUP_POSER_ADDON})
 
@@ -543,12 +550,12 @@ set (SRC_GROUP_DAZ_STUDIO_PLUGIN
 	Studio/ReGeometryExporter.cpp
 	Studio/ReDAZStudioEvent.cpp
 #	Studio/ReDSDebugTools.cpp
-)
 
-# The Windows version needs a .def file to export the plugin's entry points
-if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
-	list (APPEND SRC_GROUP_DAZ_STUDIO_PLUGIN Reality.def)
-endif()
+	$<$<PLATFORM_ID:Windows>:Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_DS.rc">
+
+	# The Windows version needs a .def file to export the plugin's entry points
+	$<$<PLATFORM_ID:Windows>:Reality.def>
+)
 source_group ("DAZ Studio Plugin" FILES ${HEADER_GROUP_DAZ_STUDIO_PLUGIN} ${SRC_GROUP_DAZ_STUDIO_PLUGIN})
 
 set (SRC_GROUP_RESOURCES
@@ -574,6 +581,7 @@ add_custom_command (
 	VERBATIM
 )
 
+# Generate version files
 set (BUILDNUMBER_DIR ${PROJECT_BINARY_DIR}/BuildNumber_autogen)
 add_custom_target (
 	IncrementBuildNumber
@@ -595,6 +603,11 @@ add_library (Reality_Version INTERFACE)
 target_include_directories (Reality_Version INTERFACE "${BUILDNUMBER_DIR}" core)
 target_sources (Reality_Version INTERFACE ${SRC_GRP_VERSION})
 add_dependencies (Reality_Version IncrementBuildNumber)
+
+# Generate Windows resource files
+configure_file (gui/Reality.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality.rc" @ONLY)
+configure_file (Poser/Reality_PY.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_PY.rc" @ONLY)
+configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_DS.rc" @ONLY)
 
 ###############################################################################
 ###############################################################################
