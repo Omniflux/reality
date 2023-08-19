@@ -320,7 +320,8 @@ set (SRC_GROUP_GUI
 	gui/ReMainWindow.cpp
 	gui/RealityUI/ReCssEditor.cpp
 
-	$<$<PLATFORM_ID:Windows>:gui/Reality.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality.rc">
+	$<$<PLATFORM_ID:Windows>:gui/Reality.rc.in>
+	$<$<PLATFORM_ID:Windows>:${PROJECT_BINARY_DIR}/autogen/Reality.rc>
 )
 source_group ("GUI" FILES ${HEADER_GROUP_GUI} ${SRC_GROUP_GUI})
 
@@ -529,7 +530,8 @@ set (SRC_GROUP_POSER_ADDON
 	Poser/RePoserInterface.cpp
 	Poser/RePythonSceneExporter.cpp
 
-	$<$<PLATFORM_ID:Windows>:Poser/Reality_PY.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_PY.rc">
+	$<$<PLATFORM_ID:Windows>:Poser/Reality_PY.rc.in>
+	$<$<PLATFORM_ID:Windows>:${PROJECT_BINARY_DIR}/autogen/Reality_PY.rc>
 )
 source_group ("Poser Addon" FILES ${SRC_GROUP_POSER_ADDON})
 
@@ -551,7 +553,8 @@ set (SRC_GROUP_DAZ_STUDIO_PLUGIN
 	Studio/ReDAZStudioEvent.cpp
 #	Studio/ReDSDebugTools.cpp
 
-	$<$<PLATFORM_ID:Windows>:Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_DS.rc">
+	$<$<PLATFORM_ID:Windows>:Studio/Reality_DS.rc.in>
+	$<$<PLATFORM_ID:Windows>:${PROJECT_BINARY_DIR}/autogen/Reality_DS.rc>
 
 	# The Windows version needs a .def file to export the plugin's entry points
 	$<$<PLATFORM_ID:Windows>:Reality.def>
