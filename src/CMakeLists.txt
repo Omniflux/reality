@@ -39,10 +39,10 @@ add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-std
 # Find dependencies
 set (Boost_USE_STATIC_LIBS ON)
 
-find_package (Boost 1.54.0 REQUIRED COMPONENTS atomic program_options python)
+find_package (Boost 1.67.0 REQUIRED COMPONENTS atomic program_options python27)
 find_package (Qt4 4.8.7 REQUIRED COMPONENTS QtGui QtNetwork QtWebKit)
 find_package (OpenCL REQUIRED)
-find_package (Python2 2.6...<2.7 REQUIRED COMPONENTS Development.Module) # Rebuild Boost to depend on 2.7
+find_package (Python2 2.7.18 REQUIRED COMPONENTS Development.Module)
 find_package (DAZStudioSDK REQUIRED)
 
 if (DAZStudioSDK_TOOLKIT_INCOMPATIBLE)
@@ -680,9 +680,9 @@ target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MA
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
-target_link_libraries (Reality_PY PRIVATE Boost::python OpenCL::OpenCL)
+target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL)
 target_link_libraries (Reality_PY PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
-#set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
+set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 	set_target_properties (Reality_PY PROPERTIES

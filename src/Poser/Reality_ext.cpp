@@ -7,7 +7,6 @@
 */
 
 
-#include <boost/python.hpp>
 #include "RealityBase.h"
 #include "ReSceneDataGlobal.h"
 #include "ReSceneData.h"
@@ -128,9 +127,6 @@ void initializeConverters()
 BOOST_PYTHON_MODULE(Reality)
 {
   using namespace boost::python;
-  // We need to explicitly set the type of the Numeric package
-  // to be corresponding to the NumPy data type
-  python::numeric::array::set_module_and_type("numpy", "ndarray");
 
   enum_<HostAppID>("HostAppID")
     .value("Poser", Poser)
