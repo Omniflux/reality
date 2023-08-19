@@ -10,7 +10,7 @@
 #include <QDate>
 #include <QVariant>
 
-#include "ReAppVersion.h"
+#include "ReVersion.h"
 #include "ReMainWindow.h"
 #include "ReAcsel.h"
 #include "ReSharedMemIPC.h"

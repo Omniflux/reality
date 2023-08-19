@@ -9,9 +9,8 @@
 #include <QMutableMapIterator>
 #include <QSize>
 
-#include "ReAppVersion.h"
+#include "ReVersion.h"
 #include "Reality_DS.h"
-#include "ReAppVersion.h"
 #include "RealityAction.h"
 #include "RealityBase.h"
 #include "ReSceneDataGlobal.h"

@@ -21,7 +21,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 # Setup Project
-project (Reality VERSION 4.3.0 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES CXX)
+project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES CXX)
 
 # Get target architecture
 if (CMAKE_SIZEOF_VOID_P EQUAL 4)
@@ -89,6 +89,13 @@ set (SRC_GROUP_SQLITE
 	../libs/SQLiteCpp/src/Transaction.cpp
 )
 source_group ("SQLite" FILES ${SRC_GROUP_SQLITE})
+
+set (SRC_GRP_VERSION
+	core/ReVersion.cpp.in
+	core/ReVersion.h
+	${PROJECT_BINARY_DIR}/autogen/ReVersion.cpp
+	${PROJECT_BINARY_DIR}/BuildNumber_autogen/build_number.h
+)
 
 set (SRC_GROUP_QT_UI
 	gui/uiFiles/imageMapManager.ui
@@ -286,7 +293,6 @@ set (HEADER_GROUP_GUI
 set (SRC_GROUP_GUI
 	gui/Reality.cpp
 
-	core/ReAppVersion.cpp
 	data/ReSceneDataModel.cpp
 
 	gui/RealityPanel/RealityDataRelay.cpp
@@ -457,7 +463,6 @@ source_group ("Textures and Mats" FILES ${SRC_GROUP_TEXTURES_MATS})
 # The Sources for the Main Library used by the Reality UI
 set (SRC_GROUP_LIBRARY
 	data/ReDefs.cpp
-	core/ReAppVersion.cpp
 
 	# Logging
 	core/ReLogger.cpp
@@ -551,6 +556,8 @@ set (SRC_GROUP_RESOURCES
 	gui/resources/RealityUI.qrc
 )
 
+source_group ("Templates" REGULAR_EXPRESSION ".*\\.in")
+
 # Prepare resources embeded in Reality_Executable
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 	set (OS_NAME WINDOWS)
@@ -566,6 +573,28 @@ add_custom_command (
 	VERBATIM
 )
 
+set (BUILDNUMBER_DIR ${PROJECT_BINARY_DIR}/BuildNumber_autogen)
+add_custom_target (
+	IncrementBuildNumber
+	COMMAND ${CMAKE_COMMAND}
+		-E make_directory "${BUILDNUMBER_DIR}"
+	COMMAND ${CMAKE_COMMAND}
+		-DLANGUAGE:STRING="C"
+		-DHEADER_DIR:PATH="${BUILDNUMBER_DIR}"
+		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
+		-P "${CMAKE_CURRENT_LIST_DIR}/cmake/build_number.cmake"
+	BYPRODUCTS ${BUILDNUMBER_DIR}/build_number.h
+)
+set_property (SOURCE ${BUILDNUMBER_DIR}/build_number.h PROPERTY SKIP_AUTOGEN ON)
+
+string (TIMESTAMP GENERATED_TIME UTC)
+configure_file (core/ReVersion.cpp.in "${PROJECT_BINARY_DIR}/autogen/ReVersion.cpp" @ONLY)
+
+add_library (Reality_Version INTERFACE)
+target_include_directories (Reality_Version INTERFACE "${BUILDNUMBER_DIR}" core)
+target_sources (Reality_Version INTERFACE ${SRC_GRP_VERSION})
+add_dependencies (Reality_Version IncrementBuildNumber)
+
 ###############################################################################
 ###############################################################################
 ###############################################################################
@@ -575,6 +604,7 @@ add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL SQLITECPP_ENABLE_ASSERT_HANDLER $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_include_directories (Reality_Widgets PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
+target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
 target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui)
 target_link_libraries (Reality_Widgets PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
@@ -600,6 +630,7 @@ add_library (Reality_LIB SHARED)
 target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> PUBLIC SQLITECPP_ENABLE_ASSERT_HANDLER)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_include_directories (Reality_LIB PUBLIC ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
+target_link_libraries (Reality_LIB PUBLIC Reality_Version)
 target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui)
 target_link_libraries (Reality_LIB PUBLIC libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 
@@ -617,6 +648,7 @@ add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED SQLITECPP_ENABLE_ASSERT_HANDLER $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
 target_include_directories (Reality_DS PRIVATE core data)
 target_include_directories (Reality_DS PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
+target_link_libraries (Reality_DS PRIVATE Reality_Version)
 target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK)
 target_link_libraries (Reality_DS PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
@@ -646,6 +678,7 @@ Python2_add_library (Reality_PY MODULE)
 target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs ../libs/sqlite ../libs/SQLiteCpp/include)
+target_link_libraries (Reality_PY PRIVATE Reality_Version)
 target_link_libraries (Reality_PY PRIVATE Boost::python OpenCL::OpenCL)
 target_link_libraries (Reality_PY PRIVATE libzmq-static qjson $<$<PLATFORM_ID:Windows>:ws2_32>)
 #set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
@@ -672,8 +705,8 @@ target_sources (Reality_PY PRIVATE
 add_executable (Reality_Executable WIN32) #MACOSX_BUNDLE
 target_compile_definitions (Reality_Executable PRIVATE HOMEPAGE_URL="${CMAKE_PROJECT_HOMEPAGE_URL}")
 target_include_directories (Reality_Executable PRIVATE gui gui/actions gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
-target_link_libraries (Reality_Executable PRIVATE Boost::program_options Qt4::QtWebKit)
 target_link_libraries (Reality_Executable PRIVATE Reality_LIB)
+target_link_libraries (Reality_Executable PRIVATE Boost::program_options Qt4::QtWebKit)
 set_target_properties (Reality_Executable PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")

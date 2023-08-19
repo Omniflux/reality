@@ -1,0 +1,10 @@
+// Reality. Copyright (c) Pret-a-3D, all right reserved.
+// Generated @GENERATED_TIME@
+
+#include "build_number.h"
+#include "ReVersion.h"
+
+const unsigned char REALITY_MAIN_VERSION  = @Reality_VERSION_MAJOR@;
+const unsigned char REALITY_SUB_VERSION   = @Reality_VERSION_MINOR@;
+const unsigned char REALITY_PATCH_VERSION = @Reality_VERSION_PATCH@;
+const unsigned int REALITY_BUILD_NUMBER = BUILD_NUMBER;

@@ -4,7 +4,7 @@
  * Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReAppVersion.h"
+#include "ReVersion.h"
 #include "ReQtSceneExporter.h"
 #include "qt/ReLightExporter.h"
 #include "qt/ReGeometryObjectExporter.h"

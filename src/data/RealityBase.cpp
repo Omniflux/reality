@@ -7,7 +7,7 @@
  */
 #include <QDesktopServices>
 
-#include "ReAppVersion.h"
+#include "ReVersion.h"
 #include "RealityBase.h"
 #include "ReIPC.h"
 #include "ReSceneData.h"
