@@ -156,7 +156,6 @@ set (SRC_GROUP_QT_UI
 	gui/uiFiles/reConfirmationDialog.ui
 	gui/uiFiles/reCssEditor.ui
 )
-source_group ("QT Designer UI" FILES ${SRC_GROUP_QT_UI})
 
 # We need to have separate groups of sources for the texture and material 
 # editors because they need to be included in the RealityWidgets library,
@@ -557,6 +556,8 @@ set (SRC_GROUP_RESOURCES
 )
 
 source_group ("Templates" REGULAR_EXPRESSION ".*\\.in")
+source_group ("Resource Files" REGULAR_EXPRESSION ".*\\.(q?rc|res)")
+source_group ("QT Designer UI" REGULAR_EXPRESSION ".*\\.ui")
 
 # Prepare resources embeded in Reality_Executable
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
