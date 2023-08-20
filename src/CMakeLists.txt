@@ -41,6 +41,9 @@ add_compile_options ($<$<AND:$<COMPILE_LANG_AND_ID:CXX,MSVC>,$<VERSION_LESS:$<CX
 # libstdc++ is selected by default when OSX_DEPLOYMENT_TARGET < 10.9 but we want libc++ instead
 add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-stdlib=libc++>)
 
+# Trim Windows headers by default
+add_compile_definitions ($<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN>)
+
 # Find dependencies
 set (Boost_USE_STATIC_LIBS ON)
 
@@ -624,7 +627,7 @@ configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_D
 
 # Configure Reality Widgets
 add_library (Reality_Widgets SHARED)
-target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
+target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_include_directories (Reality_Widgets PRIVATE ../libs)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
@@ -650,7 +653,7 @@ target_sources (Reality_Widgets PRIVATE
 
 # Configure Reality library
 add_library (Reality_LIB SHARED)
-target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
+target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_include_directories (Reality_LIB PUBLIC ../libs)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
@@ -668,7 +671,7 @@ target_sources (Reality_LIB PRIVATE
 
 # Configure DAZ Studio plugin
 add_library (Reality_DS MODULE)
-target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
+target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_DS PRIVATE core data)
 target_include_directories (Reality_DS PRIVATE ../libs)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
@@ -698,7 +701,7 @@ target_sources (Reality_DS PRIVATE
 
 # Configure Poser Addon
 Python2_add_library (Reality_PY MODULE)
-target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
+target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
