@@ -7,7 +7,9 @@
       "displayName": "My Paths",
       "description": "My custom dependency paths",
       "environment": {
-        "BOOST_ROOT": "E:/Reality/boost_1_54_0",
+        "CFLAGS": "$penv{CFLAGS} /MP",
+        "CXXFLAGS": "$penv{CXXFLAGS} /MP",
+        "BOOST_ROOT": "E:/Reality/boost_1_81_0",
         "DAZStudioSDK_ROOT_DIR": "D:/3D/DAZ 3D/DAZStudio4.5+ SDK"
       }
     },

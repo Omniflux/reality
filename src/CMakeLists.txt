@@ -35,9 +35,6 @@ else()
 	set (TARGET_ARCH 64)
 endif()
 
-# Build in parallel with MSVC
-add_compile_options ($<$<OR:$<CXX_COMPILER_ID:MSVC>,$<C_COMPILER_ID:MSVC>>:/MP>)
-
 # libstdc++ is selected by default when OSX_DEPLOYMENT_TARGET < 10.9 but we want libc++ instead
 add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-stdlib=libc++>)
 
