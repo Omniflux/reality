@@ -61,7 +61,7 @@ set (CMAKE_POLICY_DEFAULT_CMP0100 OLD)
 add_subdirectory (../libs/qjson ${CMAKE_CURRENT_BINARY_DIR}/deps/qjson EXCLUDE_FROM_ALL)
 unset (CMAKE_POLICY_DEFAULT_CMP0020)
 unset (CMAKE_POLICY_DEFAULT_CMP0100)
-target_compile_definitions (qjson PRIVATE QJSON_MAKEDLL)
+target_compile_definitions (qjson PUBLIC QJSON_MAKEDLL)
 
 # ZeroMQ
 set (CMAKE_POLICY_DEFAULT_CMP0048 OLD)
@@ -624,7 +624,7 @@ configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_D
 
 # Configure Reality Widgets
 add_library (Reality_Widgets SHARED)
-target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
+target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS> $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_include_directories (Reality_Widgets PRIVATE ../libs)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
@@ -650,7 +650,7 @@ target_sources (Reality_Widgets PRIVATE
 
 # Configure Reality library
 add_library (Reality_LIB SHARED)
-target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED QJSON_MAKEDLL $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
+target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_include_directories (Reality_LIB PUBLIC ../libs)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
@@ -668,7 +668,7 @@ target_sources (Reality_LIB PRIVATE
 
 # Configure DAZ Studio plugin
 add_library (Reality_DS MODULE)
-target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
+target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
 target_include_directories (Reality_DS PRIVATE core data)
 target_include_directories (Reality_DS PRIVATE ../libs)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
@@ -698,7 +698,7 @@ target_sources (Reality_DS PRIVATE
 
 # Configure Poser Addon
 Python2_add_library (Reality_PY MODULE)
-target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS QJSON_MAKEDLL>)
+target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS>)
 target_include_directories (Reality_PY PRIVATE core data)
 target_include_directories (Reality_PY PRIVATE ../libs)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
