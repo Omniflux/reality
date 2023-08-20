@@ -4,6 +4,7 @@
 */
 
 #include <QTreeWidget>
+#include <QJson/Parser>
 
 #include "ReGlassEditor.h"
 #include "ReGeometryObject.h"
@@ -11,7 +12,6 @@
 #include "ReSceneDataGlobal.h"
 
  
- #include "qjson/src/parser.h"
 
 
 ReGlassEditor::ReGlassEditor(QWidget* parent) :  ReMaterialEditor(parent) {

@@ -9,6 +9,8 @@
   
 #include <QByteArray>
 #include <QTextStream>
+#include <QJson/Parser>
+
 #include "ReCloth.h"
 #include "ReGlossy.h"
 #include "ReSkin.h"
@@ -32,7 +34,6 @@
 #include "ReTools.h"
 #include "ReMaterialPropertyKeys.h"
 #include "ReNodeConverter.h"
-#include "qjson/src/parser.h"
 #include "ReSceneData.h"
 #include "ReIPC.h"
 #include "importers/qt/ReQtMaterialImporterFactory.h"

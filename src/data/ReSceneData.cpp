@@ -8,6 +8,8 @@
 #include <QList>
 #include <QFile>
 #include <QDesktopServices>
+#include <QJson/Parser>
+#include <QJson/Serializer>
 
 #include "ReSceneData.h"
 #include "textures/ReImageMap.h"
@@ -18,8 +20,6 @@
 #include "importers/qt/ReVolumeImporter.h"
 #include "importers/qt/ReQtGeometryObjectImporter.h"
 #include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "qjson/src/parser.h"
-#include "qjson/src/serializer.h"
 #include "ReLuxGeometryExporter.h"
 #include "ReLight.h"
 #include "ReNodeConverter.h"

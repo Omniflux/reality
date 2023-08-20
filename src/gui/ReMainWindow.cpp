@@ -4,6 +4,8 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
+#include <QJson/Parser>
+
 #include "ReVersion.h"
 #include "ReMainWindow.h"
 #include "RealityBase.h"
@@ -12,7 +14,6 @@
 
 #include "ui_reAbout.h"
 #include "ui_reWatermark.h"
-#include "qjson/src/parser.h"
 #include "ReUpdateNotification.h"
 #include "ReAcselMgr.h"
 #include "ReActionMgr.h"

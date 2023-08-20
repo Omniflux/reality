@@ -6,12 +6,12 @@
 
 #include "ReAcsel.h"
 #include "RealityBase.h"
-#include "qjson/src/serializer.h"
-#include "qjson/src/parser.h"
 
 #include <QtCore>
 #include <QCryptographicHash>
 #include <QFileInfo>
+#include <QJson/Parser>
+#include <QJson/Serializer>
 
 
 using namespace Reality;

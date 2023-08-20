@@ -9,10 +9,11 @@
  This file contains only the global pointer to the IPC object used by the Reality backend to communicate
  with its front-end.   
  */
+#include <QJson/Parser>
+
 #include "ReIPC.h"
 #include "textures/ReComplexTexture.h"
 #include "ReTextureCreator.h"
-#include "qjson/src/parser.h"
 #include "importers/qt/ReQtMaterialImporterFactory.h"
 #include "ReSceneDataGlobal.h"
 #include "zeromqTools.h"

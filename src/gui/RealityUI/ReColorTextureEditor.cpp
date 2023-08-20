@@ -4,9 +4,10 @@
 */
 
 #include <QVariant>
+#include <QJson/Parser>
+
 #include "ReColorTextureEditor.h"
 #include "ReLogger.h"
-#include "qjson/src/parser.h"
 
 void ReColorTextureEditor::initColorPresets() {
   QJson::Parser json;

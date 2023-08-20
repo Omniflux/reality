@@ -7,6 +7,7 @@
 #include "realitypanel.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QJson/Parser>
 
 #include "ReDefs.h"
 #include "ReActionMgr.h"
@@ -36,7 +37,6 @@
 #include "exporters/lux/ReVolumeExporter.h"
 #include "exporters/qt/ReVolumeExporter.h"
 #include "actions/ReMaterialActions.h"
-#include "qjson/src/parser.h"
 #include "ui_reSyncMats.h"
 #include "actions/ReSetImageMapAction.h"
 #include "actions/ReUpdateHostTextureAction.h"

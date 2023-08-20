@@ -7,9 +7,9 @@
 
 
 # Configure CMAKE
-cmake_minimum_required (VERSION 3.21)
+cmake_minimum_required (VERSION 3.25)
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
-include (ExternalProject)
+include (FetchContent)
 
 # Configure pre-project settings
 set (CMAKE_CXX_STANDARD 11)
@@ -59,12 +59,21 @@ endif()
 
 # Include dependencies to build
 # QJSON
-set (CMAKE_POLICY_DEFAULT_CMP0020 OLD)
-set (CMAKE_POLICY_DEFAULT_CMP0100 OLD)
-add_subdirectory (../libs/qjson ${CMAKE_CURRENT_BINARY_DIR}/deps/qjson EXCLUDE_FROM_ALL)
-unset (CMAKE_POLICY_DEFAULT_CMP0020)
-unset (CMAKE_POLICY_DEFAULT_CMP0100)
-target_compile_definitions (qjson PUBLIC QJSON_MAKEDLL)
+FetchContent_Declare (qjson
+	GIT_REPOSITORY    https://github.com/flavio/qjson.git
+	GIT_TAG           4920592171ccf83029f004880ad02aa34a60c0ab
+)
+
+block()
+	set (CMAKE_POLICY_DEFAULT_CMP0026 OLD)
+	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+	set (BUILD_SHARED_LIBS OFF)
+	set (LINK_SHARED_QT ON)
+	set (QT4_BUILD ON)
+	FetchContent_MakeAvailable (qjson)
+endblock()
+target_include_directories (qjson INTERFACE $<BUILD_INTERFACE:${qjson_SOURCE_DIR}/include>)
+set_property (DIRECTORY ${qjson_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
 # ZeroMQ
 set (CMAKE_POLICY_DEFAULT_CMP0048 OLD)
@@ -629,10 +638,9 @@ configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_D
 add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
-target_include_directories (Reality_Widgets PRIVATE ../libs)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
-target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui)
-target_link_libraries (Reality_Widgets PRIVATE libzmq-static qjson SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson)
+target_link_libraries (Reality_Widgets PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
 target_sources (Reality_Widgets PRIVATE
@@ -655,10 +663,9 @@ target_sources (Reality_Widgets PRIVATE
 add_library (Reality_LIB SHARED)
 target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_LIB PUBLIC core data)
-target_include_directories (Reality_LIB PUBLIC ../libs)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
-target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui)
-target_link_libraries (Reality_LIB PUBLIC libzmq-static qjson SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson)
+target_link_libraries (Reality_LIB PUBLIC libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
 
 target_sources (Reality_LIB PRIVATE
 	${SRC_GROUP_SQLITE}
@@ -673,10 +680,9 @@ target_sources (Reality_LIB PRIVATE
 add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_DS PRIVATE core data)
-target_include_directories (Reality_DS PRIVATE ../libs)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
-target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK)
-target_link_libraries (Reality_DS PRIVATE libzmq-static qjson SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson)
+target_link_libraries (Reality_DS PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -703,10 +709,9 @@ target_sources (Reality_DS PRIVATE
 Python2_add_library (Reality_PY MODULE)
 target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_PY PRIVATE core data)
-target_include_directories (Reality_PY PRIVATE ../libs)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
-target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL)
-target_link_libraries (Reality_PY PRIVATE libzmq-static qjson SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson)
+target_link_libraries (Reality_PY PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")

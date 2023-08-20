@@ -2,12 +2,13 @@
  * The Reality texture manager.
  */
 #include <QObject>
+#include <QJson/Parser>
+
 #include "ReTextureAvatar.h"
 #include "ReDefs.h"
 #include "textures/ReGrayscale.h"
 #include <QMessageBox>
 #include "textures/ReBand.h"
-#include "qjson/src/parser.h"
 
 #define TA_MENU_EDIT      tr("Edit")
 #define TA_MENU_EXISTING  tr("Use Existing...")

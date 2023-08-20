@@ -10,7 +10,8 @@
 #include "RePresetSelector.h"
 #include <QFile>
 #include <QDebug>
-#include "qjson/src/parser.h"
+#include <QJson/Parser>
+
 #include "ReDefs.h"
 #include "ReLogger.h"
 

@@ -6,6 +6,7 @@
  The log file location is set to be in the user's Documents folder.
  */
 #include <QDesktopServices>
+#include <QJson/Parser>
 
 #include "ReVersion.h"
 #include "RealityBase.h"
@@ -13,7 +14,6 @@
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 #include "RealityRunner.h"
-#include "qjson/src/parser.h"
 #include "ReLogger.h"
 #include "ReAcsel.h"
 

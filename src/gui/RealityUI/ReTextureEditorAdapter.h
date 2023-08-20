@@ -15,7 +15,6 @@
 #include "ReTextureCreator.h"
 #include "actions/ReSetImageMapAction.h"
 #include "ReTextureChannelDataModel.h"
-#include "qjson/src/serializer.h"
 #include "exporters/qt/ReQtTextureExporterFactory.h"
 
 #include <QtCore>
@@ -24,6 +23,7 @@
 #include <QClipboard> 
 #include <QMessageBox>
 #include <QPair>
+#include <QJson/Serializer>
 
 namespace Reality {
 

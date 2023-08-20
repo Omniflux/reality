@@ -6,9 +6,10 @@
 #ifndef RE_JSON_MATERIAL_EXPORTER_H
 #define RE_JSON_MATERIAL_EXPORTER_H
 
+#include <QJson/Serializer>
+
 #include "exporters/ReMaterialExporter.h"
 #include "exporters/qt/ReQtMaterialExporterFactory.h"
-#include "qjson/src/serializer.h"
 
 namespace Reality {
 

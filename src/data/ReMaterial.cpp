@@ -3,6 +3,8 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include <QJson/Parser>
+
 #include "ReMaterial.h"
 #include "ReTools.h"
 #include "ReGeometryObject.h"
@@ -27,7 +29,6 @@
 #include "ReLogger.h"
 #include "ReSceneDataGlobal.h"
 #include "ReAcsel.h"
-#include "qjson/src/parser.h"
 #include "importers/qt/ReQtTextureImporterFactory.h"
 
 namespace Reality {
