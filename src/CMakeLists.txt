@@ -35,6 +35,9 @@ else()
 	set (TARGET_ARCH 64)
 endif()
 
+# MSVC2010 does not support C++11 but does support enum qualified names, so silence the warning
+add_compile_options ($<$<AND:$<COMPILE_LANG_AND_ID:CXX,MSVC>,$<VERSION_LESS:$<CXX_COMPILER_VERSION>,17>>:/wd4482>)
+
 # libstdc++ is selected by default when OSX_DEPLOYMENT_TARGET < 10.9 but we want libc++ instead
 add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-stdlib=libc++>)
 
