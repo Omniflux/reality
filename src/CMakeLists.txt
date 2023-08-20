@@ -21,7 +21,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 # Setup Project
-project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES CXX)
+project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HOMEPAGE_URL "https://github.com/Omniflux/reality/" LANGUAGES C CXX)
 
 # Ensure tweak version has a value for use in generated files
 if (NOT Reality_VERSION_TWEAK)
