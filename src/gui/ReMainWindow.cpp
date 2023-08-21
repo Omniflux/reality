@@ -4,6 +4,10 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <QJson/Parser>
 
 #include "ReVersion.h"

@@ -38,6 +38,9 @@ QString RealityLibPath;
  ***************************************************/
 
 #ifdef WIN32 
+
+#include <windows.h>
+
 // From: http://www.codeguru.com/cpp/w-p/dll/tips/article.php/c3635/Tip-Detecting-a-HMODULEHINSTANCE-Handle-Within-the-Module-Youre-Running-In.htm
 #if _MSC_VER >= 1300    // for VC 7.0
   // from ATL 7.0 sources

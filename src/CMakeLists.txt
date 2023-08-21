@@ -95,15 +95,33 @@ install (TARGETS sqlite3 EXPORT SQLiteCppTargets)
 set_property (DIRECTORY ${SQLiteCpp_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
 # ZeroMQ
-set (CMAKE_POLICY_DEFAULT_CMP0048 OLD)
-set (CMAKE_POLICY_DEFAULT_CMP0053 OLD)
-set (CMAKE_POLICY_DEFAULT_CMP0071 OLD)
-add_subdirectory (../libs/zeromq4 ${CMAKE_CURRENT_BINARY_DIR}/deps/zeromq4 EXCLUDE_FROM_ALL)
-unset (CMAKE_POLICY_DEFAULT_CMP0048)
-unset (CMAKE_POLICY_DEFAULT_CMP0053)
-unset (CMAKE_POLICY_DEFAULT_CMP0071)
-target_compile_definitions (libzmq-static PUBLIC ZMQ_STATIC)
-target_include_directories (libzmq-static INTERFACE ../libs/zeromq4/include)
+FetchContent_Declare (ZeroMQ
+	GIT_REPOSITORY	https://github.com/zeromq/libzmq.git
+	GIT_TAG			v4.3.4
+	OVERRIDE_FIND_PACKAGE
+)
+
+block()
+	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+	set (CMAKE_SUPPRESS_DEVELOPER_WARNINGS ON)
+	set (BUILD_TESTS OFF)
+	FetchContent_MakeAvailable (ZeroMQ)
+endblock()
+set_property (DIRECTORY ${ZeroMQ_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
+
+# cppzmq
+FetchContent_Declare (cppzmq
+	GIT_REPOSITORY	https://github.com/zeromq/cppzmq.git
+	GIT_TAG			v4.6.0
+	OVERRIDE_FIND_PACKAGE
+)
+
+block()
+	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+	set (CPPZMQ_BUILD_TESTS OFF)
+	FetchContent_MakeAvailable (cppzmq)
+endblock()
+
 
 # Enable Qt Auto MOC/UIC/RCC
 set (CMAKE_AUTOMOC ON)
@@ -644,8 +662,7 @@ add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
-target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp)
-target_link_libraries (Reality_Widgets PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
 target_sources (Reality_Widgets PRIVATE
@@ -668,8 +685,7 @@ add_library (Reality_LIB SHARED)
 target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
-target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp)
-target_link_libraries (Reality_LIB PUBLIC libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp cppzmq-static)
 
 target_sources (Reality_LIB PRIVATE
 	${SRC_GROUP_RESOURCES}
@@ -684,8 +700,7 @@ add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_DS PRIVATE core data)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
-target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson SQLiteCpp)
-target_link_libraries (Reality_DS PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -712,8 +727,7 @@ Python2_add_library (Reality_PY MODULE)
 target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_PY PRIVATE core data)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
-target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson SQLiteCpp)
-target_link_libraries (Reality_PY PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
