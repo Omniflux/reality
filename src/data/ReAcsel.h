@@ -69,8 +69,7 @@
 #include "ReMaterial.h"
 #include "ReLogger.h"
 
-#define SQLITECPP_ENABLE_ASSERT_HANDLER 1
-#include "SQLiteCpp.h"
+#include <SQLiteCpp/SQLiteCpp.h>
 #include "ReLogger.h"
 
 #include <QString>

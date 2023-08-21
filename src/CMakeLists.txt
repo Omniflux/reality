@@ -75,6 +75,25 @@ endblock()
 target_include_directories (qjson INTERFACE $<BUILD_INTERFACE:${qjson_SOURCE_DIR}/include>)
 set_property (DIRECTORY ${qjson_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
+# SQLiteCpp
+# Note - Warning that BLOB storage seems to be corrupted is incorrect
+# See: https://github.com/SRombauts/SQLiteCpp/issues/189
+FetchContent_Declare (SQLiteCpp
+	GIT_REPOSITORY    https://github.com/SRombauts/SQLiteCpp.git
+	GIT_TAG           2d3cafeb3054899bd8c839798d18cd37454d4725
+)
+
+block()
+	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+	set (SQLITE_ENABLE_ASSERT_HANDLER ON)
+	FetchContent_MakeAvailable (SQLiteCpp)
+endblock()
+target_link_libraries (SQLiteCpp PRIVATE sqlite3)
+get_target_property (INC_DIR sqlite3 INTERFACE_INCLUDE_DIRECTORIES)
+set_target_properties (sqlite3 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES $<BUILD_INTERFACE:${INC_DIR}>)
+install (TARGETS sqlite3 EXPORT SQLiteCppTargets)
+set_property (DIRECTORY ${SQLiteCpp_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
+
 # ZeroMQ
 set (CMAKE_POLICY_DEFAULT_CMP0048 OLD)
 set (CMAKE_POLICY_DEFAULT_CMP0053 OLD)
@@ -85,12 +104,6 @@ unset (CMAKE_POLICY_DEFAULT_CMP0053)
 unset (CMAKE_POLICY_DEFAULT_CMP0071)
 target_compile_definitions (libzmq-static PUBLIC ZMQ_STATIC)
 target_include_directories (libzmq-static INTERFACE ../libs/zeromq4/include)
-
-# SQLiteCpp
-add_library(SQLiteCpp INTERFACE)
-target_compile_definitions (SQLiteCpp INTERFACE SQLITECPP_ENABLE_ASSERT_HANDLER)
-target_include_directories (SQLiteCpp INTERFACE ../libs/sqlite ../libs/SQLiteCpp/include)
-target_sources (SQLiteCpp INTERFACE ${SRC_GROUP_SQLITE})
 
 # Enable Qt Auto MOC/UIC/RCC
 set (CMAKE_AUTOMOC ON)
@@ -104,14 +117,6 @@ set (CMAKE_AUTORCC ON)
 
 
 # Define file groups
-set (SRC_GROUP_SQLITE
-	../libs/sqlite/sqlite3.c
-	../libs/SQLiteCpp/src/Column.cpp
-	../libs/SQLiteCpp/src/Database.cpp
-	../libs/SQLiteCpp/src/Statement.cpp
-	../libs/SQLiteCpp/src/Transaction.cpp
-)
-source_group ("SQLite" FILES ${SRC_GROUP_SQLITE})
 
 set (SRC_GRP_VERSION
 	core/ReVersion.cpp.in
@@ -639,12 +644,11 @@ add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
 target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
-target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson)
-target_link_libraries (Reality_Widgets PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp)
+target_link_libraries (Reality_Widgets PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
 
 target_sources (Reality_Widgets PRIVATE
-	${SRC_GROUP_SQLITE}
 	${HEADER_GROUP_QTDESIGNER}
 	${HEADER_GROUP_LIBRARY}
 	${HEADER_GROUP_TEXTURE_EDITORS}
@@ -664,11 +668,10 @@ add_library (Reality_LIB SHARED)
 target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
-target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson)
-target_link_libraries (Reality_LIB PUBLIC libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp)
+target_link_libraries (Reality_LIB PUBLIC libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
 
 target_sources (Reality_LIB PRIVATE
-	${SRC_GROUP_SQLITE}
 	${SRC_GROUP_RESOURCES}
 	${HEADER_GROUP_LIBRARY}
 	${HEADER_GROUP_TEXTURES_MATS}
@@ -681,8 +684,8 @@ add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_DS PRIVATE core data)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
-target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson)
-target_link_libraries (Reality_DS PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson SQLiteCpp)
+target_link_libraries (Reality_DS PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -695,7 +698,6 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 target_sources (Reality_DS PRIVATE
-	${SRC_GROUP_SQLITE}
 	${SRC_GROUP_RESOURCES}
 	${HEADER_GROUP_DAZ_STUDIO_PLUGIN}
 	${HEADER_GROUP_LIBRARY}
@@ -710,8 +712,8 @@ Python2_add_library (Reality_PY MODULE)
 target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_PY PRIVATE core data)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
-target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson)
-target_link_libraries (Reality_PY PRIVATE libzmq-static SQLiteCpp $<$<PLATFORM_ID:Windows>:ws2_32>)
+target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson SQLiteCpp)
+target_link_libraries (Reality_PY PRIVATE libzmq-static $<$<PLATFORM_ID:Windows>:ws2_32>)
 set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -722,7 +724,6 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 target_sources (Reality_PY PRIVATE
-	${SRC_GROUP_SQLITE}
 	${SRC_GROUP_RESOURCES}
 	${HEADER_GROUP_POSER_ADDON}
 	${HEADER_GROUP_LIBRARY}

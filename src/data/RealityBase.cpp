@@ -120,7 +120,8 @@ void RealityBase::main() {
                      .arg(REALITY_PATCH_VERSION)
                      .arg(REALITY_BUILD_NUMBER);  
 
-  RE_LOG_INFO() << "SQLite v." << SQLITE_VERSION;
+  RE_LOG_INFO() << "SQLite v." << SQLite::VERSION;
+  RE_LOG_INFO() << "SQLiteC++ v." << SQLITECPP_VERSION;
   RE_LOG_INFO() << "ACSEL library v." << RE_ACSEL_VERSION;
   RE_LOG_INFO() << "Reality executable in: " 
                 << self->getRealityExecutablePath();
