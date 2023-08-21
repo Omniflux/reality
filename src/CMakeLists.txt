@@ -8,6 +8,8 @@
 
 # Configure CMAKE
 cmake_minimum_required (VERSION 3.25)
+set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 include (FetchContent)
 
@@ -47,26 +49,41 @@ add_compile_definitions ($<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN>)
 # Find dependencies
 set (Boost_USE_STATIC_LIBS ON)
 
+FetchContent_Declare (qjson
+	GIT_REPOSITORY    https://github.com/flavio/qjson.git
+	GIT_TAG           4920592171ccf83029f004880ad02aa34a60c0ab
+)
+
+FetchContent_Declare (SQLiteCpp
+	GIT_REPOSITORY    https://github.com/SRombauts/SQLiteCpp.git
+	GIT_TAG           2d3cafeb3054899bd8c839798d18cd37454d4725
+)
+
+FetchContent_Declare (ZeroMQ
+	GIT_REPOSITORY	https://github.com/zeromq/libzmq.git
+	GIT_TAG			v4.3.4
+	OVERRIDE_FIND_PACKAGE
+)
+
+FetchContent_Declare (cppzmq
+	GIT_REPOSITORY	https://github.com/zeromq/cppzmq.git
+	GIT_TAG			v4.6.0
+	OVERRIDE_FIND_PACKAGE
+)
+
 find_package (Boost 1.67.0 REQUIRED COMPONENTS atomic program_options python27)
 find_package (Qt4 4.8.7 REQUIRED COMPONENTS QtGui QtNetwork QtWebKit)
-find_package (OpenCL REQUIRED)
 find_package (Python2 2.7.18 REQUIRED COMPONENTS Development.Module)
+find_package (OpenCL REQUIRED)
 find_package (DAZStudioSDK REQUIRED)
 
 if (DAZStudioSDK_TOOLKIT_INCOMPATIBLE)
 	message (SEND_ERROR)
 endif()
 
-# Include dependencies to build
 # QJSON
-FetchContent_Declare (qjson
-	GIT_REPOSITORY    https://github.com/flavio/qjson.git
-	GIT_TAG           4920592171ccf83029f004880ad02aa34a60c0ab
-)
-
 block()
 	set (CMAKE_POLICY_DEFAULT_CMP0026 OLD)
-	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 	set (BUILD_SHARED_LIBS OFF)
 	set (LINK_SHARED_QT ON)
 	set (QT4_BUILD ON)
@@ -78,13 +95,7 @@ set_property (DIRECTORY ${qjson_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 # SQLiteCpp
 # Note - Warning that BLOB storage seems to be corrupted is incorrect
 # See: https://github.com/SRombauts/SQLiteCpp/issues/189
-FetchContent_Declare (SQLiteCpp
-	GIT_REPOSITORY    https://github.com/SRombauts/SQLiteCpp.git
-	GIT_TAG           2d3cafeb3054899bd8c839798d18cd37454d4725
-)
-
 block()
-	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 	set (SQLITE_ENABLE_ASSERT_HANDLER ON)
 	FetchContent_MakeAvailable (SQLiteCpp)
 endblock()
@@ -95,14 +106,7 @@ install (TARGETS sqlite3 EXPORT SQLiteCppTargets)
 set_property (DIRECTORY ${SQLiteCpp_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
 # ZeroMQ
-FetchContent_Declare (ZeroMQ
-	GIT_REPOSITORY	https://github.com/zeromq/libzmq.git
-	GIT_TAG			v4.3.4
-	OVERRIDE_FIND_PACKAGE
-)
-
 block()
-	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 	set (CMAKE_SUPPRESS_DEVELOPER_WARNINGS ON)
 	set (BUILD_TESTS OFF)
 	FetchContent_MakeAvailable (ZeroMQ)
@@ -110,14 +114,7 @@ endblock()
 set_property (DIRECTORY ${ZeroMQ_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
 # cppzmq
-FetchContent_Declare (cppzmq
-	GIT_REPOSITORY	https://github.com/zeromq/cppzmq.git
-	GIT_TAG			v4.6.0
-	OVERRIDE_FIND_PACKAGE
-)
-
 block()
-	set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 	set (CPPZMQ_BUILD_TESTS OFF)
 	FetchContent_MakeAvailable (cppzmq)
 endblock()
