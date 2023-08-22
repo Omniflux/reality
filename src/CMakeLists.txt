@@ -12,6 +12,7 @@ set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
 include (FetchContent)
+include(CheckIPOSupported)
 
 # Configure pre-project settings
 set (CMAKE_CXX_STANDARD 11)
@@ -30,6 +31,14 @@ project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HO
 if (NOT Reality_VERSION_TWEAK)
 	set (Reality_VERSION_TWEAK 0)
 endif()
+
+# Enable IPO
+check_ipo_supported (RESULT ipo_supported)
+if (ipo_supported)
+  set (CMAKE_POLICY_DEFAULT_CMP0069 NEW)
+  set (CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
+  set (CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
+endif ()
 
 # MSVC2010 does not support C++11 but does support enum qualified names, so silence the warning
 add_compile_options ($<$<AND:$<COMPILE_LANG_AND_ID:CXX,MSVC>,$<VERSION_LESS:$<CXX_COMPILER_VERSION>,17>>:/wd4482>)
