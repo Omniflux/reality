@@ -9,12 +9,13 @@
 # Configure CMAKE
 cmake_minimum_required (VERSION 3.25)
 set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
-
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
+
 include (FetchContent)
 
 # Configure pre-project settings
 set (CMAKE_CXX_STANDARD 11)
+
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 	# DAZ Studio 4 is available for both 32 bit and 64 bit architectures on the Intel platform
 	set (CMAKE_OSX_ARCHITECTURES "x86_64;i386" CACHE STRING "Build architectures for OS X")
@@ -28,13 +29,6 @@ project (Reality VERSION 4.3.2 DESCRIPTION "Reality for DAZ Studio and Poser" HO
 # Ensure tweak version has a value for use in generated files
 if (NOT Reality_VERSION_TWEAK)
 	set (Reality_VERSION_TWEAK 0)
-endif()
-
-# Get target architecture
-if (CMAKE_SIZEOF_VOID_P EQUAL 4)
-	set (TARGET_ARCH 32)
-else()
-	set (TARGET_ARCH 64)
 endif()
 
 # MSVC2010 does not support C++11 but does support enum qualified names, so silence the warning
