@@ -9,8 +9,8 @@
       "environment": {
         "CFLAGS": "$penv{CFLAGS} /MP",
         "CXXFLAGS": "$penv{CXXFLAGS} /MP",
-        "BOOST_ROOT": "E:/Reality/boost_1_81_0",
-        "DAZStudioSDK_ROOT_DIR": "D:/3D/DAZ 3D/DAZStudio4.5+ SDK"
+        "BOOST_ROOT": "E:/BuildDependencies/Boost/boost_1_81_0",
+        "DAZStudioSDK_ROOT": "D:/3D/DAZ 3D/DAZStudio4.5+ SDK"
       }
     },
     {
@@ -19,7 +19,7 @@
       "displayName": "My Paths x64",
       "description": "My custom x64 dependency paths",
       "environment": {
-        "QTDIR": "E:/Reality/Qt/4.8.7-x64/qt-4.8.7-x64-msvc2010"
+        "QTDIR": "E:/BuildDependencies/Qt/qt-4.8.7-x64-msvc2010"
       }
     },
     {
@@ -28,7 +28,7 @@
       "displayName": "My Paths x86",
       "description": "My custom x86 dependency paths",
       "environment": {
-        "QTDIR": "E:/Reality/Qt/4.8.7-x86"
+        "QTDIR": "E:/BuildDependencies/Qt/qt-4.8.7-x86-msvc2010"
       }
     },
     {

@@ -3,16 +3,13 @@
 # Contrary to DAZ SDK Documention it appears linking to libc++ works?
 
 
-### TODO OS X build bundle and verify rpath/loader_path are correct
-
-
 # Configure CMAKE
 cmake_minimum_required (VERSION 3.25)
 set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
 include (FetchContent)
-include(CheckIPOSupported)
+include (CheckIPOSupported)
 
 # Configure pre-project settings
 set (CMAKE_CXX_STANDARD 11)
@@ -78,7 +75,7 @@ find_package (Boost 1.67.0 REQUIRED COMPONENTS atomic program_options python27)
 find_package (Qt4 4.8.7 REQUIRED COMPONENTS QtGui QtNetwork QtWebKit)
 find_package (Python2 2.7.18 REQUIRED COMPONENTS Development.Module)
 find_package (OpenCL REQUIRED)
-find_package (DAZStudioSDK REQUIRED)
+find_package (DAZStudioSDK 4.5 REQUIRED COMPONENTS Plugin)
 
 if (DAZStudioSDK_TOOLKIT_INCOMPATIBLE)
 	message (SEND_ERROR)
@@ -597,9 +594,6 @@ set (SRC_GROUP_DAZ_STUDIO_PLUGIN
 
 	$<$<PLATFORM_ID:Windows>:Studio/Reality_DS.rc.in>
 	$<$<PLATFORM_ID:Windows>:${PROJECT_BINARY_DIR}/autogen/Reality_DS.rc>
-
-	# The Windows version needs a .def file to export the plugin's entry points
-	$<$<PLATFORM_ID:Windows>:Reality.def>
 )
 source_group ("DAZ Studio Plugin" FILES ${HEADER_GROUP_DAZ_STUDIO_PLUGIN} ${SRC_GROUP_DAZ_STUDIO_PLUGIN})
 
@@ -701,13 +695,11 @@ add_library (Reality_DS MODULE)
 target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
 target_include_directories (Reality_DS PRIVATE core data)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
-target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::DAZStudioSDK qjson SQLiteCpp cppzmq-static)
-set_target_properties (Reality_DS PROPERTIES XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE "${TESTFIXTURES_DIR}/exported-symbols.txt")
+target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::Plugin qjson SQLiteCpp cppzmq-static)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 	set_target_properties (Reality_DS PROPERTIES
-		CXX_VISIBILITY_PRESET hidden	# Necessary with the following?
-		XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE exportedPluginSymbols.txt
+		CXX_VISIBILITY_PRESET hidden	# Necessary with XCODE_ATTRIBUTE_EXPORTED_SYMBOLS_FILE?
 		XCODE_ATTRIBUTE_DEAD_CODE_STRIPPING YES
 		XCODE_ATTRIBUTE_STRIP_STYLE all
 	)
