@@ -59,18 +59,18 @@ FetchContent_Declare (qjson
 
 FetchContent_Declare (SQLiteCpp
 	GIT_REPOSITORY    https://github.com/SRombauts/SQLiteCpp.git
-	GIT_TAG           2d3cafeb3054899bd8c839798d18cd37454d4725
+	GIT_TAG           2.5.0
 )
 
 FetchContent_Declare (ZeroMQ
-	GIT_REPOSITORY	https://github.com/zeromq/libzmq.git
-	GIT_TAG			v4.3.4
+	GIT_REPOSITORY    https://github.com/zeromq/libzmq.git
+	GIT_TAG           ec013f3a17beaa475c18e8cf5e93970800e2f94a
 	OVERRIDE_FIND_PACKAGE
 )
 
 FetchContent_Declare (cppzmq
-	GIT_REPOSITORY	https://github.com/zeromq/cppzmq.git
-	GIT_TAG			v4.6.0
+	GIT_REPOSITORY    https://github.com/zeromq/cppzmq.git
+	GIT_TAG           v4.10.0
 	OVERRIDE_FIND_PACKAGE
 )
 
@@ -104,13 +104,14 @@ block()
 endblock()
 target_link_libraries (SQLiteCpp PRIVATE sqlite3)
 get_target_property (INC_DIR sqlite3 INTERFACE_INCLUDE_DIRECTORIES)
-set_target_properties (sqlite3 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES $<BUILD_INTERFACE:${INC_DIR}>)
+set_target_properties (sqlite3 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES $<BUILD_INTERFACE:${INC_DIR}> SKIP_AUTOGEN ON)
 install (TARGETS sqlite3 EXPORT SQLiteCppTargets)
 set_property (DIRECTORY ${SQLiteCpp_SOURCE_DIR} PROPERTY EXCLUDE_FROM_ALL YES)
 
 # ZeroMQ
 block()
 	set (CMAKE_SUPPRESS_DEVELOPER_WARNINGS ON)
+	set (CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS ON)
 	set (BUILD_TESTS OFF)
 	FetchContent_MakeAvailable (ZeroMQ)
 endblock()
