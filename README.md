@@ -66,9 +66,6 @@ This does not work at the moment, needs to be reimplemented for [CPack](https://
 ## TODO
 - Fix OS X builds
 - Implement building bundles/installers with CMake
-- Fix OpenCL loading on Windows
-  - QLibrary (LoadModule) should not be called in DllMain. It does not work with OpenCL ICD >= 3.1, and only worked in earlier versions by chance.
-  - OR remove OpenCL functionality if no longer useful
 - Port Poser 11 addon to Poser 12
   - Poser switched from Python 2 to Python 3
 - Separate DAZ Studio Plugin from Reality so both DS 4 and DS 5+ plugins can exist

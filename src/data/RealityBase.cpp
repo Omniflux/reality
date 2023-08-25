@@ -81,8 +81,6 @@ RealityBase::RealityBase() {
                        .arg(REALITY_PATCH_VERSION)
                        .arg(REALITY_BUILD_NUMBER);
 
-  main();
-
 # ifdef Q_OS_MAC
   osType = MAC_OS;
 #elif defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
@@ -321,19 +319,25 @@ QString RealityBase::getPrintableHostAppID() const {
  * Static variable used to automatically execute our main()
  * !StaticGlobalObject
  */
-static RealityBase realityBase;
+static RealityBase* realityBase = NULL;
 
 RealityBase* RealityBase::getRealityBase() {
-  return &realityBase;
+  if (!realityBase)
+  {
+      realityBase = new RealityBase();
+      realityBase->main();
+  }
+
+  return realityBase;
 }
 
 QUndoStack* RealityBase::getUndoStack() {
   // We delay creating the undo stack until the first request for it
-  if (!realityBase.undoStack) {
-    realityBase.undoStack = new QUndoStack();
-    realityBase.undoStack->setUndoLimit(30);
+  if (!realityBase->undoStack) {
+    realityBase->undoStack = new QUndoStack();
+    realityBase->undoStack->setUndoLimit(30);
   }
-  return realityBase.undoStack;
+  return realityBase->undoStack;
 }
 
 void RealityBase::startACSELCaching() {

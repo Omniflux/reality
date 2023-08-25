@@ -51,12 +51,6 @@ ReOpenCL::ReOpenCL() {
 #if __APPLE__
   QString libpath = "/System/Library/Frameworks/OpenCL.framework/OpenCL";
 #elif defined(WIN32)
-  #ifndef _WIN64
-    // On Windows loading the OpenCL library dinamically at 32-bit causes
-    // the app to crash. Support for OpenCL is only available on 64-bit 
-    // Windows.
-    return;
-  #endif
   // QString libpath = "C:/Windows/System32/OpenCL";
   QString libpath = "OpenCL";
 #endif
