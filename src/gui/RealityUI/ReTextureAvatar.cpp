@@ -204,10 +204,6 @@ void ReTextureAvatar::gearMenuClicked() {
                                 mimeData->data(RE_TEX_CLIPBOARD_MIME_TYPE),
                                 &parseOk
                               ).toMap();
-  if (!parseOk) {
-    RE_LOG_WARN() << "Error: could not parse the texture data: " << texture;
-    return;
-  }
   auto textureData = textureBundle.value("texture").toMap();
   bool isDataTypeCompatible = false;
   switch(static_cast<ReTexture::ReTextureDataType>(textureData["dataType"].toInt())) {
