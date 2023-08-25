@@ -29,11 +29,11 @@ The easiest way to do this is to install the Windows 7.1 SDK. This may be diffic
 
 Perl and CMake are also required
 - [Perl 5](https://www.perl.org/get.html)
-- [CMake 3.21](https://cmake.org/download/) - CMake is included with Visual Studio 2019+ or can be installed independently
+- [CMake 3.25](https://cmake.org/download/) - CMake is included with Visual Studio 2019+ or can be installed independently
 
 Several other libraries must also be available and built against the same Redistributable package. The easiest way to do this is to download the official pre-built packages, although you can build them from source yourself, details to do so are not covered here. 64-bit packages are listed below, but 32-bit packages are also available.
-- Boost 1.54 - [boost_1_54_0-msvc-10.0-64.exe](https://sourceforge.net/projects/boost/files/boost-binaries/1.54.0/)
-- Python 2.6.6 - [python-2.6.6.amd64.msi](https://www.python.org/downloads/release/python-266/)
+- Boost 1.67 - [boost_1_67_0-msvc-10.0-64.exe](https://sourceforge.net/projects/boost/files/boost-binaries/1.67.0/)
+- Python 2.7.18 - [python-2.7.18.amd64.msi](https://www.python.org/downloads/release/python-2718/)
 - Qt 4.8.7 - [qt-4.8.7-x64-msvc2010.exe](https://sourceforge.net/projects/qt64ng/files/qt/x86-64/4.8.7/msvc2010/)
 - [DAZ Studio 4.5+ SDK](https://www.daz3d.com/daz-studio-4-5-sdk)
 - An OpenCL SDK - I use [NVIDIA's CUDA Toolkit](https://developer.nvidia.com/cuda-downloads), but any vendors should be fine.
@@ -41,7 +41,7 @@ Several other libraries must also be available and built against the same Redist
 Once these are installed, copy `src/CMakeUserPresets.json.template` to `src/CMakeUserPresets.json` and update to match your install locations.
 - BOOST_ROOT
 - QTDIR
-- DAZStudioSDK_ROOT_DIR
+- DAZStudioSDK_ROOT
 - Add a generator field to override the generator if not using the one set in `CMakePresets.json`
 
 Open the `src` directory in Visual Studio\
