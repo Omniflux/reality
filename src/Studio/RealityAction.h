@@ -9,7 +9,6 @@
 #include "QLibrary"
 
 #include "dzaction.h"
-#include "ReDefs.h"
 #include "Reality_DS.h"
 
 /**
@@ -18,7 +17,7 @@
 
 using namespace Reality;
 
-class RE_LIB_ACCESS  Reality3Action : public DzAction {
+class Reality3Action : public DzAction {
 
   Q_OBJECT
 

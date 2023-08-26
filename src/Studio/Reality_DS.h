@@ -27,7 +27,6 @@
 #include "dzviewport.h"
 #include "dz3dviewport.h"
 
-#include "ReDefs.h"
 #include "ReLogger.h"
 #include "ReDAZStudioEvent.h"
 #include "ReDSMatCollection.h"
@@ -81,7 +80,7 @@ typedef QSharedPointer<QVariantMap> ReVariantMapPtr;
 
 using namespace Reality;
 
-class RE_LIB_ACCESS Reality_DS: public DzPlugin {
+class Reality_DS : public DzPlugin {
 
   Q_OBJECT
 
