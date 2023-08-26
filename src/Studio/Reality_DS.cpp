@@ -3,6 +3,9 @@
  *  Reality plug-in
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
+
+#include <boost/crc.hpp>
+
 #include <QtCore>
 #include <QtGlobal>
 #include <QSettings>
@@ -22,7 +25,6 @@
 #include "ReAcsel.h"
 #include "ReRenderContext.h"
 // #include "ReDSDebugTools.h"
-#include "crc.h"
 
 #ifdef __APPLE__
   #pragma clang diagnostic push
@@ -1452,9 +1454,12 @@ QString makeObjectUID( const DzNode* node ) {
   //   return GUID;
   // }
   QString GUID = ReGUID::getGUID();
+  auto crc = boost::crc_ccitt_type();
+  crc.process_bytes(GUID.toUtf8().data(), GUID.count());
+
   return QString("%1-%2")
     .arg(getGeometryFileName(node, node->getName()))
-    .arg( crcFast(GUID.toUtf8().data(), GUID.count()) );
+    .arg(crc.checksum());
 }
 
 /**

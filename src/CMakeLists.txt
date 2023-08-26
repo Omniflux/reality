@@ -563,7 +563,6 @@ set (SRC_GROUP_LIBRARY
 source_group ("Reality Library" FILES ${SRC_GROUP_LIBRARY})
 
 set (SRC_GROUP_POSER_ADDON
-	core/crc.c
 	Poser/RePythonTools.cpp
 	Poser/Reality_ext.cpp
 	Poser/RePoserInterface.cpp
@@ -582,7 +581,6 @@ set (HEADER_GROUP_DAZ_STUDIO_PLUGIN
 )
 
 set (SRC_GROUP_DAZ_STUDIO_PLUGIN
-	core/crc.c
 	Studio/Reality_DS.cpp
 	Studio/RealityAction.cpp
 	Studio/ReDSMaterialConverter.cpp
