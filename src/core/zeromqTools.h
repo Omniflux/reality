@@ -10,37 +10,38 @@
 #include "zmq.hpp"
 #include <QtCore>
 #include "ReLogger.h"
+#include "reality_lib_export.h"
 
 /***********************************************
  * ZMQ utility functions
  ***********************************************/
 
 //! Sends a QString via a ZeroMQ socket
-RE_LIB_ACCESS bool zmqSendString(zmq::socket_t& socket, const QString string);
+REALITY_LIB_EXPORT bool zmqSendString(zmq::socket_t& socket, const QString string);
 
 //! Retrieves a C string form the socket and returns is as a QString.
 //! This function blocks if there are no strings ready
-RE_LIB_ACCESS QString zmqReceiveString(zmq::socket_t& socket);
+REALITY_LIB_EXPORT QString zmqReceiveString(zmq::socket_t& socket);
 
 //! Receives a pointer from the socket.
-RE_LIB_ACCESS void* zmqReceivePointer(zmq::socket_t& socket);
+REALITY_LIB_EXPORT void* zmqReceivePointer(zmq::socket_t& socket);
 //! Sends a pointer via a socket
-RE_LIB_ACCESS bool zmqSendPointer(zmq::socket_t& socket, const void* ptr);
+REALITY_LIB_EXPORT bool zmqSendPointer(zmq::socket_t& socket, const void* ptr);
 
 //! Check is there are pending messages for a given socket. This operation
 //! is non-blocking so it can be used to poll a socket. 
 //! Returns true if there are pending messages, false otherwise
-RE_LIB_ACCESS bool zmqHasMessages( zmq::socket_t& zmqSocket, unsigned int timeOut = 100 );
-RE_LIB_ACCESS inline bool zmqHasMessages( zmq::socket_t* zmqSocket, 
+REALITY_LIB_EXPORT bool zmqHasMessages( zmq::socket_t& zmqSocket, unsigned int timeOut = 100 );
+REALITY_LIB_EXPORT inline bool zmqHasMessages( zmq::socket_t* zmqSocket,
                                           unsigned int timeOut = 100 ) 
 {
   return zmqHasMessages(*zmqSocket, timeOut);
 }
 
-RE_LIB_ACCESS void zmqSetNoLinger( zmq::socket_t& socket );
-RE_LIB_ACCESS void zmqSetNoLinger( zmq::socket_t* socket );
+REALITY_LIB_EXPORT void zmqSetNoLinger( zmq::socket_t& socket );
+REALITY_LIB_EXPORT void zmqSetNoLinger( zmq::socket_t* socket );
 
-// RE_LIB_ACCESS void zmqSetDataStream( QDataStream& dataStream, zmq::message_t& msg );
+// REALITY_LIB_EXPORT void zmqSetDataStream( QDataStream& dataStream, zmq::message_t& msg );
 
 /**
   Simple class to read the content of a ZMQ message using the same facilities

@@ -7,10 +7,11 @@
 #define REVELVET_H
 
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReVelvet: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReVelvet: public DisplaceableMaterial {
 
 protected:
   float thickness;

@@ -9,10 +9,11 @@
 
 #include "ReWater.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtWaterExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtWaterExporter : public ReQtMaterialExporter {
 
 public:
   

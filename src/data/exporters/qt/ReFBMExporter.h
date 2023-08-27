@@ -9,13 +9,14 @@
 
 #include "textures/ReFBM.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports the FMB texture to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtFBMExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtFBMExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

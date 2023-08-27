@@ -8,13 +8,14 @@
 
 #include "ReCloth.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * This class exports the cloth material to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtClothExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtClothExporter : public ReQtMaterialExporter {
 
 public:
   

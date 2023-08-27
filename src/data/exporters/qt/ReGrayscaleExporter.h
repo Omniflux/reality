@@ -9,13 +9,14 @@
 
 #include "textures/ReGrayscale.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * This class exports the Grayscale texture to the JSON format
  */
-class RE_LIB_ACCESS ReQtGrayscaleExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtGrayscaleExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

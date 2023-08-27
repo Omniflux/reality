@@ -8,6 +8,7 @@
 
 #include "ReMirror.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReMirrorExporter
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtMirrorExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtMirrorExporter : public ReQtMaterialExporter {
 
 public:
   

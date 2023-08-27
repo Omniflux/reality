@@ -7,6 +7,7 @@
 #define MIX_MATERIAL_H
 
 #include "ReMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -14,7 +15,7 @@ namespace Reality {
   Class: ReMix
  */
 
-class RE_LIB_ACCESS ReMix : public ReMaterial {
+class REALITY_LIB_EXPORT ReMix : public ReMaterial {
 private:
 
   // ReTexturePtr mixTexture;

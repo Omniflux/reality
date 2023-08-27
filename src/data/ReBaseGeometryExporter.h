@@ -9,6 +9,7 @@
 #include <QtCore>
 #include "ReDefs.h"
 #include "ReMatrix.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -18,7 +19,7 @@ namespace Reality {
 
 class ReGeometryBuffer;
 
-class RE_LIB_ACCESS ReBaseGeometryExporter {
+class REALITY_LIB_EXPORT ReBaseGeometryExporter {
 
 protected:
   // This is what we return for the export 

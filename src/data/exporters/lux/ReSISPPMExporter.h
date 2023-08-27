@@ -10,10 +10,11 @@
 #define RE_LUX_SI_SPPM_EXPORTER_H
 
 #include "ReSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReLuxSISPPMExporter : public ReLuxSIExporter {
+class REALITY_LIB_EXPORT ReLuxSISPPMExporter : public ReLuxSIExporter {
   
 public:
 

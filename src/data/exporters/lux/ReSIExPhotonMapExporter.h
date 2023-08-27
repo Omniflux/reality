@@ -10,10 +10,11 @@
 #define RE_LUX_SIEXPHOTON_MAP_EXPORTER_H
 
 #include "ReSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReLuxSIExPhotonMapExporter : public ReLuxSIExporter {
+class REALITY_LIB_EXPORT ReLuxSIExPhotonMapExporter : public ReLuxSIExporter {
   
 public:
 

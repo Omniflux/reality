@@ -8,6 +8,7 @@
 
 #include "ReTexture.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReLuxWrinkleExporter
  */
 
-class RE_LIB_ACCESS ReLuxWrinkleExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxWrinkleExporter : public ReLuxTextureExporter {
 
 public:
 

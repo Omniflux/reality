@@ -12,6 +12,7 @@
 
 #include "ReTexture.h"
 #include "exporters/qt/ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
  * This is a singleton factory.
  */
 
-class RE_LIB_ACCESS ReQtTextureExporterFactory {
+class REALITY_LIB_EXPORT ReQtTextureExporterFactory {
 private:
   static QHash<int, ReQtTextureExporterPtr> exporters;
 

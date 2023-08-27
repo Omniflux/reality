@@ -8,6 +8,7 @@
 
 #include "ReMaterial.h"
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 #define RE_GLOSSY_KD_CH "Kd"
 #define RE_GLOSSY_KS_CH "Ks"
@@ -21,7 +22,7 @@ namespace Reality {
 /**
  The Glossy and Glossy Translucent material.
  */
-class RE_LIB_ACCESS Glossy: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT Glossy: public DisplaceableMaterial {
 protected:
   // Used as a placeholder and for the rare case when 
   // a texture might become null

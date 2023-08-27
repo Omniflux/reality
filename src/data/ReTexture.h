@@ -26,6 +26,7 @@
 #include <QSharedPointer>
 #include <QImage>
 #include <QStringList>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -43,7 +44,7 @@ class ReTexture;
 //! Smart pointer to a texture. Used to link textures together.
 typedef QSharedPointer<ReTexture> ReTexturePtr;
 
-class RE_LIB_ACCESS ReTexture {
+class REALITY_LIB_EXPORT ReTexture {
 
 public:
   enum ReTextureDataType {
@@ -229,7 +230,7 @@ typedef QHashIterator<QString, ReTexturePtr> ReNodeDictionaryIterator;
   A texture with a scale factor and 3D mapping
  */
 
-class RE_LIB_ACCESS ReTexture3D;
+class REALITY_LIB_EXPORT ReTexture3D;
 typedef QSharedPointer<ReTexture3D> ReTexture3DPtr;
 
 class ReTexture3D : public ReTexture {
@@ -385,7 +386,7 @@ public:
 
  */
 
-class RE_LIB_ACCESS MultiMix : public ReTexture {
+class REALITY_LIB_EXPORT MultiMix : public ReTexture {
 
 public:
   // Constructor: MultiMix

@@ -7,10 +7,11 @@
 #define RE_NULL_H
 
 #include "ReMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReNull: public ReMaterial {
+class REALITY_LIB_EXPORT ReNull: public ReMaterial {
 
 public:
 

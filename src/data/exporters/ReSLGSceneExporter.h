@@ -8,6 +8,7 @@
 
 #include "ReDefs.h"
 #include "ReBaseSceneExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReSLGSceneExporter
  */
 
-class RE_LIB_ACCESS ReSLGSceneExporter : public ReBaseSceneExporter {
+class REALITY_LIB_EXPORT ReSLGSceneExporter : public ReBaseSceneExporter {
 private:
 
   QString sceneStr; 

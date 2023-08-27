@@ -8,13 +8,14 @@
 
 #include "textures/ReDistortedNoise.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports a Distorted Noise texture to Lux
  */
-class RE_LIB_ACCESS ReLuxDistortedNoiseExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxDistortedNoiseExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texbase, const QString& assignedName = "", bool isForPreview = false ) {

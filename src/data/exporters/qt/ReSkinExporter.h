@@ -9,10 +9,11 @@
 
 #include "ReSkin.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtSkinExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtSkinExporter : public ReQtMaterialExporter {
 
 public:
   

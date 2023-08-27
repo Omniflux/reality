@@ -8,6 +8,8 @@
 
 #include "ReTexture.h"
 #include "ReComplexTexture.h"
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 #define RE_BRICK_BRICK_CHANNEL  "brick"
@@ -19,7 +21,7 @@ namespace Reality {
  *
  * See also <ReTexture>.
  */
-class RE_LIB_ACCESS Bricks : public ReTexture3D, 
+class REALITY_LIB_EXPORT Bricks : public ReTexture3D,
                              public ReComplexTexture 
 {
 

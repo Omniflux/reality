@@ -8,6 +8,7 @@
 
 #include "textures/ReConstant.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtConstantExporter
  */
 
-class RE_LIB_ACCESS ReQtConstantImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtConstantImporter : public ReQtTextureImporter {
 
 public:
 

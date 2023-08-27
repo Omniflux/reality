@@ -9,6 +9,7 @@
 
 #include "textures/Re2DTexture.h"
 #include "textures/ReComplexTexture.h"
+#include "reality_lib_export.h"
 
 /**
  * Base class for all Qt texture exporters. It defines a series of 
@@ -17,7 +18,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtTextureExporter {
 
 protected:
   QVariantMap texData;

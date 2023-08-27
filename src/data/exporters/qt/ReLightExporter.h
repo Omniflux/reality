@@ -8,10 +8,11 @@
 
 #include "ReLight.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtLightExporter {
+class REALITY_LIB_EXPORT ReQtLightExporter {
 
 public:
   QVariantMap exportLight( const ReLightPtr light ) {

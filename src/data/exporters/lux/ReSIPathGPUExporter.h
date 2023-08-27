@@ -10,13 +10,14 @@
 #define RE_LUX_SIPATHGPU_EXPORTER_H
 
 #include "ReSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
   Base calss for all Surface Integrator exporters.
  */
-class RE_LIB_ACCESS ReLuxSIPathGPUExporter : public ReLuxSIExporter {
+class REALITY_LIB_EXPORT ReLuxSIPathGPUExporter : public ReLuxSIExporter {
   
 public:
 

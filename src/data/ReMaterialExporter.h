@@ -2,12 +2,14 @@
 #define REMATERIALEXPORTER_H
 
 #include "ReMaterials.h"
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /**
   Class: ReMaterialExporter
  */
-class RE_LIB_ACCESS ReMaterialExporter {
+class REALITY_LIB_EXPORT ReMaterialExporter {
 
 public:
   // Constructor: ReMaterialExporter

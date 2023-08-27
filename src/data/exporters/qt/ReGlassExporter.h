@@ -9,14 +9,14 @@
 
 #include "ReGlass.h"
 #include "ReQtMaterialExporter.h"
-
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * This class exports the Glass material to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtGlassExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtGlassExporter : public ReQtMaterialExporter {
 
 public:
   

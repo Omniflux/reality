@@ -10,6 +10,7 @@
 #include "Re2DTexture.h"
 #include "ReLogger.h"
 #include "textures/ReComplexTexture.h"  
+#include "reality_lib_export.h"
 
 // Name of the channels used to store the sub-textures
 // The MT prefix stands for Math Texture
@@ -25,7 +26,7 @@ namespace Reality {
  * The operation can be one of add, subtract or multiply. See <ReTexture>.
  */
 
-class RE_LIB_ACCESS ReMath : public Re2DTexture,
+class REALITY_LIB_EXPORT ReMath : public Re2DTexture,
                              public ReComplexTexture
 {
 

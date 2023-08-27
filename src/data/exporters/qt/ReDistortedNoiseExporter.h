@@ -10,13 +10,14 @@
 #include "ReProceduralNoiseExporter.h"
 #include "textures/ReDistortedNoise.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports the Distorted Noise texture to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtDistortedNoiseExporter : public ReQtProceduralNoisesExporter {
+class REALITY_LIB_EXPORT ReQtDistortedNoiseExporter : public ReQtProceduralNoisesExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

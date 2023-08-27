@@ -13,13 +13,14 @@
 #include <QHash>
 #include <QByteArray>
 #include "ReDefs.h"
- 
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /**
  * This class is used to executed LuxRender and SLG.
  */
-class RE_LIB_ACCESS ReLuxRunner : public QObject {
+class REALITY_LIB_EXPORT ReLuxRunner : public QObject {
   Q_OBJECT
   
 public:

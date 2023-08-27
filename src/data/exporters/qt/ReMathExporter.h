@@ -9,10 +9,11 @@
 
 #include "textures/ReMath.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtMathExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtMathExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

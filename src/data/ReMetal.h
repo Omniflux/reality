@@ -8,12 +8,13 @@
 
 #include "ReMaterial.h"
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 #define RE_METAL_DEFAULT_POLISH 9500
   
-class RE_LIB_ACCESS ReMetal: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMetal: public DisplaceableMaterial {
 
 public:
   enum MetalType {

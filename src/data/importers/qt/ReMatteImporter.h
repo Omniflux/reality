@@ -9,6 +9,7 @@
 #include "ReMatte.h"
 #include "ReQtMaterialImporter.h"
 #include <QVariant>
+#include "reality_lib_export.h"
 
 /**
   Class: ReMatteImporter
@@ -17,7 +18,7 @@
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtMatteImporter : public ReQtMaterialImporter {
+class REALITY_LIB_EXPORT ReQtMatteImporter : public ReQtMaterialImporter {
 
 public:
   

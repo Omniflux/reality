@@ -8,6 +8,7 @@
 
 #include "textures/ReBand.h"
 #include "exporters/lux/ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
  * This class implements support for LuxRender band texture, a color
  * gradient.
  */
-class RE_LIB_ACCESS ReLuxBandExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxBandExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texBase, 

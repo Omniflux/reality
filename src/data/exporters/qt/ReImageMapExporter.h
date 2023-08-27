@@ -10,13 +10,14 @@
 #include "textures/ReImageMap.h"
 #include "ReQtTextureExporter.h"
 #include "ReTools.h"
- 
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /**
  * This class exports the Image Map texture to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtImageMapExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtImageMapExporter : public ReQtTextureExporter {
 public:
 
   QVariantMap exportTexture( const ReTexture* baseTex ) {

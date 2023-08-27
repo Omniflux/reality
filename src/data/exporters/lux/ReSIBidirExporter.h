@@ -10,13 +10,14 @@
 #define RE_LUX_SIBIDIR_EXPORTER_H
 
 #include "ReSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
   Base calss for all Surface Integrator exporters.
  */
-class RE_LIB_ACCESS ReLuxSIBidirExporter : public ReLuxSIExporter {
+class REALITY_LIB_EXPORT ReLuxSIBidirExporter : public ReLuxSIExporter {
   
 public:
 

@@ -8,6 +8,7 @@
 
 #include "textures/ReColorMath.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtColorMathExporter
  */
 
-class RE_LIB_ACCESS ReQtColorMathImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtColorMathImporter : public ReQtTextureImporter {
 
 public:
 

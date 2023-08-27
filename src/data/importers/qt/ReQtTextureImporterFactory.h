@@ -11,6 +11,7 @@
 
 #include "ReTexture.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -20,7 +21,7 @@ namespace Reality {
  * This is a singleton factory.
  */
 
-class RE_LIB_ACCESS ReQtTextureImporterFactory {
+class REALITY_LIB_EXPORT ReQtTextureImporterFactory {
 private:
   // Importer table, based on the texture type
   static QHash<int, ReQtTextureImporterPtr> importers;

@@ -41,7 +41,7 @@ extern "C" {
   /**
    * The global variable used to access the data
    */
-  RE_LIB_ACCESS ReSceneData* RealitySceneData;  
+  REALITY_LIB_EXPORT ReSceneData* RealitySceneData;
 }
 
 using namespace Reality;

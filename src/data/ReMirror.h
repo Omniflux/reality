@@ -8,10 +8,11 @@
 
 #include "ReMaterial.h"
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReMirror: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMirror: public DisplaceableMaterial {
 protected:
   float filmIOR;
   float filmThickness;

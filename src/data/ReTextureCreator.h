@@ -10,13 +10,14 @@
 #include "ReTextureContainer.h"
 #include <QDataStream>
 #include <QTextStream>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * A class factory used to de-serialize <ReTexture> classes from a stream.
  */
-class RE_LIB_ACCESS TextureCreator {
+class REALITY_LIB_EXPORT TextureCreator {
 
 public:
 

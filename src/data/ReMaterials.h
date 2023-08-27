@@ -8,6 +8,7 @@
 #define REMATERIALS_H
 
 #include <QTextStream>
+#include "reality_lib_export.h"
 
 #include "ReDefs.h"
 // #include "ReVolumes.h"
@@ -16,7 +17,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS MaterialCreator {
+class REALITY_LIB_EXPORT MaterialCreator {
 public:
   static ReMaterial* createMaterial( ReMaterialType matType, 
                                      const ReGeometryObject* parent,

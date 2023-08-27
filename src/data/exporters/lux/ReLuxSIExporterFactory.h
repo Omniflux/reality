@@ -12,13 +12,14 @@
 #include "ReSISPPMExporter.h"
 #include "ReSIExPhotonMapExporter.h"
 #include "ReSIDirectExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /*
   Class: ReLuxSIExporterFactory
  */
-class RE_LIB_ACCESS ReLuxSIExporterFactory {
+class REALITY_LIB_EXPORT ReLuxSIExporterFactory {
 
 public:
   // Constructor: ReLuxSIExporterFactory

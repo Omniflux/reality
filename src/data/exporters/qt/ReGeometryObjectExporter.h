@@ -11,13 +11,14 @@
 #include "ReQtMaterialExporter.h"
 #include "ReQtMaterialExporterFactory.h"
 #include "ReAcsel.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * This exporter saves a \ref ReGeometryObject into a QVariantMap object
  */
-class RE_LIB_ACCESS ReQtGeometryObjectExporter {
+class REALITY_LIB_EXPORT ReQtGeometryObjectExporter {
 
 public:
   QVariantMap exportGeometryObject( ReGeometryObjectPtr obj ) {

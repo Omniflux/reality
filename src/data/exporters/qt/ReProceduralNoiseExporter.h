@@ -9,13 +9,14 @@
 
 #include "textures/ReProceduralNoise.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports the base data for procedural noise to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtProceduralNoisesExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtProceduralNoisesExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

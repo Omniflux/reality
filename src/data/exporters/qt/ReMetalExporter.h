@@ -9,10 +9,11 @@
 
 #include "ReMetal.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtMetalExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtMetalExporter : public ReQtMaterialExporter {
 
 public:
   

@@ -15,6 +15,7 @@
 #include "ReGlossy.h"
 #include "textures/ReColorMath.h"
 #include "textures/ReMix.h"
+#include "reality_lib_export.h"
 
 //! Specular strength needs to be corrected when converting from Poser or 
 //! Studio. The following constant specifies the factor of correction.
@@ -191,7 +192,7 @@ typedef QSharedPointer<ReMaterialDictionary> ReMaterialDictionaryPtr;
  * converter.
  */
 
-class RE_LIB_ACCESS ReGeometryObject {
+class REALITY_LIB_EXPORT ReGeometryObject {
 
 protected:
   //! The name of the the object in the scene. This is obtained from the 

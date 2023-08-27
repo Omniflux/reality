@@ -3,6 +3,7 @@
 
 #include "ReGlass.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
   Exporter for the Luxcore version of the Glass material.
@@ -10,7 +11,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReGlassLuxcoreExporter : public ReLuxcoreMaterialExporter {
+class REALITY_LIB_EXPORT ReGlassLuxcoreExporter : public ReLuxcoreMaterialExporter {
 
 public:
   

@@ -10,10 +10,11 @@
 #define RE_LUX_SI_DIRECT_EXPORTER_H
 
 #include "ReSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReLuxSIDirectExporter : public ReLuxSIExporter {
+class REALITY_LIB_EXPORT ReLuxSIDirectExporter : public ReLuxSIExporter {
   
 public:
 

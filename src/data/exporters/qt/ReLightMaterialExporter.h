@@ -9,11 +9,11 @@
 
 #include "ReLightMaterial.h"
 #include "ReQtMaterialExporter.h"
-
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtLightMaterialExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtLightMaterialExporter : public ReQtMaterialExporter {
 
 public:
   

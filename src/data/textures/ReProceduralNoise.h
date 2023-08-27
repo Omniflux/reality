@@ -7,10 +7,11 @@
 #define RE_PROCEDURAL_NOISE_H
 
 #include "ReTexture.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReProceduralNoise : public ReTexture3D {
+class REALITY_LIB_EXPORT ReProceduralNoise : public ReTexture3D {
 
 public:
   enum NoiseDistortionType {

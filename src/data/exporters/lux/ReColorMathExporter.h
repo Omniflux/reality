@@ -15,6 +15,7 @@
 #include "ReSceneData.h"
 #include "ReLogger.h"
 #include "exporters/lux/ReLuxTextureExporterFactory.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -22,7 +23,7 @@ namespace Reality {
   Class: ReLuxColorMathExporter
  */
 
-class RE_LIB_ACCESS ReLuxColorMathExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxColorMathExporter : public ReLuxTextureExporter {
 
 private:
   QString multiplyColorAndTexture( const QColor& col, 

@@ -7,6 +7,7 @@
 #define __REHAIR_H__
 
 #include "ReMaterials.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
 
  A material for human hair.
  */
-class RE_LIB_ACCESS ReHair: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReHair: public DisplaceableMaterial {
 
 public:
 

@@ -7,6 +7,7 @@
 #define RELIGHTSTAND_H
 
 #include "ReLight.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -34,7 +35,7 @@ namespace Reality {
 
  */
 
-class RE_LIB_ACCESS ReLightStand {
+class REALITY_LIB_EXPORT ReLightStand {
 
 public:
   // Constructor: ReLightStand

@@ -8,6 +8,7 @@
 
 #include "textures/ReMarble.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReLuxMarbleExporter
  */
 
-class RE_LIB_ACCESS ReLuxMarbleExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxMarbleExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texBase, const QString& assignedName = "", bool isForPreview = false ) {

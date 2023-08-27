@@ -11,6 +11,7 @@
 #include "textures/ReImageMap.h"
 #include "textures/ReComplexTexture.h"  
 #include "ReTextureContainer.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
 
   See also <ReTexture>.
  */
-class RE_LIB_ACCESS ReMixTexture : public ReTexture,
+class REALITY_LIB_EXPORT ReMixTexture : public ReTexture,
                                    public ReComplexTexture
 {
 

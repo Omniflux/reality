@@ -8,13 +8,14 @@
 
 #include "ReTexture.h"
 #include "ReTextureContainer.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  Base class for all Reality materials.
  */
-class RE_LIB_ACCESS ReMaterial : public ReTextureContainer
+class REALITY_LIB_EXPORT ReMaterial : public ReTextureContainer
 {
 
 protected:

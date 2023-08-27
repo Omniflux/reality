@@ -10,6 +10,7 @@
 #include "ReMaterials.h"
 #include "ReLogger.h"
 #include <boost/any.hpp>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -26,7 +27,7 @@ namespace Reality {
  * By using this technique we can use a common interface and still support
  * a wide variety of exporters.
  */
-class RE_LIB_ACCESS ReMaterialExporter {
+class REALITY_LIB_EXPORT ReMaterialExporter {
 
 public:
   // Constructor: ReMaterialExporter

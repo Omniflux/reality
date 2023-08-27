@@ -11,13 +11,14 @@
 #include "ReTools.h"
 #include "ReSceneData.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * This class exports a ReMix texture to the file format for LuxRender
  */
-class RE_LIB_ACCESS ReLuxMixExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxMixExporter : public ReLuxTextureExporter {
 
 private:
   const QString exportColorTexture( ReMixTexturePtr tex,

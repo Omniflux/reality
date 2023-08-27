@@ -7,6 +7,7 @@
 #define RECLOTH_H
 
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 #define WARP_KD "warp_Kd"
 #define WARP_KS "warp_Ks"
@@ -20,7 +21,7 @@ namespace Reality {
 /**
  * This class holds the data for the fabrich presets
  */
-class RE_LIB_ACCESS ReClothPreset {
+class REALITY_LIB_EXPORT ReClothPreset {
 public:
   QString name;
   QString label;
@@ -67,7 +68,7 @@ public:
 /**
  Implementation of the Lux Cloth material
  */
-class RE_LIB_ACCESS ReCloth: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReCloth: public DisplaceableMaterial {
 
 private:
   QString presetName;

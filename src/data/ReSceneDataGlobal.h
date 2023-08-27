@@ -8,8 +8,9 @@
 
 #include "ReDefs.h"
 #include "ReSceneData.h"
+#include "reality_lib_export.h"
 
 //! Access to the global ReSceneData pointer 
-extern "C" RE_LIB_ACCESS Reality::ReSceneData* RealitySceneData;
+extern "C" REALITY_LIB_EXPORT Reality::ReSceneData* RealitySceneData;
 
 #endif

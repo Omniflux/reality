@@ -9,7 +9,8 @@
 #include "ReDefs.h"
 #include <QtCore>
 #include <boost/any.hpp>
-  
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 class ReSceneData;
@@ -19,7 +20,7 @@ class ReSceneData;
  * Reality scene. This is the interface used for both exporters that 
  * create versions of the scene for the renderers and for storing on disk.
  */
-class RE_LIB_ACCESS ReBaseSceneExporter {
+class REALITY_LIB_EXPORT ReBaseSceneExporter {
 protected:
   ReSceneData* scene;
 

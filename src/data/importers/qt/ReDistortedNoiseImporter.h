@@ -9,6 +9,7 @@
 #include "textures/ReDistortedNoise.h"
 #include "ReQtTextureImporter.h"
 #include "ReProceduralNoiseImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
   Class: ReQtDistortednoiseExporter
  */
 
-class RE_LIB_ACCESS ReQtDistortedNoiseImporter : public ReQtProceduralNoiseImporter {
+class REALITY_LIB_EXPORT ReQtDistortedNoiseImporter : public ReQtProceduralNoiseImporter {
 
 public:
 

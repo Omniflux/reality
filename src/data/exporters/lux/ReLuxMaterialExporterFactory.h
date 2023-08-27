@@ -11,6 +11,7 @@
 
 #include "ReMaterials.h"
 #include "ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
 
 typedef QSharedPointer<ReLuxMaterialExporter> ReLuxMaterialExporterPtr;
 
-class RE_LIB_ACCESS ReLuxMaterialExporterFactory {
+class REALITY_LIB_EXPORT ReLuxMaterialExporterFactory {
 private:
   static QHash<int, ReLuxMaterialExporterPtr> exporters;
 

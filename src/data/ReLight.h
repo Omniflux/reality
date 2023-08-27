@@ -12,6 +12,7 @@
 #include "ReMatrix.h"
 #include "ReTexture.h"
 #include "ReTextureContainer.h" 
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -34,7 +35,7 @@ enum ReLightType {
   class.
 
  */
-class RE_LIB_ACCESS ReLight {
+class REALITY_LIB_EXPORT ReLight {
 public:
   enum LightColorModel {
     Temperature,

@@ -10,13 +10,14 @@
 #include "ReMetal.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
 #include "ReSceneResources.h"
+#include "reality_lib_export.h"
 
 /**
   Specialized exporter of the Metal material for Luxcore renderer
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReMetalLuxcoreExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReMetalLuxcoreExporter : public ReLuxMaterialExporter {
 
 public:
   QString getMetalColor( ReMetal::MetalType metalType ) {

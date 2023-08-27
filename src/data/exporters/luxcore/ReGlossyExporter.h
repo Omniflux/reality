@@ -11,13 +11,14 @@
 // We simply re-use the Lux matte material. It is identical to what we need
 #include "exporters/lux/ReGlossyExporter.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
   Exports the Glossy material to Luxcore/SLG
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReGlossyLuxcoreExporter : public ReLuxcoreMaterialExporter 
+class REALITY_LIB_EXPORT ReGlossyLuxcoreExporter : public ReLuxcoreMaterialExporter
 {
 protected:
   const Glossy* mat;

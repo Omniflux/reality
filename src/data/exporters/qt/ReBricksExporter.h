@@ -9,6 +9,7 @@
 
 #include "textures/ReBricks.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
  * Exports the Brick texture to the QVariantMap format
  */
 
-class RE_LIB_ACCESS ReQtBricksExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtBricksExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

@@ -7,6 +7,7 @@
 #define RE_MARBLE_H
 
 #include "ReProceduralNoise.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
 
   3D
  */
-class RE_LIB_ACCESS ReMarble : public ReProceduralNoise {
+class REALITY_LIB_EXPORT ReMarble : public ReProceduralNoise {
 public:
   enum VeinQuality {
     SOFT,

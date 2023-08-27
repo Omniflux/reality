@@ -9,6 +9,7 @@
 #include "ReDefs.h"  
 #include "ReBaseSceneExporter.h"
 #include "ReMatrix.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
   This class exports a scene to LuxRender using the Lux scene file format
  */
 
-class RE_LIB_ACCESS ReLuxSceneExporter : public ReBaseSceneExporter {
+class REALITY_LIB_EXPORT ReLuxSceneExporter : public ReBaseSceneExporter {
 
 private:
   QString getRenderer();

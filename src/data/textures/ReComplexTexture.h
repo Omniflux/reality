@@ -10,6 +10,7 @@
 #include "ReTextureContainer.h"
 #include <QSharedPointer>
 #include <QDataStream>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -17,7 +18,7 @@ namespace Reality {
   This class defines the interface and serialization for textures that
   contain other textures.
  */
-class RE_LIB_ACCESS ReComplexTexture {
+class REALITY_LIB_EXPORT ReComplexTexture {
 
 protected:
   ReNodeDictionary channels;

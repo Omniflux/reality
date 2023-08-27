@@ -8,6 +8,7 @@
 
 #include "ReMirror.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReMirrorLuxExporter
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReMirrorLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReMirrorLuxExporter : public ReLuxMaterialExporter {
 
 protected:
   const ReMirror* mat;

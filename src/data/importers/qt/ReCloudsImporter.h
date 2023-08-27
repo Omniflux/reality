@@ -8,6 +8,7 @@
 
 #include "textures/ReClouds.h"
 #include "ReProceduralNoiseImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtCloudsExporter
  */
 
-class RE_LIB_ACCESS ReQtCloudsImporter : public ReQtProceduralNoiseImporter {
+class REALITY_LIB_EXPORT ReQtCloudsImporter : public ReQtProceduralNoiseImporter {
 
 public:
 

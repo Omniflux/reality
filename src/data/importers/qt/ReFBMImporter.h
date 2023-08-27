@@ -8,6 +8,7 @@
 
 #include "textures/ReFBM.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtFBMExporter
  */
 
-class RE_LIB_ACCESS ReQtFBMImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtFBMImporter : public ReQtTextureImporter {
 
 public:
 

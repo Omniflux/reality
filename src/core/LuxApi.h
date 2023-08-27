@@ -17,6 +17,8 @@
 #include <QLibrary>
 #include <QSharedPointer>
 
+#include "reality_lib_export.h"
+
 // Lux Version
 typedef const char* (*luxVersionFunc)();
 
@@ -50,7 +52,7 @@ extern luxUpdateFramebufferFunc luxUpdateFramebuffer;
 extern luxStatisticsFunc        luxStatistics;
 
 
-class RE_LIB_ACCESS LuxLibraryLoader {
+class REALITY_LIB_EXPORT LuxLibraryLoader {
 
 private:
   static QLibrary luxLibrary;

@@ -8,6 +8,7 @@
 
 #include "ReTexture.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReLuxImageMapExporter
  */
 
-class RE_LIB_ACCESS ReLuxImageMapExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxImageMapExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texbase, const QString& assignedName = "", bool isForPreview = false );

@@ -11,12 +11,13 @@
 #include "ReVolumes.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+#include "reality_lib_export.h"
 
 #define WM_NUM_RIPPLE_PRESETS 6
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReWater: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReWater: public DisplaceableMaterial {
 public:
 
 protected:

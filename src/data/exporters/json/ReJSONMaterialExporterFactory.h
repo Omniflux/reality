@@ -13,6 +13,7 @@
  
 #include "ReMaterials.h"
 #include "ReJSONMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -25,7 +26,7 @@ typedef QSharedPointer<ReJSONMaterialExporter> ReJSONMaterialExporterPtr;
  * that works for every type of material. So this factory is always returning 
  * the same object
  */
-class RE_LIB_ACCESS ReJSONMaterialExporterFactory {
+class REALITY_LIB_EXPORT ReJSONMaterialExporterFactory {
 private:
   static ReJSONMaterialExporterPtr exporter;
 public:

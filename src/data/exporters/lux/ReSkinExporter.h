@@ -10,13 +10,14 @@
 #include "ReSkin.h"
 #include "textures/ReImageMap.h"
 #include "exporters/lux/ReGlossyExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Lux exporter for the Skin material
  */
-class RE_LIB_ACCESS ReSkinLuxExporter : public ReBasicGlossyLuxExporter<ReSkin> {
+class REALITY_LIB_EXPORT ReSkinLuxExporter : public ReBasicGlossyLuxExporter<ReSkin> {
 
 private:
   const QString addMaterial1( const QString& matName, 

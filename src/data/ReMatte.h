@@ -8,13 +8,14 @@
 
 #include "ReMaterial.h"
 #include "ReDisplaceableMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  Merges matte and matter translucent features in one.
  */
-class RE_LIB_ACCESS ReMatte: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMatte: public DisplaceableMaterial {
 
 protected:
   float roughness;

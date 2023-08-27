@@ -16,6 +16,7 @@
 #include "ReSceneDataGlobal.h"
 
 #include <QStringList>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -24,7 +25,7 @@ namespace Reality {
   All specialized Lux material exporters are descendants of this class.
  */
 
-class RE_LIB_ACCESS ReLuxMaterialExporter : public ReMaterialExporter {
+class REALITY_LIB_EXPORT ReLuxMaterialExporter : public ReMaterialExporter {
 
 public:
 

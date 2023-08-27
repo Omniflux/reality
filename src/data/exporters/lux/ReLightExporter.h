@@ -7,6 +7,7 @@
 #define RE_LUX_LIGHT_EXPORTER_H
 
 #include "exporters/ReBaseLightExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
 
     ReLuxLightExporter::getInstance()
  */
-class RE_LIB_ACCESS ReLuxLightExporter : public ReBaseLightExporter {
+class REALITY_LIB_EXPORT ReLuxLightExporter : public ReBaseLightExporter {
 private:
   static ReLuxLightExporter* instance;
 

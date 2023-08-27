@@ -8,6 +8,7 @@
 
 #include "ReDefs.h"
 #include "ReBaseSceneExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -17,7 +18,7 @@ namespace Reality {
  * useful in the future. The conversion is done by first using the QVariantMap
  * format and then converting that to JSON. 
  */
-class RE_LIB_ACCESS ReJSONSceneExporter : public ReBaseSceneExporter {
+class REALITY_LIB_EXPORT ReJSONSceneExporter : public ReBaseSceneExporter {
 
 public:
   // Constructor: ReJSONSceneExporter

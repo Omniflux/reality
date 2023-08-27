@@ -9,10 +9,11 @@
 
 #include "ReDefs.h"
 #include "ReBaseSceneExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtSceneExporter : public ReBaseSceneExporter {
+class REALITY_LIB_EXPORT ReQtSceneExporter : public ReBaseSceneExporter {
 
 public:
   ReQtSceneExporter( ReSceneData* scene ) : ReBaseSceneExporter(scene) {

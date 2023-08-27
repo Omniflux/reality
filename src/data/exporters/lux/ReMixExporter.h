@@ -9,6 +9,7 @@
 #include "ReMaterials.h"
 #include "ReMix.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReMixLuxExporter
@@ -16,7 +17,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReMixLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReMixLuxExporter : public ReLuxMaterialExporter {
 
 public:
   

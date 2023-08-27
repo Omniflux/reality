@@ -8,6 +8,7 @@
 
 #include "ReVelvet.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReVelvetLuxExporter
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReVelvetLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReVelvetLuxExporter : public ReLuxMaterialExporter {
 private:
   const ReVelvet* mat;
 

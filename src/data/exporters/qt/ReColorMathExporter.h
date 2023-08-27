@@ -8,13 +8,14 @@
 
 #include "textures/ReColorMath.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports the Color Math texture to the QVariantMap format 
  */
-class RE_LIB_ACCESS ReQtColorMathExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtColorMathExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

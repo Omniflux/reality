@@ -11,6 +11,7 @@
 
 #include "ReMaterials.h"
 #include "ReQtMaterialImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -23,7 +24,7 @@ namespace Reality {
 
 typedef QSharedPointer<ReQtMaterialImporter> ReQtMaterialImporterPtr;
 
-class RE_LIB_ACCESS ReQtMaterialImporterFactory {
+class REALITY_LIB_EXPORT ReQtMaterialImporterFactory {
 private:
   static QHash<int, ReQtMaterialImporterPtr> importers;
 

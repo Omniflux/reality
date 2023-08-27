@@ -15,6 +15,7 @@
 #include <QHash>
 #include "ReDefs.h"
 #include "ReLogger.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -22,7 +23,7 @@ namespace Reality {
  * Class used to do the texture collection and to help set the location for the PLY files
  * generated during the binary export.
  */
-class RE_LIB_ACCESS ReSceneResources  {
+class REALITY_LIB_EXPORT ReSceneResources  {
 
 private:
   static ReSceneResources* instance;

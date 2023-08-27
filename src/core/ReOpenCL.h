@@ -19,6 +19,8 @@
 #include <CL/cl.h>
 #endif
 
+#include "reality_lib_export.h"
+
 /**
  * This file defines functions to help discovering if OpenCL is enabled on
  * the users machine and what OCL devices are available
@@ -29,7 +31,7 @@ namespace Reality {
 /**
  * Describes an OpenCL device
  */
-class RE_LIB_ACCESS ReOCLDevice {
+class REALITY_LIB_EXPORT ReOCLDevice {
 public:
   //! The type of this device
   enum DeviceType {
@@ -139,7 +141,7 @@ typedef QList<ReOCLDevicePtr> ReOCLDeviceList;
 /**
  * Utility class to interface and query the OpenCL driver. This is a singleton.
  */
-class RE_LIB_ACCESS ReOpenCL {
+class REALITY_LIB_EXPORT ReOpenCL {
 private:
   //! Constructor: ReOpenCL
   explicit ReOpenCL();

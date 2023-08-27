@@ -8,6 +8,7 @@
 
 #include <QSharedPointer>
 #include "ReAlphaChannelMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -23,7 +24,7 @@ namespace Reality {
  information about other properties that are not directly related to
  displacement. For example, it hold the data if the material emits light
  */ 
-class RE_LIB_ACCESS DisplaceableMaterial : public ReAlphaChannelMaterial {
+class REALITY_LIB_EXPORT DisplaceableMaterial : public ReAlphaChannelMaterial {
 
 protected:
   bool isNormalMap;

@@ -17,6 +17,7 @@
 #include "ReMix.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
 #include <QPair>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -24,7 +25,7 @@ namespace Reality {
   Class: ReGlossyLuxExporter
  */
 template <typename T> 
-class RE_LIB_ACCESS ReBasicGlossyLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReBasicGlossyLuxExporter : public ReLuxMaterialExporter {
 
 protected:
   const T* mat;

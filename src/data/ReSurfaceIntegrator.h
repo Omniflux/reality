@@ -11,13 +11,14 @@
 #include <QSharedPointer> 
 #include "ReDefs.h"
 #include "ReLogger.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
  
 /**
  * Base Class for all Surface Integrators
  */
-class RE_LIB_ACCESS ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSurfaceIntegrator {
 
 protected:
   QVariantMap values;  
@@ -71,7 +72,7 @@ typedef QSharedPointer<ReSurfaceIntegrator> ReSurfaceIntegratorPtr;
 /**
  *  Surface Integrator Bidir
  */
-class RE_LIB_ACCESS ReSIBidir : public ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSIBidir : public ReSurfaceIntegrator {
   
 protected:
   uint eyeDepth; 
@@ -191,7 +192,7 @@ typedef QSharedPointer<ReSIBidir> ReSIBidirPtr;
 /**
  *  Surface Integrator ExPhotonMap
  */
-class RE_LIB_ACCESS ReSIExPhotonMap : public ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSIExPhotonMap : public ReSurfaceIntegrator {
   
 protected:
   bool directLighting;
@@ -310,7 +311,7 @@ public:
 /**
  *  Surface Integrator SPPM
  */
-class RE_LIB_ACCESS ReSISPPM : public ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSISPPM : public ReSurfaceIntegrator {
   
 protected:
   unsigned int maxEyeDepth;
@@ -469,7 +470,7 @@ public:
 /**
  *  Surface Integrator Path
  */
-class RE_LIB_ACCESS ReSIPath : public ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSIPath : public ReSurfaceIntegrator {
   
 protected:
   uint maxDepth;
@@ -528,7 +529,7 @@ public:
 /**
  * Path Surface Integrator for the GPU accelerated renderer
  */
-class RE_LIB_ACCESS ReSIPathGPU : public ReSIPath {
+class REALITY_LIB_EXPORT ReSIPathGPU : public ReSIPath {
 
 protected:
   QString rrStrategy;
@@ -558,7 +559,7 @@ public:
 /**
  * Used for the Preview mode
  */
-class RE_LIB_ACCESS ReSIDirect : public ReSurfaceIntegrator {
+class REALITY_LIB_EXPORT ReSIDirect : public ReSurfaceIntegrator {
 protected:
   int maxDepth;
 

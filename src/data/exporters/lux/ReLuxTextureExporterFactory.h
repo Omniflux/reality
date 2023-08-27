@@ -11,6 +11,7 @@
 
 #include "ReTexture.h"
 #include "exporters/lux/ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
  actually requested during a run of Reality are actually created. This is a singleton factory.
  */
 
-class RE_LIB_ACCESS ReLuxTextureExporterFactory {
+class REALITY_LIB_EXPORT ReLuxTextureExporterFactory {
 private:
   static QHash<int, ReLuxTextureExporterPtr> exporters;
 

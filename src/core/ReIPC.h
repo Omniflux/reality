@@ -35,6 +35,7 @@
 #define IPC_DEBUG 0
 
 #include "RealityBase.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -42,7 +43,7 @@ namespace Reality {
  * This class runs in the background, on the host side, polling messages sent by the 
  * client UI and relying information back and forth.
  */
-class RE_LIB_ACCESS CommandPollingThread : public QThread {
+class REALITY_LIB_EXPORT CommandPollingThread : public QThread {
   
 private:
   //! Flag that we use to know when to stop this thread
@@ -292,7 +293,7 @@ public:
     void run();
 };
 
-extern RE_LIB_ACCESS CommandPollingThread* realityIPC;
+extern REALITY_LIB_EXPORT CommandPollingThread* realityIPC;
 
 } // namespace
 

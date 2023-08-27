@@ -9,14 +9,14 @@
 
 #include "ReGlass.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
-
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports a Glass material to LuxRender
  */
-class RE_LIB_ACCESS ReGlassLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReGlassLuxExporter : public ReLuxMaterialExporter {
 private:
   const QString exportBaseMaterial( const ReGlass* mat, const QString matName ) {
     QString str;

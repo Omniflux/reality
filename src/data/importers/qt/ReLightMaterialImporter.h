@@ -10,6 +10,7 @@
 #include "ReQtMaterialImporter.h"
 #include <QVariant>
 #include "ReSceneData.h"
+#include "reality_lib_export.h"
 
 /**
   Class: ReLightMaterialImporter
@@ -18,7 +19,7 @@
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtLightMaterialImporter : public ReQtMaterialImporter {
+class REALITY_LIB_EXPORT ReQtLightMaterialImporter : public ReQtMaterialImporter {
 
 public:
   

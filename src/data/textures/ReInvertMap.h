@@ -7,6 +7,7 @@
 #define __RE_INVERTMAP_H__
 
 #include "Re2DTexture.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
 
  */
 
-class RE_LIB_ACCESS InvertMap : public Re2DTexture {
+class REALITY_LIB_EXPORT InvertMap : public Re2DTexture {
 
 public:
   // Constructor: InvertMap

@@ -8,6 +8,7 @@
 
 #include "textures/ReCheckers.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
  * Exports the Checkers texture to the \ref QVariantMap format
  */
 
-class RE_LIB_ACCESS ReQtCheckersExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtCheckersExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

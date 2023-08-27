@@ -12,13 +12,14 @@
 
 #include "ReDefs.h"
 #include "ReSurfaceIntegrator.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
   Base class for all Surface Integrator exporters.
  */
-class RE_LIB_ACCESS ReQtSIExporter {
+class REALITY_LIB_EXPORT ReQtSIExporter {
 protected:
   ReSurfaceIntegratorPtr si;
   

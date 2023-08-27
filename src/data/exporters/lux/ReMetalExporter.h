@@ -10,6 +10,7 @@
 #include "ReMetal.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
 #include "ReSceneResources.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReMetalLuxExporter
@@ -17,7 +18,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReMetalLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReMetalLuxExporter : public ReLuxMaterialExporter {
 
 public:
   QString getNkFileName( ReMetal::MetalType metalType ) {

@@ -5,26 +5,9 @@
 #ifndef REDEFS_H
 #define REDEFS_H
 
-/**
- * Macro that helps in defintion of the  visibility of symbols in the shared library
- */
-#  if defined(RE_LIB_MAKE_SHARED)
-#     if defined(_WIN32)
-        // We are building this library 
-#       define RE_LIB_ACCESS Q_DECL_EXPORT
-#     elif defined(__APPLE__)
-#       define RE_LIB_ACCESS __attribute__((visibility("default")))
-#     endif
-#  else
-#     if defined(_WIN32)
-        // We are using this library 
-#       define RE_LIB_ACCESS Q_DECL_IMPORT
-#     else
-#       define RE_LIB_ACCESS
-#     endif
-#  endif
+#include "reality_lib_export.h"
 
-//! This macro makes it easy to mark function parameters that are not used
+ //! This macro makes it easy to mark function parameters that are not used
 //! so that the compiler doesn't issue a warning
 #define UNUSED(param)
 
@@ -313,7 +296,7 @@ enum ReTextureType {
 // 
 // Of course these can be combined using bitwise operators
 // For example 0x03 is a texture that can be either of type color or numeric
-RE_LIB_ACCESS extern quint8 ReTextureDataTypes[TexUndefined+1];
+REALITY_LIB_EXPORT extern quint8 ReTextureDataTypes[TexUndefined+1];
 
 // Bitmasks for the ReTextureDataTypes table and for use with the Texture Preview/Avatar
 #define RE_TEX_DATATYPE_COLOR   0x01
@@ -330,7 +313,7 @@ RE_LIB_ACCESS extern quint8 ReTextureDataTypes[TexUndefined+1];
 
 //! Textual names of the Texture types that can be used to represent those types
 //! in the Reality UI.
-RE_LIB_ACCESS extern QString ReTextureTypesForUI[TexUndefined+1];
+REALITY_LIB_EXPORT extern QString ReTextureTypesForUI[TexUndefined+1];
 
 //! Supported renderers
 enum ReRenderers {

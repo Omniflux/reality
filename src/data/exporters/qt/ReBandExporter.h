@@ -9,6 +9,7 @@
 
 #include "textures/ReBand.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
  * Exports the Band texture to the QVariantMap format
  */
 
-class RE_LIB_ACCESS ReQtBandExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtBandExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

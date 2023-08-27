@@ -8,6 +8,7 @@
 
 #include "textures/ReGrayscale.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtGrayscaleExporter
  */
 
-class RE_LIB_ACCESS ReQtGrayscaleImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtGrayscaleImporter : public ReQtTextureImporter {
 
 public:
 

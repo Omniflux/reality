@@ -9,6 +9,7 @@
 #include "textures/ReMarble.h"
 #include "ReQtTextureImporter.h"
 #include "ReProceduralNoiseImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
   Class: ReQtMarbleExporter
  */
 
-class RE_LIB_ACCESS ReQtMarbleImporter : public ReQtProceduralNoiseImporter {
+class REALITY_LIB_EXPORT ReQtMarbleImporter : public ReQtProceduralNoiseImporter {
 
 public:
 

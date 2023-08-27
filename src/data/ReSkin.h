@@ -11,6 +11,7 @@
 #include "ReTools.h"
 #include "ReDisplaceableMaterial.h"
 #include "ReGeometryObject.h"
+#include "reality_lib_export.h"
 
 #define RE_SKIN_ABSORTION_COLOR  QColor(249,140,135)
 #define RE_SKIN_ABSORTION_SCALE  8.0f
@@ -30,7 +31,7 @@ namespace Reality {
 /**
  The skin material.
  */
-class RE_LIB_ACCESS ReSkin: public Glossy {
+class REALITY_LIB_EXPORT ReSkin: public Glossy {
 
 protected:
   //! The amount of the fresnel component of this material

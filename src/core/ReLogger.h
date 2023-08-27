@@ -14,6 +14,7 @@
 #include <QFileInfo>
 
 #include "ReDefs.h"
+#include "reality_lib_export.h"
 
 // This define must be before including "cpplog.hpp"
 // it implements a custom format for the log. See the class definition below
@@ -25,7 +26,7 @@ using namespace std;
 
 //! File-based stream for persistance of the log
 extern ofstream logFile;
-RE_LIB_ACCESS extern cpplog::OstreamLogger RealityLogger;
+REALITY_LIB_EXPORT extern cpplog::OstreamLogger RealityLogger;
 
 // Shortcut macros to help us with the log
 #define RE_LOG_INFO()  LOG_INFO(RealityLogger)
@@ -39,7 +40,7 @@ RE_LIB_ACCESS extern cpplog::OstreamLogger RealityLogger;
 /**
  * This class implements a custom format for the log
  */
-class RE_LIB_ACCESS CustomLogMessage : public cpplog::LogMessage {
+class REALITY_LIB_EXPORT CustomLogMessage : public cpplog::LogMessage {
 private:
   static QString prefix;
 

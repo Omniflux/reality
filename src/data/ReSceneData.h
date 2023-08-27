@@ -25,7 +25,8 @@
 #include "ReSurfaceIntegrator.h"
 #include "exporters/ReSceneExporterFactory.h"
 #include "ReIPC.h"
-  
+#include "reality_lib_export.h"
+
 #define KEY_SCENE_WIDTH               "sceneWidth"
 #define KEY_SCENE_HEIGHT              "sceneHeight"
 #define KEY_SCENE_ALPHA_CHANNEL       "hasAlphaChannel"
@@ -393,7 +394,7 @@ inline QDataStream& operator >>( QDataStream& strm, ReSceneRenderOptions& opt ) 
  * class.
  *
  */
-class RE_LIB_ACCESS ReSceneData {
+class REALITY_LIB_EXPORT ReSceneData {
 
 private:
 

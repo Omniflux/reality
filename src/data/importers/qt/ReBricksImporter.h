@@ -8,13 +8,14 @@
 
 #include "textures/ReBricks.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Imports a Brick texture from data passed via a QVariantMap
  */
-class RE_LIB_ACCESS ReQtBricksImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtBricksImporter : public ReQtTextureImporter {
 
 public:
 

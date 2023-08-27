@@ -13,6 +13,7 @@
 #include "ReTools.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -24,7 +25,7 @@ typedef QHash<QString, ReTexturePtr> ReTextureCache;
   services shared by all specialized classes. The export of a specific
   type of texture is provided by a specilized subclass.  
  */
-class RE_LIB_ACCESS ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxTextureExporter {
 
 private:
   // Just a temp string to make returning values a bit faster

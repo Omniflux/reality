@@ -8,6 +8,7 @@
 
 #include <QtCore>
 #include "Retexture.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -18,7 +19,7 @@ namespace Reality {
   materials we use this class, which can be implemented by <ReMaterial>,
   <ReLight> or other objects that need to use textures.
  */
-class RE_LIB_ACCESS ReTextureContainer {
+class REALITY_LIB_EXPORT ReTextureContainer {
 
 public:
   // Constructor: ReTextureContainer

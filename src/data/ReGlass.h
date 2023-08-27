@@ -9,6 +9,7 @@
 #include "ReMaterial.h"
 #include "ReDisplaceableMaterial.h"
 #include <QSharedPointer>
+#include "reality_lib_export.h"
 
 #define RE_GLASS_DEFAULT_CAUCHYB 0.00420
 // Default value, in meters, of clarity at depth
@@ -19,7 +20,7 @@ namespace Reality {
 /*
  Class: ReGlass
  */
-class RE_LIB_ACCESS ReGlass: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReGlass: public DisplaceableMaterial {
 
 public:
   enum GlassType {

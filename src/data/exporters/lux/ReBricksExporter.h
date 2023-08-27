@@ -8,13 +8,14 @@
 
 #include "textures/ReBricks.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
   Class: ReLuxBricksExporter
  */
-class RE_LIB_ACCESS ReLuxBricksExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxBricksExporter : public ReLuxTextureExporter {
 
 public:
 

@@ -8,6 +8,7 @@
 
 #include "textures/ReCheckers.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtCheckersExporter
  */
 
-class RE_LIB_ACCESS ReQtCheckersImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtCheckersImporter : public ReQtTextureImporter {
 
 public:
 

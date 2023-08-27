@@ -3,13 +3,14 @@
 
 #include "ReCloth.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
   Exports a material of type ReCloth to LuxRender.
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReClothLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReClothLuxExporter : public ReLuxMaterialExporter {
 private:
   const ReCloth* mat;
 public:

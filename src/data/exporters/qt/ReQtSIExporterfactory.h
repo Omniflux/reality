@@ -7,10 +7,11 @@
 #define RE_QT_SI_EXPORTER_FACTORY_H
 
 #include "ReQtSIExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtSIExporterFactory {
+class REALITY_LIB_EXPORT ReQtSIExporterFactory {
 public:
   // Constructor: ReQtSIExporterFactory
   ReQtSIExporterFactory() {

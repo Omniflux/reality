@@ -8,6 +8,7 @@
 
 #include "textures/ReFBM.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReLuxFBMExporter
  */
 
-class RE_LIB_ACCESS ReLuxFBMExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxFBMExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texBase, 

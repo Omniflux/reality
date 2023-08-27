@@ -9,6 +9,7 @@
 #include "ReVolumes.h"
 #include "ReTools.h"
 #include "ReSceneData.h"
+#include "reality_lib_export.h"
 
 #include <limits>
 
@@ -18,7 +19,7 @@ namespace Reality {
   Class: ReLuxVolumeExporter
  */
 
-class RE_LIB_ACCESS ReLuxVolumeExporter {
+class REALITY_LIB_EXPORT ReLuxVolumeExporter {
 
 public:
   // Constructor: ReLuxVolumeExporter

@@ -8,6 +8,7 @@
 
 #include "ReLightMaterial.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
  Exporter for the Light material
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReLightMaterialLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReLightMaterialLuxExporter : public ReLuxMaterialExporter {
 
 public:
   // Nothing to do becauxe the mesh lights are actually exported in ReLuxGeometryExporter

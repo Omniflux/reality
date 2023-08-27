@@ -16,6 +16,7 @@
 #include "ReDefs.h"
 #include "ReLuxRunner.h"
 // #include "LuxApi.h"
+#include "reality_lib_export.h"
   
 namespace Reality {
 
@@ -33,7 +34,7 @@ typedef QSharedPointer<QSettings> ReConfigurationPtr;
 
  The logging facility is started here.
  */
-class RE_LIB_ACCESS RealityBase {
+class REALITY_LIB_EXPORT RealityBase {
 
 private:
   //! A stack of commands for the host-side portion of Reality, like the Python-based

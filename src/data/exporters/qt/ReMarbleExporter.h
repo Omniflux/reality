@@ -10,11 +10,12 @@
 #include "ReProceduralNoiseExporter.h"
 #include "textures/ReMarble.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 
-class RE_LIB_ACCESS ReQtMarbleExporter : public ReQtProceduralNoisesExporter  {
+class REALITY_LIB_EXPORT ReQtMarbleExporter : public ReQtProceduralNoisesExporter  {
 
 public:
   virtual QVariantMap exportTexture( const ReTexture* baseTex ) {

@@ -9,10 +9,11 @@
 
 #include "ReVelvet.h"
 #include "ReQtMaterialExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtVelvetExporter : public ReQtMaterialExporter {
+class REALITY_LIB_EXPORT ReQtVelvetExporter : public ReQtMaterialExporter {
 
 public:
   

@@ -11,6 +11,7 @@
 #include <QtGui>
 #include <QDataStream>
 #include "ReDefs.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -18,7 +19,7 @@ namespace Reality {
 /**
  * This class defines a volume as used in LuxRender.
  */
-class RE_LIB_ACCESS ReVolume {
+class REALITY_LIB_EXPORT ReVolume {
 
 public:
   enum VolumeType {

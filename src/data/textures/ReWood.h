@@ -7,6 +7,7 @@
 #define RE_WOOD_H
 
 #include "ReProceduralNoise.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
   3D texture.
  */
 
-class RE_LIB_ACCESS ReWood : public ReProceduralNoise {
+class REALITY_LIB_EXPORT ReWood : public ReProceduralNoise {
 public:
   enum VeinWave {
     SIN,

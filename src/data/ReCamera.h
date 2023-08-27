@@ -16,6 +16,7 @@
 #include "RealityBase.h"
 #include "math.h"
 #include <algorithm>
+#include "reality_lib_export.h"
 
 using namespace std;
 
@@ -31,7 +32,7 @@ namespace Reality {
 class ReCamera;
 typedef QSharedPointer<ReCamera> ReCameraPtr;
 
-class RE_LIB_ACCESS ReCamera {
+class REALITY_LIB_EXPORT ReCamera {
 
 private:
   QString name;

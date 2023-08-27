@@ -9,13 +9,14 @@
 //#include "ReMaterials.h"
 #include "ReMatte.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
   Exports the Matte material to Lux
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReMatteLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReMatteLuxExporter : public ReLuxMaterialExporter {
 private:
   const QString exportBaseMaterial( const ReMatte* mat, const QString matName )  {
     QString str = QString("# Mat: %1\n").arg(matName);

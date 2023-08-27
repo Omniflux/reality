@@ -8,6 +8,7 @@
 
 #include "ReNull.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReNullLuxExporter
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReNullLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReNullLuxExporter : public ReLuxMaterialExporter {
 
 public:
   

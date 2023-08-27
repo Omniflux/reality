@@ -8,13 +8,14 @@
 
 #include "textures/ReCheckers.h"
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
   Class: ReLuxCheckersExporter
  */
-class RE_LIB_ACCESS ReLuxCheckersExporter : public ReLuxTextureExporter{
+class REALITY_LIB_EXPORT ReLuxCheckersExporter : public ReLuxTextureExporter{
 
 public:
   const QString exportTexture( ReTexturePtr texBase, 

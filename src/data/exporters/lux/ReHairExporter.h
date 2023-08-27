@@ -3,6 +3,7 @@
 
 #include "ReHair.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReHairLuxExporter
@@ -10,7 +11,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReHairLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReHairLuxExporter : public ReLuxMaterialExporter {
 
 public:
 

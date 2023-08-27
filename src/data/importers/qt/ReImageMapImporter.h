@@ -9,6 +9,7 @@
 #include "textures/ReImageMap.h"
 #include "ReQtTextureImporter.h"
 #include "RealityBase.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
   Class: ReQtImageMapExporter
  */
 
-class RE_LIB_ACCESS ReQtImageMapImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtImageMapImporter : public ReQtTextureImporter {
 private:
   bool libPathsLoaded;
   QStringList libPaths;

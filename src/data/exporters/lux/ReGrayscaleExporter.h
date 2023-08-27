@@ -10,6 +10,7 @@
 #include "ReLuxTextureExporter.h"
 #include "exporters/lux/ReImageMapExporter.h"
 #include "exporters/lux/ReLuxTextureExporterFactory.h" 
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -17,7 +18,7 @@ namespace Reality {
   Class: ReLuxGrayscaleExporter
  */
 
-class RE_LIB_ACCESS ReLuxGrayscaleExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxGrayscaleExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texbase, 

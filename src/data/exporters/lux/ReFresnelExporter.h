@@ -12,6 +12,7 @@
 #include "textures/ReFresnelColor.h"
 
 #include "ReLuxTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -19,7 +20,7 @@ namespace Reality {
   Class: ReLuxFresnelExporter
  */
 
-class RE_LIB_ACCESS ReLuxFresnelExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxFresnelExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr basetex, const QString& assignedName = "", bool isForPreview = false ) {

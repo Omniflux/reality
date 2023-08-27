@@ -7,10 +7,11 @@
 #define RE_2DTEXTURE_H
 
 #include "ReTexture.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS Re2DTexture : public ReTexture {
+class REALITY_LIB_EXPORT Re2DTexture : public ReTexture {
 
 public:
   enum Mapping2D {

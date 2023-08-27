@@ -10,10 +10,11 @@
 #include "ReProceduralNoiseExporter.h"
 #include "textures/ReWood.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtWoodExporter : public ReQtProceduralNoisesExporter {
+class REALITY_LIB_EXPORT ReQtWoodExporter : public ReQtProceduralNoisesExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

@@ -11,13 +11,14 @@
 #include "ReTextureCreator.h"
 #include "ReLogger.h"
 #include "ReAcsel.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Base class for all material importers.
  */
-class RE_LIB_ACCESS ReQtMaterialImporter {
+class REALITY_LIB_EXPORT ReQtMaterialImporter {
 
 public:
   //! Constructor: ReQtMaterialImporter

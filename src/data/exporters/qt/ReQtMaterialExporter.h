@@ -13,6 +13,7 @@
 #include "ReDisplaceableMaterial.h"
 #include <QStringList>
 #include <QColor>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -21,7 +22,7 @@ namespace Reality {
  * format
  */
 
-class RE_LIB_ACCESS ReQtMaterialExporter : public ReMaterialExporter
+class REALITY_LIB_EXPORT ReQtMaterialExporter : public ReMaterialExporter
 {
 
 protected:

@@ -10,6 +10,7 @@
 #include "textures/ReClouds.h"
 #include "ReProceduralNoiseExporter.h"
 #include <QVariantMap>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -17,7 +18,7 @@ namespace Reality {
  * Exports the Clouds texture to the QVariantMap format
  */
 
-class RE_LIB_ACCESS ReQtCloudsExporter : public ReQtProceduralNoisesExporter {
+class REALITY_LIB_EXPORT ReQtCloudsExporter : public ReQtProceduralNoisesExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

@@ -8,6 +8,7 @@
 
 #include "ReBaseGeometryExporter.h"
 #include "ReMatrix.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReLuxGeometryExporter
  */
 
-class RE_LIB_ACCESS ReLuxGeometryExporter : public ReBaseGeometryExporter {
+class REALITY_LIB_EXPORT ReLuxGeometryExporter : public ReBaseGeometryExporter {
 
 private:
   // Constructor: ReLuxGeometryExporter

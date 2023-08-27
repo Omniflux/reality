@@ -8,13 +8,14 @@
 
 #include "textures/ReConstant.h"
 #include "ReQtTextureExporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
 /**
  * Exports the Color constant texture to the QVariantMap format
  */
-class RE_LIB_ACCESS ReQtConstantExporter : public ReQtTextureExporter {
+class REALITY_LIB_EXPORT ReQtConstantExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {

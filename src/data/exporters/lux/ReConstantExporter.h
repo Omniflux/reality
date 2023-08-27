@@ -10,13 +10,14 @@
 #include "ReLuxTextureExporter.h"
 #include "ReTools.h"  
 #include "ReSceneData.h"
-  
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /**
  * LuxRender exporter for the Constant texture
  */
-class RE_LIB_ACCESS ReLuxConstantExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxConstantExporter : public ReLuxTextureExporter {
 
 public:
   const QString exportTexture( ReTexturePtr texbase, const QString& assignedName = "", bool isForPreview = false ) {

@@ -11,6 +11,7 @@
 #include "ReDefs.h"
 #include "ReTools.h"
 #include <QDataStream>
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -32,7 +33,7 @@ typedef float ReMatrixData[4][4];
                        z z z 0
  translation vector -> x y z 1
  */
-class RE_LIB_ACCESS ReMatrix {
+class REALITY_LIB_EXPORT ReMatrix {
 
 public:
   ReMatrixData m;

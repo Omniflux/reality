@@ -7,6 +7,7 @@
 #define RE_ALPHA_CHANNEL_MAT_H
 
 #include "ReMaterials.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
 
  A material with an added alpha channel
  */ 
-class RE_LIB_ACCESS ReAlphaChannelMaterial : public ReMaterial {
+class REALITY_LIB_EXPORT ReAlphaChannelMaterial : public ReMaterial {
 
 protected:
   // ReTexturePtr alphaMap;

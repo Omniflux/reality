@@ -9,14 +9,15 @@
 #include "ReMaterial.h"
 #include "ReLightStand.h"
 #include <QSharedPointer>
-  
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /*
   Class: ReLightMaterial
  */
 
-class RE_LIB_ACCESS ReLightMaterial : public ReMaterial, public ReLightStand {
+class REALITY_LIB_EXPORT ReLightMaterial : public ReMaterial, public ReLightStand {
 
 private:
   ReLightPtr light;

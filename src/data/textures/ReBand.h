@@ -8,6 +8,7 @@
 
 #include "ReTexture.h"
 #include "ReComplexTexture.h"
+#include "reality_lib_export.h"
 
 // default numbe of sub-textures that we hold in this texture
 #define REBT_DEFAULT_NUM_ENTRIES 4
@@ -21,7 +22,7 @@ typedef QMapIterator<QString, float> ReBandOffsetsIterator;
  * Support for the LuxRender Band textue, which defined a multi-color gradient
  *  See also <ReTexture>.
  */
-class RE_LIB_ACCESS ReBand : public ReTexture,
+class REALITY_LIB_EXPORT ReBand : public ReTexture,
                              public ReComplexTexture
 {
 

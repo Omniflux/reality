@@ -9,10 +9,11 @@
 
 #include "ReVolumes.h"
 #include "ReMaterial.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReQtVolumeExporter  {
+class REALITY_LIB_EXPORT ReQtVolumeExporter  {
 
 public:
   const QVariantMap exportVolume( const ReVolumePtr volume ) {

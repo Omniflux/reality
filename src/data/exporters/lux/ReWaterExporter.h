@@ -8,6 +8,7 @@
 
 #include "ReWater.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /*
   Class: ReWaterLuxExporter
@@ -15,7 +16,7 @@
 
 namespace Reality {
 
-class RE_LIB_ACCESS ReWaterLuxExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReWaterLuxExporter : public ReLuxMaterialExporter {
 
 public:
   

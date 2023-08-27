@@ -9,6 +9,7 @@
 #define QT_CAMERA_EXPORTER_H
 
 #include "ReCamera.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -16,7 +17,7 @@ namespace Reality {
  * Exports the camera information to the \ref QVariantMap format
  */
 
-class RE_LIB_ACCESS ReQtCameraExporter {
+class REALITY_LIB_EXPORT ReQtCameraExporter {
 public:
   QVariantMap exportCamera( const ReCameraPtr camera ) {
     QVariantMap camData;

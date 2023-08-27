@@ -10,6 +10,7 @@
 
 #include "exporters/ReMaterialExporter.h"
 #include "exporters/qt/ReQtMaterialExporterFactory.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -18,7 +19,7 @@ namespace Reality {
  * it's kept general and it uses the QVariantMap as an intermediate format,
  * one class is all that we need to export any material to JSON.
  */
-class RE_LIB_ACCESS ReJSONMaterialExporter : public ReMaterialExporter {
+class REALITY_LIB_EXPORT ReJSONMaterialExporter : public ReMaterialExporter {
 public:
   // Constructor: ReLuxMateriaExporter
   ReJSONMaterialExporter() {

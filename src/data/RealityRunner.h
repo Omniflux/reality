@@ -9,6 +9,7 @@
 #include <QProcess>
 #include <QSharedPointer>
 #include "ReIPC.h"
+#include "reality_lib_export.h"
 
 #define REALITY_MAC "Reality.app/Contents/MacOS/Reality"
 #define REALITY_W   "Reality.exe"
@@ -19,7 +20,7 @@ namespace Reality {
 /**
  * Executes the Reality GUI and keeps track if it's already running
  */
-class RE_LIB_ACCESS RealityRunner {
+class REALITY_LIB_EXPORT RealityRunner {
 
 private:
   QSharedPointer<QProcess> realityProc;

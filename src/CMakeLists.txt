@@ -8,8 +8,9 @@ cmake_minimum_required (VERSION 3.25)
 set (CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
-include (FetchContent)
 include (CheckIPOSupported)
+include (FetchContent)
+include (GenerateExportHeader)
 
 # Configure pre-project settings
 set (CMAKE_CXX_STANDARD 11)
@@ -652,8 +653,8 @@ configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_D
 
 # Configure Reality Widgets
 add_library (Reality_Widgets SHARED)
-target_compile_definitions (Reality_Widgets PRIVATE RE_LIB_MAKE_SHARED $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
-target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
+target_compile_definitions (Reality_Widgets PRIVATE REALITY_LIB_STATIC_DEFINE $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
+target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors ${CMAKE_CURRENT_BINARY_DIR}/include)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
 target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
@@ -675,7 +676,16 @@ target_sources (Reality_Widgets PRIVATE
 
 # Configure Reality library
 add_library (Reality_LIB SHARED)
-target_compile_definitions (Reality_LIB PRIVATE RE_LIB_MAKE_SHARED)
+generate_export_header (Reality_LIB EXPORT_FILE_NAME include/reality_lib_export.h)
+target_sources(Reality_LIB
+	PUBLIC
+		FILE_SET HEADERS
+		BASE_DIRS
+			${CMAKE_CURRENT_BINARY_DIR}/include
+		FILES
+			${CMAKE_CURRENT_BINARY_DIR}/include/reality_lib_export.h
+)
+target_compile_definitions (Reality_LIB PRIVATE Reality_LIB_EXPORTS)
 target_include_directories (Reality_LIB PUBLIC core data)
 target_link_libraries (Reality_LIB PUBLIC Reality_Version)
 target_link_libraries (Reality_LIB PUBLIC Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp cppzmq-static)
@@ -690,8 +700,8 @@ target_sources (Reality_LIB PRIVATE
 
 # Configure DAZ Studio plugin
 add_library (Reality_DS MODULE)
-target_compile_definitions (Reality_DS PRIVATE RE_LIB_MAKE_SHARED)
-target_include_directories (Reality_DS PRIVATE core data)
+target_compile_definitions (Reality_DS PRIVATE REALITY_LIB_STATIC_DEFINE)
+target_include_directories (Reality_DS PRIVATE core data ${CMAKE_CURRENT_BINARY_DIR}/include)
 target_link_libraries (Reality_DS PRIVATE Reality_Version)
 target_link_libraries (Reality_DS PRIVATE Boost::boost OpenCL::OpenCL DAZStudioSDK::Plugin qjson SQLiteCpp cppzmq-static)
 
@@ -715,8 +725,8 @@ target_sources (Reality_DS PRIVATE
 
 # Configure Poser Addon
 Python2_add_library (Reality_PY MODULE)
-target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB RE_LIB_MAKE_SHARED)
-target_include_directories (Reality_PY PRIVATE core data)
+target_compile_definitions (Reality_PY PRIVATE BOOST_PYTHON_STATIC_LIB REALITY_LIB_STATIC_DEFINE)
+target_include_directories (Reality_PY PRIVATE core data ${CMAKE_CURRENT_BINARY_DIR}/include)
 target_link_libraries (Reality_PY PRIVATE Reality_Version)
 target_link_libraries (Reality_PY PRIVATE Boost::python27 OpenCL::OpenCL qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_PY PROPERTIES OUTPUT_NAME Reality)

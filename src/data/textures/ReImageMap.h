@@ -7,14 +7,15 @@
 #define RE_IMAGEMAP_H
 
 #include "Re2DTexture.h"
-  
+#include "reality_lib_export.h"
+
 namespace Reality {
 
 /**
  * A ImageMap defines the bit-mapped image texture. It is expected to 
  * be loaded from a image file from disk. See <ReTexture>.
  */
-class RE_LIB_ACCESS ImageMap : public Re2DTexture {
+class REALITY_LIB_EXPORT ImageMap : public Re2DTexture {
 
 protected:
   float gain;

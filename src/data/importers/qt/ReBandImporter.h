@@ -8,6 +8,7 @@
 
 #include "textures/ReBand.h"
 #include "ReQtTextureImporter.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -15,7 +16,7 @@ namespace Reality {
   Class: ReQtBandExporter
  */
 
-class RE_LIB_ACCESS ReQtBandImporter : public ReQtTextureImporter {
+class REALITY_LIB_EXPORT ReQtBandImporter : public ReQtTextureImporter {
 
 public:
 

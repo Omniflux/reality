@@ -9,6 +9,7 @@
 #include "ReCloth.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
 #include "ReSceneResources.h"
+#include "reality_lib_export.h"
 
 /**
   Specialized exporter of the Cloth material for Luxcore renderer
@@ -16,7 +17,7 @@
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReClothLuxcoreExporter : public ReLuxMaterialExporter {
+class REALITY_LIB_EXPORT ReClothLuxcoreExporter : public ReLuxMaterialExporter {
 
 public:
 

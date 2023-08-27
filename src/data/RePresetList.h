@@ -14,7 +14,6 @@
 
 #include "ReLogger.h"
 
-
 namespace Reality {
 
 

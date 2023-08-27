@@ -9,13 +9,14 @@
 // We simply re-use the Lux matte material. It is identical to what we need
 #include "exporters/lux/ReMatteExporter.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
+#include "reality_lib_export.h"
 
 /**
   Exports the Matte material to Lux
  */
 namespace Reality {
 
-class RE_LIB_ACCESS ReMatteLuxcoreExporter : public ReMatteLuxExporter 
+class REALITY_LIB_EXPORT ReMatteLuxcoreExporter : public ReMatteLuxExporter
 {
 
 };

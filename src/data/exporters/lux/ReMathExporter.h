@@ -10,6 +10,7 @@
 #include "textures/ReMath.h"
 #include "ReLuxTextureExporter.h"
 #include "ReTextureCreator.h"
+#include "reality_lib_export.h"
 
 namespace Reality {
 
@@ -17,7 +18,7 @@ namespace Reality {
   Class: ReLuxMathExporter
  */
 
-class RE_LIB_ACCESS ReLuxMathExporter : public ReLuxTextureExporter {
+class REALITY_LIB_EXPORT ReLuxMathExporter : public ReLuxTextureExporter {
 private:
   enum OperantType {
     OP_TEXTURE,

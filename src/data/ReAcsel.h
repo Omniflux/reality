@@ -74,6 +74,7 @@
 
 #include <QString>
 #include <QStringList>
+#include "reality_lib_export.h"
 
 //! Major version number of the ACSEL database
 #define RE_ACSEL_VERSION_MAJOR 5
@@ -192,7 +193,7 @@ namespace Reality {
 /**
  * Implementation of the ACSEL services
  */
-class RE_LIB_ACCESS ReAcsel {
+class REALITY_LIB_EXPORT ReAcsel {
 public:
     //! Return codes for the importBundle() method
   enum ReturnCode {
