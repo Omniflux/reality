@@ -56,6 +56,8 @@
 
 #define RE_DS_HEADLAMP_BLOCKER   "AreaLightSupport"
 
+namespace Reality {
+
 enum Reality2MaterialTypes {
   GLOSSY     =  10,
   MATTE      =  60,
@@ -399,5 +401,6 @@ class Reality_DS : public DzPlugin {
     
 };
 
+} // namespace
 
 #endif

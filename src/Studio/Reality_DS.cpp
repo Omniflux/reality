@@ -63,6 +63,8 @@
 
 #include <iostream>
 
+namespace Reality {
+
 QString makeObjectUID( const DzNode* node );
 void setGUIDForNode( DzNode* node, const QString& GUID );
 
@@ -673,9 +675,9 @@ void Reality_DS::renderFrame( const QString& sceneFileName,
 
   RealitySceneData->renderSceneStart(sceneFileName, frameNo);
 
-  auto exporter = new DS::ReGeometryExporter(&flatMatList);
+  auto exporter = new ReGeometryExporter(&flatMatList);
   auto objs = exporter->getNodes();
-  DS::ReGeometryExporter::NodeDictIterator nodeIter(objs);
+  ReGeometryExporter::NodeDictIterator nodeIter(objs);
 
   DzProgress progressInd("Rendering", objs.count(), false, true);
   realityIPC->exportStarted(objs.count());
@@ -1736,3 +1738,4 @@ void Reality_DS::materialListChanged() {
   }  
 }
 
+} // namespace

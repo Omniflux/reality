@@ -98,9 +98,6 @@ namespace Reality {
 
   //! Gain used for spec maps for iRay shaders
   const float RE_IRAY_SPECMAP_ADJUSTED_GAIN =  0.5;
-} 
-
-using namespace Reality;
 
 // Static definition for the instance
 ReDSMaterialConverter* ReDSMaterialConverter::instance = 0;
@@ -1018,3 +1015,5 @@ void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
   // Replace the value back in the material definition map
   matProps[RE_MAT_KEY_NODES_ROOT].setValue(nodes);
 }
+
+} // namespace

@@ -21,8 +21,6 @@ class DzNode;
 
 namespace Reality {
 
-namespace DS {
-
 /**
  * This struct is used to store the information about a vertex during the 
  * reordering of the vertices for a given material. LuxRender requires the
@@ -132,9 +130,6 @@ public:
   //! DzFacetMesh::getFacetPtr()
   void getMaterialGroups( const DzNode* node );
 };
-
-
-}
 
 } // namespace
 

@@ -11,11 +11,11 @@
 #include "dzaction.h"
 #include "Reality_DS.h"
 
+namespace Reality {
+
 /**
   This plugin adds a new action to start the Reality Script/Plugin.
 **/
-
-using namespace Reality;
 
 class Reality3Action : public DzAction {
 
@@ -41,5 +41,6 @@ protected:
 
 };
 
+} // namespace
 
-#endif 
+#endif

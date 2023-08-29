@@ -13,6 +13,9 @@
 
 #include "boost/any.hpp"
 #include "ReLogger.h"
+
+namespace Reality {
+
 /**
  * Studio's signals happen at the beginning of the event and not at the end.
  * For example, the signal that an object has been added to the scene happens
@@ -74,5 +77,7 @@ public:
   }
 
 };
+
+} // namespace
 
 #endif

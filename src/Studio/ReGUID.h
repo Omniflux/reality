@@ -10,6 +10,8 @@
 #include <QtCore>
 #include "dznode.h"
 
+namespace Reality {
+
 /**
   A class to get/set a GUID to a DAZ Studio node
  */
@@ -33,5 +35,7 @@ public:
 
   static const char* InvalidGUID; // = "NO_GUID";
 };
+
+} // namespace
 
 #endif

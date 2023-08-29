@@ -13,6 +13,8 @@
 #include "dzassetextraobjectio.h"
 #include "ReLogger.h"
 
+namespace Reality {
+
 /**
  * \file
  * Classes used to handle the loading and saving of Reality data from the Studio
@@ -392,5 +394,7 @@ public:
   DzError applyInstanceToObject( QObject* object, const DzFileIOSettings* opts ) const;
   DzError resolveInstance( QObject* object, const DzFileIOSettings* opts ) const;
 };
+
+} // namespace
 
 #endif

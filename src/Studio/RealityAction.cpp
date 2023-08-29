@@ -12,6 +12,8 @@
 #include "ReLogger.h"
 #include "RealityRunner.h"
 
+namespace Reality {
+
 #define RE_MENU_ICON_FILE_NAME "R-flat-logo-menu.png"
 /**
  * Action to install the lauch of Reality in the Render menu of Studio
@@ -37,3 +39,5 @@ void Reality3Action::executeAction() {
   QString realityPath = configuration.value(RE_CFG_REALITY_DS_LOCATION).toString();
   RealityRunner::getInstance()->launchGUI(realityPath);
 }
+
+} // namespace

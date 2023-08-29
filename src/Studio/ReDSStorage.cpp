@@ -23,6 +23,8 @@
 
 #include <utility>
 
+namespace Reality {
+
 // forward declaration
 void saveListToJsonIO( const QVariantList& list, IDzJsonIO* io );
 
@@ -368,3 +370,4 @@ DzAssetJsonItem* ReSceneReader::startArray() {
   return new ReSceneReader(sceneContext);
 };
 
+} // namespace

@@ -11,6 +11,8 @@
 #include "dzstringproperty.h"
 #include <QUuid>
 
+namespace Reality {
+
 // Initialization of static var
 QString ReGUID::GUID_value;
 
@@ -79,3 +81,5 @@ QString& ReGUID::setGUID( DzNode* node ) {
   settings->setStringValue(RE_DS_NODE_GUID, GUID_value);
   return GUID_value;
 };
+
+} // namespace

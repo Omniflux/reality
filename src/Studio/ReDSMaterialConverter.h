@@ -174,7 +174,6 @@ public:
 
 };
 
-
 } // namespace
 
 #endif

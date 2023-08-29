@@ -9,6 +9,8 @@
 #include "dzshape.h"
 #include "dzmaterial.h"
 
+namespace Reality {
+
 /**
   Class: ReDSDebugTool
  */
@@ -69,3 +71,5 @@ inline void dsMonitorObject( DzObject* obj ) {
 inline void dsMonitorShape( DzShape* shape ) {
   ReDSDebugTool::getInstance()->monitorShape(shape);
 }
+
+} // namespace

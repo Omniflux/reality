@@ -3,6 +3,8 @@
 
 #include "dznode.h"
 
+namespace Reality {
+
 ReDSDebugTool* ReDSDebugTool::instance = NULL;
 
 ReDSDebugTool* ReDSDebugTool::getInstance() {
@@ -144,3 +146,4 @@ void ReDSDebugTool::monitorShape( DzShape* shape ) {
   RE_LOG_INFO() << "Added monitoring of shape for " << shape->getNode()->getName().toStdString();
 }
 
+} // namespace

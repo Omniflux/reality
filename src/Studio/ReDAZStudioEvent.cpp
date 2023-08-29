@@ -6,5 +6,9 @@
 
 #include "ReDAZStudioEvent.h"
 
+namespace Reality {
+
 // static vars
 int ReStudioEvent::reEventType = QEvent::registerEventType();
+
+} // namespace

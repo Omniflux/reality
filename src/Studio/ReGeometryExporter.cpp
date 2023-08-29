@@ -22,8 +22,7 @@
 #include "dzcustomdata.h"
 #include "dzsettings.h"
 
-using namespace Reality;
-using namespace Reality::DS;
+namespace Reality {
 
 ReGeometryExporter::ReGeometryExporter( const ReDSMatCollection* flatMatList ) :
   flatMatList(flatMatList)
@@ -248,29 +247,4 @@ void ReGeometryExporter::exportMaterial( const QString& matName,
   startMaterial();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} // namespace
