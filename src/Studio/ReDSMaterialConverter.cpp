@@ -4,6 +4,8 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
+#include <boost/bind/bind.hpp>
+
 #include "ReTools.h"
 #include "ReDSMaterialConverter.h"
 #include "ReMaterialPropertyKeys.h"
@@ -950,8 +952,6 @@ void ReDSMaterialConverter::convertAlpha(const DzProperty* prop)
   }  
 }
 
-#include <boost/bind.hpp>
-
 void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
 {
   // This is the function that is executed in the loop. It 
@@ -971,7 +971,7 @@ void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
     // to the first parameter
     tileUpdater = boost::bind<void>([]( float v, QVariantMap& m ) {
                                       m["u tile"] = v;
-                                    }, uTile, _1);
+                                    }, uTile, boost::placeholders::_1);
   }
   else if (isProperty(propName, RE_PROP_V_TILE)) {
     // Store the value for future uses in case image map nodes are 
@@ -981,7 +981,7 @@ void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
     // to the first parameter
     tileUpdater = boost::bind<void>([]( float v, QVariantMap& m ) {
                                       m["v tile"] = v;
-                                    }, vTile, _1);
+                                    }, vTile, boost::placeholders::_1);
   }
   else if (isProperty(propName, RE_PROP_H_OFFSET)) {
     // Store the value for future uses in case image map nodes are 
@@ -991,7 +991,7 @@ void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
     // to the first parameter
     tileUpdater = boost::bind<void>([]( float v, QVariantMap& m ) {
                                       m["u offset"] = v;
-                                    }, uOffset, _1);
+                                    }, uOffset, boost::placeholders::_1);
   }
   else if (isProperty(propName, RE_PROP_V_OFFSET)) {
     // Store the value for future uses in case image map nodes are 
@@ -1001,7 +1001,7 @@ void ReDSMaterialConverter::convertTiling(const DzProperty* prop)
     // to the first parameter
     tileUpdater = boost::bind<void>([]( float v, QVariantMap& m ) {
                                       m["v offset"] = v;
-                                    }, vOffset, _1);
+                                    }, vOffset, boost::placeholders::_1);
   }
   // Scan all the nodes and find the image maps. 
   QMapIterator<QString, QVariant> i(nodes);
