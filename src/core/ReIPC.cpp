@@ -76,7 +76,6 @@ void CommandPollingThread::sendReplyToGUI( zmq::socket_t& socket,
 }
 
 void CommandPollingThread::run() {
-  using namespace std;
   isActive = true;
 
   int ipcPort,

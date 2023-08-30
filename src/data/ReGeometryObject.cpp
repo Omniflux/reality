@@ -1087,8 +1087,8 @@ void ReGeometryObject::createMaterial( const QString matID,
     case MatMetal: {
       ReMetal* metal = new Reality::ReMetal(matID, this);
       metal->setKr(matInfo.diffuseMap);
-      metal->setHPolish(max(RE_METAL_DEFAULT_POLISH,matInfo.uGlossiness));
-      metal->setVPolish(max(RE_METAL_DEFAULT_POLISH,matInfo.vGlossiness));
+      metal->setHPolish(std::max(RE_METAL_DEFAULT_POLISH,matInfo.uGlossiness));
+      metal->setVPolish(std::max(RE_METAL_DEFAULT_POLISH,matInfo.vGlossiness));
       // Alpha
       metal->setAlphaStrength(matInfo.alphaStrength);
       if (!matInfo.alphaMap.isNull()) {

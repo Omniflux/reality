@@ -38,7 +38,6 @@
 
 namespace Reality {
 
-using namespace std;
 /*
 void generateNormal(ReGeometryBuffer* geometryBuffer, int triangle) {
   // get difference vectors:

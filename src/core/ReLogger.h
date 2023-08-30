@@ -22,10 +22,9 @@
 #include "logging/cpplog.hpp"
 
 using namespace cpplog;
-using namespace std;
 
 //! File-based stream for persistance of the log
-extern ofstream logFile;
+extern std::ofstream logFile;
 REALITY_LIB_EXPORT extern cpplog::OstreamLogger RealityLogger;
 
 // Shortcut macros to help us with the log
@@ -95,7 +94,7 @@ inline void RE_createLogger( QString prefix = "" ) {
   if (logFileHandler.size() > RE_LOG_FILE_MAX_SIZE) {
     logFileHandler.remove();
   }
-  logFile.open(logFileName.toUtf8(), ios::app);
+  logFile.open(logFileName.toUtf8(), std::ios::app);
   if (!prefix.isEmpty()) {
     CustomLogMessage::setPrefix(prefix);
   }

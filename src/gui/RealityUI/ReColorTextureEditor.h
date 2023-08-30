@@ -16,7 +16,6 @@
 #include "actions/ReTextureEditCommands.h"
 
 using namespace Reality;
-using namespace std;
 
 // A list of colors, we have 5 elements per list
 typedef QList<QColor> ReColorList;
@@ -106,8 +105,8 @@ private slots:
       QColor clr = teColorPicker->getColor();
       int r,g,b;
       clr.getRgb(&r,&g,&b);
-      int maxRGB = max(r, max(g,b));
-      int minRGB = min(r, min(g,b));
+      int maxRGB = std::max(r, std::max(g,b));
+      int minRGB = std::min(r, std::min(g,b));
       int newRGB = (maxRGB + minRGB) / 2;
       teColorPicker->setColor(QColor(newRGB, newRGB, newRGB));
     }

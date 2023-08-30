@@ -84,12 +84,12 @@ void getStartupOptions(int argc, char **argv, QVariantMap& enabledOptions) {
   bpo::options_description stdOptions("Available options");  
   stdOptions.add_options()
     ("help,h", "Shows this help message")
-    ("appID", bpo::value<string>(&appIDOpt), 
+    ("appID", bpo::value<std::string>(&appIDOpt),
      "The name of the application interfacing with Reality. Allowed values: "
      "Poser, DS")
-    ("importBundle,b", bpo::value<string>(&bundleName), 
+    ("importBundle,b", bpo::value<std::string>(&bundleName),
       "Import the ACSEL bundle named in arg")
-    ("importAliases,a", bpo::value<string>(&aliasFilename),
+    ("importAliases,a", bpo::value<std::string>(&aliasFilename),
       "Import the ACSEL object aliases in arg")
     ("bundleOverwrite,o", 
      "When installing an ACSEL bundle, shaders that already exist in the "
@@ -97,15 +97,15 @@ void getStartupOptions(int argc, char **argv, QVariantMap& enabledOptions) {
      "in the bundle will overwrite any previous definition of the same "
      "shaders."
     )
-    ("exportAcselDB", bpo::value<string>(&acselBundle), "Export the ACSEl database to the file specified")
+    ("exportAcselDB", bpo::value<std::string>(&acselBundle), "Export the ACSEl database to the file specified")
     ("version,v", "Prints the version of Reality and exits") ;
 
   // Private, hidden options
   bpo::options_description hiddenOptions("Extra options");
   hiddenOptions.add_options() 
-    ("ipAddress", bpo::value<string>(&ipAddressOpt), "IP Address of the host")
-    ("hostVersion", bpo::value<string>(&hostVersion), "The version of the host app")
-    ("addLuxNodes", bpo::value<string>(&luxRenderNodes), "List of Lux render nodes to add to the configuration")
+    ("ipAddress", bpo::value<std::string>(&ipAddressOpt), "IP Address of the host")
+    ("hostVersion", bpo::value<std::string>(&hostVersion), "The version of the host app")
+    ("addLuxNodes", bpo::value<std::string>(&luxRenderNodes), "List of Lux render nodes to add to the configuration")
     ("clearLuxNodes", "Clears the list of Lux render nodes")
     ("credits", "Print the credits of the program");
 
@@ -128,7 +128,7 @@ void getStartupOptions(int argc, char **argv, QVariantMap& enabledOptions) {
     if (programLocationInfo.exists()) {      
       enabledOptions["configurationFile"] = configFilePath;
 
-      ifstream ifs(configFilePath.toUtf8().data());
+      std::ifstream ifs(configFilePath.toUtf8().data());
       if (ifs) {
         bpo::store(bpo::parse_config_file(ifs, allOptions), optionValues);
         bpo::notify(optionValues);
@@ -185,7 +185,7 @@ void getStartupOptions(int argc, char **argv, QVariantMap& enabledOptions) {
     }
   }
   catch( const std::exception e) {
-    cerr << "Exception in reading the configuration parameters.\n";
+    std::cerr << "Exception in reading the configuration parameters.\n";
   }
 }
 

@@ -7,7 +7,7 @@
 #include "ReDefs.h"  
 
 //! The log file that we use to keep track of important message from the library
-ofstream logFile;
+std::ofstream logFile;
 OstreamLogger RealityLogger(logFile);
 
 QString CustomLogMessage::prefix = "";

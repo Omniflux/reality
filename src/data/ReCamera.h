@@ -18,8 +18,6 @@
 #include <algorithm>
 #include "reality_lib_export.h"
 
-using namespace std;
-
 namespace Reality {
 
 /**

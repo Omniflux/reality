@@ -32,9 +32,9 @@ public:
   //! Calculates the absorption-at-depth based on the RGB values and a depth value
   //! expressed in meters. This formula was derived from the one in LuxBlend.
   void colorAbsorption( qreal& r, qreal& g, qreal& b, const float depth, const float scale ) {
-    r = (-log(max(r, 1e-30)) / depth) * scale * (r == 1.0 ? -1 : 1);
-    g = (-log(max(g, 1e-30)) / depth) * scale * (g == 1.0 ? -1 : 1);
-    b = (-log(max(b, 1e-30)) / depth) * scale * (b == 1.0 ? -1 : 1);
+    r = (-std::log(std::max(r, 1e-30)) / depth) * scale * (r == 1.0 ? -1 : 1);
+    g = (-std::log(std::max(g, 1e-30)) / depth) * scale * (g == 1.0 ? -1 : 1);
+    b = (-std::log(std::max(b, 1e-30)) / depth) * scale * (b == 1.0 ? -1 : 1);
   }
 
   const QString exportVolume( ReVolumePtr volume ) {
