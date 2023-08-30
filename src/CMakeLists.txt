@@ -45,7 +45,7 @@ add_compile_options ($<$<AND:$<COMPILE_LANG_AND_ID:CXX,MSVC>,$<VERSION_LESS:$<CX
 add_compile_options ($<$<AND:$<PLATFORM_ID:Darwin>,$<COMPILE_LANGUAGE:CXX>>:-stdlib=libc++>)
 
 # Trim Windows headers by default
-add_compile_definitions ($<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN>)
+add_compile_definitions ($<$<PLATFORM_ID:Windows>:NOMINMAX> $<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN>)
 
 # Find dependencies
 set (Boost_USE_STATIC_LIBS ON)
