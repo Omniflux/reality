@@ -8,6 +8,6 @@
 
 //! The log file that we use to keep track of important message from the library
 std::ofstream logFile;
-OstreamLogger RealityLogger(logFile);
+cpplog::OstreamLogger RealityLogger(logFile);
 
 QString CustomLogMessage::prefix = "";

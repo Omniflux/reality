@@ -21,7 +21,6 @@
 #define LOG_LEVEL(level, logger) CustomLogMessage(__FILE__, "", __LINE__, (level), logger).getStream()
 #include "logging/cpplog.hpp"
 
-using namespace cpplog;
 
 //! File-based stream for persistance of the log
 extern std::ofstream logFile;
