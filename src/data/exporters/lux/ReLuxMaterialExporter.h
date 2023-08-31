@@ -10,9 +10,9 @@
 #include <QStringList>
 
 #include "reality_lib_export.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReMaterial.h"
 #include "ReLogger.h"
+#include "ReMaterial.h"
+#include "ReModifiedMaterial.h"
 #include "ReTexture.h"
 #include "ReTools.h"
 #include "exporters/ReMaterialExporter.h"

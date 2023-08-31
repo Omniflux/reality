@@ -7,7 +7,7 @@
 #define RECLOTH_H
 
 #include "reality_lib_export.h"
-#include "ReDisplaceableMaterial.h"
+#include "ReModifiedMaterial.h"
 
 
 #define WARP_KD "warp_Kd"

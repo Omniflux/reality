@@ -9,7 +9,7 @@
 #include <QSharedPointer>
 
 #include "reality_lib_export.h"
-#include "ReDisplaceableMaterial.h"
+#include "ReModifiedMaterial.h"
 
 
 #define RE_GLASS_DEFAULT_CAUCHYB 0.00420

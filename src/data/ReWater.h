@@ -7,7 +7,7 @@
 #define REWATER_H
 
 #include "reality_lib_export.h"
-#include "ReDisplaceableMaterial.h"
+#include "ReModifiedMaterial.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 

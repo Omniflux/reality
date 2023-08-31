@@ -3,7 +3,7 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReDisplaceableMaterial.h"
+#include "ReModifiedMaterial.h"
 #include "ReModifiers.h"
 #include "ReTools.h"
 

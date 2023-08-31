@@ -11,7 +11,6 @@
 
 #include "ReAcsel.h"
 #include "ReCloth.h"
-#include "ReDisplaceableMaterial.h"
 #include "ReGlass.h"
 #include "ReGlossy.h"
 #include "ReLightMaterial.h"
@@ -20,6 +19,7 @@
 #include "ReMatte.h"
 #include "ReMetal.h"
 #include "ReMirror.h"
+#include "ReModifiedMaterial.h"
 #include "ReNodeConverter.h"
 #include "ReNull.h"
 #include "ReSceneData.h"

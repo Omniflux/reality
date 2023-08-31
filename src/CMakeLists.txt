@@ -499,7 +499,7 @@ set (SRC_GROUP_TEXTURES_MATS
 	data/ReVelvet.cpp
 	data/ReLightMaterial.cpp
 	data/ReVolumes.cpp
-	data/ReDisplaceableMaterial.cpp
+	data/ReModifiedMaterial.cpp
 	data/ReAlphaChannelMaterial.cpp
 	data/ReGeometryObject.cpp
 	data/ReNodeConverter.cpp

@@ -7,7 +7,7 @@
 #define __REHAIR_H__
 
 #include "reality_lib_export.h"
-#include "ReDisplaceableMaterial.h"
+#include "ReModifiedMaterial.h"
 
 
 namespace Reality {

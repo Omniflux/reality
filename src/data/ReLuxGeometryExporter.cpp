@@ -15,8 +15,8 @@
 #include <QStringBuilder>
 
 #include "ply/rply.h"
-#include "ReDisplaceableMaterial.h"
 #include "ReLightMaterial.h"
+#include "ReModifiedMaterial.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 #include "ReSceneResources.h"

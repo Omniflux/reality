@@ -11,8 +11,8 @@
 
 #include "reality_lib_export.h"
 #include "ReAlphaChannelMaterial.h"
-#include "ReDisplaceableMaterial.h"
 #include "ReMaterial.h"
+#include "ReModifiedMaterial.h"
 #include "ReQtTextureExporterFactory.h"
 #include "exporters/ReMaterialExporter.h"
 
