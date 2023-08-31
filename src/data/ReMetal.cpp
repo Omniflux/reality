@@ -12,7 +12,7 @@
 namespace Reality {
 
 ReMetal::ReMetal( const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent),
+  ReModifiedMaterial(name, parent),
   metalType(Aluminum),
   hPolish(RE_METAL_DEFAULT_POLISH),
   vPolish(RE_METAL_DEFAULT_POLISH)
@@ -23,7 +23,7 @@ ReMetal::ReMetal( const QString name, const ReGeometryObject* parent ) :
 
 
 void ReMetal::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
     channels["Kr"] = ReTexturePtr(
@@ -81,7 +81,7 @@ void ReMetal::setNamedValue( const QString& name, const QVariant& value ) {
     channels["Kr"] = value.value<ReTexturePtr>();
   }
   else {
-    DisplaceableMaterial::setNamedValue(name, value);
+    ReModifiedMaterial::setNamedValue(name, value);
   }
 }
 
@@ -100,7 +100,7 @@ const QVariant ReMetal::getNamedValue( const QString& name ) const {
     val.setValue(channels["Kr"]);
   }
   else {
-    val = DisplaceableMaterial::getNamedValue(name);
+    val = ReModifiedMaterial::getNamedValue(name);
   }
   return val;
 }
@@ -109,7 +109,7 @@ void ReMetal::serialize( QDataStream& dataStream ) const {
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << (quint16) metalType << hPolish << vPolish;
-  DisplaceableMaterial::serialize(dataStream);      
+  ReModifiedMaterial::serialize(dataStream);
 };
 
 
@@ -118,7 +118,7 @@ void ReMetal::deserialize( QDataStream& dataStream ) {
   quint16 intMetalType;
   dataStream >> intMetalType >> hPolish >> vPolish;
   metalType = static_cast<MetalType>(intMetalType);
-  DisplaceableMaterial::deserialize(dataStream);      
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 } // namespace

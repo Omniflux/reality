@@ -330,7 +330,7 @@ public:
 
   QString getSubdivision( ReMaterial* mat ) {
     // Test to see if the material has modifiers
-    auto dmat = dynamic_cast<DisplaceableMaterial*>(mat);
+    auto dmat = dynamic_cast<ReModifiedMaterial*>(mat);
     if (!dmat) {
       return "";
     }
@@ -366,7 +366,7 @@ public:
       return "";
     }
     // Test to see if the material has modifiers
-    auto dmat = dynamic_cast<DisplaceableMaterial*>(mat);
+    auto dmat = dynamic_cast<ReModifiedMaterial*>(mat);
     if (!dmat) {
       return "";
     }

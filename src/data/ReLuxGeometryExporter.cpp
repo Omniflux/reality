@@ -317,7 +317,7 @@ void ReLuxGeometryExporter::exportToLux( const QString materialName,
     materialData += QString("NamedMaterial \"%1\"\n").arg(mat->getUniqueName());
   }
   // Test to see if the material has modifiers
-  ReDisplaceableMaterialPtr dmat = mat.dynamicCast<DisplaceableMaterial>();
+  ReModifiedMaterialPtr dmat = mat.dynamicCast<ReModifiedMaterial>();
   // Check if the material has the Light Emission flag on. In that case
   // configure the material to be an emitter
   if (!dmat.isNull() && dmat->isEmittingLight()) {

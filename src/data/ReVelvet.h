@@ -12,7 +12,7 @@
 
 namespace Reality {
 
-class REALITY_LIB_EXPORT ReVelvet: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReVelvet: public ReModifiedMaterial {
 
 protected:
   float thickness;

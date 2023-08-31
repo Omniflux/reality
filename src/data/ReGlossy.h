@@ -22,7 +22,7 @@ namespace Reality {
 /**
  The Glossy and Glossy Translucent material.
  */
-class REALITY_LIB_EXPORT ReGlossy: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReGlossy: public ReModifiedMaterial {
 protected:
   // Used as a placeholder and for the rare case when 
   // a texture might become null

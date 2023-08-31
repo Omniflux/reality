@@ -21,7 +21,7 @@ namespace Reality {
 
 namespace Reality {
 
-class REALITY_LIB_EXPORT ReWater: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReWater: public ReModifiedMaterial {
 public:
 
 protected:

@@ -12,7 +12,7 @@
 namespace Reality {
 
 ReMirror::ReMirror( const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent),
+  ReModifiedMaterial(name, parent),
   filmIOR(1.5),
   filmThickness(2.0)
 {
@@ -24,7 +24,7 @@ ReMirror::ReMirror( const QString name, const ReGeometryObject* parent ) :
 }
 
 void ReMirror::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);  
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kr");
   if (!tex.isNull()) {
     channels["Kr"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
@@ -77,7 +77,7 @@ void ReMirror::setNamedValue( const QString& vname, const QVariant& value ) {
     addTextureToCatalog(channels["Kr"]);
   }
   else {
-    DisplaceableMaterial::setNamedValue(vname, value);
+    ReModifiedMaterial::setNamedValue(vname, value);
   }
 }
 
@@ -93,20 +93,20 @@ const QVariant ReMirror::getNamedValue( const QString& vname ) const {
     val.setValue(channels["Kr"]);
     return val;
   }
-  return DisplaceableMaterial::getNamedValue(vname);
+  return ReModifiedMaterial::getNamedValue(vname);
 }
 
 void ReMirror::serialize( QDataStream& dataStream ) const {
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << filmIOR << filmThickness;
-  DisplaceableMaterial::serialize(dataStream);  
+  ReModifiedMaterial::serialize(dataStream);
 }
 
 void ReMirror::deserialize( QDataStream& dataStream ){
   ReMaterial::deserialize( dataStream );
   dataStream >> filmIOR >> filmThickness;
-  DisplaceableMaterial::deserialize(dataStream);
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

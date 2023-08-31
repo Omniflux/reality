@@ -2008,7 +2008,7 @@ void RealityPanel::materialSelected(const QModelIndex& index) {
   // Set up the modifiers
   if (usesModifiers) {
     meModifiers->setData(
-      static_cast<DisplaceableMaterial*>(currentMaterial),
+      static_cast<ReModifiedMaterial*>(currentMaterial),
       textureChannelDataModel
     );
   }

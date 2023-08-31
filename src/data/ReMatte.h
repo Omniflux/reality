@@ -15,7 +15,7 @@ namespace Reality {
 /**
  Merges matte and matter translucent features in one.
  */
-class REALITY_LIB_EXPORT ReMatte: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMatte: public ReModifiedMaterial {
 
 protected:
   float roughness;

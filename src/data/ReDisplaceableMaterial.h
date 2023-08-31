@@ -19,14 +19,13 @@ namespace Reality {
 #define RE_EMISSION_CHANNEL_NAME "Kl"
 
 /**
- A material that can be displaced with a map. It also supports Bump/Normal maps and other
- geometry transformations.
-
- This class will be renamed as ReModifiedMaterial because it contains
- information about other properties that are not directly related to
- displacement. For example, it hold the data if the material emits light
+ A material that has been modified - e.g.
+ - displacement map
+ - bump/normal map
+ - emits light
+ - other geometry transformations
  */ 
-class REALITY_LIB_EXPORT DisplaceableMaterial : public ReAlphaChannelMaterial {
+class REALITY_LIB_EXPORT ReModifiedMaterial : public ReAlphaChannelMaterial {
 
 protected:
   bool isNormalMap;
@@ -48,7 +47,7 @@ protected:
   float lightGain;
 public:
 
-  DisplaceableMaterial( const QString name, const ReGeometryObject* parent );
+  ReModifiedMaterial( const QString name, const ReGeometryObject* parent );
   
   /*
    Method: getBumpMap
@@ -176,7 +175,7 @@ public:
   virtual void deserialize( QDataStream& dataStream );
 };
 
-typedef QSharedPointer<DisplaceableMaterial> ReDisplaceableMaterialPtr;
+typedef QSharedPointer<ReModifiedMaterial> ReModifiedMaterialPtr;
 
 } // namespace
 

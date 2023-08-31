@@ -13,7 +13,7 @@
 namespace Reality {
 
 ReMatte::ReMatte(const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent) {
+  ReModifiedMaterial(name, parent) {
   type = originalType = MatMatte;
   setKd(ReTexturePtr(new ReConstant(QString("%1_Kd").arg(name), this, RE_WHITE_COLOR)));
   // Translucency channel
@@ -24,7 +24,7 @@ ReMatte::ReMatte(const QString name, const ReGeometryObject* parent ) :
 }
 
 void ReMatte::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kd");
   ReMaterialType otherType = baseMat->getType();
   if (!tex.isNull()) {
@@ -89,7 +89,7 @@ void ReMatte::setNamedValue( const QString& vname, const QVariant& value ) {
     translucent = value.toBool();
   }
   else {
-    DisplaceableMaterial::setNamedValue(vname, value);
+    ReModifiedMaterial::setNamedValue(vname, value);
   }
 }
 
@@ -104,7 +104,7 @@ const QVariant ReMatte::getNamedValue( const QString& vname ) const {
     return translucent;
   }
   else {
-    return DisplaceableMaterial::getNamedValue(vname);
+    return ReModifiedMaterial::getNamedValue(vname);
   }
 }
 
@@ -114,14 +114,14 @@ void ReMatte::serialize( QDataStream& dataStream ) const {
   ReMaterial::serialize(dataStream);
 
   dataStream << roughness << conserveEnergy << translucent;
-  DisplaceableMaterial::serialize(dataStream);  
+  ReModifiedMaterial::serialize(dataStream);
 }
 
 
 void ReMatte::deserialize( QDataStream& dataStream ){
   ReMaterial::deserialize( dataStream );
   dataStream >> roughness >> conserveEnergy >> translucent;
-  DisplaceableMaterial::deserialize(dataStream);
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

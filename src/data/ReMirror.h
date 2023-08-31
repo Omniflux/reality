@@ -12,7 +12,7 @@
 
 namespace Reality {
 
-class REALITY_LIB_EXPORT ReMirror: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMirror: public ReModifiedMaterial {
 protected:
   float filmIOR;
   float filmThickness;

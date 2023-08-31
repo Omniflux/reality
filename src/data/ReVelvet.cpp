@@ -13,7 +13,7 @@ namespace Reality {
 
 
 ReVelvet::ReVelvet( const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent) 
+  ReModifiedMaterial(name, parent)
 {
   type = originalType = MatVelvet;
   thickness = 1.0;  
@@ -25,7 +25,7 @@ ReVelvet::ReVelvet( const QString name, const ReGeometryObject* parent ) :
 
 
 void ReVelvet::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
     channels["Kd"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
@@ -54,7 +54,7 @@ void ReVelvet::setNamedValue( const QString& vname, const QVariant& value ) {
     addTextureToCatalog(channels["Kd"]);
   }
   else {
-    DisplaceableMaterial::setNamedValue(vname, value);
+    ReModifiedMaterial::setNamedValue(vname, value);
   }
 }
 
@@ -67,21 +67,21 @@ const QVariant ReVelvet::getNamedValue( const QString& vname ) const {
     val.setValue(channels["Kd"]);
     return val;
   }
-  return DisplaceableMaterial::getNamedValue(vname);
+  return ReModifiedMaterial::getNamedValue(vname);
 }
 
 void ReVelvet::serialize( QDataStream& dataStream ) const {
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << thickness;
-  DisplaceableMaterial::serialize(dataStream);  
+  ReModifiedMaterial::serialize(dataStream);
 }
 
 
 void ReVelvet::deserialize( QDataStream& dataStream ){
   ReMaterial::deserialize( dataStream );
   dataStream >> thickness;
-  DisplaceableMaterial::deserialize(dataStream);
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

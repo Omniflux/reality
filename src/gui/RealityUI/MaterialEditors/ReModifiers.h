@@ -18,7 +18,7 @@ class ReModifiers: public ReMaterialEditor,
   Q_OBJECT
 
 protected:
-  // DisplaceableMaterial* material;
+  // ReModifiedMaterial* material;
   bool inSetup;
 
   // Used for the timed editor

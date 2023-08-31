@@ -313,7 +313,7 @@ QVariant ReSceneDataModel::data( const QModelIndex& index, int role ) const {
       case RE_MB_COL_HIDDEN:
         return "";
       case RE_MB_COL_EMITTER: {
-        DisplaceableMaterial* dmat = dynamic_cast<DisplaceableMaterial*>(mat);
+        ReModifiedMaterial* dmat = dynamic_cast<ReModifiedMaterial*>(mat);
         if (dmat && dmat->isEmittingLight()) {
           return "Y";
         }

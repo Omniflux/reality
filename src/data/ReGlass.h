@@ -21,7 +21,7 @@ namespace Reality {
 /*
  Class: ReGlass
  */
-class REALITY_LIB_EXPORT ReGlass: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReGlass: public ReModifiedMaterial {
 
 public:
   enum GlassType {

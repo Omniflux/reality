@@ -10,7 +10,7 @@
 
 namespace Reality {
 
-DisplaceableMaterial::DisplaceableMaterial( const QString name, const ReGeometryObject* parent ) :
+ReModifiedMaterial::ReModifiedMaterial( const QString name, const ReGeometryObject* parent ) :
   ReAlphaChannelMaterial(name,parent),
   isNormalMap(false),
   bmNegative(-0.001f),
@@ -34,113 +34,113 @@ DisplaceableMaterial::DisplaceableMaterial( const QString name, const ReGeometry
   channels["Kl"] = ReTexturePtr();  
 }
 
-ReTexturePtr DisplaceableMaterial::getBumpMap() const {
+ReTexturePtr ReModifiedMaterial::getBumpMap() const {
   return channels["Bm"];
 };
 
-void DisplaceableMaterial::setBumpMap( ReTexturePtr& newVal ) {
+void ReModifiedMaterial::setBumpMap( ReTexturePtr& newVal ) {
   channels["Bm"] = newVal;
   channels["Bm"]->reparent(this);
   addTextureToCatalog(channels["Bm"]);
 };
 
-bool DisplaceableMaterial::hasBumpMap() const {
+bool ReModifiedMaterial::hasBumpMap() const {
   return !channels["Bm"].isNull();
 }
 
 
-float DisplaceableMaterial::getBmPositive() const {
+float ReModifiedMaterial::getBmPositive() const {
   return bmPositive;
 };
 
-void DisplaceableMaterial::setBmPositive( float newVal ) {
+void ReModifiedMaterial::setBmPositive( float newVal ) {
   bmPositive = newVal;
 };
 
 
-float DisplaceableMaterial::getBmNegative() const {
+float ReModifiedMaterial::getBmNegative() const {
   return bmNegative;
 };
 
-void DisplaceableMaterial::setBmNegative( float newVal ) {
+void ReModifiedMaterial::setBmNegative( float newVal ) {
   bmNegative = newVal;
 };
 
 
-float DisplaceableMaterial::getBmStrength() const {
+float ReModifiedMaterial::getBmStrength() const {
   return bmStrength;
 };
 
-void DisplaceableMaterial::setBmStrength( float newVal ) {
+void ReModifiedMaterial::setBmStrength( float newVal ) {
   bmStrength = newVal;
 };
   
-bool DisplaceableMaterial::hasNormalMap() const {
+bool ReModifiedMaterial::hasNormalMap() const {
   return isNormalMap;
 }
 
-void DisplaceableMaterial::setNormalMapFlag( const bool f ) {
+void ReModifiedMaterial::setNormalMapFlag( const bool f ) {
   isNormalMap = f;
 };
 
-void DisplaceableMaterial::setDisplacementMap( ReTexturePtr newVal ) {
+void ReModifiedMaterial::setDisplacementMap( ReTexturePtr newVal ) {
   channels["Dm"] = newVal;
   channels["Dm"]->reparent(this);
   addTextureToCatalog(channels["Dm"]);  
 };
 
-bool DisplaceableMaterial::hasDisplacementMap() const {
+bool ReModifiedMaterial::hasDisplacementMap() const {
   return !channels["Dm"].isNull();
 }
 
-void DisplaceableMaterial::setDmPositive( float newVal ) {
+void ReModifiedMaterial::setDmPositive( float newVal ) {
   dmPositive = newVal;
 };
 
 
-void DisplaceableMaterial::setDmNegative( float newVal ) {
+void ReModifiedMaterial::setDmNegative( float newVal ) {
   dmNegative = newVal;
 };
 
-void DisplaceableMaterial::setDmStrength( float newVal ) {
+void ReModifiedMaterial::setDmStrength( float newVal ) {
   dmStrength = newVal;
 };
 
-ReTexturePtr DisplaceableMaterial::getAmbientMap() const {
+ReTexturePtr ReModifiedMaterial::getAmbientMap() const {
   return channels["Kl"];
 };
 
-void DisplaceableMaterial::setAmbientMap( ReTexturePtr& newVal ) {
+void ReModifiedMaterial::setAmbientMap( ReTexturePtr& newVal ) {
   channels["Kl"] = newVal;
   channels["Kl"]->reparent(this);
   addTextureToCatalog(channels["Kl"]);
 };
 
-void DisplaceableMaterial::setSubdivisions( quint16 newVal ) {
+void ReModifiedMaterial::setSubdivisions( quint16 newVal ) {
   subdivision = newVal;
 };
 
-void DisplaceableMaterial::setUseMicrofacets( bool newVal ) {
+void ReModifiedMaterial::setUseMicrofacets( bool newVal ) {
   useMicrofacets = newVal;
 };
 
-void DisplaceableMaterial::setIsSmooth( bool newVal ) {
+void ReModifiedMaterial::setIsSmooth( bool newVal ) {
   smoothnessFlag = newVal;
 };
 
-void DisplaceableMaterial::setKeepSharpEdges( bool newVal ) {
+void ReModifiedMaterial::setKeepSharpEdges( bool newVal ) {
   keepSharpEdgesFlag = newVal;
 };
 
-void DisplaceableMaterial::setEmitsLight( const bool newVal ) {
+void ReModifiedMaterial::setEmitsLight( const bool newVal ) {
   emitsLight = newVal;
 };
 
-void DisplaceableMaterial::setLightGain( const float newVal ) {
+void ReModifiedMaterial::setLightGain( const float newVal ) {
   lightGain = newVal;
 };
 
-const QVariant DisplaceableMaterial::getNamedValue( const QString& name) const {
+const QVariant ReModifiedMaterial::getNamedValue( const QString& name) const {
   QVariant val;
   if (name == "Bm" || name == "bumpMap") {
     val.setValue(channels["Bm"]);
@@ -196,7 +196,7 @@ const QVariant DisplaceableMaterial::getNamedValue( const QString& name) const {
   return val;
 }
 
-void DisplaceableMaterial::setNamedValue( const QString& name, const QVariant& value ) {
+void ReModifiedMaterial::setNamedValue( const QString& name, const QVariant& value ) {
   if (name == "Bm" || name == "bumpMap") {
     channels["Bm"] = value.value<ReTexturePtr>();
   }
@@ -250,7 +250,7 @@ void DisplaceableMaterial::setNamedValue( const QString& name, const QVariant& v
   }
 }
 
-void DisplaceableMaterial::fromMaterial( const ReMaterial* srcMat ) {
+void ReModifiedMaterial::fromMaterial( const ReMaterial* srcMat ) {
   // Let the alpha channel material take care of its part
   ReAlphaChannelMaterial::fromMaterial(srcMat);
   
@@ -300,7 +300,7 @@ void DisplaceableMaterial::fromMaterial( const ReMaterial* srcMat ) {
 }
 
 
-void DisplaceableMaterial::serialize( QDataStream& dataStream ) const { 
+void ReModifiedMaterial::serialize( QDataStream& dataStream ) const {
   // Serialize the base class
   ReAlphaChannelMaterial::serialize(dataStream);
   dataStream << isNormalMap << bmStrength << bmPositive << bmNegative;
@@ -312,7 +312,7 @@ void DisplaceableMaterial::serialize( QDataStream& dataStream ) const {
   dataStream << emitsLight << lightGain;
 };
 
-void DisplaceableMaterial::deserialize( QDataStream& dataStream ) {
+void ReModifiedMaterial::deserialize( QDataStream& dataStream ) {
   // Deserialize the base class
   ReAlphaChannelMaterial::deserialize(dataStream);
 

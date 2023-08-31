@@ -113,7 +113,7 @@ void ReSkin::serialize( QDataStream& dataStream ) const {
              << hairMask
              << hmGain;
 
-  DisplaceableMaterial::serialize(dataStream);      
+  ReModifiedMaterial::serialize(dataStream);
 };
 
 void ReSkin::deserialize( QDataStream& dataStream ) {
@@ -123,7 +123,7 @@ void ReSkin::deserialize( QDataStream& dataStream ) {
              >> hairMask
              >> hmGain;
 
-  DisplaceableMaterial::deserialize(dataStream);      
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

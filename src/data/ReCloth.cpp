@@ -73,7 +73,7 @@ ReClothPreset* ReClothPreset::getPreset( unsigned short index ) {
 }
 
 ReCloth::ReCloth( const QString name, const ReGeometryObject* parent ) :
-  DisplaceableMaterial(name, parent)
+  ReModifiedMaterial(name, parent)
 {
   type = originalType = MatCloth;
   ReClothPreset thePreset = clothPresets[RE_CLOTH_DENIM];
@@ -125,7 +125,7 @@ ReCloth::ReCloth( const QString name, const ReGeometryObject* parent ) :
 };
 
 void ReCloth::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
     deleteTexture(channels[WARP_KD]->getName());
@@ -297,7 +297,7 @@ void ReCloth::setNamedValue( const QString& vname, const QVariant& value ) {
     setChannel(vname,tex->getName());
   }
   else {
-    DisplaceableMaterial::setNamedValue(vname, value);
+    ReModifiedMaterial::setNamedValue(vname, value);
   }
 };
 
@@ -328,21 +328,21 @@ const QVariant ReCloth::getNamedValue( const QString& vname ) const {
     val.setValue(channels[WEFT_KS]);
     return val;
   }
-  return DisplaceableMaterial::getNamedValue(vname);
+  return ReModifiedMaterial::getNamedValue(vname);
 };
 
 void ReCloth::serialize( QDataStream& dataStream ) const {
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << presetName << uRepeat << vRepeat;
-  DisplaceableMaterial::serialize(dataStream);  
+  ReModifiedMaterial::serialize(dataStream);
 }
 
 
 void ReCloth::deserialize( QDataStream& dataStream ){
   ReMaterial::deserialize( dataStream );
   dataStream >> presetName >> uRepeat >> vRepeat;
-  DisplaceableMaterial::deserialize(dataStream);
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

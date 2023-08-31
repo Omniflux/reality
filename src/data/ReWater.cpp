@@ -36,7 +36,7 @@ QString ReWater::ripplePresetsNames[WM_NUM_RIPPLE_PRESETS] = {
 };
 
 ReWater::ReWater( const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent),
+  ReModifiedMaterial(name, parent),
   ripples(WATER_RIPPLE_AMOUNT),
   ripplePreset(0)
 {
@@ -197,7 +197,7 @@ void ReWater::setNamedValue( const QString& vname, const QVariant& value ) {
     setKt(value.value<QColor>());
   }
   else {
-    DisplaceableMaterial::setNamedValue(vname, value);
+    ReModifiedMaterial::setNamedValue(vname, value);
   }
 };
 
@@ -217,21 +217,21 @@ const QVariant ReWater::getNamedValue( const QString& vname ) const {
   else if ( vname == "Kt" ) {    
     return getKt();
   }
-  return DisplaceableMaterial::getNamedValue(vname);
+  return ReModifiedMaterial::getNamedValue(vname);
 };
 
 void ReWater::serialize( QDataStream& dataStream ) const { 
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << ripples << ripplePreset;
-  DisplaceableMaterial::serialize(dataStream);      
+  ReModifiedMaterial::serialize(dataStream);
 };
 
 
 void ReWater::deserialize( QDataStream& dataStream ) {
   ReMaterial::deserialize( dataStream );
   dataStream >> ripples >> ripplePreset;
-  DisplaceableMaterial::deserialize(dataStream);      
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 

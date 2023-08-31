@@ -15,7 +15,7 @@ const QColor RE_GLOSSY_DEFAULT_KS(25, 25, 25);
 namespace Reality {
 
 ReGlossy::ReGlossy( const QString name, const ReGeometryObject* parent) :
-  DisplaceableMaterial(name, parent) {
+  ReModifiedMaterial(name, parent) {
   type          = originalType = MatGlossy;
   uGlossiness   = vGlossiness = 5000;
   surfaceFuzz   = false;
@@ -53,7 +53,7 @@ ReGlossy::ReGlossy( const QString name, const ReGeometryObject* parent) :
 }
 
 void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel(RE_GLOSSY_KD_CH);
   if (!tex.isNull()) {
     channels[RE_GLOSSY_KD_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
@@ -175,7 +175,7 @@ void ReGlossy::serialize( QDataStream& dataStream ) const {
   dataStream << uGlossiness << vGlossiness 
              << surfaceFuzz << coatThickness 
              << translucent << topCoat;
-  DisplaceableMaterial::serialize(dataStream);
+  ReModifiedMaterial::serialize(dataStream);
 };
 
 void ReGlossy::deserialize( QDataStream& dataStream ) {
@@ -183,7 +183,7 @@ void ReGlossy::deserialize( QDataStream& dataStream ) {
   dataStream >> uGlossiness >> vGlossiness 
              >> surfaceFuzz >> coatThickness 
              >> translucent >> topCoat;
-  DisplaceableMaterial::deserialize(dataStream);
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 
@@ -222,7 +222,7 @@ void ReGlossy::setNamedValue( const QString& name, const QVariant& value ) {
     setKg(value.value<ReTexturePtr>());
   }
   else {
-    DisplaceableMaterial::setNamedValue(name, value);
+    ReModifiedMaterial::setNamedValue(name, value);
   }
 }
 
@@ -263,7 +263,7 @@ const QVariant ReGlossy::getNamedValue( const QString& name ) const {
     val.setValue(channels[RE_GLOSSY_KG_CH]);
   }
   else {
-    val = DisplaceableMaterial::getNamedValue(name);
+    val = ReModifiedMaterial::getNamedValue(name);
   }
   return val;
 }

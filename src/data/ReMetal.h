@@ -14,7 +14,7 @@ namespace Reality {
 
 #define RE_METAL_DEFAULT_POLISH 9500
   
-class REALITY_LIB_EXPORT ReMetal: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReMetal: public ReModifiedMaterial {
 
 public:
   enum MetalType {

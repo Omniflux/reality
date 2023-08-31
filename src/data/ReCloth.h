@@ -69,7 +69,7 @@ public:
 /**
  Implementation of the Lux Cloth material
  */
-class REALITY_LIB_EXPORT ReCloth: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReCloth: public ReModifiedMaterial {
 
 private:
   QString presetName;

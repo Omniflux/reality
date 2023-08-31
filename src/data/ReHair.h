@@ -17,12 +17,12 @@ namespace Reality {
 
  A material for human hair.
  */
-class REALITY_LIB_EXPORT ReHair: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReHair: public ReModifiedMaterial {
 
 public:
 
     ReHair( const QString name, const ReGeometryObject* parent ) : 
-      DisplaceableMaterial(name, parent) {
+      ReModifiedMaterial(name, parent) {
       type = MatHair;
 
     }

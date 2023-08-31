@@ -699,7 +699,7 @@ bool isMatteMaterial( ReMaterialInfo& matInfo  ) {
   return false;
 }
 
-void setModifiers( DisplaceableMaterial* mat, ReMaterialInfo& matInfo ) {
+void setModifiers( ReModifiedMaterial* mat, ReMaterialInfo& matInfo ) {
   if (!matInfo.bumpMap.isNull()) {    
     mat->setBumpMap(matInfo.bumpMap);
     mat->setBmPositive(matInfo.bmPositive);

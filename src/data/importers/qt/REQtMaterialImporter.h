@@ -221,7 +221,7 @@ public:
     }
   }
 
-  void importModifiers( ReDisplaceableMaterialPtr mat, const QVariantMap& data ) {
+  void importModifiers( ReModifiedMaterialPtr mat, const QVariantMap& data ) {
     mat->setNormalMapFlag( data.value("isNormalMap").toBool() );
     mat->setBmNegative( data.value("bmNegative").toFloat() );
     mat->setBmPositive( data.value("bmPositive").toFloat() );

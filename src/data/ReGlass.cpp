@@ -18,7 +18,7 @@
 namespace Reality {
 
 ReGlass::ReGlass( const QString name, const ReGeometryObject* parent ) : 
-  DisplaceableMaterial(name, parent),
+  ReModifiedMaterial(name, parent),
   glassType(StandardGlass),
   uRoughness(0.0),
   vRoughness(0.0),
@@ -34,7 +34,7 @@ ReGlass::ReGlass( const QString name, const ReGeometryObject* parent ) :
 }
 
 void ReGlass::fromMaterial( const ReMaterial* baseMat ) {
-  DisplaceableMaterial::fromMaterial(baseMat);
+  ReModifiedMaterial::fromMaterial(baseMat);
   alphaStrength = 1.0;
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
@@ -110,7 +110,7 @@ void ReGlass::serialize( QDataStream& dataStream ) const {
              << thinFilmIOR << thinFilmThickness 
              << IOR         << IORLabel
              << dispersion  << cauchyB;
-  DisplaceableMaterial::serialize(dataStream);      
+  ReModifiedMaterial::serialize(dataStream);
 };
 
 
@@ -126,7 +126,7 @@ void ReGlass::deserialize( QDataStream& dataStream ) {
              >> dispersion  >> cauchyB;
   glassType = static_cast<GlassType>(typeInt);
   
-  DisplaceableMaterial::deserialize(dataStream);      
+  ReModifiedMaterial::deserialize(dataStream);
 }
 
 
@@ -165,7 +165,7 @@ void ReGlass::setNamedValue( const QString& name, const QVariant& value ) {
     channels["Kr"] = value.value<ReTexturePtr>();
   }
   else {
-    DisplaceableMaterial::setNamedValue(name, value);
+    ReModifiedMaterial::setNamedValue(name, value);
   }
 }
 
@@ -205,7 +205,7 @@ const QVariant ReGlass::getNamedValue( const QString& name ) const {
     val.setValue(channels["Kr"]);
   }
   else {
-    val = DisplaceableMaterial::getNamedValue(name);
+    val = ReModifiedMaterial::getNamedValue(name);
   }
 
   return val;

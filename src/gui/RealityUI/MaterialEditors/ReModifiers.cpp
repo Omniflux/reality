@@ -85,7 +85,7 @@ QSize ReModifiers::sizeHint() const {
 
 void ReModifiers::refreshUI() {
   inSetup = true;
-  DisplaceableMaterial* material = static_cast<DisplaceableMaterial*>(currentMaterial);
+  ReModifiedMaterial* material = static_cast<ReModifiedMaterial*>(currentMaterial);
 
   bumpMap->setTexture(material->getBumpMap(), material);
   bumpMap->setDeleteEnabled(true);
@@ -132,7 +132,7 @@ void ReModifiers::refreshUI() {
 void ReModifiers::setData( ReMaterial* newMat, 
                            ReTextureChannelDataModelPtr tcm ) 
 {
-  currentMaterial = newMat; //static_cast<DisplaceableMaterial*>(newMat);
+  currentMaterial = newMat; //static_cast<ReModifiedMaterial*>(newMat);
   textureChannelModel = tcm;
 
   bmAdapter->setMaterial(newMat);

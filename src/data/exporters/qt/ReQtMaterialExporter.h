@@ -55,7 +55,7 @@ public:
 
   //! Exports the bump map, disp.map and other data found in the
   //! Modifiers tab
-  void exportModifiers( const DisplaceableMaterial* mat ) {
+  void exportModifiers( const ReModifiedMaterial* mat ) {
     matData["isNormalMap"]    = mat->hasNormalMap();
     matData["bmNegative"]     = mat->getBmNegative();
     matData["bmPositive"]     = mat->getBmPositive();
