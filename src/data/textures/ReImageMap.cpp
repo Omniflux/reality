@@ -3,11 +3,14 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReTexture.h"
 #include "textures/ReImageMap.h"
+
+#include <QCryptographicHash>
+
+#include "ReTools.h"
 #include "textures/ReColorMath.h"
 #include "textures/ReGrayscale.h"
-#include "ReTools.h"
+
 
 namespace Reality {
 

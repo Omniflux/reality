@@ -7,9 +7,10 @@
 #ifndef RE_LUX_CORE_RENDERER_OCL_H
 #define RE_LUX_CORE_RENDERER_OCL_H
 
-#include <QtCore>
-#include "ReDefs.h"
+#include <QVariant>
+
 #include "exporters/lux/ReLuxOCLRenderer.h"
+
 
 /**
  * Class that defines the default parameters that we use when

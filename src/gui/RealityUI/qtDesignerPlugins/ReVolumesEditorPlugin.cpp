@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReVolumesEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReVolumesEditor.h"
 
 

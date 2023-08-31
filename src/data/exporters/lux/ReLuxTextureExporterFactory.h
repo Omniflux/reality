@@ -9,9 +9,16 @@
 #include <QHash>
 #include <QSharedPointer>
 
-#include "ReTexture.h"
-#include "exporters/lux/ReLuxTextureExporter.h"
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReLuxTextureExporter;
+  class ReTexture;
+  typedef QSharedPointer<ReLuxTextureExporter> ReLuxTextureExporterPtr;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+
+}
+
 
 namespace Reality {
 

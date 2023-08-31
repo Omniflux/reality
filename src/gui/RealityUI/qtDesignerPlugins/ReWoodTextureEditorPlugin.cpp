@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReWoodTextureEditor.h"
 #include "ReWoodTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReWoodTextureEditor.h"
 
 
 ReWoodTextureEditorPlugin::ReWoodTextureEditorPlugin(QObject* parent) : QObject(parent) {}

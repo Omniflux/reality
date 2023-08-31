@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReTextureEditor.h"
 
 

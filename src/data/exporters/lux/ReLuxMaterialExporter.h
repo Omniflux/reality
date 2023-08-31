@@ -6,17 +6,21 @@
 #ifndef RE_LUX_MATERIAL_EXPORTER_H
 #define RE_LUX_MATERIAL_EXPORTER_H
 
-#include "exporters/ReMaterialExporter.h"
-#include "ReLuxTextureExporterFactory.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReMix.h"
-#include "textures/ReMath.h"
-#include "ReLogger.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReSceneDataGlobal.h"
-
+#include <QStringBuilder>
 #include <QStringList>
+
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+#include "ReMaterial.h"
+#include "ReLogger.h"
+#include "ReTexture.h"
+#include "ReTools.h"
+#include "exporters/ReMaterialExporter.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
+
 
 namespace Reality {
 

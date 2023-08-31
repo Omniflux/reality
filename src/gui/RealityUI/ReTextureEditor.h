@@ -5,14 +5,21 @@
 #ifndef RE_TEXTUREEDITOR_H
 #define RE_TEXTUREEDITOR_H
 
-
+#include <QHash>
+#include <QSharedPointer>
 #include <QWidget>
 
 #include "ui_reTextureEditor.h"
 
-#include "ReTexture.h"
-#include "ReTextureChannelDataModel.h"
- 
+namespace Reality {
+  enum ReTextureType;
+  class ReTexture;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
+
 using namespace Reality;
 /*
  Class: ReTextureEditor
@@ -28,7 +35,7 @@ private:
   //   allows us to use simbolic names to refer to a specific page
   //   instead of relying on string comparison, which can be easily
   //   broken by updates and translations.
-  QHash<Reality::ReTextureType, QString> pageNames;
+  QHash<ReTextureType, QString> pageNames;
   ReTextureChannelDataModelPtr model;
 public:
   
@@ -55,7 +62,7 @@ public slots:
   /*
    Shows a given page, identified by the enum <PageType>  
    */
-  void showPage( const Reality::ReTextureType pType ) const;
+  void showPage( const ReTextureType pType ) const;
 
   /*
    Method: changeTextureType

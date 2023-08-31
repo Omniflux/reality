@@ -6,9 +6,14 @@
 #ifndef RE_VELVET_LUX_EXPORTER_H
 #define RE_VELVET_LUX_EXPORTER_H
 
+#include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
+#include "ReMaterial.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
 #include "ReVelvet.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 /*
   Class: ReVelvetLuxExporter

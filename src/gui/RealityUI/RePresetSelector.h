@@ -10,9 +10,11 @@
 #ifndef __REPRESETSELECTOR_H__
 #define __REPRESETSELECTOR_H__
  
-#include <QStandardItemModel>
 #include <QDialog>
+#include <QStandardItemModel>
+
 #include "ui_rePresetSelector.h" 
+
 
 /**
  *

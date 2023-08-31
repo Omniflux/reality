@@ -7,9 +7,15 @@
 #ifndef RE_GLASS_LUX_EXPORTER_H
 #define RE_GLASS_LUX_EXPORTER_H
 
-#include "ReGlass.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReGlass.h"
+#include "ReMaterial.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+
 
 namespace Reality {
 

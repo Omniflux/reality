@@ -7,10 +7,12 @@
 #ifndef QT_WOOD_EXPORTER_H
 #define QT_WOOD_EXPORTER_H
 
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
 #include "ReProceduralNoiseExporter.h"
 #include "textures/ReWood.h"
-#include "ReQtTextureExporter.h"
-#include "reality_lib_export.h"
+
 
 namespace Reality {
 

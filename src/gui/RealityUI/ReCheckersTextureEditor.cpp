@@ -4,8 +4,12 @@
 */
 
 #include "ReCheckersTextureEditor.h"
-#include "RealityBase.h"
+
+#include "ReMaterialPreview.h"
+#include "ReTextureChannelDataModel.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
 #include "exporters/lux/ReLuxTextureExporterFactory.h"
+
 
 ReCheckersTextureEditor::ReCheckersTextureEditor( QWidget* parent ) : 
   ReAbstractTextureEditor(parent),

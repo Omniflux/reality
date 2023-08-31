@@ -6,10 +6,11 @@
 #ifndef REGLASS_H
 #define REGLASS_H
 
-#include "ReMaterial.h"
-#include "ReDisplaceableMaterial.h"
 #include <QSharedPointer>
+
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 #define RE_GLASS_DEFAULT_CAUCHYB 0.00420
 // Default value, in meters, of clarity at depth

@@ -5,9 +5,10 @@
  */
 
 #include "RealityDataRelay.h"
-#include "ReIPC.h"
-#include "ReLogger.h"
+
+#include "ReIPCCommands.h"
 #include "ReSceneDataGlobal.h"
+
 
 namespace Reality {
 

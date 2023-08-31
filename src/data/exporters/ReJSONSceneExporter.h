@@ -6,9 +6,15 @@
 #ifndef ReJSONSceneExporter_h
 #define ReJSONSceneExporter_h
 
-#include "ReDefs.h"
-#include "ReBaseSceneExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReBaseSceneExporter.h"
+
+namespace Reality {
+  class ReSceneData;
+}
+
 
 namespace Reality {
 

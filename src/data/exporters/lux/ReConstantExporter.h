@@ -6,11 +6,13 @@
 #ifndef LUX_CONSTANT_TEXTURE_EXPORTER_H
 #define LUX_CONSTANT_TEXTURE_EXPORTER_H
 
-#include "ReTexture.h"
-#include "ReLuxTextureExporter.h"
-#include "ReTools.h"  
-#include "ReSceneData.h"
+#include <QColor>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "textures/ReConstant.h"
+
 
 namespace Reality {
 

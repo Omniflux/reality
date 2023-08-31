@@ -6,9 +6,9 @@
 #ifndef REMATTE_H
 #define REMATTE_H
 
-#include "ReMaterial.h"
-#include "ReDisplaceableMaterial.h"
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 namespace Reality {
 

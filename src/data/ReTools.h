@@ -6,17 +6,17 @@
 #ifndef RETOOLS_H
 #define RETOOLS_H
 
-#include "textures/ReConstant.h"
-#include "ReLogger.h"
-#include "ReMaterial.h"
-#include "reality_lib_export.h"
+#include <QColor>
+#include <QVariant>
 
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MACX)
-#   include <unistd.h>
-#elif defined(Q_OS_MACX)
-#   include <mach/mach.h>
-#   include <mach/machine.h>
-#endif
+#include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReConstant.h"
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 //! Inserts debug statements in the Lux scene
 #ifdef DEBUG_LUX

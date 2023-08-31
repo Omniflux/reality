@@ -7,9 +7,13 @@
 #ifndef JSON_BRICK_TEXTURE_EXPORTER_H
 #define JSON_BRICK_TEXTURE_EXPORTER_H
 
-#include "textures/ReBricks.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureExporter.h"
+#include "ReTexture.h"
+#include "textures/ReBricks.h"
+
 
 namespace Reality {
 

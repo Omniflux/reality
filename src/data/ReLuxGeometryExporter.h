@@ -6,9 +6,14 @@
 #ifndef LUX_EXPORTER_H
 #define LUX_EXPORTER_H
 
-#include "ReBaseGeometryExporter.h"
-#include "ReMatrix.h"
 #include "reality_lib_export.h"
+
+#include "ReBaseGeometryExporter.h"
+
+namespace Reality {
+  class ReMatrix;
+}
+
 
 namespace Reality {
 

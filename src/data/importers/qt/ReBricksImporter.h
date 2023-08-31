@@ -6,9 +6,12 @@
 #ifndef QT_BRICK_IMPORTER_H
 #define QT_BRICK_IMPORTER_H
 
-#include "textures/ReBricks.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReBricks.h"
+
 
 namespace Reality {
 

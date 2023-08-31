@@ -4,8 +4,9 @@
 */
 
 #include "ReDisplaceableMaterial.h"
-#include "ReTools.h"
+
 #include "ReTextureCreator.h"
+
 
 namespace Reality {
 

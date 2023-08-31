@@ -7,13 +7,15 @@
 #ifndef RE_BREADCRUMBS_H
 #define RE_BREADCRUMBS_H
 
-
 #include <QWidget>
 #include <QVector>
 
-#include "ReTexture.h"
- 
 #include "ui_reBreadCrumbs.h"
+
+namespace Reality {
+  class ReTexture;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
 
 
 using namespace Reality;

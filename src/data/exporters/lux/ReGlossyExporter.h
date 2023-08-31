@@ -8,16 +8,27 @@
 #ifndef RE_GLOSSY_LUX_EXPORTER_H
 #define RE_GLOSSY_LUX_EXPORTER_H
 
-#define RE_GLOSSINESS_MAX_LIMIT 10000.0f
-
-#include "ReMaterials.h"
-#include "ReGlossy.h"
-#include "textures/ReColorMath.h"
-
-#include "ReMix.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
 #include <QPair>
+
 #include "reality_lib_export.h"
+#include "ReGlossy.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h"
+#include "textures/ReColorMath.h"
+#include "textures/ReConstant.h"
+
+namespace boost {
+  class any;
+}
+
+namespace Reality {
+  class ReMaterial;
+}
+
+
+#define RE_GLOSSINESS_MAX_LIMIT 10000.0f
 
 namespace Reality {
 

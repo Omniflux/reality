@@ -6,14 +6,10 @@
 #ifndef RE_MIRROR_EDITOR_H
 #define RE_MIRROR_EDITOR_H
 
-#include <QDebug>
-#include <QWidget>
-#include "ReMirror.h"
-
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meMirror.h"
-#include "ReTextureEditorAdapter.h"
+
 
 using namespace Reality;
 

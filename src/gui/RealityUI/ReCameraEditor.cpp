@@ -5,15 +5,15 @@
  * Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "ReCameraEditor.h"
+
 #include <QJson/Parser>
 
-#include "ReCameraEditor.h"
+#include "RealityBase.h"
+#include "ReCamera.h"
 #include "ReLogger.h"
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-
-
-  #include "ReSceneData.h"
-  #include "RealityBase.h"  
 
 
 #define RL_COL_NAME     0

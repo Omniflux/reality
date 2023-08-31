@@ -6,12 +6,11 @@
 #ifndef RE_SURFACE_INTEGRATOR
 #define RE_SURFACE_INTEGRATOR
 
-#include <QString>
 #include <QVariantMap>
-#include <QSharedPointer> 
-#include "ReDefs.h"
-#include "ReLogger.h"
+
 #include "reality_lib_export.h"
+#include "ReDefs.h"
+
 
 namespace Reality {
  

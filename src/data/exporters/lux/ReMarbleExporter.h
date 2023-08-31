@@ -6,9 +6,11 @@
 #ifndef LUX_MARBLE_TEXTURE_EXPORTER_H
 #define LUX_MARBLE_TEXTURE_EXPORTER_H
 
-#include "textures/ReMarble.h"
-#include "ReLuxTextureExporter.h"
 #include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
+#include "ReTexture.h"
+#include "textures/ReMarble.h"
+
 
 namespace Reality {
 

@@ -480,12 +480,12 @@
   <customwidget>
    <class>ReColorPicker</class>
    <extends>QWidget</extends>
-   <header>ReColorPicker.h</header>
+   <header>RealityUI/ReColorPicker.h</header>
   </customwidget>
   <customwidget>
    <class>ReSlider</class>
    <extends>QWidget</extends>
-   <header>ReSlider.h</header>
+   <header>RealityUI/ReSlider.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReGlassEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReGlassEditor.h"
 
 

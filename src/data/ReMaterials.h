@@ -7,13 +7,16 @@
 #ifndef REMATERIALS_H
 #define REMATERIALS_H
 
-#include <QTextStream>
 #include "reality_lib_export.h"
 
-#include "ReDefs.h"
-// #include "ReVolumes.h"
+class QDataStream;
+class QString;
 
-#include "ReMaterial.h"
+namespace Reality {
+  class ReGeometryObject;
+  class ReMaterial;
+  enum ReMaterialType;
+}
 
 namespace Reality {
 

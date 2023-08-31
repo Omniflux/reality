@@ -8,10 +8,10 @@
 
 #include <QVariantMap>
 
-#include "ReTexture.h"  
+#include "ReTexture.h"
+
 
 namespace Reality {
-
 
 /**
  * Converts a node from the the host importer to a ReTexture

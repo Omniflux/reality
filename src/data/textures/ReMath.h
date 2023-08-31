@@ -7,10 +7,10 @@
 #ifndef REMATH_H
 #define REMATH_H
 
-#include "Re2DTexture.h"
-#include "ReLogger.h"
-#include "textures/ReComplexTexture.h"  
 #include "reality_lib_export.h"
+#include "textures/Re2DTexture.h"
+#include "textures/ReComplexTexture.h"
+
 
 // Name of the channels used to store the sub-textures
 // The MT prefix stands for Math Texture

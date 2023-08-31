@@ -7,8 +7,9 @@
 #define RECONSTANT_H
 
 #include "textures/ReConstant.h"
-#include "textures/ReColorMath.h"
+
 #include "ReTools.h"
+#include "textures/ReColorMath.h"
 
 namespace Reality {
 

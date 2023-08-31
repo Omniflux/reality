@@ -8,14 +8,24 @@
 
 #ifndef REGEOMETRY_OBJECT_H
 #define REGEOMETRY_OBJECT_H
-  
-#include "ReDefs.h"
-#include "ReMaterials.h"
-#include "ReLightMaterial.h"
-#include "ReGlossy.h"
-#include "textures/ReColorMath.h"
-#include "textures/ReMix.h"
+
+#include <QHash>
+#include <QSharedPointer>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReDefs.h"
+#include "ReLightMaterial.h"
+#include "ReLogger.h"
+
+namespace Reality {
+  class Glossy;
+  class ReMaterial;
+  class ReTexture;
+  typedef QSharedPointer<ReMaterial> ReMaterialPtr;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
+
 
 //! Specular strength needs to be corrected when converting from Poser or 
 //! Studio. The following constant specifies the factor of correction.

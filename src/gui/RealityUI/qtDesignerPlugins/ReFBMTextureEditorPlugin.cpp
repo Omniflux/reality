@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReFBMTextureEditor.h"
 #include "ReFBMTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReFBMTextureEditor.h"
 
 
 ReFBMTextureEditorPlugin::ReFBMTextureEditorPlugin(QObject* parent) : QObject(parent) {}

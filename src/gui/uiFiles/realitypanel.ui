@@ -1817,37 +1817,37 @@
   <customwidget>
    <class>ReAlphaChannelEditor</class>
    <extends>QWidget</extends>
-   <header>ReAlphaChannelEditor.h</header>
+   <header>RealityUI/MaterialEditors/ReAlphaChannelEditor.h</header>
   </customwidget>
   <customwidget>
    <class>ReCameraEditor</class>
    <extends>QWidget</extends>
-   <header>ReCameraEditor.h</header>
+   <header>RealityUI/ReCameraEditor.h</header>
   </customwidget>
   <customwidget>
    <class>ReMatVolumesEditor</class>
    <extends>QWidget</extends>
-   <header>ReMatVolumesEditor.h</header>
+   <header>RealityUI/MaterialEditors/ReMatVolumesEditor.h</header>
   </customwidget>
   <customwidget>
    <class>ReModifiers</class>
    <extends>QWidget</extends>
-   <header>ReModifiers.h</header>
+   <header>RealityUI/MaterialEditors/ReModifiers.h</header>
   </customwidget>
   <customwidget>
    <class>ReOutputOptions</class>
    <extends>QWidget</extends>
-   <header>ReOutputOptions.h</header>
+   <header>RealityUI/ReOutputOptions.h</header>
   </customwidget>
   <customwidget>
    <class>ReTextureEditor</class>
    <extends>QWidget</extends>
-   <header>ReTextureEditor.h</header>
+   <header>RealityUI/ReTextureEditor.h</header>
   </customwidget>
   <customwidget>
    <class>ReVolumesEditor</class>
    <extends>QWidget</extends>
-   <header>ReVolumesEditor.h</header>
+   <header>RealityUI/MaterialEditors/ReVolumesEditor.h</header>
   </customwidget>
  </customwidgets>
  <resources>

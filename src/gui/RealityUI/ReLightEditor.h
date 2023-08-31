@@ -6,13 +6,18 @@
 #ifndef RELIGHT_EDITOR_H
 #define RELIGHT_EDITOR_H
 
-#include <QtCore>
 #include <QSharedPointer>
-#include <QIcon>
-#include "ReLight.h"
-#include "ReTextureEditor.h"
+#include <QVariant>
+#include <QWidget>
 
 #include "ui_reLightEditor.h"
+
+
+namespace Reality {
+  class ReLight;
+  typedef QSharedPointer<ReLight> ReLightPtr;
+}
+
 
 using namespace Reality;
 

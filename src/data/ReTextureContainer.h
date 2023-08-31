@@ -6,9 +6,11 @@
 #ifndef RE_TEXTURE_CONTAINER_H
 #define RE_TEXTURE_CONTAINER_H
 
-#include <QtCore>
-#include "Retexture.h"
 #include "reality_lib_export.h"
+#include "Retexture.h"
+
+class QString;
+
 
 namespace Reality {
 

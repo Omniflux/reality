@@ -8,6 +8,7 @@
 
 #include <QtDesigner/QDesignerCustomWidgetInterface>
 
+
 class ReImageMapTextureEditorPlugin : public QObject, public QDesignerCustomWidgetInterface {
   Q_OBJECT
   Q_INTERFACES(QDesignerCustomWidgetInterface)

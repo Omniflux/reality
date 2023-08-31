@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReMixTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReMixTextureEditor.h"
 
 

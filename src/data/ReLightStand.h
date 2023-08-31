@@ -6,8 +6,10 @@
 #ifndef RELIGHTSTAND_H
 #define RELIGHTSTAND_H
 
-#include "ReLight.h"
 #include "reality_lib_export.h"
+
+#include "ReLight.h"
+
 
 namespace Reality {
 

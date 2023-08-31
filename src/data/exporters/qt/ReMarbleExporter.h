@@ -7,10 +7,13 @@
 #ifndef QT_MARBLE_EXPORTER_H
 #define QT_MARBLE_EXPORTER_H
 
-#include "ReProceduralNoiseExporter.h"
-#include "textures/ReMarble.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseExporter.h"
+#include "ReTexture.h"
+#include "textures/ReMarble.h"
+
 
 namespace Reality {
 

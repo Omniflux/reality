@@ -6,9 +6,16 @@
 #ifndef RE_GRAYSCALE_TEXTURE_EDITO_H
 #define RE_GRAYSCALE_TEXTURE_EDITO_H
 
-#include "ReAbstractTextureEditor.h"
-#include "textures/ReGrayscale.h"
+#include "ReMaterial.h"
+#include "ReTextureChannelDataModel.h"
+#include "RealityUI/ReAbstractTextureEditor.h"
 #include "ui_teGrayscale.h"
+
+namespace Reality {
+  enum ReTextureType;
+  enum RGBChannel;
+}
+
 
 using namespace Reality;
 

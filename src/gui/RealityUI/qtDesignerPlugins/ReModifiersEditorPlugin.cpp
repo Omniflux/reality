@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReModifiersEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReModifiers.h"
 
 

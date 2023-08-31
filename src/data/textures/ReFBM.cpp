@@ -3,8 +3,8 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReFBM.h"
-#include "ReTools.h"
+#include "textures/ReFBM.h"
+
 
 namespace Reality {
 

@@ -5,8 +5,10 @@
  */
 
 #include "ReWater.h"
-#include "ReTools.h"
+
+#include "textures/ReConstant.h"
 #include "textures/ReProceduralNoise.h"
+
 
 #define WATER_DM_STRENGTH_CLAMP 10.0f
 #define WATER_NOISE_SIZE        0.25

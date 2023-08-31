@@ -6,11 +6,9 @@
 #ifndef RE_TIMED_EDITOR_H
 #define RE_TIMED_EDITOR_H
 
-#include <QObject>
+#include <QHash>
 #include <QTimer>
-#include <QtCore>
 
-#include "ReLogger.h"
 
 namespace Reality {
 

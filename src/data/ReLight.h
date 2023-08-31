@@ -6,13 +6,11 @@
 #ifndef RE_LIGHT_H
 #define RE_LIGHT_H
 
-#include <QtCore>
-#include <QObject>
-#include <QColor>
-#include "ReMatrix.h"
-#include "ReTexture.h"
-#include "ReTextureContainer.h" 
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+#include "ReMatrix.h"
+
 
 namespace Reality {
 

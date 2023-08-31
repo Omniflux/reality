@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReImageMapTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReImageMapTextureEditor.h"
 
 

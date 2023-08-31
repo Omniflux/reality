@@ -6,9 +6,16 @@
 #ifndef LUX_IMAGEMAP_TEXTURE_EXPORTER_H
 #define LUX_IMAGEMAP_TEXTURE_EXPORTER_H
 
-#include "ReTexture.h"
-#include "ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
+
+namespace Reality {
+  class ReTexture;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
+
 
 namespace Reality {
 

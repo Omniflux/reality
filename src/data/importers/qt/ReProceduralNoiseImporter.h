@@ -6,8 +6,11 @@
 #ifndef QT_PROCEDURALNOISE_IMPORTER_H
 #define QT_PROCEDURALNOISE_IMPORTER_H
 
-#include "textures/ReProceduralNoise.h"
+#include <QVariantMap>
+
 #include "ReQtTextureImporter.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

@@ -4,7 +4,9 @@
 */
 
 #include "ReWaterEditor.h"
-#include "textures/ReDistortedNoise.h"
+
+#include "ReWater.h"
+
 
 ReWaterEditor::ReWaterEditor( QWidget* parent ) : ReMaterialEditor(parent) {
   setupUi(this);

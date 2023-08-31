@@ -7,9 +7,10 @@
 #ifndef RE_LUX_CPU_RENDERER_H
 #define RE_LUX_CPU_RENDERER_H
 
-#include <QtCore>
-#include "ReDefs.h"
+#include <QVariant>
+
 #include "exporters/ReLuxRendererConfig.h"
+
 
 /**
  * Class that defines the default parameters that we use when

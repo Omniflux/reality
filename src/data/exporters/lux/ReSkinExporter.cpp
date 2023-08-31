@@ -4,10 +4,14 @@
 */
 
 #include "ReSkinExporter.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReMix.h"
-#include "textures/ReMath.h"
+
 #include "ReLuxTextureExporterfactory.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "textures/ReImageMap.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
+
 
 using namespace Reality;
 

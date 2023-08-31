@@ -5,6 +5,9 @@
 
 #include "ReGlossyExporter.h"
 
+#include "ReGlossy.h"
+
+
 namespace Reality {
 
 void ReGlossyLuxcoreExporter::exportKs( QString& ksTextures, QString& ksValue ) {

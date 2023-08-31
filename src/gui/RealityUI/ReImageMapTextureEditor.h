@@ -8,13 +8,16 @@
 #ifndef RE_IMAGEMAP_TEXTURE_EDITOR_H
 #define RE_IMAGEMAP_TEXTURE_EDITOR_H
 
-#include "textures/ReImageMap.h"
-#include "ReAbstractTextureEditor.h"
-#include "ui_teImageMap.h"
+#include <QUndoStack>
+
+#include "ReTextureChannelDataModel.h"
 #include "actions/ReTextureEditCommands.h"
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "textures/ReImageMap.h"
+#include "ui_teImageMap.h"
 
 #ifndef QT_CUSTOM_WIDGET
-  #include "RealityBase.h"
+#include "RealityBase.h"
 #endif
 
 

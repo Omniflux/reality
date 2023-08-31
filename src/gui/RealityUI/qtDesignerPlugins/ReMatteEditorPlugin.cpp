@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReMatteEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReMatteEditor.h"
 
 

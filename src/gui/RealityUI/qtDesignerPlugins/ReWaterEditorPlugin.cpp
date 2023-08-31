@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReWaterEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReWaterEditor.h"
 
 

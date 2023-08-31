@@ -6,11 +6,17 @@
 #ifndef RECOMPLEX_TEXTURE_H
 #define RECOMPLEX_TEXTURE_H
 
-#include "ReTexture.h"
-#include "ReTextureContainer.h"
 #include <QSharedPointer>
-#include <QDataStream>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+
+class QDataStream;
+
+namespace Reality {
+  class ReTextureContainer;
+}
+
 
 namespace Reality {
 

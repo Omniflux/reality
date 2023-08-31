@@ -5,17 +5,26 @@
  file on disk.
  The log file location is set to be in the user's Documents folder.
  */
-#include <QDesktopServices>
-#include <QJson/Parser>
 
-#include "ReVersion.h"
 #include "RealityBase.h"
+
+#ifdef WIN32
+#include <Windows.h>
+#elif defined(__APPLE__)
+#include <dlfcn.h>
+#endif
+
+#include <QDir>
+#include <QSettings>
+#include <QUndoStack>
+
+#include "ReAcsel.h"
 #include "ReIPC.h"
+#include "ReLogger.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-#include "RealityRunner.h"
-#include "ReLogger.h"
-#include "ReAcsel.h"
+#include "ReVersion.h"
+
 
 using namespace Reality;
 
@@ -39,8 +48,6 @@ QString RealityLibPath;
 
 #ifdef WIN32 
 
-#include <windows.h>
-
 // From: http://www.codeguru.com/cpp/w-p/dll/tips/article.php/c3635/Tip-Detecting-a-HMODULEHINSTANCE-Handle-Within-the-Module-Youre-Running-In.htm
 #if _MSC_VER >= 1300    // for VC 7.0
   // from ATL 7.0 sources
@@ -61,8 +68,6 @@ void initLibraryPath() {
 }
 
 #elif defined(__APPLE__)
-
-#include <dlfcn.h>
 
 void initLibraryPath() {
   Dl_info dl_info;

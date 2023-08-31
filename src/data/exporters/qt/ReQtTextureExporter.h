@@ -7,9 +7,13 @@
 #ifndef QT_TEXTURE_EXPORTER_H
 #define QT_TEXTURE_EXPORTER_H
 
+#include <QSharedPointer>
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
 #include "textures/Re2DTexture.h"
 #include "textures/ReComplexTexture.h"
-#include "reality_lib_export.h"
+
 
 /**
  * Base class for all Qt texture exporters. It defines a series of 

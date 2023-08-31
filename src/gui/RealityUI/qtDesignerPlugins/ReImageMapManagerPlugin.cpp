@@ -2,8 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReImageMapManagerPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReImageMapManager.h"
 
 
 ReImageMapManagerPlugin::ReImageMapManagerPlugin(QObject* parent) : QObject(parent) {

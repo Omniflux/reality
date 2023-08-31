@@ -6,8 +6,9 @@
 #ifndef RE_QT_SI_EXPORTER_FACTORY_H
 #define RE_QT_SI_EXPORTER_FACTORY_H
 
-#include "ReQtSIExporter.h"
 #include "reality_lib_export.h"
+#include "ReQtSIExporter.h"
+
 
 namespace Reality {
 

@@ -1,7 +1,6 @@
 
-#include "ReSlider.h"
-#include <QColorDialog>
-#include <QPainter>
+#include "RealityUI/ReSlider.h"
+
 
 ReSlider::ReSlider( QWidget* parent, const QString newLabel ) : QWidget(parent) {
   setupUi(this);

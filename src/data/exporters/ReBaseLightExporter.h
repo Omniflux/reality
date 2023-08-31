@@ -6,8 +6,11 @@
 #ifndef RE_BASE_LIGHT_EXPORTER_H
 #define RE_BASE_LIGHT_EXPORTER_H
 
-#include "ReLight.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReLight.h"
+
 
 namespace Reality {
 

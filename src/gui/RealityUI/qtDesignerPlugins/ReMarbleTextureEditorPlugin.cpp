@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReMarbleTextureEditor.h"
 #include "ReMarbleTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReMarbleTextureEditor.h"
 
 
 ReMarbleTextureEditorPlugin::ReMarbleTextureEditorPlugin(QObject* parent) : QObject(parent) {}

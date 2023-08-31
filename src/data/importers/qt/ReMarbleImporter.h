@@ -6,10 +6,12 @@
 #ifndef QT_MARBLE_IMPORTER_H
 #define QT_MARBLE_IMPORTER_H
 
-#include "textures/ReMarble.h"
-#include "ReQtTextureImporter.h"
-#include "ReProceduralNoiseImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseImporter.h"
+#include "textures/ReMarble.h"
+
 
 namespace Reality {
 

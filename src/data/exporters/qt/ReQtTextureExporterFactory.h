@@ -8,11 +8,15 @@
 #define RE_QT_TEX_EXPORTER_FACTORY_H
 
 #include <QHash>
-#include <QSharedPointer>
 
-#include "ReTexture.h"
-#include "exporters/qt/ReQtTextureExporter.h"
 #include "reality_lib_export.h"
+#include "exporters/qt/ReQtTextureExporter.h"
+
+namespace Reality {
+  class ReTexture;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
+
 
 namespace Reality {
 

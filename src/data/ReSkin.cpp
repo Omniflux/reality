@@ -4,10 +4,11 @@
 */
 
 #include "ReSkin.h"
-#include "ReTools.h"
-#include "ReSceneData.h"  
+
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 #include "ReTextureCreator.h"
+
 
 #if defined(_MSC_VER)
   // Disable endless warning about truncation with VC++

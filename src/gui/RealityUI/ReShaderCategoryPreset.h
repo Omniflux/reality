@@ -7,9 +7,11 @@
 #ifndef SHADER_CAT_PRESET_H
 #define SHADER_CAT_PRESET_H
 
-#include "RePresetList.h"
-#include "ReAcsel.h"
 #include <QSharedPointer>
+
+#include "ReAcsel.h"
+#include "RePresetList.h"
+
 
 namespace Reality {
 

@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReBricksTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReBricksTextureEditor.h"
 
 

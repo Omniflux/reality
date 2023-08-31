@@ -7,17 +7,16 @@
 #ifndef REALITYBASE_H
 #define REALITYBASE_H
 
-#include <QtCore>
+#include <QSharedPointer>
 #include <QStack>
-#include <QSettings>
-#include <QUndoStack>
-#include <qglobal.h>
 
-#include "ReDefs.h"
-#include "ReLuxRunner.h"
-// #include "LuxApi.h"
 #include "reality_lib_export.h"
-  
+#include "ReDefs.h"
+
+class QSettings;
+class QUndoStack;
+
+
 namespace Reality {
 
 // Store information about Lux, for execution and communication

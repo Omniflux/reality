@@ -7,12 +7,18 @@
 #ifndef RE_MATH_TEXTURE_EDITOR_H
 #define RE_MATH_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 
-#include "ReTexture.h" 
+#include "RealityUI/ReAbstractTextureEditor.h"
 #include "ui_teMath.h"
-#include "ReAbstractTextureEditor.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReTextureEditorAdapter.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  class ReTextureEditorAdapter;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+  typedef QSharedPointer<ReTextureEditorAdapter> ReTextureEditorAdapterPtr;
+}
 
 
 using namespace Reality;

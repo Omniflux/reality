@@ -8,14 +8,16 @@
 
 #include <QColor>
 
-#include "ReTexture.h"
-#include "textures/ReColorMath.h"
-#include "ReLuxTextureExporter.h"
-#include "ReTools.h"
-#include "ReSceneData.h"
-#include "ReLogger.h"
-#include "exporters/lux/ReLuxTextureExporterFactory.h"
 #include "reality_lib_export.h"
+#include "ReLogger.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReTexture.h"
+#include "ReTools.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h"
+#include "textures/ReColorMath.h"
+
 
 namespace Reality {
 

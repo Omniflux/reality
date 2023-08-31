@@ -6,10 +6,12 @@
 #ifndef RE_REALITY_RUNNER_H
 #define RE_REALITY_RUNNER_H
 
-#include <QProcess>
 #include <QSharedPointer>
-#include "ReIPC.h"
+
 #include "reality_lib_export.h"
+
+class QProcess;
+
 
 #define REALITY_MAC "Reality.app/Contents/MacOS/Reality"
 #define REALITY_W   "Reality.exe"

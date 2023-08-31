@@ -6,8 +6,9 @@
 #ifndef RE_WOOD_H
 #define RE_WOOD_H
 
-#include "ReProceduralNoise.h"
 #include "reality_lib_export.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

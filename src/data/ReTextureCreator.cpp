@@ -4,25 +4,25 @@
 */
 
 #include "ReTextureCreator.h"
-#include "textures/ReMix.h"
+
+#include "importers/qt/ReQtTextureImporter.h"
+#include "importers/qt/ReQtTextureImporterFactory.h"
+#include "textures/ReBand.h"
+#include "textures/ReBricks.h"
+#include "textures/ReCheckers.h"
+#include "textures/ReClouds.h"
+#include "textures/ReColorMath.h"
+#include "textures/ReDistortedNoise.h"
+#include "textures/ReFBM.h"
+#include "textures/ReFresnelColor.h"
 #include "textures/ReGrayscale.h"
 #include "textures/ReImageMap.h"
-#include "textures/ReMath.h"
-#include "textures/ReColorMath.h"
-#include "textures/ReFresnelColor.h"
-#include "textures/ReBand.h"
-#include "textures/ReClouds.h"
-#include "textures/ReMarble.h"
-#include "textures/ReWood.h"
-#include "textures/ReDistortedNoise.h"
-#include "textures/ReCheckers.h"
-#include "textures/ReFBM.h"
 #include "textures/ReInvertMap.h"
-#include "textures/ReBricks.h"
-#include "importers/qt/ReQtTextureImporterFactory.h"
+#include "textures/ReMarble.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
+#include "textures/ReWood.h"
 
-#include "ReTextureContainer.h"
-#include "ReTools.h"
 
 namespace Reality {
 

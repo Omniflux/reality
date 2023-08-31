@@ -91,7 +91,7 @@
   <customwidget>
    <class>ReTextureAvatar</class>
    <extends>QWidget</extends>
-   <header>ReTextureAvatar.h</header>
+   <header>RealityUI/ReTextureAvatar.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

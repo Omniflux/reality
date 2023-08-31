@@ -7,13 +7,13 @@
 #ifndef RE_JSON_MAT_EXPORTER_FACTORY_H
 #define RE_JSON_MAT_EXPORTER_FACTORY_H
 
-#include <QHash>
-#include <QSharedPointer>
 #include <boost/any.hpp>
+#include <QSharedPointer>
  
-#include "ReMaterials.h"
-#include "ReJSONMaterialExporter.h"
 #include "reality_lib_export.h"
+#include "ReJSONMaterialExporter.h"
+#include "ReMaterial.h"
+
 
 namespace Reality {
 

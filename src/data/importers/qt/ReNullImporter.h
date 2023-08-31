@@ -1,9 +1,10 @@
 #ifndef RE_QT_NULL_IMPORTER_H
 #define RE_QT_NULL_IMPORTER_H
 
-#include "ReNull.h"
+#include <QVariantMap>
+
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
+
 
 /*
   Class: ReNullImporter

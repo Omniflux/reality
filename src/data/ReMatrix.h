@@ -5,13 +5,14 @@
 #ifndef RE_MATRIX_H
 #define RE_MATRIX_H
 
-#include <QVariant>
-#include <cmath>
 #include <cassert>
-#include "ReDefs.h"
-#include "ReTools.h"
+#include <cmath>
 #include <QDataStream>
+#include <QTextStream>
+
 #include "reality_lib_export.h"
+#include "ReDefs.h"
+
 
 namespace Reality {
 

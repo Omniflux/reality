@@ -7,9 +7,14 @@
 #ifndef RE_QT_GLOSSY_EXPORTER_H
 #define RE_QT_GLOSSY_EXPORTER_H
 
-#include "ReGlossy.h"
-#include "ReQtMaterialExporter.h"
+#include <boost/any.hpp>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReGlossy.h"
+#include "ReMaterial.h"
+#include "ReQtMaterialExporter.h"
+
 
 namespace Reality {
 

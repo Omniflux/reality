@@ -5,6 +5,7 @@
 
 
 #include "ReLuxMaterialExporterFactory.h"
+#include "ReMix.h"
 #include "ReMixExporter.h"
 
 using namespace Reality;

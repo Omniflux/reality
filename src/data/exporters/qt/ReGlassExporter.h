@@ -7,9 +7,14 @@
 #ifndef RE_JSON_GLASS_EXPORTER_H
 #define RE_JSON_GLASS_EXPORTER_H
 
-#include "ReGlass.h"
-#include "ReQtMaterialExporter.h"
+#include <boost/any.hpp>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReGlass.h"
+#include "ReMaterial.h"
+#include "ReQtMaterialExporter.h"
+
 
 namespace Reality {
 

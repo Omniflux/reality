@@ -1,9 +1,14 @@
 #ifndef RE_HAIR_LUX_EXPORTER_H
 #define RE_HAIR_LUX_EXPORTER_H
 
-#include "ReHair.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <boost/any.hpp>
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReHair.h"
+#include "ReMaterial.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
 
 /*
   Class: ReHairLuxExporter

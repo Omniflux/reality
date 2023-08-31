@@ -5,19 +5,20 @@
   This is the Reality executable launcher, aka the main() function
 */
 
-#include <QtGui/QApplication>
+#include <boost/program_options.hpp>
+#include <QDialog>
+#include <QFileInfo>
 #include <QProxyStyle>
-#include <QDate>
+#include <QSplashScreen>
 #include <QVariant>
 
-#include "ReVersion.h"
-#include "ReMainWindow.h"
 #include "ReAcsel.h"
-#include "ReSharedMemIPC.h"
+#include "ReLogger.h"
+#include "ReMainWindow.h"
+#include "ReTools.h"
+#include "ReVersion.h"
 #include "ui_reCommandLineOptions.h"
 
-#include "boost/program_options.hpp"
-#include <sstream>
 
 namespace bpo = boost::program_options;
 

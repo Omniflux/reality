@@ -6,8 +6,14 @@
 #ifndef RE_LUX_LIGHT_EXPORTER_H
 #define RE_LUX_LIGHT_EXPORTER_H
 
-#include "exporters/ReBaseLightExporter.h"
 #include "reality_lib_export.h"
+#include "exporters/ReBaseLightExporter.h"
+
+namespace Reality {
+  class ReLight;
+  typedef QSharedPointer<ReLight> ReLightPtr;
+}
+
 
 namespace Reality {
 

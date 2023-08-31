@@ -9,6 +9,7 @@
 
 #include <QtDesigner/QDesignerCustomWidgetInterface>
 
+
 /**
  * Plugin for using the ReBreadCrumbs with Qt Designer.
  */

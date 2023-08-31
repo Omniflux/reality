@@ -7,12 +7,16 @@
 #ifndef RE2DTEXTUREMAPPING_H
 #define RE2DTEXTUREMAPPING_H
 
-
 #include <QWidget>
 
-#include "textures/Re2DTexture.h"
-#include "ReTextureChannelDataModel.h"
 #include "ui_tex2DMapping.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 using namespace Reality;
 

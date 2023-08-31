@@ -7,13 +7,13 @@
  *
  */
 
-#include "RePresetSelector.h"
+#include "RealityUI/RePresetSelector.h"
+
 #include <QFile>
-#include <QDebug>
 #include <QJson/Parser>
 
-#include "ReDefs.h"
 #include "ReLogger.h"
+
 
 RePresetSelector::RePresetSelector( QWidget* parent ) : QDialog(parent) {
   setupUi(this);

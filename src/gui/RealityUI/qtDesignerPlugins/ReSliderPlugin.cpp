@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReSlider.h"
 #include "ReSliderPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReSlider.h"
 
 
 ReSliderPlugin::ReSliderPlugin(QObject* parent) : QObject(parent) {}

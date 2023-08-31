@@ -6,9 +6,11 @@
 #ifndef ReSLGSceneExporter_H
 #define ReSLGSceneExporter_H
 
-#include "ReDefs.h"
-#include "ReBaseSceneExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReBaseSceneExporter.h"
+
 
 namespace Reality {
 

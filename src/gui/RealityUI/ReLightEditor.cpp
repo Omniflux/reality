@@ -3,14 +3,15 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "RealityUI/ReLightEditor.h"
+
 #include <QFileDialog>
-#include "ReLightEditor.h"
+
+#include "ReLight.h"
 #include "ReSceneData.h"
-#include "RePresetSelector.h"
-#include "ReLightMaterial.h"
-#include "ReTextureCreator.h"
 #include "ReSceneDataGlobal.h"
-#include "RealityDataRelay.h"
+#include "RealityUI/RePresetSelector.h"
+
 
 #define RL_COL_NAME     0
 #define RL_COL_TYPE     1

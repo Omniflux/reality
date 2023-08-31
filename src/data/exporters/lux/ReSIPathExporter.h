@@ -9,8 +9,11 @@
 #ifndef RE_LUX_SIPATH_EXPORTER_H
 #define RE_LUX_SIPATH_EXPORTER_H
 
-#include "ReSIExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReSIExporter.h"
+
 
 namespace Reality {
 

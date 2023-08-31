@@ -6,9 +6,14 @@
 #ifndef RE_QT_MIRROR_EXPORTER_H
 #define RE_QT_MIRROR_EXPORTER_H
 
+#include <boost/any.hpp>
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
+#include "ReLogger.h"
 #include "ReMirror.h"
 #include "ReQtMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 /*
   Class: ReMirrorExporter

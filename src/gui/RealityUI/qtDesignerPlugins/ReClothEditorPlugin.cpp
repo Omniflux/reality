@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReClothEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReClothEditor.h"
 
 

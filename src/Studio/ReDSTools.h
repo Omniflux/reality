@@ -7,8 +7,10 @@
 #ifndef ReDSTools_H
 #define ReDSTools_H
 
-#include "dznode.h"
+#include <dzmatrix3.h>
+
 #include "ReMatrix.h"
+
 
 namespace Reality {
 

@@ -6,22 +6,19 @@
 #ifndef RE_MARBLE_NOISE_TEXTURE_EDITOR_H
 #define RE_MARBLE_NOISE_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 
-#include <QKeyEvent>
-
-#include "textures/ReMarble.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"
-  
-
-  #include "RealityBase.h"
-  #include "ReMaterialPreview.h"
-
-
-
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "RealityUI/ReTimedEditor.h"
 #include "ui_teMarble.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReMaterialPreview;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 /*
  Class: ReMarbleTextureEditor

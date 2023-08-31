@@ -9,9 +9,13 @@
 #include <QHash>
 #include <QSharedPointer>
 
-#include "ReMaterials.h"
-#include "ReLuxcoreMaterialExporter.h"
 #include "reality_lib_export.h"
+#include "ReLuxcoreMaterialExporter.h"
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 namespace Reality {
 

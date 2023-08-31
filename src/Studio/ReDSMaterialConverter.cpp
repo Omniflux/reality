@@ -4,17 +4,21 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <boost/bind/bind.hpp>
-
-#include "ReTools.h"
 #include "ReDSMaterialConverter.h"
+
+#include <boost/bind/bind.hpp>
+#include <QColor>
+#include <dzboolproperty.h>
+#include <dzcolorproperty.h>
+#include <dzfloatproperty.h>
+#include <dzimageproperty.h>
+#include <dzmaterial.h>
+#include <dzstringproperty.h>
+
 #include "ReMaterialPropertyKeys.h"
 #include "ReNodeConverter.h"
+#include "ReTools.h"
 
-#include <QColor>
-#include "dzfloatproperty.h"
-#include "dzimageproperty.h"
-#include "dzstringproperty.h"
 
 namespace Reality {
   // Property names used by Studio

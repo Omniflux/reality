@@ -4,13 +4,12 @@
 */
 
 #include "ReMirror.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReTools.h"
+
 #include "ReTextureCreator.h"
+#include "textures/ReConstant.h"
 
-  
+
 namespace Reality {
-
 
 ReMirror::ReMirror( const QString name, const ReGeometryObject* parent ) : 
   DisplaceableMaterial(name, parent),

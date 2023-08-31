@@ -7,11 +7,11 @@
 #ifndef RE_LUX_OCL_RENDERER_H
 #define RE_LUX_OCL_RENDERER_H
 
-#include <QtCore>
-#include "ReDefs.h"
 #include "ReOpenCL.h" 
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 #include "exporters/ReLuxRendererConfig.h"
+
 
 using namespace Reality;
 

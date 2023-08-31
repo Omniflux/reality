@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReVelvetEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReVelvetEditor.h"
 
 

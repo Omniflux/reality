@@ -6,9 +6,12 @@
 #ifndef RESCENDATA_GLOBAL_H
 #define RESCENDATA_GLOBAL_H
 
-#include "ReDefs.h"
-#include "ReSceneData.h"
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReSceneData;
+}
+
 
 //! Access to the global ReSceneData pointer 
 extern "C" REALITY_LIB_EXPORT Reality::ReSceneData* RealitySceneData;

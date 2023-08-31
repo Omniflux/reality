@@ -6,12 +6,17 @@
 #ifndef RE_GLOSSY_LUXCORE_EXPORTER_H
 #define RE_GLOSSY_LUXCORE_EXPORTER_H
 
-#include "ReGlossy.h"
+#include <boost/any.hpp>
+#include <QString>
 
-// We simply re-use the Lux matte material. It is identical to what we need
-#include "exporters/lux/ReGlossyExporter.h"
-#include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
 #include "reality_lib_export.h"
+#include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
+
+namespace Reality {
+  class Glossy;
+  class ReMaterial;
+}
+
 
 /**
   Exports the Glossy material to Luxcore/SLG

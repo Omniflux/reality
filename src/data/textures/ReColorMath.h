@@ -6,9 +6,9 @@
 #ifndef RE_COLOR_MATH_H
 #define RE_COLOR_MATH_H
 
-#include "textures/ReMath.h"
-#include "textures/ReConstant.h"
-#include "textures/ReComplexTexture.h"  
+#include "textures/Re2DTexture.h"
+#include "textures/ReComplexTexture.h"
+
 
 namespace Reality {
 

@@ -6,8 +6,9 @@
 #ifndef RE_LUXCORE_MATERIAL_EXPORTER_H
 #define RE_LUXCORE_MATERIAL_EXPORTER_H
 
-#include "exporters/lux/ReLuxMaterialExporter.h"
 #include "reality_lib_export.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
 
 namespace Reality {
 

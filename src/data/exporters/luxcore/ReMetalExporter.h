@@ -6,11 +6,10 @@
 #ifndef RE_METAL_LUXCORE_EXPORTER_H
 #define RE_METAL_LUXCORE_EXPORTER_H
 
-#include <QDesktopServices>
-#include "ReMetal.h"
-#include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
-#include "ReSceneResources.h"
 #include "reality_lib_export.h"
+#include "ReMetal.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
 
 /**
   Specialized exporter of the Metal material for Luxcore renderer

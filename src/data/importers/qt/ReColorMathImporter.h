@@ -6,9 +6,12 @@
 #ifndef QT_COLORMATH_IMPORTER_H
 #define QT_COLORMATH_IMPORTER_H
 
-#include "textures/ReColorMath.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReColorMath.h"
+
 
 namespace Reality {
 

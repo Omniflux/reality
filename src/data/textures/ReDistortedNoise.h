@@ -6,8 +6,8 @@
 #ifndef RE_DISTORTED_NOISE_H
 #define RE_DISTORTED_NOISE_H
 
-#include "ReTexture.h"
-#include "ReProceduralNoise.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

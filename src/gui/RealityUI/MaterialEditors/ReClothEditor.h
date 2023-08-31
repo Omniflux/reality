@@ -6,13 +6,10 @@
 #ifndef RE_CLOTH_EDITOR_H
 #define RE_CLOTH_EDITOR_H
 
-#include <QWidget>
-#include "ReCloth.h"
-
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meCloth.h"
-#include "ReTextureEditorAdapter.h"
+
 
 using namespace Reality;
 

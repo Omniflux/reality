@@ -7,16 +7,16 @@
 #ifndef REOUTPUT_OPTIONS_H
 #define REOUTPUT_OPTIONS_H
 
-#include <QtCore>
 #include <QSettings>
-#include "ui_reOutputOptions.h"
-#include "RealityBase.h"
-#include "ReSceneData.h"
 
-#include "ReOutputUpdater.h"
-#include "ReSurfaceIntegrator.h"
-#include "RePresetList.h"
 #include "ReDefs.h"
+#include "RePresetList.h"
+#include "RealityUI/ReOutputUpdater.h"
+#include "ui_reOutputOptions.h"
+
+namespace Reality {
+  typedef QSharedPointer<QSettings> ReConfigurationPtr;
+}
 
 using namespace Reality;
 

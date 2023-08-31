@@ -8,8 +8,9 @@
 #define DS_MAT_COLLECTION_H
 
 #include <QHash>
+
 #include "ReMaterial.h"
-#include "ReLogger.h"
+
 
 namespace Reality {
 

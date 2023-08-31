@@ -1,4 +1,5 @@
 #include "LuxApi.h"
+
 #include "ReLogger.h"
 
 luxInitFunc              luxInit              = NULL;

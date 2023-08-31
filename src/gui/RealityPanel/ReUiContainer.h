@@ -7,7 +7,9 @@
 #ifndef RE_UI_CONTAINER_H
 #define RE_UI_CONTAINER_H
 
-#include <QAction>
+class QAction;
+class QString;
+
 
 namespace Reality {
 

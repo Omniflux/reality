@@ -3,22 +3,23 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QColor>
 #include "ReNodeConverter.h"
-#include "textures/ReMix.h"
+
+#include "ReLogger.h"
+#include "ReTools.h"
 #include "textures/ReBand.h"
 #include "textures/ReClouds.h"
-#include "textures/ReGrayscale.h"
-#include "textures/ReConstant.h"
-#include "textures/ReImageMap.h"
 #include "textures/ReColorMath.h"
-#include "textures/ReWood.h"
-#include "textures/ReFresnelColor.h"
+#include "textures/ReConstant.h"
 #include "textures/ReDistortedNoise.h"
 #include "textures/ReFBM.h"
+#include "textures/ReFresnelColor.h"
+#include "textures/ReGrayscale.h"
+#include "textures/ReImageMap.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
+#include "textures/ReWood.h"
 
-#include "ReTools.h"
-#include "ReLogger.h"
 
 using namespace Reality;
 

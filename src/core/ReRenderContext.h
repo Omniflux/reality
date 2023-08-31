@@ -7,8 +7,11 @@
 #ifndef RE_RENDER_CONTEXT_H
 #define RE_RENDER_CONTEXT_H
 
-#include "ReDefs.h"
 #include <QStringList>
+
+#include "ReDefs.h"
+
+
 /**
  * This class provides information about the render process. It's meant to 
  * collect and provide information that can be useful to optimize the rendering

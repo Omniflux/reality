@@ -7,14 +7,15 @@
 #ifndef RE_3DMAPPING_EDITOR_H
 #define RE_3DMAPPING_EDITOR_H
 
-
-#include <QKeyEvent>
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"
-  
+#include "RealityUI/ReAbstractTextureEditor.h"
 #include "ui_te3DMapping.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 using namespace Reality;
 

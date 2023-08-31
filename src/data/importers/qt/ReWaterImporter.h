@@ -1,9 +1,12 @@
 #ifndef RE_QT_WATER_IMPORTER_H
 #define RE_QT_WATER_IMPORTER_H
 
-#include "ReWater.h"
+#include <QColor>
+#include <QVariantMap>
+
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
+#include "ReWater.h"
+
 
 /*
   Class: ReWaterImporter

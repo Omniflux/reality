@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../Re3DMappingEditor.h"
 #include "Re3DMappingEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../Re3DMappingEditor.h"
 
 
 Re3DMappingEditorPlugin::Re3DMappingEditorPlugin(QObject* parent) : QObject(parent) {}

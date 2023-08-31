@@ -9,9 +9,13 @@
 #include <QHash>
 #include <QSharedPointer>
 
-#include "ReMaterials.h"
-#include "ReQtMaterialExporter.h"
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReQtMaterialExporter;
+  typedef QSharedPointer<ReQtMaterialExporter> ReQtMaterialExporterPtr;
+}
 
 namespace Reality {
 
@@ -19,8 +23,6 @@ namespace Reality {
  * Factory that creates on-demand exporters for Qt Material exporters. Only exporters that are
  * actually requested during a run of Reality are created. This is a singleton factory.
  */
-
-typedef QSharedPointer<ReQtMaterialExporter> ReQtMaterialExporterPtr;
 
 class REALITY_LIB_EXPORT ReQtMaterialExporterFactory {
 private:

@@ -7,7 +7,10 @@
 #define RE_ACSEL_SHADER_SET_SELECTOR_H
 
 #include <QDialog>
+
 #include "ui_reShaderSetSelector.h"
+
+
 namespace Reality {
 
 /**

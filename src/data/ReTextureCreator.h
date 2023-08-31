@@ -6,11 +6,15 @@
 #ifndef TEXTURECREATOR_H
 #define TEXTURECREATOR_H
 
-#include "ReTexture.h"
-#include "ReTextureContainer.h"
-#include <QDataStream>
-#include <QTextStream>
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+
+class QDataStream;
+
+namespace Reality {
+  class ReTextureContainer;
+}
+
 
 namespace Reality {
 

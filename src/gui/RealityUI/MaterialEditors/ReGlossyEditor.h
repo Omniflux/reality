@@ -7,14 +7,10 @@
 #ifndef RE_GLOSSY_EDITOR_H
 #define RE_GLOSSY_EDITOR_H
 
-#include <QWidget>
-#include "ReMaterials.h"
-#include "ReGlossy.h"
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
-#include "ReTimedEditor.h"
-#include "ReTextureEditorAdapter.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meGlossy.h"
+
 
 /**
  This widget is used to edit a Glossy material.

@@ -6,13 +6,13 @@
 #ifndef LUX_FRESNEL_TEXTURE_EXPORTER_H
 #define LUX_FRESNEL_TEXTURE_EXPORTER_H
 
-#include "ReTools.h"
+#include "reality_lib_export.h"
 #include "ReTexture.h"
+#include "ReTools.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
 #include "textures/ReColorMath.h"
 #include "textures/ReFresnelColor.h"
 
-#include "ReLuxTextureExporter.h"
-#include "reality_lib_export.h"
 
 namespace Reality {
 

@@ -3,9 +3,12 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReTextureSelector.h"
-#include "ReTextureContainer.h"  
+#include "RealityUI/ReTextureSelector.h"
+
 #include <QTreeWidget>
+
+#include "ReTexture.h"
+#include "ReTextureContainer.h"
 
 #define TL_COL_NAME      0
 #define TL_COL_TYPE      1

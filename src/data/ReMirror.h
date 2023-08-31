@@ -6,9 +6,9 @@
 #ifndef REMIRROR_H
 #define REMIRROR_H
 
-#include "ReMaterial.h"
-#include "ReDisplaceableMaterial.h"
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 namespace Reality {
 

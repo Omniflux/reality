@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReGrayscaleTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReGrayscaleTextureEditor.h"
 
 

@@ -6,22 +6,18 @@
 #ifndef RE_FBM_TEXTURE_EDITOR_H
 #define RE_FBM_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 
-#include <QKeyEvent>
-
-#include "textures/ReFBM.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"
-  
-
-  #include "RealityBase.h"
-  #include "ReMaterialPreview.h"
-
-
-
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "RealityUI/ReTimedEditor.h"
 #include "ui_teFBM.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReMaterialPreview;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
 
 
 using namespace Reality;

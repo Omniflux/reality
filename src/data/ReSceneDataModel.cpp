@@ -4,7 +4,9 @@
 */
 
 #include "ReSceneDataModel.h"
-#include "ReDisplaceableMaterial.h"
+
+#include "ReSceneDataGlobal.h"
+
 
 namespace Reality {
 

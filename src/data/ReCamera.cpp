@@ -6,6 +6,9 @@
 
 #include "ReCamera.h"
 
+#include "RealityBase.h"
+
+
 using namespace Reality;
 
 double ReCamera::getPoserFOV( const uint frameWidth, 

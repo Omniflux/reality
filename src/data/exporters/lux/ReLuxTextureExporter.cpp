@@ -3,9 +3,12 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QtCore>
-#include "ReLuxTextureExporterFactory.h"  
 #include "ReLuxTextureExporter.h"
+
+#include "ReLuxTextureExporterFactory.h"
+#include "ReTexture.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

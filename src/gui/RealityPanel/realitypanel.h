@@ -7,28 +7,40 @@
 #ifndef REALITYPANEL_H
 #define REALITYPANEL_H
 
-#include <QWidget>
-#include <QDebug>
-#include <QSharedPointer>
 #include <QHash>
-#include <QSortFilterProxyModel>
-#include <QLibrary>
+#include <QVariantMap>
+#include <QWidget>
 
-#include "ReIPC.h"
-#include "ReUiContainer.h"
-#include "RealityDataRelay.h"
-#include "ReSceneDataModel.h"
-#include "ReTextureEditor.h"
-#include "ReTextureChannelDataModel.h"
+#include "ReTexture.h"
+#include "importers/qt/REQtMaterialImporter.h"
 #include "ui_realitypanel.h"
-#include "ReLightEditor.h"
-#include "zmq.hpp"
-#include "ReExportProgressDialog.h"
-#include "ReTextureEditorAdapter.h"
+
+class QItemSelection;
+class QMenu;
+class QModelIndex;
+class QSortFilterProxyModel;
+
+class ReExportProgressDialog;
+class ReLightEditor;
+class ReMaterialEditor;
+
+namespace Reality {
+  class ReGeometryObject;
+  class ReMaterial;
+  class ReMaterialPreview;
+  class ReSceneDataModel;
+  class ReTextureChannelDataModel;
+  class ReTextureEditorAdapter;
+  class ReUiContainer;
+  enum ReMaterialType;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+  typedef QSharedPointer<ReTextureEditorAdapter> ReTextureEditorAdapterPtr;
+}
 
 namespace Ui {
   class RealityPanel;
 }
+
 
 using namespace Reality;
 

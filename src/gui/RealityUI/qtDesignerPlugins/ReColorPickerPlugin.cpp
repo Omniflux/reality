@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReColorPicker.h"
 #include "ReColorPickerPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReColorPicker.h"
 
 
 ReColorPickerPlugin::ReColorPickerPlugin(QObject* parent) : QObject(parent) {}

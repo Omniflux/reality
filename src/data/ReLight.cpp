@@ -4,10 +4,13 @@
 */
 
 #include "ReLight.h"
-#include "ReTools.h"
-#include "ReTextureCreator.h"
+
+#include <QFileInfo>
+
 #include "RealityBase.h"
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+
 
 using namespace Reality;
 

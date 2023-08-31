@@ -8,20 +8,16 @@
 #endif
 
 #include "ReDSStorage.h"
-#include "ReLogger.h"
-#include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
+
+#include <boost/any.hpp>
+#include <dzscene.h>
+#include <idzjsonio.h>
+
 #include "Reality_DS.h"
+#include "ReLogger.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
 
-#include "dzapp.h"
-#include "dznode.h"
-#include "dzcontentmgr.h"
-#include "dzscene.h"
-#include "dzcustomdata.h"
-#include "dzsettings.h"
-#include "idzjsonio.h"
-
-#include <utility>
 
 namespace Reality {
 

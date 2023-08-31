@@ -3,16 +3,19 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QFileDialog>
-#include "ReTools.h"
-#include "RePresetList.h"
-#include "ReOutputOptions.h"
-#include "ReOpenCL.h"
-#include "ReLuxRunner.h"
-#include "ReSceneDataGlobal.h"
+#include "RealityUI/ReOutputOptions.h"
 
-#include "ReLuxRunner.h"
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QMessageBox>
+
+#include "RealityBase.h"
+#include "ReOpenCL.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReTools.h"
 #include "actions/ReOutputOptionsActions.h"
+
 
 ReOutputOptions::ReOutputOptions( QWidget* parent ) : QWidget(parent) {
   setupUi(this);

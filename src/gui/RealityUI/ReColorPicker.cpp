@@ -1,7 +1,7 @@
+#include "RealityUI/ReColorPicker.h"
 
-#include "ReColorPicker.h"
 #include <QColorDialog>
-#include <QPainter>
+#include <QPaintEvent>
 
 ReColorPicker::ReColorPicker( QWidget* parent ) : QWidget(parent) {
   setupUi(this);

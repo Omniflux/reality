@@ -3,10 +3,16 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
 */
 
-#include "ReSceneDataGlobal.h"
 #include "RePythonSceneExporter.h"
-#include "RePythonTools.h"
+
 #include <boost/python.hpp>
+#include <QVariantMap>
+
+#include "ReLogger.h"
+#include "RePythonTools.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+
 
 #ifdef __clang__
 // Avoid being harassed about missing switch cases and other thing.

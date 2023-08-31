@@ -7,14 +7,13 @@
 #define RE_LOGGER_H
 
 //! Logging facility
-#include <iostream>
-#include <fstream>
-#include <QDesktopServices>
-#include <QTime>
-#include <QFileInfo>
 
-#include "ReDefs.h"
+#include <QDateTime>
+#include <QDesktopServices>
+#include <QFile>
+
 #include "reality_lib_export.h"
+#include "ReDefs.h"
 
 // This define must be before including "cpplog.hpp"
 // it implements a custom format for the log. See the class definition below

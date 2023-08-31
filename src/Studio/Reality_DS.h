@@ -10,29 +10,22 @@
 
 #ifndef REALITY_FOR_STUDIO_H
 #define REALITY_FOR_STUDIO_H
-#include "zmq.hpp"
 
-#include <QLibrary>
-#include <QThread>
+#include <dz3dviewport.h>
+#include <dzapp.h>
+#include <dzmainwindow.h>
+#include <dzplugin.h>
+#include <dzviewport.h>
+#include <dzviewportmgr.h>
 
-#include "dzplugin.h"
-#include "dzpluginmgr.h"
-#include "dzcamera.h"
-#include "dzlight.h"
-#include "dzskeleton.h"
-#include "dzbasiccamera.h"
-#include "dzapp.h"
-#include "dzmainwindow.h"
-#include "dzviewportmgr.h"
-#include "dzviewport.h"
-#include "dz3dviewport.h"
-
-#include "ReLogger.h"
-#include "ReDAZStudioEvent.h"
 #include "ReDSMatCollection.h"
 #include "ReGUID.h"
+#include "ReLogger.h"
 
-#include <ctime>
+namespace Reality {
+  class ReStudioEvent;
+}
+
 
 #define REALITY_DS_LIBRARY_VERSION "0.6"
 

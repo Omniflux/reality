@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReGlossyEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReGlossyEditor.h"
 
 

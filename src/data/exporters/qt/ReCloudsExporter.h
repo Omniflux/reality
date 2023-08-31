@@ -7,10 +7,14 @@
 #ifndef QT_CLOUDS_EXPORTER_H
 #define QT_CLOUDS_EXPORTER_H
 
-#include "textures/ReClouds.h"
-#include "ReProceduralNoiseExporter.h"
 #include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseExporter.h"
+#include "ReQtTextureExporter.h"
+#include "ReTexture.h"
+#include "textures/ReClouds.h"
+
 
 namespace Reality {
 

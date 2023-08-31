@@ -1,8 +1,10 @@
 /**
  * The Reality texture manager.
  */
-#include <QObject>
-#include "ReBreadCrumbs.h"
+#include "RealityUI/ReBreadCrumbs.h"
+
+#include "ReTexture.h"
+
 
 #define RE_BREADCRUMB_SEP "|"
 

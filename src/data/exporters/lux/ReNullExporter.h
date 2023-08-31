@@ -6,9 +6,12 @@
 #ifndef RE_NULL_LUX_EXPORTER_H
 #define RE_NULL_LUX_EXPORTER_H
 
+#include <boost/any.hpp>
+
+#include "reality_lib_export.h"
+#include "ReMaterial.h"
 #include "ReNull.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
-#include "reality_lib_export.h"
 
 /*
   Class: ReNullLuxExporter

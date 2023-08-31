@@ -5,43 +5,52 @@
 */
 
 #include "realitypanel.h"
-#include <QMessageBox>
+
+#include <boost/any.hpp>
 #include <QFileDialog>
+#include <QInputDialog>
+#include <QMessageBox>
+#include <QSharedPointer>
+#include <QShortcut>
+#include <QSignalMapper>
+#include <QSortFilterProxyModel>
 #include <QJson/Parser>
 
-#include "ReDefs.h"
 #include "ReActionMgr.h"
-#include "ReSceneData.h"
-#include "ReSceneDataGlobal.h"
-#include "RealityDataRelay.h"
-#include "RealityBase.h"
-#include "ReLuxRunner.h"
-#include "zeromqTools.h"
-#include "ReClothEditor.h"
-#include "ReGlossyEditor.h"
-#include "ReMatteEditor.h"
-#include "ReMetalEditor.h"
-#include "ReMirrorEditor.h"
-#include "ReSkinEditor.h"
-#include "ReVelvetEditor.h"
-#include "ReGlassEditor.h"
-#include "ReWaterEditor.h"
-#include "ReAcsel.h"
-#include "ReAcselSave.h"
-#include "ReUniShaderSave.h"
-#include "ReAcselShaderSetSelector.h"
-#include "ReUniversalShaderSelector.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "exporters/json/ReJSONMaterialExporterFactory.h"
-#include "importers/qt/ReQtMaterialImporterFactory.h"
-#include "exporters/lux/ReVolumeExporter.h"
-#include "exporters/qt/ReVolumeExporter.h"
+#include "ReIPCCommands.h"
+#include "ReMaterialPreview.h"
+#include "ReSceneDataModel.h"
+#include "ReTools.h"
+#include "ReUiContainer.h"
 #include "actions/ReMaterialActions.h"
-#include "ui_reSyncMats.h"
-#include "actions/ReSetImageMapAction.h"
 #include "actions/ReUpdateHostTextureAction.h"
+#include "exporters/json/ReJSONMaterialExporterFactory.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "exporters/lux/ReVolumeExporter.h"
+#include "exporters/qt/ReQtMaterialExporterFactory.h"
+#include "exporters/qt/ReVolumeExporter.h"
+#include "importers/qt/ReQtMaterialImporterFactory.h"
+#include "RealityUI/ReAcselSave.h"
+#include "RealityUI/ReAcselShaderSetSelector.h"
+#include "RealityUI/ReExportProgressDialog.h"
+#include "RealityUI/ReLightEditor.h"
+#include "RealityUI/ReUniShaderSave.h"
+#include "RealityUI/ReUniversalShaderSelector.h"
+#include "RealityUI/MaterialEditors/ReClothEditor.h"
+#include "RealityUI/MaterialEditors/ReGlassEditor.h"
+#include "RealityUI/MaterialEditors/ReGlossyEditor.h"
+#include "RealityUI/MaterialEditors/ReMatteEditor.h"
+#include "RealityUI/MaterialEditors/ReMetalEditor.h"
+#include "RealityUI/MaterialEditors/ReMirrorEditor.h"
+#include "RealityUI/MaterialEditors/ReSkinEditor.h"
+#include "RealityUI/MaterialEditors/ReVelvetEditor.h"
+#include "RealityUI/MaterialEditors/ReWaterEditor.h"
+#include "ui_reSyncMats.h"
+
 
 #define RE_MAT_PREVIEW_ID "matPreview"
+
 
 // Constructor: RealityPanel
 RealityPanel::RealityPanel( QWidget *parent,                            

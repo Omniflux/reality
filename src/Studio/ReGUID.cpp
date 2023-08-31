@@ -3,13 +3,16 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
 */
 
-#include "ReDefs.h"
 #include "ReGUID.h"
-#include "ReLogger.h"
-#include "dzcustomdata.h"
-#include "dzsettings.h"
-#include "dzstringproperty.h"
+
 #include <QUuid>
+#include <dzcustomdata.h>
+#include <dznode.h>
+#include <dzsettings.h>
+#include <dzstringproperty.h>
+
+#include "ReLogger.h"
+
 
 namespace Reality {
 

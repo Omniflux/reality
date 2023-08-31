@@ -6,9 +6,11 @@
 #ifndef RE_PYTHON_SCENE_EXPORTER_H
 #define RE_PYTHON_SCENE_EXPORTER_H
 
-#include "exporters/ReBaseSceneExporter.h"
 #include <boost/any.hpp>
-  
+
+#include "exporters/ReBaseSceneExporter.h"
+
+
 namespace Reality {
 
 /**

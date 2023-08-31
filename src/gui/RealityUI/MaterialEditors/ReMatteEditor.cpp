@@ -3,7 +3,9 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "ReMatte.h"
 #include "ReMatteEditor.h"
+
 
 ReMatteEditor::ReMatteEditor( QWidget* parent ) : 
   ReMaterialEditor(parent) 

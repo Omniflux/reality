@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReMetalEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReMetalEditor.h"
 
 

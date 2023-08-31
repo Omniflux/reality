@@ -6,10 +6,16 @@
 #ifndef ReLuxSceneExporter_H
 #define ReLuxSceneExporter_H
 
-#include "ReDefs.h"  
-#include "ReBaseSceneExporter.h"
-#include "ReMatrix.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReBaseSceneExporter.h"
+#include "ReDefs.h"
+
+namespace Reality {
+  class ReMatrix;
+}
+
 
 namespace Reality {
 

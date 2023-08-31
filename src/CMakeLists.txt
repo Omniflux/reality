@@ -657,7 +657,7 @@ configure_file (Studio/Reality_DS.rc.in "${PROJECT_BINARY_DIR}/autogen/Reality_D
 # Configure Reality Widgets
 add_library (Reality_Widgets SHARED)
 target_compile_definitions (Reality_Widgets PRIVATE REALITY_LIB_STATIC_DEFINE $<$<PLATFORM_ID:Darwin>:QT_CUSTOM_WIDGET>)
-target_include_directories (Reality_Widgets PRIVATE core data gui gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors ${CMAKE_CURRENT_BINARY_DIR}/include)
+target_include_directories (Reality_Widgets PRIVATE core data gui ${CMAKE_CURRENT_BINARY_DIR}/include)
 target_link_libraries (Reality_Widgets PRIVATE Reality_Version)
 target_link_libraries (Reality_Widgets PRIVATE Boost::atomic OpenCL::OpenCL Qt4::QtGui qjson SQLiteCpp cppzmq-static)
 set_target_properties (Reality_Widgets PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)
@@ -754,7 +754,7 @@ target_sources (Reality_PY PRIVATE
 # Configure Reality executable
 add_executable (Reality_Executable WIN32) #MACOSX_BUNDLE
 target_compile_definitions (Reality_Executable PRIVATE HOMEPAGE_URL="${CMAKE_PROJECT_HOMEPAGE_URL}")
-target_include_directories (Reality_Executable PRIVATE gui gui/actions gui/RealityPanel gui/RealityUI gui/RealityUI/MaterialEditors)
+target_include_directories (Reality_Executable PRIVATE gui)
 target_link_libraries (Reality_Executable PRIVATE Reality_LIB)
 target_link_libraries (Reality_Executable PRIVATE Boost::program_options Qt4::QtWebKit)
 set_target_properties (Reality_Executable PROPERTIES AUTOUIC_SEARCH_PATHS gui/uiFiles)

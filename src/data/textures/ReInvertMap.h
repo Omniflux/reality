@@ -6,8 +6,9 @@
 #ifndef __RE_INVERTMAP_H__
 #define __RE_INVERTMAP_H__
 
-#include "Re2DTexture.h"
 #include "reality_lib_export.h"
+#include "textures/Re2DTexture.h"
+
 
 namespace Reality {
 

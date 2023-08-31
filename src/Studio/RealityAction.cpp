@@ -2,15 +2,15 @@
   Copyright © 2010-2011 Pret-A-3d
 **********************************************************************/
 
-#include "dzapp.h"
-#include "dzmainwindow.h"
-#include <QtGui/QMessageBox>
-#include <QDebug>
-#include <QSettings>
-
 #include "RealityAction.h"
-#include "ReLogger.h"
+
+#include <QFileInfo>
+#include <QSettings>
+#include <dzapp.h>
+
 #include "RealityRunner.h"
+#include "ReDefs.h"
+
 
 namespace Reality {
 

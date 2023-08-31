@@ -4,8 +4,10 @@
 */
 
 #include "ReVelvet.h"
-#include "ReTools.h"
+
 #include "ReTextureCreator.h"
+#include "textures/ReConstant.h"
+
 
 namespace Reality {
 

@@ -6,6 +6,9 @@
 
 #include "ReAlphaChannelEditor.h"
 
+#include "ReAlphaChannelMaterial.h"
+
+
 using namespace Reality;
 
 ReAlphaChannelEditor::ReAlphaChannelEditor( QWidget* parent ) :

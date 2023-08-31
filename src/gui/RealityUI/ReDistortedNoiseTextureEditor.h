@@ -6,22 +6,19 @@
 #ifndef RE_DISTORTED_NOISE_TEXTURE_EDITOR_H
 #define RE_DISTORTED_NOISE_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 
-#include <QKeyEvent>
-
-#include "textures/ReDistortedNoise.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"
-  
-
-  #include "RealityBase.h"
-  #include "ReMaterialPreview.h"
-
-
-
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "RealityUI/ReTimedEditor.h"
 #include "ui_teDistortedNoise.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReMaterialPreview;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 /*
  Class: ReDistortedNoiseTextureEditor

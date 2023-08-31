@@ -6,9 +6,10 @@
 #ifndef RESLIDER_H
 #define RESLIDER_H
 
-
 #include <QWidget>
+
 #include "ui_ReSlider.h"
+
 
 class ReSlider: public QWidget, public Ui::ReSlider {
   Q_OBJECT

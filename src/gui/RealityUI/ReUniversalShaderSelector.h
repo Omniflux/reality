@@ -6,9 +6,13 @@
 #ifndef RE_UNIVERSAL_SHADER_SELECTOR_H
 #define RE_UNIVERSAL_SHADER_SELECTOR_H
 
-#include <QDialog>
+#include "RealityUI/ReUniversalShaderWidget.h"
 #include "ui_reUniversalShaderSelector.h"
-#include "ReUniversalShaderWidget.h"
+
+namespace Reality {
+  class ReUniversalShaderWidget;
+}
+
 
 namespace Reality {
 

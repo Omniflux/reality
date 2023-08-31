@@ -1,16 +1,17 @@
 /**
  * The Reality texture manager.
  */
-#include <QObject>
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDesktopServices>
-#include "ReImageMapManager.h"
-#include "textures/ReImageMap.h"
-#include "RealityBase.h"
-#include "ReLogger.h"
+
+#include "RealityUI/ReImageMapManager.h"
+
+#include <QDir>
+#include <QFileInfo>
+#include <QProcess>
+
 #include "actions/ReSetImageMapAction.h"
- 
+#include "textures/ReImageMap.h"
+
+
 ReImageMapManager::ReImageMapManager(QWidget* parent) : QWidget(parent) {
   setupUi(this);
   setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);

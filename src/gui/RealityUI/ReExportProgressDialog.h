@@ -7,7 +7,9 @@
 #define RE_EXPORT_PROGRESS_DLG_H
 
 #include <QDialog>
+
 #include "ui_reExportProgress.h"
+
 
 class ReExportProgressDialog : public QDialog, public Ui::reExportProgress
 {

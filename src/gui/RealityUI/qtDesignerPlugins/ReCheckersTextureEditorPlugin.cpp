@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReCheckersTextureEditor.h"
 #include "ReCheckersTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReCheckersTextureEditor.h"
 
 
 ReCheckersTextureEditorPlugin::ReCheckersTextureEditorPlugin(QObject* parent) : QObject(parent) {}

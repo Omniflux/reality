@@ -6,14 +6,11 @@
  *
  */
 
-#include "ReDefs.h"
 #include "ReSceneResources.h"
-#include "ReLogger.h"
-#include <QFile>
-#include <QFileInfo>
-#include <QDir>
-#include <QtGui/QImageReader>
-#include <QtGui/QImageWriter>
+
+#include <QImageReader>
+#include <QImageWriter>
+
 
 namespace Reality {
 

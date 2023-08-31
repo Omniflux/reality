@@ -3,8 +3,10 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2013. All rights reserved.    
 */
 
-#include "ReUpdateNotification.h"
-#include <QtGui/QDesktopServices>
+#include "RealityUI/ReUpdateNotification.h"
+
+#include <QDesktopServices>
+
 
 ReUpdateNotification::ReUpdateNotification( QWidget* parent ) : QDialog(parent) {
   url = QString::fromUtf8(HOMEPAGE_URL);

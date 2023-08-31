@@ -10,6 +10,7 @@
 #include <boost/python.hpp>
 #include <QVariant>
 
+
 namespace python = boost::python;
 
 QString getQString(boost::python::object u);

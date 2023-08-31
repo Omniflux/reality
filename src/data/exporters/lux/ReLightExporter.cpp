@@ -3,16 +3,25 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QColor>
-#include "ReTools.h"
 #include "ReLightExporter.h"
-// #include "ReSceneData.h"
-#include "ReSceneDataGlobal.h"
+
+#include <QColor>
+#include <QSettings>
+#include <QStringBuilder>
+
 #include "RealityBase.h"
+#include "ReLight.h"
+#include "ReMatrix.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReSceneResources.h"
+#include "ReTexture.h"
+#include "ReTools.h"
+#include "exporters/ReLuxSceneExporter.h"
 #include "exporters/lux/ReLuxTextureExporter.h"
 #include "exporters/lux/ReLuxTextureExporterFactory.h"
-#include "exporters/ReLuxSceneExporter.h"
-#include "ReSceneResources.h" 
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

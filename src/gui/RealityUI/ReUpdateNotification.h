@@ -11,9 +11,9 @@
 #ifndef RE_UPDATE_NOTIFICATION_H
 #define RE_UPDATE_NOTIFICATION_H
 
-#include <QtGui/QDialog>
 #include "ui_ReUpdateNotification.h"
-  
+
+
 extern quint32 packVersionNumber( const QString vnum );
   
 class ReUpdateNotification : public QDialog {

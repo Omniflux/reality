@@ -4,8 +4,10 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <QtPlugin>
 #include "ReBreadCrumbsPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReBreadCrumbs.h"
 
 /**

@@ -7,7 +7,6 @@
 
 #include <QtDesigner/QDesignerCustomWidgetInterface>
 
-#include "ReImageMapManager.h"
 
 class ReImageMapManagerPlugin : public QObject, public QDesignerCustomWidgetInterface {
   Q_OBJECT

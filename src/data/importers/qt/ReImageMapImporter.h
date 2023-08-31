@@ -6,10 +6,13 @@
 #ifndef QT_IMAGEMAP_IMPORTER_H
 #define QT_IMAGEMAP_IMPORTER_H
 
-#include "textures/ReImageMap.h"
-#include "ReQtTextureImporter.h"
-#include "RealityBase.h"
+#include <QFileInfo>
+
 #include "reality_lib_export.h"
+#include "RealityBase.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

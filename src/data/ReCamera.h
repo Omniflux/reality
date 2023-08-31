@@ -6,17 +6,16 @@
 #ifndef RE_CAMERA_H
 #define RE_CAMERA_H
 
-#include <QList>
-#include <QVariantMap>
 #include <QSharedPointer>
-#include <QDataStream>
 
-#include "ReDefs.h"
-#include "ReMatrix.h"
-#include "RealityBase.h"
-#include "math.h"
-#include <algorithm>
 #include "reality_lib_export.h"
+#include "ReMatrix.h"
+
+namespace Reality {
+  class ReCamera;
+  typedef QSharedPointer<ReCamera> ReCameraPtr;
+}
+
 
 namespace Reality {
 
@@ -27,9 +26,6 @@ namespace Reality {
  * It's the responsibility of the plugins in the host app to 
  * provide the data in the right format to ReCamera.
  */
-class ReCamera;
-typedef QSharedPointer<ReCamera> ReCameraPtr;
-
 class REALITY_LIB_EXPORT ReCamera {
 
 private:

@@ -6,12 +6,6 @@
 
 #ifndef RE_OPENCL_H
 #define RE_OPENCL_H
-#include "ReLogger.h"
-
-#include <QtCore>
-#include <QStringList>
-#include <QList>
-#include <QSharedPointer>
 
 #ifdef __APPLE__
 #include <OpenCL/cl.h>
@@ -19,7 +13,12 @@
 #include <CL/cl.h>
 #endif
 
+#include <QHash>
+#include <QLibrary>
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+
 
 /**
  * This file defines functions to help discovering if OpenCL is enabled on

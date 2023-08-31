@@ -4,25 +4,26 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
+#include "ReMainWindow.h"
+
 #ifdef WIN32
 #include <windows.h>
 #endif
 
+#include <QCloseEvent>
+#include <QDebug>
 #include <QJson/Parser>
 
+#include "ReActionMgr.h"
+#include "ReSceneDataGlobal.h"
 #include "ReVersion.h"
-#include "ReMainWindow.h"
-#include "RealityBase.h"
-#include "ReMaterials.h"
-#include "ReTools.h"
-
+#include "RealityPanel/RealityDataRelay.h"
+#include "RealityUI/ReAcselMgr.h"
+#include "RealityUI/ReCssEditor.h"
+#include "RealityUI/ReUpdateNotification.h"
 #include "ui_reAbout.h"
 #include "ui_reWatermark.h"
-#include "ReUpdateNotification.h"
-#include "ReAcselMgr.h"
-#include "ReActionMgr.h"
 
-#include <stdlib.h>
 
 using namespace Reality;
 
@@ -435,7 +436,6 @@ void ReMainWindow::printStats() {
                 << "Number of lights: " << RealitySceneData->getNumLights();
 }
 
-#include "ReCssEditor.h"
 static ReCssEditor* cssEditor = NULL;
 void ReMainWindow::editCSS() {
   cssEditor = new ReCssEditor(this);

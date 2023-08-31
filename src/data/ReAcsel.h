@@ -66,15 +66,14 @@
 #ifndef RE_ACSEL_H
 #define RE_ACSEL_H
 
-#include "ReMaterial.h"
-#include "ReLogger.h"
-
+#include <QHash>
+#include <QMap>
+#include <QSharedPointer>
 #include <SQLiteCpp/SQLiteCpp.h>
+
+#include "reality_lib_export.h"
 #include "ReLogger.h"
 
-#include <QString>
-#include <QStringList>
-#include "reality_lib_export.h"
 
 //! Major version number of the ACSEL database
 #define RE_ACSEL_VERSION_MAJOR 5

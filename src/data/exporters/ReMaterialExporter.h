@@ -6,11 +6,15 @@
 #ifndef REMATERIALEXPORTER_H
 #define REMATERIALEXPORTER_H
 
-#include "ReDefs.h"
-#include "ReMaterials.h"
-#include "ReLogger.h"
 #include <boost/any.hpp>
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 namespace Reality {
 

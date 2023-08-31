@@ -3,27 +3,30 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QFileInfo>
-#include <QStringBuilder>
-
-#include "ReLuxRunner.h"
 #include "ReLuxGeometryExporter.h"
-#include "exporters/lux/ReLightExporter.h"
-#include "ReSceneData.h"
-#include "ReLightMaterial.h"
-#include "ReTools.h"
-#include "ReSceneResources.h"
-#include "ReDisplaceableMaterial.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "exporters/lux/ReLuxTextureExporterFactory.h"
-#include "ply/rply.h"
 
 // For isnan/_isnan support
 #ifdef WIN32
-  #include <float.h>
+#include <float.h>
 #else
-  #include <cmath>
+#include <cmath>
 #endif
+
+#include <QStringBuilder>
+
+#include "ply/rply.h"
+#include "ReDisplaceableMaterial.h"
+#include "ReLightMaterial.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReSceneResources.h"
+#include "ReTools.h"
+#include "exporters/ReLuxSceneExporter.h"
+#include "exporters/lux/ReLightExporter.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+
 
 // NAN checking
 #ifdef WIN32
@@ -33,8 +36,6 @@
 #define CHECK_NAN(x) ( isnan(x) ? 0.0 : x )
 #define IS_NAN isnan
 #endif
-
-
 
 namespace Reality {
 

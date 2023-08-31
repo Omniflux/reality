@@ -6,9 +6,9 @@
 #ifndef REGLOSSY_H
 #define REGLOSSY_H
 
-#include "ReMaterial.h"
-#include "ReDisplaceableMaterial.h"
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 #define RE_GLOSSY_KD_CH "Kd"
 #define RE_GLOSSY_KS_CH "Ks"

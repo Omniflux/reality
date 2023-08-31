@@ -4,11 +4,11 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <QMessageBox>
-#include <QPushButton>
-#include "ReUniversalShaderWidget.h"
-#include "ReLogger.h"
+#include "RealityUI/ReUniversalShaderWidget.h"
+
 #include "ReAcsel.h"
+#include "RealityUI/ReShaderCategoryPreset.h"
+
 
 using namespace Reality;
 

@@ -6,9 +6,10 @@
 #ifndef REBRICKS_H
 #define REBRICKS_H
 
-#include "ReTexture.h"
-#include "ReComplexTexture.h"
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReComplexTexture.h"
+
 
 namespace Reality {
 

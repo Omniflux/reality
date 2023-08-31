@@ -5,13 +5,16 @@
  */
 
 #include "ReAcsel.h"
-#include "RealityBase.h"
 
-#include <QtCore>
 #include <QCryptographicHash>
+#include <QDir>
 #include <QFileInfo>
+#include <QUuid>
 #include <QJson/Parser>
 #include <QJson/Serializer>
+
+#include "RealityBase.h"
+
 
 #ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
 namespace SQLite

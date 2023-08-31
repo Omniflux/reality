@@ -14,28 +14,21 @@
 #ifndef RE_IPC_H
 #define RE_IPC_H
 
-#include <time.h>
-
-#include <QtCore>
-#include <QThread>
 #include <QMutex>
-#include <QMutexLocker>
-#include <QFile>
+#include <QThread>
+#include <zmq.hpp>
 
-#include "zmq.hpp"
-
-#include <iostream> 
-#include <fstream>
-
-#include "ReDefs.h"
-#include "ReSceneData.h"
-#include "importers/qt/ReQtMaterialImporter.h"
+#include "reality_lib_export.h"
 #include "ReSharedMemIPC.h"
+#include "importers/qt/ReQtMaterialImporter.h"
+
+namespace Reality {
+  enum IPC_MESSAGES;
+}
+
 
 #define IPC_DEBUG 0
 
-#include "RealityBase.h"
-#include "reality_lib_export.h"
 
 namespace Reality {
 

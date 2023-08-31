@@ -6,10 +6,10 @@
 #ifndef RE_MATTE_LUXCORE_EXPORTER_H
 #define RE_MATTE_LUXCORE_EXPORTER_H
 
+#include "reality_lib_export.h"
 // We simply re-use the Lux matte material. It is identical to what we need
 #include "exporters/lux/ReMatteExporter.h"
-#include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 /**
   Exports the Matte material to Lux

@@ -4,17 +4,19 @@
 */
 
 #include "ReQtMaterialImporterFactory.h"
+
 #include "ReClothImporter.h"
-#include "ReGlossyImporter.h"
-#include "ReMatteImporter.h"
-#include "ReSkinImporter.h"
 #include "ReGlassImporter.h"
-#include "ReWaterImporter.h"
+#include "ReGlossyImporter.h"
+#include "ReLightMaterialImporter.h"
+#include "ReMatteImporter.h"
 #include "ReMetalImporter.h"
 #include "ReMirrorImporter.h"
-#include "ReVelvetImporter.h"
 #include "ReNullImporter.h"
-#include "ReLightMaterialImporter.h"
+#include "ReSkinImporter.h"
+#include "ReVelvetImporter.h"
+#include "ReWaterImporter.h"
+
 
 namespace Reality {
   

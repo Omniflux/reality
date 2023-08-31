@@ -4,17 +4,20 @@
 */
 
 #include "RePoserInterface.h"
-#include "ReSceneData.h"
-// #include "ReSceneDataGlobal.h"
-#include "ReLogger.h"
-#include "RealityBase.h"
-#include "RePythonSceneExporter.h"
-#include "ReIPC.h"
-#include "RealityRunner.h"
-#include "ReLuxRunner.h"
-#include "ReTools.h"
 
 #include <QVariant>
+#include <QSettings>
+
+#include "RealityBase.h"
+#include "RealityRunner.h"
+#include "ReIPC.h"
+#include "ReLogger.h"
+#include "ReLuxRunner.h"
+#include "RePythonTools.h"
+#include "RePythonSceneExporter.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+
 
 using namespace python;
 using namespace Reality;

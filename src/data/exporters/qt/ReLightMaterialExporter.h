@@ -7,9 +7,13 @@
 #ifndef RE_QT_LIGHTMATERIAL_EXPORTER_H
 #define RE_QT_LIGHTMATERIAL_EXPORTER_H
 
-#include "ReLightMaterial.h"
-#include "ReQtMaterialExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReLightMaterial.h"
+#include "ReMaterial.h"
+#include "ReQtMaterialExporter.h"
+
 
 namespace Reality {
 

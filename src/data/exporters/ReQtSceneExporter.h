@@ -7,9 +7,11 @@
 #ifndef RE_QT_SCENEEXPORTER_H
 #define RE_QT_SCENEEXPORTER_H
 
-#include "ReDefs.h"
-#include "ReBaseSceneExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReBaseSceneExporter.h"
+
 
 namespace Reality {
 

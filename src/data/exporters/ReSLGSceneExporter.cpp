@@ -5,6 +5,9 @@
 
 #include "ReSLGSceneExporter.h"
 
+#include <QVariant>
+
+
 namespace Reality {
   
 void ReSLGSceneExporter::exportScene( const int frameNo, boost::any& sceneData ) {

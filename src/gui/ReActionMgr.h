@@ -8,7 +8,8 @@
 #define RE_ACTION_MGR_H
 
 #include <QAction>
-#include "ReLogger.h"
+
+
 /**
  * The ReActionManager class defines a collection of QActions that are stored
  * and can be retrieved and attached to different UI elements in Reality.

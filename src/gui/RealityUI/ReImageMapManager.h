@@ -7,17 +7,19 @@
 #ifndef REIMAGE_MAP_MANAGER_H
 #define REIMAGE_MAP_MANAGER_H
 
-
-#include <QWidget>
+#include <QAction>
 #include <QMenu>
-#include <QWidgetAction>
+#include <QPixMap>
 #include <QSharedPointer>
-#include <QVariant>
+#include <QWidget>
 
 #include "ReTexture.h"
-#include "ReDefs.h"
-
 #include "ui_imageMapManager.h"
+
+namespace Reality {
+  enum RGBChannel;
+}
+
 
 using namespace Reality;
 

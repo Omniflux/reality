@@ -5,14 +5,13 @@
 #ifndef RE_METAL_EDITOR_H
 #define RE_METAL_EDITOR_H
 
-#include <QWidget>
-#include "ReMetal.h"
-
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
-#include "ReTimedEditor.h"
+#include "ReMetal.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meMetal.h"
-#include "ReTextureEditorAdapter.h"
+
+class QListWidgetItem;
+
 
 /**
  This widget is used to edit a Metal material.

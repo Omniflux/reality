@@ -2,8 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "Re2DTextureMappingPlugin.h"
+
+#include <QtPlugin>
+
+#include "../Re2DTextureMapping.h"
 
 
 Re2DTextureMappingPlugin::Re2DTextureMappingPlugin(QObject* parent) : QObject(parent) {

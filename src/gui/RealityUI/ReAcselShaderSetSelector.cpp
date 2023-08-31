@@ -4,10 +4,10 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <QMessageBox>
-#include "ReAcselShaderSetSelector.h"
-#include "ReLogger.h"
+#include "RealityUI/ReAcselShaderSetSelector.h"
+
 #include "ReAcsel.h"
+
 
 using namespace Reality;
 

@@ -7,9 +7,11 @@
 #define RE_CSS_EDITOR_H
 
 #include <QDialog>
-#include <QFile>
-#include "ui_reCssEditor.h"
+
 #include "ReMainWindow.h"
+#include "ui_reCssEditor.h"
+
+
 
 namespace Reality {
 

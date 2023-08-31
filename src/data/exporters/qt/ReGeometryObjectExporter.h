@@ -7,11 +7,20 @@
 #ifndef QT_GEOMETRY_OBJECT_EXPORTER_H
 #define QT_GEOMETRY_OBJECT_EXPORTER_H
 
-#include "ReGeometryObject.h"
+#include <boost/any.hpp>
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
+#include "ReAcsel.h"
 #include "ReQtMaterialExporter.h"
 #include "ReQtMaterialExporterFactory.h"
-#include "ReAcsel.h"
-#include "reality_lib_export.h"
+
+namespace Reality {
+  class ReMaterial;
+  typedef QSharedPointer<ReMaterial> ReMaterialPtr;
+  typedef QHashIterator<QString, ReMaterialPtr> ReMaterialIterator;
+}
+
 
 namespace Reality {
 

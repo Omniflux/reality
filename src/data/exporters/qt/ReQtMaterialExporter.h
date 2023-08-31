@@ -7,13 +7,15 @@
 #ifndef RE_QT_MATERIAL_EXPORTER_H
 #define RE_QT_MATERIAL_EXPORTER_H
 
-#include "exporters/ReMaterialExporter.h"
-#include "ReQtTextureExporterFactory.h"
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
 #include "ReAlphaChannelMaterial.h"
 #include "ReDisplaceableMaterial.h"
-#include <QStringList>
-#include <QColor>
-#include "reality_lib_export.h"
+#include "ReMaterial.h"
+#include "ReQtTextureExporterFactory.h"
+#include "exporters/ReMaterialExporter.h"
+
 
 namespace Reality {
 

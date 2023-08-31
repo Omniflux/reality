@@ -8,14 +8,15 @@
 #define UPDATE_HOST_TEXTURE_ACTION_H
 
 #include "ReAction.h"
-#include "RealityBase.h"
-#include "RealityDataRelay.h"
 
-#include <QtCore>
-#include <QFileInfo>
+#include <QVariant>
+
+#include "RealityDataRelay.h"
+#include "ReIPCCommands.h"
+#include "ReTexture.h"
+
 
 namespace Reality {
-
 
 /**
  * Action to update a texture in the host side from the version that is 

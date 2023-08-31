@@ -6,11 +6,14 @@
 #ifndef REMAT_VOLUMES_EDITOR_H
 #define REMAT_VOLUMES_EDITOR_H
 
-#include <QWidget>
 #include <QStringListModel>
-  
+
 #include "ui_meMatVolumes.h"
-#include "ReMaterials.h"
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 /**
   Editor that allows the user to specify the volumes linked to a give material

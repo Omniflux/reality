@@ -10,9 +10,16 @@
 #ifndef RE_QT_SI_EXPORTER_H
 #define RE_QT_SI_EXPORTER_H
 
-#include "ReDefs.h"
-#include "ReSurfaceIntegrator.h"
+#include <QSharedPointer>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReSurfaceIntegrator;
+  typedef QSharedPointer<ReSurfaceIntegrator> ReSurfaceIntegratorPtr;
+}
+
 
 namespace Reality {
 

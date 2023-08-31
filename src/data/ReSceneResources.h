@@ -10,12 +10,12 @@
 #ifndef RE_SCENE_RESOURCE_HELPER_H
 #define RE_SCENE_RESOURCE_HELPER_H
 
-#include <QtCore>
-#include <QFileInfo>
+
+#include <QDir>
 #include <QHash>
-#include "ReDefs.h"
-#include "ReLogger.h"
+
 #include "reality_lib_export.h"
+#include "ReLogger.h"
 
 namespace Reality {
 

@@ -6,12 +6,11 @@
 #ifndef RE_MAT_ACTIONS_H
 #define RE_MAT_ACTIONS_H
 
-#include <QtCore>
 #include <QUndoCommand>
-#include "ReSceneDataGlobal.h"
-#include "RealityBase.h"
-#include "RealityDataRelay.h"
+
 #include "ReMaterials.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
 
 using namespace Reality;
 

@@ -4,8 +4,10 @@
 */
 
 #include "ReTextureChannelDataModel.h"
-#include "ReMaterial.h"
+
 #include "ReLogger.h"
+#include "ReMaterial.h"
+
 
 using namespace Reality;
 

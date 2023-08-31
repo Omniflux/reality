@@ -6,7 +6,8 @@
 #ifndef ReQtSceneImporter_H
 #define ReQtSceneImporter_H
 
-#include <QVariant>
+#include <QVariantMap>
+
 
 namespace Reality {
 

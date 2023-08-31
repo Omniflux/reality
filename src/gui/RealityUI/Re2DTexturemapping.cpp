@@ -6,6 +6,10 @@
 
 #include "Re2DTextureMapping.h"
 
+#include "ReTextureChannelDataModel.h"
+#include "textures/Re2DTexture.h"
+
+
 Re2DTextureMapping::Re2DTextureMapping(QWidget* parent) : QWidget(parent) {
   setupUi(this);
   setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);

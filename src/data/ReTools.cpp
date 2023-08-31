@@ -1,12 +1,22 @@
-#include "ReTools.h"
-#include "ReNodeConverter.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "exporters/lux/ReVolumeExporter.h"
-#include "textures/ReColorMath.h"
-
-#ifdef WIN32
-#include <windows.h>
+#ifdef __APPLE__
+#include <mach-o/dyld.h>
+#elif defined(WIN32)
+#include <Windows.h>
 #endif
+
+#include "ReTools.h"
+
+#include <boost/any.hpp>
+#include <QFileInfo>
+
+#include "ReLogger.h"
+#include "ReNodeConverter.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReVolumeExporter.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 
@@ -19,7 +29,6 @@ namespace Reality {
 
 #ifdef __APPLE__
 
-#include <mach-o/dyld.h>
 // Retrieves the full path of the current running application. Mac OS version
 QByteArray getApplicationPath() {
   QByteArray appName;

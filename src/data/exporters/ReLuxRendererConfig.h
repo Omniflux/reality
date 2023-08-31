@@ -7,8 +7,8 @@
 #ifndef RE_LUXCORE_RENDERER_CONFIG_H
 #define RE_LUXCORE_RENDERER_CONFIG_H
 
-#include <QtCore>
 #include <QSharedPointer>
+
 
 /**
  * Interface that defines how the renderer configuration is selected when

@@ -6,8 +6,13 @@
 #ifndef RE_OUTPUT_UPDATER_H
 #define RE_OUTPUT_UPDATER_H
 
-#include <QtCore>
-#include "ReDefs.h"  
+#include <QString>
+
+namespace Reality {
+  enum ExportImageFileFormat;
+  enum GeometryFileFormat;
+}
+
 
 namespace Reality {
 

@@ -6,10 +6,17 @@
 #ifndef RE_MIX_LUX_EXPORTER_H
 #define RE_MIX_LUX_EXPORTER_H
 
-#include "ReMaterials.h"
-#include "ReMix.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
 #include "reality_lib_export.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
+namespace boost {
+  class any;
+}
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 /*
   Class: ReMixLuxExporter

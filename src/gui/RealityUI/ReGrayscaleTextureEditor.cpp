@@ -3,8 +3,14 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2010. All rights reserved.    
 */
 
-#include "ReGrayscaleTextureEditor.h"
+#include "RealityUI/ReGrayscaleTextureEditor.h"
+
+#include <QImage>
+
 #include "ReGeometryObject.h"
+#include "ReTextureCreator.h"
+#include "textures/ReGrayscale.h"
+
 
 ReGrayscaleTextureEditor::ReGrayscaleTextureEditor( QWidget* parent ) : 
   ReAbstractTextureEditor(parent)

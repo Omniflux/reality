@@ -7,9 +7,13 @@
 #ifndef TQ_MIX_TEXTURE_EXPORTER_H
 #define TQ_MIX_TEXTURE_EXPORTER_H
 
-#include "textures/ReMix.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureExporter.h"
+#include "ReTexture.h"
+#include "textures/ReMix.h"
+
 
 namespace Reality {
 

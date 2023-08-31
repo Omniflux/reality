@@ -4,7 +4,13 @@
 */
 
 #include "Re3DMappingEditor.h"
+
+#include <QUndoStack>
+
 #include "RealityBase.h"
+#include "ReTexture.h"
+#include "actions/ReTextureEditCommands.h"
+
 
 Re3DMappingEditor::Re3DMappingEditor( QWidget* parent ) : 
   ReAbstractTextureEditor(parent) 

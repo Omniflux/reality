@@ -6,14 +6,10 @@
 #ifndef RE_WATER_EDITOR_H
 #define RE_WATER_EDITOR_H
 
-#include <QWidget>
-#include "ReWater.h"
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
-#include "ReTimedEditor.h"
+
 #include "ui_meWater.h"
 
-using namespace Reality;
 
 using namespace Reality;
 

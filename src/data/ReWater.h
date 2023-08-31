@@ -6,12 +6,16 @@
 #ifndef REWATER_H
 #define REWATER_H
 
-#include "ReMaterial.h"
+#include "reality_lib_export.h"
 #include "ReDisplaceableMaterial.h"
-#include "ReVolumes.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-#include "reality_lib_export.h"
+
+namespace Reality {
+  class ReVolume;
+  typedef QSharedPointer<ReVolume> ReVolumePtr;
+};
+
 
 #define WM_NUM_RIPPLE_PRESETS 6
 

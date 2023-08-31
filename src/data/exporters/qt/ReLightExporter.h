@@ -6,9 +6,11 @@
 #ifndef QT_LIGHT_EXPORTER_H
 #define QT_LIGHT_EXPORTER_H
 
-#include "ReLight.h"
-#include "ReQtMaterialExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReLight.h"
+
 
 namespace Reality {
 

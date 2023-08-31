@@ -7,12 +7,11 @@
 #ifndef RE_BIAS_PATH_H
 #define RE_BIAS_PATH_H
 
-#include <QtCore>
 #include <QSharedPointer>
-#include "ReDefs.h"
-#include "ReSceneDataGlobal.h" 
+
 #include "ReRenderContext.h" 
 #include "exporters/lux/ReLuxOCLRenderer.h"
+
 
 //! The amount of radiance clamping that we need when there is the sun in 
 //! the scene

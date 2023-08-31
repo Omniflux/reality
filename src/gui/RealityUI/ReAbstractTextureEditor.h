@@ -7,8 +7,16 @@
 #define REABSTRACT_TEXTURE_EDITOR_H
 
 #include <QWidget>
-#include "ReTextureChannelDataModel.h"
-#include "ReMaterial.h"
+
+#include "ReTexture.h"
+
+namespace Reality {
+  enum ReTextureType;
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 using namespace Reality;
 

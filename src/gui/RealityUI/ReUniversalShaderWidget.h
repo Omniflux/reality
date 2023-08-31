@@ -7,9 +7,15 @@
 #ifndef RE_UNIVERSAL_SHADER_WDG_H
 #define RE_UNIVERSAL_SHADER_WDG_H
 
-#include <QtGui>
+#include <QSharedPointer>
+
 #include "ui_reUniversalShaderWdg.h"
-#include "ReShaderCategoryPreset.h"
+
+namespace Reality {
+  class ReShaderCategoryPreset;
+  typedef QSharedPointer<ReShaderCategoryPreset> ReShaderCategoryPresetPtr;
+}
+
 
 namespace Reality {
 

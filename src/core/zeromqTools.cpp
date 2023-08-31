@@ -4,7 +4,9 @@
 */
 
 #include "zeromqTools.h"
-#include "relogger.h"
+
+#include "ReLogger.h"
+
 
 QString zmqReceiveString(zmq::socket_t& socket) {
   try {

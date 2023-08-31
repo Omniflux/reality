@@ -1,8 +1,12 @@
 #ifndef REMATERIALEXPORTER_H
 #define REMATERIALEXPORTER_H
 
-#include "ReMaterials.h"
 #include "reality_lib_export.h"
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 namespace Reality {
 

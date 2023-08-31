@@ -6,11 +6,13 @@
 #ifndef QT_TEXTURE_IMPORTER_H
 #define QT_TEXTURE_IMPORTER_H
 
+#include "ReTexture.h"
+#include "ReTextureContainer.h"
 #include "textures/Re2DTexture.h"
 #include "textures/ReComplexTexture.h"
 
-namespace Reality {
 
+namespace Reality {
 
 /**
  * Base class for all Qt texture importers.

@@ -7,10 +7,18 @@
 #define RE_METAL_LUX_EXPORTER_H
 
 #include <QDesktopServices>
-#include "ReMetal.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
-#include "ReSceneResources.h"
+#include <QFile>
+
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+#include "ReMetal.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReSceneResources.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+
 
 /*
   Class: ReMetalLuxExporter

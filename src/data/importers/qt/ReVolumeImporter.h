@@ -1,9 +1,10 @@
 #ifndef RE_QT_VOLUME_IMPORTER_H
 #define RE_QT_VOLUME_IMPORTER_H
 
+#include <QVariantMap>
+
 #include "ReVolumes.h"
-#include "ReLogger.h"
-#include <QVariant>
+
 
 /*
   Class: ReVolumeImporter

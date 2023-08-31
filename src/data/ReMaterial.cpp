@@ -3,33 +3,38 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "ReMaterial.h"
+
 #include <QJson/Parser>
 
-#include "ReMaterial.h"
-#include "ReTools.h"
+#include "ReAcsel.h"
 #include "ReGeometryObject.h"
-#include "ReTexture.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReColorMath.h"
+#include "ReLogger.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReTextureCreator.h"
+#include "ReTools.h"
+#include "ReVolumes.h"
+#include "importers/qt/ReQtTextureImporter.h"
+#include "importers/qt/ReQtTextureImporterFactory.h"
 #include "textures/ReBand.h"
-#include "textures/ReClouds.h"
-#include "textures/ReMarble.h"
+#include "textures/ReBricks.h"
 #include "textures/ReCheckers.h"
+#include "textures/ReClouds.h"
+#include "textures/ReColorMath.h"
+#include "textures/ReComplexTexture.h"
+#include "textures/ReConstant.h"
+#include "textures/ReDistortedNoise.h"
 #include "textures/ReFBM.h"
 #include "textures/ReFresnelColor.h"
-#include "textures/ReDistortedNoise.h"
-#include "textures/ReMix.h"
-#include "textures/ReConstant.h"
-#include "textures/ReInvertMap.h"
 #include "textures/ReGrayscale.h"
-#include "textures/ReBricks.h"
+#include "textures/ReImageMap.h"
+#include "textures/ReInvertMap.h"
+#include "textures/ReMarble.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
 #include "textures/ReWood.h"
-#include "ReSceneData.h"
-#include "ReVolumes.h"
-#include "ReLogger.h"
-#include "ReSceneDataGlobal.h"
-#include "ReAcsel.h"
-#include "importers/qt/ReQtTextureImporterFactory.h"
+
 
 namespace Reality {
 

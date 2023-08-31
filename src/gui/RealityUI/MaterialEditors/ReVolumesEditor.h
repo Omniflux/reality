@@ -6,14 +6,13 @@
 #ifndef RE_VOLUMES_EDITOR_H
 #define RE_VOLUMES_EDITOR_H
 
-#include <QWidget>
 #include <QStandardItemModel>
+
 #include "ReVolumes.h"
-#include "ReSceneData.h"
 #include "ui_meVolumes.h"
 
-using namespace Reality;
 
+using namespace Reality;
 
 /**
  * This event class is used to signal the Volume editor when it needs to 

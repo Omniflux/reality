@@ -6,8 +6,11 @@
 #ifndef QT_MIXTEXTURE_IMPORTER_H
 #define QT_MIXTEXTURE_IMPORTER_H
 
-#include "textures/ReMix.h"
+#include <QVariantMap>
+
 #include "ReQtTextureImporter.h"
+#include "textures/ReMix.h"
+
 
 namespace Reality {
 

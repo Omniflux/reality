@@ -6,10 +6,12 @@
 #ifndef RE_QT_GLASS_IMPORTER_H
 #define RE_QT_GLASS_IMPORTER_H
 
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
 #include "ReGlass.h"
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
-#include "reality_lib_export.h"
+
 
 /*
   Class: ReGlassImporter

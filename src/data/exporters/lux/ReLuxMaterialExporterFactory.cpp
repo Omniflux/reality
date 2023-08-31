@@ -4,20 +4,26 @@
 */
 
 #include "exporters/lux/ReLuxMaterialExporterFactory.h"
+
+#include "ReMaterial.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "exporters/lux/ReStatueExporter.h"
+
 #include "exporters/lux/ReClothExporter.h"
-#include "exporters/lux/ReGlossyExporter.h"
-#include "exporters/lux/ReMatteExporter.h"
-#include "exporters/lux/ReMixExporter.h"
-#include "exporters/lux/ReSkinExporter.h"
 #include "exporters/lux/ReGlassExporter.h"
-#include "exporters/lux/ReWaterExporter.h"
+#include "exporters/lux/ReGlossyExporter.h"
+//#include "exporters/lux/ReHairExporter.h"
+#include "exporters/lux/ReLightMaterialLuxExporter.h"
+#include "exporters/lux/ReMatteExporter.h"
 #include "exporters/lux/ReMetalExporter.h"
 #include "exporters/lux/ReMirrorExporter.h"
-#include "exporters/lux/ReVelvetExporter.h"
-#include "exporters/lux/ReHairExporter.h"
+#include "exporters/lux/ReMixExporter.h"
 #include "exporters/lux/ReNullExporter.h"
-#include "exporters/lux/ReStatueExporter.h"
-#include "exporters/lux/ReLightMaterialLuxExporter.h"
+#include "exporters/lux/ReSkinExporter.h"
+#include "exporters/lux/ReVelvetExporter.h"
+#include "exporters/lux/ReWaterExporter.h"
+
 
 namespace Reality {
   

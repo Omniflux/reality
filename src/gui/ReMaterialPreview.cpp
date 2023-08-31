@@ -6,8 +6,14 @@
 */
 
 #include "ReMaterialPreview.h"
-#include "RealityBase.h"
+
 #include <boost/atomic.hpp>
+#include <QSettings>
+
+#include "RealityBase.h"
+#include "ReLogger.h"
+#include "ReLuxRunner.h"
+
 
 using namespace Reality;
 

@@ -8,9 +8,10 @@
 #ifndef RECOLORPICKER_H
 #define RECOLORPICKER_H
 
-
 #include <QWidget>
+
 #include "ui_reColorPicker.h"
+
 
 class ReColorPicker: public QWidget, public Ui::colorPicker {
   Q_OBJECT

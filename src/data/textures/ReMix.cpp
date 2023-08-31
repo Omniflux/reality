@@ -3,10 +3,13 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReMix.h"
+#include "textures/ReMix.h"
 
-#include "ReTools.h"
-#include "ReMaterials.h"
+#include "ReTextureContainer.h"
+#include "ReTextureCreator.h"
+#include "textures/ReConstant.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

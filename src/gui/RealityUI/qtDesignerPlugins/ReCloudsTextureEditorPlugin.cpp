@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReCloudsTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReCloudsTextureEditor.h"
 
 

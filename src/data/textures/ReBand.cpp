@@ -3,9 +3,11 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReBand.h"
+#include "textures/ReBand.h"
+
 #include "ReConstant.h"
-#include "ReTextureCreator.h"
+#include "ReTextureContainer.h"
+
 
 namespace Reality {
 

@@ -1,9 +1,11 @@
 #ifndef RE_QT_METAL_IMPORTER_H
 #define RE_QT_METAL_IMPORTER_H
 
+#include <QVariantMap>
+
 #include "ReMetal.h"
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
+
 
 namespace Reality {
 

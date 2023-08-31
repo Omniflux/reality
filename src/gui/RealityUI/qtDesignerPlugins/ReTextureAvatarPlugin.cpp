@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReTextureAvatarPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReTextureAvatar.h"
 
 

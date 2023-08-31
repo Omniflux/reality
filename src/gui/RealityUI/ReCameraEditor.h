@@ -6,11 +6,16 @@
 #ifndef __RECAMERA_EDITOR_H__
 #define __RECAMERA_EDITOR_H__
 
-#include <QtCore>
-#include "ReCamera.h"
-#include "RePresetList.h"
+#include <QWidget>
 
+#include "RePresetList.h"
 #include "ui_reCameraEditor.h"
+
+namespace Reality {
+  class ReCamera;
+  typedef QSharedPointer<ReCamera> ReCameraPtr;
+}
+
 
 using namespace Reality;
 

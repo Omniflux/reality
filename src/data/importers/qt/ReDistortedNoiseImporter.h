@@ -6,10 +6,12 @@
 #ifndef QT_DISTORTEDNOISE_IMPORTER_H
 #define QT_DISTORTEDNOISE_IMPORTER_H
 
-#include "textures/ReDistortedNoise.h"
-#include "ReQtTextureImporter.h"
-#include "ReProceduralNoiseImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseImporter.h"
+#include "textures/ReDistortedNoise.h"
+
 
 namespace Reality {
 

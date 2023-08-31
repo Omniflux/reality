@@ -5,6 +5,7 @@
  */
 
 #include "ReGlossyEditor.h"
+#include "ReGlossy.h"
 
 using namespace Reality;
 

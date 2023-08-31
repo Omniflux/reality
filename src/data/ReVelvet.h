@@ -6,8 +6,9 @@
 #ifndef REVELVET_H
 #define REVELVET_H
 
-#include "ReDisplaceableMaterial.h"
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 namespace Reality {
 

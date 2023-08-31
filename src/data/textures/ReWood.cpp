@@ -3,7 +3,8 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReWood.h"
+#include "textures/ReWood.h"
+
 #include "ReTools.h"
 
 namespace Reality {

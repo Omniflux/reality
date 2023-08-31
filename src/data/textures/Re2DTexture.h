@@ -6,8 +6,9 @@
 #ifndef RE_2DTEXTURE_H
 #define RE_2DTEXTURE_H
 
-#include "ReTexture.h"
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+
 
 namespace Reality {
 

@@ -7,10 +7,13 @@
 #ifndef QT_DISTORTEDNOISE_EXPORTER_H
 #define QT_DISTORTEDNOISE_EXPORTER_H
 
-#include "ReProceduralNoiseExporter.h"
-#include "textures/ReDistortedNoise.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseExporter.h"
+#include "ReQtTextureExporter.h"
+#include "textures/ReDistortedNoise.h"
+
 
 namespace Reality {
 

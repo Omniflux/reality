@@ -6,8 +6,9 @@
 #ifndef RE_NULL_H
 #define RE_NULL_H
 
-#include "ReMaterial.h"
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+
 
 namespace Reality {
 

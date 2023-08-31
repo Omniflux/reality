@@ -5,18 +5,20 @@
  */
 
 #include "ReQtMaterialExporterFactory.h"
+
 #include "ReClothExporter.h"
-#include "ReGlossyExporter.h"
-#include "ReMatteExporter.h"
-#include "ReSkinExporter.h"
 #include "ReGlassExporter.h"
-#include "ReWaterExporter.h"
+#include "ReGlossyExporter.h"
+#include "ReLightMaterialExporter.h"
+#include "ReMatteExporter.h"
 #include "ReMetalExporter.h"
 #include "ReMirrorExporter.h"
-// #include "ReMixExporter.h"
-#include "ReVelvetExporter.h"
+ // #include "ReMixExporter.h"
 #include "ReNullExporter.h"
-#include "ReLightMaterialExporter.h"
+#include "ReSkinExporter.h"
+#include "ReVelvetExporter.h"
+#include "ReWaterExporter.h"
+
 
 namespace Reality {
   

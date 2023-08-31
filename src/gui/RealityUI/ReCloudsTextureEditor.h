@@ -6,19 +6,19 @@
 #ifndef RE_CLOUDS_TEXTURE_EDITOR_H
 #define RE_CLOUDS_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 
-#include <QWidget>
-#include <QKeyEvent>
-
-#include "ReTexture.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"  
-#include "RealityBase.h"
-#include "ReMaterialPreview.h"
-
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "RealityUI/ReTimedEditor.h"
 #include "ui_teClouds.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReMaterialPreview;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 using namespace Reality;
 

@@ -3,11 +3,13 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "RealityUI/ReColorTextureEditor.h"
+
 #include <QVariant>
 #include <QJson/Parser>
 
-#include "ReColorTextureEditor.h"
 #include "ReLogger.h"
+
 
 void ReColorTextureEditor::initColorPresets() {
   QJson::Parser json;

@@ -18,15 +18,13 @@
 #ifndef RETEXTURE_H
 #define RETEXTURE_H
 
+#include <QSharedPointer>
+#include <QStringList>
+#include <QVariant>
+
+#include "reality_lib_export.h"
 #include "ReDefs.h"
 
-#include <QtCore>
-#include <QColor>
-#include <QHash>
-#include <QSharedPointer>
-#include <QImage>
-#include <QStringList>
-#include "reality_lib_export.h"
 
 namespace Reality {
 

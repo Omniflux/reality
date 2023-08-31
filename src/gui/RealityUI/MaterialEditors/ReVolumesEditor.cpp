@@ -3,11 +3,13 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QWidget>
+#include "ReVolumesEditor.h"
+
 #include <QMessageBox>
 
-#include "ReVolumesEditor.h"
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+
 
 // Assign a new event ID to our custom event
 int ReVolumeListUpdatedEvent::reEventType = QEvent::registerEventType();

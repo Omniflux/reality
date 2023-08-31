@@ -12,8 +12,6 @@
 #ifndef RE_LUX_API_H
 #define RE_LUX_API_H
 
-#include <ReDefs.h>
-#include <QString>
 #include <QLibrary>
 #include <QSharedPointer>
 

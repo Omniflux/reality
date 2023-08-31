@@ -6,12 +6,15 @@
 #ifndef RE_QT_MATERIAL_IMPORTER_H
 #define RE_QT_MATERIAL_IMPORTER_H
 
-#include "ReAlphaChannelMaterial.h"
-#include "ReDisplaceableMaterial.h"  
-#include "ReTextureCreator.h"
-#include "ReLogger.h"
-#include "ReAcsel.h"
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+#include "ReAcsel.h"
+#include "ReAlphaChannelMaterial.h"
+#include "ReDisplaceableMaterial.h"
+#include "ReMaterial.h"
+#include "ReTextureCreator.h"
+
 
 namespace Reality {
 

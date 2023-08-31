@@ -1,9 +1,11 @@
 #ifndef RE_QT_MIRROR_IMPORTER_H
 #define RE_QT_MIRROR_IMPORTER_H
 
+#include <QVariantMap>
+
 #include "ReMirror.h"
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
+
 
 /*
   Class: ReMirrorImporter

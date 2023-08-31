@@ -4,10 +4,10 @@
 */
 
 #include "ReLightMaterial.h"
-#include "ReLight.h"
+
 #include "ReGeometryObject.h"
-#include "ReSceneData.h"
 #include "ReTools.h"
+
 
 namespace Reality {
 

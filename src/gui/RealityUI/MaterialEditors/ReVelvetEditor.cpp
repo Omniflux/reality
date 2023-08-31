@@ -5,6 +5,7 @@
 
 #include "ReVelvetEditor.h"
 
+
 using namespace Reality;
 
 ReVelvetEditor::ReVelvetEditor( QWidget* parent ) : 

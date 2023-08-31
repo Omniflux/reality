@@ -4,11 +4,13 @@
 */
 
 #include "textures/ReGrayscale.h"
-#include "ReTools.h"
-#include "ReMaterials.h"
-#include "ReDefs.h"
-#include "ReTextureCreator.h"
+
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+#include "ReTextureContainer.h"
+#include "ReTextureCreator.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

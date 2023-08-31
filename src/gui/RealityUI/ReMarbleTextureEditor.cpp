@@ -3,14 +3,19 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "RealityUI/ReMarbleTextureEditor.h"
 
+#include <QUndoStack>
+
+#include "RealityBase.h"
+#include "ReMaterial.h"
+#include "ReMaterialPreview.h"
+#include "ReTextureChannelDataModel.h"
+#include "actions/ReTextureEditCommands.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h"
 #include "textures/ReMarble.h"
-#include "ReMarbleTextureEditor.h"
 #include "textures/ReProceduralNoise.h"
-
-
-  #include "RealityBase.h"
-  #include "exporters/lux/ReLuxTextureExporterFactory.h"
 
 
 ReMarbleTextureEditor::ReMarbleTextureEditor( QWidget* parent ) : 

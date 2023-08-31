@@ -3,15 +3,12 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QTreeWidget>
 #include <QJson/Parser>
 
 #include "ReGlassEditor.h"
-#include "ReGeometryObject.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-
- 
+#include "ReVolumes.h"
 
 
 ReGlassEditor::ReGlassEditor(QWidget* parent) :  ReMaterialEditor(parent) {

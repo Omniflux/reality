@@ -6,30 +6,34 @@
 #ifndef RE_TEXTURE_AVATAR_H
 #define RE_TEXTURE_AVATAR_H
 
-
-#include <QWidget>
-#include <QMouseEvent>
-#include <QPixmap>
-#include <QMenu>
 #include <QSharedPointer>
-#include <QApplication> 
-#include <QClipboard> 
+#include <QWidget>
 
-#include "ReTexture.h"
-#include "ReTextureSelector.h"
-#include "textures/ReMath.h"
-#include "textures/ReConstant.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReMix.h"
-#include "textures/ReFresnelColor.h"
-#include "textures/ReDistortedNoise.h"
-#include "textures/ReColorMath.h"
 #include "ui_textureAvatar.h"
-#include "ReLogger.h"
 
-#ifndef QT_CUSTOM_WIDGET
-  #include "ReTextureSelector.h"
-#endif
+class ReTextureSelector;
+
+namespace Reality {
+  enum ReTextureType;
+  class ImageMap;
+  class ReColorMath;
+  class ReConstant;
+  class ReDistortedNoise;
+  class ReFresnelColor;
+  class ReMath;
+  class ReMixTexture;
+  class ReTexture;
+  class ReTextureContainer;
+  typedef QSharedPointer<ReColorMath> ReColorMathPtr;
+  typedef QSharedPointer<ReConstant> ReConstantPtr;
+  typedef QSharedPointer<ReDistortedNoise> ReDistortedNoisePtr;
+  typedef QSharedPointer<ReFresnelColor> ReFresnelColorPtr;
+  typedef QSharedPointer<ImageMap> ImageMapPtr;
+  typedef QSharedPointer<ReMath> ReMathPtr;
+  typedef QSharedPointer<ReMixTexture> ReMixTexturePtr;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
+
 
 #define RE_CM_MULT "M"
 #define RE_CM_ADD  "A"

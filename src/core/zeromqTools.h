@@ -6,11 +6,12 @@
 #ifndef ZEROMQ_TOOLS_H
 #define ZEROMQ_TOOLS_H
 
-#include "ReDefs.h"
-#include "zmq.hpp"
-#include <QtCore>
-#include "ReLogger.h"
+#include <QDataStream>
+#include <QIODevice>
+#include <zmq.hpp>
+
 #include "reality_lib_export.h"
+
 
 /***********************************************
  * ZMQ utility functions

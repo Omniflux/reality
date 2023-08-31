@@ -3,10 +3,12 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReBricks.h"
-#include "ReConstant.h"
+#include "textures/ReBricks.h"
 
-#include "ReTools.h"
+#include "ReTextureContainer.h"
+#include "textures/ReConstant.h"
+
+
 namespace Reality {
 
 // Static variables definition

@@ -6,6 +6,7 @@
 
 #include "ReMetalEditor.h"
 
+
 ReMetalEditor::ReMetalEditor( QWidget* parent ) : 
   ReMaterialEditor(parent) 
 {

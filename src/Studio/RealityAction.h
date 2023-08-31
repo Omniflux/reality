@@ -6,10 +6,8 @@
 #define REALITY_ACTION_H
 
 #include <QtGui/QKeySequence>
-#include "QLibrary"
+#include <dzaction.h>
 
-#include "dzaction.h"
-#include "Reality_DS.h"
 
 namespace Reality {
 

@@ -4,45 +4,36 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
  */
 
-// #include <QColor>
-#include <qcolor.h>
-  
-#include <QByteArray>
-#include <QTextStream>
-#include <QJson/Parser>
+#include "ReGeometryObject.h"
 
+#include <QJson/Parser>
+#include <QJson/Serializer>
+
+#include "ReAcsel.h"
 #include "ReCloth.h"
-#include "ReGlossy.h"
-#include "ReSkin.h"
-#include "ReMatte.h"
+#include "ReDisplaceableMaterial.h"
 #include "ReGlass.h"
+#include "ReGlossy.h"
+#include "ReLightMaterial.h"
+#include "ReMaterials.h"
+#include "ReMaterialPropertyKeys.h"
+#include "ReMatte.h"
 #include "ReMetal.h"
 #include "ReMirror.h"
+#include "ReNodeConverter.h"
+#include "ReNull.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReSkin.h"
+#include "ReTextureCreator.h"
+#include "ReTools.h"
 #include "ReVelvet.h"
 #include "ReWater.h"
-#include "ReNull.h"
-#include "ReDisplaceableMaterial.h"
-
-#include "ReLightMaterial.h"
-#include "ReTexture.h"
-#include "textures/ReMath.h"
-#include "textures/ReColorMath.h"
-#include "textures/ReImageMap.h"
-#include "ReTextureCreator.h"
-
-#include "ReGeometryObject.h"
-#include "ReTools.h"
-#include "ReMaterialPropertyKeys.h"
-#include "ReNodeConverter.h"
-#include "ReSceneData.h"
-#include "ReIPC.h"
 #include "importers/qt/ReQtMaterialImporterFactory.h"
 #include "importers/qt/ReVolumeImporter.h"
-#include "ReLogger.h"
-#include "ReTools.h"
-#include "ReAcsel.h"
+#include "textures/ReColorMath.h"
+#include "textures/ReMix.h"
 
-#include "exporters/json/ReJSONMaterialExporterFactory.h"
 
 #define RE_SKIN_ADJUSTED_COAT_THICKNESS   0.20f
 #define RE_GLOSSY_ADJUSTED_COAT_THICKNESS 0.50f

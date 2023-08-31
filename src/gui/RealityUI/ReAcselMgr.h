@@ -7,8 +7,13 @@
 #define RE_ACSEL_MGR_H
 
 #include <QDialog>
+
 #include "ui_reAcselMgr.h"
-#include "ReUniversalShaderWidget.h"
+
+namespace Reality {
+  class ReUniversalShaderWidget;
+}
+
 
 namespace Reality {
 

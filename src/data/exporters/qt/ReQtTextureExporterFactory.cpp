@@ -4,6 +4,7 @@
 */
 
 #include "ReQtTextureExporterFactory.h"
+
 #include "ReBandExporter.h"
 #include "ReBricksExporter.h"
 #include "ReCheckersExporter.h"
@@ -15,9 +16,10 @@
 #include "ReGrayscaleExporter.h"
 #include "ReImageMapExporter.h"
 #include "ReMarbleExporter.h"
-#include "ReWoodExporter.h"
 #include "ReMathExporter.h"
 #include "ReMixTextureExporter.h"
+#include "ReWoodExporter.h"
+
 
 namespace Reality {
   

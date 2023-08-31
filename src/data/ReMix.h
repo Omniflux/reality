@@ -6,8 +6,9 @@
 #ifndef MIX_MATERIAL_H
 #define MIX_MATERIAL_H
 
-#include "ReMaterial.h"
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+
 
 namespace Reality {
 

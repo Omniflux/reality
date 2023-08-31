@@ -4,11 +4,13 @@
 */
 
 #include "ReGlass.h"
-#include "ReAcsel.h"
-#include "ReTools.h"
+
+#include "ReTextureCreator.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-#include "ReTextureCreator.h"
+#include "ReVolumes.h"
+#include "textures/ReConstant.h"
+
 
 // Default glass IOR, Fused Silica Glass
 #define  RE_GLASS_DEFAULT_IOR 1.459f

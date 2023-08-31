@@ -6,6 +6,7 @@
 
 #include "ReDAZStudioEvent.h"
 
+
 namespace Reality {
 
 // static vars

@@ -8,10 +8,11 @@
 #ifndef RESTORAGE_H
 #define RESTORAGE_H
 
-#include <QtCore>
-#include "dzcustomdata.h"
-#include "dzassetextraobjectio.h"
-#include "ReLogger.h"
+#include <QStack>
+#include <QVariantMap>
+#include <dzassetextraobjectio.h>
+#include <dzcustomdata.h>
+
 
 namespace Reality {
 

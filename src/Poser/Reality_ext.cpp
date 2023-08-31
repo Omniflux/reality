@@ -6,13 +6,13 @@
   This file implements the Python inerface, via Boost, for Reality.
 */
 
+#include <boost/python.hpp>
 
-#include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
-#include "ReSceneData.h"
 #include "ReLogger.h"
-
 #include "RePoserInterface.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+
 
 namespace bpython = boost::python;
 

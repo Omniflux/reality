@@ -6,9 +6,13 @@
 #ifndef LUX_DISTORTEDNOISE_TEXTURE_EXPORTER_H
 #define LUX_DISTORTEDNOISE_TEXTURE_EXPORTER_H
 
-#include "textures/ReDistortedNoise.h"
-#include "ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "textures/ReDistortedNoise.h"
+
 
 namespace Reality {
 

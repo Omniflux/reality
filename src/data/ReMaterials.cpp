@@ -3,23 +3,23 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReDefs.h"
 #include "ReMaterials.h"
+
 #include "ReCloth.h"
-#include "ReGlossy.h"
-#include "ReSkin.h"
-#include "ReMatte.h"
 #include "ReGlass.h"
-#include "ReWater.h"
+#include "ReGlossy.h"
+#include "ReHair.h"
+#include "ReLightMaterial.h"
+#include "ReMatte.h"
 #include "ReMetal.h"
 #include "ReMirror.h"
-#include "ReHair.h"
-#include "ReVelvet.h"
 #include "ReNull.h"
-#include "ReLightMaterial.h"
+#include "ReSkin.h"
+#include "ReVelvet.h"
+#include "ReWater.h"
+
 
 namespace Reality {
-
 
 ReMaterial* MaterialCreator::createMaterial( ReMaterialType matType,
                                              const ReGeometryObject* parent,

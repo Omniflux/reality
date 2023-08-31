@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReCameraEditorPlugin.h"
-#include "ReCameraEditor.h"
+
+#include <QtPlugin>
+
+#include "../ReCameraEditor.h"
 
 
 ReCameraEditorPlugin::ReCameraEditorPlugin(QObject* parent) : QObject(parent) {

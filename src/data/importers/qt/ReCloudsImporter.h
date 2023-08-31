@@ -6,9 +6,12 @@
 #ifndef QT_CLOUDS_IMPORTER_H
 #define QT_CLOUDS_IMPORTER_H
 
-#include "textures/ReClouds.h"
-#include "ReProceduralNoiseImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReProceduralNoiseImporter.h"
+#include "textures/ReClouds.h"
+
 
 namespace Reality {
 

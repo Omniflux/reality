@@ -7,12 +7,10 @@
 #ifndef REMODIFIERS_H
 #define REMODIFIERS_H
 
-
 #include "ReMaterialEditor.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meModifiers.h"
-#include "ReTimedEditor.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReTextureEditorAdapter.h"
+
 
 class ReModifiers: public ReMaterialEditor,
                    public Ui::meModifiers 

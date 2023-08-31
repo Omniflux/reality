@@ -6,9 +6,9 @@
 #ifndef RE_MATERIAL_H
 #define RE_MATERIAL_H
 
-#include "ReTexture.h"
-#include "ReTextureContainer.h"
 #include "reality_lib_export.h"
+#include "ReTextureContainer.h"
+
 
 namespace Reality {
 

@@ -3,7 +3,8 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReProceduralNoise.h"
+#include "textures/ReProceduralNoise.h"
+
 #include "ReTools.h"
 
 namespace Reality {

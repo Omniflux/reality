@@ -3,9 +3,11 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QObject>
-#include "ReMathTextureEditor.h"
+#include "RealityUI/ReMathTextureEditor.h"
+
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "textures/ReMath.h"
+
 
 ReMathTextureEditor::ReMathTextureEditor(QWidget* parent) : 
   ReAbstractTextureEditor(parent) 

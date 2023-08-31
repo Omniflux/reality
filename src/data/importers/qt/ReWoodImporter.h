@@ -6,9 +6,11 @@
 #ifndef QT_WOOD_IMPORTER_H
 #define QT_WOOD_IMPORTER_H
 
-#include "textures/ReWood.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "ReProceduralNoiseImporter.h"
+#include "textures/ReWood.h"
+
 
 namespace Reality {
 

@@ -6,8 +6,9 @@
 #ifndef RE_PROCEDURAL_NOISE_H
 #define RE_PROCEDURAL_NOISE_H
 
-#include "ReTexture.h"
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+
 
 namespace Reality {
 

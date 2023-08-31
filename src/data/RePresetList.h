@@ -7,15 +7,12 @@
 #ifndef RePresetList_H
 #define RePresetList_H
 
-#include <QtCore>
-#include <QMap>
 #include <QComboBox>
 #include <QListWidget>
+#include <QMap>
 
-#include "ReLogger.h"
 
 namespace Reality {
-
 
 /**
  * A class to store a list of values and their identifiers. This class is 

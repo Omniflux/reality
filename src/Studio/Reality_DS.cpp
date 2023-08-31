@@ -4,64 +4,51 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <boost/crc.hpp>
-
-#include <QtCore>
-#include <QtGlobal>
-#include <QSettings>
-#include <QMutableMapIterator>
-#include <QSize>
-
-#include "ReVersion.h"
 #include "Reality_DS.h"
+
+#include <boost/any.hpp>
+#include <boost/crc.hpp>
+#include <dzbasiccamera.h>
+#include <dzbricklight.h>
+#include <dzcolorproperty.h>
+#include <dzcontentmgr.h>
+#include <dzcustomdata.h>
+#include <dzdefaultmaterial.h>
+#include <dzdistantlight.h>
+#include <dzfloatproperty.h>
+#include <dzgeometry.h>
+#include <dzimagemgr.h>
+#include <dzinstancenode.h>
+#include <dzlight.h>
+#include <dzmaterial.h>
+#include <dzobject.h>
+#include <dzplugin.h>
+#include <dzprogress.h>
+#include <dzrenderoptions.h>
+#include <dzscene.h>
+#include <dzsettings.h>
+#include <dzshape.h>
+#include <dzspotlight.h>
+#include <dzstringproperty.h>
+
 #include "RealityAction.h"
 #include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
-#include "ReIPC.h"
+#include "ReAcsel.h"
+#include "ReDAZStudioEvent.h"
 #include "ReDSMaterialConverter.h"
 #include "ReDSStorage.h"
-#include "ReGeometryExporter.h"
 #include "ReDSTools.h"
-#include "ReAcsel.h"
+#include "ReGeometryExporter.h"
+#include "ReGUID.h"
+#include "ReIPC.h"
+#include "ReLuxRunner.h"
+#include "ReMatrix.h"
 #include "ReRenderContext.h"
-// #include "ReDSDebugTools.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReTools.h"
+#include "ReVersion.h"
 
-#ifdef __APPLE__
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wall"
-#endif
-
-#include "dzplugin.h"
-#include "dzversion.h"
-#include "dzappsettings.h"
-#include "dzscene.h"
-#include "dznode.h"
-#include "dzscene.h"
-#include "dzspotlight.h"
-#include "dzbricklight.h"
-#include "dzfloatproperty.h"
-#include "dzactionmgr.h"
-#include "dzobject.h"
-#include "dzfacetshape.h"
-#include "dzmaterial.h"
-#include "dzdefaultmaterial.h"
-#include "dzfacetmesh.h"
-#include "dzcustomdata.h"
-#include "dzsettings.h"
-#include "dzprogress.h"
-#include "dzcontentmgr.h"
-#include "dzimagemgr.h"
-#include "dzrendermgr.h"
-#include "dzrenderoptions.h"
-#include "dzinstancenode.h"
-#include "dzassetmgr.h"
-#include "dzstringproperty.h"
-
-#ifdef __APPLE__
-  #pragma clang diagnostic pop
-#endif
-
-#include <iostream>
 
 namespace Reality {
 

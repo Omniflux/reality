@@ -7,9 +7,12 @@
 #ifndef QT_PROCEDURALNOISE_EXPORTER_H
 #define QT_PROCEDURALNOISE_EXPORTER_H
 
-#include "textures/ReProceduralNoise.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureExporter.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

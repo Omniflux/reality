@@ -7,7 +7,8 @@
 #ifndef RE_ACTION_H
 #define RE_ACTION_H
 
-#include <QAction.h>
+#include <QAction>
+
 
 /**
  * Base class for all Reality actions. Actions inherit from QAction but 

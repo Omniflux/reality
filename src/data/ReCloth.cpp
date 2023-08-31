@@ -6,8 +6,10 @@
 //! \file
   
 #include "ReCloth.h"
-#include "textures/ReConstant.h"
+
 #include "ReTextureCreator.h"
+#include "textures/ReConstant.h"
+
 
 namespace Reality {
 

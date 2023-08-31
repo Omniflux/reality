@@ -6,14 +6,14 @@
 #ifndef RE_SKIN_EDITOR_H
 #define RE_SKIN_EDITOR_H
 
-#include <QWidget>
-#include "ReSkin.h"
 #include "ReMaterialEditor.h"
-#include "ReTimedEditor.h"
-#include "ReTextureEditorAdapter.h"
-#include "ReMaterialPreview.h"
-
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meSkin.h"
+
+namespace Reality {
+  class ReMaterialPreview;
+}
+
 
 /**
  \s widget is used to edit a Skin material.

@@ -1,9 +1,15 @@
 #ifndef RE_CLOTH_LUX_EXPORTER_H
 #define RE_CLOTH_LUX_EXPORTER_H
 
-#include "ReCloth.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReCloth.h"
+#include "ReMaterial.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+
 
 /**
   Exports a material of type ReCloth to LuxRender.

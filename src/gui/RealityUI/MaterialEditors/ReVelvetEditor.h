@@ -6,13 +6,10 @@
 #ifndef RE_VELVET_EDITOR_H
 #define RE_VELVET_EDITOR_H
 
-#include <QWidget>
-#include "ReVelvet.h"
-
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
-#include "ReTextureEditorAdapter.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meVelvet.h"
+
 
 using namespace Reality;
 

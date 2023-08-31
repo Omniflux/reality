@@ -6,8 +6,9 @@
 #ifndef RE_ALPHA_CHANNEL_MAT_H
 #define RE_ALPHA_CHANNEL_MAT_H
 
-#include "ReMaterials.h"
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+
 
 namespace Reality {
 

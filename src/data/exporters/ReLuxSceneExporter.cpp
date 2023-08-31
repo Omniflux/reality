@@ -3,21 +3,24 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "RealityBase.h"
 #include "ReLuxSceneExporter.h"
-#include "ReGeometryObject.h"
-#include "ReSceneData.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "exporters/luxcore/ReLuxcoreMaterialExporterFactory.h"
-#include "exporters/lux/ReLightExporter.h"
-#include "exporters/lux/ReVolumeExporter.h"
-#include "exporters/lux/ReLuxSIExporterFactory.h"
-#include "ReTools.h"
+
+#include <QSettings>
+
+#include "RealityBase.h"
+#include "ReCamera.h"
+#include "ReMatrix.h"
 #include "ReSceneResources.h"
-#include "ReLightMaterial.h"
+#include "ReTools.h"
 #include "exporters/lux/ReBiasPathRenderOptions.h"
+#include "exporters/lux/ReLightExporter.h"
 #include "exporters/lux/ReLuxCoreRenderer.h"
 #include "exporters/lux/ReLuxCPURenderer.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "exporters/lux/ReLuxSIExporterFactory.h"
+#include "exporters/lux/ReVolumeExporter.h"
+#include "exporters/luxcore/ReLuxcoreMaterialExporterFactory.h"
+
 
 #define MAT_DEBUG 0
 

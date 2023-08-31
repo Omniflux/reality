@@ -5,9 +5,12 @@
  */
 
 #include <QtCore>
-#include "dzobject.h"
-#include "dzshape.h"
-#include "dzmaterial.h"
+
+class DzMaterial;
+class DzModifier;
+class DzObject;
+class DzShape;
+
 
 namespace Reality {
 

@@ -6,11 +6,13 @@
 #ifndef RE_SKIN_LUX_EXPORTER_H
 #define RE_SKIN_LUX_EXPORTER_H
 
-//#include "ReMaterials.h"
-#include "ReSkin.h"
-#include "textures/ReImageMap.h"
-#include "exporters/lux/ReGlossyExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+#include "ReSkin.h"
+#include "exporters/lux/ReGlossyExporter.h"
+
 
 namespace Reality {
 

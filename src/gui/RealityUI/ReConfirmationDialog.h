@@ -8,7 +8,9 @@
 #define RE_COFIRMATION_DIALOG_H
 
 #include <QDialog>
+
 #include "ui_reConfirmationDialog.h"
+
 
 /**
  *  Simple dialog that asks for a confirmation but that also provides a checkbox

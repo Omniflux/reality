@@ -1,10 +1,12 @@
   /**
  * The Reality texture editor.
  */
-#include "ReTextureEditor.h"
-#include "ReLogger.h"
+#include "RealityUI/ReTextureEditor.h"
 
 #include <QMessageBox>
+
+#include "ReLogger.h"
+
 
 using namespace Reality;
 

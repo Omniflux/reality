@@ -3,18 +3,15 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QtCore>
-#include <QUndoCommand>
-#include "ReTextureChannelDataModel.h"
-#include "ReMaterials.h"
-#include "ReGeometryObject.h"
-
 #ifndef RE_TEXTURE_EDIT_ACTIONS_H
 #define RE_TEXTURE_EDIT_ACTIONS_H
 
+#include <QUndoCommand>
+
+#include "ReTextureChannelDataModel.h"
+
 
 using namespace Reality;
-
 
 /**
  * Base class for all the undoable actions that modify textures.

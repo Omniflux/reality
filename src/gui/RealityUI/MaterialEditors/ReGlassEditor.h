@@ -6,12 +6,11 @@
 #ifndef RE_GLASS_EDITOR_H
 #define RE_GLASS_EDITOR_H
 
-#include <QWidget>
 #include "ReGlass.h"
 #include "ReMaterialEditor.h"
-#include "ReTextureEditorAdapter.h"
-
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meGlass.h"
+
 
 /**
  This widget is used to edit a Glass material.

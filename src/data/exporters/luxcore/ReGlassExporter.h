@@ -1,9 +1,13 @@
-  #ifndef RE_GLASS_LUXCORE_EXPORTER_H
+#ifndef RE_GLASS_LUXCORE_EXPORTER_H
 #define RE_GLASS_LUXCORE_EXPORTER_H
 
+#include <boost/any.hpp>
+#include <QString>
+
+#include "reality_lib_export.h"
 #include "ReGlass.h"
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 /**
   Exporter for the Luxcore version of the Glass material.

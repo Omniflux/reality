@@ -9,8 +9,16 @@
 #define RE_TEXTURE_SELECTOR_H
 
 #include <QDialog>
-#include "ReTexture.h"
+#include <QSharedPointer>
+
 #include "ui_reTextureSelector.h"
+
+namespace Reality {
+  class ReTexture;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+  typedef QHash<QString, ReTexturePtr> ReNodeDictionary;
+}
+
 
 using namespace Reality;
 

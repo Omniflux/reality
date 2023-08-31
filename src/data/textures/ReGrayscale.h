@@ -6,12 +6,10 @@
 #ifndef RE_TEX_GRAYSCALE_H
 #define RE_TEX_GRAYSCALE_H
 
-#include "Re2DTexture.h"
-#include "ReComplexTexture.h"
-#include "ReImageMap.h"
-#include "ReTextureContainer.h"
-#include "ReTextureCreator.h"
 #include "reality_lib_export.h"
+#include "textures/Re2DTexture.h"
+#include "textures/ReComplexTexture.h"
+
 
 namespace Reality {
 

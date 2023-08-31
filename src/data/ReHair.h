@@ -6,8 +6,9 @@
 #ifndef __REHAIR_H__
 #define __REHAIR_H__
 
-#include "ReMaterials.h"
 #include "reality_lib_export.h"
+#include "ReDisplaceableMaterial.h"
+
 
 namespace Reality {
 

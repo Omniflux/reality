@@ -6,12 +6,17 @@
 #ifndef LUX_MIX_TEXTURE_EXPORTER_H
 #define LUX_MIX_TEXTURE_EXPORTER_H
 
-//#include "ReTexture.h"
-#include "textures/ReMix.h"
-#include "ReTools.h"
-#include "ReSceneData.h"
-#include "ReLuxTextureExporter.h"
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
+#include "textures/ReMix.h"
+
+namespace Reality {
+  class ReTexture;
+  typedef QSharedPointer<ReTexture> ReTexturePtr;
+}
+
 
 namespace Reality {
 

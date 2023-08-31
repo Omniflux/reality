@@ -6,10 +6,14 @@
 #ifndef RE_STATUE_LUX_EXPORTER_H
 #define RE_STATUE_LUX_EXPORTER_H
 
-//#include "ReMaterials.h"
-#include "ReMatte.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReAlphaChannelMaterial.h"
+#include "ReMaterial.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
 
 /**
   Exports the Matte material to Lux

@@ -6,14 +6,14 @@
 #ifndef RE_MATTE_EDITOR_H
 #define RE_MATTE_EDITOR_H
 
-#include <QDebug>
-#include <QWidget>
-#include "ReMatte.h"
-
 #include "ReMaterialEditor.h"
-#include "ReGeometryObject.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meMatte.h"
-#include "ReTextureEditorAdapter.h"
+
+namespace Reality {
+  class ReMatte;
+}
+
 
 using namespace Reality;
 

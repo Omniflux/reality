@@ -7,9 +7,12 @@
 #ifndef QT_MATH_EXPORTER_H
 #define QT_MATH_EXPORTER_H
 
-#include "textures/ReMath.h"
-#include "ReQtTextureExporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureExporter.h"
+#include "textures/ReMath.h"
+
 
 namespace Reality {
 

@@ -6,9 +6,14 @@
 #ifndef RE_QT_CLOTH_EXPORTER_H
 #define RE_QT_CLOTH_EXPORTER_H
 
-#include "ReCloth.h"
-#include "ReQtMaterialExporter.h"
+#include <boost/any.hpp>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReCloth.h"
+#include "ReMaterial.h"
+#include "ReQtMaterialExporter.h"
+
 
 namespace Reality {
 

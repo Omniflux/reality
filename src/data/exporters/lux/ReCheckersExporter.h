@@ -6,9 +6,13 @@
 #ifndef LUX_CHECKERS_TEXTURE_EXPORTER_H
 #define LUX_CHECKERS_TEXTURE_EXPORTER_H
 
-#include "textures/ReCheckers.h"
-#include "ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReCheckers.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+
 
 namespace Reality {
 

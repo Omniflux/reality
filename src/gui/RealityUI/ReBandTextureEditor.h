@@ -6,20 +6,17 @@
 #ifndef RE_BAND_TEXTURE_EDITOR_H
 #define RE_BAND_TEXTURE_EDITOR_H
 
-
-#include <QKeyEvent>
-
-#include "textures/ReBand.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "actions/ReTextureEditCommands.h"
-#include "ReTimedEditor.h"  
-#include "RealityBase.h"
-#include "ReMaterialPreview.h"
-#include "ReTextureEditorAdapter.h"
-
-
+#include "RealityUI/ReAbstractTextureEditor.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_teBand.h"
+
+namespace Reality {
+  enum ReTextureType;
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+}
+
 
 using namespace Reality;
 

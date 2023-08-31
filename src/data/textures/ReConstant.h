@@ -6,7 +6,8 @@
 #ifndef RE_CONSTANT_H
 #define RE_CONSTANT_H
 
-#include "Re2DTexture.h"
+#include "textures/Re2DTexture.h"
+
 
 namespace Reality {
 

@@ -6,9 +6,13 @@
 #ifndef LUX_CLOUDS_TEXTURE_EXPORTER_H
 #define LUX_CLOUDS_TEXTURE_EXPORTER_H
 
-#include "textures/ReClouds.h"
-#include "ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "textures/ReClouds.h"
+
 
 namespace Reality {
 

@@ -6,9 +6,12 @@
 #ifndef QT_CONSTANT_IMPORTER_H
 #define QT_CONSTANT_IMPORTER_H
 
-#include "textures/ReConstant.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReConstant.h"
+
 
 namespace Reality {
 

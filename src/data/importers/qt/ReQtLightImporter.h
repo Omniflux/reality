@@ -6,9 +6,10 @@
 #ifndef RE_QT_LIGHT_IMPORTER_H
 #define RE_QT_LIGHT_IMPORTER_H
 
-#include "QVariantMap"
+#include <QVariantMap>
+
 #include "ReLight.h"
-#include "ReLogger.h"
+
 
 namespace Reality {
 

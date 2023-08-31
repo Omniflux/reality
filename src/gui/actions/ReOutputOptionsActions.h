@@ -6,14 +6,16 @@
 #ifndef RE_OUTPUT_OPTIONS_ACTIONS_H
 #define RE_OUTPUT_OPTIONS_ACTIONS_H
 
+#include <QFileInfo>
+#include <QUndoCommand>
+
+#include "ReOutputUpdater.h"
+#include "ReSceneDataGlobal.h"
+
+
 /*
  * Render tab undoable Actions
  */
-#include <QUndoCommand>
-#include "ReOutputUpdater.h"
-#include "ReSceneData.h"
-#include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
 
 using namespace Reality;
 

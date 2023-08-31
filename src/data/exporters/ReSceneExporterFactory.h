@@ -7,13 +7,12 @@
 #ifndef RE_SCENE_EXPORTER_FACTORY_H
 #define RE_SCENE_EXPORTER_FACTORY_H
 
-#include <QString>
+#include <boost/any.hpp>
 #include <QHash>
-#include <QSharedPointer>
 
-#include "ReLuxSceneExporter.h"
-#include "ReQtSceneExporter.h"
-#include "ReJSONSceneExporter.h"
+#include "ReBaseSceneExporter.h"
+#include "ReLogger.h"
+
 
 namespace Reality {
 

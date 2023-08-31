@@ -4,10 +4,12 @@
 */
 
 #include "ReAlphaChannelMaterial.h"
-#include "ReTools.h"
-#include "ReTextureCreator.h"
+
 #include "ReAcsel.h"
 #include "ReGeometryObject.h"
+#include "ReTextureCreator.h"
+#include "ReTools.h"
+
 
 namespace Reality {
 

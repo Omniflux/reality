@@ -1,9 +1,11 @@
 #ifndef RE_QT_VELVET_IMPORTER_H
 #define RE_QT_VELVET_IMPORTER_H
 
-#include "ReVelvet.h"
+#include <QVariantMap>
+
 #include "ReQtMaterialImporter.h"
-#include <QVariant>
+#include "ReVelvet.h"
+
 
 /*
   Class: ReVelvetImporter

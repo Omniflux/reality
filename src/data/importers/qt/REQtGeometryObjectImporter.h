@@ -6,9 +6,11 @@
 #ifndef RE_QT_GEOMETRYOBJECT_IMPORTER_H
 #define RE_QT_GEOMETRYOBJECT_IMPORTER_H
 
-#include "ReGeometryObject.h"
-#include "ReQtMaterialImporterFactory.h"
+#include <QVariantMap>
+
 #include "ReAcsel.h"
+#include "ReGeometryObject.h"
+
 
 namespace Reality {
 

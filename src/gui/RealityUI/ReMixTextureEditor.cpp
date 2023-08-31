@@ -3,10 +3,12 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReMixTextureEditor.h"
+#include "RealityUI/ReMixTextureEditor.h"
 
-  #include "exporters/lux/ReLuxTextureExporterFactory.h"
-
+#include "ReMaterial.h"
+#include "ReTexture.h"
+#include "ReTextureChannelDataModel.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 
 
 ReMixTextureEditor::ReMixTextureEditor(QWidget* parent) : 

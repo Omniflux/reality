@@ -6,9 +6,10 @@
 #ifndef LUX_WOOD_TEXTURE_EXPORTER_H
 #define LUX_WOOD_TEXTURE_EXPORTER_H
 
-#include "textures/ReWood.h"
-#include "ReLuxTextureExporter.h"
 #include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
+#include "textures/ReWood.h"
+
 
 namespace Reality {
 

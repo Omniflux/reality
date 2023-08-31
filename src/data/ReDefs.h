@@ -5,9 +5,13 @@
 #ifndef REDEFS_H
 #define REDEFS_H
 
+#include <QColor>
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
 
- //! This macro makes it easy to mark function parameters that are not used
+
+//! This macro makes it easy to mark function parameters that are not used
 //! so that the compiler doesn't issue a warning
 #define UNUSED(param)
 
@@ -200,7 +204,6 @@ const float RE_MAT_CFG_EYE_IOR = 1.5f;
 // File extension used for the Lux include files
 #define LUX_INCLUDE_EXTENSION "lxi"
 
-#include <QColor>
 //! Realistic White color
 const QColor RE_WHITE_COLOR(240, 240, 240);
 
@@ -216,7 +219,6 @@ const QColor RE_BLACK_COLOR(15, 15, 15);
 //! The maximum size of the LogFile before being deleted. 12 Mb
 #define RE_LOG_FILE_MAX_SIZE 12582912
  
-#include <QSharedPointer>
 
 namespace Reality {
 

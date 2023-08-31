@@ -6,12 +6,13 @@
 #ifndef LUX_VOLUME_EXPORTER_H
 #define LUX_VOLUME_EXPORTER_H
 
-#include "ReVolumes.h"
-#include "ReTools.h"
-#include "ReSceneData.h"
-#include "reality_lib_export.h"
+#include <cmath>
+#include <algorithm>
+#include <QColor>
 
-#include <limits>
+#include "reality_lib_export.h"
+#include "ReVolumes.h"
+
 
 namespace Reality {
 

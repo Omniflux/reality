@@ -6,8 +6,10 @@
 #ifndef RE_QT_CAMERA_IMPORTER_H
 #define RE_QT_CAMERA_IMPORTER_H
 
-#include "QVariantMap"
+#include <QVariantMap>
+
 #include "ReCamera.h"
+
 
 namespace Reality {
 

@@ -3,14 +3,19 @@
  *  Reality plug-in
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
+#include "RealityUI/ReUniShaderSave.h"
+
 #include <QMessageBox>
-#include "ReUniShaderSave.h"
-#include "ReLogger.h"
+#include <QSettings>
+
 #include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
-#include "ReUniversalShaderSelector.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h" 
+#include "ReLogger.h"
+#include "ReLuxRunner.h"
 #include "ReTools.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "RealityUI/ReUniversalShaderSelector.h"
+
 
 //! The quality for the preview is adjusted with a granularity defined
 //! by this constant

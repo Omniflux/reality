@@ -7,9 +7,13 @@
 #ifndef RE_QT_NULL_EXPORTER_H
 #define RE_QT_NULL_EXPORTER_H
 
+#include <boost/any.hpp>
+
+#include "reality_lib_export.h"
+#include "ReMaterial.h"
 #include "ReNull.h"
 #include "ReQtMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 namespace Reality {
 

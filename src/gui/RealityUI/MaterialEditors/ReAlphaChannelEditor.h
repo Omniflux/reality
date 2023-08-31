@@ -7,11 +7,10 @@
 #ifndef RE_ALPHACHANNEL_EDITOR_H
 #define RE_ALPHACHANNEL_EDITOR_H
 
-#include <QWidget>
 #include "ReMaterialEditor.h"
-#include "ReTimedEditor.h"
-#include "ReTextureEditorAdapter.h"
+#include "RealityUI/ReTextureEditorAdapter.h"
 #include "ui_meAlpha.h"
+
 
 /**
  This widget is used to edit the Alpha Channel of a material.

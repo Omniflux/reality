@@ -6,8 +6,9 @@
 #ifndef RE_IMAGEMAP_H
 #define RE_IMAGEMAP_H
 
-#include "Re2DTexture.h"
 #include "reality_lib_export.h"
+#include "textures/Re2DTexture.h"
+
 
 namespace Reality {
 

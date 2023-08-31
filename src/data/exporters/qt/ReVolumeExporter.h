@@ -7,9 +7,11 @@
 #ifndef QT_VOLUME_EXPORTER_H
 #define QT_VOLUME_EXPORTER_H
 
-#include "ReVolumes.h"
-#include "ReMaterial.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReVolumes.h"
+
 
 namespace Reality {
 

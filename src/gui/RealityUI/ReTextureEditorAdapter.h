@@ -7,23 +7,26 @@
 #ifndef RE_TEXTURE_EDITOR_ADAPTER_H
 #define RE_TEXTURE_EDITOR_ADAPTER_H
 
-#include "ReTextureAvatar.h"
-#include "ReMaterial.h"
-#include "ReGeometryObject.h"
-#include "RealityBase.h"
-#include "RealityDataRelay.h"
-#include "ReTextureCreator.h"
-#include "actions/ReSetImageMapAction.h"
-#include "ReTextureChannelDataModel.h"
-#include "exporters/qt/ReQtTextureExporterFactory.h"
-
-#include <QtCore>
-#include <QFileDialog>
+#include <QClipboard>
 #include <QColorDialog>
-#include <QClipboard> 
+#include <QFileDialog>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QPair>
+#include <QVariantMap>
 #include <QJson/Serializer>
+
+#include "RealityBase.h"
+#include "ReGeometryObject.h"
+#include "ReMaterial.h"
+#include "ReTextureCreator.h"
+#include "ReTextureChannelDataModel.h"
+#include "actions/ReSetImageMapAction.h"
+#include "exporters/qt/ReQtTextureExporterFactory.h"
+#include "RealityUI/ReTextureAvatar.h"
+#include "textures/ReConstant.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

@@ -5,6 +5,7 @@
 
 #include "ReMirrorEditor.h"
 
+
 using namespace Reality;
 
 ReMirrorEditor::ReMirrorEditor( QWidget* parent ) : 

@@ -6,9 +6,13 @@
 #ifndef RE_WATER_LUX_EXPORTER_H
 #define RE_WATER_LUX_EXPORTER_H
 
+#include <boost/any.hpp>
+
+#include "reality_lib_export.h"
+#include "ReMaterial.h"
 #include "ReWater.h"
 #include "exporters/lux/ReLuxMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 /*
   Class: ReWaterLuxExporter

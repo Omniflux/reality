@@ -7,12 +7,10 @@
 #ifndef RE_DS_EVENT_H
 #define RE_DS_EVENT_H
 
+#include <boost/any.hpp>
 #include <QEvent>
-#include <QtCore>
 #include <QHash>
 
-#include "boost/any.hpp"
-#include "ReLogger.h"
 
 namespace Reality {
 

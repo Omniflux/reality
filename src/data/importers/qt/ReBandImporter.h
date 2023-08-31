@@ -6,9 +6,12 @@
 #ifndef QT_BAND_IMPORTER_H
 #define QT_BAND_IMPORTER_H
 
-#include "textures/ReBand.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReBand.h"
+
 
 namespace Reality {
 

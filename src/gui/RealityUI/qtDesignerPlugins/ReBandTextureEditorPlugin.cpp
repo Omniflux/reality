@@ -2,9 +2,11 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
-#include "../ReBandTextureEditor.h"
 #include "ReBandTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
+#include "../ReBandTextureEditor.h"
 
 
 ReBandTextureEditorPlugin::ReBandTextureEditorPlugin(QObject* parent) : QObject(parent) {}

@@ -3,13 +3,20 @@
  *  Reality plug-in
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
-#include <QMessageBox>
+
 #include "ReAcselMgr.h"
-#include "ReLogger.h"
-#include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
+
+#include <QClipboard>
+#include <QFileDialog>
+#include <QInputDialog>
+#include <QMessageBox>
+#include <QSettings>
+
 #include "ReAcsel.h"
+#include "RealityBase.h"
+#include "RealityUI/ReUniversalShaderWidget.h"
 #include "ui_reAcselOverwriteConfirm.h"
+
 
 #define RE_ACSEL_MGR_CONFIG_KEY "AcselMgr"
 

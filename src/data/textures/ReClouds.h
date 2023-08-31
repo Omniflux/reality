@@ -6,7 +6,8 @@
 #ifndef RE_CLOUDS_H
 #define RE_CLOUDS_H
 
-#include "ReProceduralNoise.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

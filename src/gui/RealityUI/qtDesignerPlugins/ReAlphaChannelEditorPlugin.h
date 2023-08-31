@@ -9,6 +9,7 @@
 
 #include <QtDesigner/QDesignerCustomWidgetInterface>
 
+
 /**
  * Plugin for using the ReAlphaChannelEditor widget with Qt Designer.
  */

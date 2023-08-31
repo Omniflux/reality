@@ -4,13 +4,18 @@
 */
 
 
-#include "textures/ReWood.h"
-#include "ReWoodTextureEditor.h"
+#include "RealityUI/ReWoodTextureEditor.h"
+
+#include <QUndoStack>
+
+#include "RealityBase.h"
+#include "ReMaterialPreview.h"
+#include "ReTextureChannelDataModel.h"
+#include "actions/ReTextureEditCommands.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h"
 #include "textures/ReProceduralNoise.h"
-
-
-  #include "RealityBase.h"
-  #include "exporters/lux/ReLuxTextureExporterFactory.h"
+#include "textures/ReWood.h"
 
 
 ReWoodTextureEditor::ReWoodTextureEditor( QWidget* parent ) : 

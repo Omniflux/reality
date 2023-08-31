@@ -7,11 +7,11 @@
 #ifndef RESKIN_H
 #define RESKIN_H
 
+#include "reality_lib_export.h"
+#include "ReGeometryObject.h"
 #include "ReGlossy.h"
 #include "ReTools.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReGeometryObject.h"
-#include "reality_lib_export.h"
+
 
 #define RE_SKIN_ABSORTION_COLOR  QColor(249,140,135)
 #define RE_SKIN_ABSORTION_SCALE  8.0f

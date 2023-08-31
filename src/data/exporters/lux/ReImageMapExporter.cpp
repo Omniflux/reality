@@ -4,9 +4,12 @@
 */
 
 #include "ReImageMapExporter.h"
-#include "ReSceneResources.h" 
 
+#include "ReTexture.h"
+#include "ReSceneResources.h"
 #include "textures/ReImageMap.h"
+
+
 namespace Reality {
 
 const QString ReLuxImageMapExporter::exportTexture( ReTexturePtr texbase,

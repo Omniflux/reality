@@ -4,9 +4,10 @@
 */
 
 #include "ReTexture.h"
-#include "ReComplexTexture.h"
+#include "ReTextureContainer.h"
+#include "textures/ReComplexTexture.h"
 #include "textures/ReConstant.h"
-#include "ReTools.h"
+
 
 #ifndef RE_CHECKERS_H
 #define RE_CHECKERS_H

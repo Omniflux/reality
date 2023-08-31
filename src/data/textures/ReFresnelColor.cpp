@@ -4,9 +4,9 @@
 */
 
 #include "textures/ReFresnelColor.h"
-#include "ReTextureContainer.h"
-#include "ReTools.h"
+
 #include "ReTextureCreator.h"
+
 
 namespace Reality {
 

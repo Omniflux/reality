@@ -6,9 +6,13 @@
 #ifndef LUX_FBM_TEXTURE_EXPORTER_H
 #define LUX_FBM_TEXTURE_EXPORTER_H
 
-#include "textures/ReFBM.h"
-#include "ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "textures/ReFBM.h"
+
 
 namespace Reality {
 

@@ -7,11 +7,15 @@
 #define RE_QT_TEX_IMPORTER_FACTORY_H
 
 #include <QHash>
-#include <QSharedPointer>
 
-#include "ReTexture.h"
-#include "ReQtTextureImporter.h"
 #include "reality_lib_export.h"
+#include "ReDefs.h"
+
+namespace Reality {
+  class ReQtTextureImporter;
+  typedef QSharedPointer<ReQtTextureImporter> ReQtTextureImporterPtr;
+}
+
 
 namespace Reality {
 

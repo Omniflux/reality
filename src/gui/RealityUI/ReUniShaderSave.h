@@ -6,13 +6,20 @@
 #ifndef RE_UNISHADER_SAVE_H
 #define RE_UNISHADER_SAVE_H
 
-#include "ReMaterial.h"
-#include "ReLuxRunner.h"
-#include "RePresetList.h"
-#include "ReShaderCategoryPreset.h"
-
 #include <QDialog>
+#include <QSharedPointer>
+#include <QTimer>
+
+#include "RePresetList.h"
+#include "RealityUI/ReShaderCategoryPreset.h"
 #include "ui_reUniShaderSave.h"
+
+namespace Reality {
+  class ReLuxRunner;
+  class ReMaterial;
+  typedef QSharedPointer<ReLuxRunner> ReLuxRunnerPtr;
+}
+
 
 namespace Reality {
 

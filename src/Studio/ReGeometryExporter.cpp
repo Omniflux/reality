@@ -4,23 +4,25 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <QHash>
-
 #include "ReGeometryExporter.h"
+
+#include <dzcustomdata.h>
+#include <dzface.h>
+#include <dzfacetmesh.h>
+#include <dzfigure.h>
+#include <dznode.h>
+#include <dzobject.h>
+#include <dzscene.h>
+#include <dzsettings.h>
+#include <dzshape.h>
+
+#include "ReDSMatCollection.h"
 #include "ReGeometryObject.h"
-#include "ReSceneDataGlobal.h"
 #include "ReGUID.h"
 #include "ReLogger.h"
-#include "ReDSTools.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
 
-#include "dzscene.h"
-#include "dznode.h"
-#include "dzobject.h"
-#include "dzfigure.h"
-#include "dzshape.h"
-#include "dzfacetmesh.h"
-#include "dzcustomdata.h"
-#include "dzsettings.h"
 
 namespace Reality {
 

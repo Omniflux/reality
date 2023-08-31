@@ -8,13 +8,13 @@
 #ifndef VOLUMES_H
 #define VOLUMES_H
 
-#include <QtGui>
-#include <QDataStream>
-#include "ReDefs.h"
+#include <QColor>
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
 
-namespace Reality {
 
+namespace Reality {
 
 /**
  * This class defines a volume as used in LuxRender.

@@ -6,9 +6,19 @@
 #ifndef RE_LIGHTMATERIAL_LUX_EXPORTER_H
 #define RE_LIGHTMATERIAL_LUX_EXPORTER_H
 
-#include "ReLightMaterial.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
+namespace boost {
+  class any;
+}
+
+namespace Reality {
+  class ReMaterial;
+}
+
 
 /**
  Exporter for the Light material

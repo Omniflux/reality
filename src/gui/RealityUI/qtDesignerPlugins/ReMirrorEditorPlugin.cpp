@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReMirrorEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReMirrorEditor.h"
 
 

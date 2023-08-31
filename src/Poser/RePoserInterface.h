@@ -7,14 +7,15 @@
 #define RE_POSER_INTERFACE_H
 
 #include <boost/python.hpp>
+
 #include "ReDefs.h"
-#include "ReIPC.h"
+#include "ReLightMaterial.h"
+#include "ReLogger.h"
+#include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 #include "ReSceneResources.h"
-#include "RePythonTools.h"
-#include "ReLuxGeometryExporter.h"
+#include "ReTools.h"
 
-#include <QVariant>
 
 namespace python = boost::python;
 

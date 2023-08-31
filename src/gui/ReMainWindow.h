@@ -7,14 +7,12 @@
 #define RE_MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QAction>
-#include <QNetworkAccessManager>
-#include <QNetworkRequest>
 #include <QNetworkReply>
 
+#include "RealityPanel/ReUiContainer.h"
+#include "RealityPanel/realitypanel.h"
 #include "ui_reMainWindow.h"
-#include "ReUiContainer.h"
-#include "realitypanel.h"
+
 
 /**
  The Reality main window. This is mainly a container for RealityPanel 

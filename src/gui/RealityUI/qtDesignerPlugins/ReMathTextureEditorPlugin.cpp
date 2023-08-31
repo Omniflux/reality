@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReMathTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReMathTextureEditor.h"
 
 

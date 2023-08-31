@@ -8,8 +8,11 @@
 #ifndef QT_CAMERA_EXPORTER_H
 #define QT_CAMERA_EXPORTER_H
 
-#include "ReCamera.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReCamera.h"
+
 
 namespace Reality {
 

@@ -3,11 +3,15 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#define RE_SKIN_HM_PREVIEW_ID "hairmask"
-
 #include "ReSkinEditor.h"
-#include "ReGeometryObject.h"
+
+#include "ReMaterialPreview.h"
+#include "ReSkin.h"
 #include "exporters/lux/ReSkinExporter.h"
+
+
+
+#define RE_SKIN_HM_PREVIEW_ID "hairmask"
 
 ReSkinEditor::ReSkinEditor( QWidget* parent ) :
   ReMaterialEditor(parent)

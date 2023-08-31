@@ -6,11 +6,13 @@
 #ifndef LUX_MATH_TEXTURE_EXPORTER_H
 #define LUX_MATH_TEXTURE_EXPORTER_H
 
+#include <QStringBuilder>
+
+#include "reality_lib_export.h"
+#include "ReLuxTextureExporter.h"
 #include "ReTexture.h"
 #include "textures/ReMath.h"
-#include "ReLuxTextureExporter.h"
-#include "ReTextureCreator.h"
-#include "reality_lib_export.h"
+
 
 namespace Reality {
 

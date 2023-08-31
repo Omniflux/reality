@@ -6,9 +6,16 @@
 #ifndef RE_MIRROR_LUX_EXPORTER_H
 #define RE_MIRROR_LUX_EXPORTER_H
 
-#include "ReMirror.h"
-#include "exporters/lux/ReLuxMaterialExporter.h"
+#include <boost/any.hpp>
+
 #include "reality_lib_export.h"
+#include "ReMaterial.h"
+#include "ReMirror.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxMaterialExporter.h"
+
 
 /*
   Class: ReMirrorLuxExporter

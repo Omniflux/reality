@@ -7,7 +7,6 @@
 
 #include <QtDesigner/QDesignerCustomWidgetInterface>
 
-#include "Re2DTextureMapping.h"
 
 class Re2DTextureMappingPlugin : public QObject, public QDesignerCustomWidgetInterface {
   Q_OBJECT

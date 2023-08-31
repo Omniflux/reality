@@ -3,9 +3,10 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
+#include "ReGeometryObject.h"
+#include "ReMaterial.h"
 #include "ReMatVolumesEditor.h"
 #include "ReSceneData.h"
-#include "ReVolumes.h"
 #include "ReSceneDataGlobal.h"
 
 ReMatVolumesEditor::ReMatVolumesEditor(  QWidget* parent  ) : QWidget(parent) {

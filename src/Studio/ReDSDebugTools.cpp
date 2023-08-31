@@ -1,7 +1,11 @@
 #include "ReDSDebugTools.h"
+
+#include <dznode.h>
+#include <dzobject.h>
+#include <dzshape.h>
+
 #include "ReLogger.h"
 
-#include "dznode.h"
 
 namespace Reality {
 

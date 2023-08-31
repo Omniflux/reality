@@ -5,20 +5,19 @@
 #ifndef RE_MIX_TEXTURE_EDITOR_H
 #define RE_MIX_TEXTURE_EDITOR_H
 
+#include <QSharedPointer>
 #include <QTimer>
 
-#include "ReMix.h"
-#include "ReTextureChannelDataModel.h"
-#include "ReAbstractTextureEditor.h"
-#include "ReTimedEditor.h"
-#include "ReTextureEditorAdapter.h"
-
-
-  #include "RealityBase.h"
-  #include "ReMaterialPreview.h"
-
-
+#include "RealityUI/ReAbstractTextureEditor.h"
 #include "ui_teMix.h"
+
+namespace Reality {
+  class ReMaterial;
+  class ReTextureChannelDataModel;
+  class ReTextureEditorAdapter;
+  typedef QSharedPointer<ReTextureChannelDataModel> ReTextureChannelDataModelPtr;
+  typedef QSharedPointer<ReTextureEditorAdapter> ReTextureEditorAdapterPtr;
+}
 
 
 using namespace Reality;

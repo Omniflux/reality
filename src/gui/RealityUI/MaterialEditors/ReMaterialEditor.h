@@ -2,11 +2,12 @@
 #define MATERIAL_EDITOR_H
 
 #include <QWidget>
-#include "ReMaterials.h"
-#include "ReTexture.h"
-#include "ReTimedEditor.h"
+
 #include "ReGeometryObject.h"
+#include "ReMaterial.h"
 #include "ReTextureChannelDataModel.h"
+#include "RealityUI/ReTimedEditor.h"
+
 
 using namespace Reality;
 

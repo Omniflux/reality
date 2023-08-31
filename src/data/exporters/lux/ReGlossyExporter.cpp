@@ -5,7 +5,13 @@
  */
 
 #include "ReGlossyExporter.h"
-#include "ReGlossy.h"
+
+#include <boost/any.hpp>
+
+#include "ReMaterial.h"
+#include "ReSceneData.h"
+#include "ReSceneDataGlobal.h"
+
 
 namespace Reality {
 

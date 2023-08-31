@@ -10,26 +10,20 @@
 #ifndef RE_MATERIAL_PREVIEW_H
 #define RE_MATERIAL_PREVIEW_H
 
-#include <QSharedPointer>
-#include <QBuffer>
-#include <QThread>
-#include <QQueue>
-#include <QStack>
-#include <QMutex>
-#include <QMutexLocker>
-#include <QTemporaryFile>
-
-#include <QImage>
 #include <QHash>
-#include <QMutex>
-#include <QMutexLocker>
+#include <QImage>
+#include <QQueue>
+#include <QSharedPointer>
+#include <QThread>
+#include <zmq.hpp>
 
-#include "ReLuxRunner.h"
-#include "ReLogger.h"
-#include "zmq.hpp"
 #include "zeromqTools.h"
 
-#define PREVIEW_DEBUG 0
+namespace Reality {
+  class ReLuxRunner;
+  typedef QSharedPointer<ReLuxRunner> ReLuxRunnerPtr;
+}
+
 
 // The MP part means "Material Preview"
 //! This constant defines the transport system for the communication from

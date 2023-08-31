@@ -6,9 +6,10 @@
 #ifndef RE_BAND_H
 #define RE_BAND_H
 
-#include "ReTexture.h"
-#include "ReComplexTexture.h"
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReComplexTexture.h"
+
 
 // default numbe of sub-textures that we hold in this texture
 #define REBT_DEFAULT_NUM_ENTRIES 4

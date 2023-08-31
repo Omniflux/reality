@@ -6,13 +6,14 @@
 #ifndef REALITY_DATA_RELAY_H
 #define REALITY_DATA_RELAY_H
 
-#include <QMutex>
 #include <QMutexLocker>
 #include <QThread>
+#include <zmq.hpp>
 
 #include "ReIPC.h"
-#include "zmq.hpp"
-  
+#include "ReSceneData.h"
+
+
 namespace Reality {  
 
 /**

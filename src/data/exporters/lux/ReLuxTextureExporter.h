@@ -6,14 +6,16 @@
 #ifndef LUX_BASE_TEXTURE_EXPORTER_H
 #define LUX_BASE_TEXTURE_EXPORTER_H
 
-#include "ReMaterials.h"
-#include "ReGeometryObject.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReConstant.h"
-#include "ReTools.h"
+#include <QHash>
+#include <QSharedPointer>
+
+#include "reality_lib_export.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-#include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "ReTools.h"
+#include "textures/ReConstant.h"
+
 
 namespace Reality {
 

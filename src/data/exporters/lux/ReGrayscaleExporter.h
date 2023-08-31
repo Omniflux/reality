@@ -6,11 +6,15 @@
 #ifndef LUX_GRAYSCALE_TEXTURE_EXPORTER_H
 #define LUX_GRAYSCALE_TEXTURE_EXPORTER_H
 
-#include "textures/ReGrayscale.h"
-#include "ReLuxTextureExporter.h"
-#include "exporters/lux/ReImageMapExporter.h"
-#include "exporters/lux/ReLuxTextureExporterFactory.h" 
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReGrayscale.h"
+#include "textures/ReImageMap.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "exporters/lux/ReLuxTextureExporterFactory.h" 
+
 
 namespace Reality {
 

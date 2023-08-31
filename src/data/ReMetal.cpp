@@ -4,12 +4,12 @@
 */
 
 #include "ReMetal.h"
-#include "ReDisplaceableMaterial.h"
-#include "ReTools.h"
+
 #include "ReTextureCreator.h"
+#include "ReTools.h"
+
 
 namespace Reality {
-
 
 ReMetal::ReMetal( const QString name, const ReGeometryObject* parent ) : 
   DisplaceableMaterial(name, parent),

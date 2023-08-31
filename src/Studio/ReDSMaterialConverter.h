@@ -6,14 +6,14 @@
 #ifndef REDSMATERIALCONVERT_H
 #define REDSMATERIALCONVERT_H
 
-#include "ReLogger.h"
-
-#include <QVariantMap>
-#include "dzmaterial.h"
-#include "dzproperty.h"
-#include "dzcolorproperty.h"
-#include "dzboolproperty.h"
 #include <boost/function.hpp>
+#include <QVariantMap>
+
+class DzFloatProperty;
+class DzMaterial;
+class DzProperty;
+class DzTexture;
+
 
 namespace Reality {
 

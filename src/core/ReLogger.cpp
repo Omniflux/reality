@@ -4,7 +4,9 @@
 */
 
 #include "ReLogger.h"
-#include "ReDefs.h"  
+
+#include <fstream>
+
 
 //! The log file that we use to keep track of important message from the library
 std::ofstream logFile;

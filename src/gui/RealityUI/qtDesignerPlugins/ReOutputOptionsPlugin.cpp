@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReOutputOptionsPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReOutputOptions.h"
 
 

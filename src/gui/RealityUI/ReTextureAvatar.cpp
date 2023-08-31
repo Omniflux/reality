@@ -1,14 +1,31 @@
 /**
  * The Reality texture manager.
  */
-#include <QObject>
+
+#include "RealityUI/ReTextureAvatar.h"
+
+#include <QClipboard>
+#include <QMenu>
+#include <QFileInfo>
+#include <QMessageBox>
+#include <QMouseEvent>
 #include <QJson/Parser>
 
-#include "ReTextureAvatar.h"
 #include "ReDefs.h"
-#include "textures/ReGrayscale.h"
-#include <QMessageBox>
+#include "ReLogger.h"
+#include "ReTexture.h"
+#include "ReTextureContainer.h"
+#include "RealityUI/ReTextureSelector.h"
 #include "textures/ReBand.h"
+#include "textures/ReColorMath.h"
+#include "textures/ReConstant.h"
+#include "textures/ReDistortedNoise.h"
+#include "textures/ReGrayscale.h"
+#include "textures/ReMath.h"
+#include "textures/ReMix.h"
+#include "textures/ReFresnelColor.h"
+#include "textures/ReImageMap.h"
+
 
 #define TA_MENU_EDIT      tr("Edit")
 #define TA_MENU_EXISTING  tr("Use Existing...")

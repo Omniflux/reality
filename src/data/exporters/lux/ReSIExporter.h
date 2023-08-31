@@ -9,9 +9,11 @@
 #ifndef RE_LUX_SI_EXPORTER_H
 #define RE_LUX_SI_EXPORTER_H
 
-#include "ReDefs.h"
-#include "ReSurfaceIntegrator.h"
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
+#include "ReSurfaceIntegrator.h"
+
 
 namespace Reality {
 

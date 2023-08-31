@@ -3,13 +3,16 @@
  *  Reality plug-in
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
+
+#include "RealityUI/ReAcselSave.h"
+
 #include <QMessageBox>
-#include "ReAcselSave.h"
-#include "ReLogger.h"
-#include "RealityBase.h"
-#include "ReSceneDataGlobal.h"
+#include <QSettings>
+
 #include "ReAcsel.h"
-#include "ReConfirmationDialog.h"
+#include "RealityBase.h"
+#include "RealityUI/ReConfirmationDialog.h"
+
 
 using namespace Reality;
 

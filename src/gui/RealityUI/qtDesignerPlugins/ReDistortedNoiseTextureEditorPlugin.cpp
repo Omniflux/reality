@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReDistortedNoiseTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReDistortedNoiseTextureEditor.h"
 
 

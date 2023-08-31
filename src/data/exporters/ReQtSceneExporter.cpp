@@ -4,16 +4,16 @@
  * Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include "ReVersion.h"
 #include "ReQtSceneExporter.h"
-#include "qt/ReLightExporter.h"
-#include "qt/ReGeometryObjectExporter.h"
-#include "qt/ReCameraExporter.h"
-#include "qt/ReQtMaterialExporterFactory.h"
-#include "qt/ReVolumeExporter.h"
-#include "ReGeometryObject.h"
+
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
+#include "ReVersion.h"
+#include "exporters/qt/ReCameraExporter.h"
+#include "exporters/qt/ReGeometryObjectExporter.h"
+#include "exporters/qt/ReLightExporter.h"
+#include "exporters/qt/ReVolumeExporter.h"
+
 
 using namespace Reality;
 

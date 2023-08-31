@@ -4,12 +4,9 @@
 */
 
 #include "ReVolumes.h"
-#include "ReDefs.h"
-#include "ReTools.h"
-#include "ReMaterial.h"
+
 
 using namespace Reality;
-
 
 void ReVolume::serialize( QDataStream& dataStream ) const {
   dataStream << (quint16) volumeType  << name 

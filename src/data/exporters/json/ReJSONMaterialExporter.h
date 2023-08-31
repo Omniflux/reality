@@ -8,9 +8,11 @@
 
 #include <QJson/Serializer>
 
-#include "exporters/ReMaterialExporter.h"
-#include "exporters/qt/ReQtMaterialExporterFactory.h"
 #include "reality_lib_export.h"
+#include "exporters/ReMaterialExporter.h"
+#include "exporters/qt/ReQtMaterialExporter.h"
+#include "exporters/qt/ReQtMaterialExporterFactory.h"
+
 
 namespace Reality {
 

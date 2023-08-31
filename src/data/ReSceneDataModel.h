@@ -7,9 +7,12 @@
 #define RE_SCENEDATAMODEL_H
 
 #include <QAbstractItemModel>
-#include "RealityDataRelay.h"
-#include "ReLogger.h"
-#include "ReSceneDataGlobal.h"
+#include <QIcon>
+
+#include "ReGeometryObject.h"
+#include "ReIPCCommands.h"
+#include "RealityPanel/RealityDataRelay.h"
+
 
 #define RE_MB_COL_MATERIAL 0
 #define RE_MB_COL_TYPE     1

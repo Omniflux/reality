@@ -7,8 +7,9 @@
 #ifndef REGUID_H
 #define REGUID_H
 
-#include <QtCore>
-#include "dznode.h"
+class QString;
+class DzNode;
+
 
 namespace Reality {
 

@@ -5,35 +5,33 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
 
-#include <QList>
-#include <QFile>
-#include <QDesktopServices>
+#include "ReSceneData.h"
+
+#include <QDir>
+#include <QFileInfo>
+#include <QSetIterator>
+#include <QSettings>
+#include <QVariantMap>
 #include <QJson/Parser>
 #include <QJson/Serializer>
 
-#include "ReSceneData.h"
-#include "textures/ReImageMap.h"
-#include "exporters/lux/ReLightExporter.h"
-#include "importers/qt/ReQtLightImporter.h"
+#include "ReIPC.h"
+#include "ReOpenCL.h"
+#include "ReLuxGeometryExporter.h"
+#include "ReLuxRunner.h"
+#include "ReRenderContext.h"
+#include "exporters/ReLuxSceneExporter.h"
+#include "exporters/ReJSONSceneExporter.h"
+#include "exporters/ReQtSceneExporter.h"
+#include "exporters/ReSLGSceneExporter.h"
+#include "exporters/lux/ReLuxMaterialExporterFactory.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
 #include "importers/qt/ReQtCameraImporter.h"
+#include "importers/qt/ReQtGeometryObjectImporter.h"
+#include "importers/qt/ReQtLightImporter.h"
 #include "importers/qt/ReQtSceneImporter.h"
 #include "importers/qt/ReVolumeImporter.h"
-#include "importers/qt/ReQtGeometryObjectImporter.h"
-#include "exporters/lux/ReLuxMaterialExporterFactory.h"
-#include "ReLuxGeometryExporter.h"
-#include "ReLight.h"
-#include "ReNodeConverter.h"
-#include "ReTools.h"
-#include "ReAcsel.h"
-#include "ReOpenCL.h"
-#include "ReRenderContext.h"
-#include "textures/ReConstant.h"
 
-#include "exporters/ReLuxSceneExporter.h" 
-#include "exporters/ReSLGSceneExporter.h"
-#include "exporters/ReJSONSceneExporter.h"
-
-#include "ReLogger.h"
 
 using namespace Reality;
 

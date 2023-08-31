@@ -7,9 +7,14 @@
 #ifndef RE_QT_METAL_EXPORTER_H
 #define RE_QT_METAL_EXPORTER_H
 
+#include <boost/any.hpp>
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
+#include "ReMaterial.h"
 #include "ReMetal.h"
 #include "ReQtMaterialExporter.h"
-#include "reality_lib_export.h"
+
 
 namespace Reality {
 

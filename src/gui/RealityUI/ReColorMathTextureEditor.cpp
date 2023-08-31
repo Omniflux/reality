@@ -4,12 +4,10 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
-#include <QObject>
-#include <QMessageBox>
+#include "RealityUI/ReColorMathTextureEditor.h"
 
-#include "ReColorMathTextureEditor.h"
 #include "textures/ReColorMath.h"
-#include "ReGeometryObject.h"
+
 
 using namespace Reality;
 

@@ -8,16 +8,16 @@
 #define SETIMAGEMAPACTION_H
 
 #include "ReAction.h"
-#include "RealityBase.h"
-#include "textures/ReImageMap.h"
 
-#include <QtCore>
-#include <QFileInfo>
 #include <QDesktopServices>
 #include <QFileDialog>
+#include <QFileInfo>
+#include <QSettings>
+
+#include "RealityBase.h"
+
 
 namespace Reality {
-
 
 /**
  * Action to set the file name for an image map

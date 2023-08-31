@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReColorTextureEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../ReColorTextureEditor.h"
 
 

@@ -6,12 +6,10 @@
 #ifndef RE_MIX_TEXTURE_H
 #define RE_MIX_TEXTURE_H
 
-#include "ReTexture.h"
-#include "ReTextureCreator.h"
-#include "textures/ReImageMap.h"
-#include "textures/ReComplexTexture.h"  
-#include "ReTextureContainer.h"
 #include "reality_lib_export.h"
+#include "ReTexture.h"
+#include "textures/ReComplexTexture.h"  
+
 
 namespace Reality {
 

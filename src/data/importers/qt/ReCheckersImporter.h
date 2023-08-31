@@ -6,9 +6,12 @@
 #ifndef QT_CHECKERS_IMPORTER_H
 #define QT_CHECKERS_IMPORTER_H
 
-#include "textures/ReCheckers.h"
-#include "ReQtTextureImporter.h"
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReQtTextureImporter.h"
+#include "textures/ReCheckers.h"
+
 
 namespace Reality {
 

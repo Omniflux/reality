@@ -2,8 +2,10 @@
  * Qt Designer plugin.
  */
 
-#include <QtPlugin>
 #include "ReSkinEditorPlugin.h"
+
+#include <QtPlugin>
+
 #include "../MaterialEditors/ReSkinEditor.h"
 
 

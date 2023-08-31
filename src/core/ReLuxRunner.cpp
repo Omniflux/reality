@@ -6,20 +6,15 @@
  *
  */
 
-#include <QFileInfo>
+#include "ReLuxRunner.h"
 
-#include "ReDefs.h"
+#include <QFileInfo>
+#include <QSettings>
+
 #include "RealityBase.h"
 #include "ReLogger.h"
 #include "ReRenderContext.h"
 
-#define RE_DEBUG_RUNNER  0
-
-#if RE_DEBUG_RUNNER ==1
-  #include <QDebug>
-#endif
-
-#include "ReLuxRunner.h"
 
 using namespace Reality;
 

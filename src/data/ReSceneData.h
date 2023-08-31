@@ -11,21 +11,19 @@
 #ifndef RESCENEDATA_H
 #define RESCENEDATA_H
 
-#include <QtCore>
 #include <QHash>
-#include <QSharedPointer>
+#include <QMap>
+#include <QSet>
 
-#include "ReDefs.h"
-#include "ReTexture.h"
+#include "reality_lib_export.h"
+#include "ReCamera.h"
 #include "ReGeometry.h"
 #include "ReGeometryObject.h"
-#include "ReVolumes.h"
-#include "ReCamera.h"
 #include "ReLight.h"
 #include "ReSurfaceIntegrator.h"
+#include "ReVolumes.h"
 #include "exporters/ReSceneExporterFactory.h"
-#include "ReIPC.h"
-#include "reality_lib_export.h"
+
 
 #define KEY_SCENE_WIDTH               "sceneWidth"
 #define KEY_SCENE_HEIGHT              "sceneHeight"

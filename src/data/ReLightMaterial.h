@@ -6,10 +6,13 @@
 #ifndef RELIGHTMATERIAL_H
 #define RELIGHTMATERIAL_H
 
+#include "reality_lib_export.h"
+
+#include <QSharedPointer>
+
 #include "ReMaterial.h"
 #include "ReLightStand.h"
-#include <QSharedPointer>
-#include "reality_lib_export.h"
+
 
 namespace Reality {
 

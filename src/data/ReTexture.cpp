@@ -4,10 +4,9 @@
 */
 
 #include "ReTexture.h"
-#include "ReMaterials.h"
-#include "ReDefs.h"
-#include "ReTools.h"
-#include "ReGeometryObject.h"
+
+#include "ReTextureContainer.h"
+
 
 using namespace Reality;
 

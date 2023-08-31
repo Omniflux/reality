@@ -6,14 +6,17 @@
 #ifndef ReBaseSceneExporter_H
 #define ReBaseSceneExporter_H
 
-#include "ReDefs.h"
-#include <QtCore>
 #include <boost/any.hpp>
+#include <QSharedPointer>
+
 #include "reality_lib_export.h"
 
 namespace Reality {
+  class ReSceneData;
+}
 
-class ReSceneData;
+
+namespace Reality {
 
 /**
  * Base class for all exporters that generate a representation of the 

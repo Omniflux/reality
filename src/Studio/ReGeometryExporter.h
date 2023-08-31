@@ -7,17 +7,22 @@
 #ifndef RE_GEOMETRY_EXPORTER_H
 #define RE_GEOMETRY_EXPORTER_H
 
+#include <QHash>
+#include <QSharedPointer>
+
 #include "ReGeometry.h"
-#include "ReGeometryObject.h"
-#include "ReDSMatCollection.h"
 
-#include "dzfacegroup.h"
-
-// Forward declarations
-class DzObject;
-class DzShape;
 class DzFacetMesh;
 class DzNode;
+class DzObject;
+class DzShape;
+
+namespace Reality {
+  class ReDSMatCollection;
+  class ReGeometryObject;
+  typedef QSharedPointer<ReGeometryObject> ReGeometryObjectPtr;
+}
+
 
 namespace Reality {
 

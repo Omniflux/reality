@@ -7,8 +7,10 @@
 #define RE_DISPLACEABLE_MAT_H
 
 #include <QSharedPointer>
-#include "ReAlphaChannelMaterial.h"
+
 #include "reality_lib_export.h"
+#include "ReAlphaChannelMaterial.h"
+
 
 namespace Reality {
 

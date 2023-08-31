@@ -6,13 +6,15 @@
 #ifndef RE_SI_EXPORTER_FACTORY_H
 #define RE_SI_EXPORTER_FACTORY_H
 
+#include "reality_lib_export.h"
 #include "ReSIBidirExporter.h"
+#include "ReSIDirectExporter.h"
+#include "ReSIExPhotonMapExporter.h"
 #include "ReSIPathExporter.h"
 #include "ReSIPathGPUExporter.h"
 #include "ReSISPPMExporter.h"
-#include "ReSIExPhotonMapExporter.h"
-#include "ReSIDirectExporter.h"
-#include "reality_lib_export.h"
+#include "ReSurfaceIntegrator.h"
+
 
 namespace Reality {
 

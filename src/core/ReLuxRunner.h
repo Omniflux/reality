@@ -9,11 +9,12 @@
 #ifndef RE_LUX_RUNNER
 #define RE_LUX_RUNNER
 
-#include <QProcess>
-#include <QHash>
-#include <QByteArray>
-#include "ReDefs.h"
 #include "reality_lib_export.h"
+
+#include <QProcess>
+
+#include "ReDefs.h"
+
 
 namespace Reality {
 

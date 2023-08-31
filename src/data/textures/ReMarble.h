@@ -6,8 +6,9 @@
 #ifndef RE_MARBLE_H
 #define RE_MARBLE_H
 
-#include "ReProceduralNoise.h"
 #include "reality_lib_export.h"
+#include "textures/ReProceduralNoise.h"
+
 
 namespace Reality {
 

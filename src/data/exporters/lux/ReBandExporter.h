@@ -6,9 +6,14 @@
 #ifndef LUX_BAND_TEXTURE_EXPORTER_H
 #define LUX_BAND_TEXTURE_EXPORTER_H
 
-#include "textures/ReBand.h"
-#include "exporters/lux/ReLuxTextureExporter.h"
+#include <QString>
+
 #include "reality_lib_export.h"
+#include "ReLogger.h"
+#include "ReTexture.h"
+#include "exporters/lux/ReLuxTextureExporter.h"
+#include "textures/ReBand.h"
+
 
 namespace Reality {
 

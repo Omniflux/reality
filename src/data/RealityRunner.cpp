@@ -2,11 +2,15 @@
   Reality plug-in
   Copyright (c) Pret-a-3D/Paolo Ciccone 2012. All rights reserved.    
 */
-#include <time.h>
 
 #include "RealityRunner.h"
+
+#include <QProcess>
+
 #include "RealityBase.h"
+#include "ReIPC.h"
 #include "ReLogger.h"
+
 
 namespace Reality {
 

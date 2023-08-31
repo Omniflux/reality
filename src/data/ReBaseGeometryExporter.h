@@ -6,10 +6,16 @@
 #ifndef BASE_GEOMETRY_EXPORTER_H
 #define BASE_GEOMETRY_EXPORTER_H
 
-#include <QtCore>
-#include "ReDefs.h"
-#include "ReMatrix.h"
+#include <QString>
+#include <QVariantMap>
+
 #include "reality_lib_export.h"
+#include "ReDefs.h"
+
+namespace Reality {
+  class ReMatrix;
+}
+
 
 namespace Reality {
 

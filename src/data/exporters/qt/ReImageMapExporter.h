@@ -7,10 +7,13 @@
 #ifndef QT_IMAGE_MAP_EXPORTER_H
 #define QT_IMAGE_MAP_EXPORTER_H
 
-#include "textures/ReImageMap.h"
+#include <QVariantMap>
+
+#include "reality_lib_export.h"
 #include "ReQtTextureExporter.h"
 #include "ReTools.h"
-#include "reality_lib_export.h"
+#include "textures/ReImageMap.h"
+
 
 namespace Reality {
 

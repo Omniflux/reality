@@ -4,12 +4,15 @@
  *  Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
  */
 
+#include "ReJSONSceneExporter.h"
+
+#include <boost/any.hpp>
+#include <QVariantMap>
 #include <QJson/Serializer>
 
-#include "ReJSONSceneExporter.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
-#include <boost/any.hpp>
+
 
 using namespace Reality;
 

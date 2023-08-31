@@ -4,6 +4,7 @@
 */
 
 #include "ReQtTextureImporterFactory.h"
+
 #include "ReBandImporter.h"
 #include "ReBricksImporter.h"
 #include "ReCheckersImporter.h"
@@ -17,11 +18,12 @@
 #include "ReImageMapImporter.h"
 // #include "ReInvertedMapImporter.h"
 #include "ReMarbleImporter.h"
-#include "ReWoodImporter.h"
 #include "ReMathImporter.h"
 #include "ReMixTextureImporter.h"
 // #include "ReMultiMixImporter.h"
+#include "ReWoodImporter.h"
 // #include "ReWrinkleImporter.h"
+
 
 namespace Reality {
   
