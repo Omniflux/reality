@@ -56,7 +56,7 @@ void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
   DisplaceableMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel(RE_GLOSSY_KD_CH);
   if (!tex.isNull()) {
-    channels[RE_GLOSSY_KD_CH] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels[RE_GLOSSY_KD_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
   }
   else {
     switch( baseMat->getType() ) {
@@ -64,7 +64,7 @@ void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
       case MatMetal : {
         tex = baseMat->getChannel("Kr");
         channels[RE_GLOSSY_KD_CH] = ReTexturePtr(
-                           TextureCreator::createTexture(tex->getName(), tex)
+                           ReTextureCreator::createTexture(tex->getName(), tex)
                          );
         break;
       }
@@ -72,7 +72,7 @@ void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
       case MatGlass: {
         tex = baseMat->getChannel(RE_GLOSSY_KT_CH);
         channels[RE_GLOSSY_KD_CH] = ReTexturePtr(
-                           TextureCreator::createTexture(tex->getName(), tex)
+                           ReTextureCreator::createTexture(tex->getName(), tex)
                          );
         break;
       }
@@ -85,19 +85,19 @@ void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
   
   tex = baseMat->getChannel(RE_GLOSSY_KS_CH);
   if (!tex.isNull()) {
-    channels[RE_GLOSSY_KS_CH] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels[RE_GLOSSY_KS_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels[RE_GLOSSY_KS_CH]->reparent(this);
     addTextureToCatalog(channels[RE_GLOSSY_KS_CH]);
   }
   tex = baseMat->getChannel(RE_GLOSSY_KA_CH);
   if (!tex.isNull()) {
-    channels[RE_GLOSSY_KA_CH] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels[RE_GLOSSY_KA_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels[RE_GLOSSY_KA_CH]->reparent(this);
     addTextureToCatalog(channels[RE_GLOSSY_KA_CH]);
   }
   tex = baseMat->getChannel(RE_GLOSSY_KT_CH);
   if (!tex.isNull() && channels.contains(RE_GLOSSY_KT_CH)) {
-    channels[RE_GLOSSY_KT_CH] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels[RE_GLOSSY_KT_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels[RE_GLOSSY_KT_CH]->reparent(this);
     addTextureToCatalog(channels[RE_GLOSSY_KT_CH]);
     setTranslucent(baseMat->getNamedValue("translucent").toBool());
@@ -105,7 +105,7 @@ void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
   tex = baseMat->getChannel(RE_GLOSSY_KG_CH);
   if (!tex.isNull()) {
     channels[RE_GLOSSY_KG_CH] = ReTexturePtr(
-                                  TextureCreator::createTexture(
+                                  ReTextureCreator::createTexture(
                                     tex->getName(), tex
                                   )
                                 );

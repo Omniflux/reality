@@ -1278,7 +1278,7 @@ void CommandPollingThread::synchronizeChannelTexture(
     QVariant vt;
     vt.setValue<ReTexturePtr>(
       ReTexturePtr(
-        TextureCreator::createTexture(textureName, t)
+        ReTextureCreator::createTexture(textureName, t)
       )
     );
     auto t2 = vt.value<ReTexturePtr>();
@@ -1350,7 +1350,7 @@ bool CommandPollingThread::makeNewSubTexture( const QString& objectID,
       ReTexturePtr mainTex = mat->getTexture(masterTextureName);
       if (!mainTex.isNull()) {
         ReTexturePtr newTex = ReTexturePtr(
-          TextureCreator::createTexture(
+          ReTextureCreator::createTexture(
             newTextureName, 
             textureType,
             mat.data(),

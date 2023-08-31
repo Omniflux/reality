@@ -29,7 +29,7 @@ void ReSkin::fromMaterial( const ReMaterial* baseMat ) {
   if (baseMat->getType() == MatGlossy) {
     auto tex = baseMat->getChannel(RE_GLOSSY_KT_CH);
     if (!tex.isNull() && baseMat->getNamedValue("translucent").toBool()) {
-      channels[RE_GLOSSY_KA_CH] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+      channels[RE_GLOSSY_KA_CH] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
       channels[RE_GLOSSY_KA_CH]->reparent(this);
       addTextureToCatalog(channels[RE_GLOSSY_KA_CH]);
       setTopCoat(true);

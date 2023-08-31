@@ -168,7 +168,7 @@ void ReGrayscaleTextureEditor::addNewTexture( const QString& ID,
                                               const ReTextureType texType ) 
 {
   ReTexturePtr newTex = ReTexturePtr(
-    TextureCreator::createTexture(
+    ReTextureCreator::createTexture(
       QString("%1_%2").arg(model->getNamedValue("name").toString()).arg(ID),
       texType,
       material,

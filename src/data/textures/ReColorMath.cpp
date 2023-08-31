@@ -87,7 +87,7 @@ ReColorMath::ReColorMath( const ReTexturePtr srcTex ) :
     color2 = RE_PURE_WHITE_COLOR;
     function = none;
     channels[CM_TEX1] = ReTexturePtr( 
-      TextureCreator::createTexture(
+      ReTextureCreator::createTexture(
         QString("%1_%2").arg(name).arg("tex1"), srcTex
       )
     );

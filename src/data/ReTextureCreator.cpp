@@ -26,7 +26,7 @@
 
 namespace Reality {
 
-ReTexture* TextureCreator::createTexture( const QString texName, 
+ReTexture* ReTextureCreator::createTexture( const QString texName,
                                           const ReTextureType texType,
                                           ReTextureContainer* parentMat,
                                           const ReTexture::ReTextureDataType dataType ) 
@@ -109,7 +109,7 @@ ReTexture* TextureCreator::createTexture( const QString texName,
   return tex;
 }
 
-ReTexture* TextureCreator::createTexture( const QString texName, 
+ReTexture* ReTextureCreator::createTexture( const QString texName,
                                           const ReTexturePtr baseTex ) 
 {
   ReTexture* tex = NULL;
@@ -190,7 +190,7 @@ ReTexture* TextureCreator::createTexture( const QString texName,
   return tex;  
 }
 
-ReTexturePtr TextureCreator::createTexture( const QVariantMap& data, 
+ReTexturePtr ReTextureCreator::createTexture( const QVariantMap& data,
                                             ReTextureContainer* parentMat ) 
 {
 
@@ -207,7 +207,7 @@ ReTexturePtr TextureCreator::createTexture( const QVariantMap& data,
   return tex;
 }
 
-ReTexturePtr TextureCreator::deserialize( QDataStream& dataStream, 
+ReTexturePtr ReTextureCreator::deserialize( QDataStream& dataStream,
                                           ReTextureContainer* parentMat ) 
 {
 

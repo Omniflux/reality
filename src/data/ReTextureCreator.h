@@ -21,7 +21,7 @@ namespace Reality {
 /**
  * A class factory used to de-serialize <ReTexture> classes from a stream.
  */
-class REALITY_LIB_EXPORT TextureCreator {
+class REALITY_LIB_EXPORT ReTextureCreator {
 
 public:
 

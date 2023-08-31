@@ -27,7 +27,7 @@ void ReMetal::fromMaterial( const ReMaterial* baseMat ) {
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
     channels["Kr"] = ReTexturePtr(
-                       TextureCreator::createTexture(tex->getName(), tex)
+                       ReTextureCreator::createTexture(tex->getName(), tex)
                      );
     channels["Kr"]->reparent(this);
     addTextureToCatalog(channels["Kr"]);

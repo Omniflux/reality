@@ -831,7 +831,7 @@ void ReGeometryObject::convertIRayTranslucency( ReGlossy* mat,
   auto matName = mat->getName();
   auto diffTex = mat->getKd();
   ReMixTexture* newDiff = static_cast<ReMixTexture*>(
-                            TextureCreator::createTexture(
+                            ReTextureCreator::createTexture(
                               QString("%1_diffMixer").arg(matName), 
                               TexMix,
                               mat,
@@ -841,7 +841,7 @@ void ReGeometryObject::convertIRayTranslucency( ReGlossy* mat,
   newDiff->setTexture1(diffTex);
   mat->setKd(ReTexturePtr(newDiff));
   auto t2 = static_cast<ReConstant*>(
-              TextureCreator::createTexture(
+              ReTextureCreator::createTexture(
                 QString("%1_diffMixer_t2").arg(matName), 
                 TexConstant,
                 mat,
@@ -851,7 +851,7 @@ void ReGeometryObject::convertIRayTranslucency( ReGlossy* mat,
   t2->setColor(transTex->getColor1());
   newDiff->setTexture2(ReTexturePtr(t2));
   newDiff->setMixTexture(ReTexturePtr(
-                           TextureCreator::createTexture(
+                           ReTextureCreator::createTexture(
                              QString("%1_diffMixer_driver").arg(matName),
                              transTex->getTexture1()
                            )));
@@ -1010,7 +1010,7 @@ void ReGeometryObject::createMaterial( const QString matID,
             textureIsNotWhite(matInfo.translucenceMap)) {
 
           matInfo.coatMap = ReTexturePtr(
-                              TextureCreator::createTexture(
+                              ReTextureCreator::createTexture(
                                 QString("%1_Ka").arg(matID),
                                 matInfo.translucenceMap
                               )

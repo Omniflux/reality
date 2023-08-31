@@ -26,7 +26,7 @@ void ReAlphaChannelMaterial::fromMaterial( const ReMaterial* srcMat ) {
   auto tex = srcMat->getChannel(RE_ALPHA_CHANNEL_NAME);
   if (!tex.isNull()) {
     channels[RE_ALPHA_CHANNEL_NAME] = ReTexturePtr(
-                                     TextureCreator::createTexture(tex->getName(), 
+                                     ReTextureCreator::createTexture(tex->getName(),
                                                                    tex)
                                      );    
     channels[RE_ALPHA_CHANNEL_NAME]->reparent(this);

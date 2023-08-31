@@ -257,7 +257,7 @@ void DisplaceableMaterial::fromMaterial( const ReMaterial* srcMat ) {
   auto tex = srcMat->getChannel(RE_BM_CHANNEL_NAME);
   if (!tex.isNull()) {
     channels[RE_BM_CHANNEL_NAME] = ReTexturePtr(
-                                     TextureCreator::createTexture(tex->getName(), 
+                                     ReTextureCreator::createTexture(tex->getName(),
                                                                    tex)
                                      );    
     channels[RE_BM_CHANNEL_NAME]->reparent(this);
@@ -271,7 +271,7 @@ void DisplaceableMaterial::fromMaterial( const ReMaterial* srcMat ) {
   tex = srcMat->getChannel(RE_DM_CHANNEL_NAME);
   if (!tex.isNull()) {
     channels[RE_DM_CHANNEL_NAME] = ReTexturePtr(
-                                     TextureCreator::createTexture(tex->getName(), 
+                                     ReTextureCreator::createTexture(tex->getName(),
                                                                    tex)
                                      );    
     channels[RE_DM_CHANNEL_NAME]->reparent(this);
@@ -292,7 +292,7 @@ void DisplaceableMaterial::fromMaterial( const ReMaterial* srcMat ) {
   tex = srcMat->getChannel(RE_EMISSION_CHANNEL_NAME);
   if (!tex.isNull()) {
     channels[RE_EMISSION_CHANNEL_NAME] = ReTexturePtr(
-      TextureCreator::createTexture(tex->getName(), tex)
+      ReTextureCreator::createTexture(tex->getName(), tex)
     );
     channels[RE_EMISSION_CHANNEL_NAME]->reparent(this);
     addTextureToCatalog(channels[RE_EMISSION_CHANNEL_NAME]);    

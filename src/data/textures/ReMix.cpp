@@ -51,7 +51,7 @@ ReMixTexture::ReMixTexture( const ReTexturePtr srcTex ) :
     }
     case TexColorMath: {
       ReTexturePtr t1 = ReTexturePtr( 
-        TextureCreator::createTexture(QString("%1_%2").arg(name).arg(RE_MIXT_TEX1), 
+        ReTextureCreator::createTexture(QString("%1_%2").arg(name).arg(RE_MIXT_TEX1),
           srcTex->getNamedValue("texture1").value<ReTexturePtr>())
       );
       parent->addTextureToCatalog(t1);
@@ -67,7 +67,7 @@ ReMixTexture::ReMixTexture( const ReTexturePtr srcTex ) :
       }
       else {
         t2 = ReTexturePtr( 
-          TextureCreator::createTexture(QString("%1_%2").arg(name).arg(RE_MIXT_TEX2), cmTex2)
+          ReTextureCreator::createTexture(QString("%1_%2").arg(name).arg(RE_MIXT_TEX2), cmTex2)
         );
       }
       parent->addTextureToCatalog(t2);
@@ -123,7 +123,7 @@ void ReMixTexture::initChannels( const ReTexturePtr baseTex ) {
     }
     else {
       channels[RE_MIXT_TEX1] = ReTexturePtr( 
-        TextureCreator::createTexture(tex1Name, baseTex)
+        ReTextureCreator::createTexture(tex1Name, baseTex)
       );
     }
     channels[RE_MIXT_TEX2] = ReTexturePtr( 

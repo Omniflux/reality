@@ -57,7 +57,7 @@ ReGrayscale::ReGrayscale( const ReTexturePtr srcTex ) :
   }
   else {
     newTex = ReTexturePtr( 
-      TextureCreator::createTexture(
+      ReTextureCreator::createTexture(
         QString("%1_%2").arg(name).arg("tex"), srcTex
       )
     );

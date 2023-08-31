@@ -38,7 +38,7 @@ void ReGlass::fromMaterial( const ReMaterial* baseMat ) {
   alphaStrength = 1.0;
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
-    setKt(ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex)));
+    setKt(ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex)));
   }
   // If we assigned to Kt then we are all done
   if (!tex.isNull()) {
@@ -47,7 +47,7 @@ void ReGlass::fromMaterial( const ReMaterial* baseMat ) {
 
   tex = baseMat->getChannel("Kt");
   if (!tex.isNull()) {
-    setKt(ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex)));
+    setKt(ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex)));
   }
 }
 

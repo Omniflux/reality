@@ -27,14 +27,14 @@ void ReMirror::fromMaterial( const ReMaterial* baseMat ) {
   DisplaceableMaterial::fromMaterial(baseMat);  
   auto tex = baseMat->getChannel("Kr");
   if (!tex.isNull()) {
-    channels["Kr"] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels["Kr"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels["Kr"]->reparent(this);
     addTextureToCatalog(channels["Kr"]);
   }
   else {
     tex = baseMat->getChannel("Kd");
     if (!tex.isNull()) {
-      channels["Kr"] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+      channels["Kr"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
       channels["Kr"]->reparent(this);
       addTextureToCatalog(channels["Kr"]);
     }

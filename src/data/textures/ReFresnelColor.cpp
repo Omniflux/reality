@@ -51,7 +51,7 @@ void ReFresnelColor::deserialize( QDataStream& dataStream ) {
   bool texturePresent;
   dataStream >> texturePresent;
   if (texturePresent) {
-    tex = TextureCreator::deserialize(dataStream, parent);
+    tex = ReTextureCreator::deserialize(dataStream, parent);
     parent->addTextureToCatalog(tex);
   }
 };

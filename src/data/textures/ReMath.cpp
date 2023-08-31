@@ -74,7 +74,7 @@ ReMath::ReMath( const ReTexturePtr srcTex ) :
     default: {
       if (srcTex->getDataType() == numeric) {
         channels[MT_TEX1] = ReTexturePtr( 
-          TextureCreator::createTexture(
+          ReTextureCreator::createTexture(
             QString("%1_%2").arg(name).arg("tex1"), 
             srcTex)
         );

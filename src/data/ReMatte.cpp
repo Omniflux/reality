@@ -28,7 +28,7 @@ void ReMatte::fromMaterial( const ReMaterial* baseMat ) {
   auto tex = baseMat->getChannel("Kd");
   ReMaterialType otherType = baseMat->getType();
   if (!tex.isNull()) {
-    channels["Kd"] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels["Kd"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
   }
   else {
     switch( otherType ) {
@@ -36,7 +36,7 @@ void ReMatte::fromMaterial( const ReMaterial* baseMat ) {
       case MatMetal : {
         tex = baseMat->getChannel("Kr");
         channels["Kd"] = ReTexturePtr(
-                           TextureCreator::createTexture(tex->getName(), tex)
+                           ReTextureCreator::createTexture(tex->getName(), tex)
                          );
         break;
       }
@@ -44,7 +44,7 @@ void ReMatte::fromMaterial( const ReMaterial* baseMat ) {
       case MatGlass: {
         tex = baseMat->getChannel("Kt");
         channels["Kd"] = ReTexturePtr(
-                           TextureCreator::createTexture(tex->getName(), tex)
+                           ReTextureCreator::createTexture(tex->getName(), tex)
                          );
         break;
       }
@@ -57,7 +57,7 @@ void ReMatte::fromMaterial( const ReMaterial* baseMat ) {
 
   tex = baseMat->getChannel("Kt");
   if (!tex.isNull()) {
-    channels["Kt"] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels["Kt"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels["Kt"]->reparent(this);
     addTextureToCatalog(channels["Kt"]);
     if (otherType == MatGlossy) {

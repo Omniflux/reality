@@ -93,7 +93,7 @@ public:
       for (int i = 0; i < numTextures; i++) {
         mat->addTextureToCatalog(
           ReTexturePtr(
-            TextureCreator::createTexture(textures[i].toMap(), mat.data())
+            ReTextureCreator::createTexture(textures[i].toMap(), mat.data())
           )
         );
       }
@@ -150,7 +150,7 @@ public:
           mat->deleteTexture(texName);
           mat->addTextureToCatalog(
             ReTexturePtr(
-              TextureCreator::createTexture(tex, mat.data())
+              ReTextureCreator::createTexture(tex, mat.data())
             )
           );
 

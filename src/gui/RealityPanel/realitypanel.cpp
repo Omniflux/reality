@@ -3107,7 +3107,7 @@ void RealityPanel::synchronizeMaterials( const ReMaterial* baseMat,
         QVariant vt;
         vt.setValue<ReTexturePtr>(
           ReTexturePtr(
-            TextureCreator::createTexture(textureName, t)
+            ReTextureCreator::createTexture(textureName, t)
           )
         );
         auto t2 = vt.value<ReTexturePtr>();

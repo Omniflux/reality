@@ -28,7 +28,7 @@ void ReVelvet::fromMaterial( const ReMaterial* baseMat ) {
   DisplaceableMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel("Kd");
   if (!tex.isNull()) {
-    channels["Kd"] = ReTexturePtr(TextureCreator::createTexture(tex->getName(), tex));
+    channels["Kd"] = ReTexturePtr(ReTextureCreator::createTexture(tex->getName(), tex));
     channels["Kd"]->reparent(this);
     addTextureToCatalog(channels["Kd"]);
   }  

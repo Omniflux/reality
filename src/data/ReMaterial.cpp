@@ -377,7 +377,7 @@ bool ReMaterial::makeNewTexture( const QString& channelName,
       break;
   }
   channels[channelName] = ReTexturePtr(
-    TextureCreator::createTexture( texName, textureType, this, dataType )
+    ReTextureCreator::createTexture( texName, textureType, this, dataType )
   );
 
   addTextureToCatalog(channels[channelName]);
@@ -451,7 +451,7 @@ void ReMaterial::replaceTexture( const QString channelID,
     auto texType = static_cast<ReTextureType>(textureData.value("type").toInt());
     auto texImporter = ReQtTextureImporterFactory::getImporter(texType);
     ReTexturePtr newTexture = ReTexturePtr(
-      TextureCreator::createTexture(
+      ReTextureCreator::createTexture(
         textureData.value("name").toString(), 
         texType,
         mat,
@@ -843,7 +843,7 @@ void ReMaterial::deserialize( QDataStream& dataStream ) {
   originalType = static_cast<ReMaterialType>(numOriginalType);
 
   for (int i = 0; i < numTextures; ++i) {
-    ReTexturePtr tex = TextureCreator::deserialize(dataStream, this);
+    ReTexturePtr tex = ReTextureCreator::deserialize(dataStream, this);
     addTextureToCatalog(tex);
   }  
 

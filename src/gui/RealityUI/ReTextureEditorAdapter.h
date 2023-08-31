@@ -331,7 +331,7 @@ private slots:
     if (!masterTexture.isNull()) {
       QString masterTextureName = masterTexture->getName();
       newTexture = ReTexturePtr(
-                     TextureCreator::createTexture(
+                     ReTextureCreator::createTexture(
                        QString("%1_%2")
                          .arg(masterTextureName)
                          .arg(channelID),
@@ -399,7 +399,7 @@ private slots:
     if (!masterTexture.isNull()) {
       QString masterTextureName = masterTexture->getName();
       newTex = ReTexturePtr(
-                 TextureCreator::createTexture(
+                 ReTextureCreator::createTexture(
                    QString("%1_%2")
                      .arg(masterTextureName)
                      .arg(channelID),

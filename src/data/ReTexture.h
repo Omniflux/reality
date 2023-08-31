@@ -36,7 +36,7 @@ namespace Reality {
 class ReTextureContainer;
 
 // Forward declaration for friendship
-class TextureCreator;
+class ReTextureCreator;
 
 class ReTexture;
 //! Smart pointer to a texture. Used to link textures together.
@@ -211,7 +211,7 @@ public:
     // nothing.
   }
 
-  friend class TextureCreator;
+  friend class ReTextureCreator;
 };
 
 //! A node dictionary is used to keep track of all the nodes

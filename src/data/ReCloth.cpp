@@ -131,7 +131,7 @@ void ReCloth::fromMaterial( const ReMaterial* baseMat ) {
     deleteTexture(channels[WARP_KD]->getName());
     channels[WARP_KD].clear();
     channels[WARP_KD] = ReTexturePtr(
-                          TextureCreator::createTexture(
+                          ReTextureCreator::createTexture(
                             QString("%1_warp").arg(tex->getName()), 
                             tex
                           )
@@ -142,7 +142,7 @@ void ReCloth::fromMaterial( const ReMaterial* baseMat ) {
     deleteTexture(channels[WEFT_KD]->getName());
     channels[WEFT_KD].clear();
     channels[WEFT_KD] = ReTexturePtr(
-                          TextureCreator::createTexture(
+                          ReTextureCreator::createTexture(
                             QString("%1_weft").arg(tex->getName()), 
                             tex
                           )
@@ -156,7 +156,7 @@ void ReCloth::fromMaterial( const ReMaterial* baseMat ) {
     deleteTexture(channels[WARP_KS]->getName());
     channels[WARP_KS].clear();
     channels[WARP_KS] = ReTexturePtr(
-                          TextureCreator::createTexture(
+                          ReTextureCreator::createTexture(
                             QString("%1_warp").arg(tex->getName()),
                             tex
                           )
@@ -167,7 +167,7 @@ void ReCloth::fromMaterial( const ReMaterial* baseMat ) {
     deleteTexture(channels[WEFT_KS]->getName());
     channels[WEFT_KS].clear();
     channels[WEFT_KS] = ReTexturePtr(
-                          TextureCreator::createTexture(
+                          ReTextureCreator::createTexture(
                             QString("%1_weft").arg(tex->getName()),
                             tex
                           )
