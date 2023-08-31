@@ -39,7 +39,7 @@ QString ReLuxRunner::makeGuiCommandLine( const QString& doc,
   }
   QString luxProgramPath = RealityBase::getRealityBase()
                              ->getRendererPath(LuxRender);
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
   // Using open makes the program behave as if it was started
   // from Finder, which is better in general. It also works around
   // the bug in LuxRender 1.3.1 that stops the program when non-ASCII
@@ -53,7 +53,7 @@ QString ReLuxRunner::makeGuiCommandLine( const QString& doc,
   if (!renderNodes.isEmpty()) {
     cmdLine += renderNodes;
   }
-  #elif defined(WIN32)
+  #elif defined(_WIN32)
   // Quotes to avoid issues with spaces in the paths
   QString cmdLine = QString("\"%1\" \"%2\"")
                       .arg(luxProgramPath)
@@ -327,7 +327,7 @@ ReLuxRunner::ExecutionResult ReLuxRunner::runSLG( const QString sceneFileName ) 
  */
 QString ReLuxRunner::getLuxRenderProgramName() {
   QString appName = "";
-  #ifdef WIN32
+  #if defined(_WIN32)
     appName = "luxrender.exe";
   #elif defined(__APPLE__)
     appName = "LuxRender.app/Contents/MacOS/luxrender";
@@ -347,9 +347,9 @@ QString ReLuxRunner::getLuxConsoleProgramName() {
   QString luxProgramDir = QFileInfo(
                             RealityBase::getRealityBase()->getRendererPath(LuxRender)
                           ).absolutePath();
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
     return QString("%1/luxconsole").arg(luxProgramDir);
-  #elif defined(WIN32)
+  #elif defined(_WIN32)
     return QString("%1/luxconsole.exe").arg(luxProgramDir);
   #endif
   return "";
@@ -362,9 +362,9 @@ QString ReLuxRunner::getLuxConsoleProgramName() {
  */  
 QString ReLuxRunner::getSLGRenderProgramName() {
   QString appName = "";
-  #ifdef Q_WS_WIN
+  #if defined(_WIN32)
     appName = "smallluxgpu2.exe";
-  #elif defined(Q_WS_MAC)
+  #elif defined(__APPLE__)
     appName = "slg2";
   #else
     // Not really an option but you never know...

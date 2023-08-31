@@ -49,7 +49,7 @@ const QString ReLuxImageMapExporter::exportTexture( ReTexturePtr texbase,
 
   QString imFileName = tex->getFileName();
 
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
   imFileName.replace('\\', '/');
 #endif
   if (!isForPreview && RealitySceneData->hasTextureCollection()) {

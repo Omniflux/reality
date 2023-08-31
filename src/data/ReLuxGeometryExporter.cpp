@@ -6,7 +6,7 @@
 #include "ReLuxGeometryExporter.h"
 
 // For isnan/_isnan support
-#ifdef WIN32
+#if defined(_WIN32)
 #include <float.h>
 #else
 #include <cmath>
@@ -29,7 +29,7 @@
 
 
 // NAN checking
-#ifdef WIN32
+#if defined(_WIN32)
 #define CHECK_NAN(x) ( _isnan(x) ? 0.0 : x )
 #define IS_NAN _isnan
 #else

@@ -78,7 +78,7 @@ QString ReLuxLightExporter::exportMeshLight( const ReLightPtr light ) {
   }
   
   if (iesFile != "") {
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
     str += QString(" \"string iesname\" [\"%1\"] ").arg(iesFile.replace('\\', '/')); 
 #else 
     str += QString(" \"string iesname\" [\"%1\"] ").arg(iesFile); 
@@ -139,7 +139,7 @@ QString ReLuxLightExporter::exportSpotLight( const ReLightPtr light ) {
   auto appId = RealityBase::getRealityBase()->getHostAppID();
   const ReMatrix* matrix = light->getMatrix();
 
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
   QString lightImagemap = light->getTexture().replace('\\', '/');  
 #else 
   QString lightImagemap = light->getTexture();  
@@ -255,7 +255,7 @@ QString ReLuxLightExporter::exportIBLLight( const ReLightPtr light ) {
              "\"string mapname\" [\"%1\"] \"float gain\" [%2] "
              "\"string mapping\" [\"%3\"] \"float gamma\" [%4]\n"
            )
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
            .arg(mapFileName.replace('\\', '/'))
 #else
            .arg(mapFileName)
@@ -325,7 +325,7 @@ QString ReLuxLightExporter::exportPointLight( const ReLightPtr light ) {
 
   if (iesFile != "") {
     str += QString(" \"string iesname\" [\"%1\"] ")
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
            .arg(iesFile);            
 #else 
            .arg(iesFile.replace('\\', '/'));

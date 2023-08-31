@@ -6,7 +6,7 @@
 
 #include "ReMainWindow.h"
 
-#ifdef WIN32
+#if defined(_WIN32)
 #include <windows.h>
 #endif
 
@@ -192,7 +192,7 @@ void ReMainWindow::showMessage( const QString& msg ) {
 void ReMainWindow::openRUG() {
   QFileInfo progPath(QCoreApplication::applicationFilePath());
 
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
     QFileInfo rugPath(QString("%1/../../../Reality_Users_Guide.pdf").arg(progPath.absolutePath()));
   #elif defined(_WIN32)
     QFileInfo rugPath(QString("%1/Reality_Users_Guide.pdf").arg(progPath.absolutePath()));
@@ -298,7 +298,7 @@ void ReMainWindow::saveWatermark( const QUrl& link ) {
 }
 
 void ReMainWindow::bringToFront() {
-  #ifdef WIN32
+  #if defined(_WIN32)
     // Hack to bring Reality in the foreground on Window
     ::SetWindowPos(effectiveWinId(), HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW);
     ::SetWindowPos(effectiveWinId(), HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW);

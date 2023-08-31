@@ -201,7 +201,7 @@ ReTexturePtr ReNodeConverter::convertImageMap( const QString& nodeName,
                                                const NodeHint hint ) 
 {
   auto fn = node["fileName"].toString();
-  #if WIN32 
+  #if defined(_WIN32)
   fn.replace('\\','/');
   #endif
   ImageMapPtr tex = ImageMapPtr(

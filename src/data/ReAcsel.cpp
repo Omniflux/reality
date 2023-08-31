@@ -16,7 +16,7 @@
 #include "RealityBase.h"
 
 
-#ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
+#if defined(SQLITECPP_ENABLE_ASSERT_HANDLER)
 namespace SQLite
 {
     void assertion_failed(const char* apFile, const long apLine, const char* apFunc, const char* apExpr, const char* apMsg)

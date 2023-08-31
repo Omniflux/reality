@@ -70,7 +70,7 @@ public:
                  "\"string filename\" [\"%2\"] \"string channel\" [\"%3\"] "
                )
                .arg(assignedName == "" ? tex->getUniqueName() : assignedName)  
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
                .arg(innerTex->getNamedValue("fileName").toString().replace('\\', '/'))
 #else
                .arg(innerTex->getNamedValue("fileName").toString())

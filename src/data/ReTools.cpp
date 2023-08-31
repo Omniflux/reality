@@ -1,6 +1,6 @@
-#ifdef __APPLE__
+#if defined(__APPLE__)
 #include <mach-o/dyld.h>
-#elif defined(WIN32)
+#elif defined(_WIN32)
 #include <Windows.h>
 #endif
 
@@ -27,7 +27,7 @@ namespace Reality {
 //! One Poser Native Unit is 2.62128 meters
 #define RE_PNU_TO_METERS 2.62128
 
-#ifdef __APPLE__
+#if defined(__APPLE__)
 
 // Retrieves the full path of the current running application. Mac OS version
 QByteArray getApplicationPath() {
@@ -39,7 +39,7 @@ QByteArray getApplicationPath() {
   return appName;
 }
 
-#elif defined(WIN32)
+#elif defined(_WIN32)
 // Retrieves the full path of the current running application. Windows version
 QByteArray getApplicationPath()  {
   QByteArray appName;
@@ -52,7 +52,7 @@ QByteArray getApplicationPath()  {
 #endif
 
 const QString normalizeRuntimePath( const QString& filePath ) {
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
   int index = filePath.indexOf("\\runtime\\", 0, Qt::CaseInsensitive);
   // Try again in case the path is using / instead
   if (index == -1) {
@@ -70,7 +70,7 @@ const QString normalizeRuntimePath( const QString& filePath ) {
 
 
 QString toNativeFilePath( QString filePath ) {
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
   return filePath.replace('/', '\\');
 #else
   return filePath;
@@ -78,7 +78,7 @@ QString toNativeFilePath( QString filePath ) {
 }
 
 QString toStandardFilePath( QString filePath ) {
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
   return filePath.replace('\\', '/');
 #else
   return filePath;
@@ -510,17 +510,13 @@ void transformImageMaps( ReTexturePtr tex, ReTextureTransfFunc f ) {
 uint getNumCPUs() {
    uint cpuCount = 1;
 
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
 
    SYSTEM_INFO    si;
    GetSystemInfo(&si);
    cpuCount = si.dwNumberOfProcessors;
 
-#elif defined(Q_OS_UNIX) && !defined(Q_OS_MACX)
-
-   cpuCount = sysconf(_SC_NPROCESSORS_ONLN);
-
-#elif defined(Q_OS_MACX)
+#elif defined(__APPLE__)
 
    kern_return_t    kr;
    struct host_basic_info hostinfo;

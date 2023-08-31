@@ -69,7 +69,7 @@ public:
     ReMetal::MetalType mType = mat->getMetalType();
     QString fresnelTextureName = QString("%1_fresnel").arg(matName);
 
-#if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#if defined(_WIN32)
     fresnelTextureName.replace('\\', '/');
 #endif
 

@@ -3,7 +3,7 @@
   Copyright (c) Pret-a-3D/Paolo Ciccone 2014. All rights reserved.    
 */
 
-#ifdef __APPLE__
+#if defined(__clang__)
   #pragma clang diagnostic ignored "-Wswitch"
 #endif
 

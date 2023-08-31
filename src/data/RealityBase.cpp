@@ -8,7 +8,7 @@
 
 #include "RealityBase.h"
 
-#ifdef WIN32
+#if defined(_WIN32)
 #include <Windows.h>
 #elif defined(__APPLE__)
 #include <dlfcn.h>
@@ -46,7 +46,7 @@ QString RealityLibPath;
  * Initialization of the library path
  ***************************************************/
 
-#ifdef WIN32 
+#if defined(_WIN32)
 
 // From: http://www.codeguru.com/cpp/w-p/dll/tips/article.php/c3635/Tip-Detecting-a-HMODULEHINSTANCE-Handle-Within-the-Module-Youre-Running-In.htm
 #if _MSC_VER >= 1300    // for VC 7.0
@@ -86,11 +86,11 @@ RealityBase::RealityBase() {
                        .arg(REALITY_PATCH_VERSION)
                        .arg(REALITY_BUILD_NUMBER);
 
-# ifdef Q_OS_MAC
+#if defined(__APPLE__)
   osType = MAC_OS;
-#elif defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+#elif defined(_WIN32)
   osType = WINDOWS;
-#elif defined(Q_OS_LINUX)    
+#elif defined(__linux__)
   osType = LINUX;
 #endif
 }
@@ -359,9 +359,9 @@ QString RealityBase::getRealityExecutablePath() {
   // both the plugin library and the executable are in the same
   // dir, inside the Runtime/Python/addons dir of Poser
   baseDir = QFileInfo(RealityLibPath).absolutePath();
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
     QFileInfo fi(QString("%1/Reality.app/Contents/MacOS/Reality").arg(baseDir));
-  #elif defined(WIN32)
+  #elif defined(_WIN32)
     QFileInfo fi(QString("%1/Reality.exe").arg(baseDir));    
   #endif
   if (fi.exists() && fi.isExecutable()) {
@@ -369,7 +369,7 @@ QString RealityBase::getRealityExecutablePath() {
   }
   // Let's check if this is the instance loaded by the Reality executable.
   // On OS X the library is inside the bundle
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
     fi.setFile((QString("%1/Reality").arg(baseDir)));
     if (fi.exists() && fi.isExecutable()) {
       return fi.absolutePath();
@@ -380,9 +380,9 @@ QString RealityBase::getRealityExecutablePath() {
   // In this case we check the configuration, the installer sets it.
   baseDir = getConfiguration()->value(RE_CFG_REALITY_DS_LOCATION).toString();
   RE_LOG_INFO() << "  Searching " << baseDir;
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
   fi.setFile(QString("%1/Reality.app/Contents/MacOS/Reality").arg(baseDir));
-  #elif defined(WIN32)
+  #elif defined(_WIN32)
   fi.setFile(QString("%1/Reality.exe").arg(baseDir));
   #endif
   if (fi.exists()) {
@@ -405,11 +405,11 @@ QString RealityBase::getRendererPath( const ReRenderers renderer ) {
 }
 
 QString findLuxLocation( const QString& basePath ) {
-  #ifdef __APPLE__
+  #if defined(__APPLE__)
   QFileInfo appInfo(QString("%1/%2/LuxRender.app/Contents/MacOS/luxrender")
                       .arg(basePath)
                       .arg(LUX_SUBDIR));
-  #elif defined(WIN32)
+  #elif defined(_WIN32)
   QFileInfo appInfo(QString("%1/%2/luxrender.exe")
                       .arg(basePath)
                       .arg(LUX_SUBDIR));
@@ -447,7 +447,7 @@ QString findSLGLocation( const QString& basePath ) {
 
 void RealityBase::findRenderers() {
   QString searchRoot = getRealityExecutablePath();
-  #if __APPLE__
+  #if defined(__APPLE__)
     // The basePath is expected to be 
     // "[install root]/Reality.app/Contents/MacOS"
     searchRoot += "/../../..";

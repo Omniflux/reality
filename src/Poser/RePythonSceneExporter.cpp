@@ -14,7 +14,7 @@
 #include "ReSceneDataGlobal.h"
 
 
-#ifdef __clang__
+#if defined(__clang__)
 // Avoid being harassed about missing switch cases and other thing.
 #pragma clang diagnostic ignored "-Wswitch"
 #endif

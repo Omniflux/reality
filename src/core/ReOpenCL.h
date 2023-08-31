@@ -7,7 +7,7 @@
 #ifndef RE_OPENCL_H
 #define RE_OPENCL_H
 
-#ifdef __APPLE__
+#if defined(__APPLE__)
 #include <OpenCL/cl.h>
 #else
 #include <CL/cl.h>

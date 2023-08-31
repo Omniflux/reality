@@ -209,11 +209,11 @@ void ReImageMapManager::showTextureInFolder() {
 
 void ReImageMapManager::showInFileManager( const QString &pathIn) {
     // Mac, Windows support folder or file.
-#if defined(Q_OS_WIN)
+#if defined(_WIN32)
     QStringList args; 
     args << "/select," << QDir::toNativeSeparators(pathIn);
     QProcess::startDetached("explorer", args);
-#elif defined(Q_OS_MAC)
+#elif defined(__APPLE__)
     QStringList scriptArgs;
     scriptArgs << QLatin1String("-e")
                << QString::fromLatin1("tell application \"Finder\" to reveal POSIX file \"%1\"")

@@ -19,7 +19,7 @@ namespace Reality {
 
 
 //! Inserts debug statements in the Lux scene
-#ifdef DEBUG_LUX
+#if defined(DEBUG_LUX)
 #define LUX_DEBUG(str) str += QString("#! DEBUG: %1 @ %2\n").arg(__FILE__).arg(__LINE__);
 #else 
 #define LUX_DEBUG(str)

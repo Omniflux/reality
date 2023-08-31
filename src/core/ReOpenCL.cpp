@@ -50,9 +50,9 @@ ReOpenCL::ReOpenCL() {
   hasOpenCL = false;
 
   // Try to dynamically load the library 
-#if __APPLE__
+#if defined(__APPLE__)
   QString libpath = "/System/Library/Frameworks/OpenCL.framework/OpenCL";
-#elif defined(WIN32)
+#elif defined(_WIN32)
   // QString libpath = "C:/Windows/System32/OpenCL";
   QString libpath = "OpenCL";
 #endif
