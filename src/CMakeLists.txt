@@ -485,7 +485,7 @@ set (SRC_GROUP_TEXTURES_MATS
 	data/textures/ReImageMap.cpp
 	data/textures/ReMath.cpp
 	data/textures/ReProceduralNoise.cpp
-	data/ReMaterials.cpp
+	data/ReMaterialCreator.cpp
 	data/ReMaterial.cpp
 	data/ReCloth.cpp
 	data/ReGlossy.cpp

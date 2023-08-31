@@ -1,5 +1,5 @@
 /**
- * File: ReMaterials.h
+ * File: ReMaterialCreator.h
  * Reality plug-in
  * Copyright 2010-2012 Pret-a-3D/Paolo Ciccone. All rights reserved
  */

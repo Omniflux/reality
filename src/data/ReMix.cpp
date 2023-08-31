@@ -5,7 +5,7 @@
 
 #include "ReMix.h"
 
-#include "ReMaterials.h"
+#include "ReMaterialCreator.h"
 
 
 using namespace Reality;

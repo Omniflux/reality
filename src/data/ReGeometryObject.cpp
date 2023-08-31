@@ -15,7 +15,7 @@
 #include "ReGlass.h"
 #include "ReGlossy.h"
 #include "ReLightMaterial.h"
-#include "ReMaterials.h"
+#include "ReMaterialCreator.h"
 #include "ReMaterialPropertyKeys.h"
 #include "ReMatte.h"
 #include "ReMetal.h"

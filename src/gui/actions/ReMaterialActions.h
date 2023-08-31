@@ -8,7 +8,7 @@
 
 #include <QUndoCommand>
 
-#include "ReMaterials.h"
+#include "ReMaterialCreator.h"
 #include "ReSceneData.h"
 #include "ReSceneDataGlobal.h"
 
