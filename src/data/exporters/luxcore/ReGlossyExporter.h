@@ -13,7 +13,7 @@
 #include "exporters/luxcore/ReLuxcoreMaterialExporter.h"
 
 namespace Reality {
-  class Glossy;
+  class ReGlossy;
   class ReMaterial;
 }
 
@@ -26,7 +26,7 @@ namespace Reality {
 class REALITY_LIB_EXPORT ReGlossyLuxcoreExporter : public ReLuxcoreMaterialExporter
 {
 protected:
-  const Glossy* mat;
+  const ReGlossy* mat;
   const QString exportBaseMaterial( const QString matName );
   void exportKs( QString& ksTextures, QString& ksValue );
 

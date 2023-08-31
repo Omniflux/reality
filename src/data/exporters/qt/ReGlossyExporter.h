@@ -28,7 +28,7 @@ public:
     if (basemat->getType() != MatGlossy) {
       return;
     }
-    auto mat = static_cast<const Glossy*>(basemat);
+    auto mat = static_cast<const ReGlossy*>(basemat);
     addBasicInformation(mat);
     matData["surfaceFuzz"]   = mat->getSurfaceFuzz();
     matData["uGlossiness"]   = mat->getUGlossiness();

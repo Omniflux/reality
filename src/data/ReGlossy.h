@@ -22,7 +22,7 @@ namespace Reality {
 /**
  The Glossy and Glossy Translucent material.
  */
-class REALITY_LIB_EXPORT Glossy: public DisplaceableMaterial {
+class REALITY_LIB_EXPORT ReGlossy: public DisplaceableMaterial {
 protected:
   // Used as a placeholder and for the rare case when 
   // a texture might become null
@@ -39,11 +39,11 @@ protected:
 
 public:
 
-   explicit Glossy( const QString name, const ReGeometryObject* parent);
+   explicit ReGlossy( const QString name, const ReGeometryObject* parent);
 
   void fromMaterial( const ReMaterial* baseMat );
 
-  ~Glossy();
+  ~ReGlossy();
 
   void setKd(const ReTexturePtr _Kd);
 
@@ -170,7 +170,7 @@ public:
   QString toString();
 };
 
-typedef QSharedPointer<Glossy> ReGlossyPtr;
+typedef QSharedPointer<ReGlossy> ReGlossyPtr;
 
 
 } // namespace

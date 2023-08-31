@@ -103,7 +103,7 @@ void ReGlossyLuxcoreExporter::exportMaterial( const ReMaterial* basemat,
   if ( matType != MatGlossy && matType != MatSkin ) {
     return;
   }  
-  mat = static_cast<const Glossy*>(basemat);
+  mat = static_cast<const ReGlossy*>(basemat);
   QString str;
   QString matName = mat->getUniqueName();
 

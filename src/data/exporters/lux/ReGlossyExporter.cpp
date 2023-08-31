@@ -91,7 +91,7 @@ void ReGlossyLuxExporter::exportMaterial( const ReMaterial* basemat, boost::any&
     result = QString();
     return;
   }  
-  mat = static_cast<const Glossy*>(basemat);
+  mat = static_cast<const ReGlossy*>(basemat);
   QString str;
   QString matName = mat->getUniqueName();
 

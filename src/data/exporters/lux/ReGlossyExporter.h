@@ -208,7 +208,7 @@ public:
 };
 
 
-class ReGlossyLuxExporter : public ReBasicGlossyLuxExporter<Glossy> {
+class ReGlossyLuxExporter : public ReBasicGlossyLuxExporter<ReGlossy> {
 
 protected:
   const QString exportBaseMaterial( const QString matName );

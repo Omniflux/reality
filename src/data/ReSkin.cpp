@@ -17,15 +17,15 @@
 
 namespace Reality {
 
-ReSkin::ReSkin( const QString name, const ReGeometryObject* parent ) : 
-  Glossy(name, parent) 
+ReSkin::ReSkin( const QString name, const ReGeometryObject* parent ) :
+  ReGlossy(name, parent)
 {
   init();
 }
 
 void ReSkin::fromMaterial( const ReMaterial* baseMat ) {
   // Most of the work is done by the superclass
-  Glossy::fromMaterial(baseMat);
+  ReGlossy::fromMaterial(baseMat);
   if (baseMat->getType() == MatGlossy) {
     auto tex = baseMat->getChannel(RE_GLOSSY_KT_CH);
     if (!tex.isNull() && baseMat->getNamedValue("translucent").toBool()) {
@@ -107,7 +107,7 @@ void ReSkin::createSSSVolume() {
 */
 void ReSkin::serialize( QDataStream& dataStream ) const { 
   // Call the base class serializer
-  Glossy::serialize(dataStream);
+  ReGlossy::serialize(dataStream);
   dataStream << fresnelAmount     
              << sssEnabled             
              << hairMask
@@ -117,7 +117,7 @@ void ReSkin::serialize( QDataStream& dataStream ) const {
 };
 
 void ReSkin::deserialize( QDataStream& dataStream ) {
-  Glossy::deserialize( dataStream );
+  ReGlossy::deserialize( dataStream );
   dataStream >> fresnelAmount   
              >> sssEnabled             
              >> hairMask
@@ -144,7 +144,7 @@ void ReSkin::setNamedValue( const QString& vname, const QVariant& value ) {
     setKhm(value.value<ReTexturePtr>());
   }
   else {
-    Glossy::setNamedValue(vname, value);
+    ReGlossy::setNamedValue(vname, value);
   }
 }
 
@@ -167,7 +167,7 @@ const QVariant ReSkin::getNamedValue( const QString& vname ) const {
     return val;
   }
   else {
-    return Glossy::getNamedValue(vname);
+    return ReGlossy::getNamedValue(vname);
   }
   return val;
 }

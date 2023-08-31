@@ -14,7 +14,7 @@ const QColor RE_GLOSSY_DEFAULT_KS(25, 25, 25);
 
 namespace Reality {
 
-Glossy::Glossy( const QString name, const ReGeometryObject* parent) : 
+ReGlossy::ReGlossy( const QString name, const ReGeometryObject* parent) :
   DisplaceableMaterial(name, parent) {
   type          = originalType = MatGlossy;
   uGlossiness   = vGlossiness = 5000;
@@ -52,7 +52,7 @@ Glossy::Glossy( const QString name, const ReGeometryObject* parent) :
   addTextureToCatalog(channels[RE_GLOSSY_KT_CH]);
 }
 
-void Glossy::fromMaterial( const ReMaterial* baseMat ) {
+void ReGlossy::fromMaterial( const ReMaterial* baseMat ) {
   DisplaceableMaterial::fromMaterial(baseMat);
   auto tex = baseMat->getChannel(RE_GLOSSY_KD_CH);
   if (!tex.isNull()) {
@@ -119,10 +119,10 @@ void Glossy::fromMaterial( const ReMaterial* baseMat ) {
   }
 }
 
-Glossy::~Glossy() {
+ReGlossy::~ReGlossy() {
 }
 
-void Glossy::setKd(const ReTexturePtr Kd) {
+void ReGlossy::setKd(const ReTexturePtr Kd) {
   // Clear the channel
   setChannel(RE_GLOSSY_KD_CH, "");
   channels[RE_GLOSSY_KD_CH] = Kd;
@@ -130,7 +130,7 @@ void Glossy::setKd(const ReTexturePtr Kd) {
   addTextureToCatalog(channels[RE_GLOSSY_KD_CH]);
 }
 
-void Glossy::setKs(const ReTexturePtr newKs) {
+void ReGlossy::setKs(const ReTexturePtr newKs) {
   // Clear the channel
   setChannel(RE_GLOSSY_KS_CH, "");
 
@@ -141,7 +141,7 @@ void Glossy::setKs(const ReTexturePtr newKs) {
   // setTextureGamma(channels[RE_GLOSSY_KS_CH], 1.0);
 }
 
-void Glossy::setKa(const ReTexturePtr newKa) {
+void ReGlossy::setKa(const ReTexturePtr newKa) {
   // Clear the channel
   setChannel(RE_GLOSSY_KA_CH, "");
 
@@ -150,7 +150,7 @@ void Glossy::setKa(const ReTexturePtr newKa) {
   addTextureToCatalog(channels[RE_GLOSSY_KA_CH]);
 }
 
-void Glossy::setKt(const ReTexturePtr newKt) {
+void ReGlossy::setKt(const ReTexturePtr newKt) {
   // Clear the channel
   setChannel(RE_GLOSSY_KT_CH, "");
 
@@ -159,17 +159,17 @@ void Glossy::setKt(const ReTexturePtr newKt) {
   addTextureToCatalog(channels[RE_GLOSSY_KT_CH]);
 }
 
-const ReTexturePtr Glossy::getKg() const {
+const ReTexturePtr ReGlossy::getKg() const {
   return channels[RE_GLOSSY_KG_CH];
 };
 
-void Glossy::setKg( ReTexturePtr newVal ) {
+void ReGlossy::setKg( ReTexturePtr newVal ) {
   channels[RE_GLOSSY_KG_CH] = newVal;
   channels[RE_GLOSSY_KG_CH]->reparent(this);
   addTextureToCatalog(channels[RE_GLOSSY_KG_CH]);  
 };
 
-void Glossy::serialize( QDataStream& dataStream ) const { 
+void ReGlossy::serialize( QDataStream& dataStream ) const {
   // Call the base class serializer
   ReMaterial::serialize(dataStream);
   dataStream << uGlossiness << vGlossiness 
@@ -178,7 +178,7 @@ void Glossy::serialize( QDataStream& dataStream ) const {
   DisplaceableMaterial::serialize(dataStream);
 };
 
-void Glossy::deserialize( QDataStream& dataStream ) {
+void ReGlossy::deserialize( QDataStream& dataStream ) {
   ReMaterial::deserialize( dataStream );
   dataStream >> uGlossiness >> vGlossiness 
              >> surfaceFuzz >> coatThickness 
@@ -187,7 +187,7 @@ void Glossy::deserialize( QDataStream& dataStream ) {
 }
 
 
-void Glossy::setNamedValue( const QString& name, const QVariant& value ) {
+void ReGlossy::setNamedValue( const QString& name, const QVariant& value ) {
   if (name == "vGlossiness") {
     vGlossiness = value.toInt();
   }
@@ -227,7 +227,7 @@ void Glossy::setNamedValue( const QString& name, const QVariant& value ) {
 }
 
 
-const QVariant Glossy::getNamedValue( const QString& name ) const {
+const QVariant ReGlossy::getNamedValue( const QString& name ) const {
   QVariant val;
   if (name == "vGlossiness") {
     return vGlossiness;
@@ -268,7 +268,7 @@ const QVariant Glossy::getNamedValue( const QString& name ) const {
   return val;
 }
 
-QString Glossy::toString() {
+QString ReGlossy::toString() {
   QString desc =  QString("Glossy: %1, %2, %3, %4, %5\n")
                     .arg(name)
                     .arg(uGlossiness)

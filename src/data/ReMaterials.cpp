@@ -30,7 +30,7 @@ ReMaterial* MaterialCreator::createMaterial( ReMaterialType matType,
       return new ReCloth(matName, parent);
     }
     case MatGlossy: {
-      return new Glossy(matName, parent);
+      return new ReGlossy(matName, parent);
     }
     case MatSkin: {
       return new ReSkin(matName, parent);

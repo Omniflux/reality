@@ -101,7 +101,7 @@ void ReGlossyEditor::setData( ReMaterial* newMat,
   currentMaterial = newMat;
   textureChannelModel = tcm;
   
-  Glossy* mat = static_cast<Glossy*>(currentMaterial);
+  ReGlossy* mat = static_cast<ReGlossy*>(currentMaterial);
 
   KdAdapter->setMaterial(newMat);
   KdAdapter->setTextureChannelModel(tcm);

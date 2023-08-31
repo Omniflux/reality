@@ -818,7 +818,7 @@ bool textureIsNotWhite( const ReTexturePtr tex ) {
   return true;
 }
 
-void ReGeometryObject::convertIRayTranslucency( Glossy* mat, 
+void ReGeometryObject::convertIRayTranslucency( ReGlossy* mat,
                                                 ReTexturePtr t ) 
 {
   // This transformation makes sense only if the texture is of type
@@ -944,7 +944,7 @@ void ReGeometryObject::createMaterial( const QString matID,
     }
     case MatUndefined:
     case MatGlossy: {
-      Glossy* newMat = new Reality::Glossy(matID, this);
+      ReGlossy* newMat = new Reality::ReGlossy(matID, this);
       newMat->setKd(matInfo.diffuseMap);
       newMat->setKs(matInfo.specularMap);
       if ((matInfo.coatMap->getType() != TexConstant) || 

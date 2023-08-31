@@ -19,7 +19,7 @@
 #include "ReLogger.h"
 
 namespace Reality {
-  class Glossy;
+  class ReGlossy;
   class ReMaterial;
   class ReTexture;
   typedef QSharedPointer<ReMaterial> ReMaterialPtr;
@@ -430,7 +430,7 @@ private:
   //!   is the original Diffuse texture
   //! - Texture2 is an ReConstant texture set to the translucency color
   //! - The translucency map, if present, is set to be the mix texture
-  void convertIRayTranslucency( Glossy* mat, ReTexturePtr transTex );
+  void convertIRayTranslucency( ReGlossy* mat, ReTexturePtr transTex );
 
 public:
 

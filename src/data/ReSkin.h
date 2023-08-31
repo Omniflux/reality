@@ -31,7 +31,7 @@ namespace Reality {
 /**
  The skin material.
  */
-class REALITY_LIB_EXPORT ReSkin: public Glossy {
+class REALITY_LIB_EXPORT ReSkin: public ReGlossy {
 
 protected:
   //! The amount of the fresnel component of this material

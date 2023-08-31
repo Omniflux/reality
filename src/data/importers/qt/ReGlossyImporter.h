@@ -19,7 +19,7 @@ class REALITY_LIB_EXPORT ReQtGlossyImporter : public ReQtMaterialImporter {
 public:
   
   void importMaterial( ReMaterialPtr baseMat, const QVariantMap& data ) {    
-    ReGlossyPtr mat = baseMat.staticCast<Glossy>();
+    ReGlossyPtr mat = baseMat.staticCast<ReGlossy>();
     importBasicInformation(mat, data);
     mat->setSurfaceFuzz( data.value("surfaceFuzz").toBool() );
     mat->setUGlossiness(data.value("uGlossiness").toFloat());
@@ -35,7 +35,7 @@ public:
   void importFromClipboard( ReMaterialPtr baseMat, 
                             const QVariantMap& data, 
                             const ReplaceTextureMode texMode = Keep ) {
-    ReGlossyPtr mat = baseMat.staticCast<Glossy>();
+    ReGlossyPtr mat = baseMat.staticCast<ReGlossy>();
 
     mat->setVisibleInRender(data.value("visibleInRender").toBool());
     mat->setSurfaceFuzz(data.value("surfaceFuzz").toBool());
