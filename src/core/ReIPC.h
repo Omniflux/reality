@@ -46,7 +46,7 @@ private:
   QMutex threadRunningFlagLock;
 
   //! The name of the log file on disk that we use to track the
-  //! work of this thread. Usefiul for debugging
+  //! work of this thread. Useful for debugging
   QString logFileName;
 
   //! Flag that indicates if the client GUI has opened a connection with the 
@@ -93,7 +93,7 @@ private:
                          const QString& textureName,
                          const QString& channelName );
 
-  //! Replaces a texture with the dtaa from the copy/paste operation
+  //! Replaces a texture with the data from the copy/paste operation
   void replaceTexture( const QString& objectID, 
                        const QString& materialName,
                        const QString& channelName,
@@ -238,7 +238,7 @@ public:
 
     void updateAnimationLimits(const int startFrame, const int endFrame, const int fps);
 
-    //! Signals to the UI that the activae camera in the host has changed
+    //! Signals to the UI that the active camera in the host has changed
     //! \param camID The GUID of the active camera.
     void hostCameraSelected( const QString camID );
 
@@ -258,7 +258,7 @@ public:
     //! Signal that the export has started for <numObjects> objects.
     void exportStarted( const int numObjects );
 
-    //! Signal that the erxporter is processing object objectName
+    //! Signal that the exporter is processing object objectName
     void exportingObject( const QString objectName );
 
     //! Signals that the export has finished.
@@ -269,7 +269,7 @@ public:
     /**
      * When the user asks to change the type of material the request is sent to
      * the host-app using the CHANGE_MATERIAL_TYPE message. The message is carried
-     * over until the plugin running inside the host receives it and performas the
+     * over until the plugin running inside the host receives it and performs the
      * change based on the full data of the original shader.
      * Once the conversion is completed on the host side the message HOST_MATERIAL_TYPE_CHANGED
      * is send to the GUI via this method.

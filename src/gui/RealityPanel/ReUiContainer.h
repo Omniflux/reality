@@ -17,7 +17,7 @@ namespace Reality {
  * Interface for the RealityPanel. This interface defines a container 
  * that holds an instance of the RealityPanel class. Through this interface
  * the RealityPanel class can interact and perform operations like installing
- * actins in the applicatio's menu 
+ * actions in the application's menu
  */
 
 class ReUiContainer {

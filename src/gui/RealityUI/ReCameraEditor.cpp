@@ -181,7 +181,7 @@ void ReCameraEditor::syncCameraSelectionWithHost(const QString cameraID) {
   item->setText(1,QString::number(cam->getFocalLength(),'f',2));
   // Mark this item as current
   item->setText(2,"*");
-  // RE_LOG_INFO() << "Synching the UI to use camera " << cameraID << " from host";
+  // RE_LOG_INFO() << "Syncing the UI to use camera " << cameraID << " from host";
   cameraList->clearSelection();  
   item->setSelected(true);
   currentCamera = RealitySceneData->getCamera(cameraID);  
@@ -278,7 +278,7 @@ void ReCameraEditor::updateShutter(QListWidgetItem* item) {
   float shutterSpeed;
   if (tShutter.startsWith("1/")) {
     tShutter.replace("1/", "");
-    // Truncated to the third deciman point because that's how LuxRender
+    // Truncated to the third decimal point because that's how LuxRender
     // like it.
     shutterSpeed = floor(1 / tShutter.toFloat()*1000 )/1000;
   }

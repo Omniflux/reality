@@ -49,7 +49,7 @@ public:
    */
   void setNamedValue( const QString& vname, const QVariant& value );
   /**
-   Get the value of a propertie by name
+   Get the value of a property by name
    */
   const QVariant getNamedValue( const QString& vname ) const;
 

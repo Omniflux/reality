@@ -131,7 +131,7 @@ void ReImageMapManager::updatePreview() {
   if ( dataType == ReTexture::numeric && !isNormalMap) {
     int width = scaled.width();
     int height = scaled.height();
-    // Pointer to the function use to trnasfor the pixels.
+    // Pointer to the function used to transform the pixels.
     // This approach saves us thousands of "if" tests in the
     // conversion loop.
     void (*convertColor)(QRgb&);

@@ -586,7 +586,7 @@ bool ReMaterial::textureIsUnused( const QString& texName,
     if (tex.isNull()) {
       continue;
     }
-    // Skip the the texture that we are testing
+    // Skip the texture that we are testing
     QString tName = tex->getName();
     if (tName == texName || tName == ownerTexture) {
       continue;
@@ -790,7 +790,7 @@ void ReMaterial::serialize( QDataStream& dataStream ) const {
    */
   // We need to serialize the textures in the right order
   // with the ones included in compound textures before the
-  // texture that conatine them or the deseralization will 
+  // texture that contains them or the deserialization will
   // not work. 
   QStringList texNames;
   findDependencies(texNames);
@@ -806,7 +806,7 @@ void ReMaterial::serialize( QDataStream& dataStream ) const {
    * Serialize the channels
    * The channels simply refer to existing textures in the catalog
    * so, we simply serialize the names of those textures. The name will
-   * be then references by the deseialize method to link to the textures
+   * be then references by the deserialize method to link to the textures
    */
   // Number of channels
   dataStream << (quint16) channels.count();

@@ -25,7 +25,7 @@ typedef QHash<QString, ReTexturePtr> ReTextureCache;
 /**
   Base class for all texture exporters for LuxRender. It provides 
   services shared by all specialized classes. The export of a specific
-  type of texture is provided by a specilized subclass.  
+  type of texture is provided by a specialized subclass.
  */
 class REALITY_LIB_EXPORT ReLuxTextureExporter {
 
@@ -107,7 +107,7 @@ public:
   /**
    * Method: exportColor
    * Takes a color texture and returns the Lux parameter to export it as
-   * a simple color. This is used by some textures to ooptimize their parameters
+   * a simple color. This is used by some textures to optimize their parameters
    * into simple colors instead of using a Constant texture
    */
   QString exportColor( const ReConstantPtr colorTex, const QString& label ) {
@@ -134,7 +134,7 @@ public:
   //! Parameters:
   //!   name - Input. The name used to label the exported texture. 
   //!   assignedName - Overrides the name used for the exported texture
-  //!   isForPreview - A flag to communicate that this export os for the previewer
+  //!   isForPreview - A flag to communicate that this export is for the previewer
   //! \return The pointer to the newly created texture
   static ReTexturePtr writeFloatVersion( ReTexturePtr tex, QString& scene );
   

@@ -14,7 +14,7 @@
 using namespace Reality;
 
 /**
- * Base class for all the undoable actions that modify textures.
+ * Base class for all the undo-able actions that modify textures.
  */
 template <typename T> class ReTextureEditCommand : public QUndoCommand {
 
@@ -200,7 +200,7 @@ public:
 };
 
 /**
- * Distorted Nosie Editor Command
+ * Distorted Noise Editor Command
  */
 template <typename T> class DN_Command : public ReTextureEditCommand<T> {
 

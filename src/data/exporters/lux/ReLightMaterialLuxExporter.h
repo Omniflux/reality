@@ -29,7 +29,7 @@ namespace Reality {
 class REALITY_LIB_EXPORT ReLightMaterialLuxExporter : public ReLuxMaterialExporter {
 
 public:
-  // Nothing to do becauxe the mesh lights are actually exported in ReLuxGeometryExporter
+  // Nothing to do because the mesh lights are actually exported in ReLuxGeometryExporter
  void exportMaterial( const ReMaterial* basemat, boost::any& result ) {
     result = QString();
   }

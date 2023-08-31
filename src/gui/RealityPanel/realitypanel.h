@@ -174,7 +174,7 @@ private:
   //! Save as Universal Shader
   QAction* uShaderSaveAction;
 
-  //! Apply a Universa Shader
+  //! Apply a Universal Shader
   QAction* uShaderApplyAction;
 
   //! Material synchronization action
@@ -190,7 +190,7 @@ private:
   QTimer* pingTimer;
 
   //! This timer is used to start a material preview after a material has
-  //! be selected for a suffieintly long time. This technique is used to 
+  //! be selected for a sufficiently long time. This technique is used to
   //! avoid starting a new preview for a material that the user has selected
   //! only in passing.
   QTimer* matPreviewTimer;
@@ -205,9 +205,9 @@ private:
   void showObjectInformation();
 
   /**
-   * Detetrmines if the texture editor needs to be visible or not,
-   * baed on the tab number passed in the first parameter, which is
-   * expected to tbe the current tab number.
+   * Determines if the texture editor needs to be visible or not,
+   * based on the tab number passed in the first parameter, which is
+   * expected to be the current tab number.
    */
   void setTextureEditorVisibility();
 
@@ -394,7 +394,7 @@ private slots:
                     const QString& channelName, 
                     const QString& textureName );
 
-  //! Notify the host-side that a sub-texture has been linked to a master textrue
+  //! Notify the host-side that a sub-texture has been linked to a master texture
   void linkSubTexture( const QString& objectID, 
                        const QString& materialID, 
                        const QString& channelName, 
@@ -440,15 +440,15 @@ private slots:
                         const QString materialName, 
                         const QString lightID );
 
-  // Communicates to the host-app side that the texture type has conaged.
+  // Communicates to the host-app side that the texture type has converted.
   void updateServerTextureType(const QString&, const ReTextureType);  
   
   /**
-   * Updates the value for Reality's configration from the Advanced tab.
+   * Updates the value for Reality's configuration from the Advanced tab.
    */
   void updateConfiguration( int newVal ); 
   /**
-   * Updates the value for Reality's configration from the Advanced tab.
+   * Updates the value for Reality's configuration from the Advanced tab.
    */
   void updateConfiguration( bool newVal );
 
@@ -463,12 +463,12 @@ private slots:
   //! objects/materials
   void checkObjectSelection( const QItemSelection&, const QItemSelection&);
 
-  //! When the data from the host is received this method selectes the 
+  //! When the data from the host is received this method selects the
   //! first item in the model.
   void selectFirstItem();
 
   //! Opens a File|Open dialog box to search for a directory to use for 
-  //! storeing the lxs and png files when creating a new scene
+  //! storing the lxs and png files when creating a new scene
   void browseDefaultFolder();
 
   //! Sets the new default location for scene files
@@ -518,7 +518,7 @@ public slots:
   //! Support for the Copy/Paste of materials
   void copyMaterial();
   void pasteMaterial( const ReQtMaterialImporter::ReplaceTextureMode = ReQtMaterialImporter::Keep );
-  //! Thsi verison simply calls pasteMaterial() with the parameter set to true
+  //! This version simply calls pasteMaterial() with the parameter set to true
   void pasteMaterialWithTextures();
 
   /**
@@ -586,14 +586,14 @@ public slots:
 
   //! Schedule the material preview to be started. This method resets the
   //! matPrevieTimer timer for a few milliseconds. If the timer expires 
-  //! the the material preview is started.
+  //! the material preview is started.
   void scheduleMatPreview();
 
   //! Updates the material preview
   void refreshMatPreview( const bool forceRefresh = true );
 
   //! Verifies that the conditions for rendering are correct.
-  //! \return True if rendering can be performed, flase otherwise.
+  //! \return True if rendering can be performed, false otherwise.
   bool renderPreFlightCheck();
 
   //! Rendering
@@ -604,7 +604,7 @@ public slots:
   //! Save Scene in the host-app
   void saveScene();
 
-  //! Refresh the Scene with the data from the host-ap
+  //! Refresh the Scene with the data from the host-app
   void refreshScene();
 
   //! Load the volumes

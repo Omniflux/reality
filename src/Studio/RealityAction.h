@@ -32,7 +32,7 @@ public:
 
 protected:
   /**
-    We need to reimplement this virtual function to perform our 'action'.
+    We need to re-implement this virtual function to perform our 'action'.
     This gets called whenever the user clicks on our action item.
   **/
   void executeAction();

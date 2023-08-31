@@ -38,7 +38,7 @@ ReMetalEditor::ReMetalEditor( QWidget* parent ) :
   metalTexture->setDeleteEnabled(true);
 }
 
-// Initialize the Look Up Tables for metal names to types and viceversa
+// Initialize the Look Up Tables for metal names to types and vice versa
 void ReMetalEditor::initLUT() {
   lutMetalNameToType[tr("Aluminum")] = ReMetal::Aluminum;
   lutMetalNameToType[tr("Chrome")]   = ReMetal::Chrome;

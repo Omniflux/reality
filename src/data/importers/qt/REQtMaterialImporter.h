@@ -40,13 +40,13 @@ public:
     Keep,
     //! Replaces only the textures that are present, like when using a generic
     //! preset. If a channel is not set then it will not be emptied.
-    //! This is used when applying a generic shader. In thst case some
+    //! This is used when applying a generic shader. In that case some
     //! textures might be present, like the specular color, if the 
     //! channel uses a solid color. When a generic shader is saved only
     //! Constant textures are saved and only if they are linked directly
     //! to a channel at top level. 
     //! A channel value could be saved as empty and so
-    //! it's important, when applying the generic shader that that channel
+    //! it's important, when applying the generic shader that channel
     //! is not emptied, otherwise it might replace the values coming from
     //! the converted host shader. For example, a generic shader will never
     //! have a bump map, because bump maps are not solid colors. If the
@@ -80,7 +80,7 @@ public:
     // a shader that has no textures but that is used to create a
     // material using the "replace textures" option. When this method
     // is called the caller has no idea if there are textures to
-    // be replaced or nor so it's the responsibilith of this method
+    // be replaced or nor so it's the responsibility of this method
     // to check what needs to be done.
     if ( !numTextures ) {
       return;
@@ -117,7 +117,7 @@ public:
 
       // Channels
       QMapIterator<QString, QVariant> ci(data.value("channels").toMap());
-      // Replace the channels if, and only if, the channe from the shader
+      // Replace the channels if, and only if, the channel from the shader
       // data is not empty
       while( ci.hasNext() ) {
         ci.next();
@@ -131,7 +131,7 @@ public:
         if (!textureIndex.contains(texName)) {
           continue;
         }
-        // Then we test if the index in in range, just to make sure
+        // Then we test if the index is in range, just to make sure
         int index = textureIndex.value(texName);
         if (textures.count() < index) {
           continue;
@@ -185,7 +185,7 @@ public:
     // ACSEL database are synchronized.
     // If a shader does not exist in the database then we check if a 
     // generic shader is preset. If it is then we assign the ID of that
-    // shader to the material. Otherwise we blank the the shader set ID.
+    // shader to the material. Otherwise we blank the shader set ID.
     if (acsel->findShader(acselID, shaderSetInfo)) {
       if ( acsel->findShaderSet(acselSetID, shaderSetInfo) ) {
         if (shaderSetInfo[RE_ACSEL_BUNDLE_IS_DEFAULT].toBool()) {

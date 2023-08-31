@@ -9,7 +9,7 @@
 import uuid, poser, os, binascii
 import ReTools
 
-# CRC-CCITT implemetnation that returns a 5-digit crc value
+# CRC-CCITT implementation that returns a 5-digit crc value
 POLYNOMIAL = 0x1021
 PRESET = 0
 

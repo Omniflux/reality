@@ -13,7 +13,7 @@
 namespace Reality {
 
 /**
-  Procedura Wood
+  Procedural Wood
 
   3D texture.
  */

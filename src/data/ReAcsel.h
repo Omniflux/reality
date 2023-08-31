@@ -11,11 +11,11 @@
  * digest using a string that includes the following elements:
  *
  * - The geometry file name of the figure. This identifies the figure uniquely,
- *   regardless of what lable it has in the scene. For example, V4 is uniquely
+ *   regardless of what label it has in the scene. For example, V4 is uniquely
  *   identified as bMilWom_v4b
  * - The material name
  * - The series of image maps found in the original material. The image maps
- *   are obtained from the Diffuse and Alpha channnels. The bump map is not
+ *   are obtained from the Diffuse and Alpha channels. The bump map is not
  *   examined because the use of bump maps is not consistent between Poser
  *   and Studio versions of the same product/material
  *
@@ -50,7 +50,7 @@
  * ##Shaders
  * 
  * - UUID: TEXT, Primary Key
- * - ShaderCode: TEXT. The shder code is stored in JSON format.
+ * - ShaderCode: TEXT. The shader code is stored in JSON format.
  * - MaterialType: TEXT(3). This is a 3-character code with the following 
  *                 possible values: GLS (glass), GLO (glossy), MAT (matte), 
  *                 MTL (metal), MIR (mirror), MIX (mix), NUL (null), SKN (skin),
@@ -84,7 +84,7 @@
 
 #define RE_ACSEL_VERSION "5.0"
 
-//! Version information abou thtis database. It helps in 
+//! Version information about this database. It helps in
 //! deciding if the database needs to be updated when a new version
 //! of Reality is released
 #define RE_ACSEL_TABLE_VERSION_INFO "VersionInfo"
@@ -96,7 +96,7 @@
 //! Name of a temporary table of UUIDs. This table is emptied at the 
 //! beginning of each session
 #define RE_ACSEL_TABLE_TEMP_UUIDS "Temp_UUIDS"
-//! Name of the table containign the shader sets descriptions
+//! Name of the table containing the shader sets descriptions
 #define RE_ACSEL_TABLE_SETS       "Sets"
 
 //! Name of the materials table. Materials are self-standing shaders that
@@ -123,15 +123,15 @@
 //! in the automatic conversion of materials.
 #define RE_ACSEL_TABLE_FIGURES  "Figures"
 
-//! Temporary table used to store the original defintion of materials.
+//! Temporary table used to store the original definition of materials.
 //! Such definitions are used for tasks like:
 //! - Finding the original texture of materials that removed them, like
 //!   when converting a material to glass and removing the diffuse texture.
 //!   When we need to calculate the Acsel ID of such materials the basic
 //!   data used for the calculation, the name of the image maps used for
 //!   diffuse and alpha channel, are gone after the material has been 
-//!   manipulated. Every material saves its original difition in this 
-//!   table so that we can retrive the basic data without having to re-query
+//!   manipulated. Every material saves its original definition in this
+//!   table so that we can retrieve the basic data without having to re-query
 //!   the host application
 //! - When the user needs to return a material to the original version, after
 //!   having changed the material's type, we can restore the definition 
@@ -241,7 +241,7 @@ private:
   //! Utility method to simplify running non-SELECT queries
   bool runQuery( const QString& sql );
 
-  //! Method used to intialize the LUT, just once
+  //! Method used to initialize the LUT, just once
   void initLut();
 
   //! Constructor. Made private to enforce singleton protocol.
@@ -275,7 +275,7 @@ private:
   //! This is achieved by using the ReAcsel::transactionStarted bool
   //! variable.
   //! The struct implements the RAII template
-  //! so that it rools back the transaction is case the instance goes
+  //! so that it rolls back the transaction is case the instance goes
   //! out of scope before the commit() method is called.
   struct AcselTransaction {
     SQLite::Transaction* t;
@@ -363,7 +363,7 @@ private:
   ReturnCode importShaderSet( QVariantMap& shaderInfo );
   
   //! Helper method for importBundle() that handles the importing of
-  //! universla shaders.
+  //! universal shaders.
   ReturnCode importUniversalShader( QVariantMap& shaderInfo );
 
   //! Used to handle nested calls to the caching system. When this
@@ -472,7 +472,7 @@ public:
   //! \param setID The ID of the shader set that is associated with the shader
   //! \param volumeID The ID of a volume or 0 if the material does not have 
   //!                 an associated volume
-  //! \return Trye if the operation is successful, false otherwise
+  //! \return True if the operation is successful, false otherwise
   bool saveShader( const QString& ID, 
                    const QString& shaderCode,
                    const ReMaterialType matType,
@@ -566,7 +566,7 @@ public:
   //!            - Set creation time
   void getShaderSetList( QList<QStringList>& records );
 
-  //! Given a shader set ID this methid returns a brief list of information
+  //! Given a shader set ID this method returns a brief list of information
   //! about the shaders containers in the set.
   //! \return A list of QStringList. Each list entry describes a shader in 
   //!         the set. Each subentry, a QStringList, lists the shader's UUID
@@ -701,7 +701,7 @@ public:
 
   /**
    * Imports a bundle into the database
-   * \param bundleFileName The name of the file that contrains the bundle
+   * \param bundleFileName The name of the file that contains the bundle
    * \param overwrite Flag that signals if Reality should overwrite a 
    *                  shader set if it already exists in the ACSEL database
    * \param existingShaderSets If the \ref overwrite flag is false and one

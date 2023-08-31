@@ -39,7 +39,7 @@ QString& ReGUID::getGUID( const DzNode* node ) {
   );
   // There is no previously attached data
   if (!dataItem) {
-    // In addition to the the custom data we replicate the ID as a private
+    // In addition to the custom data we replicate the ID as a private
     // property because Studio strips the custom data when adapting clothing 
     // from one figure to another. So we test if the private property is 
     // available before giving up.

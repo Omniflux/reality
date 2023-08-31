@@ -1670,7 +1670,7 @@
               <item row="3" column="1">
                <widget class="QLabel" name="label">
                 <property name="text">
-                 <string>New default values will be be used when creating new scenes. The existing scene is not changed.</string>
+                 <string>New default values will be used when creating new scenes. The existing scene is not changed.</string>
                 </property>
                </widget>
               </item>

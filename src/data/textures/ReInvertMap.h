@@ -16,7 +16,7 @@ namespace Reality {
   Class: InvertMap
 
   A texture that inverts an image map. Implemented by using the Mix texture,
-  pluggin the texture into the amount and setting the first mix value to 1 and
+  plugging the texture into the amount and setting the first mix value to 1 and
   the second mix value to 0.
 
   See also <ReTexture>.

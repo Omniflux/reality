@@ -14,7 +14,7 @@
 
 
 /*
- * Render tab undoable Actions
+ * Render tab undo-able Actions
  */
 
 using namespace Reality;

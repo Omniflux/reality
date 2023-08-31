@@ -94,7 +94,7 @@ ReConstant::ReConstant( const ReTexturePtr srcTex ) :
   // Pseudo copy ctor for texture conversion and preservation.
   // When the user converts a texture some target textures, like
   // Color Math and ReMixTexture preserve the original texture 
-  // as the imput for the first texture. This requires that we have
+  // as the input for the first texture. This requires that we have
   // a copy ctor for all texture but copy ctors are not matched
   // for objects allocated on the heap.
   switch ( srcTex->getType() ) {

@@ -50,7 +50,7 @@ public:
    * Converts a transform matrix from the Poser/Studio format (right-sided)
    * to the LuxRender format (left-sided)
    *
-   * This is done via matrix multiplication. If the thrid parameter is set to
+   * This is done via matrix multiplication. If the third parameter is set to
    * true then the method applies an additional transform as suggested by
    * Jean-Philippe Grimaldi. The conversion is described as:
    *

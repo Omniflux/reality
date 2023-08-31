@@ -91,7 +91,7 @@ public:
   //! \param texPreview The texture preview widget on screen used to show
   //!                   and edit the texture
   //! \param mat The material that owns the texture
-  //! \param textureDataType Wheter we allow the creation of color or 
+  //! \param textureDataType Whether we allow the creation of color or
   //!                        numeric textures
   //! \param masterTexture If this parameter is not null then it means 
   //!                      that the adapter is used for editing inside 
@@ -642,7 +642,7 @@ private slots:
 };
 
 
-//! Convenience Shared pointer definitiion
+//! Convenience Shared pointer definition
 typedef QSharedPointer<ReTextureEditorAdapter> ReTextureEditorAdapterPtr;
 
 } // namespace

@@ -254,7 +254,7 @@ class ReGeometryExporter:
     #
     # The Geometry.WorldVertices() method returns the list of vertices that 
     # form a mesh transformed with world coordinates.
-    # The Geometry.TexVertices() returns the correcsponding list of UV points
+    # The Geometry.TexVertices() returns the corresponding list of UV points
     # for the vertices.
     #
     # The Geometry.Polygons() returns the list of defined polys. Each poly has
@@ -340,7 +340,7 @@ class ReGeometryExporter:
           matRef_t[actorName] = {}
 
         numVertices = poly.NumVertices()
-        # Get the first entry in the list of indices to vertices beloging
+        # Get the first entry in the list of indices to vertices belonging
         # to this poly
         indexStart = poly.Start()
 
@@ -382,7 +382,7 @@ class ReGeometryExporter:
             uvIndex = uvSets[uvIndexStart+v]
             # The vertex key is a unique combination of a vertex index and the 
             # UV index. When dealing with seams the same vertex index will be
-            # in two keys becase the UV index is different. In this way we are
+            # in two keys because the UV index is different. In this way we are
             # guaranteed to output the vertex twice, as required by Lux
             vertexKey = (vertexIndex, uvIndex)
 
@@ -527,12 +527,12 @@ class ReGeometryExporter:
     # Total number of points
     fileHandle.write(struct.pack('I', numVerts))
 
-    # Flags, from byt 12 to 15. As follows:
+    # Flags, from byte 12 to 15. As follows:
     # - bit 0: whether the file has a segments array
-    # - bit 1: wheter the file has a points array. This is mandatory and so must be 1
-    # - bit 2: wheter the file has a thickness array
-    # - bit 3: wheter the file has a transparency array
-    # - bit 4: wheter the file has a color array
+    # - bit 1: whether the file has a points array. This is mandatory and so must be 1
+    # - bit 2: whether the file has a thickness array
+    # - bit 3: whether the file has a transparency array
+    # - bit 4: whether the file has a color array
     # - bits 5 to 31: reserved and must be 0
     # 
     # Our configuration: 00110 => 6 decimal
@@ -565,7 +565,7 @@ class ReGeometryExporter:
   #  
   #-----------------------------------------------------------------------------
   def exportHairGroup(self, hairGroup):
-    # Save the state of the haird group
+    # Save the state of the hair group
     populatedState = hairGroup.ShowPopulated();
     # Enable the population of the hair group so that the whole geometry
     # will be available for export. Otherwise only the guide strands will be

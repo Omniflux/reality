@@ -11,7 +11,7 @@
 #include "textures/ReComplexTexture.h"
 
 
-// default numbe of sub-textures that we hold in this texture
+// default number of sub-textures that we hold in this texture
 #define REBT_DEFAULT_NUM_ENTRIES 4
 
 namespace Reality {
@@ -20,7 +20,7 @@ typedef QMap<QString, float> ReBandOffsets;
 typedef QMapIterator<QString, float> ReBandOffsetsIterator;
 
 /**
- * Support for the LuxRender Band textue, which defined a multi-color gradient
+ * Support for the LuxRender Band texture, which defined a multi-color gradient
  *  See also <ReTexture>.
  */
 class REALITY_LIB_EXPORT ReBand : public ReTexture,
@@ -31,7 +31,7 @@ private:
   //! Number of bands, gradient points, in this texture.
   //! At the moment this number is fixed at 4 because of time 
   //! constraints for Reality 3.0. In future release it will
-  //! need to be a variable number bewtween 2 and 6
+  //! need to be a variable number between 2 and 6
   quint16 numBands;
 
   //! The Band texture handles an array of textures...

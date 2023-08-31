@@ -80,7 +80,7 @@ class ReMaterial:
             # The gain is based on the Ambient_value field
             "lightGain"    : 0.0,
             # Flag that indicates if the light should have a built-in
-            # alpha channel that convers black to transparent
+            # alpha channel that converts black to transparent
             "lightAlpha"   : False,
             "ambient"      : {"map" : "", "color" :""}
         }
@@ -111,7 +111,7 @@ class ReMaterial:
                     chName = channel.InternalName()
                     # Reality.writeToLog("Channel: %s/%s" % (channel.Name(),channel.InternalName()))
 
-                    # If the channel is from a Light it is labelled "Color"
+                    # If the channel is from a Light it is labeled "Color"
                     if chName in ("Diffuse_Color","Color"):
                         self.reMat["diffuse"]["color"] = channel.Value()
                         diffTree = channel.InNode(1)
@@ -172,7 +172,7 @@ class ReMaterial:
                     elif chName == "AlternateSpecular":
                         # The Alternate Specular channel wil only have a valid
                         # color if a node is connected to it. Otherwise the 
-                        # color is underfined.
+                        # color is undefined.
                         specTree = channel.InNode(1)
                         if specTree:
                             self.reMat["specular 2"]["color"] = channel.Value()
@@ -211,7 +211,7 @@ class ReMaterial:
                         # need to dived by 1000 the conversion from Poser. That's
                         # why we multiply by 0.0254 instead of 25.4
                         bumpValue = channel.Value() * 0.0254
-                        # The strenght value is purely empirical, based on test done on several
+                        # The strength value is purely empirical, based on test done on several
                         # skins
                         self.reMat["bump"]["strength"] = 0.5
                         # Distribute the bump evenly between positive and negative
@@ -470,7 +470,7 @@ class ReMaterial:
             elif nodeType == poser.kNodeTypeCodeNOISE:
                 # The noise node in Poser has little resemblance with the
                 # FBM texture in Lux and changes to the Poser's parameters
-                # don't lead to much variantion more than some distortion 
+                # don't lead to much variation more than some distortion
                 # along the axes. So, we simply plug some default values 
                 # that will provide a similar noise pattern.
                 props = {"type" : ReTextureType_FBM}
@@ -596,7 +596,7 @@ class ReMaterial:
                     colorStrength = node.InputByInternalName("Specular_Value").Value()
                 specCol = node.InputByInternalName("Specular_Color").Value()
                 # We directly convert the combination of specular color and strength
-                # to the correspondeng RGB value.
+                # to the corresponding RGB value.
                 specCol = (specCol[0]*colorStrength, specCol[1]*colorStrength, specCol[2]*colorStrength)
                 self.reMat["specular"]["color"] = specCol
                 return ""
@@ -607,7 +607,7 @@ class ReMaterial:
                 and feeds directly to the specular values for this material.
                 """
                 # The reflectivity value is the "shininess" of this node. For practical
-                # purposes we consider tha limits to be 0.0-5.0 and we reduce it to be
+                # purposes we consider the limits to be 0.0-5.0 and we reduce it to be
                 # a roughness value between 0.0 - 1.0
                 refl = node.InputByInternalName("Reflectivity")
                 reflRemapped = refl.Value() / 5.0
@@ -633,7 +633,7 @@ class ReMaterial:
                 self.reMat["vRoughness"] = self.reMat["uRoughness"]
                 specCol = node.InputByInternalName("Specular_Color").Value()
                 # We directly convert the combination of specular color and strength
-                # to the correspondeng RGB value.
+                # to the corresponding RGB value.
                 specCol = (specCol[0], specCol[1], specCol[2])
                 self.reMat["specular"]["color"] = specCol
                 return ""

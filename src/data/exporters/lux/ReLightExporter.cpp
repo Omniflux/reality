@@ -93,7 +93,7 @@ QString ReLuxLightExporter::writeColorModelTexture( ReLightPtr light, QString& s
   QString texName = QString("%1::L").arg(light->getName());
   auto colorModel = light->getColorModel();
 
-  // Agust 2015, LuxCore does not support anything else but RGB for 
+  // August 2015, LuxCore does not support anything else but RGB
   // infinite lights.
   bool usingLuxCore = RealitySceneData->isOCLRenderingON() 
                       || RealitySceneData->cpuAccelerationEnabled();

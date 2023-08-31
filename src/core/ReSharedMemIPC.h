@@ -44,7 +44,7 @@
 #define SHM_COMMANDS_CHANNEL_SIZE  sizeof(IPC_MESSAGES)
 
 /**
- * Class ReSharedMemIPC implements IPC using shared emmeory for transfering
+ * Class ReSharedMemIPC implements IPC using shared memory for transferring
  * objects using array buffers and QDataStream.
  */
 

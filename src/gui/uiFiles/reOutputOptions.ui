@@ -414,7 +414,7 @@
                 </font>
                </property>
                <property name="toolTip">
-                <string>Change the gamma correction for the final image. Generally it'sa best to leave it unchanged.</string>
+                <string>Change the gamma correction for the final image. Generally it's best to leave it unchanged.</string>
                </property>
                <property name="minimum">
                 <double>0.500000000000000</double>
@@ -790,7 +790,7 @@
                       </sizepolicy>
                      </property>
                      <property name="toolTip">
-                      <string>Accelration provided by OpenCL for GPU+CPU speed increase</string>
+                      <string>Acceleration provided by OpenCL for GPU+CPU speed increase</string>
                      </property>
                      <property name="text">
                       <string>OpenCL rendering</string>
@@ -2033,7 +2033,7 @@
                  <item>
                   <widget class="QComboBox" name="sceneType">
                    <property name="toolTip">
-                    <string>Mondirectional scene is faster, Bidirectional is more accuarte</string>
+                    <string>Monodirectional scene is faster, Bidirectional is more accurate</string>
                    </property>
                   </widget>
                  </item>
@@ -2072,7 +2072,7 @@
                  <item>
                   <widget class="QComboBox" name="sampler">
                    <property name="toolTip">
-                    <string>The algorythm used to sample the pixels while rendering</string>
+                    <string>The algorithm used to sample the pixels while rendering</string>
                    </property>
                   </widget>
                  </item>
@@ -2562,7 +2562,7 @@
              <item row="0" column="0">
               <widget class="QCheckBox" name="doTextureCollection">
                <property name="toolTip">
-                <string>When enabled the textures will be collected for ease of trafer of the scnee to another machine</string>
+                <string>When enabled the textures will be collected for ease of transfer of the scene to another machine</string>
                </property>
                <property name="text">
                 <string>Enable texture collection</string>

@@ -39,7 +39,7 @@ void saveMapToJsonIO( const QVariantMap& map, IDzJsonIO* io ) {
       // DSON cannot differentiate between ints and floats so
       // it writes ints as: <key> : [ "i", <value> ] 
       // which is quite ugly and makes things unnecessary complicated.
-      // So, Reality exports ints to be flots/double as well.
+      // So, Reality exports ints to be floats/double as well.
       case QMetaType::Int:
       case QMetaType::UInt:
       case QMetaType::Long:
@@ -77,10 +77,10 @@ void saveListToJsonIO( const QVariantList& list, IDzJsonIO* io ) {
       case QMetaType::QString:
         io->addItem(val.toString());
         break;
-      // DSON canno differentiate between ints and floats so
+      // DSON cannot differentiate between ints and floats so
       // it writes ints as: <key> : [ "i", <value> ] 
       // which is quite ugly and makes things unnecessary complicated.
-      // So, Reality exports ints to be flots/double as well.
+      // So, Reality exports ints to be floats/double as well.
       case QMetaType::Int:
       case QMetaType::UInt:
       case QMetaType::Long:
@@ -148,7 +148,7 @@ DzError ReStorage::applyInstanceToObject( QObject* object, const DzFileIOSetting
   // When loading a scene in merge mode, File | Merge from DS, we can have potential
   // conflicts with objects that are already in the scene. This can happen if the 
   // user merges the same scene over and over again. In that case we need to 
-  // rename the conflicting objetcs, lights and cameras by obtaining a new unique
+  // rename the conflicting objects, lights and cameras by obtaining a new unique
   // identifier.
   //
   // The following typedef and QMap implement a list of objects to be renamed. 

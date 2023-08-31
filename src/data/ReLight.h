@@ -62,7 +62,7 @@ protected:
   //! with the same name but different IDs, which makes it possible
   //! to have material-based lights with the same public name, which
   //! comes from materials with the same name, but originated by
-  //! different objects. Using this startegy makes it possible to
+  //! different objects. Using this strategy makes it possible to
   //! handle the lights correctly in that case.
   QString id;
   
@@ -76,7 +76,7 @@ protected:
   QColor color;
 
   //! The name of the group that controls this light. Used to
-  //! control lights dynamically whe rendering via Lux.
+  //! control lights dynamically when rendering via Lux.
   QString lightGroup;
   //! Brightness of the sky light
   float skyIntensity;
@@ -96,7 +96,7 @@ protected:
   QString iesFileName;
 
   // Variable: invertedNormals
-  //   Used to invert the direction of ligh, for example with Light Domes.
+  //   Used to invert the direction of light, for example with Light Domes.
   //   It defaults to false. Only for mesh lights.
   bool invertedNormals;
   float efficiency;
@@ -143,7 +143,7 @@ protected:
 private:
 
   //! Check if the light is a sun light and if so set the type
-  //! acconrdingly.
+  //! accordingly.
   void testForSun();
 
 public:
@@ -423,7 +423,7 @@ public:
 
   void deserialize( QDataStream& dataStream );
 
-  //! Assignment operator. Used to copy the seettings of one light into another
+  //! Assignment operator. Used to copy the settings of one light into another
   ReLight& operator =( ReLight& src );
 
   QString toString();

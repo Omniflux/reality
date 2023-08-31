@@ -32,7 +32,7 @@ private:
   //! pre-defined materials. To store the material definitions we
   //! use a table keyed by the numeric identifier for the type of 
   //! material. The data is kept as a string defining the LuxRender
-  //! material that will be injected in the previee scene
+  //! material that will be injected in the preview scene
   RePresetMap innerMaterialPresets;
 
 public:
@@ -80,7 +80,7 @@ class ReUniShaderSave : public QDialog, public Ui::reUniShaderSave
 {
   Q_OBJECT
 private:
-  //! If the user selectes an existing shader to be updated then the 
+  //! If the user selects an existing shader to be updated then the
   //! ID of that shader will be stored in this variable.
   QString shaderID;
 

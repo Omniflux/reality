@@ -28,7 +28,7 @@ class REALITY_LIB_EXPORT ReSceneResources  {
 private:
   static ReSceneResources* instance;
 
-  // ctor. Make it private so that that the object cannot be instantiated 
+  // ctor. Make it private so that the object cannot be instantiated
   // externally. This enforces the use of the <getInstance> method.
   ReSceneResources() {
     initialized = false;
@@ -53,7 +53,7 @@ public:
    */
   bool isInitialized() { return(initialized); };
   /**
-   * Reset the resource helper. Usually called after a render has been exporterd. It's useful
+   * Reset the resource helper. Usually called after a render has been exported. It's useful
    * to avoid bugs caused by a previous initialization being out of sync with the current scene.
    */
   void reset() {

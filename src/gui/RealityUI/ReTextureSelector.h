@@ -23,10 +23,10 @@ namespace Reality {
 using namespace Reality;
 
 /**
- * Class ReTextureSelector implements a simple dualog box that lists the 
+ * Class ReTextureSelector implements a simple dialog box that lists the
  * textures available for a given material. This list can be used by the 
  * user to select a texture to link to a channel. For example, the user
- * can select to re-use the diffuse texture as the bassi for the hair
+ * can select to re-use the diffuse texture as the basis for the hair
  * mask in the Skin material.
  */
 class ReTextureSelector : public QDialog, public Ui::textureSelector {

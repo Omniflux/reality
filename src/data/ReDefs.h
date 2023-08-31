@@ -101,7 +101,7 @@
 #define RE_HOST_RENDERER_CODE_FIREFLY    "ff"
 #define RE_HOST_RENDERER_CODE_SUPERFLY   "sf"
  
-//!Abbreaviated names of material types 
+//!Abbreviated names of material types
 #define RE_MAT_TYPE_CODE_CLOTH     "CLO"
 #define RE_MAT_TYPE_CODE_GLASS     "GLS"
 #define RE_MAT_TYPE_CODE_GLOSSY    "GLO"
@@ -130,14 +130,14 @@
 #define RE_CFG_AUTHOR_NAME              "AuthorName"
 //! Used to issue a warning the first time the user changes "Max Samples"
 //! It has been noticed that some Poser user change that parameter 
-//! thiniking that it can improve rendering. They don't know what it does
+//! thinking that it can improve rendering. They don't know what it does
 //! and then complain that the image is grainy.
 #define RE_CFG_MAX_SAMPLES_FIRST_TIME   "MaxSamplesFirstTime"
 
 #define RE_CFG_DAYS_BETWEEN_UPDATE_CHECKS 6
 #define RE_CFG_DATE_FORMAT              "yyyy-M-dd"
 
-//! Wheter of not we need to remind the user about the effect of flagging a 
+//! Whether of not we need to remind the user about the effect of flagging a
 //! shader set as "generic"
 #define RE_CFG_GENERIC_FLAG_REMINDER   "GenericFlagReminder"
 
@@ -159,7 +159,7 @@
 #define RE_TEXTURE_CODE   "TX"
 
 // The prefix used in the section of the stored data that
-// denotes the start of the Geometry Modifieries  
+// denotes the start of the Geometry Modifiers
 #define RE_GEOMETRY_MODIFIERS_CODE "GM"
 
 // The prefix used in the section of the stored data that
@@ -174,7 +174,7 @@
 #define RE_MIN_LOOP_SUBD 1
 
 //! IBL lights in Lux are so faint that we need to boost the gain 
-//! quite a bit. The following is an emprically-set multipler used to
+//! quite a bit. The following is an empirically-set multiplier used to
 //! balance the IBL lights automatically
 #define IBL_GAIN_MULTIPLIER 500
 
@@ -197,7 +197,7 @@ const double PI = 3.141592653589793238462;
 const float RE_MAT_CFG_EYE_IOR = 1.5f;
 
 // When a material come through from the host-app as glossy but with 
-// a glossinness level of 0 we set it to have a default glossiness
+// a glossiness level of 0 we set it to have a default glossiness
 // at the value listed below 
 #define RE_MIN_GLOSSINESS 1200
 

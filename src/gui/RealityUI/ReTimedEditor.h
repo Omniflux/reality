@@ -16,9 +16,9 @@ namespace Reality {
   Most editors in Reality use a material preview. To avoid overloading
   the previewer we want to start a new preview only if the user is
   done with the edits. To do this we start a new timer at the beginning
-  of each edit and, whent the timer expires, we kick off a new preview.
+  of each edit and, when the timer expires, we kick off a new preview.
 
-  This class is really more like an dinterface. It behaves like a 
+  This class is really more like an interface. It behaves like a
   QObject-derived class with the exception that it cannot be a QObject
   subclass because this class is used in a multiple-inheritance context
   and only one QOBject subclass is allowed by Qt. For this reasons it's
@@ -30,7 +30,7 @@ class ReTimedEditor {
 
 protected:
   //! This type defines a table that is keyed by the name of the class 
-  //! and that contains the timer for thatclass
+  //! and that contains the timer for that class
   typedef QHash<QString, QTimer*> TimerTable;
 
   //! Table of all the timers in use

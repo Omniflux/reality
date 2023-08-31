@@ -9,7 +9,7 @@ import logging, os.path, poser, re, sys,traceback;
 General Reality utility functions
 """
 
-# Poser Light type indentifiers
+# Poser Light type identifiers
 SpotLightType     = 1
 IBLLightType      = 3
 InfiniteLightType = 0
@@ -71,8 +71,8 @@ def getNumVertices(obj):
 
     # If we found __SUBD then we need to look at the number of vertices
     # of the __SUBD actor without the subdivision. To do so we need
-    # to set the Subdivision to 0 and read the numbe rof vertices.
-    # After thaty is done we set the subdivision back to what it was.
+    # to set the Subdivision to 0 and read the number of vertices.
+    # After that is done we set the subdivision back to what it was.
     # We cannot simply obtain the number of vertices using a division
     # because DSON doesn't work with a simply multiple of 4 when 
     # changing the subdivision level.
@@ -123,7 +123,7 @@ def getNumVertices(obj):
     # Traverse the list of weld actors that are welded to the each actor
     # and subtract the number of welded vertices from the total. This
     # gives us the exact number of vertices in the figure. The dictionary
-    # is organzed as:
+    # is organized as:
     # actorName => [weldActName1, weldActName2...weldActNameN]
     for weldActors in weldingDict.itervalues():
       for wActorName in weldActors:

@@ -13,7 +13,7 @@
 /**
  * Interface that defines how the renderer configuration is selected when
  * exporting a scene to a specific renderer. In particular, this is designed
- * to provide all the different parameteres for all the different renderers 
+ * to provide all the different parameters for all the different renderers
  * included in Lux. Classes implementing this interface are expected to be
  * defined for the standard CPU rendering of Lux, for the CPU-accelerated
  * renderer (Embree), for the OpenCL and BiasPathOCL renderers. 

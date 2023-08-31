@@ -93,7 +93,7 @@ private:
   bool updatingUI;
   ReCameraPtr currentCamera;
 
-  //! Used to keep track when the user selectes a camera
+  //! Used to keep track when the user selects a camera
   //! explicitly instead of going with the one selected in the
   //! host app.
   bool userSelectedCamera;

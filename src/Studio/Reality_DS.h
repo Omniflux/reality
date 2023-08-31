@@ -43,7 +43,7 @@ namespace Reality {
 #define RE_DS_LIGHT_COLOR        "Color"
 #define RE_DS_LIGHT_ILLUMINATION "Illumination"
 //! Prefix used by the Uber lights. Reality checks if the node starts with
-//! this prefix to determine if the node should be interepreted to be a 
+//! this prefix to determine if the node should be interpreted to be a
 //! mesh light 
 #define RE_DS_UBER_LIGHT_PREFIX  "omLightPlane"
 
@@ -89,12 +89,12 @@ class Reality_DS : public DzPlugin {
     //! Timer used to update camera data
     QTimer* cameraTimer;
 
-    //! To avoid sending camera data to the UI continuuosly, even when 
+    //! To avoid sending camera data to the UI continuously, even when
     //! a camera has not changed, we keep the data into a dictionary
     //! keyed by the camera ID. If the current camera data is different
     //! from the one in the dictionary then we send the update over the 
     //! wire.
-    //! The disctionary hold data obtained with the ReCamera::toString()
+    //! The dictionary hold data obtained with the ReCamera::toString()
     //! method, which is a "poor man's serializer."
     QHash<QString, QString> cameraData;
 
@@ -141,7 +141,7 @@ class Reality_DS : public DzPlugin {
      * instances of the same node.
      * In addition to the above, going through the addition process for 
      * nothing is just wasteful. This flag, and related static function to
-     * set it, is used to act intellingently during the data load.
+     * set it, is used to act intelligently during the data load.
      */
     static bool nodeAdditionActive;
 
@@ -169,7 +169,7 @@ class Reality_DS : public DzPlugin {
     //! Adds an instance of the our storage class to the DzScene instance
     void addSceneStorage();
 
-    //! Collectall the elements in the scene and add them to the
+    //! Collect all the elements in the scene and add them to the
     //! Reality database
     void scanScene( const bool installMonitor = false );
 
@@ -192,7 +192,7 @@ class Reality_DS : public DzPlugin {
   
     /**
      * Renders the current frame by calling renderFrame(). This method might
-     * seem redundant but it is defined as a way of doing all the prepartion
+     * seem redundant but it is defined as a way of doing all the preparation
      * work outside the renderFrame() method since renderFrame() is used
      * by renderAnimation() to render each frame. There are operations that
      * need to executed only once per render cycle and which would be wasteful
@@ -311,7 +311,7 @@ class Reality_DS : public DzPlugin {
 
 /*
     //! Sends the needed information to the ObjectAdder thread
-    //! for thr addition of a given object to the Reality database
+    //! for the addition of a given object to the Reality database
     void queueObjectForAddition( const DzNode* skel );
 */
 
@@ -344,7 +344,7 @@ class Reality_DS : public DzPlugin {
     //! updates the relevant data in Reality
     void updateLightProperty();
 
-    //! Called in response to tranform change events of the IBL Preview Sphere
+    //! Called in response to transform change events of the IBL Preview Sphere
     void changeIBLRotation();
 
     //! When a material preset is applied several events can happen.
@@ -357,7 +357,7 @@ class Reality_DS : public DzPlugin {
     //! Checks the configuration for the ContentDir key. If found the value
     //! for that key is assumed to be the directory where the Reality addons
     //! have been installed. Reality the adds the directory to the Studio's
-    //! configuration and removes the key from the comfiguration.    
+    //! configuration and removes the key from the configuration.
     void installContentPath();
     
     void materialAdded( DzMaterial* dzMat );

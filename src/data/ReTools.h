@@ -29,7 +29,7 @@ namespace Reality {
 //! While Reality can convert a material to be an emitter, this is best
 //! avoided unless the material is really glowing with strength. To
 //! verify this situation, a brightness threshold is defined. Any color 
-//! that has brighness within this threshold is not converted to be
+//! that has brightness within this threshold is not converted to be
 //! an emitter.
 #define RE_COLOR_EMISSION_THRESHOLD 25
 
@@ -161,7 +161,7 @@ REALITY_LIB_EXPORT QString sanitizeFileName( const QString& fileName );
 //! Replaces illegal characters in a materials name with underscores. 
 REALITY_LIB_EXPORT QString sanitizeMaterialName( const QString& fileName );
 
-//! Given a texture, it return wheter that texture is or contains a Normal Map texture
+//! Given a texture, it return whether that texture is or contains a Normal Map texture
 REALITY_LIB_EXPORT bool containsNormalMap( const ReTexturePtr tex );
   
 REALITY_LIB_EXPORT double convertUnit( const float value, const HostAppID scale );

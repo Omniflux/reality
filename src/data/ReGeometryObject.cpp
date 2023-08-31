@@ -572,7 +572,7 @@ ReMaterialPtr ReGeometryObject::convertMaterial( const QString matID,
                      );
       tmpTrans->setTextureDataType(ReTexture::color);
 
-      // If we have a translucense color different than pure white then we need
+      // If we have a translucence color different than pure white then we need
       // to create a texture that is a mix of the color and the map
       if (!isPureWhite(matInfo.translucenceColor)) {
         matInfo.translucenceMap = ReTexturePtr(new Reality::ReColorMath(
@@ -688,7 +688,7 @@ bool isMatteMaterial( ReMaterialInfo& matInfo  ) {
   if ( matInfo.uGlossiness == matInfo.vGlossiness && matInfo.uGlossiness <= 0.5 ) {
     return true;
   }
-  // Specular color is black, within tollerances, and the specular map is the same 
+  // Specular color is black, within tolerances, and the specular map is the same
   // texture used for the diffuse map. Or, the specular map is a simple color.
   if ( isColorBlack(matInfo.specularColor) && 
        ( matInfo.specularMap.isNull() || (matInfo.specularMap->getType() == TexConstant) )

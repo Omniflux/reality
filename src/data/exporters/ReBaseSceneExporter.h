@@ -29,7 +29,7 @@ protected:
 
 public:
   //! Constructor.
-  //! The only function of this contructor is to store a reference
+  //! The only function of this constructor is to store a reference
   //! to the \ref ReSceneData object
   ReBaseSceneExporter( ReSceneData* scene ) : scene(scene) {
     // Nothing

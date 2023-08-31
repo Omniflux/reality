@@ -32,7 +32,7 @@ private:
 
 public:
   /**
-   * Contructor
+   * Constructor
    */
   explicit ReMirrorEditor( QWidget* parent = 0);
 

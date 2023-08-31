@@ -45,7 +45,7 @@ private:
   EventProperties properties;
 
 public:
-  //! User-defined identifier of the event in the hyerarchy of Qt events
+  //! User-defined identifier of the event in the hierarchy of Qt events
   static int reEventType;
 
   //! Constructor: ReStudioEvent

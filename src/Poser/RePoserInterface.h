@@ -32,7 +32,7 @@ public:
 
   static void closeGUI();
   //! Called when a material is selected in the 
-  //! host app. Reality then selectes the material in the 
+  //! host app. Reality then selects the material in the
   //! material editor.
   static char const* commandStackPop();
   static void exportFinished();
@@ -89,7 +89,7 @@ public:
 
 class RePoserSceneData {
 private:
-  //! Buffer used to return characters from Python inteface functions
+  //! Buffer used to return characters from Python interface functions
   static QByteArray tempCharData;
 
 public:

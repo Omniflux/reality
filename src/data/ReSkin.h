@@ -18,7 +18,7 @@
 #define RE_SKIN_SCATTERING_COLOR QColor(255,137,97)
 #define RE_SKIN_SCATTERING_SCALE 15.0f
 #define RE_SKIN_FRESNEL_AMOUNT   0.05f
-// expressed in millimiters
+// expressed in millimeters
 #define RE_SKIN_CLARITY_AT_DEPTH 0.0025   
 #define RE_SKIN_IOR              1.3f
 #define RE_SKIN_DIRECTION_RGB    -0.9f
@@ -37,7 +37,7 @@ protected:
   //! The amount of the fresnel component of this material
   float fresnelAmount;
 
-  //! Wheter SSS is enabled for this material
+  //! Whether SSS is enabled for this material
   bool sssEnabled;
 
   //! If enabled then the exporter will need to create an hair mask when using SSS

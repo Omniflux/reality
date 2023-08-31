@@ -50,7 +50,7 @@ void ReCheckersTextureEditor::setDataModel( ReTextureChannelDataModelPtr _model,
   // Timer for the update of the texture preview. 
   // We don't want to call for a refresh of the texture preview for each
   // small edit of a numeric field. We start a timer and if there are no
-  // other updates during a 1/2 second then the texture preview is requsted
+  // other updates during a 1/2 second then the texture preview is requested
 
   initTimer(RE_CFG_UPDATE_INACTIVITY, this, SLOT(requestPreview()));
 

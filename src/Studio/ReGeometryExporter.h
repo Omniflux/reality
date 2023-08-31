@@ -101,7 +101,7 @@ private:
 
   //! A dictionary of DzNode objects keyed by the Reality internal 
   //! object name. This is used to iterate through the list of 
-  //! objects to export. The contructor initializes this dictionary.
+  //! objects to export. The constructor initializes this dictionary.
   NodeDict nodes;
 
 public:

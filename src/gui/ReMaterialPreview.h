@@ -65,7 +65,7 @@ public:
   //! %2 placeholder is for the name of the material.
   QString sceneName;
 
-  //! The Lux material definition for thge material that we want to preview
+  //! The Lux material definition for the material that we want to preview
   QString materialDefinition;
 
   bool isProceduralTexture;

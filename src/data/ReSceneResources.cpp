@@ -125,9 +125,9 @@ QString ReSceneResources::getTexturesPath()  {
 }
 
 /**
- * Method for removing the .ocl files form the kernel_cache diurectory created by SLG2
- * While kernal caches are supposed to speed things up, many times SLG crashes at startup
- * because of the preence of these files. Removing them ensures a clean start.
+ * Method for removing the .ocl files form the kernel_cache directory created by SLG2
+ * While kernel caches are supposed to speed things up, many times SLG crashes at startup
+ * because of the presence of these files. Removing them ensures a clean start.
  */
 void ReSceneResources::emptySLGKernelCache( const QString dirName ) {
   QDir dir(dirName);

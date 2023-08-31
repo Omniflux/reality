@@ -49,7 +49,7 @@ using namespace Reality;
  * texture in the Reality UI. Since textures in Reality 3 are much more complex than
  * simply representing Image Maps, the UI implements a two-step system for editing
  * textures. The "Avatar" is a placeholder that represents the texture. When the
- * user clicks on the avatar then the Texture Editor is opened and an exitor appropriate
+ * user clicks on the avatar then the Texture Editor is opened and an editor appropriate
  * for the kind of texture is shown.
  * 
  * The Avatar itself uses a stacked widget to quickly present the kind of widgets
@@ -64,7 +64,7 @@ class ReTextureAvatar: public QWidget, public Ui::wdg_textureAvatar {
 
 private:
   //! Each texture avatar is identified in a unique way.
-  //! This ID is used by the texture avatar to communitate
+  //! This ID is used by the texture avatar to communicate
   //! to the rest of the UI when the user requests to edit
   //! the texture linked by the avatar. The edit(QString&) 
   //! signal returns the ID of the avatar. Typically this is
@@ -184,7 +184,7 @@ private:
 
   /**
    * Given a color it initializes a string with the values for r,g and b, plus
-   * it sets a string with the stylesheet to shet the background of a label
+   * it sets a string with the stylesheet to set the background of a label
    * with the color passed in the first parameter.
    */
   void getColorValues( const QColor& color, QString& colorString, QString& styleSheet );
@@ -274,7 +274,7 @@ signals:
   void unlinkTexture(const QString& ID);
 
   //! Emitted when the user selected to copy a texture to the clipboard
-  //! \param tex The texture to copy to the clipbaord
+  //! \param tex The texture to copy to the clipboard
   void copyTexture(const ReTexturePtr& tex);
 
   //! Emitted when the user selected to paste a texture from the clipboard

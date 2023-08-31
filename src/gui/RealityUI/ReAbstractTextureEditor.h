@@ -54,7 +54,7 @@ signals:
 
   //!   Emitted when a compound texture creates a new sub-texture
   //!   This signal is meant to be received by the main Reality panel
-  //!   which will then dispach it to the host-app side
+  //!   which will then dispatch it to the host-app side
   void makeNewTexture( const QString& objectID, 
                        const QString& materialName, 
                        const QString& channelID,

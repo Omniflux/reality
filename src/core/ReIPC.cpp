@@ -133,7 +133,7 @@ void CommandPollingThread::run() {
     try {
       zmq::message_t request;
 
-      // If there is no message then go back to the begnning of the loop
+      // If there is no message then go back to the beginning of the loop
       // so that we have the chance to close the thread if requested.
       if (!zmqHasMessages(socket)) {
         continue;
@@ -386,7 +386,7 @@ void CommandPollingThread::processRequest(zmq::message_t& request, zmq::socket_t
           i.value()->serialize(dataStream);
         }
         // Send the name of the selected camera, or NONE if no camera
-        // has been seelcted
+        // has been selected
         QString selectedCamera = RealitySceneData->getSelectedCameraID();
         if (selectedCamera.isEmpty()) {
           selectedCamera = "NONE";

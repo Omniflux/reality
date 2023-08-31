@@ -34,7 +34,7 @@ private:
   //! lampspectrum texture will be written
   //! 
   //! Returns: 
-  //!   A Sytring with the name of the texture that has been written to the
+  //!   A String with the name of the texture that has been written to the
   //!   buffer.
   QString writeColorModelTexture( ReLightPtr light, QString& str );
 

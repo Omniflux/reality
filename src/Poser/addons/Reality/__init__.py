@@ -225,7 +225,7 @@ class RealityDataModel:
             traceback.print_exc(file=sys.stdout)
 
     ##
-    # Change the material type by retrieveing the material information from
+    # Change the material type by retrieving the material information from
     # Poser and then calling the Reality library with the new data.
     #
     # !TODO!
@@ -249,7 +249,7 @@ class RealityDataModel:
             reMat
         )
 
-    # Returns wheter an actor is a control for part of a figure or other actor.
+    # Returns whether an actor is a control for part of a figure or other actor.
     def isControl(self, actor):
         return actor.Name().lower().endswith("_control") and (actor.Parent() != None)
 
@@ -550,7 +550,7 @@ class RealityDataModel:
     # but the change is not reported to Reality. If then the user deletes that prop the 
     # old declaration of materials is still in Reality.
     # The following method tries to find the old name based on the assumption that the new
-    # name has a suffic of type ":<digit>"
+    # name has a suffix of type ":<digit>"
     #
     # By the same token, if we delete an object that has been parented after 
     # being added to the scene, that object will not be found because the 
@@ -991,7 +991,7 @@ class RealityX( poseraddon.Addon,
         Reality.updateAnimationLimits(1, sc.NumFrames(), sc.FramesPerSecond())
 
     ##
-    # Our mean of communicating between the C++ layer and the Poser Pyhton layer
+    # Our mean of communicating between the C++ layer and the Poser Python layer
     # This method also refreshes the camera and light data 
     def updateSceneData(self):
         global Globals
@@ -1283,7 +1283,7 @@ class RealityX( poseraddon.Addon,
             #self.win.update()
             self.callbackDisabled = False
             if ReTools.POSER_MAJOR == 9:
-                # Kludgy workaround for a bug in Poser 9 that
+                # Kludgey workaround for a bug in Poser 9 that
                 # causes the deleteObjects() event to be called after 
                 # a new scene is called. We need to tell our method to
                 # ignore that call at this point.
@@ -1385,7 +1385,7 @@ class RealityX( poseraddon.Addon,
             global Globals
             Reality.setLibraryPaths(poser.Libraries())
 
-            # Kludgy workaround for a bug in Poser that
+            # Kludgey workaround for a bug in Poser that
             # causes the deleteObjects() event to be called after 
             # a new scene is called. We need to tell our method to
             # ignore that call at this point.

@@ -40,7 +40,7 @@ QByteArray getApplicationPath() {
 }
 
 #elif defined(WIN32)
-// Retrieves the full path of the current runnign application. Windows version
+// Retrieves the full path of the current running application. Windows version
 QByteArray getApplicationPath()  {
   QByteArray appName;
   appName.reserve(RE_MAX_APP_NAME_SIZE);

@@ -31,8 +31,8 @@ class ReTextureEditor: public QWidget, public Ui::reTextureEditor {
 private:
   // Variable: pageNames
   //   A simple dictionary that is used to fill the combobox that
-  //   allows the user to change type of texture. The disctionary
-  //   allows us to use simbolic names to refer to a specific page
+  //   allows the user to change type of texture. The dictionary
+  //   allows us to use symbolic names to refer to a specific page
   //   instead of relying on string comparison, which can be easily
   //   broken by updates and translations.
   QHash<ReTextureType, QString> pageNames;
@@ -80,7 +80,7 @@ public slots:
    *
    *  \param model The data model. This is what interfaces the underlying texture with the UI. Each
    *               modification of the texture data causes signals to be emitted to alert other
-   *               listerners of the changes made.
+   *               listeners of the changes made.
    *  \param breadcrumb The breadcrumb that symbolizes the texture.
    *  \param isRoot Boolean that indicates if this texture is the root of the 
    *                breadcrumb trial. If false the breadcrumb will be appended 
@@ -93,7 +93,7 @@ public slots:
 signals:
   //! Signal: editTexture
   //!   Signal emitted when a texture needs to be edited. This is a recursive event, like when
-  //!   the user cliks on the gear menu of a Color/Constant texture in the ColorMath texture editor
+  //!   the user clicks on the gear menu of a Color/Constant texture in the ColorMath texture editor
   //!   The result is generally to call this class again with the subtexture loaded
   void editTexture( ReTexturePtr tex, QString& breadcrumb, bool isRoot );
 

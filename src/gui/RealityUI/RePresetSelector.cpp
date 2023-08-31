@@ -98,7 +98,7 @@ QString RePresetSelector::getValue() {
   return(selectedValue);
 }
 /**
- * Returns the text of the selected item. This is the text in the first colum, what is identified as "name"
+ * Returns the text of the selected item. This is the text in the first column, what is identified as "name"
  */
 QString RePresetSelector::getText() {
   return(selectedText);

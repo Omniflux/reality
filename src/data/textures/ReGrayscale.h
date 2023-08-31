@@ -27,7 +27,7 @@ namespace Reality {
   the base texture and a given color. This can be used, for example, to shift the 
   grayscale result before the final conversion. It can also be used to darken then 
   resulting texture. If, for example, we take the base texture, multiply it with a
-  dark shader of grey and then extract one of its channels, we will affect the result
+  dark shader of gray and then extract one of its channels, we will affect the result
   beyond what is possible by simply extracting one of the channels.
 
   See also <ReTexture>.

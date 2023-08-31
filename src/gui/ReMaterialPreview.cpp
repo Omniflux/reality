@@ -135,7 +135,7 @@ void ReMaterialPreview::sendPreviewRequest( const QString& matName,
   // ZMQ can fail with EINTR or other signals. In that case
   // it will throw an exception, which will crash Reality because
   // Qt does not handle exceptions. The try/catch block takes care
-  // of avoiding the crash but, if an exception occours, we end up
+  // of avoiding the crash but, if an exception occurs, we end up
   // with no preview. The while loop takes care of resending the message
   // in case of ZMQ exception.
   while(true) {
@@ -233,7 +233,7 @@ void ReMaterialPreview::processPreviewQueue()
 void ReMaterialPreview::run() {
   keepRunning = true;
   initialized = false;
-  // Configure the socket for the inboud requests from the client
+  // Configure the socket for the inbound requests from the client
   zmq::socket_t receiver(ipcContext, ZMQ_PAIR);
   receiver.bind(RE_MP_REQUEST_TRANSPORT);
   zmqSetNoLinger(receiver);

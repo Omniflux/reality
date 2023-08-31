@@ -71,7 +71,7 @@ ReTexturePtr ReNodeConverter::convertNode( const QString nodeName, const NodeHin
   }
 
   // If the node name exists already, and the call to this method requires,
-  // to return a stand-alonw, unique, instance, then we make a unique name 
+  // to return a stand-alone, unique, instance, then we make a unique name
   // derived from the original.
   if (nodeIsShared) {
     int i = 2;
@@ -305,7 +305,7 @@ ReTexturePtr ReNodeConverter::convertColorMath( const QString& nodeName,
   // constant color node. This situation can happen because of the 
   // conversion of Poser nodes. Two nodes might be added, for example,
   // using a color and a node for each channel. If the node is not 
-  // supported or superflous for Reality then the result will be to 
+  // supported or superfluous for Reality then the result will be to
   // have a color and no texture for the channel. Often the color is
   // pure white and/or the same color is used for each channel. 
   if (!texture1Present && !texture2Present) {
@@ -514,7 +514,7 @@ ReTexturePtr ReNodeConverter::convertMix( const QString& nodeName,
     mixNode->setMixTexture(mixTexture);
     mixNode->setMixAmount(1.0);
   }
-  // Sanity check. If we end up with mixing two indentical colors,
+  // Sanity check. If we end up with mixing two identical colors,
   // it can happen, just delete the node created this far and replace
   // it with one constant texture using the same color.
   ReTexturePtr tex1 = mixNode->getTexture1();

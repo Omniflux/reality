@@ -1123,7 +1123,7 @@
               <item>
                <widget class="QDoubleSpinBox" name="YaxisRotation">
                 <property name="toolTip">
-                 <string>Rotation of the IBL environment along the vericla axis</string>
+                 <string>Rotation of the IBL environment along the vertical axis</string>
                 </property>
                 <property name="minimum">
                  <double>-359.000000000000000</double>

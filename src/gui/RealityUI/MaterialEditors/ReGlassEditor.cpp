@@ -231,7 +231,7 @@ void ReGlassEditor::updateGlassType() {
   // Since the glass types are radiobutton, every time the user switches
   // to a new type of glass it causes this method to be called twice:
   // one call is for the previous glass type to be toggled off and one 
-  // call is fot the glass type to be toggled on. We don't care about the
+  // call is for the glass type to be toggled on. We don't care about the
   // "off" event.
   auto source = qobject_cast<QRadioButton*>(QObject::sender());
   if (!source) {

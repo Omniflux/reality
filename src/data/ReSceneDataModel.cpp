@@ -87,7 +87,7 @@ void ReSceneDataModel::updateMaterial( const QString objectID,
   args["materialName"] = materialName;
   dataServerConnector->sendMessageToServer(GET_MATERIAL, &args);
   // Request the updated list of lights. This changes if the material
-  // ha been changed to light and viceversa
+  // ha been changed to light and vice versa
   dataServerConnector->sendMessageToServer(GET_OBJECT_LIGHTS, &args);
 }
 

@@ -12,7 +12,7 @@
 
 namespace Reality {
 
-// This is initilized by <realitypanel.cpp> when the GUI start up
+// This is initialized by <realitypanel.cpp> when the GUI start up
   
 RealityDataRelay* realityDataRelay = NULL;
   
@@ -596,7 +596,7 @@ void RealityDataRelay::forwardNotification( zmq::message_t& update ) {
     // isolated. The GUI is only concerned about changing the ISO, shutter
     // speed, f-stop and so on. These are fields that are not changed by 
     // the host-app side. The same is valid in the other direction so there
-    // is no need to synch the data, but simply to transfer the portion of
+    // is no need to sync the data, but simply to transfer the portion of
     // the camera data that each side affects. In the following code we 
     // simply take the data from the host-app:
     //   - The transformation matrix

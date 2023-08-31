@@ -205,7 +205,7 @@ typedef QSharedPointer<ReMaterialDictionary> ReMaterialDictionaryPtr;
 class REALITY_LIB_EXPORT ReGeometryObject {
 
 protected:
-  //! The name of the the object in the scene. This is obtained from the 
+  //! The name of the object in the scene. This is obtained from the
   //! hosting application and must be unique in the scene.
   QString name;
 
@@ -246,12 +246,12 @@ protected:
   //! regardless of what is in the original material. Several figures from
   //! Studio, especially the Genesis 2-base figures, have skin maps set to
   //! less than 1.0. That fact causes issues with Lux and with the system
-  //! Reality confugures SSS.
+  //! Reality configures SSS.
   bool isHumanFigure;
 
   //! Identifier of the object for which this object is an instance. The 
   //! string is used to uniquely reference the original object.
-  //! nstance objects are simple repetitions of source objects. They have 
+  //! instance objects are simple repetitions of source objects. They have
   //! no geometry or materials of their own
   QString instanceSourceID;
 
@@ -380,7 +380,7 @@ protected:
 
   //! Returns the ACSEL ID for a material based on the textures present
   //! \param matID The ID of the material for which we need the ACSEL ID
-  //! \param forDefaultShader If this parameter is set to true the the 
+  //! \param forDefaultShader If this parameter is set to true the
   //!                         ID returned is for the default shader
   QString computeAcselID( const QString& matID, 
                           const bool forDefaultShader = false );
@@ -396,7 +396,7 @@ private:
    * simply exist without any change.
    * \param matID The ID of the material. This is used to find 
    *              if a shader is present in the ACSEL database
-   * \param matPtr  If a shader is found then a materila will be created
+   * \param matPtr  If a shader is found then a material will be created
    *                and this pointer will be set to that object.
    * \return A ReMaterialType set to a valid material type if an ACSEL 
    *         shader was found. Otherwise the value is set to MatUndefined
@@ -408,7 +408,7 @@ private:
   void removeOwnLights();
 
   //! Convert the specular data from the host into a single texture.
-  //! We have two posisble channels of specular in both Poser and Studio
+  //! We have two possible channels of specular in both Poser and Studio
   //! In Poser they are called "specular" and "alternate specular".
   //! In Studio they are called "specular" and "specular 2".
   //! In either case, if both are available we convert them both and then
@@ -508,11 +508,11 @@ public:
 
   //! When a material is converted from the host type to the Reality version
   //! the original definition is stored in the ACSEL database. At any time
-  //! the user can revert the shader to the original version. Thsi method
-  //! performs that opertation.
+  //! the user can revert the shader to the original version. This method
+  //! performs that operation.
   void revertToOriginalShader( const QString matID );
 
-  //! Changes the type of a material by comverting one material to the new
+  //! Changes the type of a material by converting one material to the new
   //! type without re-reading the base material data from the host.
   void changeMaterialType( const QString materialID, 
                            const ReMaterialType newType);
@@ -553,7 +553,7 @@ public:
     return lights; 
   }
 
-  //! Returns a light material or a null pointer if the light does not exist in te list
+  //! Returns a light material or a null pointer if the light does not exist in the list
   inline ReLightMaterialPtr getLight( const QString& lightName ) {
     if (lights->contains(lightName)) {
       return lights->value(lightName).staticCast<ReLightMaterial>();
@@ -575,7 +575,7 @@ public:
   //! separately, so to avoid a deadlock.
   void unlinkLight( const QString& lightID );
 
-  //! Returns wheter this object is actually a light, like in the case of
+  //! Returns whether this object is actually a light, like in the case of
   //! a MeshLight
   inline bool isLight() const {
     return isLightFlag;
@@ -589,7 +589,7 @@ public:
   //! light emitters. 
   bool isLightEmitter();
 
-  //! Sets the visibiliy in render of the object
+  //! Sets the visibility in render of the object
   inline void setVisible( const bool yesNo ) {
     visible = yesNo;
   }

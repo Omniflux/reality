@@ -42,7 +42,7 @@ public slots:
   
   /**
    * This method sets the source of data for the preset selector.
-   * The input sytring is expected to be a document in YAML format with the following structure
+   * The input string is expected to be a document in YAML format with the following structure
    * - <MenuKey>:
    *    menuText: <Visible Text>
    *    options:

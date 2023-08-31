@@ -45,7 +45,7 @@ QString createUUID() {
 }
 
 
-// Contructor
+// Constructor
 ReAcsel::ReAcsel() {
   dbOpen = false;
   db = NULL;
@@ -300,7 +300,7 @@ void ReAcsel::initDB() {
      * the following structure:
      *   - bit 1: whether the shader set is a commercial preset. This prevents
      *            exporting it from the Preset Manager.
-     *   - bits 2-8: reserverd for future use.
+     *   - bits 2-8: reserved for future use.
      */ 
     str = QString( "CREATE TABLE %1"
                    "(SetID TEXT, SetName TEXT, Description TEXT,"
@@ -534,7 +534,7 @@ void ReAcsel::updateDatabase( const float dbVer, const float libVer ) {
           runQuery("DELETE from Categories WHERE CategoryID=15");
         }
       }
-      // Upgrade the Presets table to have the Flags colum
+      // Upgrade the Presets table to have the Flags column
       s.reset();
       SQLite::Statement us(*db,QString("ALTER TABLE Sets ADD 'Flags' SMALLINT DEFAULT 0").toUtf8());
       if ( us.exec() ) {
@@ -1539,7 +1539,7 @@ ReAcsel::ReturnCode ReAcsel::checkIfShaderSetsExist(
       continue;
     }
     // shaderSets[i] gives us the whole object that defines the shader set,
-    // which means the three sections of descripion, shaders and uuids.
+    // which means the three sections of description, shaders and uuids.
     QVariantMap ss = shaderSets[i].toMap().value(RE_ACSEL_BUNDLE_DESCRIPTION).toMap();
     if ( !(ss.contains(RE_ACSEL_BUNDLE_SET_ID) && ss.contains(RE_ACSEL_BUNDLE_DESCRIPTION)) ) {
       return NotAnACSELBundle;
@@ -1596,7 +1596,7 @@ ReAcsel::ReturnCode ReAcsel::importShaderSet( QVariantMap& shaderData ) {
       }
     }
   }
-  // A set that replaces an existing one could coneivably have fewer
+  // A set that replaces an existing one could conceivably have fewer
   // shaders than the previous version. So, we need to delete the existing
   // shader set before we install the new version, otherwise we will have
   // shaders from the old version mixed with the new ones.

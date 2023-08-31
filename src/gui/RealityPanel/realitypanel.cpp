@@ -203,11 +203,11 @@ void RealityPanel::init() {
     RealityBase::getRealityBase()->getHostAppID());
 
   /*************************************************************************
-   Connect the server communication systen with the event handlers
+   Connect the server communication system with the event handlers
    This is where the process starts. The fetchData() method is called once the connection
    with the host-app is established.
    *************************************************************************/   
-  // The acknoledgement that the channel is established starts the fetching
+  // The acknowledgment that the channel is established starts the fetching
   // of the data from the server
   connect(realityDataRelay, SIGNAL(upAndRunning()),this, SLOT(fetchData()));
 
@@ -839,7 +839,7 @@ void RealityPanel::fetchData() {
   connect(selectModel, SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)),
           this, SLOT(checkObjectSelection( const QItemSelection&, const QItemSelection&)));
 
-  // Forces reselection of the first item when the data model has been reset
+  // Forces re-selection of the first item when the data model has been reset
   connect(sceneDataModel, SIGNAL(modelReset()), this, SLOT(selectFirstItem()));
 
   // Reselect a material after it has been converted to a new type
@@ -1246,7 +1246,7 @@ void RealityPanel::saveSplitteState(int, int) {
 /**
  Method: editTexture
 
- This is where the editing of textures starts. The method simply dispaches the command to the
+ This is where the editing of textures starts. The method simply dispatches the command to the
  Texture Editor if a couple of basic conditions are verified: 
     - The current material is valid and
     - The texture to be edited is not null
@@ -1303,7 +1303,7 @@ void RealityPanel::updateServerTexture( ReTexturePtr texture,
                          sortedSceneDataModel->mapToSource(rows[i])
                        );
     // Find the texture affected inside the selected material. This identifies
-    // the texture for what it is in relation to the material, indipendently from
+    // the texture for what it is in relation to the material, independently from
     // the actual texture that was edited.
 
     auto tex2 = mat2->findTextureByChannelPath(channelID);
@@ -1313,7 +1313,7 @@ void RealityPanel::updateServerTexture( ReTexturePtr texture,
     if (tex2.isNull()) {
       continue;
     }
-    // If the type of texture differes from the texture used to do the edit then
+    // If the type of texture differs from the texture used to do the edit then
     // we cannot apply the change and we need to bail out
     if (tex2->getType() != texture->getType()) {
       continue;
@@ -1795,7 +1795,7 @@ template<typename T> void RealityPanel::makeNewEditor() {
   auto newEditor = new T(this);
   clearLayout(editorScrollerLayout);
   editorScrollerLayout->addWidget(newEditor);
-  // Add a vertical speacer to keep the editor aligned with the top of 
+  // Add a vertical spacer to keep the editor aligned with the top of
   // the scroll area
   editorScrollerLayout->addItem(
     new QSpacerItem(10, 10, QSizePolicy::Minimum, QSizePolicy::Expanding)
@@ -2060,7 +2060,7 @@ void RealityPanel::materialsMenuRequested(const QPoint& pos) {
   auto selectionModel = tvMaterials->selectionModel();
   QList<QModelIndex> rows = selectionModel->selectedRows();
   int numRows = rows.count();
-  // Exit in case, for any reason, the use right-vlivked while no selection
+  // Exit in case, for any reason, the use right-clicked while no selection
   // is present.
   if (!numRows) {
     return;
@@ -2310,7 +2310,7 @@ void RealityPanel::updateConfiguration( bool newVal ) {
 void RealityPanel::syncSceneData() {
   realityDataRelay->sendMessageToServer(SYNC_OUTPUT_DATA);
 
-  // If the user reconnectes from Lux after the path was empty we want to
+  // If the user reconnects from Lux after the path was empty we want to
   // reconnect the material preview. This generally happens when the user
   // set the path to Lux for the first time. At launch Reality tries to 
   // find Lux automatically but if that is not possible then the path to Lux
@@ -3090,7 +3090,7 @@ void RealityPanel::synchronizeMaterials( const ReMaterial* baseMat,
       channels << "Bm";
     }
 
-    // Do the texture synching
+    // Do the texture syncing
     for (int i = 0; i < channels.count(); i++) {
       QString channelName = channels[i];
       // We preserve the name of the texture in the target material
@@ -3281,7 +3281,7 @@ void RealityPanel::saveUniversalShader() {
       this, 
       tr("Error saving Universal Shader"), 
       QString(
-        tr("The following error occoured while saving the selected material"
+        tr("The following error occurred while saving the selected material"
            " as a universal shader: %1")
       )
       .arg(acsel->getErrorMessage())

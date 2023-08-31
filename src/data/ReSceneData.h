@@ -44,7 +44,7 @@
 #define KEY_SCENE_OVERWRITE_WARNING   "overwriteWarning"
 #define KEY_SCENE_SURFACE_INTEGRATOR  "surfaceIntegrator"
 #define KEY_SCENE_OCL_GROUP_SIZE      "OCLGroupSize"
-//! Wheter the scene uses OpenCL for rendering
+//! Whether the scene uses OpenCL for rendering
 #define KEY_SCENE_USE_OCL             "UseOCL"
 #define KEY_SCENE_OCL_DEVICES_ENABLED "OCLDevicesEnabled"
 #define KEY_SCENE_OCL_NUM_DEVICES     "OCLNumDevices"
@@ -266,7 +266,7 @@ struct ReSceneRenderOptions {
   //! to be used during rendering or not.
   //! Bit 0 is device number 0, bit 1 is device number 1 and so on.
   //! For example, if device 0 is disable, and device 1 and 2 are enabled,
-  //! that will translate into a configurayion string of 
+  //! that will translate into a configuration string of
   //! "opencl.devices.select = 011" 
   quint16 OCLDeviceFlags;
 
@@ -378,7 +378,7 @@ inline QDataStream& operator >>( QDataStream& strm, ReSceneRenderOptions& opt ) 
  *     - Camera information
  *     - Frame information
  *     - Light list
- *     - List of all the materials for all the figures involed and their composition
+ *     - List of all the materials for all the figures involved and their composition
  *
  * The structure of the data stored, for the geometry objects is:
  *
@@ -434,9 +434,9 @@ protected:
   bool inGUIMode; //!
 
   //! The scene is saved inside the host-app scene only if the GUI has been called at
-  //! least once or if the scene had been saved befoe. Otherwise the Reality data will 
+  //! least once or if the scene had been saved before. Otherwise the Reality data will
   //! not be passed at the host-app.
-  //! This flag is false by defaul and it gets set to true when the GUI starts or when the 
+  //! This flag is false by default and it gets set to true when the GUI starts or when the
   //! scene data is loaded.
   bool needsSaving; //!
 
@@ -531,7 +531,7 @@ public:
   void setNeedsSaving( const bool newVal );
   bool doesNeedsSaving() const;
 
-  //! Returns wheter or not the displacement is enabled for the whole 
+  //! Returns whether or not the displacement is enabled for the whole
   //! scene
   bool isDisplacementEnabled() const;
   
@@ -553,7 +553,7 @@ public:
   //! Returns a list of material names that use a given volume
   //! \param objectID The name of the object that contains the materials
   //!                 linked to a specific volume
-  //! \param volumeID The nameof the volume for which we want to know the
+  //! \param volumeID The name of the volume for which we want to know the
   //!                 names of the linked materials
   //! \return A QStringList with the name of the linked materials
   QStringList getMaterialsLinkedToVolume( const QString& objectID, 
@@ -643,7 +643,7 @@ public:
    */
   int getOCLGroupSize() const;
 
-  //! Returns the bitmask that indiactes the enabled OpenCL devices
+  //! Returns the bitmask that indicates the enabled OpenCL devices
   unsigned char getOCLDeviceFlags() const;
 
   void setOCLDeviceFlags( quint16 flags );
@@ -700,7 +700,7 @@ public:
   void setImageFileFormat( ExportImageFileFormat newVal );
 
   /**
-   * Returns wheter the 
+   * Returns whether the
    */
   bool getPreserveLightHue() const;
   /**
@@ -718,7 +718,7 @@ public:
   void setOCLRendering( const bool isOn );
 
   /**
-   Return wheter the overwrite warning flag is enabled
+   Return whether the overwrite warning flag is enabled
    */
   bool getOverwriteWarning() const;
 
@@ -732,7 +732,7 @@ public:
 
   //! Restore the data from a saved scene
   //! \param sceneData A map that describes all the scene information grouped
-  //!                  by objetcs, lights, cameras etc.
+  //!                  by objects, lights, cameras etc.
   //! \param mergeScene If true the scene information about file names, scene 
   //!                   parameters in the Render tab and other general parameters
   //!                   will not be restored, only the objects, lights, cameras
@@ -740,7 +740,7 @@ public:
   void restoreScene( const QVariantMap& sceneData, const bool mergeScene = false );
 
   /**
-   Returns the geometry format used by tthe scene
+   Returns the geometry format used by the scene
    */
   GeometryFileFormat getGeometryFormat() const {
     return properties.geometryFormat;
@@ -774,7 +774,7 @@ public:
   }
 
   //! Deserializes the render options from a QByteArray in a way that is
-  //! simmetrical to the getRenderOptions() method.
+  //! symmetrical to the getRenderOptions() method.
   inline void setRenderOptions( QByteArray& renderData ) {
     QDataStream stream(&renderData, QIODevice::ReadOnly);
     stream >> properties;
@@ -804,7 +804,7 @@ public:
   //! \param objectName The unique identifier of the object. This is the key
   //!                   used for the objects map. If the usePublicName 
   //!                   parameter is set to true then this parameter is 
-  //!                   interpreted to be the publci name instead.
+  //!                   interpreted to be the public name instead.
   //! \param usePublicName If this parameter is false, the default, then the 
   //!                      deletion is done interpreting the objectName as
   //!                      the internal name of the object. If this parameter
@@ -818,7 +818,7 @@ public:
   //! to work in this sequence:
   //!     - Create an object
   //!     - Mark the object as light
-  //!     - Adde the material of the object
+  //!     - Add the material of the object
   //! While not a constraint, it is expected that an area/mesh light has only
   //! one material, which is assigned to the light-emission plane.
   inline void markObjectAsLight( const QString objName, const bool onOff ) {
@@ -830,7 +830,7 @@ public:
 
   /**
    Add one material to the database. This method receives the data in JSON format and
-   runs a conversion algorithm base on heuristicts that try to guess the best type of
+   runs a conversion algorithm base on heuristics that try to guess the best type of
    material based on the data passed. 
   
    Parameters:
@@ -887,7 +887,7 @@ public:
    * \param objectID The unique identifier of the object that owns the material
    * \param materialID The name of the material to change
    * \param newType The new type that will be assigned to the material
-   * \param jsonData JSON strign that defines the attributes of the material
+   * \param jsonData JSON string that defines the attributes of the material
    */ 
   void changeMaterialType( const QString objectID, 
                            const QString materialID, 
@@ -1012,7 +1012,7 @@ public:
    * needs to refresh the catalog of objects discovered. It can happen that the host app
    * is not reporting all the events that affect the object catalog. For example, Poser 9
    * does not report renaming of parented objects. Because of this the catalog of objects
-   * kept by Reality can become out of sync with the host app. To resync it we mark all the
+   * kept by Reality can become out of sync with the host app. To re-sync it we mark all the
    * objects to be deleted and then scan the host app catalog again. When an object is 
    * found it is checked against the Reality catalog. If it already exist the deletion 
    * flag is reset. If it's not found then the flag will remain and then next operation,
@@ -1021,8 +1021,8 @@ public:
   void markObjectsForDeletion();
 
   /**
-   * Removes the deletion glaf applied by markObjectsForDeletion() to an object 
-   * Returns true if the object swas marked for deletion, false otherwise.
+   * Removes the deletion flag applied by markObjectsForDeletion() to an object
+   * Returns true if the object was marked for deletion, false otherwise.
    */
   bool clearObjectDeletionFlag( const QString objectID );
 
@@ -1094,7 +1094,7 @@ public:
     return cameras.count();
   }
 
-  //! Removes a camera from the list of cameras hadnled by Reality
+  //! Removes a camera from the list of cameras handled by Reality
   void removeCamera( const QString camID );
 
   inline void removeAllCameras() {
@@ -1129,7 +1129,7 @@ public:
 
   //! Make a copy of the lights so that they can be restored after the call
   //! to removeAllLights. This is to work around the bug in Poser 9 that 
-  //! causes delet events being sent after the add events.
+  //! causes delete events being sent after the add events.
   //! The logic is to backup the lights, remove them and then wait for
   //! Poser's add events for the lights. Once those are processed we can 
   //! restore the light data
@@ -1202,7 +1202,7 @@ public:
   //! side effect which is unsafe and obscure to rely on.
   //!
   //! The clean, correct way of doing the deletion is to unlink the light from
-  //! the object and idenfify the object at the same time. 
+  //! the object and identify the object at the same time.
   //! Then we delete the light and finally we delete the object.
   //!
   //! This method does the unlinking and returns the ID of the object, if found.
@@ -1223,7 +1223,7 @@ public:
   //! Convenience method to simply set the gain of a light
   void setLightIntensity( const QString& lightID, const float gain );
 
-  //! Sets the transfor matrix of a light. Used to store the light
+  //! Sets the transform matrix of a light. Used to store the light
   //! coordinates in the 3D scene when they change in the host app.
   void setLightMatrix( const QString lightName, const QVariantList& tm );
   //!  Overloaded version
@@ -1241,7 +1241,7 @@ public:
   QString getIBLPreviewMap();
   
   //! Sends a notification to the GUI via message passing.
-  //! Currently sending only the "lightAdded" message but open for exytensions
+  //! Currently sending only the "lightAdded" message but open for extensions
   void notifyGUI( const QString msg, const QString id );
    
   /*

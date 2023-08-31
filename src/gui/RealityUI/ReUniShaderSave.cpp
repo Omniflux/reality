@@ -68,7 +68,7 @@ ReUniShaderSave::ReUniShaderSave( ReMaterial* mat, QWidget* parent ) :
   setPreviewQuality(previewQuality->value());
   connect(btnSearch, SIGNAL(clicked()), this, SLOT(searchShader()));
   connect(btnMatPreview, SIGNAL(clicked()), this, SLOT(createMaterialPreview()));
-  //! Previer quality slider control
+  //! Preview quality slider control
   connect(previewQuality, SIGNAL(valueChanged(int)), 
           this, SLOT(setPreviewQuality(int)));
   //! The handler for the refresh timer

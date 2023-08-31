@@ -289,10 +289,10 @@ void Reality_DS::startup() {
 };
 
 // We scan all the objects scheduled to be monitored, those are the
-// objects loaded from the scene for whivh we have data saved. By scanning
+// objects loaded from the scene for which we have data saved. By scanning
 // that list we focus the search on new objects and avoid reading data for
 // objects that have been added to the scene in other ways. This is a possible
-// scenerion because the same loading procedure is used whether we load a scene
+// scenario because the same loading procedure is used whether we load a scene
 // by itself or as a result of the user selecting File | Merge in DS.
 //
 // Once we found the object specified in objID, our target, we check if
@@ -1029,7 +1029,7 @@ void Reality_DS::updateLightPos() {
   // is deleted. If the DzLight::getWSTransform() method is called in the middle
   // of processing the signal then Studio will crash. It seems that Studio
   // fires the signal and then completes the update of the light after the
-  // signal is processed. Unfortunatelu the state of the light is such that
+  // signal is processed. Unfortunately the state of the light is such that
   // retrieving its coordinates causes the crash. 
   //
   // To avoid that issue we simply append an event to the app queue so that
@@ -1215,7 +1215,7 @@ void Reality_DS::nodeRemoved( DzNode* node )  {
   if (shuttingDown) {
     return;
   }
-  // A lot of calls are for nodes of thime DzBone, which we don't add to the
+  // A lot of calls are for nodes of type DzBone, which we don't add to the
   // Reality database, so we can skip those right away.
   QString className = node->metaObject()->className();
   if ( className == "DzBone" || className.startsWith("DzDForm") ) {
@@ -1377,7 +1377,7 @@ QString getGeometryFileName( const DzNode* node, const QString defaultName ) {
   // it's a triaxis figure, coming from a DUF file.
   // On the other hand Reality needs to uniquely identify objects in
   // the whole runtime, regardless of the scene. Some products use 
-  // ambiguos names, like "pants" or "bra" and so it's likely to have
+  // ambiguous names, like "pants" or "bra" and so it's likely to have
   // collisions when those object names are used to identify ACSEL
   // shaders. 
   //
@@ -1483,7 +1483,7 @@ void Reality_DS::addRealityObject( const QString& objID,
   QString fileName = getGeometryFileName(node, objID);
   
   if ( !RealitySceneData->addObject(node->getLabel(), objID, fileName) ) {
-    // if the addObject method return false it means that that object is already
+    // if the addObject method return false it means that the object is already
     // in the database and we don't need to do anything else
     return;
   }

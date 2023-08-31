@@ -27,7 +27,7 @@ private:
 
   //! We store the last library path that matched a file. Chances are that many textures 
   //! come from the same path so it makes sense to test them against a matched path 
-  //! bofore trying all the other paths in the library
+  //! before trying all the other paths in the library
   QString lastLibraryPath;
 
 public:

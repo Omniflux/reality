@@ -147,7 +147,7 @@ public:
 
     // The polish is expressed in the UI with a range of 0-10000. Lux uses a "roughness"
     // parameter, opposite in idea, which is in the range of 0.0-1.0. The following
-    // formulas convert from one systen to the other
+    // formulas convert from one system to the other
     double hr = 1.0 - mat->getHPolish()/10000.0;
     double vr = 1.0 - mat->getVPolish()/10000.0;
     // If the roughness approaches 0 then Lux will render the surface as black. We apply a small 

@@ -110,7 +110,7 @@ private slots:
 
   /**
    Brings the window to the foreground. This is called by the host app 
-   when the user calls Reality and the the program is already running.   
+   when the user calls Reality and the program is already running.
    */
   void bringToFront();
 };

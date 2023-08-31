@@ -14,7 +14,7 @@
 
 /**
  * Class that defines the default parameters that we use when
- * rendering with classic of accelerated (Embree) CPU rendere.
+ * rendering with classic of accelerated (Embree) CPU renderer.
  */
 class ReLuxCPURenderer : public ReLuxRendererConfig {
 

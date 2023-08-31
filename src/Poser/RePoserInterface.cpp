@@ -67,7 +67,7 @@ void RePoserBase::objectDeleted( const QString& objName ) {
 }
 
 //! Called when a material is selected in the 
-//! host app. Reality then selectes the material in the 
+//! host app. Reality then selects the material in the
 //! material editor.
 void RePoserBase::materialSelected( const QString& objName, const QString& matID ) {
   realityIPC->materialSelected(objName, matID);
@@ -330,9 +330,9 @@ void RePoserSceneData::copyVertexData( const python::list& vertexList,
   float* verts = RealitySceneData->getGeometryVertexBuffer();
   float* norms = RealitySceneData->getGeometryNormalBuffer();
 
-  // The list is a setof X, Y, Z values. We scan each group of 3 
+  // The list is a set of X, Y, Z values. We scan each group of 3
   for (int i = 0; i < listLen; i += 3) {
-    // The vertices are stored continuguosly in a flat array. The sequence is
+    // The vertices are stored contiguously in a flat array. The sequence is
     // formatted as X, Y, Z
     verts[i]   = python::extract<float>(vertexList[i]);
     verts[i+1] = python::extract<float>(vertexList[i+1]);
@@ -354,14 +354,14 @@ void RePoserSceneData::copyUVData( const python::list uvList,
 
   int listLen = python::len(uvList);
   for (int i = 0; i < listLen; i += 3) {
-    // The UV data in Pyhton is a list that contains a series of 
+    // The UV data in Python is a list that contains a series of
     // three values: an integer which is the vertex index and
     // two floats, the value for U and the value for V
     int vertexIndex = python::extract<int>(uvList[i]);
     UVs[vertexIndex][0] = python::extract<float>(uvList[i+1]);
     UVs[vertexIndex][1] = python::extract<float>(uvList[i+2]);
 
-    // The vertices are stored continuguosly in a flat array. The sequence is
+    // The vertices are stored contiguously in a flat array. The sequence is
     // formatted as X, Y, Z
     verts[vertexIndex*3]   = python::extract<float>(vertexList[vertexIndex*3]);
     verts[vertexIndex*3+1] = python::extract<float>(vertexList[vertexIndex*3+1]);

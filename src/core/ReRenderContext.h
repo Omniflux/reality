@@ -15,7 +15,7 @@
 /**
  * This class provides information about the render process. It's meant to 
  * collect and provide information that can be useful to optimize the rendering
- * or to simply keep relavant data current while rendering an animation.
+ * or to simply keep relevant data current while rendering an animation.
  *
  * The life-span of this object is limited to the rendering performed. If Reality
  * is rendering a frame then the context will be cleared once the frame is 
@@ -67,7 +67,7 @@ public:
 
   //! Scans the scene and finds out if there are instances. If there are, they
   //! are collected so that the exporter will have a way of finding out which
-  //! object is the spurce for instances and when it's the case to export an 
+  //! object is the source for instances and when it's the case to export an
   //! instance and when it's just simpler to export an anonymous object.
   void init();
 

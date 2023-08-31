@@ -20,7 +20,7 @@
 namespace Reality {
 
 /**
- * This class holds the data for the fabrich presets
+ * This class holds the data for the fabric presets
  */
 class REALITY_LIB_EXPORT ReClothPreset {
 public:
@@ -181,7 +181,7 @@ public:
    */
   void setNamedValue( const QString& vname, const QVariant& value );
   /**
-   Get the value of a propertie by name
+   Get the value of a property by name
    */
   const QVariant getNamedValue( const QString& vname ) const;
 

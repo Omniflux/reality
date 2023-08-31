@@ -34,7 +34,7 @@ ReSkinEditor::ReSkinEditor( QWidget* parent ) :
   // Enable the Delete menu for the Kg texture
   skinKg->setDeleteEnabled(true);
 
-  // Enable the Delete menu for the transclucency texture
+  // Enable the Delete menu for the translucency texture
   skinKa->setDeleteEnabled(true);
 
   // Make sure that there is the delete option for the Hair Mask
@@ -85,7 +85,7 @@ ReSkinEditor::ReSkinEditor( QWidget* parent ) :
                       textureChannelModel
                     )
               );
-  // Responds to the texture modified signal by refreshin the hair mask preview
+  // Responds to the texture modified signal by refreshing the hair mask preview
   connect(KhmAdapter.data(), SIGNAL(textureModified()), 
           this, SLOT(refreshHairMaskPreview()));
 

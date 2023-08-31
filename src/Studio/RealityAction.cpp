@@ -16,7 +16,7 @@ namespace Reality {
 
 #define RE_MENU_ICON_FILE_NAME "R-flat-logo-menu.png"
 /**
- * Action to install the lauch of Reality in the Render menu of Studio
+ * Action to install the launch of Reality in the Render menu of Studio
  */
 Reality3Action::Reality3Action() : DzAction( tr( "&Reality Render Editor" ),
                                              tr( "Launch the Reality Render Editor" ) ) 

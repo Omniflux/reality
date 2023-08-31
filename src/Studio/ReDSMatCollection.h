@@ -22,7 +22,7 @@ namespace Reality {
  * Reality identifies materials based on the name and each material is stored
  * together with the object that owns it.
  *
- * This class implements a simple catalog that is keyd by the Studio material
+ * This class implements a simple catalog that is keyed by the Studio material
  * ID and point to a material into the Reality catalog. Using this table
  * we can render the Studio objects correctly, including materials that 
  * result form geo-grafting.

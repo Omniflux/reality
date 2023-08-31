@@ -42,7 +42,7 @@ public:
   }
 
   /**
-   * This metod returns the map, in Qt format, that exports the
+   * This method returns the map, in Qt format, that exports the
    * Surface Integrator
    */
   virtual QVariantMap exportSI() {

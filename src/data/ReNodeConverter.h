@@ -14,7 +14,7 @@
 namespace Reality {
 
 /**
- * Converts a node from the the host importer to a ReTexture
+ * Converts a node from the host importer to a ReTexture
  */
 class ReNodeConverter {
 public:

@@ -41,11 +41,11 @@ namespace Reality {
  *  - After we read the data from the Reality_Scene_Data node we delete it
  *    from the scene. There is no need to keep it around. It will be re-created
  *    when the scene gets saved.
- *  - The data is saved in JSON format, exactly in the saem format used for 
+ *  - The data is saved in JSON format, exactly in the same format used for
  *    Reality for Poser.
  *
  * Parameters:
- *  appVersion - The current version of the application. Usefull to verify compatibility in the future.
+ *  appVersion - The current version of the application. Useful to verify compatibility in the future.
  */
 
 #define RE_DS_DATANODE_NAME       "Reality_Scene_Data"
@@ -122,7 +122,7 @@ public:
 /**
  * This class keeps track of the context for the loading of the JSON data
  * read from the Studio scene. The data is stored, as usual, inside a
- * QVariantMap. Thet initial context is the \ref sceneData variable.
+ * QVariantMap. The initial context is the \ref sceneData variable.
  * As Studio reads sub-objects or arrays the context shifts to point to
  * the sub-object or array. The setValue() method is used by the user of 
  * this class to store values in the right context. 
@@ -287,7 +287,7 @@ public:
 
 /**
  * This class implements the scene reading interface of the Studio API.
- * Itspecializes the JSON addMember and other methods to filter and store
+ * It specializes the JSON addMember and other methods to filter and store
  * the Reality data into the right place in a QVariantMap.
  * This object gets automatically deleted at the end of the reading of 
  * values from the file. Studio takes ownership of it.
@@ -386,7 +386,7 @@ public:
    *     once for each piece of custom data in the file. This is the loading
    *     phase and it can be used to store the data in a safe location
    *   - Studio then calls the applyInstanceToObject() method. This is where
-   *     we can apply the data loaded, if neaded
+   *     we can apply the data loaded, if needed
    *   - As a last step Studio then calls the resolveInstance() method. I'm 
    *     not sure why. It has to do with the way Studio organizes its own
    *     data structures. It's not needed for Reality.90

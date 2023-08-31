@@ -49,7 +49,7 @@ public:
   /**
    * Add an instance of an object to the scene.
    * \param objectName The ID of the instance
-   * \param transform. A map that lists the characteristicts of the 
+   * \param transform. A map that lists the characteristics of the
    *                   transformation applied to the instance. The 
    *                   elements expected in the map are:
    *                   - xRot

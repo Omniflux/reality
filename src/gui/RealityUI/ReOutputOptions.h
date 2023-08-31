@@ -96,7 +96,7 @@ private:
   ImageFileFormats imageFileFormats;
   RenderSamplers renderSamplers;
 
-  // //! The patrameter group that is currently selected.
+  // //! The parameter group that is currently selected.
   // QListWidgetItem* currentParameterGroup;
 
 public:
@@ -149,7 +149,7 @@ private slots:
   void updateNumThreads(int val);
   void updateOverwriteWarning( bool onOff );
   // void updateSceneFileName( const QString& val );
-  //! Called when the user selectes a new "Scene Type" or SurfaceIntegrator
+  //! Called when the user selects a new "Scene Type" or SurfaceIntegrator
   void updateSceneType( int newIndex );
   void updateMaxSamples(int val);
 

@@ -157,7 +157,7 @@ void ReAcselManager::deleteUniversalShaders() {
     if ( !acsel->deleteUniversalShader(shaderIDs[i]) ) {
       QMessageBox::information(
         this, 
-        tr("Error deliting shader"), 
+        tr("Error deleting shader"),
         tr("Shader %1 could not be deleted")
       );
     }

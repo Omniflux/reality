@@ -27,7 +27,7 @@ struct ReRendererInfo {
 
 typedef QSharedPointer<QSettings> ReConfigurationPtr;
 /**
- This class implements a simple "bootstrap" sequence for the Shared Library/DLL. In here we add thinsg that need to be
+ This class implements a simple "bootstrap" sequence for the Shared Library/DLL. In here we add things that need to be
  done when the shared library is loaded, which usually happens when the plug-in is loaded in the hosting
  application. 
 

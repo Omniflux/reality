@@ -32,7 +32,7 @@ public:
   }
 
   /**
-   * This metod returns the text, in Lux format, that exports the
+   * This method returns the text, in Lux format, that exports the
    * Surface Integrator
    */
   QString exportSI() {

@@ -18,7 +18,7 @@
 namespace Reality {
 
 /**
-  Base calss for all Surface Integrator exporters.
+  Base class for all Surface Integrator exporters.
  */
 class REALITY_LIB_EXPORT ReLuxSIPathExporter : public ReLuxSIExporter {
   
@@ -35,7 +35,7 @@ public:
   }
 
   /**
-   * This metod returns the text, in Lux format, that exports the
+   * This method returns the text, in Lux format, that exports the
    * Surface Integrator
    */
    QString exportSI() {

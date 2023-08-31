@@ -43,7 +43,7 @@ public:
 
     importModifiers( mat, data );
     importAlphaChannel( mat, data );
-    // We import the texture uncoditionally because the tint of the water is
+    // We import the texture unconditionally because the tint of the water is
     // not strictly considered as a texture
     importTextures(mat, data, Replace);
 

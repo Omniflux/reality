@@ -98,7 +98,7 @@
    <item row="3" column="0" colspan="2">
     <widget class="QCheckBox" name="defaultConfig">
      <property name="toolTip">
-      <string>If enabled, this material configuration will be applied to the selected model regarrdless of what materials are used in the host application</string>
+      <string>If enabled, this material configuration will be applied to the selected model regardless of what materials are used in the host application</string>
      </property>
      <property name="text">
       <string>This is a generic preset</string>
@@ -108,7 +108,7 @@
    <item row="3" column="2" colspan="2">
     <widget class="QCheckBox" name="setMaterialTypeOnly">
      <property name="toolTip">
-      <string>If enabled, this material configuration will be applied to the selected model regarrdless of what materials are used in the host application</string>
+      <string>If enabled, this material configuration will be applied to the selected model regardless of what materials are used in the host application</string>
      </property>
      <property name="text">
       <string>Only change the material type</string>

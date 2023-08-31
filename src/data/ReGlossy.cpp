@@ -37,7 +37,7 @@ Glossy::Glossy( const QString name, const ReGeometryObject* parent) :
   // channels[RE_GLOSSY_KS_CH].staticCast<ReConstant>()->setColor(RE_GLOSSY_DEFAULT_KS);
 
   channels[RE_GLOSSY_KA_CH] = ReTexturePtr(new Reality::ReConstant(QString("%1_Ka").arg(name), this));
-  //  For Glossy Traslucent
+  //  For Glossy Translucent
   channels[RE_GLOSSY_KT_CH] = ReTexturePtr(new Reality::ReConstant(QString("%1_Kt").arg(name), this));
   // The glossiness driver
   channels[RE_GLOSSY_KG_CH] = ReTexturePtr();

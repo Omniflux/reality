@@ -25,7 +25,7 @@ namespace bpo = boost::program_options;
 /**
  * Proxy Style used to disable the rounded top and bottom margins of 
  * the combo-box popup menu. On Mac OS those top and bottom portions
- * are always visiable and cannot be styled via CSS resulting in white
+ * are always visible and cannot be styled via CSS resulting in white
  * areas above the darker body of the menu set by the style sheet.
  */
 class ReProxyStyle : public QProxyStyle

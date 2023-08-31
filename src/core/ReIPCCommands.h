@@ -193,7 +193,7 @@ enum IPC_MESSAGES {
   GET_LIBRARY_PATHS,
 
   //! The server side sometimes needs to check if the GUI is around
-  //! the PING messag edoes that
+  //! the PING message does that
   PING,
 
   //! The host-app has loaded a scene

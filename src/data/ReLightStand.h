@@ -23,7 +23,7 @@ namespace Reality {
 
     - A geometry object that is completely dedicated to being a light. This is usually
       a square that has a name starting with "RealityLight"
-    - A material of a standard obvject is converted to light by the user, using the
+    - A material of a standard object is converted to light by the user, using the
       special command in the Reality UI.
 
   The implementation that we use is to treat the base mesh like any other object

@@ -76,7 +76,7 @@ private:
   };
 
   //! This method calls the GUI and forwards one of the messages emitted by POSER.
-  //! Specifically it fowards the HOST_OBJECT_ADDED, HOST_OBJECT_DELETE and HOST_OBJECT_RENAMED
+  //! Specifically it forwards the HOST_OBJECT_ADDED, HOST_OBJECT_DELETE and HOST_OBJECT_RENAMED
   //! messages
   void forwardNotification( zmq::message_t& update );
 
@@ -134,7 +134,7 @@ signals:
   //! Emitted when the requested set of objects is ready
   void objectsReady( ReGeometryObjectDictionary objs );
 
-  //! Emitted when the requested list of objec names is ready
+  //! Emitted when the requested list of object names is ready
   void objectNamesReady( QStringList objNames );
 
   //! Emitted when the requested number of objects in the scene has been received
@@ -171,9 +171,9 @@ signals:
   // // Emitted when a GUI-requested light has been received from the host-app
   // void lightReady(const QString lightID);
 
-  //! Emitted whe the GUI receives a notification from the host-app that a 
+  //! Emitted when the GUI receives a notification from the host-app that a
   //! light has been added to the scene. This signal will trigger the request,
-  //! from the GUI, of transfering the light from the host-app.
+  //! from the GUI, of transferring the light from the host-app.
   void lightAdded(const QString lightID);
 
   //! Emitted when the GUI receives a notification from the host-app that a 
@@ -195,7 +195,7 @@ signals:
   //! Emitted when the host app ID has been received
   void hostAppIDReady();
 
-  //! Emitted whan a requested material has been received
+  //! Emitted when a requested material has been received
   void materialReady(QString objectID, QString materialName);
 
   //! Emitted when the user resets the scene in the host app
@@ -217,7 +217,7 @@ signals:
   //! Emitted when the host-app side has finished exporting the scene to the renderer.
   void exportFinished();
 
-  //! Emitted to alert the user that the render dimnsions are not set
+  //! Emitted to alert the user that the render dimensions are not set
   void renderDimensionsNotSet();
 
   //! Emitted when a scene has been loaded in the host-app
@@ -228,7 +228,7 @@ signals:
 
   //! Emitted when the GUI needs to pause or resume the material preview
   //! If the bool in the parameter is true then the material preview
-  //! musr be paused, otherwise it is resumed.
+  //! must be paused, otherwise it is resumed.
   void pauseMaterialPreview(bool);
 };
 

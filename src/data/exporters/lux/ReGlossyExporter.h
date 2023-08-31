@@ -139,7 +139,7 @@ public:
                      ->getUniqueName();
 
     // Most common case first, the user selected just numeric values
-    // for the glossineess
+    // for the glossiness
     if (glossinessTex.isNull()) {
       ksTextures = "";
       ksValue = QString(

@@ -71,7 +71,7 @@ private slots:
   void updateShaderList( const QString& newCat );
 
 signals:
-  //! Signaled when a shader is seelcted
+  //! Signaled when a shader is selected
   void shaderSelected( const QString& shaderID );
 
 };

@@ -140,7 +140,7 @@ void ReTextureAvatar::createMenu() {
   contextMenu->addSeparator();
   deleteAction = contextMenu->addAction(TA_MENU_DELETE);
   // Initializes a lookup table that maps the menu options to
-  // the corresponsing texture type
+  // the corresponding texture type
   for (int i = TexImageMap; i <= TexUndefined; i++) {
     if ( i == TexMultiMix     || i == TexUndefined || 
          i == TexFresnelColor || i == TexInvertMap ) {
@@ -364,8 +364,8 @@ void ReTextureAvatar::getColorValues( const QColor& color, QString& colorString,
 void ReTextureAvatar::setColorMathAvatar( QLabel* lbl, QLabel* lbl2, ReColorMathPtr tex ) {
   ReTexturePtr t1 = tex->getTexture1();
   ReTexturePtr t2 = tex->getTexture2();
-  // Flag to signak if the second label has been set already. It's tested in the 
-  // second half of this methid.
+  // Flag to signal if the second label has been set already. It's tested in the
+  // second half of this method.
   bool label2IsSet = false;
   bool functionIsSet = false;
   if (!t1.isNull()) {

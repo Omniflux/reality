@@ -716,7 +716,7 @@ void ReSceneData::updateMaterial( const QString objName,
       }    
     }
     else {
-      // This case happens when the user createa a new material either
+      // This case happens when the user creates a new material either
       // by using the Group Tool in Poser or the Geometry Editor in 
       // Studio.
       addMaterial(objName, matGUID, materialData);

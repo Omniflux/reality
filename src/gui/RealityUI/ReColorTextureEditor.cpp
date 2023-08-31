@@ -38,7 +38,7 @@ void ReColorTextureEditor::initColorPresets() {
       QVariantList colorGroup = colorGroups[i].toList();
       int numColors = colorGroup.count();
       // Read each color from a single group/row. There are
-      // 5 colors per row. Each colro is represented by an
+      // 5 colors per row. Each color is represented by an
       // array where [0]=r, [1]=g, [2]=b
       ReColorList aColorRow;
       for (int l = 0; l < numColors; ++l) {

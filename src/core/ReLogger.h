@@ -21,7 +21,7 @@
 #include "logging/cpplog.hpp"
 
 
-//! File-based stream for persistance of the log
+//! File-based stream for persistence of the log
 extern std::ofstream logFile;
 REALITY_LIB_EXPORT extern cpplog::OstreamLogger RealityLogger;
 

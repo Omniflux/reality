@@ -56,7 +56,7 @@ private:
   void addVolumeToList( ReVolumePtr vol );
 
   //! Use to notify when we are setting up fields programmatically
-  //! Whe it's set to true we avoid updating the volume data 
+  //! When it's set to true we avoid updating the volume data
   bool inSetup;
 
 public:

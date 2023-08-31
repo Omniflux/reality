@@ -40,7 +40,7 @@ public:
   ReVolumePtr importVolume( const QVariantMap& data ) {    
     ReVolumePtr vol = ReVolumePtr( new ReVolume() );
     importVolume(vol, data, true);
-    // We don't load the linked materia list because at this point the materials
+    // We don't load the linked material list because at this point the materials
     // might not be already created. In addition, the loading of the materials from
     // their own configuration will restore the linkage with the volumes.
     // The important thing is that the volumes are ready in the scene database.

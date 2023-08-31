@@ -84,8 +84,8 @@ private:
 
   /**
    * Companion method for <findDependencies>, it traverses the list
-   * of textures and find all the dependencies recursirvely,
-   * The resut is a sorted list with the dependencies at the
+   * of textures and find all the dependencies recursively,
+   * The result is a sorted list with the dependencies at the
    * top of the list.
    */
   void findTextureDependencies( ReTexturePtr tex, 
@@ -128,7 +128,7 @@ public:
     Each material has a catalog that stores all the nodes, textures, that are
     forming the "material network". This network is a nodal system that 
     defines a material as a connection of nodes, each one providing input to
-    the node that is abobe itself in the hyerarchy.
+    the node that is above itself in the hierarchy.
 
     The following method receives a node catalog from the material converter
     and stores that catalog in the material by making a copy of the items
@@ -222,11 +222,11 @@ public:
     static const QString getTypeAsString( const ReMaterialType matType );
 
     //! Given a name of a material, like "glass" or "glossy", this method
-    //! returns the corrsponding ReMaterialType
+    //! returns the corresponding ReMaterialType
     static ReMaterialType typeFromName( const QString& matName );
 
     //! Given the abbreviated name of a material, like "GLS" or "GLO", this method
-    //! returns the corrsponding ReMaterialType
+    //! returns the corresponding ReMaterialType
     static ReMaterialType typeFromShortName( const QString& matTypeStr );
   
     virtual QString toString();
@@ -247,7 +247,7 @@ public:
     //! Removes a texture from the catalog and deletes it from the heap.
     bool deleteTexture( const QString& tex );
 
-    //! Returns wheter if a texture is used by this material or not
+    //! Returns whether if a texture is used by this material or not
     //! It check if the texture is linked in the channels and if it's
     //! linked by other textures.
     //! The second, optional parameter, is used to name the owner of the
@@ -260,7 +260,7 @@ public:
     //! Creates a new texture and adds it to the <nodeCatalog>. The texture
     //! is created only if the channel name already exists and it does not
     //! contain a texture already
-    //! \return true if the operation succedes, false otherwise.
+    //! \return true if the operation succeeds, false otherwise.
     bool makeNewTexture( const QString& channelName, 
                          const ReTextureType textureType,
                          const ReTexture::ReTextureDataType dataType = ReTexture::color );
@@ -268,7 +268,7 @@ public:
     //! Replaces a texture with JSON data, which can usually come from the 
     //! clipboard. 
     //! \param channelID The channel identifying the texture inside the material
-    //! \param jsonTextureData The texture data serialzed using JSON
+    //! \param jsonTextureData The texture data serialized using JSON
     //! \param masterTesture If the texture to be replaced is a subtexture, then
     //!                      this parameter will point to the master texture. 
     //!                      Otherwise it will be null

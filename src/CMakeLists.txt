@@ -1,6 +1,6 @@
 # DAZ Studio 4 Plugins on Windows must link against MSVC++ 10 runtime and export symbols getSDKVersion and getPluginDefinition
 # DAZ Studio 4 Plugins on OS X must link against libstdc++.6.dylib and export ONLY symbols getSDKVersion and getPluginDefinition
-# Contrary to DAZ SDK Documention it appears linking to libc++ works?
+# Contrary to DAZ SDK Documentation it appears linking to libc++ works?
 
 
 # Configure CMAKE
@@ -208,7 +208,7 @@ set (SRC_GROUP_QT_UI
 # We need to have separate groups of sources for the texture and material 
 # editors because they need to be included in the RealityWidgets library,
 # the plugin library for Qt Creator, while the rest of the gui must not be
-# incuded there.
+# included there.
 set (HEADER_GROUP_TEXTURE_EDITORS
 	data/ReTextureChannelDataModel.h
 	gui/RealityUI/ReAbstractTextureEditor.h
@@ -607,7 +607,7 @@ source_group ("Resource Files" REGULAR_EXPRESSION ".*\\.(q?rc|res)")
 source_group ("QT Designer UI" REGULAR_EXPRESSION ".*\\.ui")
 source_group ("Templates" REGULAR_EXPRESSION ".*\\.in")
 
-# Prepare resources embeded in Reality_Executable
+# Prepare resources embedded in Reality_Executable
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 	set (OS_NAME WINDOWS)
 else()

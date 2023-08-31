@@ -97,13 +97,13 @@ void ReLuxGeometryExporter::writeLuxObject( ReGeometryBuffer* geometryBuffer,
   // the extra vertices. This buffer will be then appended at the end of 
   // the list of vertices exported. 
   // The way we build this buffer is as follows:
-  //   - We scan the list of triangles to export. For each vertex in the trinagle
+  //   - We scan the list of triangles to export. For each vertex in the triangle
   //     we look up the same vertex in the UV Map triangle. 
   //   - If the index of that UV point is higher than the last vertex it means
   //     that this is a vertex that we need to duplicate
   //   - We grab the vertex and then add it to the <extraVerts> buffer. This
   //     buffer has only enough elements to include the difference between
-  //     the number of UV points and the number of geometry vertyices
+  //     the number of UV points and the number of geometry vertices
   // 
   //  For example, the typical cube has 8 vertices, 12 triangles and 14 UV points
   //  From UV point 0 to 7 we have a match with the corresponding geometry vertices
@@ -291,7 +291,7 @@ void ReLuxGeometryExporter::exportToLux( const QString materialName,
     materialData += QString("Exterior \"%1\"\n").arg(outerVol);
   }
 
-  // Support for meshlight's inverted nornals
+  // Support for meshlight's inverted normals
   bool hasInvertedNormals = false;
   // Mesh Light
   ReLightMaterialPtr matLight = obj->getLight(materialName);
@@ -421,7 +421,7 @@ QString& ReLuxGeometryExporter::exportInstance( const QString& objectName,
 /**
  * Add an instance of an object to the scene.
  * \param objectName The ID of the instance
- * \param transform. A map that lists the characteristicts of the 
+ * \param transform. A map that lists the characteristics of the
  *                   transformation applied to the instance. The 
  *                   elements expected in the map are:
  *                   - xRot

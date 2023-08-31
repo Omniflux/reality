@@ -135,7 +135,7 @@ private:
 
   QIcon eyeOpenIcon,
         eyeClosedIcon;
-  // Array to list how we align each colum. With this
+  // Array to list how we align each column. With this
   //  we avoid expensive "if" tests. See <data()>
   int columnAlignement[6];
 

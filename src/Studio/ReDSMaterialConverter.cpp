@@ -210,7 +210,7 @@ void initMatProps( const QString matID ) {
   defaultWhite << QVariant(tmp.redF()) << QVariant(tmp.greenF()) << QVariant(tmp.blueF());
   defaultColor << QVariant(1.0) << QVariant(1.0) << QVariant(1.0);
 
-  // The diffuse channel has a color and a refrence to a map
+  // The diffuse channel has a color and a reference to a map
   colorMap["color"] = defaultWhite;
   colorMap["map"] = "";
 
@@ -728,7 +728,7 @@ void ReDSMaterialConverter::convert3DLSpecular( const DzProperty* prop ) {
   if (gainProp) {
     gain = gainProp->getValue();
   }
-  // Dim the specular color if the specular strenght is less than 100%
+  // Dim the specular color if the specular strength is less than 100%
   if (gain < 1.0f) {
     dimColor(specCol, gain);
   }
@@ -804,11 +804,11 @@ void ReDSMaterialConverter::convertIRaySpecular(const DzProperty* prop) {
     uRoughness = vRoughness = (RE_IRAY_BASE_ROUGHNESS - glossinessProp->getValue());
   }
   // Check the value of reflectivity. The value of RE_IRAY_BASE_ROUGHNESS is based
-  // on a reflectivity of 0. According to the iRay docuemntation at DAZ, this 
+  // on a reflectivity of 0. According to the iRay documentation at DAZ, this
   // property defaults to 0.5, which would increase the shine of the material from
   // the RE_IRAY_BASE_ROUGHNESS point. The conversion to Reality's values is based
   // on empirical tests and it works by subtracting a value from u/v roughness
-  // that is proportional to the value of the the reflectivity property. In this
+  // that is proportional to the value of the reflectivity property. In this
   // case we ignore any possible map attached to this channel.
   DzFloatProperty* reflectivityProp = qobject_cast<DzFloatProperty*>(
     dsMat->findProperty(DS_PROP_IR_GLOSSY_GLOSSY_REFLECTIVITY)
@@ -912,7 +912,7 @@ void ReDSMaterialConverter::convertAmbient(const DzProperty* prop)
   }
 
   auto ambMap = ambProp->getMapValue();
-  // Find the ambient strenght and set the light gain to it
+  // Find the ambient strength and set the light gain to it
   auto ambGain = qobject_cast<DzFloatProperty*>(
     dsMat->findProperty(DS_PROP_AMBIENT_STRENGTH)
   );

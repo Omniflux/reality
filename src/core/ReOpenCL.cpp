@@ -11,7 +11,7 @@
 
 //! Definitions of the OpenCL functions that we are going to need. These
 //! will be used to dynamically resolve the function pointers once the 
-//! OpenCL librarty is loaded
+//! OpenCL library is loaded
 
 
 typedef cl_int (*clGetPlatformIDs_t)(cl_uint         /* num_entries */, 
@@ -214,7 +214,7 @@ void ReOpenCL::findDevices() {
           reDevType =  ReOCLDevice::DeviceType::RE_OCL_ACCELERATOR;
           break;
         default:
-          // Just to avoid keeping a variable un-initualized
+          // Just to avoid keeping a variable un-initialized
           reDevType = ReOCLDevice::DeviceType::RE_OCL_ACCELERATOR;
           RE_LOG_INFO() << "OCL Device " << deviceName 
                         << " is of unsupported type " << devType;

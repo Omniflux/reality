@@ -74,7 +74,7 @@ void ReGrayscaleTextureEditor::updatePreview() {
   QImage scaled = tmp.scaled(imgSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
   int width = scaled.width();
   int height = scaled.height();
-  // Pointer to the function use to trasform the pixels.
+  // Pointer to the function used to transform the pixels.
   // This approach saves us thousands of "if" tests in the
   // conversion loop.
   void (*convertColor)(QRgb&);

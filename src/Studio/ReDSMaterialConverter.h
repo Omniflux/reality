@@ -38,23 +38,23 @@ private:
   /**
    * Properties are scanned in a random order. The texture tiling and 
    * offset might be received before or after the image map that causes
-   * the image map node to be created. To amke the system work we store
+   * the image map node to be created. To make the system work we store
    * the H/V tiling and the H/V offsets in the class, using default values.
    * If the tiling and offset data are received first they will update the
    * default values and so, when we receive the image map property the
-   * image map node will be created with the correcttiling and offset 
+   * image map node will be created with the correct tiling and offset
    * values.
    * If the image map is received first then we will create a node with 
    * the default values. Later on, when the tiling and offset properties
    * are found we will scan the set of node and update each one of the
-   * image map nodes. In LuxRender the tiling and offsaet of image maps
+   * image map nodes. In LuxRender the tiling and offset of image maps
    * is calculated on a per-texture basis. In Studio the same tiling and
    * offsets are use for all the textures in a material
    */
   float uTile, vTile;
   float uOffset, vOffset;
 
-  //! Wheter or not the shader that we are processing is for iRay.
+  //! Whether or not the shader that we are processing is for iRay.
   bool isiRayShader;
 
   //! The material that we are currently converting
@@ -95,7 +95,7 @@ private:
 
   /**
    * Several properties have multiple names. UV tiling, displacement and 
-   * others have been known to use different names with differen shaders.
+   * others have been known to use different names with different shaders.
    * In addition, it's faster to look up a property in a set than to run
    * a series of ifs(). For these reasons we keep a LUT of properties
    * identified by simpler names:
@@ -131,8 +131,8 @@ private:
                                 const DzProperty* )> ConverterCallback;
 
   //! This type defines a table that holds a callback to convert a
-  //! give property. The key is the name of the Studio property and 
-  //! the value is a pointer to a callback that convers that property
+  //! given property. The key is the name of the Studio property and
+  //! the value is a pointer to a callback that converts that property
   typedef QHash<QString, ConverterCallback> PropertyCallback_t;
 
   //! The Property Look Up Table that converts from Studio properties
