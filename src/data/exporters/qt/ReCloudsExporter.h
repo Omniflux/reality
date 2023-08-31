@@ -26,7 +26,7 @@ class REALITY_LIB_EXPORT ReQtCloudsExporter : public ReQtProceduralNoisesExporte
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {
-    auto tex = static_cast<const Clouds*>(baseTex);
+    auto tex = static_cast<const ReClouds*>(baseTex);
     ReQtProceduralNoisesExporter::exportTexture(tex);
 
     texData["usesHardNoise"] = tex->usesHardNoise();

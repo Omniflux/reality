@@ -24,7 +24,7 @@ class REALITY_LIB_EXPORT ReLuxCloudsExporter : public ReLuxTextureExporter{
 
 public:
   const QString exportTexture( ReTexturePtr texbase, const QString& assignedName = "", bool isForPreview = false ) {
-    CloudsPtr tex = texbase.staticCast<Clouds>();    
+    ReCloudsPtr tex = texbase.staticCast<ReClouds>();
 
     QString mapType = getMappingAsString(tex);
     QString mapScale = QString("%1 %1 %1").arg((double)tex->getScale(),0,'f',4);

@@ -673,17 +673,17 @@ ReTexturePtr ReNodeConverter::convertClouds( const QString& nodeName,
                                              const QVariantMap& node,
                                              const NodeHint hint ) {
 
-  CloudsPtr tex = Reality::CloudsPtr(new Reality::Clouds(nodeName));
+  ReCloudsPtr tex = Reality::ReCloudsPtr(new Reality::ReClouds(nodeName));
   tex->setBrightness(node["brightness"].toDouble());
   tex->setContrast(node["contrast"].toDouble());
   tex->setNoiseSize(node["size"].toDouble());
   tex->setNoiseDepth(node["depth"].toInt());
   QString val = node["noise basis"].toString();
   if (val == "improved perlin") {
-    tex->setNoiseBasis(Clouds::IMPROVED_PERLIN);
+    tex->setNoiseBasis(ReClouds::IMPROVED_PERLIN);
   }
   else {
-    tex->setNoiseBasis(Clouds::ORIGINAL_PERLIN);        
+    tex->setNoiseBasis(ReClouds::ORIGINAL_PERLIN);
   }
   tex->setHardNoise(node["style"].toString() == "hard");
   val = node["noise distortion"].toString();
@@ -726,10 +726,10 @@ ReTexturePtr ReNodeConverter::convertWood( const QString& nodeName,
   ReWoodPtr tex = ReWoodPtr(new ReWood(nodeName));
   QString val = node["noise basis"].toString();
   if (val == "improved perlin") {
-    tex->setNoiseBasis(Clouds::IMPROVED_PERLIN);
+    tex->setNoiseBasis(ReClouds::IMPROVED_PERLIN);
   }
   else {
-    tex->setNoiseBasis(Clouds::ORIGINAL_PERLIN);        
+    tex->setNoiseBasis(ReClouds::ORIGINAL_PERLIN);
   }
   tex->setNoiseSize(node["size"].toDouble());
   tex->setTurbulence(node["turbulence"].toDouble());

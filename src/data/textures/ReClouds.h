@@ -14,7 +14,7 @@ namespace Reality {
 /**
   See also <ProceduralNoise>
  */
-class Clouds : public ReProceduralNoise {
+class ReClouds : public ReProceduralNoise {
 
 private:
   bool usesHardNoiseFlag;
@@ -22,19 +22,19 @@ private:
 
 public:
 
-  // Constructor: Clouds
-  Clouds(const QString name, ReTextureContainer* parentMat = 0) ;
+  // Constructor: ReClouds
+  ReClouds(const QString name, ReTextureContainer* parentMat = 0) ;
 
   // Texture conversion ctor
-  Clouds( const ReTexturePtr srcTex );
+  ReClouds( const ReTexturePtr srcTex );
 
-  // Destructor: Clouds
- ~Clouds() {
+  // Destructor: ReClouds
+ ~ReClouds() {
 
   };
 
   virtual QString toString() {
-    return "Clouds texture";
+    return "ReClouds texture";
   };
 
   inline void setHardNoise( const bool yesOrNo ) {
@@ -71,9 +71,9 @@ public:
   
 };
 
-// Typedef: CloudsPtr 
+// Typedef: ReCloudsPtr
 //   Convenient definition of a shared pointer
-typedef QSharedPointer<Clouds> CloudsPtr;
+typedef QSharedPointer<ReClouds> ReCloudsPtr;
 
 
 

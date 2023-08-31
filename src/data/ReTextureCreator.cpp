@@ -58,7 +58,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexClouds: {
-      tex = new Clouds(texName, parentMat);
+      tex = new ReClouds(texName, parentMat);
       break;
     }
     case TexConstant: {
@@ -139,7 +139,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexClouds: {
-      tex = new Clouds(baseTex);
+      tex = new ReClouds(baseTex);
       break;
     }
     case TexConstant: {

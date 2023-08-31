@@ -693,7 +693,7 @@ ReTexturePtr ReMaterial::changeTextureType( const QString& name,
       break;
     }
     case TexClouds: {
-      newTex = new Clouds( oldTex );
+      newTex = new ReClouds( oldTex );
       break;
     }
     case TexConstant: {

@@ -24,7 +24,7 @@ class REALITY_LIB_EXPORT ReQtCloudsImporter : public ReQtProceduralNoiseImporter
 public:
 
   void restoreTexture( ReTexturePtr baseTex, const QVariantMap& data ) {
-    CloudsPtr tex = baseTex.staticCast<Clouds>();
+    ReCloudsPtr tex = baseTex.staticCast<ReClouds>();
     ReQtProceduralNoiseImporter::restoreTexture(tex, data);
 
     tex->setHardNoise(data.value("usesHardNoise").toBool());

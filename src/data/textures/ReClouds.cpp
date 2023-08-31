@@ -8,8 +8,8 @@
 
 namespace Reality {
 
-// Constructor: Clouds
-Clouds::Clouds( const QString name, ReTextureContainer* parentMat ) : 
+// Constructor: ReClouds
+ReClouds::ReClouds( const QString name, ReTextureContainer* parentMat ) :
   ReProceduralNoise(name, parentMat),
   usesHardNoiseFlag(false),
   noiseDepth(1) {
@@ -19,7 +19,7 @@ Clouds::Clouds( const QString name, ReTextureContainer* parentMat ) :
 };
 
 // Texture conversion ctor
-Clouds::Clouds( const ReTexturePtr srcTex ) :
+ReClouds::ReClouds( const ReTexturePtr srcTex ) :
   ReProceduralNoise(srcTex),
   usesHardNoiseFlag(false),
   noiseDepth(1) 
@@ -29,7 +29,7 @@ Clouds::Clouds( const ReTexturePtr srcTex ) :
 
   switch ( srcTex->getType() ) {
     case TexClouds: {
-      CloudsPtr t2 = srcTex.staticCast<Clouds>();
+      ReCloudsPtr t2 = srcTex.staticCast<ReClouds>();
       usesHardNoiseFlag = t2->usesHardNoiseFlag;
       noiseDepth        = t2->noiseDepth;
       break;
@@ -53,14 +53,14 @@ Clouds::Clouds( const ReTexturePtr srcTex ) :
   }
 }
 
-void Clouds::copyProperties( const ReTexturePtr srcTex ) {
+void ReClouds::copyProperties( const ReTexturePtr srcTex ) {
   setNamedValue("noiseType", srcTex->getNamedValue("noiseType"));
   setNamedValue("noiseDepth", srcTex->getNamedValue("noiseDepth"));
   setNamedValue("usesHardNoise", srcTex->getNamedValue("usesHardNoise"));
   ReProceduralNoise::copyProperties(srcTex);
 }
 
-void Clouds::setNamedValue( const QString& name, const QVariant& value ) {
+void ReClouds::setNamedValue( const QString& name, const QVariant& value ) {
   if (name == "noiseType" || name == "noiseBasis") {
     setNoiseBasis(static_cast<Reality::ReProceduralNoise::NoiseDistortionType>(value.toInt()));
   }
@@ -75,7 +75,7 @@ void Clouds::setNamedValue( const QString& name, const QVariant& value ) {
   }
 }
 
-const QVariant Clouds::getNamedValue( const QString& name ) {
+const QVariant ReClouds::getNamedValue( const QString& name ) {
   if (name == "noiseType" || name == "noiseBasis") {
     val = getNoiseBasis();
   }
@@ -91,13 +91,13 @@ const QVariant Clouds::getNamedValue( const QString& name ) {
   return val;
 }
 
-void Clouds::serialize( QDataStream& dataStream ) {
+void ReClouds::serialize( QDataStream& dataStream ) {
   ReProceduralNoise::serialize(dataStream);
   dataStream << usesHardNoiseFlag << noiseDepth;
 };
 
 
-void Clouds::deserialize( QDataStream& dataStream ) {
+void ReClouds::deserialize( QDataStream& dataStream ) {
   ReProceduralNoise::deserialize(dataStream);
   dataStream >> usesHardNoiseFlag >> noiseDepth;
 };
