@@ -725,7 +725,7 @@ ReTexturePtr ReMaterial::changeTextureType( const QString& name,
       break;
     }
     // case TexInvertMap: {
-    //   newTex = new InvertMap( oldTex );
+    //   newTex = new ReInvertMap( oldTex );
     //   break;
     // }
     case TexGrayscale: {

@@ -13,7 +13,7 @@
 namespace Reality {
 
 /*
-  Class: InvertMap
+  Class: ReInvertMap
 
   A texture that inverts an image map. Implemented by using the Mix texture,
   plugging the texture into the amount and setting the first mix value to 1 and
@@ -23,25 +23,25 @@ namespace Reality {
 
  */
 
-class REALITY_LIB_EXPORT InvertMap : public Re2DTexture {
+class REALITY_LIB_EXPORT ReInvertMap : public Re2DTexture {
 
 public:
-  // Constructor: InvertMap
-  InvertMap(const QString name, ReTextureContainer* parentMat = 0) : 
+  // Constructor: ReInvertMap
+  ReInvertMap(const QString name, ReTextureContainer* parentMat = 0) :
     Re2DTexture(name, parentMat) 
   {
     type = TexInvertMap;
   };
 
   // Texture conversion ctor
-  InvertMap( const ReTexturePtr srcTex ) :
+  ReInvertMap( const ReTexturePtr srcTex ) :
     Re2DTexture(srcTex)
   {
     type = TexInvertMap;
   }  
 
-  // Destructor: InvertMap
- ~InvertMap() {
+  // Destructor: ReInvertMap
+ ~ReInvertMap() {
   };
 
   // const QString getStringAvatar( const quint16  avatarNumber = 1 ) {
@@ -49,15 +49,15 @@ public:
   // };
 
   virtual QString toString() {
-    return "InvertMap texture";
+    return "ReInvertMap texture";
   };
 
   
 };
 
-// Typedef: InvertMapPtr 
+// Typedef: ReInvertMapPtr
 //   Convenient definition of a shared pointer
-typedef QSharedPointer<InvertMap> InvertMapPtr;
+typedef QSharedPointer<ReInvertMap> ReInvertMapPtr;
 
 
 } // namespace

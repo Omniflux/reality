@@ -95,7 +95,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexInvertMap: {
-      tex = new InvertMap(texName, parentMat);
+      tex = new ReInvertMap(texName, parentMat);
       break;
     }
     case TexGrayscale: {
@@ -175,7 +175,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexInvertMap: {
-      tex = new InvertMap(baseTex);
+      tex = new ReInvertMap(baseTex);
       break;
     }
     case TexGrayscale: {
