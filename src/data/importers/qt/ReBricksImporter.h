@@ -23,10 +23,10 @@ class REALITY_LIB_EXPORT ReQtBricksImporter : public ReQtTextureImporter {
 public:
 
   void restoreTexture( ReTexturePtr baseTex, const QVariantMap& data ) {
-    BricksPtr tex = baseTex.staticCast<Bricks>();
+    ReBricksPtr tex = baseTex.staticCast<ReBricks>();
     restoreBasicProperties(tex, data);
 
-    tex->setBrickType(static_cast<Bricks::BrickType>(data.value("brickType").toInt()));
+    tex->setBrickType(static_cast<ReBricks::BrickType>(data.value("brickType").toInt()));
     tex->setWidth(data.value("width").toFloat());
     tex->setHeight(data.value("height").toFloat());
     tex->setDepth(data.value("depth").toFloat());

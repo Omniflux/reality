@@ -12,7 +12,7 @@
 namespace Reality {
 
 // Static variables definition
-QString Bricks::lutTypesToStrings[Bricks::CHAINLINK+1] = {
+QString ReBricks::lutTypesToStrings[ReBricks::CHAINLINK+1] = {
   QString("Stacked"),
   QString("Flemish"),
   QString("English"),
@@ -22,7 +22,7 @@ QString Bricks::lutTypesToStrings[Bricks::CHAINLINK+1] = {
 };
 
 
-Bricks::Bricks( const QString name, 
+ReBricks::ReBricks( const QString name,
                 ReTextureContainer* parentMat,
                 const ReTextureDataType dataType ) : 
   ReTexture3D(name, parentMat),
@@ -41,7 +41,7 @@ Bricks::Bricks( const QString name,
 };
 
 // Conversion ctor
-Bricks::Bricks( const ReTexturePtr srcTex ) :
+ReBricks::ReBricks( const ReTexturePtr srcTex ) :
   ReTexture3D(srcTex),
   width(0.228f),
   height(0.108f),
@@ -55,7 +55,7 @@ Bricks::Bricks( const ReTexturePtr srcTex ) :
   type = TexBricks;
 
   if (srcTex->getType() == TexBricks) {
-    BricksPtr b2 = srcTex.staticCast<Bricks>();
+    ReBricksPtr b2 = srcTex.staticCast<ReBricks>();
     width        = b2->width;
     height       = b2->height;
     depth        = b2->depth;
@@ -67,7 +67,7 @@ Bricks::Bricks( const ReTexturePtr srcTex ) :
   initChannels();
 }
 
-void Bricks::initChannels() {
+void ReBricks::initChannels() {
   QString brickName  = QString("%1_brickColor").arg(name);
   QString mortarName = QString("%1_brickMortar").arg(name);
   QString modName    = QString("%1_brickMod").arg(name);
@@ -127,11 +127,11 @@ void Bricks::initChannels() {
 
 }
 
-Bricks::~Bricks() {
+ReBricks::~ReBricks() {
 };
 
 
-void Bricks::setBrickTexture( ReTexturePtr newVal ) {
+void ReBricks::setBrickTexture( ReTexturePtr newVal ) {
   channels[RE_BRICK_BRICK_CHANNEL] = newVal;
   if (!newVal.isNull() && parent) {
     newVal->reparent(parent);
@@ -140,7 +140,7 @@ void Bricks::setBrickTexture( ReTexturePtr newVal ) {
 };
 
   //! Sets the texture for the mortar 
-void Bricks::setMortarTexture( ReTexturePtr newVal ) {
+void ReBricks::setMortarTexture( ReTexturePtr newVal ) {
   channels[RE_BRICK_MORTAR_CHANNEL] = newVal;
   if (!newVal.isNull() && parent) {
     newVal->reparent(parent);
@@ -149,7 +149,7 @@ void Bricks::setMortarTexture( ReTexturePtr newVal ) {
 };
 
 //! Sets the texture for the mortar 
-void Bricks::setBrickModulationTexture( ReTexturePtr newVal ){
+void ReBricks::setBrickModulationTexture( ReTexturePtr newVal ){
   channels[RE_BRICK_MODULATION_CHANNEL] = newVal;
   if (!newVal.isNull() && parent) {
     newVal->reparent(parent);
@@ -157,19 +157,19 @@ void Bricks::setBrickModulationTexture( ReTexturePtr newVal ){
   }
 };
 
-const ReTexturePtr Bricks::getBrickTexture() const {
+const ReTexturePtr ReBricks::getBrickTexture() const {
   return channels[RE_BRICK_BRICK_CHANNEL];
 };
 
-const ReTexturePtr Bricks::getBrickModulationTexture() const {
+const ReTexturePtr ReBricks::getBrickModulationTexture() const {
   return channels[RE_BRICK_MODULATION_CHANNEL];
 };
 
-const ReTexturePtr Bricks::getMortarTexture() const {
+const ReTexturePtr ReBricks::getMortarTexture() const {
   return channels[RE_BRICK_MORTAR_CHANNEL];
 };
 
-QStringList Bricks::getDependencies() {
+QStringList ReBricks::getDependencies() {
   deps.clear();
   ReNodeDictionaryIterator i(channels);
   while( i.hasNext() ) {
@@ -183,7 +183,7 @@ QStringList Bricks::getDependencies() {
   return deps;
 };
 
-QString Bricks::getBrickTypeAsString() {
+QString ReBricks::getBrickTypeAsString() {
   switch( brickType ) {
     case STACKED: 
       return "stacked";
@@ -201,67 +201,67 @@ QString Bricks::getBrickTypeAsString() {
   return "stacked";
 }
 
-const Bricks::BrickType Bricks::getBrickType() const {
+const ReBricks::BrickType ReBricks::getBrickType() const {
   return brickType;
 };
 
-void Bricks::setBrickType( BrickType newVal ) {
+void ReBricks::setBrickType( BrickType newVal ) {
   brickType = newVal;
 };
 
-const float Bricks::getWidth() const {
+const float ReBricks::getWidth() const {
   return width;
 };
 
-void Bricks::setWidth( float newVal ) {
+void ReBricks::setWidth( float newVal ) {
   width = newVal;
 };
 
-const float Bricks::getHeight() const {
+const float ReBricks::getHeight() const {
   return height;
 };
 
-void Bricks::setHeight( float newVal ) {
+void ReBricks::setHeight( float newVal ) {
   height = newVal;
 };
 
-const float Bricks::getDepth() const {
+const float ReBricks::getDepth() const {
   return depth;
 };
 
-void Bricks::setDepth( float newVal ) {
+void ReBricks::setDepth( float newVal ) {
   depth = newVal;
 };
 
-const float Bricks::getBevel() const {
+const float ReBricks::getBevel() const {
   return bevel;
 };
 
-void Bricks::setBevel( float newVal ) {
+void ReBricks::setBevel( float newVal ) {
   bevel = newVal;
 };
 
-const float Bricks::getOffset() const {
+const float ReBricks::getOffset() const {
   return offset;
 };
 
-void Bricks::setOffset( float newVal ) {
+void ReBricks::setOffset( float newVal ) {
   offset = newVal;
 };
 
-const float Bricks::getMortarSize() const {
+const float ReBricks::getMortarSize() const {
   return mortarSize;
 };
 
-void Bricks::setMortarSize( float newVal ) {
+void ReBricks::setMortarSize( float newVal ) {
   mortarSize = newVal;
 };
 
-QString Bricks::toString() {
-  return "Brick texture";
+QString ReBricks::toString() {
+  return "ReBricks texture";
 };
 
-void Bricks::setNamedValue( const QString& name , const QVariant& value ) {
+void ReBricks::setNamedValue( const QString& name , const QVariant& value ) {
   if (name == "width") {
     width = value.toFloat();
   }
@@ -297,7 +297,7 @@ void Bricks::setNamedValue( const QString& name , const QVariant& value ) {
   }
 };
 
-const QVariant Bricks::getNamedValue( const QString& name ) {
+const QVariant ReBricks::getNamedValue( const QString& name ) {
   QVariant val;
   if (name == "width") {
     return width;
@@ -335,7 +335,7 @@ const QVariant Bricks::getNamedValue( const QString& name ) {
   return val;
 };
 
-void Bricks::replaceInnerTexture( const QString textureName, ReTexturePtr newTexture ) {
+void ReBricks::replaceInnerTexture( const QString textureName, ReTexturePtr newTexture ) {
   ReNodeDictionaryIterator i(channels);
   QString key = ""; // Flag that the value has not been found
   while( i.hasNext() ) {
@@ -351,7 +351,7 @@ void Bricks::replaceInnerTexture( const QString textureName, ReTexturePtr newTex
   }
 }
 
-void Bricks::serialize( QDataStream& dataStream ) {
+void ReBricks::serialize( QDataStream& dataStream ) {
   ReTexture3D::serialize(dataStream);
   dataStream << (quint16) brickType << width 
              << height << depth 
@@ -361,7 +361,7 @@ void Bricks::serialize( QDataStream& dataStream ) {
 };
 
 
-void Bricks::deserialize( QDataStream& dataStream ) {
+void ReBricks::deserialize( QDataStream& dataStream ) {
   ReTexture3D::deserialize(dataStream);
   quint16 brickTypeInt;  
   dataStream >> brickTypeInt >> width 

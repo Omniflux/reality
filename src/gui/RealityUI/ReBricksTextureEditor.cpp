@@ -24,8 +24,8 @@ ReBricksTextureEditor::ReBricksTextureEditor( QWidget* parent ) :
   setupUi(this);
   setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Fixed);
 
-  for (int i = 0; i < (int)Bricks::CHAINLINK+1; ++i) {
-    brickType->addItem(Bricks::lutTypesToStrings[i]);
+  for (int i = 0; i < (int)ReBricks::CHAINLINK+1; ++i) {
+    brickType->addItem(ReBricks::lutTypesToStrings[i]);
   }
 
   // Avoid getting a "modified" event every time a character is changed in the fields

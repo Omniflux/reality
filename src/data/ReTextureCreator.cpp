@@ -50,7 +50,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexBricks: {
-      tex = new Bricks(texName, parentMat, dataType);
+      tex = new ReBricks(texName, parentMat, dataType);
       break;
     }
     case TexCheckers: {
@@ -131,7 +131,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
       break;
     }
     case TexBricks: {
-      tex = new Bricks(baseTex);
+      tex = new ReBricks(baseTex);
       break;
     }
     case TexCheckers: {

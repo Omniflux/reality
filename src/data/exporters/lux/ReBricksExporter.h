@@ -27,7 +27,7 @@ public:
   const QString exportTexture( ReTexturePtr texBase, 
                                const QString& assignedName = "",
                                bool isForPreview = false ) {
-    BricksPtr tex = texBase.staticCast<Bricks>();
+    ReBricksPtr tex = texBase.staticCast<ReBricks>();
     QString mapType = getMappingAsString(tex);
     QString mapScale = QString("%1 %1 %1").arg((double)tex->getScale(),0,'f',4);
     if (isForPreview) {

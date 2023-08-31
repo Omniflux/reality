@@ -25,7 +25,7 @@ class REALITY_LIB_EXPORT ReQtBricksExporter : public ReQtTextureExporter {
 
 public:
   QVariantMap exportTexture( const ReTexture* baseTex ) {
-    const Bricks* tex = static_cast<const Bricks*>(baseTex);
+    const ReBricks* tex = static_cast<const ReBricks*>(baseTex);
     storeBasicProperties(tex);
 
     texData["brickType"]  = tex->getBrickType();

@@ -22,7 +22,7 @@ namespace Reality {
  *
  * See also <ReTexture>.
  */
-class REALITY_LIB_EXPORT Bricks : public ReTexture3D,
+class REALITY_LIB_EXPORT ReBricks : public ReTexture3D,
                              public ReComplexTexture 
 {
 
@@ -54,14 +54,14 @@ public:
   // their string equivalent. 
   static QString lutTypesToStrings[CHAINLINK+1];
 
-  Bricks( const QString name, 
+  ReBricks( const QString name,
           ReTextureContainer* parentMat = 0,
           const ReTextureDataType dataType = color ) ;
 
- ~Bricks();
+ ~ReBricks();
 
   // Conversion ctor
-  Bricks( const ReTexturePtr srcTex );
+  ReBricks( const ReTexturePtr srcTex );
 
   /*
    Method: getBrickType
@@ -172,9 +172,9 @@ public:
   QString toString();
 };
 
-// Typedef: BricksPtr 
+// Typedef: ReBricksPtr
 //   Convenient definition of a shared pointer
-typedef QSharedPointer<Bricks> BricksPtr;
+typedef QSharedPointer<ReBricks> ReBricksPtr;
 
 
 } // namespace

@@ -685,7 +685,7 @@ ReTexturePtr ReMaterial::changeTextureType( const QString& name,
       break;
     }
     case TexBricks: {
-      newTex = new Bricks( oldTex );
+      newTex = new ReBricks( oldTex );
       break;
     }
     case TexCheckers: {
