@@ -22,7 +22,7 @@ ReGrayscale::ReGrayscale( const QString name, ReTextureContainer* parentMat ) :
   textureDataType = ReTexture::color;
   setChannel(
     "tex",
-    ImageMapPtr( new ImageMap(QString("%1_baseMap").arg(name), parentMat) )
+    ReImageMapPtr( new ReImageMap(QString("%1_baseMap").arg(name), parentMat) )
   );
 };
 
@@ -37,7 +37,7 @@ ReGrayscale::ReGrayscale( const QString name,
   textureDataType = ReTexture::color;
   setChannel(
     "tex",
-    ImageMapPtr( new ImageMap(QString("%1_baseMap").arg(name), parentMat) )
+    ReImageMapPtr( new ReImageMap(QString("%1_baseMap").arg(name), parentMat) )
   );
 };
 

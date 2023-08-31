@@ -15,7 +15,7 @@ class ReTextureSelector;
 
 namespace Reality {
   enum ReTextureType;
-  class ImageMap;
+  class ReImageMap;
   class ReColorMath;
   class ReConstant;
   class ReDistortedNoise;
@@ -28,7 +28,7 @@ namespace Reality {
   typedef QSharedPointer<ReConstant> ReConstantPtr;
   typedef QSharedPointer<ReDistortedNoise> ReDistortedNoisePtr;
   typedef QSharedPointer<ReFresnelColor> ReFresnelColorPtr;
-  typedef QSharedPointer<ImageMap> ImageMapPtr;
+  typedef QSharedPointer<ReImageMap> ReImageMapPtr;
   typedef QSharedPointer<ReMath> ReMathPtr;
   typedef QSharedPointer<ReMixTexture> ReMixTexturePtr;
   typedef QSharedPointer<ReTexture> ReTexturePtr;
@@ -175,7 +175,7 @@ private:
 
   void setLabelAvatar( ReTexturePtr tex, QLabel* lbl, QLabel* lbl2 = NULL );
   void setConstantAvatar( QLabel* lbl , ReConstantPtr tex );
-  void setImageMapAvatar( QLabel* lbl, ImageMapPtr tex );
+  void setImageMapAvatar( QLabel* lbl, ReImageMapPtr tex );
   void setColorMathAvatar( QLabel* lbl, QLabel* lbl2, ReColorMathPtr tex );
   void setMathAvatar( QLabel* lbl, QLabel* lbl2, ReMathPtr tex );
   void setFresnelAvatar( QLabel* lbl , ReFresnelColorPtr tex );

@@ -394,7 +394,7 @@ private slots:
     QString objectID = mat->getParent()->getInternalName();
     QString matName = mat->getName();
 
-    ImageMapPtr newTex;
+    ReImageMapPtr newTex;
     // Is this a sub-texture?
     if (!masterTexture.isNull()) {
       QString masterTextureName = masterTexture->getName();
@@ -407,7 +407,7 @@ private slots:
                    static_cast<ReTextureContainer*>(mat),
                    textureDataType
                  )
-               ).staticCast<ImageMap>();
+               ).staticCast<ReImageMap>();
       newTex->setFileName(imageFileName);
       QString newTextureName = newTex->getName();
       mat->addTextureToCatalog(newTex);
@@ -429,7 +429,7 @@ private slots:
     else {
       // This is a texture attached to a channel
       if ( mat->makeNewTexture( channelID, TexImageMap, textureDataType ) ) {
-        newTex = mat->getChannel(channelID).staticCast<ImageMap>();
+        newTex = mat->getChannel(channelID).staticCast<ReImageMap>();
         newTex->setFileName(imageFileName);
         texPreview->setTexture(newTex, mat);
         breadCrumb = texPreview->getBreadcrumb();      

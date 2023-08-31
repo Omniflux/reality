@@ -13,10 +13,10 @@
 namespace Reality {
 
 /**
- * A ImageMap defines the bit-mapped image texture. It is expected to 
+ * A ReImageMap defines the bit-mapped image texture. It is expected to
  * be loaded from a image file from disk. See <ReTexture>.
  */
-class REALITY_LIB_EXPORT ImageMap : public Re2DTexture {
+class REALITY_LIB_EXPORT ReImageMap : public Re2DTexture {
 
 protected:
   float gain;
@@ -30,24 +30,24 @@ protected:
   void checkIfNormalMap();
   
 public:
-  // ImageMap(const QString name, ReMaterial* parentMat = 0, const QString fName = "") : 
-  ImageMap( const QString name, 
+  // ReImageMap(const QString name, ReMaterial* parentMat = 0, const QString fName = "") :
+  ReImageMap( const QString name,
             ReTextureContainer* parentMat = 0, 
             const QString fName = "",
             ReTextureDataType dType = color );
 
   // Copy ctor
-  ImageMap( const ImageMap& t2 );
+  ReImageMap( const ReImageMap& t2 );
 
   // Conversion ctor
-  ImageMap( const ReTexturePtr srcTex );
+  ReImageMap( const ReTexturePtr srcTex );
 
   virtual const QString getGUID();
 
   /**
    * Operators
    */
-  bool operator ==( const ImageMap& t2) const;
+  bool operator ==( const ReImageMap& t2) const;
 
   inline float getGain() const {
     return gain;
@@ -112,9 +112,9 @@ public:
 
 };
 
-// Typedef: ImageMapPtr 
+// Typedef: ReImageMapPtr
 //   Convenient definition of a shared pointer
-typedef QSharedPointer<ImageMap> ImageMapPtr;
+typedef QSharedPointer<ReImageMap> ReImageMapPtr;
 
 
 } // namespace

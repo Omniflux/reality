@@ -16,7 +16,7 @@ const QString ReLuxImageMapExporter::exportTexture( ReTexturePtr texbase,
                                                     const QString& assignedName,
                                                     bool isForPreview )
 {
-  ImageMapPtr tex = texbase.staticCast<ImageMap>();
+  ReImageMapPtr tex = texbase.staticCast<ReImageMap>();
   // This should never happen but sometimes it does so it's pointless
   // to export a texture definition that has no file name and that will 
   // cause a Lux error message

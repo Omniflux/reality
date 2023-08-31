@@ -24,7 +24,7 @@ class REALITY_LIB_EXPORT ReQtImageMapExporter : public ReQtTextureExporter {
 public:
 
   QVariantMap exportTexture( const ReTexture* baseTex ) {
-    auto tex = static_cast<const ImageMap*>(baseTex);
+    auto tex = static_cast<const ReImageMap*>(baseTex);
     storeBasicProperties(tex);
 
     texData["fileName"]   = normalizeRuntimePath(tex->getFileName());

@@ -22,7 +22,7 @@ void ReSkinLuxExporter::makeHairMaskTexture( const QString& texName,
 {
   // The bw version of the source texture
   QString floatHairMaskName = QString("%1_floatHairmask").arg(matName);
-  ImageMapPtr floatHairMask = ImageMapPtr( new ImageMap(floatHairMaskName) );
+  ReImageMapPtr floatHairMask = ReImageMapPtr( new ReImageMap(floatHairMaskName) );
   floatHairMask->setFileName(mat->getKhmImageMap());
   floatHairMask->setTextureDataType(ReTexture::numeric);
   floatHairMask->setGain(mat->getHmGain());

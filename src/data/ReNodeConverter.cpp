@@ -204,8 +204,8 @@ ReTexturePtr ReNodeConverter::convertImageMap( const QString& nodeName,
   #if defined(_WIN32)
   fn.replace('\\','/');
   #endif
-  ImageMapPtr tex = ImageMapPtr(
-    new Reality::ImageMap( nodeName,
+  ReImageMapPtr tex = ReImageMapPtr(
+    new Reality::ReImageMap( nodeName,
                            0, 
                             fn,
                            ( hint == NumericNode ? ReTexture::numeric : ReTexture::color ) )

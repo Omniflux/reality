@@ -141,7 +141,7 @@ private slots:
     if (updating) {
       return;
     }
-    ImageMapPtr tex = model->getTexture().staticCast<ImageMap>();
+    ReImageMapPtr tex = model->getTexture().staticCast<ReImageMap>();
 
     ReTexture::ReTextureDataType texClass = model->getTextureDataType();
     imTextureName->setTextureFileName(tex->getFileName());

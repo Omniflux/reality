@@ -45,7 +45,7 @@ public:
       // Create a new ImageMap texture based on the original one
       QString baseTexName;      
       if (innerTex->getType() == TexImageMap) {
-        ImageMapPtr bwTex = ImageMapPtr( new ImageMap(innerTex) );
+        ReImageMapPtr bwTex = ReImageMapPtr( new ReImageMap(innerTex) );
         bwTex->setRgbChannel(tex->getRgbChannel());
         ReLuxTextureExporterPtr exporter = ReLuxTextureExporterFactory::getExporter(bwTex);
         baseTexName = QString("%1_channel_%2").arg(tex->getUniqueName()).arg(tex->getRGBChannelAsString());

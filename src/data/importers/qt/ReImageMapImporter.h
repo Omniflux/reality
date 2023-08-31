@@ -65,7 +65,7 @@ public:
   }
 
   void restoreTexture( ReTexturePtr baseTex, const QVariantMap& data ) {
-    ImageMapPtr tex = baseTex.staticCast<ImageMap>();
+    ReImageMapPtr tex = baseTex.staticCast<ReImageMap>();
     restoreBasicProperties(tex, data);
 
     tex->setFileName(resolveRuntimePath(data.value("fileName").toString()));

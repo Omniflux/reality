@@ -34,7 +34,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
   ReTexture* tex = NULL;
   switch(texType) {
     case TexImageMap: {
-      tex = new ImageMap(texName, parentMat, "", dataType);
+      tex = new ReImageMap(texName, parentMat, "", dataType);
       break;
     }
     case TexMath: {
@@ -115,7 +115,7 @@ ReTexture* ReTextureCreator::createTexture( const QString texName,
   ReTexture* tex = NULL;
   switch(baseTex->type) {
     case TexImageMap: {
-      tex = new ImageMap(baseTex);
+      tex = new ReImageMap(baseTex);
       break;
     }
     case TexMath: {

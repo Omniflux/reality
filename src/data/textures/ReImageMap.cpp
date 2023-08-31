@@ -14,7 +14,7 @@
 
 namespace Reality {
 
-ImageMap::ImageMap( const QString name, 
+ReImageMap::ReImageMap( const QString name,
                     ReTextureContainer* parentMat, 
                     const QString fName,
                     ReTextureDataType dType ) : 
@@ -32,7 +32,7 @@ ImageMap::ImageMap( const QString name,
 };
 
 // Copy ctor
-ImageMap::ImageMap( const ImageMap& t2 ) :
+ReImageMap::ReImageMap( const ReImageMap& t2 ) :
   Re2DTexture(t2),
   gain(t2.gain),
   gamma(t2.gamma),
@@ -44,7 +44,7 @@ ImageMap::ImageMap( const ImageMap& t2 ) :
   textureDataType = t2.textureDataType;  
 }
 
-const QString ImageMap::getGUID() {
+const QString ReImageMap::getGUID() {
   QString longForm = QString("%1|%2|%3|%4|%5|%6|%7|%8|%9")
                        .arg(getTypeAsString())
                        .arg(getDataTypeAsString())
@@ -64,7 +64,7 @@ const QString ImageMap::getGUID() {
 }
 
 // Conversion ctor
-ImageMap::ImageMap( const ReTexturePtr srcTex ) :
+ReImageMap::ReImageMap( const ReTexturePtr srcTex ) :
   Re2DTexture(srcTex)
 {
   type = TexImageMap;
@@ -76,7 +76,7 @@ ImageMap::ImageMap( const ReTexturePtr srcTex ) :
   // Pseudo copy ctor
   switch( srcTex->getType() ) {
     case TexImageMap: {
-      ImageMapPtr t2  = srcTex.staticCast<ImageMap>();
+      ReImageMapPtr t2  = srcTex.staticCast<ReImageMap>();
       gain            = t2->gain;
       gamma           = t2->gamma;
       fileName        = t2->fileName;
@@ -137,7 +137,7 @@ ImageMap::ImageMap( const ReTexturePtr srcTex ) :
   }
 }
 
-bool ImageMap::checkIfNormalMap( const QString fName ) {
+bool ReImageMap::checkIfNormalMap( const QString fName ) {
   QString lcFileName = fName.toLower();
   if (lcFileName.contains("nrm")    || 
       lcFileName.contains("norm")   || 
@@ -150,7 +150,7 @@ bool ImageMap::checkIfNormalMap( const QString fName ) {
 }
 
 
-void ImageMap::checkIfNormalMap() {
+void ReImageMap::checkIfNormalMap() {
   QString lcFileName = fileName.toLower();
   if (lcFileName.contains("nrm")    || 
       lcFileName.contains("norm")   || 
@@ -165,7 +165,7 @@ void ImageMap::checkIfNormalMap() {
 }
 
 // Texture comparison, useful for the texture cache.
-bool ImageMap::operator ==( const ImageMap& t2) const {
+bool ReImageMap::operator ==( const ReImageMap& t2) const {
   return( 
           fileName        == t2.fileName  && 
           uTile           == t2.uTile     &&
@@ -178,32 +178,32 @@ bool ImageMap::operator ==( const ImageMap& t2) const {
   );
 };
 
-RGBChannel ImageMap::getRgbChannel() const {
+RGBChannel ReImageMap::getRgbChannel() const {
   return rgbChannel;
 };
 
-void ImageMap::setRgbChannel( RGBChannel newVal ) {
+void ReImageMap::setRgbChannel( RGBChannel newVal ) {
   rgbChannel = newVal;
 };
 
-QString ImageMap::toString() {
-  return QString("Reality::ImageMap(%1) => %2").arg(name).arg(fileName);
+QString ReImageMap::toString() {
+  return QString("Reality::ReImageMap(%1) => %2").arg(name).arg(fileName);
 }
 
-void ImageMap::serialize( QDataStream& dataStream ) {
+void ReImageMap::serialize( QDataStream& dataStream ) {
   Re2DTexture::serialize(dataStream);
   dataStream << gain << gamma << (quint16) rgbChannel
              << fileName << normalMap;
 };
 
-void ImageMap::deserialize( QDataStream& dataStream ) {
+void ReImageMap::deserialize( QDataStream& dataStream ) {
   Re2DTexture::deserialize(dataStream);
   quint16 rgbChannelInt; 
   dataStream >> gain >> gamma >> rgbChannelInt >> fileName >> normalMap;
   rgbChannel = static_cast<RGBChannel>(rgbChannelInt);
 };
 
-void ImageMap::copyProperties( const ReTexturePtr srcTex ) {
+void ReImageMap::copyProperties( const ReTexturePtr srcTex ) {
   textureDataType = srcTex->getDataType();
   setNamedValue("fileName", srcTex->getNamedValue("fileName"));
   setNamedValue("gain", srcTex->getNamedValue("gain"));
@@ -213,7 +213,7 @@ void ImageMap::copyProperties( const ReTexturePtr srcTex ) {
   Re2DTexture::copyProperties(srcTex);
 }
 
-void ImageMap::setNamedValue( const QString& vname, const QVariant& value ) {
+void ReImageMap::setNamedValue( const QString& vname, const QVariant& value ) {
   if (vname == "fileName") {
     setFileName(value.toString());
   }
@@ -234,7 +234,7 @@ void ImageMap::setNamedValue( const QString& vname, const QVariant& value ) {
   }
 }
 
-const QVariant ImageMap::getNamedValue( const QString& vname ) {
+const QVariant ReImageMap::getNamedValue( const QString& vname ) {
   if (vname == "fileName") {
     return QVariant(fileName);
   }

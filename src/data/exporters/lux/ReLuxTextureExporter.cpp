@@ -22,7 +22,7 @@ ReTexturePtr ReLuxTextureExporter::writeFloatVersion( ReTexturePtr tex, QString&
     return tex;
   }
   QString textureName = getFloatTextureName(tex);
-  ImageMapPtr floatTex = ImageMapPtr( new ImageMap(*tex.staticCast<ImageMap>()) );
+  ReImageMapPtr floatTex = ReImageMapPtr( new ReImageMap(*tex.staticCast<ReImageMap>()) );
   // Set it to be of type float...
   floatTex->setTextureDataType(ReTexture::numeric);
 

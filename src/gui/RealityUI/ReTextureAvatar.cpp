@@ -437,7 +437,7 @@ void ReTextureAvatar::setFresnelAvatar( QLabel* lbl , ReFresnelColorPtr tex ) {
   QString texName;
   if (!clrTex.isNull()) { 
     if (clrTex->getType() == TexImageMap) {
-      QString fName = clrTex.staticCast<ImageMap>()->getFileName();
+      QString fName = clrTex.staticCast<ReImageMap>()->getFileName();
       texName = QFileInfo(fName).fileName();
       lbl->setToolTip(fName);
     }
@@ -461,7 +461,7 @@ void ReTextureAvatar::setConstantAvatar( QLabel* lbl , ReConstantPtr tex ) {
   lbl->setStyleSheet(styleSheet);
 }  
 
-void ReTextureAvatar::setImageMapAvatar( QLabel* lbl, ImageMapPtr tex ) {
+void ReTextureAvatar::setImageMapAvatar( QLabel* lbl, ReImageMapPtr tex ) {
   QString fName = tex->getFileName();
   if (fName.isEmpty()) {
     lbl->setText(tr("<Empty>"));
@@ -479,7 +479,7 @@ void ReTextureAvatar::setLabelAvatar( ReTexturePtr tex, QLabel* lbl, QLabel* lbl
   }
   switch( tex->getType() ) {
     case TexImageMap: {
-      setImageMapAvatar(lbl, tex.staticCast<ImageMap>());
+      setImageMapAvatar(lbl, tex.staticCast<ReImageMap>());
       break;
     }
     case TexConstant: {

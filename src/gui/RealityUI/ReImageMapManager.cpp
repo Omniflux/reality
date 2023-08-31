@@ -196,7 +196,7 @@ void ReImageMapManager::selectNewTexture() {
 
   if (setImageMap.hasNameChanged()) {
     QString fName = setImageMap.getFileName();
-    isNormalMap = ImageMap::checkIfNormalMap(fName);
+    isNormalMap = ReImageMap::checkIfNormalMap(fName);
     setTextureFileName(fName);
     emit mapHasChanged();
   }

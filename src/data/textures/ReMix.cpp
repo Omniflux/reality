@@ -206,7 +206,7 @@ void ReMixTexture::setMixTexture( const ReTexturePtr newVal ) {
   // based on the input one.
   if (newVal->getDataType() != ReTexture::numeric) {
     if (newVal->getType() == TexImageMap) {
-      channels[RE_MIXT_MIXER] = ReTexturePtr( new ImageMap(*newVal.staticCast<ImageMap>()) );
+      channels[RE_MIXT_MIXER] = ReTexturePtr( new ReImageMap(*newVal.staticCast<ReImageMap>()) );
       channels[RE_MIXT_MIXER]->setName(QString("%1_mixtexture").arg(name));
       channels[RE_MIXT_MIXER]->setTextureDataType(numeric);
     }

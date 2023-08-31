@@ -396,7 +396,7 @@ void getImageMapsOrColors( const QVariantMap& shaderData,
 bool containsNormalMap( const ReTexturePtr tex ) {
   switch(tex->getType()) {
     case TexImageMap:
-      return tex.staticCast<ImageMap>()->isNormalMap();
+      return tex.staticCast<ReImageMap>()->isNormalMap();
     case TexMix:
     case TexMath:
     case TexColorMath: {

@@ -151,7 +151,7 @@ public:
     // If this is a normal map then we simply export the map and possibly
     // scale its intensity
     // if (actualTex->getType() == TexImageMap &&
-    //     actualTex.staticCast<ImageMap>()->isNormalMap()) {
+    //     actualTex.staticCast<ReImageMap>()->isNormalMap()) {
     if (containsNormalMap(actualTex)) {
       if (bmStrength != 1.0) {
         // The following texture applies the strength of the bump map using 

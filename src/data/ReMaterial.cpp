@@ -669,7 +669,7 @@ ReTexturePtr ReMaterial::changeTextureType( const QString& name,
   ReTexture* newTex = NULL;
   switch( newType ) {
     case TexImageMap: {
-      newTex = new ImageMap( oldTex );
+      newTex = new ReImageMap( oldTex );
       break;
     }
     case TexMath: {
@@ -1027,7 +1027,7 @@ bool ReMaterial::deleteTexture( const QString& texName ) {
 
 void ReMaterial::setTextureGamma( ReTexturePtr tex, const float newGamma ) {
   if (!tex.isNull() && tex->getType() == TexImageMap)  {
-    tex.staticCast<ImageMap>()->setGamma(newGamma);
+    tex.staticCast<ReImageMap>()->setGamma(newGamma);
   }
   else {
     QStringList deps = tex->getDependencies();

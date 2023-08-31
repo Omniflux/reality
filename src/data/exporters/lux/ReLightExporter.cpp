@@ -54,7 +54,7 @@ QString ReLuxLightExporter::exportMeshLight( const ReLightPtr light ) {
   }
   else {
     // Add texture support
-    ReTexturePtr ltex = ReTexturePtr( new ImageMap(QString("%1::L").arg(lightName), 0, lightImagemap) );
+    ReTexturePtr ltex = ReTexturePtr( new ReImageMap(QString("%1::L").arg(lightName), 0, lightImagemap) );
     ReLuxTextureExporterPtr exporter = ReLuxTextureExporterFactory::getExporter(ltex);
     lightTextures += exporter->exportTexture(ltex);
     texName = ltex->getUniqueName();
@@ -292,7 +292,7 @@ QString ReLuxLightExporter::exportPointLight( const ReLightPtr light ) {
   else {
     // Add texture support
     ReTexturePtr ltex = ReTexturePtr( 
-      new ImageMap(QString("%1::L").arg(lightName), 0, lightImagemap) 
+      new ReImageMap(QString("%1::L").arg(lightName), 0, lightImagemap)
     );
     ReLuxTextureExporterPtr exporter = ReLuxTextureExporterFactory::getExporter(ltex);
     lightTextures += exporter->exportTexture(ltex);
