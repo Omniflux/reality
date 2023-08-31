@@ -20,7 +20,7 @@ namespace Reality {
 
 namespace Reality {
 
-class REALITY_LIB_EXPORT MaterialCreator {
+class REALITY_LIB_EXPORT ReMaterialCreator {
 public:
   static ReMaterial* createMaterial( ReMaterialType matType, 
                                      const ReGeometryObject* parent,

@@ -55,8 +55,8 @@ void ReMix::serialize( QDataStream& dataStream ) const {
 void ReMix::deserialize( QDataStream& dataStream ) {
   ReMaterial::deserialize( dataStream );
   dataStream >> mixAmount;
-  mat1 = ReMaterialPtr(MaterialCreator::deserialize(dataStream, parent));
-  mat2 = ReMaterialPtr(MaterialCreator::deserialize(dataStream, parent));
+  mat1 = ReMaterialPtr(ReMaterialCreator::deserialize(dataStream, parent));
+  mat2 = ReMaterialPtr(ReMaterialCreator::deserialize(dataStream, parent));
 };
 
 

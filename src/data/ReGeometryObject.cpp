@@ -781,7 +781,7 @@ ReMaterialType ReGeometryObject::createMaterialFromAcselShader(
   }
 
   matPtr = ReMaterialPtr( 
-    MaterialCreator::createMaterial(matType, this, matID)
+    ReMaterialCreator::createMaterial(matType, this, matID)
   );
   auto matImporter = ReQtMaterialImporterFactory::getImporter(matType);
   matImporter->importFromClipboard(matPtr, shader, ReQtMaterialImporter::Replace);
@@ -1286,7 +1286,7 @@ void ReGeometryObject::changeMaterialType( const QString materialID,
   // Make sure to not create another smart pointer for the old material...
   auto oldMat = materials[materialID].data();
   auto newMat = ReMaterialPtr(
-                  MaterialCreator::createMaterial(newType, this, materialID)
+                  ReMaterialCreator::createMaterial(newType, this, materialID)
                 );
 
   ReMaterialType oldType = oldMat->getType();
@@ -1335,7 +1335,7 @@ void ReGeometryObject::restoreMaterial( const QString matID, const QVariantMap& 
   ReMaterialType matType = ReMaterial::typeFromName(matTypeStr);
 
   ReMaterialPtr newMat = ReMaterialPtr(
-    MaterialCreator::createMaterial(matType, this, matID)
+    ReMaterialCreator::createMaterial(matType, this, matID)
   );
   materials[matID] = newMat;
   // If this is a material converted to light then we need to add it to the list
@@ -1416,7 +1416,7 @@ ReGeometryObject* ReGeometryObject::deserialize( QDataStream& dataStream ) {
   newObj->setVisible(_visible);
   newObj->setInstanceSourceID(_instanceSource);
   for (int i = 0; i < numMaterials; ++i) {
-    ReMaterial* newMat = MaterialCreator::deserialize(dataStream,newObj);
+    ReMaterial* newMat = ReMaterialCreator::deserialize(dataStream,newObj);
     if (newMat) {
       newObj->materials[newMat->getName()] = ReMaterialPtr(newMat);
     }
@@ -1429,7 +1429,7 @@ ReGeometryObject* ReGeometryObject::deserialize( QDataStream& dataStream ) {
 
 void ReGeometryObject::deserializeMaterial( const QString& materialName, 
                                             QDataStream& dataStream ) {
-  ReMaterial* newMat = MaterialCreator::deserialize(dataStream,this);
+  ReMaterial* newMat = ReMaterialCreator::deserialize(dataStream,this);
   if (newMat) {
     if (materials.contains(materialName)) {
       materials[materialName].clear();

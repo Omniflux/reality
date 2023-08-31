@@ -21,7 +21,7 @@
 
 namespace Reality {
 
-ReMaterial* MaterialCreator::createMaterial( ReMaterialType matType,
+ReMaterial* ReMaterialCreator::createMaterial( ReMaterialType matType,
                                              const ReGeometryObject* parent,
                                              const QString matName ) 
 {
@@ -66,7 +66,7 @@ ReMaterial* MaterialCreator::createMaterial( ReMaterialType matType,
   }
 }
 
-ReMaterial* MaterialCreator::deserialize( QDataStream& dataStream, 
+ReMaterial* ReMaterialCreator::deserialize( QDataStream& dataStream,
                                           const ReGeometryObject* parent ) 
 {
   int matType;
