@@ -1,15 +1,15 @@
 {
-  "version": 3,
+  "version": 6,
   "cmakeMinimumRequired": {
     "major": 3,
-    "minor": 21,
+    "minor": 25,
     "patch": 0
   },
   "configurePresets": [
     {
-      "name": "windows-default",
+      "name": "windows",
       "hidden": true,
-      "displayName": "Windows Default",
+      "displayName": "Windows",
       "description": "Target Windows with the Visual Studio development environment.",
       "generator": "Visual Studio 17 2022",
       "toolset": "Windows7.1SDK",
@@ -25,70 +25,26 @@
       }
     },
     {
-      "name": "debug",
+      "name": "windows-x64",
       "hidden": true,
-      "displayName": "Debug",
-      "description": "Build Type Debug.",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
-      }
-    },
-    {
-      "name": "release",
-      "hidden": true,
-      "displayName": "RelWithDebInfo",
-      "description": "Build Type Release with Debug Information.",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
-      }
-    },
-    {
-      "name": "arch-x64",
-      "hidden": true,
-      "displayName": "Arch x64",
-      "description": "x64 Architecture",
+      "displayName": "Windows x64",
+      "inherits": [ "windows" ],
+      "description": "Target Windows x64 with the Visual Studio development environment.",
       "architecture": {
         "value": "x64",
         "strategy": "set"
       }
     },
     {
-      "name": "arch-x86",
+      "name": "windows-x86",
       "hidden": true,
-      "displayName": "Arch x86",
-      "description": "x86 Architecture",
+      "displayName": "Windows x86",
+      "inherits": [ "windows" ],
+      "description": "Target Windows x86 with the Visual Studio development environment.",
       "architecture": {
         "value": "Win32",
         "strategy": "set"
       }
-    },
-    {
-      "name": "windows-x64-debug",
-      "hidden": true,
-      "displayName": "Windows x64 Debug",
-      "inherits": [ "windows-default", "debug", "arch-x64" ],
-      "description": "Target Windows x64 Debug with the Visual Studio development environment."
-    },
-    {
-      "name": "windows-x64-release",
-      "hidden": true,
-      "displayName": "Windows x64 Release",
-      "inherits": [ "windows-default", "release", "arch-x64" ],
-      "description": "Target Windows x64 Release with the Visual Studio development environment."
-    },
-    {
-      "name": "windows-x86-debug",
-      "hidden": true,
-      "displayName": "Windows x86 Debug",
-      "inherits": [ "windows-default", "debug", "arch-x86" ],
-      "description": "Target Windows x86 Debug with the Visual Studio development environment."
-    },
-    {
-      "name": "windows-x86-release",
-      "hidden": true,
-      "displayName": "Windows x86 Release",
-      "inherits": [ "windows-default", "release", "arch-x86" ],
-      "description": "Target Windows x86 Release with the Visual Studio development environment."
     }
   ]
 }
